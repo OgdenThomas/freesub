@@ -1,20 +1,129 @@
 # 🚀 免费节点自动测活订阅池 (含真实家宽/住宅IP甄选)
 
-> ⚡ **初始化中**: 正在启动首次 GitHub Actions 自动测活构建。首次运行完成后，本页面将自动刷新并展示完整的节点统计与全格式订阅链接。
+> 👤 **定制规范命名**: 所有订阅节点均重命名为 `国旗 地区 序号 (家宽)`
+> ⚡ **真实可用保障**: 所有节点由 `sing-box vv1.14.0` 内核建立实际代理隧道, 完成真实 HTTPS 双向传输握手 + 出口 IP 穿透验证 + Cloudflare 限速下载断流检测 + TLS 证书校验 (MITM 劫持识别), 拒绝虚假通畅、断流节点与高危劫持节点。
+> 🛡️ **全协议支持**: VLESS (Reality/Vision) · VMESS · Trojan · Shadowsocks · Hysteria2 · TUIC · AnyTLS
 
 ---
 
-## 📌 订阅链接预览 (构建完成后生效)
+## 📌 全部节点总订阅链接
 
-| 客户端 / 格式类型 | 免翻 CDN 订阅直链 (国内直连) | 官方原生 Raw 直链 (开启代理) |
-| :--- | :--- | :--- |
-| 🚀 **Clash (YAML 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/clash.yaml) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml) |
-| ⚡ **V2RayN (Base64 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/v2ray.txt) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/v2ray.txt) |
-| 📦 **sing-box (JSON 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/singbox.json) |
+| 客户端 / 格式类型 | 节点总数 | 免翻 CDN 订阅直链 (国内直连) | 官方原生 Raw 直链 (开启代理) |
+| :--- | :---: | :--- | :--- |
+| 🚀 **Clash (YAML 格式)** | `242` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/clash.yaml?v=1789565613) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml?v=1789565613) |
+| ⚡ **V2RayN (Base64 格式)** | `242` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/v2ray.txt?v=1789565613) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/v2ray.txt?v=1789565613) |
+| 📦 **sing-box (JSON 格式)** | `242` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/singbox.json?v=1789565613) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/singbox.json?v=1789565613) |
 
 ---
 
-## 🛠️ 说明
-1. **全自动更新**：GitHub Actions 每 6 小时自动运行并刷新上述全部订阅与数据。
-2. **多协议兼容**：支持 VLESS (Reality/Vision), VMess, Trojan, Shadowsocks, Hysteria2, TUIC 等协议。
-3. **真实测活**：所有节点由 sing-box v1.14 内核建立实际代理隧道并完成真实 HTTP 握手与出口 IP 穿透测试。
+## 🏠 按照家宽分类节点订阅 (住宅 IP 专区)
+
+> 家宽判定六重信号: ① ip-api.com `hosting` 字段 ② `mobile` 移动网络字段 ③ Cloudflare/主流 CDN Anycast 网段比对 ④ MaxMind GeoLite2 ASN 白/黑名单 (覆盖 60+ 国家主流民用运营商) ⑤ rDNS/ISP 名称特征 ⑥ Scamalytics 风控评分复核 (fraud ≥75 降级、≥90 剔除)。排除所有云主机/数据中心/CDN 任播, 保留真实民用宽带与移动网络。
+
+| 家宽地区 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
+| :--- | :---: | :---: | :---: | :---: |
+| 暂无可用节点 | 0 | - | - | - |
+
+---
+
+## 🗺️ 按照国家分类节点订阅 (非家宽/数据中心节点)
+
+| 地区/国家 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
+| :--- | :---: | :---: | :---: | :---: |
+| 🇺🇸 美国 (United States) | 124 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/US.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/US.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-US.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-US.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-US.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-US.json?v=1789565613) |
+| 🇩🇪 德国 (Germany) | 20 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/DE.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/DE.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-DE.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-DE.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-DE.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-DE.json?v=1789565613) |
+| 🇳🇱 荷兰 (Netherlands) | 17 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/NL.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/NL.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-NL.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-NL.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-NL.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-NL.json?v=1789565613) |
+| 🇬🇧 英国 (United Kingdom) | 10 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/GB.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/GB.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-GB.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-GB.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-GB.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-GB.json?v=1789565613) |
+| 🇸🇬 新加坡 (Singapore) | 10 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/SG.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/SG.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-SG.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-SG.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-SG.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-SG.json?v=1789565613) |
+| 🇯🇵 日本 (Japan) | 5 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/JP.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/JP.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-JP.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-JP.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-JP.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-JP.json?v=1789565613) |
+| 🇮🇹 意大利 (Italy) | 5 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/IT.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/IT.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-IT.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-IT.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-IT.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-IT.json?v=1789565613) |
+| 🇷🇺 俄罗斯 (Russia) | 4 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/RU.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/RU.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-RU.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-RU.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-RU.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-RU.json?v=1789565613) |
+| 🇨🇦 加拿大 (Canada) | 4 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/CA.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/CA.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-CA.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-CA.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-CA.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-CA.json?v=1789565613) |
+| 🇸🇪 瑞典 (Sweden) | 4 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/SE.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/SE.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-SE.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-SE.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-SE.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-SE.json?v=1789565613) |
+| 🇫🇷 法国 (France) | 4 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/FR.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/FR.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-FR.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-FR.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-FR.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-FR.json?v=1789565613) |
+| 🇨🇾 塞浦路斯 (Cyprus) | 4 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/CY.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/CY.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-CY.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-CY.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-CY.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-CY.json?v=1789565613) |
+| 🇵🇱 波兰 (Poland) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/PL.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/PL.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-PL.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-PL.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-PL.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-PL.json?v=1789565613) |
+| 🇭🇰 中国香港 (Hong Kong) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/HK.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/HK.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-HK.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-HK.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-HK.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-HK.json?v=1789565613) |
+| 🇰🇿 哈萨克斯坦 (Kazakhstan) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/KZ.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/KZ.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-KZ.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-KZ.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-KZ.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-KZ.json?v=1789565613) |
+| 🇹🇼 中国台湾 (Taiwan) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/TW.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/TW.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-TW.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-TW.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-TW.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-TW.json?v=1789565613) |
+| 🇷🇴 罗马尼亚 (Romania) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/RO.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/RO.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-RO.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-RO.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-RO.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-RO.json?v=1789565613) |
+| 🇫🇮 芬兰 (Finland) | 3 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/FI.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/FI.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-FI.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-FI.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-FI.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-FI.json?v=1789565613) |
+| 🇨🇭 瑞士 (Switzerland) | 2 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/CH.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/CH.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-CH.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-CH.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-CH.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-CH.json?v=1789565613) |
+| 🇦🇪 阿联酋 (UAE) | 2 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/AE.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/AE.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-AE.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-AE.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-AE.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-AE.json?v=1789565613) |
+| 🇦🇺 澳大利亚 (Australia) | 2 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/AU.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/AU.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-AU.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-AU.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-AU.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-AU.json?v=1789565613) |
+| 🇳🇴 挪威 (Norway) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/NO.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/NO.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-NO.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-NO.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-NO.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-NO.json?v=1789565613) |
+| 🇬🇷 希腊 (Greece) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/GR.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/GR.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-GR.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-GR.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-GR.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-GR.json?v=1789565613) |
+| 🇱🇻 拉脱维亚 (Latvia) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/LV.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/LV.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-LV.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-LV.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-LV.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-LV.json?v=1789565613) |
+| 🇹🇭 泰国 (Thailand) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/TH.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/TH.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-TH.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-TH.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-TH.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-TH.json?v=1789565613) |
+| 🇪🇸 西班牙 (Spain) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/ES.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/ES.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-ES.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-ES.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-ES.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-ES.json?v=1789565613) |
+| 🇦🇱 AL | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/AL.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/AL.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-AL.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-AL.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-AL.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-AL.json?v=1789565613) |
+| 🇺🇿 乌兹别克斯坦 (Uzbekistan) | 1 | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/UZ.txt?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/UZ.txt?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/clash-UZ.yaml?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/clash-UZ.yaml?v=1789565613) | [CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/by-country/singbox-UZ.json?v=1789565613) · [Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/by-country/singbox-UZ.json?v=1789565613) |
+
+---
+
+## 🔒 私有仓库（Private）无感免翻订阅方案 (基于 Cloudflare Workers)
+
+> 如果你希望将本 GitHub 仓库设置为 **Private (私有仓库)** 保护节点资产，外部客户端无法直接拉取原生 Raw 或公共 CDN 链接，可以通过以下 Cloudflare Worker 搭建轻量级私密网关反代：
+
+### 1. 获取 GitHub 永久个人令牌 (PAT)
+1. 进入 GitHub -> **Settings** -> **Developer Settings** -> **Personal access tokens (classic)**。
+2. 点击 **Generate new token (classic)**，勾选 `repo` 权限，有效期设为 `No expiration`（永不过期）。
+3. 复制保存生成的以 `ghp_` 开头的 Token。
+
+### 2. 部署 Cloudflare Worker
+登录 Cloudflare Dashboard，创建一个新的 Worker，复制以下脚本粘贴并部署（把 `OWNER`/`REPO`/`GITHUB_TOKEN` 改成你自己的）：
+
+```javascript
+export default {
+  async fetch(request) {
+    const GITHUB_TOKEN = "ghp_你的GitHub永久访问令牌";
+    const OWNER = "OgdenThomas";
+    const REPO = "freesub";
+    const BRANCH = "main";
+
+    const url = new URL(request.url);
+    const filePath = "output" + url.pathname;
+    const ghUrl = "https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/" + BRANCH + "/" + filePath;
+
+    const res = await fetch(ghUrl, {
+      headers: {
+        "Authorization": "token " + GITHUB_TOKEN,
+        "User-Agent": "Cloudflare-Worker"
+      }
+    });
+
+    if (!res.ok) {
+      return new Response("Not Found", { status: 404 });
+    }
+
+    return new Response(await res.text(), {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-cache"
+      }
+    });
+  }
+}
+```
+
+### 3. 私有订阅链接映射方式
+部署后 Worker 会分配一个专属域名（例如 `my-sub.yourname.workers.dev`），你的客户端可以直接无感订阅：
+* **总 V2RayN 订阅**: `https://你的域名.workers.dev/v2ray.txt`
+* **总 Clash 订阅**: `https://你的域名.workers.dev/clash.yaml`
+* **总 sing-box 订阅**: `https://你的域名.workers.dev/singbox.json`
+* **台湾家宽 V2RayN**: `https://你的域名.workers.dev/residential-by-country/TW.txt`
+* **香港家宽 Clash**: `https://你的域名.workers.dev/residential-by-country/clash-HK.yaml`
+* **日本家宽 sing-box**: `https://你的域名.workers.dev/residential-by-country/singbox-JP.json`
+
+---
+
+## ⭐ 项目热度
+
+[![Star History Chart](https://api.star-history.com/svg?repos=OgdenThomas/freesub&type=Date)](https://star-history.com/#OgdenThomas/freesub&Date)
+
+---
+
+## 🛠️ 项目使用说明
+1. **自动更新机制**：GitHub Actions 每 6 小时全自动运行并刷新上述全部订阅与数据。
+2. **测活标准**：节点必须通过 ① 端口预检 ② sing-box 实际隧道 3 个 generate_204 探测 ③ 真实出口 IP 穿透获取 ④ Cloudflare 5MB 限时下载 (吞吐 ≥ 70KB/s) ⑤ TLS 证书校验非 MITM, 方可入库。
+3. **多客户端兼容**：Clash / v2rayN / sing-box 全格式订阅。

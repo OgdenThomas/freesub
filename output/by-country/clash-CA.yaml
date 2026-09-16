@@ -1,0 +1,66 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇦 加拿大 (Canada) 01
+  server: 188.114.97.6
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 188.114.97.6
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: 168.222.244.72
+  port: 80
+  udp: true
+  type: vless
+  uuid: e5684225-7979-4fa9-9db0-7d497a95b9ff
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 168.222.244.67
+  port: 80
+  udp: true
+  type: vless
+  uuid: 9d02f031-13c4-4d91-bbf3-cb2081e424b1
+  network: ws
+  ws-opts:
+    path: /
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+rules:
+- MATCH,PROXIES
