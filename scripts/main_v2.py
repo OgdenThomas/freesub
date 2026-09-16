@@ -1145,40 +1145,6 @@ def prefilter_candidates(candidates: list) -> list:
     return passed if DROP_PORT_KNOCK_FAIL else passed+failed
 
 
-def knock_port(server: str, port: int, protocol_type: str) -> bool:
-    """TCP 直连预检 (DoH 解析防本地 DNS 污染); QUIC 类直接放行阶段B
-    注: 预检失败不淘汰 (本地大陆视角的假死 ≠ 节点死亡), 只影响排序;
-        生死由阶段B sing-box 全流程测活裁决 (Actions 海外视角)"""
-    if protocol_type in ("hysteria2", "tuic"):
-        # QUIC 无法轻量预检 UDP 端口连通性, 且本地 UDP 常被 QoS → 放行交阶段B
-        return True
-    try:
-        ip = resolve_host(server)
-        if not ip:
-            return False
-        with socket.create_connection((ip, port), timeout=PORT_KNOCK_TIMEOUT):
-            return True
-    except Exception:
-        return False
-
-
-def prefilter_candidates(candidates: list) -> list:
-    """端口预检: 通过者优先, 未通过者降级保留 (防止本地网络/GFW 视角误杀;
-    真正生死由阶段B sing-box 全流程测活裁决 — Actions 海外视角)"""
-    print(f"[*] 端口预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
-    passed, deferred = [], []
-
-    def _knock(item):
-        raw, outbound, server, port, proto = item
-        return knock_port(server, port, proto)
-
-    with ThreadPoolExecutor(max_workers=64) as ex:
-        # ex.map 保序返回; 通过者优先, 未通过降级保留 (不淘汰, 防本地视角误杀)
-        for item, ok in zip(candidates, ex.map(_knock, candidates)):
-            (passed if ok else deferred).append(item)
-    print(f"[+] 预检通过: {len(passed)} | 预检未过(保留低优先级待全测): {len(deferred)}")
-    # 预检未过的仍进入全流程 (只是排在后面) — 交给 sing-box 真实裁决
-    return passed + deferred
 
 
 # ═══════════════════════════════════════════N═══════════════════════
