@@ -8,9 +8,9 @@
 
 | 客户端 / 格式类型 | 免翻 CDN 订阅直链 (国内直连) | 官方原生 Raw 直链 (开启代理) |
 | :--- | :--- | :--- |
-| 🚀 **Clash (YAML 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/at200216/freesub@main/output/clash.yaml) | [官方 Raw 直链](https://raw.githubusercontent.com/at200216/freesub/main/output/clash.yaml) |
-| ⚡ **V2RayN (Base64 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/at200216/freesub@main/output/v2ray.txt) | [官方 Raw 直链](https://raw.githubusercontent.com/at200216/freesub/main/output/v2ray.txt) |
-| 📦 **sing-box (JSON 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/at200216/freesub@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/at200216/freesub/main/output/singbox.json) |
+| 🚀 **Clash (YAML 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/clash.yaml) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/clash.yaml) |
+| ⚡ **V2RayN (Base64 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/v2ray.txt) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/v2ray.txt) |
+| 📦 **sing-box (JSON 格式)** | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/OgdenThomas/freesub@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/OgdenThomas/freesub/main/output/singbox.json) |
 
 ---
 

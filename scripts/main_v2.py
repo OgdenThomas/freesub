@@ -2374,13 +2374,13 @@ def export_singbox_json(sb_nodes, filepath):
 # ═══════════════════════════════════════════N═══════════════════════
 
 def update_readme(total_count, res_count):
-    repo_name = os.environ.get("GITHUB_REPOSITORY", "at200216/freesub").strip()
+    repo_name = os.environ.get("GITHUB_REPOSITORY", "OgdenThomas/freesub").strip()
     cache_bust = str(int(time.time()))
     # 私有化部署 Worker 脚本里的仓库参数 (默认值兜底)
     try:
         owner, repo = repo_name.split("/", 1)
     except ValueError:
-        owner, repo = "at200216", "freesub"
+        owner, repo = "OgdenThomas", "freesub"
 
     def count_file(path):
         if not os.path.exists(path):
