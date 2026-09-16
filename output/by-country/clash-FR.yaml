@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 15.237.218.241
+  server: 13.39.233.161
   port: 443
   udp: true
   type: ss
@@ -21,14 +21,49 @@ proxies:
   ws-opts:
     path: /vless-test
 - name: 🇫🇷 法国 (France) 03
+  server: 195.58.140.146
+  port: 443
+  udp: true
+  type: vless
+  uuid: d7790b85-9659-4558-a405-e0ab57d32984
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
+    short-id: dc927a04e8572c61
+  servername: d1-fr.cloud-cdn.xyz
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 04
+  server: 188.114.97.6
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇫🇷 法国 (France) 05
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 06
   server: 15.188.219.10
   port: 22223
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 04
-  server: 5.78.92.27
-  port: 8443
+- name: 🇫🇷 法国 (France) 07
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -46,6 +81,9 @@ proxy-groups:
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,5 +93,8 @@ proxy-groups:
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
 rules:
 - MATCH,PROXIES

@@ -4,33 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: ejomsxptp19apygl.v.3dns.vip
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  server: 82259754d625.oylfmxz.cn
   port: 443
   udp: true
   type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   alterId: 0
   cipher: auto
   tls: true
-  servername: ejOMsxPtP19APyGL.v.3dns.vip
+  servername: 82259754d625.oylfmxz.cn
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /
     headers:
-      Host: ejOMsxPtP19APyGL.v.3dns.vip
+      Host: 82259754d625.oylfmxz.cn
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES

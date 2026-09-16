@@ -4,50 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 R41
-  server: 45.32.57.118
-  port: 4433
-  udp: true
-  type: vmess
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 02
-  server: 35.78.59.6
-  port: 47571
-  udp: true
-  type: vless
-  uuid: 88a67610-b7ae-42ba-8af0-29cfa54cef37
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: OyfEDzOiDM5eMvTacJ4bVhF1V0QZgvz-vP3K456l3W4
-    short-id: 4c8b46e500b0f3ad
-  servername: www.amd.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 03
-  server: jp-2.gsafevpnapi.com
-  port: 31870
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 5f82dcfd-cab5-4b71-91c6-8b6fb4f76c55
-- name: 🇯🇵 日本 (Japan) 04
-  server: 57.129.130.57
-  port: 52014
-  udp: true
-  type: vless
-  uuid: 091ea5fd-4e8d-4459-90af-e4d10179efff
-  tls: true
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-- name: 🇯🇵 日本 (Japan) 05
+- name: 🇯🇵 日本 (Japan) 01
   server: 168.110.60.104
   port: 18112
   udp: true
@@ -55,25 +12,96 @@ proxies:
   uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
   alterId: 0
   cipher: auto
+- name: 🇯🇵 日本 (Japan) 02
+  server: jp-2.gsafevpnapi.com
+  port: 31870
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 2bf192f1-7d86-43a3-88b3-8f72b7eb5ad9
+- name: 🇯🇵 日本 (Japan) 03 R41
+  server: 45.32.57.118
+  port: 4433
+  udp: true
+  type: vmess
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  alterId: 0
+  cipher: auto
+- name: 🇯🇵 日本 (Japan) 04
+  server: 207.148.112.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /discuss?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇯🇵 日本 (Japan) 05
+  server: 45.76.218.34
+  port: 39509
+  udp: true
+  type: hysteria2
+  password: ecc1f6d7-d378-40f1-a424-cfca853f0b2e
+  sni: lazeno.vip
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 06
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /collect/user/products?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇯🇵 日本 (Japan) 07
+  server: 172.64.153.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8779033b-a16a-4a7b-8767-d1980008d82a
+  tls: true
+  servername: 38973b0f.69lover.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/e9182405fa1a6489/stream
+    headers:
+      Host: 38973b0f.69lover.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01 R41
+  - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 03 R41
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01 R41
+  - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 03 R41
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 rules:
 - MATCH,PROXIES

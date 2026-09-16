@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: atomic-prase23893.my-vm.work
-  port: 8088
-  udp: true
-  type: vless
-  uuid: tmp_user
-  network: ws
-  ws-opts:
-    path: /api
-    headers:
-      Host: queuev4.vk.com
-- name: 🇵🇱 波兰 (Poland) 02
   server: 82.118.22.161
   port: 443
   udp: true
@@ -27,20 +16,25 @@ proxies:
     public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 178.95.176.16
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
 - name: 🇵🇱 波兰 (Poland) 03
-  server: pland.capigodv.ir
-  port: 24992
+  server: atomic-prase23893.my-vm.work
+  port: 8088
   udp: true
   type: vless
-  uuid: 832d1488-3fff-4b3b-bb61-6c98e32055cb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: E6rgjSeNfsyf7AOQZoUL1bSOWh9ATlePwnVsUE_zXXI
-    short-id: f1ff3d396bb1c050
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  uuid: f7c74a35-1da0-5097-9fa7-a20735610ac1
+  network: ws
+  ws-opts:
+    path: /api
+    headers:
+      Host: queuev4.vk.com
 proxy-groups:
 - name: PROXIES
   type: select

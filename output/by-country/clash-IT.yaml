@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01
-  server: 31.77.154.14
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-  tls: true
-  reality-opts:
-    public-key: 3O__mdy-whzI07V-QEyR6GQnag1FNwtHijDxt2_jkDQ
-  servername: swscan.apple.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇮🇹 意大利 (Italy) 02 R56
-  server: 185.164.175.81
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 03
   server: 82.118.16.187
   port: 443
   udp: true
@@ -38,20 +17,14 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 04 R53
-  server: 172.238.232.239
-  port: 32833
+- name: 🇮🇹 意大利 (Italy) 02 R56
+  server: 185.164.175.81
+  port: 19999
   udp: true
-  type: vless
-  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
-    short-id: a0a305ccc8e94aa8
-  servername: www.intel.com
-  client-fingerprint: firefox
-- name: 🇮🇹 意大利 (Italy) 05
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 03
   server: 82.118.16.189
   port: 443
   udp: true
@@ -63,7 +36,7 @@ proxies:
     public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
     short-id: 37fbf155c7a9f3ff
   servername: www.cloudflare.com
-  client-fingerprint: ''
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,8 +45,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02 R56
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04 R53
-  - 🇮🇹 意大利 (Italy) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,7 +53,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02 R56
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04 R53
-  - 🇮🇹 意大利 (Italy) 05
 rules:
 - MATCH,PROXIES
