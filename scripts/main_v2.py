@@ -630,7 +630,7 @@ def _parse_tls_params(params: dict, host: str) -> dict:
         tls = {
             "enabled": True,
             "server_name": params.get("sni", params.get("peer", host)),
-            "utls": {"enabled": True, "fingerprint": params.get("fp", "chrome")},
+            "utls": {"enabled": True, "fingerprint": params.get("fp") or "chrome"},
             "reality": {"enabled": True, "public_key": pbk, "short_id": params.get("sid", "")},
         }
     elif security in ("tls", "xtls"):
@@ -1679,13 +1679,13 @@ def outbound_to_clash(node: dict, name: str) -> dict:
                 proxy["reality-opts"]["short-id"] = tls["reality"]["short_id"]
             proxy["servername"] = tls.get("server_name") or server
             if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+                proxy["client-fingerprint"] = tls["utls"].get("fingerprint") or "chrome"
         elif tls.get("enabled"):
             proxy["tls"] = True
             proxy["servername"] = tls.get("server_name") or server
             proxy["skip-cert-verify"] = bool(tls.get("insecure"))
             if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+                proxy["client-fingerprint"] = tls["utls"].get("fingerprint") or "chrome"
         transport = node.get("transport") or {}
         if transport.get("type"):
             proxy["network"] = transport["type"]
@@ -1851,7 +1851,7 @@ def outbound_to_v2ray_link(node: dict, name: str) -> str:
             q["security"] = "reality"
             q["pbk"] = tls["reality"]["public_key"]
             q["sid"] = tls["reality"].get("short_id", "")
-            q["fp"] = (tls.get("utls") or {}).get("fingerprint", "chrome")
+            q["fp"] = (tls.get("utls") or {}).get("fingerprint") or "chrome"
             if tls.get("server_name"):
                 q["sni"] = tls["server_name"]
         elif tls.get("enabled"):
@@ -1861,7 +1861,7 @@ def outbound_to_v2ray_link(node: dict, name: str) -> str:
             if tls.get("alpn"):
                 q["alpn"] = ",".join(tls["alpn"])
             if tls.get("utls"):
-                q["fp"] = tls["utls"].get("fingerprint", "chrome")
+                q["fp"] = tls["utls"].get("fingerprint") or "chrome"
             if tls.get("insecure"):
                 q["allowInsecure"] = "1"
         if node.get("flow"):
