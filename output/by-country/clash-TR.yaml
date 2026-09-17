@@ -4,13 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01
-  server: 139.28.240.68
-  port: 1080
+- name: 🇹🇷 土耳其 (Turkey) 01 R50
+  server: 91.228.227.211
+  port: 23957
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: rSeYcig_XBy8q3k33NpK3A
+  type: vmess
+  uuid: 92987ab8-0a53-4a16-8d6c-295d5df86404
+  alterId: 0
+  cipher: auto
 - name: 🇹🇷 土耳其 (Turkey) 02
   server: tr.curry-load.rutube.info
   port: 443
@@ -25,17 +26,26 @@ proxies:
   servername: dw.b-cdn.net
   client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 03
-  server: hosseinali.gameshooping.ir
-  port: 8585
+  server: 199.232.78.159
+  port: 443
   udp: true
   type: vless
-  uuid: 7f8c67e3-0779-4d4c-8cb2-21285f46fc74
+  uuid: d7282b41-1f2a-47bb-8593-f464fd6b6d78
+  tls: true
+  servername: global.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BechBad.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
@@ -43,7 +53,7 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
 rules:

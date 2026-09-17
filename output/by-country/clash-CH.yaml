@@ -16,7 +16,7 @@ proxies:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
     short-id: 19253fae84102271
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: 🇨🇭 瑞士 (Switzerland) 02
   server: 151.242.2.81
   port: 443
@@ -26,26 +26,42 @@ proxies:
   tls: true
   servername: cf9.rumedia-cdn.com
   skip-cert-verify: false
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /cdn/v3/live
     headers:
       Host: cf9.rumedia-cdn.com
 - name: 🇨🇭 瑞士 (Switzerland) 03
-  server: www.speedtest.net
+  server: 104.21.117.9
   port: 443
   udp: true
   type: vless
-  uuid: f6b5a6a3-f3e1-63ca-bb68-bdc400000000
+  uuid: bd9ff08b-d042-3650-48e4-c4b400000000
   tls: true
-  servername: netlivpn5505.ffffdsaaa.workers.dev
+  servername: netlivpn2950.bbxff.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
     headers:
-      Host: netlivpn5505.ffffdsaaa.workers.dev
+      Host: netlivpn2950.bbxff.workers.dev
+- name: 🇨🇭 瑞士 (Switzerland) 04
+  server: 104.21.200.243
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 7074b9d7-2183-8919-fc11-ca5e00000000
+  tls: true
+  servername: netlivpn2584.vjvdgbc.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+    headers:
+      Host: netlivpn2584.vjvdgbc.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +70,7 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,5 +79,6 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 04
 rules:
 - MATCH,PROXIES

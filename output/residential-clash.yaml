@@ -4,33 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽)
-  server: 23.252.104.131
-  port: 54321
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Proxy2024
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: R3MRCG00129437X.cybervena.com
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  server: r3mrcg00129437x.cybervena.com
   port: 50099
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES

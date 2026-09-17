@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01
-  server: 3.9.135.156
-  port: 51847
+- name: 🇮🇱 以色列 (Israel) 01
+  server: 176.65.151.240
+  port: 57828
   udp: true
   type: vless
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
+  uuid: 35026d61-f0b6-45a2-837e-be433f0d8e0e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  servername: www.tesla.com
+    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
+    short-id: 7a0300af51a1c4cf
+  servername: Miro.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇱 以色列 (Israel) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇱 以色列 (Israel) 01
 rules:
 - MATCH,PROXIES
