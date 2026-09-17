@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 以色列 (Israel) 01
-  server: 176.65.151.240
-  port: 57828
+- name: 🇦🇱 AL 01
+  server: 194.93.61.86
+  port: 443
   udp: true
   type: vless
-  uuid: 35026d61-f0b6-45a2-837e-be433f0d8e0e
+  uuid: 41e71ba7-d389-47aa-94f7-ed1f55fdbcdf
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
-    short-id: 7a0300af51a1c4cf
-  servername: Miro.com
-  client-fingerprint: chrome
+    public-key: E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ
+    short-id: 17d334ad29b2ff40
+  servername: cdnjs.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇦🇱 AL 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇦🇱 AL 01
 rules:
 - MATCH,PROXIES
