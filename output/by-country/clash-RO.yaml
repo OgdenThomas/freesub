@@ -5,6 +5,52 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
+  server: it-api.cdn-ozon.icu
+  port: 2443
+  udp: true
+  type: vless
+  uuid: 2cbf425a-aed6-4c8f-937f-6265ed13a7fa
+  tls: true
+  reality-opts:
+    public-key: 3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8
+    short-id: ab90218fde328913
+  servername: it-api.cdn-ozon.icu
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-service
+- name: 🇷🇴 罗马尼亚 (Romania) 02
+  server: 162.249.125.133
+  port: 443
+  udp: true
+  type: hysteria2
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
+- name: 🇷🇴 罗马尼亚 (Romania) 03
+  server: 162.249.126.2
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hopp-germany-new.ddnsguru.com
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 04
+  server: bl3fk52.sysopnova.art
+  port: 443
+  udp: true
+  type: vless
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 05
   server: 46.28.67.55
   port: 443
   udp: true
@@ -17,27 +63,6 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 02
-  server: 162.249.126.6
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hopp-germany-new.ddnsguru.com
-  skip-cert-verify: false
-- name: 🇷🇴 罗马尼亚 (Romania) 03
-  server: 193.163.203.253
-  port: 443
-  udp: true
-  type: vless
-  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
-    short-id: 5ee019e02e6ed99a
-  servername: yandex.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,6 +71,8 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
   - 🇷🇴 罗马尼亚 (Romania) 03
+  - 🇷🇴 罗马尼亚 (Romania) 04
+  - 🇷🇴 罗马尼亚 (Romania) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,5 +81,7 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
   - 🇷🇴 罗马尼亚 (Romania) 03
+  - 🇷🇴 罗马尼亚 (Romania) 04
+  - 🇷🇴 罗马尼亚 (Romania) 05
 rules:
 - MATCH,PROXIES
