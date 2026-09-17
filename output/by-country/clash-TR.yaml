@@ -1,0 +1,46 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇷 土耳其 (Turkey) 01 R50
+  server: max.karmatel.ir
+  port: 55519
+  udp: true
+  type: vless
+  uuid: a2b9a1b7-f12f-4503-a9f6-c78ec565a6bf
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play-apps-features.googleusercontent.com
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: tr.curry-load.rutube.info
+  port: 443
+  udp: true
+  type: vless
+  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8
+    short-id: 08
+  servername: dw.b-cdn.net
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 02
+rules:
+- MATCH,PROXIES

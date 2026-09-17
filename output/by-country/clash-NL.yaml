@@ -5,20 +5,39 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 R52
-  server: 82.38.31.9
+  server: 82.38.31.10
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰 (Netherlands) 02 R52
-  server: 82.38.31.36
+  server: 193.29.139.202
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇳🇱 荷兰 (Netherlands) 03
+  server: 95.85.228.231
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-0002-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: estsd1.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 04 R52
+  server: 82.38.31.36
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 05
   server: mypanel.unixzone.us
   port: 12068
   udp: true
@@ -27,43 +46,84 @@ proxies:
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: mypanel.unixzone.us
-- name: 🇳🇱 荷兰 (Netherlands) 04 R52
-  server: 82.38.31.62
+- name: 🇳🇱 荷兰 (Netherlands) 06
+  server: 150.251.141.28
+  port: 443
+  udp: true
+  type: vless
+  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iKiBA7VUMrGy7J3puIr6rbsEj7FMtRazqQywedgGeCA
+  servername: nolan.shhflow.xyz
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 07
+  server: 150.251.143.8
+  port: 443
+  udp: true
+  type: vless
+  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MxrzWQPAwfj7jC0b4_6jlpUlXowcJFh7lOhZSIe0ezE
+  servername: nobnob.shhflow.xyz
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 08 R52
+  server: 82.38.31.46
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 05 R52
+- name: 🇳🇱 荷兰 (Netherlands) 09
+  server: 172.239.239.53
+  port: 22746
+  udp: true
+  type: vless
+  uuid: a4846a6c-163f-4b12-a99f-378d814e5e09
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU
+    short-id: d9fd4fa80238cd05
+  servername: www.intel.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 10 R52
   server: 82.38.31.82
   port: 8080
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 06
-  server: 130.12.242.106
+- name: 🇳🇱 荷兰 (Netherlands) 11
+  server: 50.7.120.162
   port: 443
   udp: true
   type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 07 R52
-  server: 82.38.31.42
-  port: 8080
+  servername: nl-dedic-mori.failspace.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 12
+  server: pniomniooo-production.up.railway.app
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 08
+  type: vless
+  uuid: fac66c90-791b-5dcd-3b8b-e45622651009
+  tls: true
+  servername: pniomniooo-production.up.railway.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/fac66c90-791b-5dcd-3b8b-e45622651009
+    headers:
+      Host: pniomniooo-production.up.railway.app
+- name: 🇳🇱 荷兰 (Netherlands) 13
   server: 89.124.94.83
   port: 40443
   udp: true
@@ -76,7 +136,35 @@ proxies:
     short-id: ec70d3b2b6298ba1
   servername: deepl.com
   client-fingerprint: qq
-- name: 🇳🇱 荷兰 (Netherlands) 09
+- name: 🇳🇱 荷兰 (Netherlands) 14
+  server: 72.56.92.120
+  port: 443
+  udp: true
+  type: hysteria2
+  password: CnVfXXvMzh
+  sni: hys13.wba-pn.ru
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 15 R52
+  server: 82.38.31.42
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 16
+  server: 130.12.242.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 17
   server: 138.124.55.15
   port: 443
   udp: true
@@ -89,20 +177,23 @@ proxies:
     short-id: eba1498e012ef580
   servername: amazon.de
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 10
-  server: alnilam.yokkastars.com
-  port: 40443
+- name: 🇳🇱 荷兰 (Netherlands) 18
+  server: 72.56.16.243
+  port: 443
   udp: true
-  type: vless
-  uuid: 279a8eef-898f-44ef-b4f5-67a494f4b542
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vAG5o6TQvpZAlvDnlyhHEFZBuSgEV_ybQigD_mGKh1M
-    short-id: 5b98
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 11
+  type: hysteria2
+  password: EkF2Yw0Lc7
+  sni: hys34.wba-pn.ru
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 19
+  server: hys28.wba-pn.ru
+  port: 443
+  udp: true
+  type: hysteria2
+  password: BWAFlp8g53
+  sni: hys28.wba-pn.ru
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 20
   server: 188.42.145.180
   port: 443
   udp: true
@@ -113,22 +204,6 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 12
-  server: nl01ntrhy01.tcp-reset-club.net
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  sni: nl01ntrhy01.tcp-reset-club.net
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 13
-  server: hys28.wba-pn.ru
-  port: 443
-  udp: true
-  type: hysteria2
-  password: BWAFlp8g53
-  sni: hys28.wba-pn.ru
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -138,15 +213,22 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 02 R52
   - 🇳🇱 荷兰 (Netherlands) 03
   - 🇳🇱 荷兰 (Netherlands) 04 R52
-  - 🇳🇱 荷兰 (Netherlands) 05 R52
+  - 🇳🇱 荷兰 (Netherlands) 05
   - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07 R52
-  - 🇳🇱 荷兰 (Netherlands) 08
+  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 08 R52
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
+  - 🇳🇱 荷兰 (Netherlands) 10 R52
   - 🇳🇱 荷兰 (Netherlands) 11
   - 🇳🇱 荷兰 (Netherlands) 12
   - 🇳🇱 荷兰 (Netherlands) 13
+  - 🇳🇱 荷兰 (Netherlands) 14
+  - 🇳🇱 荷兰 (Netherlands) 15 R52
+  - 🇳🇱 荷兰 (Netherlands) 16
+  - 🇳🇱 荷兰 (Netherlands) 17
+  - 🇳🇱 荷兰 (Netherlands) 18
+  - 🇳🇱 荷兰 (Netherlands) 19
+  - 🇳🇱 荷兰 (Netherlands) 20
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -156,14 +238,21 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 02 R52
   - 🇳🇱 荷兰 (Netherlands) 03
   - 🇳🇱 荷兰 (Netherlands) 04 R52
-  - 🇳🇱 荷兰 (Netherlands) 05 R52
+  - 🇳🇱 荷兰 (Netherlands) 05
   - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07 R52
-  - 🇳🇱 荷兰 (Netherlands) 08
+  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 08 R52
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
+  - 🇳🇱 荷兰 (Netherlands) 10 R52
   - 🇳🇱 荷兰 (Netherlands) 11
   - 🇳🇱 荷兰 (Netherlands) 12
   - 🇳🇱 荷兰 (Netherlands) 13
+  - 🇳🇱 荷兰 (Netherlands) 14
+  - 🇳🇱 荷兰 (Netherlands) 15 R52
+  - 🇳🇱 荷兰 (Netherlands) 16
+  - 🇳🇱 荷兰 (Netherlands) 17
+  - 🇳🇱 荷兰 (Netherlands) 18
+  - 🇳🇱 荷兰 (Netherlands) 19
+  - 🇳🇱 荷兰 (Netherlands) 20
 rules:
 - MATCH,PROXIES

@@ -13,13 +13,18 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇯🇵 日本 (Japan) 02
-  server: 168.110.60.104
-  port: 18112
+  server: 1-jp.ap.ku-ke.cc
+  port: 443
   udp: true
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: d03c34c3-98fa-42ff-80a8-6ea1d0b24ac9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ImUbTZ1OKgAaiNlCf8zkeO5NnbAdKHdm2fhphvEZNxY
+    short-id: '56'
+  servername: cdn.jsdelivr.net
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
   server: jp-2.gsafevpnapi.com
   port: 31870
@@ -28,7 +33,19 @@ proxies:
   cipher: aes-256-gcm
   password: 38b8e2fb-b9a0-40a6-b42c-335def2765cf
 - name: 🇯🇵 日本 (Japan) 04
-  server: 45.142.166.211
+  server: jp-1.gsafevpnapi.com
+  port: 20270
+  udp: true
+  type: vless
+  uuid: 2bf192f1-7d86-43a3-88b3-8f72b7eb5ad9
+  tls: true
+  reality-opts:
+    public-key: l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE
+    short-id: 28500ae15838f905
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05
+  server: 207.148.99.230
   port: 443
   udp: true
   type: vless
@@ -36,12 +53,58 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /knowledge?ed=2560fp=chrome
+    path: /test/company/library?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 05
+- name: 🇯🇵 日本 (Japan) 06
+  server: 210.152.85.154
+  port: 19364
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /collect/user/products?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇯🇵 日本 (Japan) 07
+  server: 85.121.50.16
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /friends/go.php?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇯🇵 日本 (Japan) 08
+  server: 167.179.111.237
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /act/player/search?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇯🇵 日本 (Japan) 09
   server: 203.137.165.164
   port: 57554
   udp: true
@@ -56,21 +119,7 @@ proxies:
     path: /p/docs/soft?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 06
-  server: 167.179.111.237
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /act/player/search?ed=2560fp=chrome
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 07
+- name: 🇯🇵 日本 (Japan) 10
   server: 104.238.148.149
   port: 443
   udp: true
@@ -79,14 +128,13 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /about?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 08
-  server: 104.156.238.23
+- name: 🇯🇵 日本 (Japan) 11
+  server: 45.142.166.211
   port: 443
   udp: true
   type: vless
@@ -96,10 +144,18 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /bt/image/categories?ed=2560fp=chrome
+    path: /knowledge?ed=2560fp=chrome
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 09
+- name: 🇯🇵 日本 (Japan) 12
+  server: jp1.xiaoliyu.us
+  port: 27102
+  udp: true
+  type: hysteria2
+  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
+  sni: jp1.xiaoliyu.us
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 13
   server: 138.2.59.96
   port: 10129
   udp: true
@@ -112,20 +168,6 @@ proxies:
   network: ws
   ws-opts:
     path: /movie/help/events?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 10
-  server: 210.152.85.154
-  port: 19364
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /collect/user/products?ed=2560
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
@@ -143,6 +185,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 08
   - 🇯🇵 日本 (Japan) 09
   - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
+  - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -158,5 +203,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 08
   - 🇯🇵 日本 (Japan) 09
   - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
+  - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
 rules:
 - MATCH,PROXIES

@@ -5,95 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: vless.herogoing.top
-  port: 443
-  udp: true
-  type: trojan
-  password: bpb-trojan
-  sni: vless.herogoing.top
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-- name: 🇩🇪 德国 (Germany) 02
   server: 95.179.169.44
   port: 53224
   udp: true
   type: vless
   uuid: 5f00ca4e-3f26-473e-ad1c-414112abb0a3
+- name: 🇩🇪 德国 (Germany) 02
+  server: 3.75.89.244
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 03
-  server: 159.195.192.169
-  port: 2054
-  udp: true
-  type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-  tls: true
-  reality-opts:
-    public-key: mlJSEX5zJodpeofSicXnd0tlrgonVCGJ3M-qqWF4FSU
-  servername: www.ibm.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇩🇪 德国 (Germany) 04
-  server: 85.204.107.177
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 05
-  server: 18.199.98.219
+  server: 82.118.19.153
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 06
-  server: 130.61.181.238
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: BKhCEwmAD2//ZNQ9Ej8GshMBc3/L4nGZ0SODkR77HLo=
-- name: 🇩🇪 德国 (Germany) 07
-  server: 63.185.90.235
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 08
-  server: 82.47.186.18
-  port: 55597
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: o2rw2hICwu1blrr_gZAl2Q
-- name: 🇩🇪 德国 (Germany) 09
-  server: 31.184.244.162
-  port: 2053
-  udp: true
   type: vless
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  servername: www.google.com
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇩🇪 德国 (Germany) 10
-  server: 130.61.181.135
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: HUahPZfrh+UnjcZXbP2Dj03tPPddhSxeRupzh9M2pak=
-- name: 🇩🇪 德国 (Germany) 11
+- name: 🇩🇪 德国 (Germany) 04
   server: 77.110.104.238
   port: 2053
   udp: true
@@ -108,8 +45,43 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: pl199grpc
-- name: 🇩🇪 德国 (Germany) 12 R50
-  server: nasnet-571299667-direct.mbghalibaf.com
+- name: 🇩🇪 德国 (Germany) 05 R49
+  server: 163.8.195.241
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  network: ws
+  ws-opts:
+    path: /29c8fed7ca22
+- name: 🇩🇪 德国 (Germany) 06
+  server: 63.180.252.123
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 07
+  server: 18.199.98.219
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 08
+  server: 144.31.168.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: aotocon.ggisopi.su
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 09 R50
+  server: 57.129.96.67
   port: 443
   udp: true
   type: vless
@@ -118,50 +90,28 @@ proxies:
   tls: true
   servername: nasnet-571299667-direct.mbghalibaf.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 13
-  server: 63.180.252.123
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 10
+  server: 63.185.90.235
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 14
-  server: 82.118.19.153
+- name: 🇩🇪 德国 (Germany) 11
+  server: 2.26.51.75
   port: 443
   udp: true
   type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 15
-  server: 130.61.34.121
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: zI0WUsK9Ct4x3vCtyfZPK++Ag2bohY8qoA0ElyeWKM0=
-- name: 🇩🇪 德国 (Germany) 16
-  server: 31.184.244.219
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d
-  tls: true
-  reality-opts:
-    public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY
-    short-id: 4881f8244d1b9021
-  servername: www.google.com
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: d4f6a8c1b2e3f9aa
+  servername: 4pda.to
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇩🇪 德国 (Germany) 17
+- name: 🇩🇪 德国 (Germany) 12
   server: 5.35.81.60
   port: 4443
   udp: true
@@ -176,64 +126,42 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: snob-grpc-de
-- name: 🇩🇪 德国 (Germany) 18
-  server: 31.76.111.152
-  port: 443
+- name: 🇩🇪 德国 (Germany) 13 R51
+  server: 31.59.121.156
+  port: 2053
   udp: true
   type: vless
-  uuid: 24b84bd3-baa3-4192-9625-23c9690ae6f6
-  flow: xtls-rprx-vision
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  reality-opts:
-    public-key: yMoulSTnxnbOfAjWPfB244a29ms9HUkjgA1zLZ65Nzw
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 19
-  server: lord.ehsanazizi-speed-server.com
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 7286f5d1-b802-4de6-9aac-a51520cc7575
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: ''
-- name: 🇩🇪 德国 (Germany) 20
-  server: 185.255.179.11
-  port: 9443
-  udp: true
-  type: vless
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  tls: true
-  servername: hub-de-04.hanvpn.cc
+  servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: de04-grpc-8e47a
-- name: 🇩🇪 德国 (Germany) 21
-  server: 104.25.30.10
+  network: ws
+  ws-opts:
+    path: /go/library/channel?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 14
+  server: 82.47.186.18
+  port: 55597
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: o2rw2hICwu1blrr_gZAl2Q
+- name: 🇩🇪 德国 (Germany) 15
+  server: 188.114.98.0
   port: 443
   udp: true
   type: vless
-  uuid: 807cd1e0-f4ce-4785-b7a3-cde0c1614b8d
+  uuid: V2XNET
   tls: true
-  servername: de14.69lover.my
+  servername: or.mirikhan.dpdns.org
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /api/v2/6c316c769ad6853c/stream
+    path: /xvpnws/
     headers:
-      Host: de14.69lover.my
-- name: 🇩🇪 德国 (Germany) 22
-  server: e2.cover20.ir
-  port: 30874
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 3I+o7EIWf3pq57tdggmk16opPogx6qK1vWGmV3HuYmc=
+      Host: or.mirikhan.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -243,24 +171,17 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 05 R49
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R50
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R50
-  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13 R51
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
-  - 🇩🇪 德国 (Germany) 16
-  - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18
-  - 🇩🇪 德国 (Germany) 19
-  - 🇩🇪 德国 (Germany) 20
-  - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -270,23 +191,16 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 05 R49
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R50
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R50
-  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13 R51
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
-  - 🇩🇪 德国 (Germany) 16
-  - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18
-  - 🇩🇪 德国 (Germany) 19
-  - 🇩🇪 德国 (Germany) 20
-  - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
 rules:
 - MATCH,PROXIES
