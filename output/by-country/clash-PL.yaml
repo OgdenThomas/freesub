@@ -5,22 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 104.17.247.68
-  port: 443
-  udp: true
-  type: vless
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
-  tls: true
-  servername: khoda.ak-khoda.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: khoda.ak-khoda.workers.dev
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 188.220.205.16
+  server: atomic-prase23893.my-vm.work
   port: 8088
   udp: true
   type: vless
@@ -30,34 +15,17 @@ proxies:
     path: /api
     headers:
       Host: queuev4.vk.com
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
-    short-id: fa3ea655619a3e78
-  servername: www.cloudflare.com
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES

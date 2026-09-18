@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: 49.254.204.134
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🇰🇷 韩国 (South Korea) 02
   server: 47.80.14.8
   port: 443
   udp: true
@@ -17,21 +24,6 @@ proxies:
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: 172.64.159.190
-  port: 443
-  udp: true
-  type: vless
-  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
-  tls: true
-  servername: a860d725.69lover.site
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v2/288cd04559d84d1d/stream
-    headers:
-      Host: a860d725.69lover.site
 proxy-groups:
 - name: PROXIES
   type: select

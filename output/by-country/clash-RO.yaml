@@ -17,17 +17,47 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 02
+  server: 45.43.166.56
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4CD55C5_trial
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sEzXu5KZcPPaT5ZKj8gBIOa4ana3Jq75-iZSMQPW9BY
+    short-id: 8c3f17a4d92be560
+  servername: travel.yandex.ru
+  client-fingerprint: firefox
+- name: 🇷🇴 罗马尼亚 (Romania) 03
+  server: 193.163.203.253
+  port: 443
+  udp: true
+  type: vless
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  servername: yandex.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 rules:
 - MATCH,PROXIES
