@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 143.246.195.138
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 02
-  server: 143.246.193.215
-  port: 443
-  udp: true
-  type: vless
-  uuid: 77da6e30-ad4e-11f1-94d5-525400d1d4f7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
-  servername: www.blocket.se
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03
   server: 143.246.194.60
   port: 8081
   udp: true
@@ -34,7 +13,16 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 04
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 143.246.195.138
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 03
   server: se.belka.network
   port: 443
   udp: true
@@ -47,17 +35,6 @@ proxies:
     short-id: 7f2e9c4b1a8d6e53
   servername: yahoo.com
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 05 R44
-  server: newswedengrrrr.azadfug.ir
-  port: 7005
-  udp: true
-  type: vless
-  uuid: ac64aec6-85ee-4fc7-b34b-60a7bcf236ec
-  tls: true
-  reality-opts:
-    public-key: 7aICTN0hv6bhd8bYOjNZniDYSXgD20LunZ3BW6_Zyk4
-  servername: play.googleapis.com
-  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,8 +43,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05 R44
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,7 +51,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05 R44
 rules:
 - MATCH,PROXIES

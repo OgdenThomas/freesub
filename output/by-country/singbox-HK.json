@@ -4,30 +4,99 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "mz.hkychina.com",
-      "server_port": 8443,
-      "password": "HysTeria2026!Proxy",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16116,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
+      "server": "47.83.173.110",
+      "server_port": 443,
+      "uuid": "bca6f15f-89db-40e2-a955-19d084229234",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "mz.hkychina.com",
-        "insecure": false
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s",
+          "short_id": "8144589880395fa1"
+        }
       }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16113,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04",
+      "server": "176.32.35.44",
+      "server_port": 50111,
+      "method": "aes-256-gcm",
+      "password": "6b39ae3234dfd68b"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 R57",
+      "server": "181.215.18.196",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "manm1wouaeic9db3"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16112,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 07",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16115,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01"
+        "🇭🇰 中国香港 (Hong Kong) 01",
+        "🇭🇰 中国香港 (Hong Kong) 02",
+        "🇭🇰 中国香港 (Hong Kong) 03",
+        "🇭🇰 中国香港 (Hong Kong) 04",
+        "🇭🇰 中国香港 (Hong Kong) 05 R57",
+        "🇭🇰 中国香港 (Hong Kong) 06",
+        "🇭🇰 中国香港 (Hong Kong) 07"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01"
+        "🇭🇰 中国香港 (Hong Kong) 01",
+        "🇭🇰 中国香港 (Hong Kong) 02",
+        "🇭🇰 中国香港 (Hong Kong) 03",
+        "🇭🇰 中国香港 (Hong Kong) 04",
+        "🇭🇰 中国香港 (Hong Kong) 05 R57",
+        "🇭🇰 中国香港 (Hong Kong) 06",
+        "🇭🇰 中国香港 (Hong Kong) 07"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

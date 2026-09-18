@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
+  server: 185.174.137.209
+  port: 443
+  udp: true
+  type: vless
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hlCgGFDYAbecFvJHFs-U0Zbuvk47lcsVVrF1y23Axlc
+    short-id: dc
+  servername: 4pda.to
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -16,18 +29,20 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 rules:
 - MATCH,PROXIES

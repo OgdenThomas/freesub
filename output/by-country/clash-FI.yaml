@@ -18,6 +18,26 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 02
+  server: 82.47.186.18
+  port: 19290
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: o2rw2hICwu1blrr_gZAl2Q
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 2.26.147.118
+  port: 443
+  udp: true
+  type: vless
+  uuid: b97e287f-a24e-0021-a103-7e7ecef83139
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
+    short-id: e1f8a3b6
+  servername: www.amd.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04
   server: 31.77.199.182
   port: 443
   udp: true
@@ -30,13 +50,6 @@ proxies:
     short-id: abcd1234
   servername: fi2.yservice.help
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 82.47.186.18
-  port: 19290
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: o2rw2hICwu1blrr_gZAl2Q
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +58,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,5 +67,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

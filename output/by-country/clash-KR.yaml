@@ -1,0 +1,78 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇰🇷 韩国 (South Korea) 01
+  server: 54.180.104.21
+  port: 8686
+  udp: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  tls: true
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: 628b3c90c98ead4f
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: hg.zhujue.us
+  port: 11000
+  udp: true
+  type: vless
+  uuid: 0e46345c-f33b-4f9b-b8ec-90e7c986af7e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4
+  servername: s0.awsstatic.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 47.80.14.8
+  port: 443
+  udp: true
+  type: vless
+  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
+    short-id: 71110d3f7ef57760
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 172.64.159.190
+  port: 443
+  udp: true
+  type: vless
+  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
+  tls: true
+  servername: a860d725.69lover.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/288cd04559d84d1d/stream
+    headers:
+      Host: a860d725.69lover.site
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
+rules:
+- MATCH,PROXIES

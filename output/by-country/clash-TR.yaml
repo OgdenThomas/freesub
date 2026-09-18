@@ -4,18 +4,37 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 R50
-  server: max.karmatel.ir
-  port: 55519
+- name: 🇹🇷 土耳其 (Turkey) 01
+  server: 139.28.240.68
+  port: 1080
   udp: true
-  type: vless
-  uuid: a2b9a1b7-f12f-4503-a9f6-c78ec565a6bf
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: play-apps-features.googleusercontent.com
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
 - name: 🇹🇷 土耳其 (Turkey) 02
+  server: 139.28.240.68
+  port: 2086
+  udp: true
+  type: vmess
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 03 R50
+  server: 153.52.92.81
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🇹🇷 土耳其 (Turkey) 04 R50
+  server: 91.228.227.211
+  port: 23957
+  udp: true
+  type: vmess
+  uuid: 92987ab8-0a53-4a16-8d6c-295d5df86404
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 05
   server: tr.curry-load.rutube.info
   port: 443
   udp: true
@@ -28,19 +47,38 @@ proxies:
     short-id: 08
   servername: dw.b-cdn.net
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 06
+  server: helixgaming.ir
+  port: 80
+  udp: true
+  type: vless
+  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03 R50
+  - 🇹🇷 土耳其 (Turkey) 04 R50
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03 R50
+  - 🇹🇷 土耳其 (Turkey) 04 R50
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
 rules:
 - MATCH,PROXIES

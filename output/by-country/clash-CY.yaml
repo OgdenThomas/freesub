@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: 194.76.155.80
+  server: carina.yokkastars.com
   port: 2443
   udp: true
   type: vless
@@ -15,11 +15,36 @@ proxies:
     public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
     short-id: e496c7fe1cefc9ff
   servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: grpc
   grpc-opts:
     grpc-service-name: rex-grpc
 - name: 🇨🇾 塞浦路斯 (Cyprus) 02
+  server: 194.76.155.80
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 588456a5-f724-46a7-a08b-5d336d9f8f56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
+    short-id: e496c7fe1cefc9ff
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03
+  server: 194.59.245.250
+  port: 40443
+  udp: true
+  type: vless
+  uuid: e4371581-c418-4770-b09a-d630f18290a6
+  tls: true
+  reality-opts:
+    public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
+    short-id: 5d96
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 04
   server: 2.56.124.241
   port: 443
   udp: true
@@ -32,19 +57,6 @@ proxies:
     short-id: 72104d27a0f5f62e
   servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 03
-  server: 194.76.155.80
-  port: 40443
-  udp: true
-  type: vless
-  uuid: 588456a5-f724-46a7-a08b-5d336d9f8f56
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
-    short-id: e496c7fe1cefc9ff
-  servername: deepl.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,6 +65,7 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
   - 🇨🇾 塞浦路斯 (Cyprus) 03
+  - 🇨🇾 塞浦路斯 (Cyprus) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +74,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
   - 🇨🇾 塞浦路斯 (Cyprus) 03
+  - 🇨🇾 塞浦路斯 (Cyprus) 04
 rules:
 - MATCH,PROXIES

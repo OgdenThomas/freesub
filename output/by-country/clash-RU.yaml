@@ -13,14 +13,32 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: msk.frkn.org
+  server: deutch.snappycore.com
   port: 443
   udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: false
+  type: vless
+  uuid: 8f9c5260-9456-472b-8ee2-444500ba6cab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SCuasCPva4lPGu-QRP955zZB8f6i7ydHBQh6bsSlrgo
+    short-id: 3d87c490ddd41305
+  servername: deutch.snappycore.com
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 03
+  server: anime-hub.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: 81676625-4b25-408d-b8f6-98315d7d338e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8ryf65dQrgnS_uO6CHEsndhXhpOVd0fcAjMcN5FoJ3o
+    short-id: a08fae6b86e059fa
+  servername: anime-hub.online
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: 46.8.200.91
   port: 443
   udp: true
@@ -34,6 +52,14 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf3.rumedia-cdn.com
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: msk.frkn.org
+  port: 443
+  udp: true
+  type: hysteria2
+  password: f317b5d6-d399-4d3d-a051-89d674ae953c
+  sni: msk.frkn.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,6 +68,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +78,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES

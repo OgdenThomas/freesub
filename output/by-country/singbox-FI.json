@@ -25,8 +25,37 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "82.47.186.18",
+      "server_port": 19290,
+      "method": "aes-128-gcm",
+      "password": "o2rw2hICwu1blrr_gZAl2Q"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "server": "2.26.147.118",
+      "server_port": 443,
+      "uuid": "b97e287f-a24e-0021-a103-7e7ecef83139",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4",
+          "short_id": "e1f8a3b6"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 04",
       "server": "31.77.199.182",
       "server_port": 443,
       "uuid": "c09cfd91-b234-4998-9bed-a0211b7f5c3c",
@@ -46,21 +75,14 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
-      "server": "82.47.186.18",
-      "server_port": 19290,
-      "method": "aes-128-gcm",
-      "password": "o2rw2hICwu1blrr_gZAl2Q"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ]
     },
     {
@@ -69,7 +91,8 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

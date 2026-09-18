@@ -5,24 +5,87 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: mz.hkychina.com
-  port: 8443
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16116
   udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
-  skip-cert-verify: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: 47.83.173.110
+  port: 443
+  udp: true
+  type: vless
+  uuid: bca6f15f-89db-40e2-a955-19d084229234
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s
+    short-id: 8144589880395fa1
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16113
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: 176.32.35.44
+  port: 50111
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
+- name: 🇭🇰 中国香港 (Hong Kong) 05 R57
+  server: 181.215.18.196
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: manm1wouaeic9db3
+- name: 🇭🇰 中国香港 (Hong Kong) 06
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16112
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 07
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16115
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 03
+  - 🇭🇰 中国香港 (Hong Kong) 04
+  - 🇭🇰 中国香港 (Hong Kong) 05 R57
+  - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 03
+  - 🇭🇰 中国香港 (Hong Kong) 04
+  - 🇭🇰 中国香港 (Hong Kong) 05 R57
+  - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
 rules:
 - MATCH,PROXIES
