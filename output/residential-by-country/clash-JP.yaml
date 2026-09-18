@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01
-  server: 172.66.47.45
-  port: 443
+- name: 🇯🇵 日本 (Japan) 01 (家宽)
+  server: 83.147.216.223
+  port: 4433
   udp: true
   type: vless
-  uuid: e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f
+  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
   tls: true
-  servername: EZAcCESS-pROjECt-F62c30.PAGES.dEv
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /@Marisa_kristi
     headers:
-      Host: ezaccess-project-f62c30.pages.dev
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01
+  - 🇯🇵 日本 (Japan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01
+  - 🇯🇵 日本 (Japan) 01 (家宽)
 rules:
 - MATCH,PROXIES

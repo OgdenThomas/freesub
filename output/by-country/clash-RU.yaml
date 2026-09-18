@@ -5,13 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 94.249.187.46
-  port: 2086
+  server: fpoixf69hqt3e6d4urtb.mamadneizeh.workers.dev
+  port: 443
   udp: true
-  type: vmess
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 0b41f339-5809-46ef-8351-b03fdc441539
+  tls: true
+  servername: FpoiXF69hQT3E6d4URTB.MamADNEIZeH.WorKers.DEV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl/lYNtP7z8pJUmfp01tz5wEnuDujJtZ?ed=2560
 - name: 🇷🇺 俄罗斯 (Russia) 02
   server: deutch.snappycore.com
   port: 443
@@ -26,33 +30,6 @@ proxies:
   servername: deutch.snappycore.com
   client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: anime-hub.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: 81676625-4b25-408d-b8f6-98315d7d338e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8ryf65dQrgnS_uO6CHEsndhXhpOVd0fcAjMcN5FoJ3o
-    short-id: a08fae6b86e059fa
-  servername: anime-hub.online
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 46.8.200.91
-  port: 443
-  udp: true
-  type: vless
-  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-  tls: true
-  servername: cf3.rumedia-cdn.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 05
   server: msk.frkn.org
   port: 443
   udp: true
@@ -60,6 +37,21 @@ proxies:
   password: f317b5d6-d399-4d3d-a051-89d674ae953c
   sni: msk.frkn.org
   skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 46.8.200.91
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  tls: true
+  servername: cf3.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /casc
+    headers:
+      Host: cf3.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,7 +61,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,6 +70,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES

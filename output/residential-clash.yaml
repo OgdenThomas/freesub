@@ -11,26 +11,64 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: r3mrcg001286ek2.cybervena.com
-  port: 50099
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽)
+  server: hg.zhujue.us
+  port: 11000
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  type: vless
+  uuid: 0e46345c-f33b-4f9b-b8ec-90e7c986af7e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4
+  servername: s0.awsstatic.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 03 (家宽)
+  server: 83.147.216.223
+  port: 4433
+  udp: true
+  type: vless
+  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
+  tls: true
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  server: 7dba81fc3a0b.oylfmxz.cn
+  port: 443
+  udp: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: 7dba81fc3a0b.oylfmxz.cn
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
+  - 🇯🇵 日本 (Japan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
+  - 🇯🇵 日本 (Japan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 rules:
 - MATCH,PROXIES
