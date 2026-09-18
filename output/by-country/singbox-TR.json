@@ -6,7 +6,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "helixgaming.ir",
+      "server": "89.251.8.205",
       "server_port": 80,
       "uuid": "c0e453eb-33ac-4206-8423-3e1286c2ba7a",
       "transport": {
@@ -18,18 +18,85 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
+      "server": "78.135.73.47",
+      "server_port": 443,
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03",
+      "server": "tur11.zavqeron.ir",
+      "server_port": 8443,
+      "uuid": "2fa4235a-51a7-452b-a760-498951646043",
+      "tls": {
+        "enabled": true,
+        "server_name": "amp-api-edge.apps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "t5qC-Lzm_NKsc6nQ8ORzyivswiRPlbPLK0hS4d3FxTY",
+          "short_id": "a2eb2b8f0f0a88b1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 R50",
+      "server": "istan11.zavqeron.ir",
+      "server_port": 8444,
+      "uuid": "2fa4235a-51a7-452b-a760-498951646043",
+      "tls": {
+        "enabled": true,
+        "server_name": "amp-api-edge.apps.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NaN_3uO7vc8C8hd1nCebFeRGE10_1aKWF2Vug9zraTg",
+          "short_id": "447b9272172d49dc"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04 R50"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04 R50"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

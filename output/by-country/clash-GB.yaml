@@ -5,33 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 31.76.39.253
+  server: 2.27.205.218
   port: 443
   udp: true
   type: vless
-  uuid: 24b84bd3-baa3-4192-9625-23c9690ae6f6
-  flow: xtls-rprx-vision
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
   tls: true
   reality-opts:
-    public-key: Hbbi45lhaIjHmcZoXD84dVlGhHnVOTM8LvC3_kh3dis
-    short-id: ff3f36afdec470
-  servername: eng.jokervpn.space
+    public-key: DiJo9V7cQ2_dIPXjFjAEFMeLUemQmWpcbTs6ARNh7gg
+    short-id: 9f3a1c7b
+  servername: 4pda.to
   client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 129.151.83.15
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 4HcH2eAbURZ4IN8H4EAgnOWL2suzf7iTJTogK+3MB1o=
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 129.151.65.24
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: YtbZ5p/WBjlRfs2aQ1vr44sGpkdKyx5Xbdd+DKP7ke0=
-- name: 🇬🇧 英国 (United Kingdom) 04
   server: 31.76.7.154
   port: 7443
   udp: true
@@ -44,18 +32,20 @@ proxies:
     short-id: d2061bb1
   servername: ya.ru
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: newswedengrrrr.azadfug.ir
-  port: 7005
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 31.76.39.253
+  port: 443
   udp: true
   type: vless
-  uuid: ac64aec6-85ee-4fc7-b34b-60a7bcf236ec
+  uuid: 24b84bd3-baa3-4192-9625-23c9690ae6f6
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 7aICTN0hv6bhd8bYOjNZniDYSXgD20LunZ3BW6_Zyk4
-  servername: play.googleapis.com
-  client-fingerprint: ios
-- name: 🇬🇧 英国 (United Kingdom) 06
+    public-key: Hbbi45lhaIjHmcZoXD84dVlGhHnVOTM8LvC3_kh3dis
+    short-id: ff3f36afdec470
+  servername: eng.jokervpn.space
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 31.76.88.10
   port: 443
   udp: true
@@ -64,27 +54,12 @@ proxies:
   tls: true
   servername: cf5.rumedia-cdn.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /cdn/v3/live
     headers:
       Host: cf5.rumedia-cdn.com
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 176.123.162.100
-  port: 9880
-  udp: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabb
-  servername: dl.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
 proxy-groups:
 - name: PROXIES
   type: select
@@ -94,9 +69,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -106,8 +78,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: helixgaming.ir
+  server: 89.251.8.205
   port: 80
   udp: true
   type: vless
@@ -15,17 +15,60 @@ proxies:
     path: /
     headers:
       Host: play.google.com
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  servername: www.datadoghq.com
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: tur11.zavqeron.ir
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2fa4235a-51a7-452b-a760-498951646043
+  tls: true
+  reality-opts:
+    public-key: t5qC-Lzm_NKsc6nQ8ORzyivswiRPlbPLK0hS4d3FxTY
+    short-id: a2eb2b8f0f0a88b1
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 R50
+  server: istan11.zavqeron.ir
+  port: 8444
+  udp: true
+  type: vless
+  uuid: 2fa4235a-51a7-452b-a760-498951646043
+  tls: true
+  reality-opts:
+    public-key: NaN_3uO7vc8C8hd1nCebFeRGE10_1aKWF2Vug9zraTg
+    short-id: 447b9272172d49dc
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04 R50
 rules:
 - MATCH,PROXIES

@@ -4,15 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01
-  server: 168.110.60.104
-  port: 18112
-  udp: true
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 02 R41
+- name: 🇯🇵 日本 (Japan) 01 R41
   server: 45.32.57.118
   port: 4433
   udp: true
@@ -20,7 +12,28 @@ proxies:
   uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
   alterId: 0
   cipher: auto
+- name: 🇯🇵 日本 (Japan) 02
+  server: 8.209.248.218
+  port: 443
+  udp: true
+  type: vless
+  uuid: caab26f1-c2e0-438d-8342-5d2125fb45df
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: V94ws5oTIja_a6Hui3rSjomr7hZ-QCtYlsT7BWmxTzk
+    short-id: 973bd4f3d8d217fd
+  servername: www.amazon.com
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
+  server: oc.imfun.fun
+  port: 18112
+  udp: true
+  type: vmess
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  alterId: 0
+  cipher: auto
+- name: 🇯🇵 日本 (Japan) 04
   server: 207.148.112.220
   port: 443
   udp: true
@@ -35,22 +48,21 @@ proxies:
     path: /discuss?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 04 R53
-  server: 108.160.136.71
-  port: 443
+- name: 🇯🇵 日本 (Japan) 05
+  server: 203.137.165.164
+  port: 57554
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /doc/products/view?ed=2560fp=chrome
+    path: /p/docs/soft?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 05
+- name: 🇯🇵 日本 (Japan) 06
   server: 138.2.59.96
   port: 10129
   udp: true
@@ -65,7 +77,20 @@ proxies:
     path: /movie/help/events?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 06
+- name: 🇯🇵 日本 (Japan) 07
+  server: 36.151.187.225
+  port: 12887
+  udp: true
+  type: vless
+  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: a3H5ffQkcW4xELeJEGQ8FsaXLG4sGomkB7_ms0d5xzc
+    short-id: b48d22a492
+  servername: www.spotify.com
+  client-fingerprint: edge
+- name: 🇯🇵 日本 (Japan) 08
   server: 85.121.50.16
   port: 443
   udp: true
@@ -74,29 +99,13 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /friends/go.php?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 07
-  server: 203.137.165.164
-  port: 57554
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /p/docs/soft?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 08
-  server: 104.238.148.149
+- name: 🇯🇵 日本 (Japan) 09
+  server: 108.160.136.71
   port: 443
   udp: true
   type: vless
@@ -104,29 +113,20 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /about?ed=2560
+    path: /doc/products/view?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇯🇵 日本 (Japan) 09
-  server: jp1.xiaoliyu.us
-  port: 27102
-  udp: true
-  type: hysteria2
-  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
-  sni: jp1.xiaoliyu.us
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02 R41
+  - 🇯🇵 日本 (Japan) 01 R41
+  - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04 R53
+  - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
@@ -137,10 +137,10 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02 R41
+  - 🇯🇵 日本 (Japan) 01 R41
+  - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04 R53
+  - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07

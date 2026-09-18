@@ -1,0 +1,47 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇧🇬 保加利亚 (Bulgaria) 01
+  server: 129.151.64.169
+  port: 31867
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /files
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇧🇬 保加利亚 (Bulgaria) 02
+  server: 87.120.196.212
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5561acfb-0adc-4c76-bfbf-767a76c7cbf0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: holo-stream.videocactus.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇧🇬 保加利亚 (Bulgaria) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇧🇬 保加利亚 (Bulgaria) 02
+rules:
+- MATCH,PROXIES

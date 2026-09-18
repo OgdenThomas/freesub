@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
+  server: 37.143.129.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
+    short-id: 48fd192dc4e46bc0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 31.77.199.182
   port: 443
   udp: true
@@ -17,7 +30,19 @@ proxies:
     short-id: abcd1234
   servername: fi2.yservice.help
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: est1313.ggisopi.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: est1313.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04
   server: 82.47.186.18
   port: 19290
   udp: true
@@ -31,6 +56,8 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +65,7 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

@@ -4,28 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰 (Poland) 01
-  server: 188.220.205.16
-  port: 8088
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: 212.87.190.124
+  port: 3
   udp: true
   type: vless
-  uuid: f7c74a35-1da0-5097-9fa7-a20735610ac1
-  network: ws
-  ws-opts:
-    path: /api
-    headers:
-      Host: queuev4.vk.com
+  uuid: 6049e972-419e-43bc-932c-4032be6d1b5b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 波兰 (Poland) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 波兰 (Poland) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 rules:
 - MATCH,PROXIES
