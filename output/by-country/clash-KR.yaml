@@ -5,18 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 34.47.78.159
+  server: 34.64.149.137
   port: 443
   udp: true
   type: vless
-  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  uuid: 700a7a0e-3f27-406c-81d1-aa1abe411af8
   tls: true
   reality-opts:
-    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
-    short-id: 8685f8b4d9f4f51e
+    public-key: kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8
+    short-id: 3fd0a8ddef3ae5c6
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 02
+  server: kr2.miyazono-kaori.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: c43389cf-4364-4bf3-8ee2-6ba81a9104f8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
+    short-id: c8af1462debbc1
+  servername: www.coway.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03
   server: 47.80.14.8
   port: 443
   udp: true
@@ -28,22 +41,15 @@ proxies:
     public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03
-  server: 104.18.32.252
-  port: 443
+  client-fingerprint: random
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 152.67.200.82
+  port: 50160
   udp: true
-  type: vless
-  uuid: 0d4cb711-c030-4f13-adf5-6a72dab4121c
-  tls: true
-  servername: 93bb5ab3.69lover.site
+  type: hysteria2
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: 152-67-200-82.liao.kdns.fr
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v2/63a40362a7fe912c/stream
-    headers:
-      Host: 93bb5ab3.69lover.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,6 +58,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,5 +67,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES

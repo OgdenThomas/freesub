@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇿🇦 南非 (South Africa) 01
-  server: 34.35.174.85
+- name: 🇲🇾 马来西亚 (Malaysia) 01
+  server: my2.miyazono-kaori.com
   port: 443
   udp: true
   type: vless
-  uuid: 4758aee6-6d1a-4306-b460-2398b5af4e35
+  uuid: c43389cf-4364-4bf3-8ee2-6ba81a9104f8
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4
-    short-id: 5ced03e42cc31aab
-  servername: www.cloudflare.com
+    public-key: R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM
+    short-id: ed77ac35a310
+  servername: www.setel.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇿🇦 南非 (South Africa) 01
+  - 🇲🇾 马来西亚 (Malaysia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇿🇦 南非 (South Africa) 01
+  - 🇲🇾 马来西亚 (Malaysia) 01
 rules:
 - MATCH,PROXIES

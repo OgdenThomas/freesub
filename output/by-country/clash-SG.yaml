@@ -5,32 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01
-  server: 138.2.71.128
+  server: 162.159.48.32
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇸🇬 新加坡 (Singapore) 02
+  server: 168.107.68.192
   port: 56927
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: mYD6SNVk6rYfSsNcRE54unnYKlp5hRZk+XTtDnjEzjY=
-- name: 🇸🇬 新加坡 (Singapore) 02
-  server: 167.150.100.93
-  port: 29824
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: 2PIuTAxZjzJxni4kxy/GQ36VWTbRrYzl1fjm0ufTR94=
+  password: 3wYtGhROca1p818RFgftCeodooVes1HaskrJVHZoF3c=
 - name: 🇸🇬 新加坡 (Singapore) 03
-  server: 34.87.113.18
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50cbda48-00ce-4688-8b3d-0177ab8f177c
-  tls: true
-  reality-opts:
-    public-key: GqyMciP_v8rJZKLJd-EgzQmWbi_Qx_c_n1f-nlPkaEA
-    short-id: b1fef7a9181ea31d
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 04
   server: 217.217.254.126
   port: 2053
   udp: true
@@ -41,8 +33,22 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
     short-id: 87829de0e2bb82cb
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 04
+  server: 194.233.74.160
+  port: 2342
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: XV4bvaJIWoxl3IYEC1e6W7
 - name: 🇸🇬 新加坡 (Singapore) 05
+  server: 152.69.221.1
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: BtRfc5wkVnMKTOR55w5GmEnPpoDs+cm++PGpJvjMHkk=
+- name: 🇸🇬 新加坡 (Singapore) 06
   server: 206.206.76.75
   port: 443
   udp: true
@@ -55,19 +61,21 @@ proxies:
     short-id: 9930177816ab09da
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 06 R51
-  server: support.zoom.us
-  port: 80
+- name: 🇸🇬 新加坡 (Singapore) 07
+  server: 8.219.144.195
+  port: 443
   udp: true
   type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🇸🇬 新加坡 (Singapore) 07 R53
-  server: 91.193.58.131
+  uuid: 867e835d-b5a8-4ab2-aa93-ab8a7cc80470
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qbsLW0C_w5YhxXuCO42VQU3wjmJu93mpAGBBbcfMLSM
+    short-id: 0c09d9bb1f10bc4d
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 08 R53
+  server: 91.193.58.140
   port: 2096
   udp: true
   type: vless
@@ -81,7 +89,89 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 08 R53
+- name: 🇸🇬 新加坡 (Singapore) 09
+  server: sg-sin-1.blook.network
+  port: 443
+  udp: true
+  type: vless
+  uuid: 71c5663c-e1ba-4156-9913-3114f9123279
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2o1gkwbQu51UIWaD7mnCXmCQUViu4pHlNplimDkxGQA
+    short-id: 8049d37e41a1
+  servername: sg-sin-1.blook.network
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 10 R53
+  server: support.zoom.us
+  port: 80
+  udp: true
+  type: vless
+  uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: shalana.xyz
+- name: 🇸🇬 新加坡 (Singapore) 11 R51
+  server: 45.77.241.190
+  port: 8441
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇸🇬 新加坡 (Singapore) 12
+  server: sg3.miyazono-kaori.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: c43389cf-4364-4bf3-8ee2-6ba81a9104f8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jpn2pLj_p5lxGwycLht80v2qNeP7jHwh1Gv-nTU8zXY
+    short-id: ddcd71ec09e5893a
+  servername: www.changiairport.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 13 R51
+  server: 103.190.178.195
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /topic/htm?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇸🇬 新加坡 (Singapore) 14
+  server: 159.65.8.14
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /magnet?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇸🇬 新加坡 (Singapore) 15 R53
   server: support.zoom.us
   port: 80
   udp: true
@@ -92,20 +182,7 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 09
-  server: 54.251.9.130
-  port: 24146
-  udp: true
-  type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-  servername: www.intel.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 10 R51
+- name: 🇸🇬 新加坡 (Singapore) 16
   server: 38.207.184.202
   port: 443
   udp: true
@@ -120,109 +197,7 @@ proxies:
     path: /mall?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 11 R64
-  server: 109.66.88.158
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 12 R51
-  server: 141.193.213.21
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-  tls: true
-  servername: u.srilankangrill.online
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🇸🇬 新加坡 (Singapore) 13 R49
-  server: 23.249.18.144
-  port: 8581
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 14
-  server: 35.185.179.62
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-  tls: true
-  reality-opts:
-    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
-    short-id: eb97ce837da2f6ad
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 15 R51
-  server: 104.16.10.191
-  port: 443
-  udp: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  tls: true
-  servername: u.srilankangrill.online
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🇸🇬 新加坡 (Singapore) 16 R51
-  server: 140.235.38.206
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
 - name: 🇸🇬 新加坡 (Singapore) 17
-  server: 43.160.220.86
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /buy/uploads?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 18
   server: 160.30.54.63
   port: 443
   udp: true
@@ -237,24 +212,21 @@ proxies:
     path: /channel?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 19 R53
-  server: support.zoom.us
-  port: 80
+- name: 🇸🇬 新加坡 (Singapore) 18 R51
+  server: news.zoom.us
+  port: 8443
   udp: true
   type: vless
-  uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  tls: true
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  client-fingerprint: safari
   network: ws
   ws-opts:
-    path: /shalana
+    path: /
     headers:
-      Host: shalana.xyz
-- name: 🇸🇬 新加坡 (Singapore) 20
-  server: 194.233.74.160
-  port: 2342
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: XV4bvaJIWoxl3IYEC1e6W7
+      Host: u.srilankangrill.online
 proxy-groups:
 - name: PROXIES
   type: select
@@ -265,21 +237,19 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
   - 🇸🇬 新加坡 (Singapore) 05
-  - 🇸🇬 新加坡 (Singapore) 06 R51
-  - 🇸🇬 新加坡 (Singapore) 07 R53
+  - 🇸🇬 新加坡 (Singapore) 06
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08 R53
   - 🇸🇬 新加坡 (Singapore) 09
-  - 🇸🇬 新加坡 (Singapore) 10 R51
-  - 🇸🇬 新加坡 (Singapore) 11 R64
-  - 🇸🇬 新加坡 (Singapore) 12 R51
-  - 🇸🇬 新加坡 (Singapore) 13 R49
+  - 🇸🇬 新加坡 (Singapore) 10 R53
+  - 🇸🇬 新加坡 (Singapore) 11 R51
+  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 13 R51
   - 🇸🇬 新加坡 (Singapore) 14
-  - 🇸🇬 新加坡 (Singapore) 15 R51
-  - 🇸🇬 新加坡 (Singapore) 16 R51
+  - 🇸🇬 新加坡 (Singapore) 15 R53
+  - 🇸🇬 新加坡 (Singapore) 16
   - 🇸🇬 新加坡 (Singapore) 17
-  - 🇸🇬 新加坡 (Singapore) 18
-  - 🇸🇬 新加坡 (Singapore) 19 R53
-  - 🇸🇬 新加坡 (Singapore) 20
+  - 🇸🇬 新加坡 (Singapore) 18 R51
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -290,20 +260,18 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
   - 🇸🇬 新加坡 (Singapore) 05
-  - 🇸🇬 新加坡 (Singapore) 06 R51
-  - 🇸🇬 新加坡 (Singapore) 07 R53
+  - 🇸🇬 新加坡 (Singapore) 06
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08 R53
   - 🇸🇬 新加坡 (Singapore) 09
-  - 🇸🇬 新加坡 (Singapore) 10 R51
-  - 🇸🇬 新加坡 (Singapore) 11 R64
-  - 🇸🇬 新加坡 (Singapore) 12 R51
-  - 🇸🇬 新加坡 (Singapore) 13 R49
+  - 🇸🇬 新加坡 (Singapore) 10 R53
+  - 🇸🇬 新加坡 (Singapore) 11 R51
+  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 13 R51
   - 🇸🇬 新加坡 (Singapore) 14
-  - 🇸🇬 新加坡 (Singapore) 15 R51
-  - 🇸🇬 新加坡 (Singapore) 16 R51
+  - 🇸🇬 新加坡 (Singapore) 15 R53
+  - 🇸🇬 新加坡 (Singapore) 16
   - 🇸🇬 新加坡 (Singapore) 17
-  - 🇸🇬 新加坡 (Singapore) 18
-  - 🇸🇬 新加坡 (Singapore) 19 R53
-  - 🇸🇬 新加坡 (Singapore) 20
+  - 🇸🇬 新加坡 (Singapore) 18 R51
 rules:
 - MATCH,PROXIES

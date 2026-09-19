@@ -12,12 +12,11 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇫🇷 法国 (France) 02
-  server: 13.36.169.164
-  port: 443
+  server: 52.47.98.1
+  port: 22222
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 03
   server: 34.155.10.226
   port: 443
@@ -31,14 +30,12 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 04
-  server: 143.246.209.46
-  port: 8081
+  server: 15.237.210.147
+  port: 443
   udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇫🇷 法国 (France) 05
   server: 195.58.140.146
   port: 443
@@ -51,19 +48,24 @@ proxies:
     public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
     short-id: dc927a04e8572c61
   servername: d1-fr.cloud-cdn.xyz
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: 🇫🇷 法国 (France) 06
-  server: 185.114.72.31
-  port: 2053
+  server: 15.237.196.230
+  port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 07
+  server: 143.246.209.46
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07
+    path: /vless-test
+- name: 🇫🇷 法国 (France) 08
   server: fr-cdg-1.blook.network
   port: 443
   udp: true
@@ -76,17 +78,6 @@ proxies:
     short-id: 5babfbd717bb
   servername: fr-cdg-1.blook.network
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 08
-  server: 185.255.179.166
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
