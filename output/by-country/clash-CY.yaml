@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: carina.yokkastars.com
+  server: 194.76.155.80
   port: 2443
   udp: true
   type: vless
@@ -15,12 +15,25 @@ proxies:
     public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
     short-id: e496c7fe1cefc9ff
   servername: deepl.com
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: rex-grpc
 - name: 🇨🇾 塞浦路斯 (Cyprus) 02
-  server: 194.59.245.250
+  server: carina.yokkastars.com
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 588456a5-f724-46a7-a08b-5d336d9f8f56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
+    short-id: e496c7fe1cefc9ff
+  servername: deepl.com
+  client-fingerprint: qq
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03
+  server: cassiopeia.yokkastars.com
   port: 40443
   udp: true
   type: vless
@@ -38,6 +51,7 @@ proxy-groups:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
+  - 🇨🇾 塞浦路斯 (Cyprus) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -45,5 +59,6 @@ proxy-groups:
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
+  - 🇨🇾 塞浦路斯 (Cyprus) 03
 rules:
 - MATCH,PROXIES

@@ -5,29 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01
-  server: 34.158.23.115
-  port: 443
-  udp: true
-  type: vless
-  uuid: a18f08dc-76ae-453a-98f5-d41eab7e649b
-  tls: true
-  reality-opts:
-    public-key: f8aV8naD8NKt_mLKaOou0qUrIM1Ge25kJNxywpF3OB0
-    short-id: d016c76007f78038
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: bd9ff08b-d042-3650-48e4-c4b400000000
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn2950.bbxff.workers.dev
-- name: 🇨🇭 瑞士 (Switzerland) 03
   server: 45.90.59.15
   port: 443
   udp: true
@@ -40,7 +17,19 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 04
+- name: 🇨🇭 瑞士 (Switzerland) 02
+  server: 34.158.23.115
+  port: 443
+  udp: true
+  type: vless
+  uuid: a18f08dc-76ae-453a-98f5-d41eab7e649b
+  tls: true
+  reality-opts:
+    public-key: f8aV8naD8NKt_mLKaOou0qUrIM1Ge25kJNxywpF3OB0
+    short-id: d016c76007f78038
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03
   server: 151.242.2.81
   port: 443
   udp: true
@@ -49,12 +38,13 @@ proxies:
   tls: true
   servername: cf9.rumedia-cdn.com
   skip-cert-verify: false
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /cdn/v3/live
     headers:
       Host: cf9.rumedia-cdn.com
-- name: 🇨🇭 瑞士 (Switzerland) 05
+- name: 🇨🇭 瑞士 (Switzerland) 04
   server: netlivpn5505.ffffdsaaa.workers.dev
   port: 443
   udp: true
@@ -76,7 +66,6 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
   - 🇨🇭 瑞士 (Switzerland) 04
-  - 🇨🇭 瑞士 (Switzerland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -86,6 +75,5 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
   - 🇨🇭 瑞士 (Switzerland) 04
-  - 🇨🇭 瑞士 (Switzerland) 05
 rules:
 - MATCH,PROXIES

@@ -4,8 +4,55 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
+      "server": "193.233.91.200",
+      "server_port": 443,
+      "uuid": "f211f0aa-db73-49f2-b2cd-5be20c034f36",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.callibri.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "yCKV2xr725jI0sFhm4KbttKl8b9UZrnQTXxZLN2S4BM",
+          "short_id": "a284"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02",
+      "server": "104.21.70.223",
+      "server_port": 443,
+      "uuid": "527451fe-ee1f-4e6f-94ca-808f055f7c9b",
+      "tls": {
+        "enabled": true,
+        "server_name": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/ERYN0G44hia16zhR",
+        "headers": {
+          "Host": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03",
       "server": "94.249.187.46",
       "server_port": 2086,
       "uuid": "f6361af8-bb8f-4609-bf5d-3fc0f688f47b",
@@ -13,65 +60,11 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02",
-      "server": "94.249.187.46",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "rSeYcig_XBy8q3k33NpK3A"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03",
-      "server": "msk.frkn.org",
-      "server_port": 443,
-      "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
-      "tls": {
-        "enabled": true,
-        "server_name": "msk.frkn.org",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 04",
-      "server": "46.8.200.91",
-      "server_port": 443,
-      "uuid": "b8201bab-fa6c-4f6e-b289-b5da660c6f69",
-      "tls": {
-        "enabled": true,
-        "server_name": "cf3.rumedia-cdn.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn/v3/live",
-        "headers": {
-          "Host": "cf3.rumedia-cdn.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 05",
-      "server": "37.18.15.103",
-      "server_port": 443,
-      "uuid": "f79fe29a-39c9-445d-a6e9-85bfa76d5f02",
-      "tls": {
-        "enabled": true,
-        "server_name": "j8dvb.guardora.pro",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/api/v2/client/session/connect",
-        "headers": {
-          "Host": "j8dvb.guardora.pro"
-        }
-      }
+      "server": "134.0.112.71",
+      "server_port": 17517,
+      "method": "aes-256-gcm",
+      "password": "64Kms+G+nD6FlGJjZJfeUNJIGbX/EKrk2o/MH04zApw="
     },
     {
       "type": "selector",
@@ -81,8 +74,7 @@
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
         "🇷🇺 俄罗斯 (Russia) 03",
-        "🇷🇺 俄罗斯 (Russia) 04",
-        "🇷🇺 俄罗斯 (Russia) 05"
+        "🇷🇺 俄罗斯 (Russia) 04"
       ]
     },
     {
@@ -92,8 +84,7 @@
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
         "🇷🇺 俄罗斯 (Russia) 03",
-        "🇷🇺 俄罗斯 (Russia) 04",
-        "🇷🇺 俄罗斯 (Russia) 05"
+        "🇷🇺 俄罗斯 (Russia) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

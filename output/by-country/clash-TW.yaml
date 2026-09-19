@@ -5,19 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: 35.201.163.218
-  port: 30837
+  server: r3mrcg00129437x.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇹🇼 中国台湾 (Taiwan) 02
+  server: 130.211.240.128
+  port: 443
   udp: true
   type: vless
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-  flow: xtls-rprx-vision
+  uuid: 31a40f42-4ad6-4a32-a760-71102b459584
   tls: true
   reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  servername: www.sony.com
+    public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
+    short-id: d74a6321deec9f31
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 02
+- name: 🇹🇼 中国台湾 (Taiwan) 03
+  server: 35.201.181.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: 22a0b0bd-1cd0-43fa-a7c3-73b24eae44e2
+  tls: true
+  reality-opts:
+    public-key: PLslPQOBA3bfWO5hXLv7jioCTuNR8vCxa_axi0dC7C0
+    short-id: 32f66f37df3f58d2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 04
   server: 35.201.230.136
   port: 443
   udp: true
@@ -30,20 +48,17 @@ proxies:
     short-id: 5e13a6d43d0644c9
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 03
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  port: 443
+- name: 🇹🇼 中国台湾 (Taiwan) 05
+  server: hinet1.2yly.com
+  port: 24215
   udp: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
-  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,6 +67,8 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
   - 🇹🇼 中国台湾 (Taiwan) 03
+  - 🇹🇼 中国台湾 (Taiwan) 04
+  - 🇹🇼 中国台湾 (Taiwan) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,5 +77,7 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
   - 🇹🇼 中国台湾 (Taiwan) 03
+  - 🇹🇼 中国台湾 (Taiwan) 04
+  - 🇹🇼 中国台湾 (Taiwan) 05
 rules:
 - MATCH,PROXIES

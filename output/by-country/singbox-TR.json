@@ -4,40 +4,43 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "139.28.240.68",
-      "server_port": 2086,
-      "uuid": "f6361af8-bb8f-4609-bf5d-3fc0f688f47b",
-      "security": "auto"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇹🇷 土耳其 (Turkey) 02",
-      "server": "139.28.240.68",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "rSeYcig_XBy8q3k33NpK3A"
-    },
-    {
-      "type": "vmess",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 R50",
-      "server": "91.228.227.211",
-      "server_port": 23957,
-      "uuid": "92987ab8-0a53-4a16-8d6c-295d5df86404",
-      "security": "auto"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 R50",
-      "server": "153.52.92.81",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "IXa3ylzS_jBOAsQy071tIQ"
+      "server": "tr.plus-hit.ru",
+      "server_port": 443,
+      "uuid": "84a794a5-2420-4ca7-8e08-8d21571f36f3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tr.plus-hit.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI",
+          "short_id": "7c8e3d4a9b1f26d3"
+        }
+      }
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 05",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
+      "server": "89.251.8.205",
+      "server_port": 80,
+      "uuid": "c0e453eb-33ac-4206-8423-3e1286c2ba7a",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "play.google.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -57,54 +60,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 06",
-      "server": "89.251.8.205",
-      "server_port": 80,
-      "uuid": "c0e453eb-33ac-4206-8423-3e1286c2ba7a",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "play.google.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07",
-      "server": "tr.curry-load.rutube.info",
-      "server_port": 443,
-      "uuid": "ad297a2b-ae17-4d2d-8fce-e2eafb89b145",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "dw.b-cdn.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8",
-          "short_id": "08"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 08",
-      "server": "shop.neexbyte.ir",
-      "server_port": 8443,
-      "uuid": "464bc502-f963-45b6-81e3-e33d18427506",
-      "tls": {
-        "enabled": true,
-        "server_name": "",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws"
-      }
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 04",
+      "server": "139.28.240.68",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "rSeYcig_XBy8q3k33NpK3A"
     },
     {
       "type": "selector",
@@ -113,12 +74,8 @@
         "auto",
         "🇹🇷 土耳其 (Turkey) 01",
         "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03 R50",
-        "🇹🇷 土耳其 (Turkey) 04 R50",
-        "🇹🇷 土耳其 (Turkey) 05",
-        "🇹🇷 土耳其 (Turkey) 06",
-        "🇹🇷 土耳其 (Turkey) 07",
-        "🇹🇷 土耳其 (Turkey) 08"
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04"
       ]
     },
     {
@@ -127,12 +84,8 @@
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01",
         "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03 R50",
-        "🇹🇷 土耳其 (Turkey) 04 R50",
-        "🇹🇷 土耳其 (Turkey) 05",
-        "🇹🇷 土耳其 (Turkey) 06",
-        "🇹🇷 土耳其 (Turkey) 07",
-        "🇹🇷 土耳其 (Turkey) 08"
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -6,7 +6,7 @@
     {
       "type": "vless",
       "tag": "🇦🇲 亚美尼亚 (Armenia) 01",
-      "server": "aotocon.ggisopi.su",
+      "server": "87.121.47.179",
       "server_port": 443,
       "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
       "flow": "xtls-rprx-vision",
@@ -25,18 +25,43 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇲 亚美尼亚 (Armenia) 02",
+      "server": "164.92.147.213",
+      "server_port": 2087,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/city/my?ed=2560",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇲 亚美尼亚 (Armenia) 01"
+        "🇦🇲 亚美尼亚 (Armenia) 01",
+        "🇦🇲 亚美尼亚 (Armenia) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇲 亚美尼亚 (Armenia) 01"
+        "🇦🇲 亚美尼亚 (Armenia) 01",
+        "🇦🇲 亚美尼亚 (Armenia) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

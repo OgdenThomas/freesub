@@ -4,12 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "47.243.251.235",
-      "server_port": 9087,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "S7Cn18rOhJ0IijMltSh7/rrf2mrd/RsRjOEINjXteFQ="
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16113,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
     },
     {
       "type": "vless",
@@ -35,10 +35,9 @@
     {
       "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 03",
-      "server": "47.76.172.190",
+      "server": "35.220.207.209",
       "server_port": 443,
-      "uuid": "60baeb19-560d-402d-b9c9-c062c2350e0b",
-      "flow": "xtls-rprx-vision",
+      "uuid": "90153538-ef08-4942-b8e1-41e7c523e659",
       "tls": {
         "enabled": true,
         "server_name": "www.cloudflare.com",
@@ -48,57 +47,30 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "9nukDgL8dc3PWV07DAwi-_FFj3Y25ifYnnrIp7uV0SI",
-          "short_id": "92ddbafbf38306f5"
+          "public_key": "tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM",
+          "short_id": "56d4e7ae4f86fa39"
         }
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 04",
-      "server": "47.83.173.110",
-      "server_port": 443,
-      "uuid": "bca6f15f-89db-40e2-a955-19d084229234",
-      "flow": "xtls-rprx-vision",
+      "server": "mz.hkychina.com",
+      "server_port": 8443,
+      "password": "HysTeria2026!Proxy",
       "tls": {
         "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s",
-          "short_id": "8144589880395fa1"
-        }
+        "server_name": "mz.hkychina.com",
+        "insecure": false
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇭🇰 中国香港 (Hong Kong) 05",
-      "server": "104.16.60.10",
-      "server_port": 443,
-      "uuid": "cdf5205e-897f-46a7-8d7f-21a61a80b466",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk1.69lover.my",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/api/v2/e2fe4e52a165854d/stream",
-        "headers": {
-          "Host": "hk1.69lover.my"
-        }
-      }
+      "server": "47.243.251.235",
+      "server_port": 9087,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "S7Cn18rOhJ0IijMltSh7/rrf2mrd/RsRjOEINjXteFQ="
     },
     {
       "type": "selector",
