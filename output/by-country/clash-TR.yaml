@@ -5,17 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 89.251.8.205
-  port: 80
+  server: 139.28.240.68
+  port: 2086
   udp: true
-  type: vless
-  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: play.google.com
+  type: vmess
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  alterId: 0
+  cipher: auto
 - name: 🇹🇷 土耳其 (Turkey) 02
+  server: 139.28.240.68
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
+- name: 🇹🇷 土耳其 (Turkey) 03 R50
+  server: 91.228.227.211
+  port: 23957
+  udp: true
+  type: vmess
+  uuid: 92987ab8-0a53-4a16-8d6c-295d5df86404
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 04 R50
+  server: 153.52.92.81
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🇹🇷 土耳其 (Turkey) 05
   server: 78.135.73.47
   port: 443
   udp: true
@@ -28,30 +47,42 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: tur11.zavqeron.ir
+- name: 🇹🇷 土耳其 (Turkey) 06
+  server: 89.251.8.205
+  port: 80
+  udp: true
+  type: vless
+  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
+- name: 🇹🇷 土耳其 (Turkey) 07
+  server: tr.curry-load.rutube.info
+  port: 443
+  udp: true
+  type: vless
+  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8
+    short-id: 08
+  servername: dw.b-cdn.net
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 08
+  server: shop.neexbyte.ir
   port: 8443
   udp: true
   type: vless
-  uuid: 2fa4235a-51a7-452b-a760-498951646043
+  uuid: 464bc502-f963-45b6-81e3-e33d18427506
   tls: true
-  reality-opts:
-    public-key: t5qC-Lzm_NKsc6nQ8ORzyivswiRPlbPLK0hS4d3FxTY
-    short-id: a2eb2b8f0f0a88b1
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04 R50
-  server: istan11.zavqeron.ir
-  port: 8444
-  udp: true
-  type: vless
-  uuid: 2fa4235a-51a7-452b-a760-498951646043
-  tls: true
-  reality-opts:
-    public-key: NaN_3uO7vc8C8hd1nCebFeRGE10_1aKWF2Vug9zraTg
-    short-id: 447b9272172d49dc
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: qq
+  servername: shop.neexbyte.ir
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -59,8 +90,12 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 03 R50
   - 🇹🇷 土耳其 (Turkey) 04 R50
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
+  - 🇹🇷 土耳其 (Turkey) 07
+  - 🇹🇷 土耳其 (Turkey) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,7 +103,11 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 03 R50
   - 🇹🇷 土耳其 (Turkey) 04 R50
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
+  - 🇹🇷 土耳其 (Turkey) 07
+  - 🇹🇷 土耳其 (Turkey) 08
 rules:
 - MATCH,PROXIES

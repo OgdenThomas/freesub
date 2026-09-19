@@ -6,25 +6,38 @@
     {
       "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 01",
-      "server": "129.151.64.169",
-      "server_port": 31867,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "server": "131.123.39.29",
+      "server_port": 443,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/files",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
+        "server_name": "sheetpeek.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo",
+          "short_id": "84be686ea1d16478"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 02",
+      "server": "131.123.39.29",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 03",
       "server": "87.120.196.212",
       "server_port": 443,
       "uuid": "5561acfb-0adc-4c76-bfbf-767a76c7cbf0",
@@ -45,7 +58,8 @@
       "outbounds": [
         "auto",
         "🇧🇬 保加利亚 (Bulgaria) 01",
-        "🇧🇬 保加利亚 (Bulgaria) 02"
+        "🇧🇬 保加利亚 (Bulgaria) 02",
+        "🇧🇬 保加利亚 (Bulgaria) 03"
       ]
     },
     {
@@ -53,7 +67,8 @@
       "tag": "auto",
       "outbounds": [
         "🇧🇬 保加利亚 (Bulgaria) 01",
-        "🇧🇬 保加利亚 (Bulgaria) 02"
+        "🇧🇬 保加利亚 (Bulgaria) 02",
+        "🇧🇬 保加利亚 (Bulgaria) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01
-  server: 82.198.246.233
+  server: 82.198.246.37
   port: 180
   udp: true
   type: vmess
@@ -13,6 +13,18 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇦🇺 澳大利亚 (Australia) 02
+  server: 34.87.244.111
+  port: 443
+  udp: true
+  type: vless
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  tls: true
+  reality-opts:
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+    short-id: d725f0dd8cce210f
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 03
   server: 51.161.204.244
   port: 443
   udp: true
@@ -32,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01
   - 🇦🇺 澳大利亚 (Australia) 02
+  - 🇦🇺 澳大利亚 (Australia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01
   - 🇦🇺 澳大利亚 (Australia) 02
+  - 🇦🇺 澳大利亚 (Australia) 03
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇻 拉脱维亚 (Latvia) 01
+  server: shprcdn.quest
+  port: 10443
+  udp: true
+  type: vless
+  uuid: a85ddf9f-329b-4c31-a80a-cd0f2e5b2a30
+  tls: true
+  reality-opts:
+    public-key: KoNQ52irUOW-fybKx-gUKCuHpMnHhgQ_skjd8TmqJ2k
+  servername: shprcdn.quest
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: google.storage.v2.Storage
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇻 拉脱维亚 (Latvia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇻 拉脱维亚 (Latvia) 01
+rules:
+- MATCH,PROXIES

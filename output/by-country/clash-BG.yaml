@@ -5,20 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01
-  server: 129.151.64.169
-  port: 31867
+  server: 131.123.39.29
+  port: 443
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  flow: xtls-rprx-vision
   tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
+  reality-opts:
+    public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
+    short-id: 84be686ea1d16478
+  servername: sheetpeek.com
+  client-fingerprint: chrome
+- name: 🇧🇬 保加利亚 (Bulgaria) 02
+  server: 131.123.39.29
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /files
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇧🇬 保加利亚 (Bulgaria) 02
+    path: /vless-test
+- name: 🇧🇬 保加利亚 (Bulgaria) 03
   server: 87.120.196.212
   port: 443
   udp: true
@@ -36,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇧🇬 保加利亚 (Bulgaria) 01
   - 🇧🇬 保加利亚 (Bulgaria) 02
+  - 🇧🇬 保加利亚 (Bulgaria) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇧🇬 保加利亚 (Bulgaria) 01
   - 🇧🇬 保加利亚 (Bulgaria) 02
+  - 🇧🇬 保加利亚 (Bulgaria) 03
 rules:
 - MATCH,PROXIES

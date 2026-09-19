@@ -36,7 +36,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -46,12 +46,29 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03",
+      "server": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+      "server_port": 443,
+      "uuid": "d90e4077-bc7e-414d-a650-70bf1baae4d6",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇼 中国台湾 (Taiwan) 01",
-        "🇹🇼 中国台湾 (Taiwan) 02"
+        "🇹🇼 中国台湾 (Taiwan) 02",
+        "🇹🇼 中国台湾 (Taiwan) 03"
       ]
     },
     {
@@ -59,7 +76,8 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇼 中国台湾 (Taiwan) 01",
-        "🇹🇼 中国台湾 (Taiwan) 02"
+        "🇹🇼 中国台湾 (Taiwan) 02",
+        "🇹🇼 中国台湾 (Taiwan) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

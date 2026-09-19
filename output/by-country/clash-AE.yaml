@@ -5,23 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 104.143.223.56
+  server: 104.143.223.71
   port: 2085
   udp: true
   type: vless
-  uuid: 67671bce-990e-47fe-96c3-55a869800b00
+  uuid: 3f654175-4f83-47ec-8ce2-f2bf0d160b27
   network: grpc
   grpc-opts:
     grpc-service-name: vless
 - name: 🇦🇪 阿联酋 (UAE) 02
-  server: 85.204.107.176
+  server: 104.143.223.69
+  port: 2085
+  udp: true
+  type: vless
+  uuid: f68a9fd4-16c7-46d1-b17c-0a4b224cc00d
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇦🇪 阿联酋 (UAE) 03
+  server: 104.143.223.82
+  port: 2085
+  udp: true
+  type: vless
+  uuid: 15295b3e-e233-4f3b-95d1-8860d40c75fe
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇦🇪 阿联酋 (UAE) 04
+  server: 78.40.195.140
+  port: 443
+  udp: true
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo
+    short-id: 98096455d963bdbb
+  servername: www.booking.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 05
+  server: 85.204.107.178
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: false
-- name: 🇦🇪 阿联酋 (UAE) 03
+- name: 🇦🇪 阿联酋 (UAE) 06
   server: uae.unixzone.us
   port: 22573
   udp: true
@@ -40,6 +71,9 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
+  - 🇦🇪 阿联酋 (UAE) 04
+  - 🇦🇪 阿联酋 (UAE) 05
+  - 🇦🇪 阿联酋 (UAE) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,5 +82,8 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
+  - 🇦🇪 阿联酋 (UAE) 04
+  - 🇦🇪 阿联酋 (UAE) 05
+  - 🇦🇪 阿联酋 (UAE) 06
 rules:
 - MATCH,PROXIES
