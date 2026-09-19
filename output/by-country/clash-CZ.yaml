@@ -5,46 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 194.87.59.13
+  server: 194.87.59.104
   port: 2085
   udp: true
   type: vless
-  uuid: 6687af93-eb39-47a3-9a73-0f79234ef507
+  uuid: 7b07d862-b698-47c1-884b-3e7dd6c8b862
   network: grpc
   grpc-opts:
     grpc-service-name: vless
 - name: 🇨🇿 捷克 (Czech) 02
-  server: 188.114.97.3
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 401d950d-4f5c-45c7-bf44-8b69acf35f6f
-  tls: true
-  servername: 7X70yYvt7EqotX-iq9N3RJt1Xn1JWKH9.ASdfSafDSAf.wOrkERs.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidTBROThObHpLVyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 7x70yyvt7eqotx-iq9n3rjt1xn1jwkh9.asdfsafdsaf.workers.dev
-- name: 🇨🇿 捷克 (Czech) 03
-  server: 66.81.247.155
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
-  tls: true
-  servername: testmikonim.hydrymhmdamyn7.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /OAZko425kNFF0PpQ
-    headers:
-      Host: testmikonim.hydrymhmdamyn7.workers.dev
-- name: 🇨🇿 捷克 (Czech) 04
-  server: 185.113.223.183
+  server: 144.31.28.106
   port: 8443
   udp: true
   type: vless
@@ -55,21 +25,7 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇨🇿 捷克 (Czech) 05
-  server: 193.181.216.117
-  port: 2053
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /payment?ed=2560fp=chrome
+    path: /trade?ed=2560
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
@@ -79,9 +35,6 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01
   - 🇨🇿 捷克 (Czech) 02
-  - 🇨🇿 捷克 (Czech) 03
-  - 🇨🇿 捷克 (Czech) 04
-  - 🇨🇿 捷克 (Czech) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,8 +42,5 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01
   - 🇨🇿 捷克 (Czech) 02
-  - 🇨🇿 捷克 (Czech) 03
-  - 🇨🇿 捷克 (Czech) 04
-  - 🇨🇿 捷克 (Czech) 05
 rules:
 - MATCH,PROXIES

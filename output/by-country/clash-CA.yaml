@@ -15,6 +15,18 @@ proxies:
     public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
     short-id: c9d4bf8d94ec8dab
   servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 34.19.224.156
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2ea95ec3-6b09-470e-952a-ebb171b0d666
+  tls: true
+  reality-opts:
+    public-key: 0dSYzX_uvVr-YmiONeKxPt7TdFkaFeYopYfjobxxEC4
+    short-id: 341ec000a90f1ced
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -22,11 +34,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02
 rules:
 - MATCH,PROXIES

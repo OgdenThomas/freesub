@@ -16,34 +16,17 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: aotocon.ggisopi.su
   client-fingerprint: firefox
-- name: 🇦🇲 亚美尼亚 (Armenia) 02
-  server: 164.92.147.213
-  port: 2087
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /city/my?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇲 亚美尼亚 (Armenia) 01
-  - 🇦🇲 亚美尼亚 (Armenia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇲 亚美尼亚 (Armenia) 01
-  - 🇦🇲 亚美尼亚 (Armenia) 02
 rules:
 - MATCH,PROXIES

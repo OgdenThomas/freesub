@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: 34.47.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  tls: true
+  reality-opts:
+    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+    short-id: 8685f8b4d9f4f51e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 02
   server: 47.80.14.8
   port: 443
   udp: true
@@ -17,19 +29,21 @@ proxies:
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: 47.80.62.191
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 104.18.32.252
   port: 443
   udp: true
   type: vless
-  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
-  flow: xtls-rprx-vision
+  uuid: 0d4cb711-c030-4f13-adf5-6a72dab4121c
   tls: true
-  reality-opts:
-    public-key: Qe5e0FBZwuwYMRYikx8sH5iaowPQwdkn6kgIN8xrQHE
-    short-id: bd0040df20a53b36
-  servername: www.logitech.com
-  client-fingerprint: firefox
+  servername: 93bb5ab3.69lover.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/63a40362a7fe912c/stream
+    headers:
+      Host: 93bb5ab3.69lover.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +51,7 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +59,6 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 rules:
 - MATCH,PROXIES

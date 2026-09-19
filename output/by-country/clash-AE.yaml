@@ -5,40 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 104.143.223.71
-  port: 2085
-  udp: true
-  type: vless
-  uuid: 3f654175-4f83-47ec-8ce2-f2bf0d160b27
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 02
-  server: 104.143.223.69
-  port: 2085
-  udp: true
-  type: vless
-  uuid: f68a9fd4-16c7-46d1-b17c-0a4b224cc00d
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 03
-  server: 104.143.223.82
-  port: 2085
-  udp: true
-  type: vless
-  uuid: 15295b3e-e233-4f3b-95d1-8860d40c75fe
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇦🇪 阿联酋 (UAE) 04
-  server: 85.204.107.181
+  server: 85.204.107.171
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: false
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: uae.unixzone.us
+  port: 22573
+  udp: true
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,8 +30,6 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
-  - 🇦🇪 阿联酋 (UAE) 03
-  - 🇦🇪 阿联酋 (UAE) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,7 +37,5 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
-  - 🇦🇪 阿联酋 (UAE) 03
-  - 🇦🇪 阿联酋 (UAE) 04
 rules:
 - MATCH,PROXIES
