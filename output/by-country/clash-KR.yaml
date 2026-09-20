@@ -17,19 +17,26 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: kr2.miyazono-kaori.com
+  server: 49.254.204.134
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 47.80.62.191
   port: 443
   udp: true
   type: vless
-  uuid: c43389cf-4364-4bf3-8ee2-6ba81a9104f8
+  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
-    short-id: c8af1462debbc1
-  servername: www.coway.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03
+    public-key: Qe5e0FBZwuwYMRYikx8sH5iaowPQwdkn6kgIN8xrQHE
+    short-id: bd0040df20a53b36
+  servername: www.logitech.com
+  client-fingerprint: firefox
+- name: 🇰🇷 韩国 (South Korea) 04
   server: 47.80.14.8
   port: 443
   udp: true
@@ -42,14 +49,6 @@ proxies:
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
   client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 04
-  server: 152.67.200.82
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: 152-67-200-82.liao.kdns.fr
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
