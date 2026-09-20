@@ -5,15 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 93.190.9.22
-  port: 3090
-  udp: true
-  type: vless
-  uuid: 6c96a2d3-6951-4577-b09d-6fb82291894f
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -26,6 +17,25 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: jgzt1997.qivfelo.ir
+  port: 5052
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ept2V6yarWzazZStMu0CqM-jx3NN2wG0
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: fgh.clofidexa.ir
+  port: 8290
+  udp: true
+  type: vless
+  uuid: 0de1047d-fadd-4075-a08e-2223c5dadd0a
+  tls: true
+  reality-opts:
+    public-key: yYjMMztcB_8Ao3sp9QIP9ZF0XtsUGXawIBUGWeIvglc
+    short-id: 130b94c8e5124031
+  servername: www.numpy.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +43,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -40,5 +51,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

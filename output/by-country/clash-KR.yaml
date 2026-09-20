@@ -29,7 +29,33 @@ proxies:
     short-id: 3fd0a8ddef3ae5c6
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03
+- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
+  server: jpzzqqnzdbgwhbhzsrgh.cfooov.xyz
+  port: 48179
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
+    short-id: d1f38c0f15ed22
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: clhkzzzdbgwxxndnlm.cfooov.xyz
+  port: 61205
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
+    short-id: d1f38c0f15ed22
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 05
   server: 47.80.62.188
   port: 443
   udp: true
@@ -42,6 +68,19 @@ proxies:
     short-id: b229991df62826cc
   servername: www.nvidia.com
   client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: 47.80.62.71
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0d4cb711-c030-4f13-adf5-6a72dab4121c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AT4sr3XkuNa7QewDoScx7NnPTCa-Z6o_7ccPgivVDSQ
+    short-id: 0b674631d5fc6b93
+  servername: www.nvidia.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,7 +88,10 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,6 +99,9 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 rules:
 - MATCH,PROXIES

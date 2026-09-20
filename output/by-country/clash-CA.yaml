@@ -11,27 +11,26 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: docs.fastline-labs.com
-  port: 443
+- name: 🇨🇦 加拿大 (Canada) 02 R54
+  server: 51.222.107.43
+  port: 2083
   udp: true
-  type: hysteria2
-  password: 334f25ef-3fb7-44a0-8ab7-79527d613281
-  sni: docs.fastline-labs.com
-  skip-cert-verify: false
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R54
-  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 02 R54
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R54
-  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 02 R54
 rules:
 - MATCH,PROXIES

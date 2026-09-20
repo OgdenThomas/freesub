@@ -5,97 +5,78 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 144.24.225.39
+  server: 134.65.62.82
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: JXVCv3N78Ulr/V2Rsk0UN8DJEzD+yC0cbtWo9zjGTkg=
+  password: rqzhd6WZ9TbYEozhRmDCezccPKZBpFV5MrF1l6sxiIw=
 - name: 🇬🇧 英国 (United Kingdom) 02
+  server: 104.194.144.237
+  port: 9990
+  udp: true
+  type: vless
+  uuid: 61c71f2f-33dc-43aa-84af-85c8a4232278
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: ''
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 129.151.77.36
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: JAIIG6N6KLuM33ZbMh0jk1fVcDM3qTVfUoXhQr6tiYM=
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 129.151.86.235
-  port: 61312
+- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  server: 158.173.221.214
+  port: 11001
   udp: true
   type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Vy4lRpLwy1/ZUJF58f+SpzYRBJCwQpwztiwtHcOtReI=
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 2.27.205.218
-  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: c58d16e593d44f42
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 31.76.7.154
+  port: 7443
   udp: true
   type: vless
-  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
-  tls: true
-  reality-opts:
-    public-key: DiJo9V7cQ2_dIPXjFjAEFMeLUemQmWpcbTs6ARNh7gg
-    short-id: 9f3a1c7b
-  servername: 4pda.to
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇬🇧 英国 (United Kingdom) 05 R43
-  server: 95.133.242.211
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1e6fed5b-5edc-4ddb-a268-79d7fae4365c
+  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
-    short-id: 10debbdf94767541
-  servername: filesconvert.org
-  client-fingerprint: chrome
+    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+    short-id: d2061bb1
+  servername: ya.ru
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 06
-  server: 144.24.226.127
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: J7cXNcIXneBAD5a5hk6nXD68z5BcJtIMepdH646KjtI=
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 134.65.59.15
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: r5ic6K6vlgFjNKuR9W7uPVRtSuzCYAjM78oW3RYK0bA=
-- name: 🇬🇧 英国 (United Kingdom) 08
-  server: 144.31.57.48
-  port: 4143
+  server: 176.123.162.100
+  port: 9880
   udp: true
   type: vless
-  uuid: 37cec958-22ac-4d99-aee2-48facd8d84d7
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
   tls: true
   reality-opts:
-    public-key: EB4Ay55d7wUDYVTfDNXg2sX2PxWqNqsyivR4fGcELDo
-    short-id: ad63
-  servername: yandex.ru
-  client-fingerprint: edge
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+  servername: dl.google.com
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
-    grpc-service-name: google.android.location.SyncService
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: 31.76.39.82
+    grpc-service-name: grpc-tunnel
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 95.85.241.175
   port: 443
   udp: true
   type: vless
-  uuid: e6f7b511-21d0-4b87-9ec2-b2e69fce585f
+  uuid: 98e2efed-dfa8-448e-8e30-5baabb7036b3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: H1JaOe98X40ZNMlcUXEDk8nH1OxSKjVPXN5dBWuARlw
-    short-id: 53b022e5fb8912d5
-  servername: tradingview.com
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 10
+    public-key: u9_Ta0DYmqruY94DwuZv4g_gnvY1xGMF1iT1SdV3cT8
+    short-id: d3a09fd1
+  servername: news.samsung.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 08
   server: 31.76.88.10
   port: 443
   udp: true
@@ -104,38 +85,12 @@ proxies:
   tls: true
   servername: cf5.rumedia-cdn.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /cdn/v3/live
     headers:
       Host: cf5.rumedia-cdn.com
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: 95.85.224.51
-  port: 443
-  udp: true
-  type: vless
-  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
-    short-id: a696de84963656de
-  servername: max.ru
-  client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 12
-  server: 138.124.125.236
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6dff8e33-b201-4cbb-8f89-b9418702bff2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nMPuuTmls3qzDHMaTShhGHili6756Jy5NMOvZ4wufho
-    short-id: 75adf1
-  servername: www.cisco.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -144,15 +99,11 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R43
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -161,14 +112,10 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R43
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,78 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
+  server: xgnhxwnqjcqscqqn.cfooov.xyz
+  port: 47554
+  udp: true
+  type: vless
+  uuid: edc17c6e-bb58-4a98-a4a8-ca37aa8b56d2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nbIa7R7_-I8T24U2C1Q3-wuiQVUmAahxdSo33AjKYiA
+    short-id: 63bdbd0662a3da
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+  server: wzxydnnzmsycrqwxnh.jiedddym.com
+  port: 38819
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7s-ve59v99UPmZT4MOth5PloFy3ytSU4uuh6Oa7lPkU
+    short-id: 85eced9b6394
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  server: xgwhcrqwlhfaqqn.cfooov.xyz
+  port: 48712
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gNL3X6L6kuclvSmA0qXWHKZCIFW1wGYr4AF0YN6uKkg
+    short-id: 28e1ea46d658
+  servername: www.lamer.com.hk
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04 (家宽)
+  server: sczznmbbbzgwlwzdhsql.jiedddym.com
+  port: 62638
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
+    short-id: d1f38c0f15ed22
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 04 (家宽)
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 04 (家宽)
+rules:
+- MATCH,PROXIES

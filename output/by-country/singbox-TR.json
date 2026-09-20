@@ -6,17 +6,6 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "93.190.9.22",
-      "server_port": 3090,
-      "uuid": "6c96a2d3-6951-4577-b09d-6fb82291894f",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -36,12 +25,41 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
+      "server": "jgzt1997.qivfelo.ir",
+      "server_port": 5052,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ept2V6yarWzazZStMu0CqM-jx3NN2wG0"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03",
+      "server": "fgh.clofidexa.ir",
+      "server_port": 8290,
+      "uuid": "0de1047d-fadd-4075-a08e-2223c5dadd0a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.numpy.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "yYjMMztcB_8Ao3sp9QIP9ZF0XtsUGXawIBUGWeIvglc",
+          "short_id": "130b94c8e5124031"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02"
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03"
       ]
     },
     {
@@ -49,7 +67,8 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02"
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

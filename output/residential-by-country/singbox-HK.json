@@ -1,0 +1,98 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽)",
+      "server": "xgnhxwnqjcqscqqn.cfooov.xyz",
+      "server_port": 47554,
+      "uuid": "edc17c6e-bb58-4a98-a4a8-ca37aa8b56d2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nbIa7R7_-I8T24U2C1Q3-wuiQVUmAahxdSo33AjKYiA",
+          "short_id": "63bdbd0662a3da"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽)",
+      "server": "wzxydnnzmsycrqwxnh.jiedddym.com",
+      "server_port": 38819,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7s-ve59v99UPmZT4MOth5PloFy3ytSU4uuh6Oa7lPkU",
+          "short_id": "85eced9b6394"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (家宽)",
+      "server": "xgwhcrqwlhfaqqn.cfooov.xyz",
+      "server_port": 48712,
+      "uuid": "17ab31f7-c021-4aec-83b2-ab48de8886bd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com.hk",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "gNL3X6L6kuclvSmA0qXWHKZCIFW1wGYr4AF0YN6uKkg",
+          "short_id": "28e1ea46d658"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽)"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇭🇰 中国香港 (Hong Kong) 01 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 03 (家宽)"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
