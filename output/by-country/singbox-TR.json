@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "93.190.9.21",
+      "server": "93.190.9.22",
       "server_port": 3090,
-      "uuid": "f579aee6-d850-4dd8-87de-4ae4b5df9d94",
+      "uuid": "6c96a2d3-6951-4577-b09d-6fb82291894f",
       "transport": {
         "type": "grpc",
         "service_name": "vless"
@@ -17,21 +17,23 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02",
-      "server": "93.190.9.15",
-      "server_port": 3090,
-      "uuid": "613fc411-78e1-4d68-a663-6abeb46a97e7",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+      "server": "78.135.73.47",
+      "server_port": 443,
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
+        }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇹🇷 土耳其 (Turkey) 03",
-      "server": "jgzt1997.qivfelo.ir",
-      "server_port": 5052,
-      "method": "chacha20-ietf-poly1305",
-      "password": "ept2V6yarWzazZStMu0CqM-jx3NN2wG0"
     },
     {
       "type": "selector",
@@ -39,8 +41,7 @@
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 02"
       ]
     },
     {
@@ -48,8 +49,7 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

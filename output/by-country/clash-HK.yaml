@@ -4,33 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 47.83.173.110
-  port: 443
+- name: 🇭🇰 中国香港 (Hong Kong) 01 R57
+  server: sth.free-outline.giize.com
+  port: 1081
   udp: true
-  type: vless
-  uuid: bca6f15f-89db-40e2-a955-19d084229234
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: BqFbrSSosM7RAVvUGTRmCrZlHY6aGwq9HEJs0fMdK0s
-    short-id: 8144589880395fa1
-  servername: www.samsung.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: uez5t2b4575tgkoi
 - name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 47.83.4.146
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8952ecb7-4b85-4aa5-8b22-adc9aa4d3591
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ID53PilNajhqBP3PTJJxurZOFnZfKVs-CU5buNOaKBQ
-    short-id: e40b98d40e53b8b9
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03
   server: 47.76.172.190
   port: 443
   udp: true
@@ -43,6 +24,19 @@ proxies:
     short-id: 92ddbafbf38306f5
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: agroup.hk2.ilovegairport.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: df2a259e-32cc-4b4d-bcca-3f8d8a28dc2a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wjVcW5OqGoFbeqwEPiQHjf-uQTwRMBsOKlRnl5JmSzA
+    short-id: 1e5dd4542585
+  servername: ap-east-1.console.aws.amazon.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 195.58.144.56
   port: 11907
@@ -54,19 +48,6 @@ proxies:
   skip-cert-verify: false
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: 47.238.126.123
-  port: 443
-  udp: true
-  type: vless
-  uuid: bf41cc32-f0a2-4b27-ba9f-8026ce0aed84
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4IeLDkxPTFecGeobLaxV9XaVW7oBgcqwW2dvfFtPQD4
-    short-id: 7771265f0b109528
-  servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 06
   server: mz.hkychina.com
   port: 8443
   udp: true
@@ -79,22 +60,20 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇭🇰 中国香港 (Hong Kong) 01 R57
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01
+  - 🇭🇰 中国香港 (Hong Kong) 01 R57
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
 rules:
 - MATCH,PROXIES

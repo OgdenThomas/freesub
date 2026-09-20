@@ -5,20 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 104.25.178.92
-  port: 443
+  server: 153.76.185.144
+  port: 3090
   udp: true
   type: vless
-  uuid: d9abc6e3-83bf-4c28-ae68-72465e2abe39
-  tls: true
-  servername: ikT-KKC25F27k-3Tehr8MC.ADE-1007.WOrKErS.DEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/xQhNe7rLrdM0emZlaW5LMsNwcoIgnT?ed=2560
-    headers:
-      Host: ikt-kkc25f27k-3tehr8mc.ade-1007.workers.dev
+  uuid: a9a813b7-13ea-45f4-b8de-922b9bdd2db2
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
 proxy-groups:
 - name: PROXIES
   type: select
