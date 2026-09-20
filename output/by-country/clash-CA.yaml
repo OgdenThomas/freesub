@@ -4,7 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
+- name: 🇨🇦 加拿大 (Canada) 01 R54
+  server: 142.4.216.225
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇨🇦 加拿大 (Canada) 02
   server: docs.fastline-labs.com
   port: 443
   udp: true
@@ -17,12 +24,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 01 R54
+  - 🇨🇦 加拿大 (Canada) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 01 R54
+  - 🇨🇦 加拿大 (Canada) 02
 rules:
 - MATCH,PROXIES

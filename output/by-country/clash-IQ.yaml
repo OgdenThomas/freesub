@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 (家宽)
-  server: 37.120.222.70
-  port: 8082
+- name: 🇮🇶 IQ 01
+  server: 172.64.153.235
+  port: 8443
   udp: true
   type: vless
-  uuid: 59c3c1c7-62d0-4707-9d67-5ff9c008591c
+  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
   tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  servername: socks5.revil-time3.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
+    path: /socks5://128.140.46.169:13482
     headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+      Host: socks5.revil-time3.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01 (家宽)
+  - 🇮🇶 IQ 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01 (家宽)
+  - 🇮🇶 IQ 01
 rules:
 - MATCH,PROXIES

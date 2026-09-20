@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 01 R54",
+      "server": "142.4.216.225",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mrs2e9a"
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇨🇦 加拿大 (Canada) 01",
+      "tag": "🇨🇦 加拿大 (Canada) 02",
       "server": "docs.fastline-labs.com",
       "server_port": 443,
       "password": "334f25ef-3fb7-44a0-8ab7-79527d613281",
@@ -20,14 +28,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01"
+        "🇨🇦 加拿大 (Canada) 01 R54",
+        "🇨🇦 加拿大 (Canada) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01"
+        "🇨🇦 加拿大 (Canada) 01 R54",
+        "🇨🇦 加拿大 (Canada) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
