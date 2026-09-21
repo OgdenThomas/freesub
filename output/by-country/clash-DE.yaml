@@ -4,54 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01
-  server: 159.195.192.169
-  port: 2054
-  udp: true
-  type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-  tls: true
-  reality-opts:
-    public-key: mlJSEX5zJodpeofSicXnd0tlrgonVCGJ3M-qqWF4FSU
-  servername: www.ibm.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇩🇪 德国 (Germany) 02
-  server: 144.31.167.77
-  port: 443
-  udp: true
-  type: vless
-  uuid: 190342ef-5555-4dd6-9d3e-529ce1bd1513
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6YFaX1wQaOAxYxehqj8d4zcSeHutarC_9VCBWeUGGG0
-    short-id: 261afb322a
-  servername: www.sony.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 03
-  server: 88.99.161.169
-  port: 11342
-  udp: true
-  type: vless
-  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
-    short-id: 6f7b38bd9420c4b8
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04 R49
-  server: web.turbooserver.net.tr
-  port: 2087
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow=
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 01 R44
   server: 151.101.56.7
   port: 443
   udp: true
@@ -61,8 +14,29 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
-- name: 🇩🇪 德国 (Germany) 06
+    path: /
+- name: 🇩🇪 德国 (Germany) 02
+  server: 144.31.28.106
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /trade
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 03 R55
+  server: 172.104.129.6
+  port: 2087
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow=
+- name: 🇩🇪 德国 (Germany) 04
   server: 108.165.32.16
   port: 443
   udp: true
@@ -75,34 +49,7 @@ proxies:
     short-id: ca3d
   servername: www.logitech.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 07
-  server: 199.232.78.159
-  port: 443
-  udp: true
-  type: vless
-  uuid: c7927800-0f45-462f-a7cc-bf76fd184c08
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BlackGod.global.ssl.fastly.net
-- name: 🇩🇪 德国 (Germany) 08
-  server: 195.201.9.235
-  port: 11342
-  udp: true
-  type: vless
-  uuid: 0a419fe1-068e-422f-911a-4977fa944e08
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W2swPTQYWu_rfjh2fnyzQ5zg6lK5wKv2Z-mBpVI6_Bg
-    short-id: 6f7b38bd9420c4b8
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 09
+- name: 🇩🇪 德国 (Germany) 05
   server: 89.169.53.176
   port: 4443
   udp: true
@@ -114,38 +61,37 @@ proxies:
     public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
     short-id: df3aff719526dc5a
   servername: de.wvpn.one
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 10
-  server: 46.101.230.110
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /drama?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 11
-  server: 82.118.19.153
+- name: 🇩🇪 德国 (Germany) 06
+  server: 144.31.167.77
   port: 443
   udp: true
   type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  uuid: 190342ef-5555-4dd6-9d3e-529ce1bd1513
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
+    public-key: 6YFaX1wQaOAxYxehqj8d4zcSeHutarC_9VCBWeUGGG0
+    short-id: 261afb322a
+  servername: www.sony.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 12
-  server: 88.119.168.61
-  port: 443
+- name: 🇩🇪 德国 (Germany) 07
+  server: 165.232.39.212
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /html/shows?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 08
+  server: 134.209.194.199
+  port: 2083
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
@@ -155,51 +101,11 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /discuss?ed=2560
+    path: /jumping/files/videos?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 13 R50
-  server: nasnet-571299667-direct.mbghalibaf.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-  flow: xtls-rprx-vision
-  tls: true
-  servername: nasnet-571299667-direct.mbghalibaf.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 14
-  server: 45.148.30.11
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /season/classify?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 15
-  server: 129.151.64.169
-  port: 31867
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /files
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 16
-  server: 64.225.65.116
+- name: 🇩🇪 德国 (Germany) 09 R65
+  server: 132.243.203.207
   port: 8443
   udp: true
   type: vless
@@ -210,11 +116,11 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /bd/pictures?ed=2560
+    path: /lives?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 17
-  server: 5.101.114.44
+- name: 🇩🇪 德国 (Germany) 10
+  server: 138.68.142.165
   port: 2053
   udp: true
   type: vless
@@ -225,10 +131,68 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /collection/directory?ed=2560
+    path: /resource/channel
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 18 R44
+- name: 🇩🇪 德国 (Germany) 11
+  server: 194.154.29.139
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /retrieve/txt?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 12
+  server: 91.196.32.216
+  port: 9543
+  udp: true
+  type: vless
+  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: 123abcdf
+  servername: storage.yandexcloud.net
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 13
+  server: 2.26.125.38
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  tls: true
+  servername: st3f6d.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st3f6d.rumedia-cdn.com
+- name: 🇩🇪 德国 (Germany) 14
+  server: 132.243.251.194
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /topics?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 15
   server: 202.181.177.8
   port: 8443
   udp: true
@@ -243,9 +207,20 @@ proxies:
     path: /channels/act
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 19 R65
-  server: 188.166.75.64
-  port: 2087
+- name: 🇩🇪 德国 (Germany) 16 R50
+  server: nasnet-571299667-direct.mbghalibaf.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: nasnet
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nasnet-571299667-direct.mbghalibaf.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 17
+  server: 103.31.77.108
+  port: 2053
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
@@ -255,11 +230,40 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /seller/library?ed=2560
+    path: /channels/act
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 20
-  server: 157.173.125.214
+- name: 🇩🇪 德国 (Germany) 18
+  server: 129.151.64.169
+  port: 31867
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /files
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 19
+  server: 132.243.203.218
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /v?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 20 R59
+  server: 72.56.71.215
   port: 2087
   udp: true
   type: vless
@@ -270,7 +274,7 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /redirect/china/view?ed=2560
+    path: /archive/html?ed=2560
     headers:
       Host: cdn8848.776676.xyz
 - name: 🇩🇪 德国 (Germany) 21
@@ -288,8 +292,23 @@ proxies:
     path: /trade/game/movies
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 22
-  server: 132.243.203.243
+- name: 🇩🇪 德国 (Germany) 22 R65
+  server: 165.232.39.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /m?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 23
+  server: 185.113.223.183
   port: 8443
   udp: true
   type: vless
@@ -300,10 +319,53 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /archive?ed=2560
+    path: /channels/act
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 23
+- name: 🇩🇪 德国 (Germany) 24 R44
+  server: 84.32.217.120
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /channels/act
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 25
+  server: 142.93.160.43
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /image/m?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇩🇪 德国 (Germany) 26
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 27 R59
   server: 138.124.25.25
   port: 443
   udp: true
@@ -318,190 +380,78 @@ proxies:
     path: /group/outbound/topics?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 24
-  server: 188.166.60.219
-  port: 8443
+- name: 🇩🇪 德国 (Germany) 28 R49
+  server: web.turbooserver.net.tr
+  port: 2087
   udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /groups/pictures?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 25
-  server: 2.27.244.164
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 26 R44
-  server: 144.31.218.10
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /archives/play/pages?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 27
-  server: 165.232.39.212
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /html/shows?ed=2560fp=chrome
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇩🇪 德国 (Germany) 28
-  server: 2.26.125.38
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  tls: true
-  servername: st3f6d.rumedia-cdn.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: st3f6d.rumedia-cdn.com
-- name: 🇩🇪 德国 (Germany) 29
-  server: de.huge-b.com
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 818dc06d-5008-48d6-882b-d1824bd37709
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /@Artemis_Vpn
-    headers:
-      Host: de.huge-b.com
-- name: 🇩🇪 德国 (Germany) 30
-  server: 172.67.185.153
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 522df6b1-a110-4163-a92f-9935561b1f77
-  tls: true
-  servername: de.huge-b.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Artemis_Vpn
-    headers:
-      Host: de.huge-b.com
-- name: 🇩🇪 德国 (Germany) 31
-  server: 82.139.234.155
-  port: 42892
-  udp: true
-  type: vless
-  uuid: 53627d61-30b2-4333-9901-94cd457cbeaa
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GLKvvfUmBk3Y4fxmRCgvSaR73H2lE1eBGm2EwWPxtDY
-    short-id: a51c
-  servername: www.amd.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: WAqeGA+dU+HZYSipCio+Jmt7SSVfHjwMH7j8xmsm7/s=:althddZ27iu261I+568pk7HZzBFDCyIx6pvG8H9oXow=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R44
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04 R49
+  - 🇩🇪 德国 (Germany) 03 R55
+  - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R65
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
-  - 🇩🇪 德国 (Germany) 13 R50
+  - 🇩🇪 德国 (Germany) 13
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
-  - 🇩🇪 德国 (Germany) 16
+  - 🇩🇪 德国 (Germany) 16 R50
   - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18 R44
-  - 🇩🇪 德国 (Germany) 19 R65
-  - 🇩🇪 德国 (Germany) 20
+  - 🇩🇪 德国 (Germany) 18
+  - 🇩🇪 德国 (Germany) 19
+  - 🇩🇪 德国 (Germany) 20 R59
   - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
+  - 🇩🇪 德国 (Germany) 22 R65
   - 🇩🇪 德国 (Germany) 23
-  - 🇩🇪 德国 (Germany) 24
+  - 🇩🇪 德国 (Germany) 24 R44
   - 🇩🇪 德国 (Germany) 25
-  - 🇩🇪 德国 (Germany) 26 R44
-  - 🇩🇪 德国 (Germany) 27
-  - 🇩🇪 德国 (Germany) 28
-  - 🇩🇪 德国 (Germany) 29
-  - 🇩🇪 德国 (Germany) 30
-  - 🇩🇪 德国 (Germany) 31
+  - 🇩🇪 德国 (Germany) 26
+  - 🇩🇪 德国 (Germany) 27 R59
+  - 🇩🇪 德国 (Germany) 28 R49
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R44
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04 R49
+  - 🇩🇪 德国 (Germany) 03 R55
+  - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R65
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
-  - 🇩🇪 德国 (Germany) 13 R50
+  - 🇩🇪 德国 (Germany) 13
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
-  - 🇩🇪 德国 (Germany) 16
+  - 🇩🇪 德国 (Germany) 16 R50
   - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18 R44
-  - 🇩🇪 德国 (Germany) 19 R65
-  - 🇩🇪 德国 (Germany) 20
+  - 🇩🇪 德国 (Germany) 18
+  - 🇩🇪 德国 (Germany) 19
+  - 🇩🇪 德国 (Germany) 20 R59
   - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
+  - 🇩🇪 德国 (Germany) 22 R65
   - 🇩🇪 德国 (Germany) 23
-  - 🇩🇪 德国 (Germany) 24
+  - 🇩🇪 德国 (Germany) 24 R44
   - 🇩🇪 德国 (Germany) 25
-  - 🇩🇪 德国 (Germany) 26 R44
-  - 🇩🇪 德国 (Germany) 27
-  - 🇩🇪 德国 (Germany) 28
-  - 🇩🇪 德国 (Germany) 29
-  - 🇩🇪 德国 (Germany) 30
-  - 🇩🇪 德国 (Germany) 31
+  - 🇩🇪 德国 (Germany) 26
+  - 🇩🇪 德国 (Germany) 27 R59
+  - 🇩🇪 德国 (Germany) 28 R49
 rules:
 - MATCH,PROXIES

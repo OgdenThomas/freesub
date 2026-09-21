@@ -18,14 +18,27 @@ proxies:
   servername: dzen.ru
   client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 02
-  server: 85.204.107.181
+  server: gr2.serverslocal.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc74bd1a-ec97-41cb-9de6-7cccf65dc042
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8H-YQe-nSd_aL2FwWIFNV2-anUb4v3cY_n5QcEEjGEs
+    short-id: eeed325908a87d9f
+  servername: gr2.serverslocal.ru
+  client-fingerprint: random
+- name: 🇦🇪 阿联酋 (UAE) 03
+  server: 85.204.107.175
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: false
-- name: 🇦🇪 阿联酋 (UAE) 03
+- name: 🇦🇪 阿联酋 (UAE) 04
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -44,6 +57,7 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
+  - 🇦🇪 阿联酋 (UAE) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +66,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
+  - 🇦🇪 阿联酋 (UAE) 04
 rules:
 - MATCH,PROXIES

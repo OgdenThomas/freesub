@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: 91.196.161.218
+  port: 2054
+  udp: true
+  type: vless
+  uuid: 040e129c-f6bc-4f7c-8351-bcbab5078cd1
+  tls: true
+  reality-opts:
+    public-key: LZEcqc7M6ypBzgtrnT-LjZKCbEQ8m-IgGhz24iezfDc
+    short-id: 54b24594713b5f13
+  servername: www.ibm.com
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇦 乌克兰 (Ukraine) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇦 乌克兰 (Ukraine) 01
+rules:
+- MATCH,PROXIES

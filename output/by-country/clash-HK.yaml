@@ -13,20 +13,6 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 103.136.150.119
-  port: 10081
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 72553320ae6bcc8f
-- name: 🇭🇰 中国香港 (Hong Kong) 03 R59
-  server: sth.free-outline.giize.com
-  port: 1081
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: r6tptrwvddxap6al
-- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 47.83.173.110
   port: 443
   udp: true
@@ -39,29 +25,21 @@ proxies:
     short-id: 8144589880395fa1
   servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05
+- name: 🇭🇰 中国香港 (Hong Kong) 03 R59
+  server: sth.free-outline.giize.com
+  port: 1081
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: r6tptrwvddxap6al
+- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: dog-hk.kunlun01dns.com
-  port: 21020
+  port: 21019
   udp: true
   type: vmess
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: px2.5ibtc.cn
-  port: 443
-  udp: true
-  type: vless
-  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
-  tls: true
-  servername: px2.5ibtc.cn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
-    headers:
-      Host: px2.5ibtc.cn
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,8 +49,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03 R59
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,7 +58,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03 R59
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
 rules:
 - MATCH,PROXIES

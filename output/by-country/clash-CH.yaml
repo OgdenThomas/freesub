@@ -18,34 +18,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 138.124.64.23
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1ce68480-ed58-488b-965a-758fe9d6da76
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _4ATNuZQh5uHkrwQY5Z4h0HsudsGqTRIBkuJSRmQuBU
-    short-id: 6ba85179e30d4fc2
-  servername: google.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 03
-  server: 199.232.249.220
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
-  tls: true
-  servername: global.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sardach3.global.ssl.fastly.net
-- name: 🇨🇭 瑞士 (Switzerland) 04
   server: 151.242.2.81
   port: 443
   udp: true
@@ -67,8 +39,6 @@ proxy-groups:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
-  - 🇨🇭 瑞士 (Switzerland) 03
-  - 🇨🇭 瑞士 (Switzerland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,7 +46,5 @@ proxy-groups:
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
-  - 🇨🇭 瑞士 (Switzerland) 03
-  - 🇨🇭 瑞士 (Switzerland) 04
 rules:
 - MATCH,PROXIES

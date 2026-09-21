@@ -5,25 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇾 马来西亚 (Malaysia) 01",
-      "server": "159.65.8.14",
-      "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01",
+      "server": "91.196.161.218",
+      "server_port": 2054,
+      "uuid": "040e129c-f6bc-4f7c-8351-bcbab5078cd1",
       "tls": {
         "enabled": true,
-        "server_name": "cdn8848.776676.xyz",
-        "insecure": false,
+        "server_name": "www.ibm.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LZEcqc7M6ypBzgtrnT-LjZKCbEQ8m-IgGhz24iezfDc",
+          "short_id": "54b24594713b5f13"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/magnet?ed=2560",
-        "headers": {
-          "Host": "cdn8848.776676.xyz"
-        }
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
@@ -31,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 (Malaysia) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇾 马来西亚 (Malaysia) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

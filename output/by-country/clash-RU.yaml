@@ -5,62 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 5.129.251.213
-  port: 46446
+  server: 46.8.200.91
+  port: 443
   udp: true
   type: vless
-  uuid: e42ba0b1-39a0-48fd-a80f-f3fca3bb4c6d
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
   tls: true
-  reality-opts:
-    public-key: 4CTDvoTom2CNJqszbKlQApLSQJ8ZLNoQrQ5yH7j242I
-    short-id: 039204f18c9c90a0
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: fromabroad-grpc-v1
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 91.196.32.216
-  port: 9543
-  udp: true
-  type: vless
-  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcdf
-  servername: storage.yandexcloud.net
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 193.181.216.117
-  port: 2053
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
+  servername: cf3.rumedia-cdn.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /payment?ed=2560fp=chrome
+    path: /cdn/v3/live
     headers:
-      Host: cdn8848.776676.xyz
+      Host: cf3.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 rules:
 - MATCH,PROXIES
