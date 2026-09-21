@@ -5,44 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 93.190.9.41
-  port: 3090
+  server: 31.214.152.140
+  port: 443
   udp: true
   type: vless
-  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8
+    short-id: 08
+  servername: dw.b-cdn.net
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 02
-  server: 93.190.9.34
-  port: 3090
-  udp: true
-  type: vless
-  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: 93.190.9.40
-  port: 3090
-  udp: true
-  type: vless
-  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 04 R50
-  server: zolla2580.karmatel.ir
-  port: 55519
-  udp: true
-  type: vless
-  uuid: 20cba9d0-e235-4205-943a-7e6f0b390ec5
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: play-apps-features.googleusercontent.com
-- name: 🇹🇷 土耳其 (Turkey) 05
   server: 78.135.73.47
   port: 443
   udp: true
@@ -55,15 +30,21 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 06
-  server: 93.190.9.44
-  port: 3090
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: 146.75.84.3
+  port: 443
   udp: true
   type: vless
-  uuid: b1ca4f7c-d50a-41b2-b779-07c3e6ed09b2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: BechBad.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,9 +53,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04 R50
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,8 +61,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04 R50
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06
 rules:
 - MATCH,PROXIES

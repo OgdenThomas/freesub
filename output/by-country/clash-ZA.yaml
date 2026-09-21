@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: 49.254.204.134
-  port: 1774
+- name: 🇿🇦 南非 (South Africa) 01
+  server: 4.221.224.246
+  port: 443
   udp: true
   type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  cipher: chacha20-ietf-poly1305
+  password: wxbXnqpZDX2msY73
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇿🇦 南非 (South Africa) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇿🇦 南非 (South Africa) 01
 rules:
 - MATCH,PROXIES

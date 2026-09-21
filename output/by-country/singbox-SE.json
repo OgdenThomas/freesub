@@ -4,15 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 01",
-      "server": "143.246.195.138",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-      "transport": {
-        "type": "ws",
-        "path": "/vless-test"
-      }
+      "type": "shadowsocks",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 R40",
+      "server": "70.34.212.124",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "AxIYWtskJWIIaefW"
     },
     {
       "type": "vless",
@@ -28,6 +25,17 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 03",
+      "server": "143.246.195.138",
+      "server_port": 8081,
+      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
+      "transport": {
+        "type": "ws",
+        "path": "/vless-test"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 04",
       "server": "177.3.215.171",
       "server_port": 443,
       "uuid": "c47b421f-65f1-4190-b7ba-bd2045086fe4",
@@ -47,22 +55,11 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 04",
-      "server": "143.246.194.60",
-      "server_port": 8081,
-      "uuid": "54ee5e59-55a3-4599-83ff-0c67b3f411b2",
-      "transport": {
-        "type": "ws",
-        "path": "/vless-test"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 01 R40",
         "🇸🇪 瑞典 (Sweden) 02",
         "🇸🇪 瑞典 (Sweden) 03",
         "🇸🇪 瑞典 (Sweden) 04"
@@ -72,7 +69,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 01 R40",
         "🇸🇪 瑞典 (Sweden) 02",
         "🇸🇪 瑞典 (Sweden) 03",
         "🇸🇪 瑞典 (Sweden) 04"

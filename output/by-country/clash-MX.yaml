@@ -4,26 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 以色列 (Israel) 01
-  server: 176.65.151.237
-  port: 34528
+- name: 🇲🇽 墨西哥 (Mexico) 01
+  server: 131.196.252.59
+  port: 20521
   udp: true
-  type: vless
-  uuid: 61906623-1a22-41d4-839c-f9117cc72846
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+  type: vmess
+  uuid: 5809911a-a16e-43d3-90b0-2c94cfc2035e
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇲🇽 墨西哥 (Mexico) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇲🇽 墨西哥 (Mexico) 01
 rules:
 - MATCH,PROXIES

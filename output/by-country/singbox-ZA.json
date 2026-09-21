@@ -4,28 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 01",
-      "server": "176.65.151.237",
-      "server_port": 34528,
-      "uuid": "61906623-1a22-41d4-839c-f9117cc72846",
-      "transport": {
-        "type": "grpc"
-      }
+      "type": "shadowsocks",
+      "tag": "🇿🇦 南非 (South Africa) 01",
+      "server": "4.221.224.246",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "wxbXnqpZDX2msY73"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 以色列 (Israel) 01"
+        "🇿🇦 南非 (South Africa) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 以色列 (Israel) 01"
+        "🇿🇦 南非 (South Africa) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
