@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 132.243.65.161
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4d08aa81-f729-4857-a2e9-06e48b8b9556
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: 7a3f9e2b1c8d4f6a
-  servername: ee.global-cdn.org
-  client-fingerprint: safari
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
   server: 5.181.201.36
   port: 443
   udp: true
@@ -30,19 +17,14 @@ proxies:
     short-id: d98e7afec9c0c359
   servername: estomin1.vodniki.monster
   client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03
-  server: 45.11.27.86
-  port: 443
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
+  server: tishina-axe.dedyn.io
+  port: 8443
   udp: true
-  type: vless
-  uuid: a2738d8d-ed26-4b13-a4a2-b89c7238cd10
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: IBzFSziv_xISB-Q6X90PocTBde6jb4X6swEvdZQhqzk
-    short-id: d0aae44f
-  servername: 5post-gate.x5.ru
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 319ed24b1c7203aa
+  sni: tishina-axe.dedyn.io
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 162.159.24.131
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tlssecurity=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 104.18.47.113
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 94.249.187.46
   port: 2086
   udp: true
@@ -12,36 +34,50 @@ proxies:
   uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
   alterId: 0
   cipher: auto
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 94.249.187.46
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: IXa3ylzS_jBOAsQy071tIQ
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 62.113.41.228
-  port: 2055
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7nzDcoQQxUYU35N5ngbSAg
 - name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 46.8.200.91
+  server: 172.64.145.202
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: newwk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: 91.196.32.216
+  port: 9543
+  udp: true
+  type: vless
+  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: 123abcdf
+  servername: storage.yandexcloud.net
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: 104.21.45.213
   port: 443
   udp: true
   type: vless
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  uuid: a5b1d1ec-327c-f1c5-5856-b34600000000
   tls: true
-  servername: cf3.rumedia-cdn.com
+  servername: ez-541f9d.ezaccess1d3db24.workers.dev
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /casc
+    path: /sync
     headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 05
+      Host: ez-541f9d.ezaccess1d3db24.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 07
   server: msk.frkn.org
   port: 443
   udp: true
@@ -49,6 +85,20 @@ proxies:
   password: f317b5d6-d399-4d3d-a051-89d674ae953c
   sni: msk.frkn.org
   skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 08
+  server: 46.8.200.91
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
+  tls: true
+  servername: cf3.rumedia-cdn.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: cf3.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -59,6 +109,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,5 +122,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 rules:
 - MATCH,PROXIES

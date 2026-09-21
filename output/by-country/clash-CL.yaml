@@ -5,14 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01
-  server: platform109.golnamakcert.top
-  port: 80
+  server: 64.176.2.21
+  port: 8388
   udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform109
+  type: ss
+  cipher: aes-256-gcm
+  password: xBStBEVqvGwHPocc
 - name: 🇨🇱 智利 (Chile) 02
   server: 34.176.98.128
   port: 443
@@ -24,7 +22,18 @@ proxies:
     public-key: 3ekBKAuIIAOjtkKJ0T-qpC7uJsqsY2fVLRB6C70A5hw
     short-id: d7676b6a468a03b3
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
+- name: 🇨🇱 智利 (Chile) 03
+  server: platform109.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform109
+    headers:
+      Host: platform109.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇨🇱 智利 (Chile) 01
   - 🇨🇱 智利 (Chile) 02
+  - 🇨🇱 智利 (Chile) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇨🇱 智利 (Chile) 01
   - 🇨🇱 智利 (Chile) 02
+  - 🇨🇱 智利 (Chile) 03
 rules:
 - MATCH,PROXIES

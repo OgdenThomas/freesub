@@ -5,36 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇲 亚美尼亚 (Armenia) 01
-  server: 202.181.177.8
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇦🇲 亚美尼亚 (Armenia) 02
-  server: 144.31.218.10
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /archives/play/pages?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇦🇲 亚美尼亚 (Armenia) 03
   server: de2.x8lab.org
   port: 9433
   udp: true
@@ -51,15 +21,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇲 亚美尼亚 (Armenia) 01
-  - 🇦🇲 亚美尼亚 (Armenia) 02
-  - 🇦🇲 亚美尼亚 (Armenia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇲 亚美尼亚 (Armenia) 01
-  - 🇦🇲 亚美尼亚 (Armenia) 02
-  - 🇦🇲 亚美尼亚 (Armenia) 03
 rules:
 - MATCH,PROXIES

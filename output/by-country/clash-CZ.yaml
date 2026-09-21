@@ -5,6 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
+  server: 172.67.130.187
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: fans.liverpool.qzz.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 153.76.185.186
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 9912a5ca-3ee1-45ac-b182-46fec2610ee0
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 03
   server: 153.76.185.189
   port: 3090
   udp: true
@@ -13,17 +37,45 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vless
-- name: 🇨🇿 捷克 (Czech) 02
-  server: 172.67.143.94
+- name: 🇨🇿 捷克 (Czech) 04
+  server: 153.76.185.188
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 9912a5ca-3ee1-45ac-b182-46fec2610ee0
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 05
+  server: www.speedtest.net
   port: 443
   udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: Z6Y-dAOx0HYhdTdy.R720KPbYX2L3i406.woRKers.DEV
+  type: vless
+  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  tls: true
+  servername: O94yv7LIF0-AnXisD9EFEhVVS7mxN6Bh.Z-UlE-iKA-D-E-ne-k-e.wORkers.dEv
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /tr/P9UvWEJwKNGrOjrb1ICnWGhH8iQGDcG?ed=2560
+    path: /CmtD3y72juVnvSxU?ed=2560
+    headers:
+      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+- name: 🇨🇿 捷克 (Czech) 06
+  server: 104.21.77.142
+  port: 2096
+  udp: true
+  type: vless
+  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
+  tls: true
+  servername: courses.mftplus.qzz.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: courses.mftplus.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +83,10 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01
   - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+  - 🇨🇿 捷克 (Czech) 04
+  - 🇨🇿 捷克 (Czech) 05
+  - 🇨🇿 捷克 (Czech) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +94,9 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01
   - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+  - 🇨🇿 捷克 (Czech) 04
+  - 🇨🇿 捷克 (Czech) 05
+  - 🇨🇿 捷克 (Czech) 06
 rules:
 - MATCH,PROXIES

@@ -4,83 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R41
-  server: 152.228.139.33
-  port: 35108
-  udp: true
-  type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  tls: true
-  reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    short-id: 52add08b86a5ccea
-  servername: www.nvidia.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-common3
-- name: 🇫🇷 法国 (France) 02
-  server: 172.67.152.98
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5934b979-e128-4c90-a600-744b97bffc8c
-  tls: true
-  servername: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/Fi3kP8cNjBoo8UPv?ed=2560
-    headers:
-      Host: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
-- name: 🇫🇷 法国 (France) 03
-  server: 15.224.194.93
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 04
+- name: 🇫🇷 法国 (France) 01
   server: 15.224.194.93
   port: 22223
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 05
-  server: 13.36.1.52
-  port: 22224
+- name: 🇫🇷 法国 (France) 02
+  server: 15.188.103.174
+  port: 22223
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 06
-  server: 15.224.194.93
+- name: 🇫🇷 法国 (France) 03
+  server: 13.36.1.52
   port: 22222
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 07 ⚠R
-  server: 57.128.177.218
-  port: 30963
-  udp: true
-  type: vless
-  uuid: aabcb69e-9f17-44bd-aaac-552dd23e9691
-  tls: true
-  reality-opts:
-    public-key: XxNAqnYJDizM_4_ycJxyaa9xbx29hpDfwAtCv1Wga1M
-    short-id: c776352067
-  servername: us.vrzn.download.nvidia.com
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_common1
-- name: 🇫🇷 法国 (France) 08
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇫🇷 法国 (France) 09
+- name: 🇫🇷 法国 (France) 04
   server: 34.155.10.226
   port: 443
   udp: true
@@ -92,25 +34,57 @@ proxies:
     short-id: ae682368818bd6c5
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05
+  server: 13.36.1.52
+  port: 22223
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇫🇷 法国 (France) 06
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 07 ⚠R
+  server: 57.128.177.218
+  port: 30963
+  udp: true
+  type: vless
+  uuid: aabcb69e-9f17-44bd-aaac-552dd23e9691
+  tls: true
+  reality-opts:
+    public-key: XxNAqnYJDizM_4_ycJxyaa9xbx29hpDfwAtCv1Wga1M
+    short-id: c776352067
+  servername: us.vrzn.download.nvidia.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc_common1
+- name: 🇫🇷 法国 (France) 08
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 09 R41
+  server: 152.228.139.33
+  port: 51671
+  udp: true
+  type: vless
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+  tls: true
+  reality-opts:
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
+  servername: www.sony.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc_common3
 - name: 🇫🇷 法国 (France) 10
-  server: 143.246.209.46
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇫🇷 法国 (France) 11
-  server: 143.246.208.239
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇫🇷 法国 (France) 12
   server: 45.130.125.75
   port: 443
   udp: true
@@ -121,18 +95,13 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 13
-  server: 45.87.41.18
-  port: 443
+- name: 🇫🇷 法国 (France) 11
+  server: 15.224.194.93
+  port: 22222
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 14
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇫🇷 法国 (France) 12
   server: 195.58.140.146
   port: 443
   udp: true
@@ -145,12 +114,21 @@ proxies:
     short-id: dc927a04e8572c61
   servername: d1-fr.cloud-cdn.xyz
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 15
-  server: 199.232.78.170
+- name: 🇫🇷 法国 (France) 13
+  server: 143.246.208.239
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇫🇷 法国 (France) 14
+  server: 199.232.78.160
   port: 443
   udp: true
   type: vless
-  uuid: XpnTeam-13
+  uuid: XpnTeam-14
   tls: true
   servername: ssl.fastly.com
   skip-cert-verify: false
@@ -160,9 +138,22 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 15
+  server: 62.60.157.56
+  port: 443
+  udp: true
+  type: vless
+  uuid: 78b898d6-fa2c-47af-a342-dcde483301b0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZPdVCztKOeffv0v4TpdQ8X5LMGmVNxZe1ZC7BFC8118
+    short-id: 940dbf5b
+  servername: www.uva.nl
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 16
-  server: 185.114.72.31
-  port: 2053
+  server: 185.255.179.166
+  port: 443
   udp: true
   type: trojan
   password: humanity
@@ -172,6 +163,38 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 17
+  server: 107.161.160.23
+  port: 443
+  udp: true
+  type: vless
+  uuid: cdd6bfce-781a-4454-b7d5-4778abb5c24f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: kama2.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 18
+  server: 143.246.209.46
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇫🇷 法国 (France) 19
+  server: frz1.starzone.ir
+  port: 8735
+  udp: true
+  type: vless
+  uuid: b5172efe-cf5e-4484-971d-2860bdb95ab1
+  tls: true
+  reality-opts:
+    public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs
+    short-id: 9e3f5e25c17d2615
+  servername: delivery.mp.microsoft.com
+  client-fingerprint: edge
+- name: 🇫🇷 法国 (France) 20
   server: 185.225.68.232
   port: 443
   udp: true
@@ -182,29 +205,7 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 18
-  server: 5.78.92.27
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 19
-  server: 185.220.100.168
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 20
+- name: 🇫🇷 法国 (France) 21
   server: 91.245.225.79
   port: 2053
   udp: true
@@ -215,22 +216,18 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 21
-  server: milan.adaspoloandco.com
+- name: 🇫🇷 法国 (France) 22
+  server: 212.227.144.37
   port: 8443
   udp: true
-  type: vless
-  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
-  tls: true
-  servername: milan.adaspoloandco.com
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /RoBeRt
-    headers:
-      Host: milan.adaspoloandco.com
-- name: 🇫🇷 法国 (France) 22 R50
+    path: /assignment
+- name: 🇫🇷 法国 (France) 23 R50
   server: 172.67.193.182
   port: 443
   udp: true
@@ -245,8 +242,19 @@ proxies:
     path: /stream/TrexBridge/ef859652a80e
     headers:
       Host: trex-panel-nubj0s.samifakor.workers.dev
-- name: 🇫🇷 法国 (France) 23
-  server: 212.227.144.37
+- name: 🇫🇷 法国 (France) 24 R50
+  server: 104.21.70.21
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: 🇫🇷 法国 (France) 25
+  server: 5.78.92.27
   port: 8443
   udp: true
   type: trojan
@@ -256,22 +264,38 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 24
-  server: kama2.api3-max.ru
-  port: 443
+- name: 🇫🇷 法国 (France) 26
+  server: 185.114.72.31
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 27
+  server: milan.adaspoloandco.com
+  port: 8443
   udp: true
   type: vless
-  uuid: cdd6bfce-781a-4454-b7d5-4778abb5c24f
-  flow: xtls-rprx-vision
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
   tls: true
-  servername: kama2.api3-max.ru
+  servername: milan.adaspoloandco.com
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /RoBeRt
+    headers:
+      Host: milan.adaspoloandco.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
@@ -279,7 +303,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07 ⚠R
   - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 09 R41
   - 🇫🇷 法国 (France) 10
   - 🇫🇷 法国 (France) 11
   - 🇫🇷 法国 (France) 12
@@ -292,15 +316,18 @@ proxy-groups:
   - 🇫🇷 法国 (France) 19
   - 🇫🇷 法国 (France) 20
   - 🇫🇷 法国 (France) 21
-  - 🇫🇷 法国 (France) 22 R50
-  - 🇫🇷 法国 (France) 23
-  - 🇫🇷 法国 (France) 24
+  - 🇫🇷 法国 (France) 22
+  - 🇫🇷 法国 (France) 23 R50
+  - 🇫🇷 法国 (France) 24 R50
+  - 🇫🇷 法国 (France) 25
+  - 🇫🇷 法国 (France) 26
+  - 🇫🇷 法国 (France) 27
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
@@ -308,7 +335,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07 ⚠R
   - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 09 R41
   - 🇫🇷 法国 (France) 10
   - 🇫🇷 法国 (France) 11
   - 🇫🇷 法国 (France) 12
@@ -321,8 +348,11 @@ proxy-groups:
   - 🇫🇷 法国 (France) 19
   - 🇫🇷 法国 (France) 20
   - 🇫🇷 法国 (France) 21
-  - 🇫🇷 法国 (France) 22 R50
-  - 🇫🇷 法国 (France) 23
-  - 🇫🇷 法国 (France) 24
+  - 🇫🇷 法国 (France) 22
+  - 🇫🇷 法国 (France) 23 R50
+  - 🇫🇷 法国 (France) 24 R50
+  - 🇫🇷 法国 (France) 25
+  - 🇫🇷 法国 (France) 26
+  - 🇫🇷 法国 (France) 27
 rules:
 - MATCH,PROXIES

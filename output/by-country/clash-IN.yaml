@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
-  server: 172.67.208.1
+  server: 104.21.69.118
   port: 443
   udp: true
   type: vless
@@ -20,17 +20,12 @@ proxies:
     headers:
       Host: odd-violet-5440.asdgrweeee13.workers.dev
 - name: 🇮🇳 印度 (India) 02
-  server: 34.47.245.203
-  port: 443
+  server: 172.105.39.124
+  port: 7002
   udp: true
-  type: vless
-  uuid: 3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc
-  tls: true
-  reality-opts:
-    public-key: dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY
-    short-id: 50440423703c945f
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 - name: 🇮🇳 印度 (India) 03
   server: 34.93.188.70
   port: 443
@@ -43,6 +38,18 @@ proxies:
     short-id: b9299afa0dcac824
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇮🇳 印度 (India) 04
+  server: 34.47.245.203
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3fed34dc-2fe6-4fe0-86e7-a80213f9b7cc
+  tls: true
+  reality-opts:
+    public-key: dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY
+    short-id: 50440423703c945f
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +58,7 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
+  - 🇮🇳 印度 (India) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +67,6 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
+  - 🇮🇳 印度 (India) 04
 rules:
 - MATCH,PROXIES
