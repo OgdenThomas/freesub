@@ -4,7 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01
+- name: 🇹🇷 土耳其 (Turkey) 01 R50
+  server: 206.1.97.61
+  port: 443
+  udp: true
+  type: vless
+  uuid: 416cea75-4802-43b1-8f31-c7fa1e211a6a
+  tls: true
+  reality-opts:
+    public-key: GFREEsH4rFLnXKDLKXk0iTZNP5_d1zfKTj8DUE0L6RE
+    short-id: d7397feef49deef9
+  servername: Miro.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,31 +29,25 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: jgzt1997.qivfelo.ir
-  port: 5052
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ept2V6yarWzazZStMu0CqM-jx3NN2wG0
 - name: 🇹🇷 土耳其 (Turkey) 03
-  server: fgh.clofidexa.ir
-  port: 8290
+  server: tr.curry-load.rutube.info
+  port: 443
   udp: true
   type: vless
-  uuid: 0de1047d-fadd-4075-a08e-2223c5dadd0a
+  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: yYjMMztcB_8Ao3sp9QIP9ZF0XtsUGXawIBUGWeIvglc
-    short-id: 130b94c8e5124031
-  servername: www.numpy.org
-  client-fingerprint: chrome
+    public-key: bjqOUjqNQMF6NZ2kRis0NTNTcpdLBrr7CvZjFATrhg8
+    short-id: 08
+  servername: dw.b-cdn.net
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
@@ -49,7 +55,7 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
 rules:

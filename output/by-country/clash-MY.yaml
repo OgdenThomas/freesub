@@ -17,17 +17,47 @@ proxies:
     short-id: 0888830f7006f1
   servername: addons.mozilla.org
   client-fingerprint: chrome
+- name: 🇲🇾 马来西亚 (Malaysia) 02
+  server: sczznmbbbzgwlwzdhsql.jiedddym.com
+  port: 31378
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zCNI8OUsvp6NKt52Z_93OoqegAjbVjzP2tHGXd3cQjM
+    short-id: 0888830f7006f1
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇲🇾 马来西亚 (Malaysia) 03
+  server: clhkzzzdbgwxxndnlm.cfooov.xyz
+  port: 60507
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zCNI8OUsvp6NKt52Z_93OoqegAjbVjzP2tHGXd3cQjM
+    short-id: 0888830f7006f1
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇲🇾 马来西亚 (Malaysia) 02
+  - 🇲🇾 马来西亚 (Malaysia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇲🇾 马来西亚 (Malaysia) 02
+  - 🇲🇾 马来西亚 (Malaysia) 03
 rules:
 - MATCH,PROXIES

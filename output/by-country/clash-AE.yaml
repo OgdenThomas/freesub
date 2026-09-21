@@ -14,6 +14,19 @@ proxies:
   grpc-opts:
     grpc-service-name: vless
 - name: 🇦🇪 阿联酋 (UAE) 02
+  server: 78.40.195.140
+  port: 443
+  udp: true
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo
+    short-id: 98096455d963bdbb
+  servername: www.booking.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 03
   server: 94.183.224.45
   port: 443
   udp: true
@@ -26,25 +39,19 @@ proxies:
     short-id: a1b2c3d4e5f67890
   servername: dzen.ru
   client-fingerprint: chrome
-- name: 🇦🇪 阿联酋 (UAE) 03
-  server: 84.235.244.108
-  port: 22573
+- name: 🇦🇪 阿联酋 (UAE) 04
+  server: jpzzqqnzdbgwhbhzsrgh.cfooov.xyz
+  port: 48948
   udp: true
   type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 04
-  server: 85.204.107.178
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AzOs0Mh5_Ax-CrvFYTYXAp78syFjgkotED2cKO_kbyw
+    short-id: 461b0192ec23b6
+  servername: www.lamer.com.hk
+  client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 05
   server: xjpjus.jiedddym.com
   port: 14352
@@ -59,18 +66,24 @@ proxies:
   servername: www.lamer.com.hk
   client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 06
-  server: jpzzqqnzdbgwhbhzsrgh.cfooov.xyz
-  port: 48948
+  server: 84.235.244.108
+  port: 22573
   udp: true
   type: vless
-  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AzOs0Mh5_Ax-CrvFYTYXAp78syFjgkotED2cKO_kbyw
-    short-id: 461b0192ec23b6
-  servername: www.lamer.com.hk
-  client-fingerprint: chrome
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 07
+  server: 85.204.107.177
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,6 +95,7 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
   - 🇦🇪 阿联酋 (UAE) 06
+  - 🇦🇪 阿联酋 (UAE) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,5 +107,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
   - 🇦🇪 阿联酋 (UAE) 06
+  - 🇦🇪 阿联酋 (UAE) 07
 rules:
 - MATCH,PROXIES

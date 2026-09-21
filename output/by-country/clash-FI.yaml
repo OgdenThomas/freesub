@@ -5,26 +5,39 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 62.238.103.54
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d78de562-872e-43dd-be48-e9d7b06c87a3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: tADYkZWWksM_mCqqwlRHCciSCXnP3JMYrPi5eoRHh2s
-    short-id: d059fb98048c5318
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 87.58.148.70
   port: 443
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: rg0g3xp9rk9nk9o0
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 65.108.3.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 03
+  server: 2.26.147.118
+  port: 443
+  udp: true
+  type: vless
+  uuid: b97e287f-a24e-0021-a103-7e7ecef83139
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
+    short-id: e1f8a3b6
+  servername: www.amd.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04
   server: tt.sonyabibboop.com
   port: 2055
   udp: true
@@ -39,31 +52,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: sonya-grpc
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: 65.108.3.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 05
-  server: 83.219.97.26
+  server: 31.77.199.182
   port: 443
   udp: true
   type: vless
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: est1313.ggisopi.su
-  client-fingerprint: chrome
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: abcd1234
+  servername: fi2.yservice.help
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 06
   server: 37.143.129.244
   port: 443
@@ -78,6 +79,32 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 07
+  server: 2.27.175.71
+  port: 443
+  udp: true
+  type: vless
+  uuid: c797b9ad-6f9e-4eee-befd-eef119ec3637
+  tls: true
+  servername: assets-fi.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇫🇮 芬兰 (Finland) 08
+  server: 2.27.48.140
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7cbc0c1f-9aa1-4a4c-a052-45ccc855df10
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Ax1xKjjBS7afZ94zHY-9iI7hohBmzA-EpS-eRILX2CA
+    short-id: c66279532e2e
+  servername: intel.com
+  client-fingerprint: safari
+- name: 🇫🇮 芬兰 (Finland) 09
   server: tt.sonyabibboop.com
   port: 443
   udp: true
@@ -90,31 +117,43 @@ proxies:
     short-id: 7b86a01d952e8df4
   servername: tt.sonyabibboop.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 08
-  server: 31.77.199.182
-  port: 443
+- name: 🇫🇮 芬兰 (Finland) 10
+  server: 62.238.103.54
+  port: 2083
   udp: true
   type: vless
-  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+  uuid: d78de562-872e-43dd-be48-e9d7b06c87a3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
-    short-id: abcd1234
-  servername: fi2.yservice.help
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 09
-  server: 2.27.48.140
+    public-key: tADYkZWWksM_mCqqwlRHCciSCXnP3JMYrPi5eoRHh2s
+    short-id: d059fb98048c5318
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 11
+  server: 83.219.97.26
   port: 443
   udp: true
   type: vless
-  uuid: 7cbc0c1f-9aa1-4a4c-a052-45ccc855df10
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Ax1xKjjBS7afZ94zHY-9iI7hohBmzA-EpS-eRILX2CA
-    short-id: c66279532e2e
-  servername: intel.com
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: est1313.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 12 R48
+  server: 185.20.137.118
+  port: 443
+  udp: true
+  type: vless
+  uuid: 416cea75-4802-43b1-8f31-c7fa1e211a6a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
+    short-id: 7a0300af51a1c4cf
+  servername: Miro.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -130,6 +169,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 07
   - 🇫🇮 芬兰 (Finland) 08
   - 🇫🇮 芬兰 (Finland) 09
+  - 🇫🇮 芬兰 (Finland) 10
+  - 🇫🇮 芬兰 (Finland) 11
+  - 🇫🇮 芬兰 (Finland) 12 R48
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -144,5 +186,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 07
   - 🇫🇮 芬兰 (Finland) 08
   - 🇫🇮 芬兰 (Finland) 09
+  - 🇫🇮 芬兰 (Finland) 10
+  - 🇫🇮 芬兰 (Finland) 11
+  - 🇫🇮 芬兰 (Finland) 12 R48
 rules:
 - MATCH,PROXIES

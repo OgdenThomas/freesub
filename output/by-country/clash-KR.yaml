@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 47.80.14.8
-  port: 443
+  server: 49.254.204.134
+  port: 1774
   udp: true
-  type: vless
-  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
-    short-id: 71110d3f7ef57760
-  servername: www.samsung.com
-  client-fingerprint: random
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
 - name: 🇰🇷 韩国 (South Korea) 02
   server: 34.64.149.137
   port: 443
@@ -29,46 +23,20 @@ proxies:
     short-id: 3fd0a8ddef3ae5c6
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
-  server: jpzzqqnzdbgwhbhzsrgh.cfooov.xyz
-  port: 48179
-  udp: true
-  type: vless
-  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
-    short-id: d1f38c0f15ed22
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04
-  server: clhkzzzdbgwxxndnlm.cfooov.xyz
-  port: 61205
-  udp: true
-  type: vless
-  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
-    short-id: d1f38c0f15ed22
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 05
-  server: 47.80.62.188
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 47.80.14.8
   port: 443
   udp: true
   type: vless
-  uuid: e85ca8bc-21a5-418d-a639-00236f0c3d81
+  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: an8lRnGRbCvX-GW3zuc5woB6hrTxEhfyrGCv-7_QyVo
-    short-id: b229991df62826cc
-  servername: www.nvidia.com
+    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
+    short-id: 71110d3f7ef57760
+  servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 06
+- name: 🇰🇷 韩国 (South Korea) 04
   server: 47.80.62.71
   port: 443
   udp: true
@@ -81,6 +49,47 @@ proxies:
     short-id: 0b674631d5fc6b93
   servername: www.nvidia.com
   client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 05
+  server: clhkzzzdbgwxxndnlm.cfooov.xyz
+  port: 61205
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
+    short-id: d1f38c0f15ed22
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: 172.64.153.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: e85ca8bc-21a5-418d-a639-00236f0c3d81
+  tls: true
+  servername: d9a9ecdf.69lover.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/c17245904dc7e388/stream
+    headers:
+      Host: d9a9ecdf.69lover.site
+- name: 🇰🇷 韩国 (South Korea) 07 (家宽)
+  server: sczznmbbbzgwlwzdhsql.jiedddym.com
+  port: 62638
+  udp: true
+  type: vless
+  uuid: 17ab31f7-c021-4aec-83b2-ab48de8886bd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PhXLfJ4s8EPauWaeRpzAjSuZibhmMiZFEMr8h8qU6iI
+    short-id: d1f38c0f15ed22
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,10 +97,11 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
   - 🇰🇷 韩国 (South Korea) 05
   - 🇰🇷 韩国 (South Korea) 06
+  - 🇰🇷 韩国 (South Korea) 07 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -99,9 +109,10 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03 (家宽)
+  - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
   - 🇰🇷 韩国 (South Korea) 05
   - 🇰🇷 韩国 (South Korea) 06
+  - 🇰🇷 韩国 (South Korea) 07 (家宽)
 rules:
 - MATCH,PROXIES

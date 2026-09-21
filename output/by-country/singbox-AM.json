@@ -1,0 +1,104 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇦🇲 亚美尼亚 (Armenia) 01",
+      "server": "202.181.177.8",
+      "server_port": 8443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/channels/act",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇲 亚美尼亚 (Armenia) 02",
+      "server": "144.31.218.10",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn8848.776676.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/archives/play/pages?ed=2560",
+        "headers": {
+          "Host": "cdn8848.776676.xyz"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇦🇲 亚美尼亚 (Armenia) 03",
+      "server": "de2.x8lab.org",
+      "server_port": 9433,
+      "password": "TAJhE0BC0_S1JDm9EmQxyLS64uC8ekbr",
+      "tls": {
+        "enabled": true,
+        "server_name": "de2.x8lab.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/chatbot",
+        "headers": {
+          "Host": "de2.x8lab.org"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇦🇲 亚美尼亚 (Armenia) 01",
+        "🇦🇲 亚美尼亚 (Armenia) 02",
+        "🇦🇲 亚美尼亚 (Armenia) 03"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇦🇲 亚美尼亚 (Armenia) 01",
+        "🇦🇲 亚美尼亚 (Armenia) 02",
+        "🇦🇲 亚美尼亚 (Armenia) 03"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
