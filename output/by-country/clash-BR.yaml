@@ -12,17 +12,32 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
+- name: 🇧🇷 巴西 (Brazil) 02
+  server: 201.51.17.24
+  port: 1443
+  udp: true
+  type: vless
+  uuid: b0c51c20-1557-4f1f-9eaa-6e4c844a04ca
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ODyAfL7Ie0jmStqz0l2pTq9acdVcmK650m4r1b-R_lM
+    short-id: c7199351636c8880
+  servername: www.google.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01
+  - 🇧🇷 巴西 (Brazil) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 巴西 (Brazil) 01
+  - 🇧🇷 巴西 (Brazil) 02
 rules:
 - MATCH,PROXIES

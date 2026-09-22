@@ -12,18 +12,41 @@
       "security": "auto"
     },
     {
+      "type": "vless",
+      "tag": "🇧🇷 巴西 (Brazil) 02",
+      "server": "201.51.17.24",
+      "server_port": 1443,
+      "uuid": "b0c51c20-1557-4f1f-9eaa-6e4c844a04ca",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ODyAfL7Ie0jmStqz0l2pTq9acdVcmK650m4r1b-R_lM",
+          "short_id": "c7199351636c8880"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01"
+        "🇧🇷 巴西 (Brazil) 01",
+        "🇧🇷 巴西 (Brazil) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01"
+        "🇧🇷 巴西 (Brazil) 01",
+        "🇧🇷 巴西 (Brazil) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
