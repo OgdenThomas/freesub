@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 2.26.224.201
-  port: 443
-  udp: true
-  type: vless
-  uuid: 61da8f4b-6ab1-4ca7-bae0-1cec4f9be2f8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: V-cWjK_GZ0PTJ3wnUHgwey_dNWI6_QNXsC9CdmA0mVI
-    short-id: 408c85938839e89f
-  servername: unpkg.com
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 02
   server: 144.31.171.108
   port: 8444
   udp: true
@@ -30,6 +17,18 @@ proxies:
     short-id: 93f5b0d1a8ce6247
   servername: pl1.chromevpn.cc
   client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 34.118.70.195
+  port: 443
+  udp: true
+  type: vless
+  uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
+  tls: true
+  reality-opts:
+    public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
+    short-id: 7445870d4c2bdcb0
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 03 R46
   server: 92.62.251.18
   port: 443
@@ -41,32 +40,18 @@ proxies:
   servername: pl-1.brodvpn.com
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04 R42
-  server: 188.114.96.19
-  port: 80
-  udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 05
-  server: av513u.sysopnova.art
-  port: 443
+- name: 🇵🇱 波兰 (Poland) 04
+  server: plo1.starzone.ir
+  port: 8735
   udp: true
   type: vless
-  uuid: 3710fc0f-5f0c-4b9c-a5d4-40cb419e943a
-  flow: xtls-rprx-vision
+  uuid: b5172efe-cf5e-4484-971d-2860bdb95ab1
   tls: true
   reality-opts:
-    public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
-    short-id: b97e7d4582b6fa6e
-  servername: yandex.ru
-  client-fingerprint: firefox
+    public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs
+    short-id: 6115f6a9eb8467c6
+  servername: delivery.mp.microsoft.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -75,8 +60,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03 R46
-  - 🇵🇱 波兰 (Poland) 04 R42
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,7 +69,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03 R46
-  - 🇵🇱 波兰 (Poland) 04 R42
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

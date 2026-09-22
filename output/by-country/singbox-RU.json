@@ -6,36 +6,20 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
-      "server": "5.129.238.144",
-      "server_port": 8443,
-      "uuid": "c90395e6-2140-47ad-a54d-9b166729d3ef",
-      "tls": {
-        "enabled": true,
-        "server_name": "xinnusvpn.duckdns.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/wsnl",
-        "headers": {
-          "Host": "xinnusvpn.duckdns.org"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02",
       "server": "46.8.200.91",
       "server_port": 443,
       "uuid": "b8201bab-fa6c-4f6e-b289-b5da660c6f69",
       "tls": {
         "enabled": true,
         "server_name": "cf3.rumedia-cdn.com",
-        "insecure": false
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
@@ -50,16 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 俄罗斯 (Russia) 01",
-        "🇷🇺 俄罗斯 (Russia) 02"
+        "🇷🇺 俄罗斯 (Russia) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 俄罗斯 (Russia) 01",
-        "🇷🇺 俄罗斯 (Russia) 02"
+        "🇷🇺 俄罗斯 (Russia) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

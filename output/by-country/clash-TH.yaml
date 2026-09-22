@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇭 泰国 (Thailand) 01
+  server: 34.15.176.240
+  port: 443
+  udp: true
+  type: vless
+  uuid: 742dc674-a491-4a42-a551-b3ea6dd2f447
+  tls: true
+  reality-opts:
+    public-key: Euq607wb-KZNjbuOMQ1h646C3dm_Q-ntd7yxZ52jj0U
+    short-id: 856c0a3cd1426a5c
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇹🇭 泰国 (Thailand) 02
   server: 34.15.162.1
   port: 443
   udp: true
@@ -15,18 +27,36 @@ proxies:
     public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
     short-id: ca672c53fbbac555
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
+- name: 🇹🇭 泰国 (Thailand) 03
+  server: 104.21.34.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  tls: true
+  servername: v2ray.simspeedup.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: v2ray.simspeedup.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01
+  - 🇹🇭 泰国 (Thailand) 02
+  - 🇹🇭 泰国 (Thailand) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 泰国 (Thailand) 01
+  - 🇹🇭 泰国 (Thailand) 02
+  - 🇹🇭 泰国 (Thailand) 03
 rules:
 - MATCH,PROXIES

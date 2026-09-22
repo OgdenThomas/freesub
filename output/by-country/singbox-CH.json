@@ -25,18 +25,65 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02",
+      "server": "151.242.2.81",
+      "server_port": 443,
+      "uuid": "0a2dde28-70da-4863-a06f-35d007d94d35",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf9.rumedia-cdn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn/v3/live",
+        "headers": {
+          "Host": "cf9.rumedia-cdn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03",
+      "server": "34.65.54.139",
+      "server_port": 443,
+      "uuid": "bd93a117-2e9d-4e1e-b9b9-69d8d7089bdb",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "DE-S0R0KYYTuBsuQmT-iip6rJ2QsuH6z3SJYlsNyUUI",
+          "short_id": "5214a92cad4ad90e"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01"
+        "🇨🇭 瑞士 (Switzerland) 01",
+        "🇨🇭 瑞士 (Switzerland) 02",
+        "🇨🇭 瑞士 (Switzerland) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01"
+        "🇨🇭 瑞士 (Switzerland) 01",
+        "🇨🇭 瑞士 (Switzerland) 02",
+        "🇨🇭 瑞士 (Switzerland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

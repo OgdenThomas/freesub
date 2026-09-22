@@ -4,8 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
+      "server": "206.1.97.212",
+      "server_port": 28351,
+      "uuid": "Nitro_Skybot@",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -29,14 +41,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,23 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 01",
-      "server": "185.95.231.233",
-      "server_port": 443,
-      "uuid": "1ffa8e68-3378-4cf4-b8f6-44bf3d46d106",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇮🇶 IQ 01",
+      "server": "138.124.183.18",
+      "server_port": 9443,
+      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
       "tls": {
         "enabled": true,
-        "server_name": "store.steampowered.com",
+        "server_name": "hub-de-03.hanvpn.cc",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho",
-          "short_id": "a1b2c3d4"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "de03-grpc-8e47a"
       }
     },
     {
@@ -29,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 以色列 (Israel) 01"
+        "🇮🇶 IQ 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 以色列 (Israel) 01"
+        "🇮🇶 IQ 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

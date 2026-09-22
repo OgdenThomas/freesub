@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: 35.201.163.218
-  port: 30837
+  server: 36.224.141.124
+  port: 50099
   udp: true
-  type: vless
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: 97101ba788915e5a
-  servername: www.sony.com
-  client-fingerprint: ios
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
 - name: 🇹🇼 中国台湾 (Taiwan) 02
   server: 35.201.230.136
   port: 443
@@ -30,6 +24,31 @@ proxies:
     short-id: 5e13a6d43d0644c9
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 03
+  server: 35.201.163.218
+  port: 30837
+  udp: true
+  type: vless
+  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
+    short-id: 97101ba788915e5a
+  servername: www.sony.com
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 04
+  server: 34.81.223.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 31a40f42-4ad6-4a32-a760-71102b459584
+  tls: true
+  reality-opts:
+    public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
+    short-id: d74a6321deec9f31
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +56,8 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
+  - 🇹🇼 中国台湾 (Taiwan) 03
+  - 🇹🇼 中国台湾 (Taiwan) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +65,7 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
+  - 🇹🇼 中国台湾 (Taiwan) 03
+  - 🇹🇼 中国台湾 (Taiwan) 04
 rules:
 - MATCH,PROXIES

@@ -4,14 +4,21 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01
-  server: 16.171.55.2
+- name: 🇸🇪 瑞典 (Sweden) 01 R40
+  server: 70.34.212.124
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 16.170.214.108
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 02
+- name: 🇸🇪 瑞典 (Sweden) 03
   server: 143.246.195.138
   port: 8081
   udp: true
@@ -20,7 +27,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 03
+- name: 🇸🇪 瑞典 (Sweden) 04
   server: 143.246.195.98
   port: 8081
   udp: true
@@ -29,13 +36,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇸🇪 瑞典 (Sweden) 04 R40
-  server: 70.34.212.124
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
 - name: 🇸🇪 瑞典 (Sweden) 05
   server: 143.246.194.60
   port: 8081
@@ -46,27 +46,27 @@ proxies:
   ws-opts:
     path: /vless-test
 - name: 🇸🇪 瑞典 (Sweden) 06
-  server: 31.207.7.104
+  server: 193.163.203.170
   port: 443
   udp: true
   type: vless
-  uuid: 12ee5833-c8f5-4534-94e7-6d5c338008df
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-    short-id: 2d6d073dc88f22a8
-  servername: se.global-cdn.org
-  client-fingerprint: safari
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 01 R40
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04 R40
+  - 🇸🇪 瑞典 (Sweden) 04
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
 - name: AUTO
@@ -74,10 +74,10 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 01 R40
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04 R40
+  - 🇸🇪 瑞典 (Sweden) 04
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
 rules:

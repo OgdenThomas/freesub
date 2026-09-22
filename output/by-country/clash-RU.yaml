@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 5.129.238.144
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  tls: true
-  servername: xinnusvpn.duckdns.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /wsnl
-    headers:
-      Host: xinnusvpn.duckdns.org
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 46.8.200.91
   port: 443
   udp: true
@@ -28,6 +13,7 @@ proxies:
   tls: true
   servername: cf3.rumedia-cdn.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /cdn/v3/live
@@ -39,13 +25,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 rules:
 - MATCH,PROXIES
