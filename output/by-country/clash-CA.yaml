@@ -11,17 +11,34 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 172.67.130.159
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
+  tls: true
+  servername: cdn-ca.skyvora.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fqg7aacd8s
+    headers:
+      Host: cdn-ca.skyvora.app
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R56
+  - 🇨🇦 加拿大 (Canada) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R56
+  - 🇨🇦 加拿大 (Canada) 02
 rules:
 - MATCH,PROXIES

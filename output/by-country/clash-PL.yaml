@@ -5,19 +5,45 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 95.85.246.58
-  port: 8448
+  server: 104.17.247.68
+  port: 443
   udp: true
   type: vless
-  uuid: 91c593d7-6095-4e20-aaf2-e591b61da7f2
+  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  tls: true
+  servername: khoda.ak-khoda.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: khoda.ak-khoda.workers.dev
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 34.118.70.195
+  port: 443
+  udp: true
+  type: vless
+  uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
+  tls: true
+  reality-opts:
+    public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
+    short-id: 7445870d4c2bdcb0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 31.59.125.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: h9UaYbYpywLQ3QkOw99nR6HTmyDUaKrdkt7gZJwayCQ
-    short-id: 1c4a8f6e
-  servername: icloud.com
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 02
+    public-key: g2sbZDGTg4l1Dcg_Y4UKpbncPKEh7iFtTlWYbfi2sCk
+  servername: poll2.shhflow.xyz
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 04
   server: 144.31.171.108
   port: 8444
   udp: true
@@ -30,43 +56,32 @@ proxies:
     short-id: 93f5b0d1a8ce6247
   servername: pl1.chromevpn.cc
   client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 34.118.70.195
-  port: 443
-  udp: true
-  type: vless
-  uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
-  tls: true
-  reality-opts:
-    public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
-    short-id: 7445870d4c2bdcb0
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 04
-  server: 31.59.125.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: g2sbZDGTg4l1Dcg_Y4UKpbncPKEh7iFtTlWYbfi2sCk
-  servername: poll2.shhflow.xyz
-  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 05
-  server: 45.137.43.88
-  port: 2443
+  server: 82.118.22.161
+  port: 443
   udp: true
   type: vless
-  uuid: 7cbc0c1f-9aa1-4a4c-a052-45ccc855df10
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: NRMcsDMeaI-ox1k7hHh0YrdKOSRHpIX3m2NkuwTq62Q
-    short-id: a4
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 06 R42
+  server: 188.114.96.19
+  port: 80
+  udp: true
+  type: vmess
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,6 +92,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -87,5 +103,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06 R42
 rules:
 - MATCH,PROXIES

@@ -17,17 +17,31 @@ proxies:
     short-id: a1b2c3d4
   servername: store.steampowered.com
   client-fingerprint: chrome
+- name: 🇮🇱 以色列 (Israel) 02
+  server: 45.140.205.2
+  port: 443
+  udp: true
+  type: vless
+  uuid: c795bdd5-0460-42bd-927b-fbff154d2ab5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: he6F0xhRgRSY0qekzzUoFHroztc6V06CpJ5UfSSlxmg
+  servername: promo.ch.iki-servers.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇱 以色列 (Israel) 01
+  - 🇮🇱 以色列 (Israel) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇱 以色列 (Israel) 01
+  - 🇮🇱 以色列 (Israel) 02
 rules:
 - MATCH,PROXIES

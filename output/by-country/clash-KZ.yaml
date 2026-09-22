@@ -16,32 +16,17 @@ proxies:
     short-id: '83'
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
-  server: 5.180.42.57
-  port: 443
-  udp: true
-  type: vless
-  uuid: 416b35f4-7cba-4023-a915-b22af73cd0c2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nNeAdcF__Tg3jBFRRPgpmKPNJGfqMGy4rG3Z3eO-T24
-    short-id: 24fc325b440818ce
-  servername: edge-kz1.lovely.my
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 rules:
 - MATCH,PROXIES

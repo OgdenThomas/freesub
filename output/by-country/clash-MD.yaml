@@ -13,30 +13,17 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇲🇩 摩尔多瓦 (Moldova) 02
-  server: moldova.failspace.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: moldova.failspace.top
-  skip-cert-verify: false
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇩 摩尔多瓦 (Moldova) 01
-  - 🇲🇩 摩尔多瓦 (Moldova) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇩 摩尔多瓦 (Moldova) 01
-  - 🇲🇩 摩尔多瓦 (Moldova) 02
 rules:
 - MATCH,PROXIES
