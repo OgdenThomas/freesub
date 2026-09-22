@@ -5,40 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 65.108.3.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 87.58.148.70
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: rg0g3xp9rk9nk9o0
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 62.238.103.54
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d78de562-872e-43dd-be48-e9d7b06c87a3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: tADYkZWWksM_mCqqwlRHCciSCXnP3JMYrPi5eoRHh2s
-    short-id: d059fb98048c5318
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: 83.219.97.26
+  server: est1313.ggisopi.su
   port: 443
   udp: true
   type: vless
@@ -49,20 +16,7 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: est1313.ggisopi.su
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: 37.143.129.244
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
-    short-id: 48fd192dc4e46bc0
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 95.217.24.119
   port: 2087
   udp: true
@@ -75,7 +29,94 @@ proxies:
     short-id: e9fae729e40ae07e
   servername: 62.238.103.54
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 2.27.175.71
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  tls: true
+  servername: assets-fi.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 95.217.24.119
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d78de562-872e-43dd-be48-e9d7b06c87a3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: tADYkZWWksM_mCqqwlRHCciSCXnP3JMYrPi5eoRHh2s
+    short-id: d059fb98048c5318
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 212.147.241.178
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4af298c3-5c2d-4cf1-af68-5261e482c4e7
+  tls: true
+  reality-opts:
+    public-key: V-xPIMBmB0PI8B1tHeOFoiCGZN9egzPmsKs2tfFx_Go
+    short-id: 565e5c32bdcbf0b3
+  servername: online.1c.ru
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: 37.143.129.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
+    short-id: 48fd192dc4e46bc0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 07
+  server: fi.snobvpn.online
+  port: 80
+  udp: true
+  type: vless
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  network: ws
+  ws-opts:
+    path: /snob-ws
+- name: 🇫🇮 芬兰 (Finland) 08
+  server: fl3.starzone.ir
+  port: 10235
+  udp: true
+  type: vless
+  uuid: 3e188eb2-0a3a-4efe-a7bf-bd3c36d65a85
+  tls: true
+  reality-opts:
+    public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs
+    short-id: 1bfe954cb07fb70a
+  servername: play-apps-features.googleusercontent.com
+  client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 09
+  server: 31.76.226.100
+  port: 443
+  udp: true
+  type: vless
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  tls: true
+  servername: hub-fi-03.hanvpn.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fi03-ws-8e47a
+    headers:
+      Host: hub-fi-03.hanvpn.cc
+- name: 🇫🇮 芬兰 (Finland) 10
   server: 202.166.187.132
   port: 443
   udp: true
@@ -90,43 +131,6 @@ proxies:
     path: /
     headers:
       Host: f.yoptybla.ru
-- name: 🇫🇮 芬兰 (Finland) 08
-  server: 151.101.56.7
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
-  tls: true
-  servername: global.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: kayko.global.ssl.fastly.net
-- name: 🇫🇮 芬兰 (Finland) 09
-  server: 90.156.218.106
-  port: 2107
-  udp: true
-  type: vless
-  uuid: a76f6959-7d88-40c5-8984-4d888aa42389
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4YFpLhV9HbwlCXzvCL8EfvYe-V-VCuXZIaOWS11lKXI
-    short-id: 11f303a9ff001d7c
-  servername: 957a14.relay-edge.net
-  client-fingerprint: safari
-- name: 🇫🇮 芬兰 (Finland) 10
-  server: fi.snobvpn.online
-  port: 80
-  udp: true
-  type: vless
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  network: ws
-  ws-opts:
-    path: /snob-ws
 proxy-groups:
 - name: PROXIES
   type: select

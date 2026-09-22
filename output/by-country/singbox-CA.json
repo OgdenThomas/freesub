@@ -4,12 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R56",
-      "server": "142.4.216.225",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "mrs2e9a"
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 01",
+      "server": "172.67.130.159",
+      "server_port": 2096,
+      "uuid": "1d54a125-8f1e-46bb-9a23-0ecf4ac92db8",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn-ca.skyvora.app",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fqg7aacd8s",
+        "headers": {
+          "Host": "cdn-ca.skyvora.app"
+        }
+      }
     },
     {
       "type": "vmess",
@@ -32,45 +47,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 03",
-      "server": "104.21.8.201",
-      "server_port": 2096,
-      "uuid": "1d54a125-8f1e-46bb-9a23-0ecf4ac92db8",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn-ca.skyvora.app",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fqg7aacd8s",
-        "headers": {
-          "Host": "cdn-ca.skyvora.app"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R56",
-        "🇨🇦 加拿大 (Canada) 02 R57",
-        "🇨🇦 加拿大 (Canada) 03"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R57"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R56",
-        "🇨🇦 加拿大 (Canada) 02 R57",
-        "🇨🇦 加拿大 (Canada) 03"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R57"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

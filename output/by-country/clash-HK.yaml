@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
+  server: 46.17.44.112
+  port: 10301
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
+- name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: mz.hkychina.com
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 03 R59
+  server: sth.free-outline.giize.com
+  port: 1081
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: r6tptrwvddxap6al
+- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: hk-1.gsafevpnapi.com
   port: 20270
   udp: true
@@ -17,14 +39,20 @@ proxies:
     short-id: d5b538acf8a93540
   servername: www.yahoo.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 02 R59
-  server: sth.free-outline.giize.com
-  port: 1081
+- name: 🇭🇰 中国香港 (Hong Kong) 05
+  server: 216.23.87.204
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: uez5t2b4575tgkoi
-- name: 🇭🇰 中国香港 (Hong Kong) 03
+  type: vless
+  uuid: c5748477-7bdb-4f85-a1ac-882eb58e49cb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gVdP_cyXB6Zt8UQm5yzDJsP_39lNZ33EzEOIhwNAPCk
+    short-id: 42a80081eacba586
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 06
   server: 89.223.95.77
   port: 22324
   udp: true
@@ -32,15 +60,21 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: mz.hkychina.com
-  port: 8443
+- name: 🇭🇰 中国香港 (Hong Kong) 07
+  server: 45.149.186.133
+  port: 443
   udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: true
+  servername: e34bq.oa9r.zl3.hh.vavava.kdns.fr
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 05
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e34bq.oa9r.zl3.hh.vavava.kdns.fr
+- name: 🇭🇰 中国香港 (Hong Kong) 08
   server: 2.27.109.179
   port: 45464
   udp: true
@@ -48,41 +82,31 @@ proxies:
   password: XuMweB2PWs
   sni: 2.27.109.179.sslip.io
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
-  port: 443
-  udp: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02 R59
-  - 🇭🇰 中国香港 (Hong Kong) 03
+  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 03 R59
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
   - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02 R59
-  - 🇭🇰 中国香港 (Hong Kong) 03
+  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 03 R59
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
   - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 08
 rules:
 - MATCH,PROXIES

@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 188.114.97.6
-  port: 8080
-  udp: true
-  type: vless
-  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
-  network: ws
-  ws-opts:
-    path: /axch1mttbxz2k55y01
-    headers:
-      Host: index.harmonica01.workers.dev
-- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -28,34 +17,17 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: 90.156.218.106
-  port: 2098
-  udp: true
-  type: vless
-  uuid: a76f6959-7d88-40c5-8984-4d888aa42389
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4YFpLhV9HbwlCXzvCL8EfvYe-V-VCuXZIaOWS11lKXI
-    short-id: 11f303a9ff001d7c
-  servername: 86ad93.relay-edge.net
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
-  - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
-  - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES
