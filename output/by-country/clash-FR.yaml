@@ -4,28 +4,34 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01
-  server: 172.67.208.235
-  port: 2096
+- name: 🇫🇷 法国 (France) 01 R42
+  server: 152.228.139.33
+  port: 35108
   udp: true
   type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
   tls: true
-  servername: courses.mftplus.qzz.io
-  skip-cert-verify: false
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  servername: www.nvidia.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: courses.mftplus.qzz.io
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-common3
 - name: 🇫🇷 法国 (France) 02
-  server: 54.36.174.140
+  server: 195.58.140.146
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
+  type: vless
+  uuid: d7790b85-9659-4558-a405-e0ab57d32984
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
+    short-id: dc927a04e8572c61
+  servername: d1-fr.cloud-cdn.xyz
+  client-fingerprint: firefox
 - name: 🇫🇷 法国 (France) 03 R42
   server: 152.228.139.33
   port: 51671
@@ -42,15 +48,19 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc_common3
 - name: 🇫🇷 法国 (France) 04
-  server: 143.246.208.239
-  port: 8081
+  server: 13.36.123.107
+  port: 22222
   udp: true
   type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 05
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 06
   server: 34.155.10.226
   port: 443
   udp: true
@@ -62,64 +72,8 @@ proxies:
     short-id: ae682368818bd6c5
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 06
-  server: 54.36.174.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
 - name: 🇫🇷 法国 (France) 07
-  server: 162.159.253.41
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 08
-  server: 104.21.69.37
-  port: 443
-  udp: true
-  type: vless
-  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
-  tls: true
-  servername: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/uWq9DFRgj8BwQiSXmZ46
-    headers:
-      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
-- name: 🇫🇷 法国 (France) 09
-  server: 195.58.140.146
-  port: 443
-  udp: true
-  type: vless
-  uuid: d7790b85-9659-4558-a405-e0ab57d32984
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lRuJPDrUb0b32-47hl4BgDoQutqmkuW31N4qVxbDgmI
-    short-id: dc927a04e8572c61
-  servername: d1-fr.cloud-cdn.xyz
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 10
-  server: 130.49.218.208
-  port: 5432
-  udp: true
-  type: vless
-  uuid: cc01f435-d561-4525-bf1f-7a9876d33207
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 130.49.218.208
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 11
-  server: 143.246.209.46
+  server: 143.246.208.239
   port: 8081
   udp: true
   type: vless
@@ -127,7 +81,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇫🇷 法国 (France) 12
+- name: 🇫🇷 法国 (France) 08
   server: 77.110.104.125
   port: 8443
   udp: true
@@ -142,47 +96,62 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: your-custom-path
-- name: 🇫🇷 法国 (France) 13
-  server: 45.80.215.8
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇫🇷 法国 (France) 14
-  server: 199.232.78.160
-  port: 443
+- name: 🇫🇷 法国 (France) 09
+  server: 143.246.209.46
+  port: 8081
   udp: true
   type: vless
-  uuid: XpnTeam-22
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 15 R50
-  server: 88.216.69.144
-  port: 443
+    path: /vless-test
+- name: 🇫🇷 法国 (France) 10
+  server: 185.114.72.31
+  port: 2053
   udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-4d64f1370eeb
-  tls: true
-  servername: r5zenrelur2s.pqzdileiu8es.workers.dev
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: ios
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/4d64f1370eeb/loc-0
-    headers:
-      Host: r5zenrelur2s.pqzdileiu8es.workers.dev
-- name: 🇫🇷 法国 (France) 16
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11
   server: 91.245.225.79
   port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 12
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 13
+  server: 185.225.68.232
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 14
+  server: 5.78.92.27
+  port: 8443
   udp: true
   type: trojan
   password: humanity
@@ -196,7 +165,7 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 R42
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03 R42
   - 🇫🇷 法国 (France) 04
@@ -210,14 +179,12 @@ proxy-groups:
   - 🇫🇷 法国 (France) 12
   - 🇫🇷 法国 (France) 13
   - 🇫🇷 法国 (France) 14
-  - 🇫🇷 法国 (France) 15 R50
-  - 🇫🇷 法国 (France) 16
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 R42
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03 R42
   - 🇫🇷 法国 (France) 04
@@ -231,7 +198,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 12
   - 🇫🇷 法国 (France) 13
   - 🇫🇷 法国 (France) 14
-  - 🇫🇷 法国 (France) 15 R50
-  - 🇫🇷 法国 (France) 16
 rules:
 - MATCH,PROXIES

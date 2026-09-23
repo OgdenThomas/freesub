@@ -12,8 +12,51 @@
       "password": "mrs2e9a"
     },
     {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 02",
+      "server": "34.47.1.109",
+      "server_port": 443,
+      "uuid": "448b76ac-c636-4303-bec1-0b2c22afee0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk",
+          "short_id": "c9d4bf8d94ec8dab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 03",
+      "server": "104.21.8.201",
+      "server_port": 2096,
+      "uuid": "1d54a125-8f1e-46bb-9a23-0ecf4ac92db8",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn-ca.skyvora.app",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fqg7aacd8s",
+        "headers": {
+          "Host": "cdn-ca.skyvora.app"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 02 R57",
+      "tag": "🇨🇦 加拿大 (Canada) 04 R57",
       "server": "mygptagent.org",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
@@ -32,12 +75,35 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 05",
+      "server": "34.186.193.91",
+      "server_port": 443,
+      "uuid": "2ea95ec3-6b09-470e-952a-ebb171b0d666",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0dSYzX_uvVr-YmiONeKxPt7TdFkaFeYopYfjobxxEC4",
+          "short_id": "341ec000a90f1ced"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇨🇦 加拿大 (Canada) 01 R56",
-        "🇨🇦 加拿大 (Canada) 02 R57"
+        "🇨🇦 加拿大 (Canada) 02",
+        "🇨🇦 加拿大 (Canada) 03",
+        "🇨🇦 加拿大 (Canada) 04 R57",
+        "🇨🇦 加拿大 (Canada) 05"
       ]
     },
     {
@@ -45,7 +111,10 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇦 加拿大 (Canada) 01 R56",
-        "🇨🇦 加拿大 (Canada) 02 R57"
+        "🇨🇦 加拿大 (Canada) 02",
+        "🇨🇦 加拿大 (Canada) 03",
+        "🇨🇦 加拿大 (Canada) 04 R57",
+        "🇨🇦 加拿大 (Canada) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

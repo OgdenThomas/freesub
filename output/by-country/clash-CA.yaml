@@ -11,7 +11,34 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇨🇦 加拿大 (Canada) 02 R57
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 34.47.1.109
+  port: 443
+  udp: true
+  type: vless
+  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
+  tls: true
+  reality-opts:
+    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
+    short-id: c9d4bf8d94ec8dab
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: 104.21.8.201
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
+  tls: true
+  servername: cdn-ca.skyvora.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fqg7aacd8s
+    headers:
+      Host: cdn-ca.skyvora.app
+- name: 🇨🇦 加拿大 (Canada) 04 R57
   server: mygptagent.org
   port: 443
   udp: true
@@ -27,19 +54,37 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
+- name: 🇨🇦 加拿大 (Canada) 05
+  server: 34.186.193.91
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2ea95ec3-6b09-470e-952a-ebb171b0d666
+  tls: true
+  reality-opts:
+    public-key: 0dSYzX_uvVr-YmiONeKxPt7TdFkaFeYopYfjobxxEC4
+    short-id: 341ec000a90f1ced
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04 R57
+  - 🇨🇦 加拿大 (Canada) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04 R57
+  - 🇨🇦 加拿大 (Canada) 05
 rules:
 - MATCH,PROXIES
