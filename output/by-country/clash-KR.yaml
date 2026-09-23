@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: 49.254.204.134
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🇰🇷 韩国 (South Korea) 02
   server: 34.64.149.137
   port: 443
   udp: true
@@ -16,7 +23,19 @@ proxies:
     short-id: 3fd0a8ddef3ae5c6
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 02
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 34.22.64.72
+  port: 443
+  udp: true
+  type: vless
+  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  tls: true
+  reality-opts:
+    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+    short-id: 8685f8b4d9f4f51e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04
   server: 47.80.62.71
   port: 443
   udp: true
@@ -29,7 +48,7 @@ proxies:
     short-id: 0b674631d5fc6b93
   servername: www.nvidia.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03
+- name: 🇰🇷 韩国 (South Korea) 05
   server: 47.80.14.8
   port: 443
   udp: true
@@ -42,7 +61,7 @@ proxies:
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04
+- name: 🇰🇷 韩国 (South Korea) 06
   server: 172.64.159.190
   port: 443
   udp: true
@@ -66,6 +85,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,5 +96,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 rules:
 - MATCH,PROXIES

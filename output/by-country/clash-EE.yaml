@@ -4,32 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01
-  server: www.speedtest.net
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: netlivpn5002.whwbbb.workers.dev
   port: 443
   udp: true
   type: vless
-  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  uuid: a88e61a0-2b38-f6df-c5c7-d20600000000
   tls: true
-  servername: O94yv7LIF0-AnXisD9EFEhVVS7mxN6Bh.Z-UlE-iKA-D-E-ne-k-e.wORkers.dEv
+  servername: netlivpn5002.whwbbb.workers.dev
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: qq
   network: ws
   ws-opts:
-    path: /CmtD3y72juVnvSxU?ed=2560
-    headers:
-      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 rules:
 - MATCH,PROXIES

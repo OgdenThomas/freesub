@@ -5,6 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
+  server: 16.170.214.108
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 172.238.244.13
+  port: 17000
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: 16.170.163.124
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: 16.171.55.2
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 05 R40
+  server: 70.34.212.124
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+- name: 🇸🇪 瑞典 (Sweden) 06
+  server: 143.246.194.213
+  port: 443
+  udp: true
+  type: vless
+  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.ikea.com
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 07
   server: 194.238.57.23
   port: 443
   udp: true
@@ -19,62 +66,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: 🇸🇪 瑞典 (Sweden) 02
-  server: 172.238.244.13
-  port: 17000
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
-- name: 🇸🇪 瑞典 (Sweden) 03
-  server: 16.170.221.224
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 04
-  server: 16.170.163.124
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 05
-  server: 16.170.214.108
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 06 R40
-  server: 70.34.212.124
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-- name: 🇸🇪 瑞典 (Sweden) 07
-  server: 143.246.195.98
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
 - name: 🇸🇪 瑞典 (Sweden) 08
-  server: 143.246.194.213
+  server: 31.207.7.104
   port: 443
   udp: true
   type: vless
-  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
+  uuid: 12ee5833-c8f5-4534-94e7-6d5c338008df
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
-  servername: www.ikea.com
-  client-fingerprint: chrome
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se.global-cdn.org
+  client-fingerprint: safari
 - name: 🇸🇪 瑞典 (Sweden) 09
   server: 143.246.195.138
   port: 8081
@@ -85,6 +89,15 @@ proxies:
   ws-opts:
     path: /vless-test
 - name: 🇸🇪 瑞典 (Sweden) 10
+  server: 143.246.195.98
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 11
   server: 143.246.194.60
   port: 8081
   udp: true
@@ -102,12 +115,13 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05
-  - 🇸🇪 瑞典 (Sweden) 06 R40
+  - 🇸🇪 瑞典 (Sweden) 05 R40
+  - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
   - 🇸🇪 瑞典 (Sweden) 08
   - 🇸🇪 瑞典 (Sweden) 09
   - 🇸🇪 瑞典 (Sweden) 10
+  - 🇸🇪 瑞典 (Sweden) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -117,11 +131,12 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05
-  - 🇸🇪 瑞典 (Sweden) 06 R40
+  - 🇸🇪 瑞典 (Sweden) 05 R40
+  - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
   - 🇸🇪 瑞典 (Sweden) 08
   - 🇸🇪 瑞典 (Sweden) 09
   - 🇸🇪 瑞典 (Sweden) 10
+  - 🇸🇪 瑞典 (Sweden) 11
 rules:
 - MATCH,PROXIES

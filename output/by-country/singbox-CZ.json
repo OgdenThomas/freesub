@@ -6,12 +6,23 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01",
-      "server": "188.114.96.9",
+      "server": "153.76.185.185",
+      "server_port": 3090,
+      "uuid": "6d5ed3bc-2e5e-47f4-9162-a60ec3cf41ed",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇿 捷克 (Czech) 02",
+      "server": "104.21.8.63",
       "server_port": 443,
-      "uuid": "2e305ebe-f6e6-4689-b32f-cd04ab5ff541",
+      "password": "5855d6850594830f",
       "tls": {
         "enabled": true,
-        "server_name": "IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV",
+        "server_name": "AkbARIan34.j9Z65Ce2uyks.WoRKeRS.DEV",
         "insecure": false,
         "alpn": [
           "http/1.1"
@@ -23,12 +34,36 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj",
+        "path": "/tr/w2O3K3xXNYDKIxwOIw7?ed=2560",
         "headers": {
-          "Host": "idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+          "Host": "akbarian34.j9z65ce2uyks.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇿 捷克 (Czech) 03",
+      "server": "z6y-daox0hyhdtdy.r720kpbyx2l3i406.workers.dev",
+      "server_port": 443,
+      "password": "Telegram_healer_config",
+      "tls": {
+        "enabled": true,
+        "server_name": "Z6Y-Daox0HyHdTDy.R720KPBYx2L3I406.WorKERS.DEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/ZizffFwMuYF9RUfnS3Ad2bGqcOrQk?ed=2560",
+        "headers": {
+          "Host": "z6y-daox0hyhdtdy.r720kpbyx2l3i406.workers.dev"
+        }
       }
     },
     {
@@ -36,14 +71,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
