@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 129.151.73.227
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: EG7gd6f1FSkm+x/OoWRHzsRT1Jl/tSx0EWxkprEGZSo=
-- name: 🇬🇧 英国 (United Kingdom) 02
   server: 35.234.143.34
   port: 443
   udp: true
@@ -23,32 +16,28 @@ proxies:
     short-id: 1b580f160d965b01
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 95.85.224.51
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 46.202.82.67
+  port: 8443
   udp: true
   type: vless
-  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  uuid: e6695d9b-3663-4421-9893-de7f641a9f3a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
-    short-id: a696de84963656de
-  servername: max.ru
-  client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 35.189.111.134
+    public-key: Y4IQFMDNkAO-V8jkEBlUg3YmSHuTBHzQfCiQeabsulU
+    short-id: 8e6c0362876f7d96
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: se1.chromevpn.cc
   port: 443
   udp: true
-  type: vless
-  uuid: ed492b33-c6b4-463f-8359-3634b0d44251
-  tls: true
-  reality-opts:
-    public-key: matDwR2fEV41IhLs23SkP9dS6d6qiaRKS4ndb3uR1lk
-    short-id: 89ea42ae375d4933
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05
+  type: hysteria2
+  password: 02bd8b5a-170b-4a79-8e68-9cec710272c7
+  sni: se1.chromevpn.cc
+  skip-cert-verify: false
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 31.76.7.154
   port: 7443
   udp: true
@@ -60,37 +49,8 @@ proxies:
     public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
     short-id: d2061bb1
   servername: ya.ru
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: se1.chromevpn.cc
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 02bd8b5a-170b-4a79-8e68-9cec710272c7
-  sni: se1.chromevpn.cc
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 08
-  server: de.i-love-russia.online
-  port: 443
-  udp: true
-  type: hysteria2
-  password: a6cf39b3-0424-42a2-abf7-b426da69b1a4
-  sni: de.i-love-russia.online
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 09
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 31.76.88.10
   port: 443
   udp: true
@@ -105,6 +65,14 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf5.rumedia-cdn.com
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: de.i-love-russia.online
+  port: 443
+  udp: true
+  type: hysteria2
+  password: a6cf39b3-0424-42a2-abf7-b426da69b1a4
+  sni: de.i-love-russia.online
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -116,9 +84,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -130,8 +95,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
 rules:
 - MATCH,PROXIES

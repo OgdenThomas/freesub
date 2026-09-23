@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
+  server: 18.181.165.254
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 02
   server: 45.32.57.118
   port: 4433
   udp: true
@@ -12,19 +19,6 @@ proxies:
   uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
   alterId: 0
   cipher: auto
-- name: 🇯🇵 日本 (Japan) 02
-  server: 8.209.217.129
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4a1bd3a7-22e6-4ed0-add4-7ee824d8f54a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Ci03uVNJ34iSg-BSeOgrhTAeWcJExB5gQNuQVRY3a2Q
-    short-id: 01b4986b50245272
-  servername: www.logitech.com
-  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
   server: 18.179.111.96
   port: 443
@@ -33,6 +27,33 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇯🇵 日本 (Japan) 04
+  server: 13.230.153.249
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 05
+  server: 47.74.3.200
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7fb42fab-ea8a-4f0f-af9e-55df8ae6cb1d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk
+    short-id: ab3b914f0c9d9de5
+  servername: www.logitech.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 06
+  server: 13.115.71.198
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 07
   server: 35.243.84.20
   port: 443
   udp: true
@@ -44,20 +65,7 @@ proxies:
     short-id: 8380ad05cd21a69f
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05
-  server: jumpernode.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 6d962e8d8a0dce
-  servername: amazon.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 06
+- name: 🇯🇵 日本 (Japan) 08
   server: 18.183.215.124
   port: 28573
   udp: true
@@ -70,8 +78,21 @@ proxies:
     short-id: 03653bc03be10c97
   servername: www.sony.com
   client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 07
-  server: 172.67.217.240
+- name: 🇯🇵 日本 (Japan) 09
+  server: 38.207.130.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
+    short-id: 6d962e8d8a0dce
+  servername: amazon.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 10
+  server: 162.159.254.3
   port: 443
   udp: true
   type: vless
@@ -79,13 +100,13 @@ proxies:
   tls: true
   servername: jp3.yohototo.top
   skip-cert-verify: false
-  client-fingerprint: android
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: 🇯🇵 日本 (Japan) 08
+- name: 🇯🇵 日本 (Japan) 11
   server: 172.67.130.159
   port: 2096
   udp: true
@@ -113,6 +134,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
+  - 🇯🇵 日本 (Japan) 09
+  - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -126,5 +150,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
+  - 🇯🇵 日本 (Japan) 09
+  - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
 rules:
 - MATCH,PROXIES

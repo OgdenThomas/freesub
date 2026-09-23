@@ -4,30 +4,33 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
-      "server": "172.64.42.85",
-      "server_port": 2082,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls ",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
+      "server": "62.113.41.165",
+      "server_port": 888,
+      "method": "chacha20-ietf-poly1305",
+      "password": "hF-qqin2wYhP7zS47SyR0Q"
     },
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 02",
-      "server": "104.18.34.14",
-      "server_port": 80,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "server": "xinnusvpn.duckdns.org",
+      "server_port": 8443,
+      "uuid": "c90395e6-2140-47ad-a54d-9b166729d3ef",
+      "tls": {
+        "enabled": true,
+        "server_name": "xinnusvpn.duckdns.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/?ed=2560security=tls",
+        "path": "/wsnl",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "xinnusvpn.duckdns.org"
         }
       }
     },
@@ -51,35 +54,13 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇷🇺 俄罗斯 (Russia) 04",
-      "server": "154.92.9.65",
-      "server_port": 80,
-      "uuid": "dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/blue"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 05",
-      "server": "94.249.187.46",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "IXa3ylzS_jBOAsQy071tIQ"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
-        "🇷🇺 俄罗斯 (Russia) 03",
-        "🇷🇺 俄罗斯 (Russia) 04",
-        "🇷🇺 俄罗斯 (Russia) 05"
+        "🇷🇺 俄罗斯 (Russia) 03"
       ]
     },
     {
@@ -88,9 +69,7 @@
       "outbounds": [
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
-        "🇷🇺 俄罗斯 (Russia) 03",
-        "🇷🇺 俄罗斯 (Russia) 04",
-        "🇷🇺 俄罗斯 (Russia) 05"
+        "🇷🇺 俄罗斯 (Russia) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
