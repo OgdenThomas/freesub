@@ -15,7 +15,7 @@ proxies:
     public-key: kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8
     short-id: 3fd0a8ddef3ae5c6
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇰🇷 韩国 (South Korea) 02
   server: 47.80.62.71
   port: 443
@@ -42,6 +42,21 @@ proxies:
     short-id: 71110d3f7ef57760
   servername: www.samsung.com
   client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 172.64.159.190
+  port: 443
+  udp: true
+  type: vless
+  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
+  tls: true
+  servername: a860d725.69lover.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/288cd04559d84d1d/stream
+    headers:
+      Host: a860d725.69lover.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,6 +65,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,5 +74,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES

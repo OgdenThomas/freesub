@@ -14,7 +14,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -66,13 +66,40 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 04",
+      "server": "172.64.159.190",
+      "server_port": 443,
+      "uuid": "43e60b75-9920-450a-94ee-8762758ca49c",
+      "tls": {
+        "enabled": true,
+        "server_name": "a860d725.69lover.site",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v2/288cd04559d84d1d/stream",
+        "headers": {
+          "Host": "a860d725.69lover.site"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01",
         "🇰🇷 韩国 (South Korea) 02",
-        "🇰🇷 韩国 (South Korea) 03"
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ]
     },
     {
@@ -81,7 +108,8 @@
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01",
         "🇰🇷 韩国 (South Korea) 02",
-        "🇰🇷 韩国 (South Korea) 03"
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

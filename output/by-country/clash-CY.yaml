@@ -4,30 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇨 塞舌尔 (Seychelles) 01
-  server: 156.226.168.221
-  port: 35193
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44
+  server: 2.56.122.52
+  port: 8443
   udp: true
   type: vless
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  uuid: 5b754a1a-11aa-4df9-a8ba-44af9a579fe1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
-    short-id: e8daed2d
-  servername: www.apple.com
-  client-fingerprint: ios
+    public-key: upiiUpzV7q4L6pUmbgzB5r3zL957r17FuFDng3ip7R8
+  servername: usa.b2ai.top
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇨 塞舌尔 (Seychelles) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇨 塞舌尔 (Seychelles) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 rules:
 - MATCH,PROXIES
