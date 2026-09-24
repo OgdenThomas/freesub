@@ -5,55 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 34.64.149.137
-  port: 443
+  server: 152.67.200.82
+  port: 50160
   udp: true
-  type: vless
-  uuid: 700a7a0e-3f27-406c-81d1-aa1abe411af8
-  tls: true
-  reality-opts:
-    public-key: kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8
-    short-id: 3fd0a8ddef3ae5c6
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: 152-67-200-82.liao.kdns.fr
+  skip-cert-verify: false
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: 34.22.64.72
+  server: 158.247.247.189
   port: 443
   udp: true
   type: vless
-  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
-  tls: true
-  reality-opts:
-    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
-    short-id: 8685f8b4d9f4f51e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 03
-  server: 47.80.62.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0d4cb711-c030-4f13-adf5-6a72dab4121c
+  uuid: 7822d0d3-20be-4619-848d-db930d8be3ba
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: AT4sr3XkuNa7QewDoScx7NnPTCa-Z6o_7ccPgivVDSQ
-    short-id: 0b674631d5fc6b93
-  servername: www.nvidia.com
+    public-key: CWokiwI-GcRo_7_2uvPvObAzykEMJm97yl6hj2c4ZB4
+    short-id: b68f94a9d5a1a016
+  servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04
-  server: 47.80.62.191
-  port: 443
-  udp: true
-  type: vless
-  uuid: 43e60b75-9920-450a-94ee-8762758ca49c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Qe5e0FBZwuwYMRYikx8sH5iaowPQwdkn6kgIN8xrQHE
-    short-id: bd0040df20a53b36
-  servername: www.logitech.com
-  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
@@ -61,8 +32,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
-  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -70,7 +39,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
-  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES

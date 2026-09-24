@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 104.17.247.68
+  server: 104.25.146.77
   port: 443
   udp: true
   type: vless
@@ -20,7 +20,7 @@ proxies:
     headers:
       Host: khoda.ak-khoda.workers.dev
 - name: 🇵🇱 波兰 (Poland) 02
-  server: 144.31.171.108
+  server: pl1.chromevpn.cc
   port: 8444
   udp: true
   type: vless
@@ -32,7 +32,20 @@ proxies:
     short-id: 93f5b0d1a8ce6247
   servername: pl1.chromevpn.cc
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03 R42
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 04 R42
   server: 188.114.96.19
   port: 80
   udp: true
@@ -52,7 +65,8 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03 R42
+  - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,6 +74,7 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03 R42
+  - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04 R42
 rules:
 - MATCH,PROXIES

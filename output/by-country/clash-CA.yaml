@@ -11,8 +11,24 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: 104.21.8.201
+- name: 🇨🇦 加拿大 (Canada) 02 R57
+  server: mygptagent.org
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: mygptagent.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: mygptagent.org
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: 172.67.130.159
   port: 2096
   udp: true
   type: vless
@@ -32,13 +48,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 03
 rules:
 - MATCH,PROXIES

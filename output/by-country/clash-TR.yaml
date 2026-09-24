@@ -5,36 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: iriguchi.proxy.rlwy.net
-  port: 25156
-  udp: true
-  type: vless
-  uuid: 8a0757d9-b317-47df-b506-5c7b8798982e
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: 146.75.84.3
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: BechBad.global.ssl.fastly.net
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: test.keoplentuio.xyz
+  server: 104.17.169.13
   port: 2053
   udp: true
   type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 04
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  tls: true
+  servername: inDeX.HaRMONiCA01.WORkers.DeV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /axch1mttbxz2k55y01
+    headers:
+      Host: inDeX.HaRMONiCA01.WORkers.DeV
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -47,17 +31,12 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 05
-  server: 194.135.34.157
-  port: 6443
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: 43562697-135a-479a-92c8-4c96b46ace07
-  flow: xtls-rprx-vision
-  tls: true
-  servername: turkey-api.locallynet.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,8 +45,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
-  - 🇹🇷 土耳其 (Turkey) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,7 +53,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
-  - 🇹🇷 土耳其 (Turkey) 05
 rules:
 - MATCH,PROXIES
