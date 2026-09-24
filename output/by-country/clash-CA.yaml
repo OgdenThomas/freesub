@@ -12,18 +12,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
 - name: 🇨🇦 加拿大 (Canada) 02
-  server: 34.47.1.109
-  port: 443
-  udp: true
-  type: vless
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  tls: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-    short-id: c9d4bf8d94ec8dab
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03
   server: 104.21.8.201
   port: 2096
   udp: true
@@ -45,7 +33,6 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R56
   - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,6 +40,5 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R56
   - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
 rules:
 - MATCH,PROXIES
