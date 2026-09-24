@@ -5,31 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  server: 153.76.185.150
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 163130a7-42d6-40bf-9574-3d9eff14dcb2
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 194.87.130.9
   port: 443
   udp: true
   type: vless
-  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  uuid: 57a437c4-7eed-4ecf-bf50-5e4e35f71deb
+  flow: xtls-rprx-vision
   tls: true
-  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/6871nrbnl9WsdAiOUInt
-    headers:
-      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  reality-opts:
+    public-key: pccR04wlWHqbXoRk19m56lzp3CdDFd6RqGEuWj5TrWk
+    short-id: 793bf4b257bbf247
+  servername: www.marktplaats.nl
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
 rules:
 - MATCH,PROXIES

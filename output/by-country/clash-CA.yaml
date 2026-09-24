@@ -4,13 +4,21 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R56
-  server: 142.4.216.225
-  port: 443
+- name: 🇨🇦 加拿大 (Canada) 01
+  server: 172.67.130.159
+  port: 2096
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
+  type: vless
+  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
+  tls: true
+  servername: cdn-ca.skyvora.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fqg7aacd8s
+    headers:
+      Host: cdn-ca.skyvora.app
 - name: 🇨🇦 加拿大 (Canada) 02 R57
   server: mygptagent.org
   port: 443
@@ -27,36 +35,19 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: 172.67.130.159
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
-  tls: true
-  servername: cdn-ca.skyvora.app
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /fqg7aacd8s
-    headers:
-      Host: cdn-ca.skyvora.app
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R56
+  - 🇨🇦 加拿大 (Canada) 01
   - 🇨🇦 加拿大 (Canada) 02 R57
-  - 🇨🇦 加拿大 (Canada) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R56
+  - 🇨🇦 加拿大 (Canada) 01
   - 🇨🇦 加拿大 (Canada) 02 R57
-  - 🇨🇦 加拿大 (Canada) 03
 rules:
 - MATCH,PROXIES

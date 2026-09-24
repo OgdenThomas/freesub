@@ -5,22 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 104.25.146.77
+  server: 94.249.180.45
   port: 443
   udp: true
   type: vless
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  uuid: fed5c436-f9aa-4a60-b25f-876052fdf578
+  flow: xtls-rprx-vision
   tls: true
-  servername: khoda.ak-khoda.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: khoda.ak-khoda.workers.dev
+  reality-opts:
+    public-key: tihB0D9qSyy2YITcQ33I6vqspKe_riFJYXzJZaHbs1M
+  servername: pl.spbculture.org
+  client-fingerprint: safari
 - name: 🇵🇱 波兰 (Poland) 02
-  server: pl1.chromevpn.cc
+  server: 144.31.171.108
   port: 8444
   udp: true
   type: vless
@@ -45,19 +42,19 @@ proxies:
     short-id: fa3ea655619a3e78
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04 R42
-  server: 188.114.96.19
-  port: 80
+- name: 🇵🇱 波兰 (Poland) 04
+  server: av513u.sysopnova.art
+  port: 443
   udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  type: vless
+  uuid: 3710fc0f-5f0c-4b9c-a5d4-40cb419e943a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
+    short-id: b97e7d4582b6fa6e
+  servername: yandex.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +63,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R42
+  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,6 +72,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R42
+  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES
