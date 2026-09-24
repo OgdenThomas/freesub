@@ -5,28 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 45.32.57.118
-  port: 4433
+  server: 13.115.71.198
+  port: 443
   udp: true
-  type: vmess
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇯🇵 日本 (Japan) 02
-  server: 18.181.165.254
+  server: 18.179.111.96
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇯🇵 日本 (Japan) 03
-  server: 13.230.153.249
+  server: 103.137.215.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: ea1c1e20-7263-4b08-a01b-690b29af66b3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: T587xqua0Nrs0YreQRWJAP9Wto94NcbbhKPK4DkSi0c
+    short-id: 2223411c2ad9c55f
+  servername: www.apple.com
+  client-fingerprint: safari
+- name: 🇯🇵 日本 (Japan) 04
+  server: 13.113.166.191
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇯🇵 日本 (Japan) 04
+- name: 🇯🇵 日本 (Japan) 05
+  server: 74.222.12.141
+  port: 2087
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 665e00335bb2fb5f7ee8243952205e5e
+- name: 🇯🇵 日本 (Japan) 06
   server: 18.183.215.124
   port: 28573
   udp: true
@@ -39,8 +58,8 @@ proxies:
     short-id: 03653bc03be10c97
   servername: www.sony.com
   client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 05
-  server: jumpernode.online
+- name: 🇯🇵 日本 (Japan) 07
+  server: 38.207.130.15
   port: 443
   udp: true
   type: vless
@@ -51,44 +70,41 @@ proxies:
     public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
     short-id: 6d962e8d8a0dce
   servername: amazon.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 06
-  server: oc.imfun.fun
-  port: 18112
-  udp: true
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 07
-  server: 172.67.130.159
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 36788cf4-fcb4-49c5-a563-5f888849b1cc
-  tls: true
-  servername: cdn-jp.skyvora.app
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vqyps6kf3
-    headers:
-      Host: cdn-jp.skyvora.app
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 08
-  server: 172.67.156.147
+  server: 13.230.153.249
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇯🇵 日本 (Japan) 09
+  server: 34.84.126.188
   port: 443
   udp: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: 51a43b75-c84b-46eb-885e-c24e7819cd0b
   tls: true
-  servername: jp3.yohototo.top
+  reality-opts:
+    public-key: qMPnrSiXgWvw2ETefb46OfJKnYpfX6HfyGdWpWWxtVI
+    short-id: 780152c21e234b5a
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+- name: 🇯🇵 日本 (Japan) 10
+  server: open.w2m.ink
+  port: 443
+  udp: true
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.w2m.ink
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
+- name: 🇯🇵 日本 (Japan) 11
+  server: 13.230.223.121
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
@@ -102,6 +118,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
+  - 🇯🇵 日本 (Japan) 09
+  - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -115,5 +134,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
+  - 🇯🇵 日本 (Japan) 09
+  - 🇯🇵 日本 (Japan) 10
+  - 🇯🇵 日本 (Japan) 11
 rules:
 - MATCH,PROXIES

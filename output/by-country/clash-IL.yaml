@@ -5,20 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01
-  server: 185.95.231.233
-  port: 443
+  server: 31.57.185.82
+  port: 18676
   udp: true
-  type: vless
-  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
-    short-id: a1b2c3d4
-  servername: store.steampowered.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: 1q0AYe4ERcEuGP/nDnsaPkzX225nb3oYkwZSqaR1TOU=:PoW+xEJvcRkDE79OQYDYEBVTu/bdJuPPVebj3KpKTrU=
 - name: 🇮🇱 以色列 (Israel) 02
-  server: 193.202.10.2
+  server: arcturus.yokkastars.com
   port: 40443
   udp: true
   type: vless
@@ -31,28 +25,17 @@ proxies:
   servername: deepl.com
   client-fingerprint: chrome
 - name: 🇮🇱 以色列 (Israel) 03
-  server: platform118.golnamakcert.top
+  server: platform115.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform118
+    path: /platform115
     headers:
-      Host: platform118.halalkhor.info
+      Host: platform115.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 04
-  server: platform113.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 05
   server: platform117.golnamakcert.top
   port: 80
   udp: true
@@ -63,6 +46,28 @@ proxies:
     path: /platform117
     headers:
       Host: platform117.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 05
+  server: platform118.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform118
+    headers:
+      Host: platform118.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 06
+  server: platform113.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform113
+    headers:
+      Host: platform113.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,6 +78,7 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 03
   - 🇮🇱 以色列 (Israel) 04
   - 🇮🇱 以色列 (Israel) 05
+  - 🇮🇱 以色列 (Israel) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,5 +89,6 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 03
   - 🇮🇱 以色列 (Israel) 04
   - 🇮🇱 以色列 (Israel) 05
+  - 🇮🇱 以色列 (Israel) 06
 rules:
 - MATCH,PROXIES

@@ -5,21 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01
-  server: 172.67.130.159
-  port: 2096
+  server: 188.114.97.6
+  port: 8080
   udp: true
   type: vless
-  uuid: 1d54a125-8f1e-46bb-9a23-0ecf4ac92db8
-  tls: true
-  servername: cdn-ca.skyvora.app
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /fqg7aacd8s
+    path: /?ed=2560
     headers:
-      Host: cdn-ca.skyvora.app
-- name: 🇨🇦 加拿大 (Canada) 02 R57
+      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+- name: 🇨🇦 加拿大 (Canada) 02 R56
+  server: 142.4.216.225
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇨🇦 加拿大 (Canada) 03 R57
   server: mygptagent.org
   port: 443
   udp: true
@@ -35,19 +38,33 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
+- name: 🇨🇦 加拿大 (Canada) 04 R50
+  server: 147.182.151.199
+  port: 11186
+  udp: true
+  type: vless
+  uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+  network: h2
+  h2-opts:
+    host: []
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02 R56
+  - 🇨🇦 加拿大 (Canada) 03 R57
+  - 🇨🇦 加拿大 (Canada) 04 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02 R56
+  - 🇨🇦 加拿大 (Canada) 03 R57
+  - 🇨🇦 加拿大 (Canada) 04 R50
 rules:
 - MATCH,PROXIES
