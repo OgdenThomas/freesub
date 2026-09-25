@@ -4,7 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 R42
+- name: 🇳🇱 荷兰 (Netherlands) 01
+  server: 144.21.42.28
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: ykcGRwZqsnR4V9et2B4ev3eQydpespnnJvR77VGX47A=
+- name: 🇳🇱 荷兰 (Netherlands) 02
+  server: 141.148.236.91
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 03
+  server: 151.243.173.119
+  port: 33736
+  udp: true
+  type: vmess
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+- name: 🇳🇱 荷兰 (Netherlands) 04
   server: 151.101.56.255
   port: 443
   udp: true
@@ -15,132 +39,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇳🇱 荷兰 (Netherlands) 02
-  server: 84.235.162.251
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇳🇱 荷兰 (Netherlands) 03
-  server: 23.137.249.110
-  port: 20365
-  udp: true
-  type: vless
-  uuid: 1a524663-4a74-4aad-b530-8618a540d857
-- name: 🇳🇱 荷兰 (Netherlands) 04
-  server: 84.235.160.65
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
 - name: 🇳🇱 荷兰 (Netherlands) 05
-  server: 172.67.191.121
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: 47hr9isj-655383snd63hjap38q6t.k-f3vpqaltfsxbtaxe.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/V2VWNDZAAEIdXVjOCkLfJnefnR5Pum?ed=2560
-- name: 🇳🇱 荷兰 (Netherlands) 06
-  server: 72.56.116.57
-  port: 443
-  udp: true
-  type: hysteria2
-  password: wrSuBorIlf
-  sni: hys9.wba-pn.ru
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 07
-  server: 152.70.51.47
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇳🇱 荷兰 (Netherlands) 08
-  server: 188.114.96.0
-  port: 443
-  udp: true
-  type: trojan
-  password: f88f080e9b4f66c6
-  sni: oPEN-39.avl-a47261.WoRKeRs.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/Mg56mvTz944kOMHGyd2UYtG?ed=2560
-- name: 🇳🇱 荷兰 (Netherlands) 09
-  server: 2.59.183.167
-  port: 443
-  udp: true
-  type: vless
-  uuid: 301d514e-4aa0-47b0-ba44-a0cb891cd52f
-  tls: true
-  reality-opts:
-    public-key: OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4
-    short-id: a1b2c3d4
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 10
-  server: 130.12.242.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 11
-  server: mypanel.unixzone.us
-  port: 12068
-  udp: true
-  type: vless
-  uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇳🇱 荷兰 (Netherlands) 12
-  server: netra-85a0ca.shoameni19.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
-  tls: true
-  servername: netra-85a0ca.shoameni19.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: '/vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui?ed=2560 '
-    headers:
-      Host: netra-85a0ca.shoameni19.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 13 R45
-  server: 193.29.139.179
-  port: 8080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇳🇱 荷兰 (Netherlands) 14
-  server: 141.144.194.213
-  port: 62145
-  udp: true
-  type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇳🇱 荷兰 (Netherlands) 15
-  server: 45.150.110.11
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
-- name: 🇳🇱 荷兰 (Netherlands) 16
   server: 132.243.166.247
   port: 8081
   udp: true
@@ -149,20 +48,40 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇳🇱 荷兰 (Netherlands) 17
-  server: 87.120.216.144
+- name: 🇳🇱 荷兰 (Netherlands) 06
+  server: 130.78.191.159
   port: 443
   udp: true
   type: vless
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  flow: xtls-rprx-vision
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
   tls: true
-  reality-opts:
-    public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
-    short-id: 0c13e8822e7f58aa
-  servername: gerwai1488.vvzzkontaktezzvv.garden
+  servername: assets-nl.pleiades.codes
+  skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 18
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇳🇱 荷兰 (Netherlands) 07 R45
+  server: 193.29.139.179
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 08
+  server: 84.235.160.65
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 09
+  server: 84.235.183.181
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: hwsOUex03cMr2ldIKYMl6U62jMRDnlv6HyQOCe3WAdI=
+- name: 🇳🇱 荷兰 (Netherlands) 10
   server: 107.189.26.239
   port: 443
   udp: true
@@ -175,139 +94,163 @@ proxies:
     short-id: c09a8eae8476d36c
   servername: cdn.dodostatic.net
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 19
-  server: assets-nl.pleiades.codes
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 11
+  server: 45.150.110.11
+  port: 8081
   udp: true
   type: vless
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
-  tls: true
-  servername: assets-nl.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: 🇳🇱 荷兰 (Netherlands) 20 R50
-  server: 104.21.37.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: 89c5493f-9485-85e5-c43f-df0600000000
-  tls: true
-  servername: nameless-moon-7c4d.shafmrhjlos23.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /vasl
-    headers:
-      Host: nameless-moon-7c4d.shafmrhjlos23.workers.dev
-- name: 🇳🇱 荷兰 (Netherlands) 21 R61
-  server: 139.64.166.25
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: pahobac.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: pahobac.org
-- name: 🇳🇱 荷兰 (Netherlands) 22
-  server: hys13.wba-pn.ru
+    path: /vless-test
+- name: 🇳🇱 荷兰 (Netherlands) 12
+  server: 72.56.116.57
   port: 443
   udp: true
   type: hysteria2
-  password: CnVfXXvMzh
-  sni: hys13.wba-pn.ru
+  password: wrSuBorIlf
+  sni: hys9.wba-pn.ru
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 23
-  server: 151.243.173.119
-  port: 33736
+- name: 🇳🇱 荷兰 (Netherlands) 13
+  server: web-pmapdcb-mabtu.up.railway.app
+  port: 443
   udp: true
   type: vmess
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: e5cc130a-c773-4c3c-beea-b55fee28ed72
   alterId: 0
   cipher: auto
+  tls: true
+  servername: web-pmapdcb-mabtu.up.railway.app
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /vmess-ws
-- name: 🇳🇱 荷兰 (Netherlands) 24
+    path: /vm-ws
+    headers:
+      Host: web-pmapdcb-mabtu.up.railway.app
+- name: 🇳🇱 荷兰 (Netherlands) 14
+  server: 130.12.242.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 15
+  server: hys28.wba-pn.ru
+  port: 443
+  udp: true
+  type: hysteria2
+  password: BWAFlp8g53
+  sni: hys28.wba-pn.ru
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 16
+  server: newyork-mat346mors.up.railway.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3ef19b20-d5e8-e9c9-f7ff-2d65d5b2147d
+  tls: true
+  servername: newyork-mat346mors.up.railway.app
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/3ef19b20-d5e8-e9c9-f7ff-2d65d5b2147d
+    headers:
+      Host: newyork-mat346mors.up.railway.app
+- name: 🇳🇱 荷兰 (Netherlands) 17
+  server: 188.42.145.180
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.volumeroot.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇳🇱 荷兰 (Netherlands) 18
+  server: 84.235.187.241
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- name: 🇳🇱 荷兰 (Netherlands) 19
   server: 94.156.79.93
   port: 443
   udp: true
   type: vless
-  uuid: 1a5e7720-abf3-4b9b-bc9b-9a900a04b434
+  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
-    short-id: f129dcdbf64f
-  servername: www.microsoft.com
+    short-id: 88a13cf2655c
+  servername: www.foxsports.com
   client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 20
+  server: 85.17.145.65
+  port: 12068
+  udp: true
+  type: vless
+  uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 R42
+  - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
   - 🇳🇱 荷兰 (Netherlands) 03
   - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
   - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 07 R45
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10
   - 🇳🇱 荷兰 (Netherlands) 11
   - 🇳🇱 荷兰 (Netherlands) 12
-  - 🇳🇱 荷兰 (Netherlands) 13 R45
+  - 🇳🇱 荷兰 (Netherlands) 13
   - 🇳🇱 荷兰 (Netherlands) 14
   - 🇳🇱 荷兰 (Netherlands) 15
   - 🇳🇱 荷兰 (Netherlands) 16
   - 🇳🇱 荷兰 (Netherlands) 17
   - 🇳🇱 荷兰 (Netherlands) 18
   - 🇳🇱 荷兰 (Netherlands) 19
-  - 🇳🇱 荷兰 (Netherlands) 20 R50
-  - 🇳🇱 荷兰 (Netherlands) 21 R61
-  - 🇳🇱 荷兰 (Netherlands) 22
-  - 🇳🇱 荷兰 (Netherlands) 23
-  - 🇳🇱 荷兰 (Netherlands) 24
+  - 🇳🇱 荷兰 (Netherlands) 20
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 R42
+  - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
   - 🇳🇱 荷兰 (Netherlands) 03
   - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
   - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 07 R45
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10
   - 🇳🇱 荷兰 (Netherlands) 11
   - 🇳🇱 荷兰 (Netherlands) 12
-  - 🇳🇱 荷兰 (Netherlands) 13 R45
+  - 🇳🇱 荷兰 (Netherlands) 13
   - 🇳🇱 荷兰 (Netherlands) 14
   - 🇳🇱 荷兰 (Netherlands) 15
   - 🇳🇱 荷兰 (Netherlands) 16
   - 🇳🇱 荷兰 (Netherlands) 17
   - 🇳🇱 荷兰 (Netherlands) 18
   - 🇳🇱 荷兰 (Netherlands) 19
-  - 🇳🇱 荷兰 (Netherlands) 20 R50
-  - 🇳🇱 荷兰 (Netherlands) 21 R61
-  - 🇳🇱 荷兰 (Netherlands) 22
-  - 🇳🇱 荷兰 (Netherlands) 23
-  - 🇳🇱 荷兰 (Netherlands) 24
+  - 🇳🇱 荷兰 (Netherlands) 20
 rules:
 - MATCH,PROXIES
