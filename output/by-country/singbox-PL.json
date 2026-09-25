@@ -6,29 +6,48 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "104.17.247.68",
+      "server": "d1-pl.cloud-cdn.xyz",
       "server_port": 443,
-      "uuid": "e6cc4788-3c45-4df1-94f3-8303504a65bf",
+      "uuid": "a0248c3b-b631-4ada-b8d6-e2f6af2986d0",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "khoda.ak-khoda.workers.dev",
-        "insecure": false,
+        "server_name": "d1-pl.cloud-cdn.xyz",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sync",
-        "headers": {
-          "Host": "khoda.ak-khoda.workers.dev"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nFJCJ2tvxLdLrc9G-O1laW8KDir5SDnaOTmYndVaOGQ",
+          "short_id": "7a3f9e2b1c8d4f6a"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 02",
+      "server": "82.118.22.161",
+      "server_port": 443,
+      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
+          "short_id": "fa3ea655619a3e78"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03",
       "server": "83.168.95.145",
       "server_port": 443,
       "uuid": "f28e0ce1-ed75-4e90-b069-5215a80dfb4a",
@@ -48,50 +67,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 04 R42",
-      "server": "188.114.96.19",
-      "server_port": 80,
-      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04 R42"
+        "🇵🇱 波兰 (Poland) 03"
       ]
     },
     {
@@ -100,8 +82,7 @@
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04 R42"
+        "🇵🇱 波兰 (Poland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

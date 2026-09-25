@@ -13,25 +13,17 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
-- name: 🇧🇬 保加利亚 (Bulgaria) 02 R73
-  server: 31.56.222.61
-  port: 36587
-  udp: true
-  type: vless
-  uuid: 79251d3c-aabc-475c-b598-67263479b382
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02 R73
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02 R73
 rules:
 - MATCH,PROXIES

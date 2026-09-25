@@ -4,7 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R40
+- name: 🇬🇧 英国 (United Kingdom) 01
+  server: 134.65.58.159
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: WY8oDSNTyldwBIMUHLWWBuhFcbGlcpVRy+YFrGxb5no=
+- name: 🇬🇧 英国 (United Kingdom) 02 R40
   server: 23.81.34.204
   port: 443
   udp: true
@@ -17,26 +24,13 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 129.151.77.63
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 129.151.70.225
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: /pYDD9iRDQlBUa4aL0lBTCSp6ZNStfL6xHNn4mSFqFE=
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: frosty-pond-7436.shhabbyat914.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: de78c0b1-c5c8-412a-bd92-430d1f2e2642
-  tls: true
-  servername: FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NmrU9ImDG7jA7oFEem
+  password: xnkkAmDYAZXCenlvIQqgeFk3Mi2tzia5zk59hXgCPok=
 - name: 🇬🇧 英国 (United Kingdom) 04
   server: 144.24.229.35
   port: 61312
@@ -45,42 +39,6 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: L3QqnA71GxRRmLGUEdybwjBm99YOB+VNxYv9WWhazJA=
 - name: 🇬🇧 英国 (United Kingdom) 05
-  server: 129.151.66.29
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: ynimyaH7xURtsxq5gIGo/UpaTNIslRReaWGE1btx+4A=
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 172.67.166.189
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3e43ffd1-3f7b-45b0-a955-c249010c7ebc
-  tls: true
-  servername: Open-39.AVL-a47261.WorKErS.DeV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/9Vd7GxzImsNPSKUT9uIK0uYIARIV?ed=2560
-    headers:
-      Host: open-39.avl-a47261.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 129.151.78.82
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: bcK5dwAG4V4J89FBGkbbSgMm1Nwbx7IHScCwr7Lode4=
-- name: 🇬🇧 英国 (United Kingdom) 08
-  server: 129.151.83.115
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 7+83lYmtkC1TL9F5THnzEGaaF24mquCQgoT+DqJDrlE=
-- name: 🇬🇧 英国 (United Kingdom) 09
   server: 35.234.143.34
   port: 443
   udp: true
@@ -92,62 +50,25 @@ proxies:
     short-id: 1b580f160d965b01
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 10
-  server: 129.151.87.182
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 129.151.83.115
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: M71eEZD/xLw2gvjF0L5j0F1147HWxss5vBp2Qbdyiy0=
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: 46.202.82.67
-  port: 8443
-  udp: true
-  type: vless
-  uuid: e6695d9b-3663-4421-9893-de7f641a9f3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Y4IQFMDNkAO-V8jkEBlUg3YmSHuTBHzQfCiQeabsulU
-    short-id: 8e6c0362876f7d96
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 12
-  server: netra-85a0ca.shoameni19.workers.dev
+  password: 7+83lYmtkC1TL9F5THnzEGaaF24mquCQgoT+DqJDrlE=
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: vless.herogoing.top
   port: 443
   udp: true
-  type: vless
-  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
-  tls: true
-  servername: netra-85a0ca.shoameni19.workers.dev
+  type: trojan
+  password: bpb-trojan
+  sni: vless.herogoing.top
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: '/vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui?ed=2560 '
-    headers:
-      Host: netra-85a0ca.shoameni19.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 13
-  server: creativeboxse.zanity.net
-  port: 5228
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: f8Llc9OigAChSUgWakI7ZW
-- name: 🇬🇧 英国 (United Kingdom) 14
-  server: 95.85.224.51
-  port: 443
-  udp: true
-  type: vless
-  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
-    short-id: a696de84963656de
-  servername: max.ru
-  client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 15
+    path: /tr?ed=2560
+- name: 🇬🇧 英国 (United Kingdom) 08
   server: 176.123.162.100
   port: 9880
   udp: true
@@ -162,33 +83,26 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-tunnel
-- name: 🇬🇧 英国 (United Kingdom) 16
-  server: 31.76.7.154
-  port: 7443
+- name: 🇬🇧 英国 (United Kingdom) 09
+  server: 193.163.203.170
+  port: 443
   udp: true
   type: vless
-  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-    short-id: d2061bb1
-  servername: ya.ru
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 17
-  server: 144.24.230.25
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: yObb/OXfrgEVt50Egr/QdKsp/gvoDNe88dvSFaLXLBo=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R40
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R40
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
@@ -196,21 +110,13 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
-  - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14
-  - 🇬🇧 英国 (United Kingdom) 15
-  - 🇬🇧 英国 (United Kingdom) 16
-  - 🇬🇧 英国 (United Kingdom) 17
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R40
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R40
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
@@ -218,13 +124,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
-  - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14
-  - 🇬🇧 英国 (United Kingdom) 15
-  - 🇬🇧 英国 (United Kingdom) 16
-  - 🇬🇧 英国 (United Kingdom) 17
 rules:
 - MATCH,PROXIES
