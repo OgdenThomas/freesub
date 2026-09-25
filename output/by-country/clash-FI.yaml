@@ -5,22 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: iranibestv.pingxoxo.info
-  port: 10210
+  server: 2.26.147.118
+  port: 443
   udp: true
   type: vless
-  uuid: 8ec5d86b-d895-477d-bc96-21fa01049f2f
+  uuid: b97e287f-a24e-0021-a103-7e7ecef83139
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: twRm8a1BBdz2Q5jTuNbXxA7ZdtDPAyQNEycDYkW9DFc
-    short-id: 13121b7150ad7fc6
-  servername: firebaseperusertopics-pa.googleapis.com
+    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
+    short-id: e1f8a3b6
+  servername: www.amd.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: assets-fi.pleiades.codes
+  server: 2.27.175.71
   port: 443
   udp: true
   type: vless
@@ -28,22 +26,49 @@ proxies:
   tls: true
   servername: assets-fi.pleiades.codes
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
 - name: 🇫🇮 芬兰 (Finland) 03
-  server: 217.144.188.131
+  server: 65.109.199.174
   port: 443
   udp: true
   type: vless
-  uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1
+  uuid: c8c48cda-09c0-4742-850f-5ef910aa730b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: RoZB6zAaInm8X5feCKpL0_wMZRQYxQHWsirP0SYum2g
-    short-id: f3a9c21e8b6d4571
-  servername: admin.vkroom-it-service.xyz
+    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
+    short-id: 7a0300af51a1c4cf
+  servername: Miro.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 2.27.13.62
+  port: 443
+  udp: true
+  type: vless
+  uuid: 92c863cb-7b96-405c-bc04-ff4d73465f1a
+  tls: true
+  servername: dissolvedvpn.eu.cc
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /dissolved-ws/
+    headers:
+      Host: dissolvedvpn.eu.cc
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 2.26.97.14
+  port: 443
+  udp: true
+  type: vless
+  uuid: 236b5084-9605-4b6d-b4eb-22408e22d84a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SARDrN_d46PsugT2k5ILoQAJqaA1eCOZhe1BjKMonj8
+  servername: mzone.fi.3cloudhost.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -53,6 +78,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +88,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

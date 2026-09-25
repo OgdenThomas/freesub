@@ -5,6 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 93.190.8.81
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 0d5d672c-e82a-46d7-af19-b5bf0027ff83
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 103.215.218.158
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: 206.1.98.34
+  port: 26066
+  udp: true
+  type: vmess
+  uuid: Nitro_Skybot@
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇹🇷 土耳其 (Turkey) 04
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,19 +45,12 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: tr.kuzey.capigodv.ir
-  port: 42542
+- name: 🇹🇷 土耳其 (Turkey) 05
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: fc2937db-f4e6-4c5c-ad3f-ea70873ef304
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cHlLzkGevUjY7PCGzPMCzvn35lISNcOv2y1sN4kOFTA
-    short-id: fa5561243062dcad
-  servername: blog.api.www.cloudflare.com
-  client-fingerprint: chrome
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +58,9 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +68,8 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 rules:
 - MATCH,PROXIES

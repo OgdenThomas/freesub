@@ -4,25 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
-  server: 188.114.97.6
-  port: 8080
+- name: 🇨🇦 加拿大 (Canada) 01 R50
+  server: 147.182.151.199
+  port: 11186
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
-- name: 🇨🇦 加拿大 (Canada) 02 R56
-  server: 142.4.216.225
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇨🇦 加拿大 (Canada) 03 R57
+  uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇨🇦 加拿大 (Canada) 02 R57
   server: mygptagent.org
   port: 443
   udp: true
@@ -38,33 +30,28 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
-- name: 🇨🇦 加拿大 (Canada) 04 R50
-  server: 147.182.151.199
-  port: 11186
+- name: 🇨🇦 加拿大 (Canada) 03 R56
+  server: 142.4.216.225
+  port: 443
   udp: true
-  type: vless
-  uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-  network: h2
-  h2-opts:
-    host: []
-    path: /
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R56
-  - 🇨🇦 加拿大 (Canada) 03 R57
-  - 🇨🇦 加拿大 (Canada) 04 R50
+  - 🇨🇦 加拿大 (Canada) 01 R50
+  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 03 R56
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R56
-  - 🇨🇦 加拿大 (Canada) 03 R57
-  - 🇨🇦 加拿大 (Canada) 04 R50
+  - 🇨🇦 加拿大 (Canada) 01 R50
+  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 03 R56
 rules:
 - MATCH,PROXIES

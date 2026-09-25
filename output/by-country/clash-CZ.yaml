@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3e43ffd1-3f7b-45b0-a955-c249010c7ebc
+  tls: true
+  servername: Open-39.avL-a47261.worKErS.Dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/y6cRFgRcPee84kGEoiCrOgEQoh?ed=2560
+    headers:
+      Host: open-39.avl-a47261.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01
+rules:
+- MATCH,PROXIES
