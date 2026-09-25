@@ -5,16 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01
-  server: platform115.golnamakcert.top
+  server: platform113.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform115
+    path: /platform113
     headers:
-      Host: platform115.halalkhor.info
+      Host: platform113.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 02
   server: 193.202.10.2
   port: 40443
@@ -29,17 +29,6 @@ proxies:
   servername: deepl.com
   client-fingerprint: chrome
 - name: 🇮🇱 以色列 (Israel) 03
-  server: platform113.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 04
   server: platform118.golnamakcert.top
   port: 80
   udp: true
@@ -50,7 +39,40 @@ proxies:
     path: /platform118
     headers:
       Host: platform118.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 04
+  server: platform101.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform101
+    headers:
+      Host: platform101.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 05
+  server: platform102.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform102
+    headers:
+      Host: platform102.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 06
+  server: platform115.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform115
+    headers:
+      Host: platform115.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 07
   server: platform117.golnamakcert.top
   port: 80
   udp: true
@@ -71,6 +93,8 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 03
   - 🇮🇱 以色列 (Israel) 04
   - 🇮🇱 以色列 (Israel) 05
+  - 🇮🇱 以色列 (Israel) 06
+  - 🇮🇱 以色列 (Israel) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,5 +105,7 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 03
   - 🇮🇱 以色列 (Israel) 04
   - 🇮🇱 以色列 (Israel) 05
+  - 🇮🇱 以色列 (Israel) 06
+  - 🇮🇱 以色列 (Israel) 07
 rules:
 - MATCH,PROXIES

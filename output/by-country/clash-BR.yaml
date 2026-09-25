@@ -4,28 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  server: 206.1.98.72
-  port: 21811
+- name: 🇧🇷 巴西 (Brazil) 01
+  server: 172.233.14.17
+  port: 22324
   udp: true
   type: vmess
-  uuid: Nitro_Skybot@
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇧🇷 巴西 (Brazil) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇧🇷 巴西 (Brazil) 01
 rules:
 - MATCH,PROXIES

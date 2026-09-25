@@ -4,37 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01",
-      "server": "38.207.130.15",
+      "server": "18.181.165.254",
       "server_port": 443,
-      "uuid": "e4cd263b-c5c7-4410-bf61-8893179ec429",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amazon.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE",
-          "short_id": "6d962e8d8a0dce"
-        }
-      }
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
       "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 02",
-      "server": "13.230.223.121",
+      "server": "13.113.166.191",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 03",
+      "server": "54.199.248.166",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03",
+      "tag": "🇯🇵 日本 (Japan) 04",
       "server": "34.84.126.188",
       "server_port": 443,
       "uuid": "51a43b75-c84b-46eb-885e-c24e7819cd0b",
@@ -43,7 +38,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -54,7 +49,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 04",
+      "tag": "🇯🇵 日本 (Japan) 05",
       "server": "18.183.215.124",
       "server_port": 28573,
       "uuid": "871bfce7-8440-4394-8d82-56b51f20fdad",
@@ -64,7 +59,7 @@
         "server_name": "www.sony.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -75,7 +70,18 @@
     },
     {
       "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 05",
+      "tag": "🇯🇵 日本 (Japan) 06",
+      "server": "147.78.242.19",
+      "server_port": 81,
+      "uuid": "357b37cc-d0d2-47ef-aa1a-0a668447999e",
+      "security": "auto",
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 07",
       "server": "64.176.51.214",
       "server_port": 23462,
       "uuid": "95c5abc1-018d-4628-89a7-25ab9c62ab74",
@@ -86,20 +92,25 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 06",
-      "server": "13.115.71.198",
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 08",
+      "server": "jumpernode.online",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 07",
-      "server": "54.199.248.166",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "uuid": "e4cd263b-c5c7-4410-bf61-8893179ec429",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE",
+          "short_id": "6d962e8d8a0dce"
+        }
+      }
     },
     {
       "type": "selector",
@@ -112,7 +123,8 @@
         "🇯🇵 日本 (Japan) 04",
         "🇯🇵 日本 (Japan) 05",
         "🇯🇵 日本 (Japan) 06",
-        "🇯🇵 日本 (Japan) 07"
+        "🇯🇵 日本 (Japan) 07",
+        "🇯🇵 日本 (Japan) 08"
       ]
     },
     {
@@ -125,7 +137,8 @@
         "🇯🇵 日本 (Japan) 04",
         "🇯🇵 日本 (Japan) 05",
         "🇯🇵 日本 (Japan) 06",
-        "🇯🇵 日本 (Japan) 07"
+        "🇯🇵 日本 (Japan) 07",
+        "🇯🇵 日本 (Japan) 08"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
