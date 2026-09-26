@@ -4,26 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01
-  server: 131.123.41.31
-  port: 8081
+- name: 🇵🇱 波兰 (Poland) 01
+  server: zadgvmrlaa0b.dopwiz.com
+  port: 8080
   udp: true
   type: vless
-  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  network: ws
-  ws-opts:
-    path: /vless-test
+  uuid: c1dad5ee-7c53-47de-8280-db5e99cf052e
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇵🇱 波兰 (Poland) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇵🇱 波兰 (Poland) 01
 rules:
 - MATCH,PROXIES

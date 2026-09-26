@@ -5,28 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01 R49",
-      "server": "esbe.vihodest.net",
-      "server_port": 443,
-      "uuid": "88956de8-38db-449c-8410-4b70a4fb5c9b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "esbe.vihodest.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ihEweXseofZYKT-AB6cTtQ1IlXgC3a7HHAsi-o50yFE",
-          "short_id": "e93196a756abca09"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 02",
+      "tag": "🇪🇸 西班牙 (Spain) 01",
       "server": "46.28.71.247",
       "server_port": 443,
       "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
@@ -46,11 +25,31 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 02",
+      "server": "madridsp.banibus.ir",
+      "server_port": 8118,
+      "uuid": "eea1c59d-70fd-4829-8ed7-21ddfe55a0da",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LjAkLizwkZf35ObrUMFZ22UHXTEJzpgcTvHk9AuzcUM",
+          "short_id": ""
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01 R49",
+        "🇪🇸 西班牙 (Spain) 01",
         "🇪🇸 西班牙 (Spain) 02"
       ]
     },
@@ -58,7 +57,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01 R49",
+        "🇪🇸 西班牙 (Spain) 01",
         "🇪🇸 西班牙 (Spain) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01
-  server: 172.64.229.2
+  server: 104.18.47.113
   port: 80
   udp: true
   type: vless
@@ -15,40 +15,51 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇸🇬 新加坡 (Singapore) 02 R50
+- name: 🇸🇬 新加坡 (Singapore) 02
+  server: 162.159.48.32
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇸🇬 新加坡 (Singapore) 03
+  server: 172.64.32.108
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇸🇬 新加坡 (Singapore) 04
+  server: 172.237.70.226
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇸🇬 新加坡 (Singapore) 05 R50
   server: 68.183.227.4
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03
-  server: 163.128.99.14
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 06 R50
+  server: 128.199.172.224
+  port: 8080
   udp: true
-  type: vless
-  uuid: bda35755-c838-49c3-a19e-3712f2d54275
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -LuhwN_cSgNr7nYIfCcu_XAjviKVSGwVGHxmB-s1AD0
-    short-id: e3a4bdfe3d6fd8ec
-  servername: www.apple.com
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 04
-  server: 163.128.99.57
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1a049739-b873-4242-9a2b-239951eb2dd3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ
-    short-id: ab1df8505f6e0072
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 05
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 07
   server: 54.169.200.246
   port: 41688
   udp: true
@@ -60,8 +71,41 @@ proxies:
     public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
     short-id: 7f342137c20387
   servername: www.intel.com
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 08 R50
+  server: 68.183.235.122
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 09
+  server: 163.128.99.57
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1a049739-b873-4242-9a2b-239951eb2dd3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ
+    short-id: ab1df8505f6e0072
+  servername: www.apple.com
+  client-fingerprint: safari
+- name: 🇸🇬 新加坡 (Singapore) 10
+  server: 163.128.99.14
+  port: 443
+  udp: true
+  type: vless
+  uuid: bda35755-c838-49c3-a19e-3712f2d54275
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -LuhwN_cSgNr7nYIfCcu_XAjviKVSGwVGHxmB-s1AD0
+    short-id: e3a4bdfe3d6fd8ec
+  servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 06
+- name: 🇸🇬 新加坡 (Singapore) 11
   server: 5.223.74.174
   port: 2053
   udp: true
@@ -74,38 +118,20 @@ proxies:
     short-id: 36151c48e28cfb65
   servername: 5.223.74.174
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 07 R50
-  server: 128.199.172.224
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 08 R50
-  server: 68.183.235.122
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 09 R53
-  server: onhit.shalana.xyz
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 12 R40
+  server: 134.255.211.162
+  port: 2083
   udp: true
   type: vless
-  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+  uuid: d596a882-b7f8-4215-bbf9-f7c5234e9d8c
+  flow: xtls-rprx-vision
   tls: true
-  servername: onhit.shalana.xyz
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 10
-  server: magicvip.iddns.ir
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇸🇬 新加坡 (Singapore) 11
+  reality-opts:
+    public-key: eRNXSYGf7nhmzDNiS1fDs4BgGX5y76y_Vjd6wsCEUXU
+    short-id: a7f3
+  servername: www.booking.com
+  client-fingerprint: firefox
+- name: 🇸🇬 新加坡 (Singapore) 13
   server: 45.32.120.173
   port: 443
   udp: true
@@ -113,37 +139,54 @@ proxies:
   uuid: XEXEVIL
   alterId: 0
   cipher: auto
+- name: 🇸🇬 新加坡 (Singapore) 14 R53
+  server: support.zoom.us
+  port: 80
+  udp: true
+  type: vless
+  uuid: 31727d09-1958-42d5-b437-adc9cf0ddd34
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: onhit.shalana.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01
-  - 🇸🇬 新加坡 (Singapore) 02 R50
+  - 🇸🇬 新加坡 (Singapore) 02
   - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
-  - 🇸🇬 新加坡 (Singapore) 05
-  - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R50
+  - 🇸🇬 新加坡 (Singapore) 05 R50
+  - 🇸🇬 新加坡 (Singapore) 06 R50
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08 R50
-  - 🇸🇬 新加坡 (Singapore) 09 R53
+  - 🇸🇬 新加坡 (Singapore) 09
   - 🇸🇬 新加坡 (Singapore) 10
   - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 12 R40
+  - 🇸🇬 新加坡 (Singapore) 13
+  - 🇸🇬 新加坡 (Singapore) 14 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01
-  - 🇸🇬 新加坡 (Singapore) 02 R50
+  - 🇸🇬 新加坡 (Singapore) 02
   - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
-  - 🇸🇬 新加坡 (Singapore) 05
-  - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R50
+  - 🇸🇬 新加坡 (Singapore) 05 R50
+  - 🇸🇬 新加坡 (Singapore) 06 R50
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08 R50
-  - 🇸🇬 新加坡 (Singapore) 09 R53
+  - 🇸🇬 新加坡 (Singapore) 09
   - 🇸🇬 新加坡 (Singapore) 10
   - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 12 R40
+  - 🇸🇬 新加坡 (Singapore) 13
+  - 🇸🇬 新加坡 (Singapore) 14 R53
 rules:
 - MATCH,PROXIES

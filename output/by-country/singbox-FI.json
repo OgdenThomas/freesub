@@ -4,24 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "me6.movieseryalirani.ir",
-      "server_port": 57361,
-      "uuid": "ed815caa-bff1-4419-8c61-1d108eabaf1f",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02",
-      "server": "IL4.kontabox.ir",
-      "server_port": 1280,
-      "uuid": "73b70752-8fd0-46a3-8db7-23a9cbbdbd73",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "is1-ssl.mzstatic.com"
+      "tag": "🇫🇮 芬兰 (Finland) 01",
+      "server": "31.77.17.199",
+      "server_port": 443,
+      "uuid": "deea5046-3543-4b1b-a17f-3d08a65db91d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi03.mcloud.mov",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fkZTYNydTBVO-1LSiTvDcyBMx-zBP5Am780jECmUgg0",
+          "short_id": ""
         }
       }
     },
@@ -30,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

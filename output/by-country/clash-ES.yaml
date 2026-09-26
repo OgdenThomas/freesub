@@ -4,20 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 R49
-  server: esbe.vihodest.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 88956de8-38db-449c-8410-4b70a4fb5c9b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ihEweXseofZYKT-AB6cTtQ1IlXgC3a7HHAsi-o50yFE
-    short-id: e93196a756abca09
-  servername: esbe.vihodest.net
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02
+- name: 🇪🇸 西班牙 (Spain) 01
   server: 46.28.71.247
   port: 443
   udp: true
@@ -30,19 +17,30 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 02
+  server: madridsp.banibus.ir
+  port: 8118
+  udp: true
+  type: vless
+  uuid: eea1c59d-70fd-4829-8ed7-21ddfe55a0da
+  tls: true
+  reality-opts:
+    public-key: LjAkLizwkZf35ObrUMFZ22UHXTEJzpgcTvHk9AuzcUM
+  servername: play.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 R49
+  - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 R49
+  - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
 rules:
 - MATCH,PROXIES

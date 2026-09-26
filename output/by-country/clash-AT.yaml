@@ -4,26 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01
-  server: 104.143.223.59
-  port: 2085
+- name: 🇦🇹 奥地利 (Austria) 01
+  server: 86.106.119.23
+  port: 443
   udp: true
-  type: vless
-  uuid: 6864bd16-f8bb-457c-a191-dca5b80ca32a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  type: trojan
+  password: 600421cf-11d7-429f-a65b-c30397f1bc03
+  sni: gr.freeguard.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇹 奥地利 (Austria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇹 奥地利 (Austria) 01
 rules:
 - MATCH,PROXIES
