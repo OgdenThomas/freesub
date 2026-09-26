@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 以色列 (Israel) 01
-  server: de2.dzvn.space
-  port: 2291
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44
+  server: 2.56.123.227
+  port: 443
   udp: true
   type: vless
-  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg
-    short-id: 50ace5ab34f6df9b
-  servername: de2.dzvn.space
+    public-key: bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw
+    short-id: 72104d27a0f5f62e
+  servername: www.amazon.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 以色列 (Israel) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 rules:
 - MATCH,PROXIES

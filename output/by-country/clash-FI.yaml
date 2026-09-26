@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 95.217.24.236
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 10d85f65-f8d6-4504-b1e2-94649db1577a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KN8tFlpIwPgJGwUCG7Pp9c9c0juYKPvNIv4kFHwqbyk
-    short-id: a32cfb5deca913ad
-  servername: 95.217.24.236
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
   server: me6.movieseryalirani.ir
   port: 57361
   udp: true
@@ -25,18 +12,17 @@ proxies:
   uuid: ed815caa-bff1-4419-8c61-1d108eabaf1f
   alterId: 0
   cipher: auto
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: me1.movieseryalirani.ir
-  port: 443
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: IL4.kontabox.ir
+  port: 1280
   udp: true
   type: vless
-  uuid: 63aaea7f-2847-4f41-afab-0836b1cf79d9
-  tls: true
-  reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
-    short-id: 8d814a
-  servername: matrix-client.matrix.org
-  client-fingerprint: firefox
+  uuid: 73b70752-8fd0-46a3-8db7-23a9cbbdbd73
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: is1-ssl.mzstatic.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

@@ -4,89 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01 (家宽)
-  server: 128.241.25.72
-  port: 30021
-  udp: true
-  type: vless
-  uuid: 65f26a08-9a5e-4b28-9004-f98676cc1e49
-  tls: true
-  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: namrcg001640lrm.cybervena.com
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  server: 125.224.202.118
   port: 50099
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 7b56aeaa-8e2d-4bdf-b1d7-233ecca15f56
-- name: 🇯🇵 日本 (Japan) 03 (家宽)
-  server: 116.204.164.60
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 48942ced-a272-41c1-98ac-75745d83bf93
-  tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
-  server: 118.167.230.191
-  port: 24215
-  udp: true
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: edge
-- name: 🇭🇰 中国香港 (Hong Kong) 06 (家宽)
-  server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
-  port: 443
-  udp: true
-  type: anytls
-  password: 9sK2mP8xQ7vL3nZ6
-  sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
-  skip-cert-verify: false
+  password: a9a0d092-6f0e-4701-81ee-454643d6d506
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  - 🇯🇵 日本 (Japan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 06 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  - 🇯🇵 日本 (Japan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 06 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES
