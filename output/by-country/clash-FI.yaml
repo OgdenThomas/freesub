@@ -5,29 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 2.27.175.71
+  server: me6.movieseryalirani.ir
+  port: 57361
+  udp: true
+  type: vmess
+  uuid: ed815caa-bff1-4419-8c61-1d108eabaf1f
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 95.217.24.236
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 10d85f65-f8d6-4504-b1e2-94649db1577a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: KN8tFlpIwPgJGwUCG7Pp9c9c0juYKPvNIv4kFHwqbyk
+    short-id: a32cfb5deca913ad
+  servername: 62.238.41.21
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: me1.movieseryalirani.ir
   port: 443
   udp: true
   type: vless
-  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  uuid: 63aaea7f-2847-4f41-afab-0836b1cf79d9
   tls: true
-  servername: assets-fi.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
+  reality-opts:
+    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
+    short-id: 8d814a
+  servername: matrix-client.matrix.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

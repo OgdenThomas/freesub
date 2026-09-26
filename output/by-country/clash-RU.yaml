@@ -1,0 +1,59 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 94.249.187.46
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 141.105.64.179
+  port: 443
+  udp: true
+  type: vless
+  uuid: cfed68c4-fc10-4638-b3ca-140e1e873797
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 20slTDKvtwVwroJwTc-4068vlNb3_Wg9N-_EEtix-k4
+    short-id: 44426c2731ae4ce3
+  servername: ads.x5.ru
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: fbsv6.guardora.pro
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  tls: true
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: fbsv6.guardora.pro
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+rules:
+- MATCH,PROXIES

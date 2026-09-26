@@ -1,0 +1,52 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 01",
+      "server": "zcsagftt.selqora.ir",
+      "server_port": 51595,
+      "uuid": "a5f3e491-23aa-4293-a37a-93b20796adc2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SAEWzHGGBsp8haTh34RoN5NwoxiCgZzzJo7jWi-DJXw",
+          "short_id": "913175efbe9ddb1d"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇦🇹 奥地利 (Austria) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇦🇹 奥地利 (Austria) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇸 美国 (United States) 01 (家宽)
+  server: 172.64.80.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  tls: true
+  servername: curly-night-6928.ggdhchjk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: curly-night-6928.ggdhchjk.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇸 美国 (United States) 01 (家宽)
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇸 美国 (United States) 01 (家宽)
+rules:
+- MATCH,PROXIES

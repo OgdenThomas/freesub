@@ -5,6 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 93.190.8.91
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 4bea52c4-3843-4a41-8514-989560361e43
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 103.215.218.158
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 03
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,17 +34,32 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 04
+  server: 93.114.98.221
+  port: 443
+  udp: true
+  type: vless
+  uuid: 552ca1e2-d1d4-4d9d-b0ea-9fabd287ad14
+  tls: true
+  servername: 00iwuafi1019.dopgangster.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇶 IQ 01
+  server: 104.21.39.30
+  port: 80
+  udp: true
+  type: vless
+  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTEwyZVI5T3BYZDBxTzhPRCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇶 IQ 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇶 IQ 01
+rules:
+- MATCH,PROXIES

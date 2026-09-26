@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇷 希腊 (Greece) 01
-  server: 85.90.197.220
-  port: 443
+- name: 🇦🇹 奥地利 (Austria) 01
+  server: zcsagftt.selqora.ir
+  port: 51595
   udp: true
   type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
+  uuid: a5f3e491-23aa-4293-a37a-93b20796adc2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
-    short-id: 94acb54627612d43
-  servername: www.cloudflare.com
+    public-key: SAEWzHGGBsp8haTh34RoN5NwoxiCgZzzJo7jWi-DJXw
+    short-id: 913175efbe9ddb1d
+  servername: play.google.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇷 希腊 (Greece) 01
+  - 🇦🇹 奥地利 (Austria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇷 希腊 (Greece) 01
+  - 🇦🇹 奥地利 (Austria) 01
 rules:
 - MATCH,PROXIES

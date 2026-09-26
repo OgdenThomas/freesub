@@ -1,0 +1,117 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: 82.47.63.156
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇯🇵 日本 (Japan) 02 (家宽)
+  server: 128.241.25.215
+  port: 30036
+  udp: true
+  type: vless
+  uuid: 196b7228-58df-4bcf-af2a-2e96608d5add
+  tls: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+  server: p1real6.greewebservices.ir
+  port: 1280
+  udp: true
+  type: vless
+  uuid: a11cb858-4a42-4735-b40b-4cba1560b959
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 05 (家宽)
+  server: 172.64.80.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  tls: true
+  servername: curly-night-6928.ggdhchjk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: curly-night-6928.ggdhchjk.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 06 (移动家宽)
+  server: 206.1.98.72
+  port: 21811
+  udp: true
+  type: vmess
+  uuid: Nitro_Skybot@
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇯🇵 日本 (Japan) 07 (家宽)
+  server: 203.137.165.164
+  port: 57554
+  udp: true
+  type: vless
+  uuid: e5b2a063-a114-4bd0-802d-b2da1fe1d1da
+  tls: true
+  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇯🇵 日本 (Japan) 02 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  - 🇺🇸 美国 (United States) 05 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 06 (移动家宽)
+  - 🇯🇵 日本 (Japan) 07 (家宽)
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇯🇵 日本 (Japan) 02 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  - 🇺🇸 美国 (United States) 05 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 06 (移动家宽)
+  - 🇯🇵 日本 (Japan) 07 (家宽)
+rules:
+- MATCH,PROXIES

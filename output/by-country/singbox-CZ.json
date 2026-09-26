@@ -1,0 +1,73 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 01",
+      "server": "restless-base-fe24.alirezahabibi20009.workers.dev",
+      "server_port": 443,
+      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
+      "tls": {
+        "enabled": true,
+        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "headers": {
+          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02",
+      "server": "13.143.181.220",
+      "server_port": 443,
+      "uuid": "7a8d2c3f-d6dd-0004-81d8-cff23d8364ee",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "msk1.maxtelemost.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "QfdR5yEjdbaqSet3-XrkDdVjPO9VTRGlUI-MV-b4p38",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

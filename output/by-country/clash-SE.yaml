@@ -5,48 +5,63 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 51.20.122.188
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 02
-  server: 13.51.242.39
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 03
   server: 16.171.55.2
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 04
+- name: 🇸🇪 瑞典 (Sweden) 02
   server: 16.170.214.108
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 05
+- name: 🇸🇪 瑞典 (Sweden) 03
   server: 16.170.163.124
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: 191.44.114.66
+  port: 443
+  udp: true
+  type: vless
+  uuid: 718b9643-20e3-4f9e-9f8d-87ce6801d55e
+  tls: true
+  reality-opts:
+    public-key: uE1WBdW9se1rQnx8Vh-a1jjaehzK-iUmCVrPui5KU3g
+    short-id: 53499a662395
+  servername: ai.android
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇸🇪 瑞典 (Sweden) 05
+  server: 172.238.244.13
+  port: 17000
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
 - name: 🇸🇪 瑞典 (Sweden) 06
-  server: 51.20.86.152
+  server: 51.20.122.188
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 07
+  server: 51.20.86.152
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 08
   server: 143.246.195.138
   port: 8081
   udp: true
@@ -55,6 +70,18 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 09
+  server: 94.103.2.224
+  port: 50445
+  udp: true
+  type: vless
+  uuid: 29ea8cd9-300e-4ab7-a261-75533d86f58d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hp9ht_jsxocTnQEbChb1G3JoDF50x-xDT8UYr66D1TQ
+  servername: www.icloud.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +94,8 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
+  - 🇸🇪 瑞典 (Sweden) 08
+  - 🇸🇪 瑞典 (Sweden) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,5 +108,7 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
+  - 🇸🇪 瑞典 (Sweden) 08
+  - 🇸🇪 瑞典 (Sweden) 09
 rules:
 - MATCH,PROXIES

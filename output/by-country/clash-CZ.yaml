@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01
+  server: restless-base-fe24.alirezahabibi20009.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4908acbe-485f-4e1c-bb11-5dd04b9f7e88
+  tls: true
+  servername: restless-base-fe24.alirezahabibi20009.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: restless-base-fe24.alirezahabibi20009.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 13.143.181.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7a8d2c3f-d6dd-0004-81d8-cff23d8364ee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QfdR5yEjdbaqSet3-XrkDdVjPO9VTRGlUI-MV-b4p38
+  servername: msk1.maxtelemost.com
+  client-fingerprint: safari
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+rules:
+- MATCH,PROXIES
