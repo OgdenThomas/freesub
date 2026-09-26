@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: r3mrcg001286ek2.cybervena.com
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-- name: 🇹🇼 中国台湾 (Taiwan) 02
-  server: namrcg001640lrm.cybervena.com
-  port: 50099
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7b56aeaa-8e2d-4bdf-b1d7-233ecca15f56
-- name: 🇹🇼 中国台湾 (Taiwan) 03
   server: 35.201.163.218
   port: 30837
   udp: true
@@ -30,7 +16,20 @@ proxies:
     public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
     short-id: 97101ba788915e5a
   servername: www.sony.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇹🇼 中国台湾 (Taiwan) 02
+  server: 35.221.158.209
+  port: 32981
+  udp: true
+  type: vless
+  uuid: 41b96ee9-ee5e-455f-9753-187a9dead97a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JSn0GPz1WOSTUDBxN_XYnhgb2Jpjc2LpfBTzX1j3V2E
+    short-id: 70f4b7a4c40636
+  servername: www.sony.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
-  - 🇹🇼 中国台湾 (Taiwan) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01
   - 🇹🇼 中国台湾 (Taiwan) 02
-  - 🇹🇼 中国台湾 (Taiwan) 03
 rules:
 - MATCH,PROXIES

@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽)
-  server: 172.64.80.1
-  port: 443
+- name: 🇵🇪 秘鲁 (Peru) 01
+  server: 172.65.90.41
+  port: 2053
   udp: true
   type: vless
-  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
   tls: true
-  servername: curly-night-6928.ggdhchjk.workers.dev
+  servername: wzs.echo.net.eu.org
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /sync
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlNSSwUEURwBVwcWUQYJGxsPQldGTQ8OBgJWFUU=
     headers:
-      Host: curly-night-6928.ggdhchjk.workers.dev
+      Host: wzs.echo.net.eu.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽)
+  - 🇵🇪 秘鲁 (Peru) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽)
+  - 🇵🇪 秘鲁 (Peru) 01
 rules:
 - MATCH,PROXIES
