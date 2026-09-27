@@ -4,41 +4,35 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
-      "server": "201.51.3.184",
-      "server_port": 8443,
-      "uuid": "e57de345-cc46-4e70-88d6-053d57085857",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "gPaIIv3cDLigMHD-cm9SPvlHJlifMi5nEitdihwuNUM",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
+      "server": "94.249.187.46",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "IXa3ylzS_jBOAsQy071tIQ"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02",
+      "server": "31.130.149.165",
+      "server_port": 875,
+      "uuid": "4a9d6057-985a-4531-851c-5b4db77b0409"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 俄罗斯 (Russia) 01"
+        "🇷🇺 俄罗斯 (Russia) 01",
+        "🇷🇺 俄罗斯 (Russia) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 俄罗斯 (Russia) 01"
+        "🇷🇺 俄罗斯 (Russia) 01",
+        "🇷🇺 俄罗斯 (Russia) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

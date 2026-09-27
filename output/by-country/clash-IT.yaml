@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01
+  server: 31.77.154.14
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
+  tls: true
+  reality-opts:
+    public-key: 3O__mdy-whzI07V-QEyR6GQnag1FNwtHijDxt2_jkDQ
+  servername: swscan.apple.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇮🇹 意大利 (Italy) 02
   server: 82.118.16.187
   port: 443
   udp: true
@@ -23,11 +37,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇹 意大利 (Italy) 01
+  - 🇮🇹 意大利 (Italy) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇹 意大利 (Italy) 01
+  - 🇮🇹 意大利 (Italy) 02
 rules:
 - MATCH,PROXIES

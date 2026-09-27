@@ -6,27 +6,35 @@ log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
   server: 94.183.170.65
+  port: 8081
+  udp: true
+  type: vless
+  uuid: e60bc99b-6630-4799-af84-f90ebdc643b6
+  network: ws
+  ws-opts:
+    path: /ws/generate
+    headers:
+      Host: hys2.arkonsoft.top
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
+  server: 94.183.170.65
   port: 443
   udp: true
   type: hysteria2
   password: e60bc99b-6630-4799-af84-f90ebdc643b6
   sni: hys2.arkonsoft.top
   skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
-  server: www.speedtest.net
-  port: 443
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03
+  server: 93.89.220.7
+  port: 8443
   udp: true
   type: vless
-  uuid: a88e61a0-2b38-f6df-c5c7-d20600000000
+  uuid: 6eefb4c5-96c2-4b41-a8e3-3dd13e8e09d0
   tls: true
-  servername: netlivpn5002.whwbbb.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn5002.whwbbb.workers.dev
+  reality-opts:
+    public-key: GzQr6fDhigtRAr0n2Y7Nk3snhdytYyOvaYo9zYe1Xn4
+    short-id: b3a1cc510a2001c6
+  servername: eh.vk.com
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,6 +42,7 @@ proxy-groups:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +50,6 @@ proxy-groups:
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03
 rules:
 - MATCH,PROXIES

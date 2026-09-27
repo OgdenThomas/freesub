@@ -5,56 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 185.62.1.8
-  port: 8118
-  udp: true
-  type: vless
-  uuid: eea1c59d-70fd-4829-8ed7-21ddfe55a0da
-  tls: true
-  reality-opts:
-    public-key: LjAkLizwkZf35ObrUMFZ22UHXTEJzpgcTvHk9AuzcUM
-  servername: play.googleapis.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
-  server: lineartronic-ii.subaru-volga.com
+  server: 82.118.22.161
   port: 443
   udp: true
   type: vless
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Fy5oUXHjwXPsnyRzZAHohjOd4dYkDj9mlIhr-Xh6tTc
-    short-id: 6fddaa
-  servername: lineartronic-ii.subaru-volga.com
-  client-fingerprint: random
-- name: 🇵🇱 波兰 (Poland) 03 R42
-  server: 188.114.96.19
-  port: 80
-  udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03 R42
 rules:
 - MATCH,PROXIES

@@ -5,30 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 201.51.3.184
-  port: 8443
+  server: 94.249.187.46
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 31.130.149.165
+  port: 875
   udp: true
   type: vless
-  uuid: e57de345-cc46-4e70-88d6-053d57085857
-  tls: true
-  reality-opts:
-    public-key: gPaIIv3cDLigMHD-cm9SPvlHJlifMi5nEitdihwuNUM
-  servername: eh.vk.ru
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+  uuid: 4a9d6057-985a-4531-851c-5b4db77b0409
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
 rules:
 - MATCH,PROXIES
