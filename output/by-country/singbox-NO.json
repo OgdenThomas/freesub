@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇦🇹 奥地利 (Austria) 01",
-      "server": "86.106.119.23",
-      "server_port": 443,
-      "password": "600421cf-11d7-429f-a65b-c30397f1bc03",
-      "tls": {
-        "enabled": true,
-        "server_name": "gr.freeguard.org",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇳🇴 挪威 (Norway) 01",
+      "server": "139.100.236.74",
+      "server_port": 1,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WxYpOK1iPSJySbVNMMJDtw"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇳🇴 挪威 (Norway) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇳🇴 挪威 (Norway) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

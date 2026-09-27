@@ -19,17 +19,47 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: update
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: 185.227.154.226
+  port: 443
+  udp: true
+  type: vless
+  uuid: b0e3d7fe-0ff5-470d-9c69-4f624a35d683
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qxcpzDbypXaxsvsvzvebnyHxc0BTQdz7LvIkBXZ0TUc
+    short-id: 3246e72c
+  servername: www.samsung.com
+  client-fingerprint: safari
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 43.155.230.167
+  port: 443
+  udp: true
+  type: vless
+  uuid: ea833f3a-4a7a-4978-b5a9-a22e446f0a81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: B8RE9fNqS0eV7jXJcjQNuk4H4skMAa-0nQZ4orb5sCc
+    short-id: abcdef01
+  servername: www.bing.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 rules:
 - MATCH,PROXIES

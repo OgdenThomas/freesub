@@ -6,23 +6,78 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "zadgvmrlaa0b.dopwiz.com",
-      "server_port": 8080,
-      "uuid": "c1dad5ee-7c53-47de-8280-db5e99cf052e"
+      "server": "104.25.22.24",
+      "server_port": 443,
+      "uuid": "e6cc4788-3c45-4df1-94f3-8303504a65bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "khoda.ak-khoda.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sync",
+        "headers": {
+          "Host": "khoda.ak-khoda.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02",
+      "server": "lineartronic-ii.subaru-volga.com",
+      "server_port": 443,
+      "uuid": "6db6b948-655f-4f68-a9e7-865050e05b31",
+      "tls": {
+        "enabled": true,
+        "server_name": "lineartronic-ii.subaru-volga.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Fy5oUXHjwXPsnyRzZAHohjOd4dYkDj9mlIhr-Xh6tTc",
+          "short_id": "6fddaa"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 03 R42",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01"
+        "🇵🇱 波兰 (Poland) 01",
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03 R42"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01"
+        "🇵🇱 波兰 (Poland) 01",
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03 R42"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

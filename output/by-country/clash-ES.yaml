@@ -17,30 +17,17 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02
-  server: madridsp.banibus.ir
-  port: 8118
-  udp: true
-  type: vless
-  uuid: eea1c59d-70fd-4829-8ed7-21ddfe55a0da
-  tls: true
-  reality-opts:
-    public-key: LjAkLizwkZf35ObrUMFZ22UHXTEJzpgcTvHk9AuzcUM
-  servername: play.googleapis.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
-  - 🇪🇸 西班牙 (Spain) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
-  - 🇪🇸 西班牙 (Spain) 02
 rules:
 - MATCH,PROXIES

@@ -6,12 +6,58 @@
     {
       "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01",
-      "server": "104.143.223.59",
-      "server_port": 2085,
-      "uuid": "6864bd16-f8bb-457c-a191-dca5b80ca32a",
+      "server": "104.20.6.153",
+      "server_port": 8880,
+      "uuid": "a22bff60-a40a-4250-bde2-4c660e363b47",
       "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+        "type": "ws",
+        "path": "/j100sy9wn073cxbvir",
+        "headers": {
+          "Host": "index.harmonica02.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 02",
+      "server": "162.159.153.4",
+      "server_port": 443,
+      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
+      "tls": {
+        "enabled": true,
+        "server_name": "rayan-007.maxima.dpdns.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "rayan-007.maxima.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 03",
+      "server": "151.241.138.44",
+      "server_port": 443,
+      "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "condropolo.ggisopi.su",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
+          "short_id": ""
+        }
       }
     },
     {
@@ -19,14 +65,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01"
+        "🇦🇪 阿联酋 (UAE) 01",
+        "🇦🇪 阿联酋 (UAE) 02",
+        "🇦🇪 阿联酋 (UAE) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01"
+        "🇦🇪 阿联酋 (UAE) 01",
+        "🇦🇪 阿联酋 (UAE) 02",
+        "🇦🇪 阿联酋 (UAE) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

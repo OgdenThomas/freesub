@@ -5,12 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 82.47.63.156
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -23,6 +17,19 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: trn5.mobileemdad.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 412301b2-8715-4afd-b2f0-9768c63669f2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    short-id: 070a23aed243
+  servername: delivery.mp.microsoft.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select

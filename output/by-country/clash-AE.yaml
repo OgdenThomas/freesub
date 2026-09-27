@@ -5,25 +5,58 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 104.143.223.59
-  port: 2085
+  server: 104.20.6.153
+  port: 8880
   udp: true
   type: vless
-  uuid: 6864bd16-f8bb-457c-a191-dca5b80ca32a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  network: ws
+  ws-opts:
+    path: /j100sy9wn073cxbvir
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: 162.159.153.4
+  port: 443
+  udp: true
+  type: vless
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rayan-007.maxima.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: 🇦🇪 阿联酋 (UAE) 03
+  server: 151.241.138.44
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: condropolo.ggisopi.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
+  - 🇦🇪 阿联酋 (UAE) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
+  - 🇦🇪 阿联酋 (UAE) 03
 rules:
 - MATCH,PROXIES
