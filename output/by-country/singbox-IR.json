@@ -1,0 +1,45 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇷 IR 01",
+      "server": "afra4.nimbaha9.ir",
+      "server_port": 2052,
+      "uuid": "e0ff8a9b-dad3-4671-baf4-c8d466d1eb48",
+      "transport": {
+        "type": "ws",
+        "path": "/eyurri",
+        "headers": {
+          "Host": "afra4.nimbaha9.ir"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇷 IR 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇷 IR 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

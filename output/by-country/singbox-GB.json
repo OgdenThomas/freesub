@@ -4,24 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 01",
-      "server": "144.24.227.214",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "ngEu2MRJXDGlSxpTvPyLdOG64A9jtECl4AR1uHXP2So="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 02",
-      "server": "144.24.224.133",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "/Y28XsDfiP+fi4Refwdekr6F67d7EgGeA7F2lP+T31o="
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 R40",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 R40",
       "server": "23.81.34.204",
       "server_port": 443,
       "uuid": "99955907-9070-46f0-a200-9c7a0b9d74fe",
@@ -31,7 +15,7 @@
         "server_name": "speed.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -42,7 +26,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
       "server": "31.76.7.154",
       "server_port": 7443,
       "uuid": "d7cad038-0c3f-4cce-8f8a-36464aaf66c0",
@@ -52,7 +36,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -63,31 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05",
-      "server": "176.123.162.100",
-      "server_port": 9880,
-      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
-      "tls": {
-        "enabled": true,
-        "server_name": "dl.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
-          "short_id": "aabb"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-tunnel"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 06",
+      "tag": "🇬🇧 英国 (United Kingdom) 03",
       "server": "31.76.62.32",
       "server_port": 443,
       "uuid": "8e66d40e-6f62-4243-a7d8-ebe83e4c2e77",
@@ -107,44 +67,36 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇬🇧 英国 (United Kingdom) 07 R44",
-      "server": "186.190.211.67",
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04",
+      "server": "95.85.224.51",
       "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
+      "uuid": "342ab7e4-5a89-0001-8809-304120d4aa83",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pahobac.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "pahobac.org"
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc",
+          "short_id": "a696de84963656de"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 08",
-      "server": "13.143.193.156",
+      "type": "hysteria2",
+      "tag": "🇬🇧 英国 (United Kingdom) 05",
+      "server": "se1.chromevpn.cc",
       "server_port": 443,
-      "uuid": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
-      "flow": "xtls-rprx-vision",
+      "password": "02bd8b5a-170b-4a79-8e68-9cec710272c7",
       "tls": {
         "enabled": true,
-        "server_name": "nl2.gursub.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ltHl15Wq549qC2JdAtesy-POs6Hwm_BbrlzuwDkWoUk",
-          "short_id": "a1b2c3d4e5f6a1b2"
-        }
+        "server_name": "se1.chromevpn.cc",
+        "insecure": false
       }
     },
     {
@@ -152,28 +104,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 01 R40",
         "🇬🇧 英国 (United Kingdom) 02",
-        "🇬🇧 英国 (United Kingdom) 03 R40",
+        "🇬🇧 英国 (United Kingdom) 03",
         "🇬🇧 英国 (United Kingdom) 04",
-        "🇬🇧 英国 (United Kingdom) 05",
-        "🇬🇧 英国 (United Kingdom) 06",
-        "🇬🇧 英国 (United Kingdom) 07 R44",
-        "🇬🇧 英国 (United Kingdom) 08"
+        "🇬🇧 英国 (United Kingdom) 05"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 01 R40",
         "🇬🇧 英国 (United Kingdom) 02",
-        "🇬🇧 英国 (United Kingdom) 03 R40",
+        "🇬🇧 英国 (United Kingdom) 03",
         "🇬🇧 英国 (United Kingdom) 04",
-        "🇬🇧 英国 (United Kingdom) 05",
-        "🇬🇧 英国 (United Kingdom) 06",
-        "🇬🇧 英国 (United Kingdom) 07 R44",
-        "🇬🇧 英国 (United Kingdom) 08"
+        "🇬🇧 英国 (United Kingdom) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

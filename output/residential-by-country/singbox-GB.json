@@ -4,23 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 01",
-      "server": "bg.masterpgd.com",
-      "server_port": 6016,
-      "uuid": "1cc6bd10-e414-4171-9220-09aaba23a6fa",
-      "flow": "xtls-rprx-vision",
+      "type": "trojan",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 (家宽)",
+      "server": "199.232.78.188",
+      "server_port": 443,
+      "password": "MiTiVPN",
       "tls": {
         "enabled": true,
-        "server_name": "play.google.com",
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ZqviTSUKpqxl9htoEiix8iIH3lRB6ahvw00btl-HOSk",
-          "short_id": "1779b108c9eb4da7"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "mitivpn---gb--s---mitivpn-1.global.ssl.fastly.net"
         }
       }
     },
@@ -29,14 +33,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 保加利亚 (Bulgaria) 01"
+        "🇬🇧 英国 (United Kingdom) 01 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 保加利亚 (Bulgaria) 01"
+        "🇬🇧 英国 (United Kingdom) 01 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

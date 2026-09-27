@@ -4,20 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01
-  server: 54.36.174.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇫🇷 法国 (France) 02
-  server: 13.36.157.66
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 03 R42
+- name: 🇫🇷 法国 (France) 01 R42
   server: 137.74.16.237
   port: 443
   udp: true
@@ -29,15 +16,22 @@ proxies:
     public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
     short-id: b390e0a721d242b0
   servername: www.icloud.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
+  client-fingerprint: random
+- name: 🇫🇷 法国 (France) 02
   server: 54.36.174.140
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇫🇷 法国 (France) 05
+- name: 🇫🇷 法国 (France) 03
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 04
   server: paris.nerabotaet.com
   port: 443
   udp: true
@@ -45,8 +39,8 @@ proxies:
   password: 2561c6b1a3069d3170b4d7e1ecc08c65
   sni: paris.nerabotaet.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 06 R50
-  server: 185.220.100.168
+- name: 🇫🇷 法国 (France) 05
+  server: 45.205.0.6
   port: 443
   udp: true
   type: trojan
@@ -56,8 +50,8 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 07
-  server: 185.171.202.106
+- name: 🇫🇷 法国 (France) 06
+  server: fra2.loozerp.wiki
   port: 443
   udp: true
   type: vless
@@ -69,69 +63,27 @@ proxies:
     short-id: ff776ff77be48b88
   servername: fra2.loozerp.wiki
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 08
-  server: 45.87.41.18
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 09
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 10 R50
-  server: www.large-files.info
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-  tls: true
-  servername: www.large-files.info
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 R42
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R42
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R50
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R50
+  - 🇫🇷 法国 (France) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 R42
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R42
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R50
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R50
+  - 🇫🇷 法国 (France) 06
 rules:
 - MATCH,PROXIES
