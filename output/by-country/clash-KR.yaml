@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: kr2-r.link-t7.com
-  port: 10047
-  udp: true
-  type: vless
-  uuid: 58C828CD-3EBA-46F9-B297-16003D7A6E68
-  tls: true
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  servername: s0.awsstatic.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: update
-- name: 🇰🇷 韩国 (South Korea) 02
   server: 185.227.154.226
   port: 443
   udp: true
@@ -31,35 +16,18 @@ proxies:
     public-key: qxcpzDbypXaxsvsvzvebnyHxc0BTQdz7LvIkBXZ0TUc
     short-id: 3246e72c
   servername: www.samsung.com
-  client-fingerprint: safari
-- name: 🇰🇷 韩国 (South Korea) 03
-  server: 43.155.230.167
-  port: 443
-  udp: true
-  type: vless
-  uuid: ea833f3a-4a7a-4978-b5a9-a22e446f0a81
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: B8RE9fNqS0eV7jXJcjQNuk4H4skMAa-0nQZ4orb5sCc
-    short-id: abcdef01
-  servername: www.bing.com
-  client-fingerprint: firefox
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
 rules:
 - MATCH,PROXIES
