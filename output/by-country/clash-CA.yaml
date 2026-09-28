@@ -11,7 +11,15 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇨🇦 加拿大 (Canada) 02 R55
+- name: 🇨🇦 加拿大 (Canada) 02 ⚠R
+  server: 198.57.27.190
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 03 R55
   server: 172.105.17.84
   port: 50181
   udp: true
@@ -24,7 +32,7 @@ proxies:
     short-id: ae5e3d8a99373629
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03 R55
+- name: 🇨🇦 加拿大 (Canada) 04 R55
   server: 172.105.20.134
   port: 27204
   udp: true
@@ -37,39 +45,33 @@ proxies:
     short-id: 4c1d
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 04 R57
-  server: 158.51.121.123
+- name: 🇨🇦 加拿大 (Canada) 05 R57
+  server: 172.67.75.248
   port: 443
   udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: mygptagent.org
+  type: trojan
+  password: blue2024
+  sni: ha.lii2010.us.kg
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: mygptagent.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02 R55
+  - 🇨🇦 加拿大 (Canada) 02 ⚠R
   - 🇨🇦 加拿大 (Canada) 03 R55
-  - 🇨🇦 加拿大 (Canada) 04 R57
+  - 🇨🇦 加拿大 (Canada) 04 R55
+  - 🇨🇦 加拿大 (Canada) 05 R57
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R56
-  - 🇨🇦 加拿大 (Canada) 02 R55
+  - 🇨🇦 加拿大 (Canada) 02 ⚠R
   - 🇨🇦 加拿大 (Canada) 03 R55
-  - 🇨🇦 加拿大 (Canada) 04 R57
+  - 🇨🇦 加拿大 (Canada) 04 R55
+  - 🇨🇦 加拿大 (Canada) 05 R57
 rules:
 - MATCH,PROXIES

@@ -4,8 +4,37 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 01",
+      "server": "43.201.7.214",
+      "server_port": 8443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2db985f6-21bf-40c2-a4f1-4ce2cf90b1c2"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 02",
+      "server": "43.201.7.214",
+      "server_port": 443,
+      "uuid": "2db985f6-21bf-40c2-a4f1-4ce2cf90b1c2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "V8gB7kNgviK7fjn_bLWbqjQ2oMmx-YyG4Vk_Lz0VOhk",
+          "short_id": "7b536e728f958e3b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 03",
       "server": "kr2-r.link-t7.com",
       "server_port": 10047,
       "uuid": "58C828CD-3EBA-46F9-B297-16003D7A6E68",
@@ -32,14 +61,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

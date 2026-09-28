@@ -5,6 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: 43.201.7.214
+  port: 8443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 2db985f6-21bf-40c2-a4f1-4ce2cf90b1c2
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: 43.201.7.214
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2db985f6-21bf-40c2-a4f1-4ce2cf90b1c2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: V8gB7kNgviK7fjn_bLWbqjQ2oMmx-YyG4Vk_Lz0VOhk
+    short-id: 7b536e728f958e3b
+  servername: www.bing.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03
   server: kr2-r.link-t7.com
   port: 10047
   udp: true
@@ -25,11 +45,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 rules:
 - MATCH,PROXIES
