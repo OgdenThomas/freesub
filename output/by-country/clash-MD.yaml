@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01
-  server: 131.123.41.223
+- name: 🇲🇩 摩尔多瓦 (Moldova) 01
+  server: md.dendiboss.org
   port: 443
   udp: true
   type: vless
-  uuid: 33e8bd3a-26f0-4e57-bc27-e5552a81c880
+  uuid: 8d2341a3-13b8-4e5e-84e1-da1c4923149a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dsyxDiVtAFRjKOqLdqof2SuygewTO-EWTd34Jk1YYVo
-    short-id: e9433de76a53573b
-  servername: bulgaria.stream-live.ru
-  client-fingerprint: chrome
+    public-key: PQm4_ELMk_t2_-78lisq7Pt3aal3IVaC519prE_-Fh8
+    short-id: 9c2378562188c3cb
+  servername: md.dendiboss.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇲🇩 摩尔多瓦 (Moldova) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01
+  - 🇲🇩 摩尔多瓦 (Moldova) 01
 rules:
 - MATCH,PROXIES

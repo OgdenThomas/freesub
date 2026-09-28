@@ -5,46 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 18.183.215.124
-  port: 28573
-  udp: true
-  type: vless
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  servername: www.sony.com
-  client-fingerprint: edge
-- name: 🇯🇵 日本 (Japan) 02
-  server: 45.202.255.24
-  port: 8890
-  udp: true
-  type: vless
-  uuid: 45d87ca1-d006-44ac-b62a-cb03d04c7130
-  tls: true
-  reality-opts:
-    public-key: DcHXqq0OOR8N-bd92fSrMjy2yrcAsG1Es7PesCOc7gc
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇯🇵 日本 (Japan) 03
-  server: 43.133.11.187
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
-    short-id: 913e9b95fbc71278
-  servername: cloudflare.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 04
   server: jumpernode.online
   port: 443
   udp: true
@@ -57,7 +17,33 @@ proxies:
     short-id: 6d962e8d8a0dce
   servername: amazon.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05
+- name: 🇯🇵 日本 (Japan) 02
+  server: 43.133.11.187
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4192524f-09f0-414f-88fd-7a14378491c7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
+    short-id: 913e9b95fbc71278
+  servername: cloudflare.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 03
+  server: 64.176.51.214
+  port: 23462
+  udp: true
+  type: vmess
+  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /a15206
+    headers:
+      Host: 64.176.51.214
+- name: 🇯🇵 日本 (Japan) 04
   server: open.w2m.ink
   port: 443
   udp: true
@@ -65,6 +51,19 @@ proxies:
   password: my_super_password_123
   sni: open.w2m.ink
   skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 05
+  server: 18.183.215.124
+  port: 28573
+  udp: true
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: firefox
 - name: 🇯🇵 日本 (Japan) 06
   server: vp3.yysyy.online
   port: 443
@@ -74,18 +73,34 @@ proxies:
   sni: vp3.yysyy.online
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 07
-  server: 45.202.254.20
-  port: 9443
+  server: 162.159.135.1
+  port: 443
   udp: true
   type: vless
-  uuid: 966990b5-5868-4af1-add6-011c72b4a443
-  flow: xtls-rprx-vision
+  uuid: bb1be788-6b00-47c8-a96e-c828f3a33de4
   tls: true
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  servername: www.amazon.com
+  servername: d3b866e4.69lover.site
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v2/671d8a5bccaf636f/stream
+    headers:
+      Host: d3b866e4.69lover.site
+- name: 🇯🇵 日本 (Japan) 08
+  server: 104.16.10.135
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -98,6 +113,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
+  - 🇯🇵 日本 (Japan) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -110,5 +126,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
+  - 🇯🇵 日本 (Japan) 08
 rules:
 - MATCH,PROXIES

@@ -4,73 +4,17 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "222.167.248.157",
-      "server_port": 443,
-      "uuid": "7013d889-14f4-4475-a5ff-a5ecd992b522",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇵🇱 波兰 (Poland) 03",
-      "server": "188.225.78.31",
-      "server_port": 2053,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "g4h/AcJh1+jg9+yonlMK4Wq7fhbFY3NkcOzUVlZ9GjU="
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 04",
-      "server": "222.167.248.156",
-      "server_port": 443,
-      "uuid": "7013d889-14f4-4475-a5ff-a5ecd992b522",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU",
-          "short_id": ""
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 01 R42",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
         }
       }
     },
@@ -79,20 +23,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04"
+        "🇵🇱 波兰 (Poland) 01 R42"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04"
+        "🇵🇱 波兰 (Poland) 01 R42"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

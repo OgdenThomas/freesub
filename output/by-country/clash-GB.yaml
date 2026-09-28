@@ -4,19 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R55
-  server: 178.79.131.26
+- name: 🇬🇧 英国 (United Kingdom) 01 R54
+  server: discard.denditop.site
   port: 443
   udp: true
   type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  uuid: 8d2341a3-13b8-4e5e-84e1-da1c4923149a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: UvN2oqI7DGQUEB8VrOZ9c5eXs2EuEQAgAa5IyTuRcCU
-    short-id: 3436aa2833db50fa
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: u75rw8LKDTUdcmVPFVVTKV0TxvH39Fl0WJ8crbjegxk
+    short-id: bc609efa3b2d052f
+  servername: discard.denditop.site
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 02 R55
   server: 178.79.129.203
   port: 54865
@@ -29,8 +29,21 @@ proxies:
     public-key: frK9LTk4kF7lh4-ZVCuHCQm87Oy6uboRtoS-o6Fb6WE
     short-id: '7436'
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 03 R40
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03 R55
+  server: 178.79.131.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: UvN2oqI7DGQUEB8VrOZ9c5eXs2EuEQAgAa5IyTuRcCU
+    short-id: 3436aa2833db50fa
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 04 R40
   server: 23.81.34.204
   port: 443
   udp: true
@@ -43,8 +56,8 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 168.222.194.138
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 176.123.162.100
   port: 9880
   udp: true
   type: vless
@@ -52,25 +65,12 @@ proxies:
   tls: true
   reality-opts:
     public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aa
+    short-id: aabb
   servername: dl.google.com
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-tunnel
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 06 R44
   server: 186.190.211.67
   port: 443
@@ -92,10 +92,10 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R55
+  - 🇬🇧 英国 (United Kingdom) 01 R54
   - 🇬🇧 英国 (United Kingdom) 02 R55
-  - 🇬🇧 英国 (United Kingdom) 03 R40
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 03 R55
+  - 🇬🇧 英国 (United Kingdom) 04 R40
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06 R44
 - name: AUTO
@@ -103,10 +103,10 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R55
+  - 🇬🇧 英国 (United Kingdom) 01 R54
   - 🇬🇧 英国 (United Kingdom) 02 R55
-  - 🇬🇧 英国 (United Kingdom) 03 R40
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 03 R55
+  - 🇬🇧 英国 (United Kingdom) 04 R40
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06 R44
 rules:
