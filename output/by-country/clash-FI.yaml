@@ -5,30 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 95.217.24.236
-  port: 2087
+  server: 87.120.107.246
+  port: 443
   udp: true
   type: vless
-  uuid: 10d85f65-f8d6-4504-b1e2-94649db1577a
-  flow: xtls-rprx-vision
+  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
   tls: true
   reality-opts:
-    public-key: KN8tFlpIwPgJGwUCG7Pp9c9c0juYKPvNIv4kFHwqbyk
-    short-id: a32cfb5deca913ad
-  servername: 62.238.41.21
-  client-fingerprint: chrome
+    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
+    short-id: fd4f9db207ff64db
+  servername: dl.google.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel_nl
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 144.31.27.215
-  port: 43000
+  server: 213.108.23.184
+  port: 443
   udp: true
   type: vless
-  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  uuid: 5cd8e5fe-7595-4387-95f9-79b0f18eb125
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
-    short-id: 568d87a47271344e
-  servername: 144.31.27.215
+    public-key: tW28ur4PP6lSr5XeKLu1njwm_W2Cv83EOoBaMn7ivVg
+    short-id: a1b2c3d4
+  servername: www.fi.forge-relay.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 03
   server: 153.52.117.131
@@ -43,6 +45,14 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 144.31.212.253
+  port: 443
+  udp: true
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +61,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +70,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

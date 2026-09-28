@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
+  server: static.responsiblecare.uk
+  port: 443
+  udp: true
+  type: vless
+  uuid: ae0d0211-b7dc-461d-9d41-1eb224876f30
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
+    short-id: d38eea587f1a4f68
+  servername: static.responsiblecare.uk
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 02
   server: 85.204.107.175
   port: 8080
   udp: true
@@ -18,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

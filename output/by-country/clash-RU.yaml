@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 176.32.35.2
+  port: 10090
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 895b4b796a357570
+- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 147.45.46.3
   port: 443
   udp: true
@@ -16,20 +23,18 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: sellflow.org
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 94.249.187.46
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: IXa3ylzS_jBOAsQy071tIQ
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 176.32.35.2
-  port: 10090
+  server: 45.151.71.27
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 895b4b796a357570
+  type: vless
+  uuid: ce5949b7-5137-4007-8a0a-063aad88b920
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: sellflow.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

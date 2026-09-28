@@ -5,73 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 191.223.214.11
-  port: 8444
+  server: 45.207.157.8
+  port: 9443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 8f69fd5f-92b8-4a96-8471-4e925a4d7698
-- name: 🇭🇰 中国香港 (Hong Kong) 02 R59
-  server: sth.free-outline.giize.com
-  port: 1081
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: v7qnj9jvxtnpmj4l
-- name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: vah4urdzl3jdx5r2.v.3dns.vip
+  type: vless
+  uuid: 966990b5-5868-4af1-add6-011c72b4a443
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 02 R42
+  server: aksai.org
   port: 443
   udp: true
   type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   tls: true
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  servername: aksai.org
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /linkvws
     headers:
-      Host: VAH4URdZL3jDX5r2.v.3dns.vip
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: champion.xn--kivt58h.lol
-  port: 80
-  udp: true
-  type: vless
-  uuid: ed2864f9-37b3-4222-8c54-014aedc400a2
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ak.mcdonaldshamburgergoodgoodgood.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: 2.27.109.179
-  port: 45464
-  udp: true
-  type: trojan
-  password: XuMweB2PWs
-  sni: 2.27.109.179.sslip.io
-  skip-cert-verify: false
+      Host: aksai.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02 R59
-  - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 02 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02 R59
-  - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 02 R42
 rules:
 - MATCH,PROXIES

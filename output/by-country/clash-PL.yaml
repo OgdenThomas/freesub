@@ -5,6 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
+  server: 222.167.248.157
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
+  servername: www.google.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 188.225.78.31
+  port: 2053
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: g4h/AcJh1+jg9+yonlMK4Wq7fhbFY3NkcOzUVlZ9GjU=
+- name: 🇵🇱 波兰 (Poland) 04
   server: 222.167.248.156
   port: 443
   udp: true
@@ -16,27 +48,6 @@ proxies:
     public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
   servername: www.google.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 222.167.248.157
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  servername: www.google.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 64.176.77.202
-  port: 80
-  udp: true
-  type: vless
-  uuid: 2a12a637-2724-4789-a64d-64ebc1b9bbf3
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +56,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -53,5 +65,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

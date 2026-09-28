@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
+      "server": "176.32.35.2",
+      "server_port": 10090,
+      "method": "aes-256-gcm",
+      "password": "895b4b796a357570"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02",
       "server": "147.45.46.3",
       "server_port": 443,
       "uuid": "ce5949b7-5137-4007-8a0a-063aad88b920",
@@ -25,20 +33,25 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02",
-      "server": "94.249.187.46",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "IXa3ylzS_jBOAsQy071tIQ"
-    },
-    {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 03",
-      "server": "176.32.35.2",
-      "server_port": 10090,
-      "method": "aes-256-gcm",
-      "password": "895b4b796a357570"
+      "server": "45.151.71.27",
+      "server_port": 443,
+      "uuid": "ce5949b7-5137-4007-8a0a-063aad88b920",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sellflow.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        }
+      }
     },
     {
       "type": "selector",

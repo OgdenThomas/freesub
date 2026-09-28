@@ -6,12 +6,38 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01",
-      "server": "153.76.185.153",
+      "server": "153.76.185.147",
       "server_port": 3090,
-      "uuid": "3afa6b6d-e8d1-4931-878d-8a28b328256b",
+      "uuid": "dca830a2-3c69-4e1b-bc0b-a2ea22af53ba",
       "transport": {
         "type": "grpc",
         "service_name": "vless"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇿 捷克 (Czech) 02",
+      "server": "172.67.187.87",
+      "server_port": 443,
+      "password": "Telegram_healer_config",
+      "tls": {
+        "enabled": true,
+        "server_name": "bKtF381b04NcHTXkN8TidEzQgF.TCNTH9s31mg1j4TNxLAD62O1s2o.wOrKErS.DEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/JIPAVWGHbaGJWIcEUAFGZIxrVCPW?ed=2560",
+        "headers": {
+          "Host": "bktf381b04nchtxkn8tidezqgf.tcnth9s31mg1j4tnxlad62o1s2o.workers.dev"
+        }
       }
     },
     {
@@ -19,14 +45,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

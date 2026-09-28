@@ -6,42 +6,45 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "95.217.24.236",
-      "server_port": 2087,
-      "uuid": "10d85f65-f8d6-4504-b1e2-94649db1577a",
-      "flow": "xtls-rprx-vision",
+      "server": "87.120.107.246",
+      "server_port": 443,
+      "uuid": "10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2",
       "tls": {
         "enabled": true,
-        "server_name": "62.238.41.21",
+        "server_name": "dl.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "KN8tFlpIwPgJGwUCG7Pp9c9c0juYKPvNIv4kFHwqbyk",
-          "short_id": "a32cfb5deca913ad"
+          "public_key": "20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc",
+          "short_id": "fd4f9db207ff64db"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel_nl"
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02",
-      "server": "144.31.27.215",
-      "server_port": 43000,
-      "uuid": "47f79fc1-0646-40e8-8a58-73e85d183d5a",
+      "server": "213.108.23.184",
+      "server_port": 443,
+      "uuid": "5cd8e5fe-7595-4387-95f9-79b0f18eb125",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "144.31.27.215",
+        "server_name": "www.fi.forge-relay.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg",
-          "short_id": "568d87a47271344e"
+          "public_key": "tW28ur4PP6lSr5XeKLu1njwm_W2Cv83EOoBaMn7ivVg",
+          "short_id": "a1b2c3d4"
         }
       }
     },
@@ -66,13 +69,26 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇫🇮 芬兰 (Finland) 04",
+      "server": "144.31.212.253",
+      "server_port": 443,
+      "password": "cf83b611-6cba-4535-adcb-8da06c6a9146",
+      "tls": {
+        "enabled": true,
+        "server_name": "vps155-edge.kermemehori.ru",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ]
     },
     {
@@ -81,7 +97,8 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

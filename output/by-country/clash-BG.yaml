@@ -5,32 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01
-  server: 108.165.233.223
+  server: 131.123.41.223
   port: 443
   udp: true
   type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000001
-  tls: true
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-- name: 🇧🇬 保加利亚 (Bulgaria) 02
-  server: bg.masterpgd.com
-  port: 6016
-  udp: true
-  type: vless
-  uuid: d207c6c8-a278-487c-b06e-f1fc89304e6d
+  uuid: 33e8bd3a-26f0-4e57-bc27-e5552a81c880
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ZqviTSUKpqxl9htoEiix8iIH3lRB6ahvw00btl-HOSk
-    short-id: 1779b108c9eb4da7
-  servername: play.google.com
+    public-key: dsyxDiVtAFRjKOqLdqof2SuygewTO-EWTd34Jk1YYVo
+    short-id: e9433de76a53573b
+  servername: bulgaria.stream-live.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -38,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02
 rules:
 - MATCH,PROXIES

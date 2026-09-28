@@ -4,24 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇪 瑞典 (Sweden) 01
-  server: 172.238.244.13
-  port: 17000
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇪 瑞典 (Sweden) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 rules:
 - MATCH,PROXIES
