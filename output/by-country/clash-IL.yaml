@@ -6,23 +6,33 @@ log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01
   server: 31.57.185.82
+  port: 41770
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: upFH0BmL9pV55mch4LvbPLe+Mf7vgG0YHGaTOT9gMG0=
+- name: 🇮🇱 以色列 (Israel) 02
+  server: 31.57.185.82
   port: 36969
   udp: true
   type: ss
   cipher: 2022-blake3-aes-256-gcm
   password: 7gbVIgGp+4jQWFQEiTDQ2TPmsDdtUZbEyWOXlM0tPVA=:RKkkOvhasx28UL62ar1lXWNcY9TV4vMRer0iDy/4Rlk=
-- name: 🇮🇱 以色列 (Israel) 02
-  server: 160.153.138.178
-  port: 2053
+- name: 🇮🇱 以色列 (Israel) 03
+  server: 72.4.65.116
+  port: 443
   udp: true
   type: vless
-  uuid: 96a1b724-68d2-4f4d-ab25-38ecd83577bc
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
   tls: true
-  servername: MoPrVjRx73.bRiGhTwAyE.OrG
+  servername: assets-de2.pleiades.codes
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇮🇱 以色列 (Israel) 03
-  server: 193.202.10.137
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇮🇱 以色列 (Israel) 04
+  server: de2.dzvn.space
   port: 2291
   udp: true
   type: vless
@@ -42,6 +52,7 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 01
   - 🇮🇱 以色列 (Israel) 02
   - 🇮🇱 以色列 (Israel) 03
+  - 🇮🇱 以色列 (Israel) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,5 +61,6 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 01
   - 🇮🇱 以色列 (Israel) 02
   - 🇮🇱 以色列 (Israel) 03
+  - 🇮🇱 以色列 (Israel) 04
 rules:
 - MATCH,PROXIES

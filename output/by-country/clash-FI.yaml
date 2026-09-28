@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: iranibestv.pingxoxo.info
-  port: 10210
-  udp: true
-  type: vless
-  uuid: 442581ff-646e-4e99-af3e-a9d9a636a44b
-  tls: true
-  reality-opts:
-    public-key: twRm8a1BBdz2Q5jTuNbXxA7ZdtDPAyQNEycDYkW9DFc
-    short-id: 13121b7150ad7fc6
-  servername: firebaseperusertopics-pa.googleapis.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 144.31.27.215
   port: 43000
   udp: true
@@ -32,6 +17,41 @@ proxies:
     short-id: 568d87a47271344e
   servername: 144.31.27.215
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 95.217.24.236
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 10d85f65-f8d6-4504-b1e2-94649db1577a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: KN8tFlpIwPgJGwUCG7Pp9c9c0juYKPvNIv4kFHwqbyk
+    short-id: a32cfb5deca913ad
+  servername: 62.238.41.21
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 87.120.107.246
+  port: 443
+  udp: true
+  type: vless
+  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
+  tls: true
+  reality-opts:
+    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
+    short-id: fd4f9db207ff64db
+  servername: dl.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel_nl
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 79.175.134.188
+  port: 2050
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 3Q1UUZhdMJ1Xi4V_348v2g
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +59,8 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +68,7 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

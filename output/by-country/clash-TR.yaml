@@ -5,6 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 93.190.8.160
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 52e8bce3-b255-486d-beb2-aa1b549c44b1
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 93.190.8.81
+  port: 3090
+  udp: true
+  type: vless
+  uuid: df95425f-b822-4279-bd97-3699361293dd
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: 93.190.9.52
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 52e8bce3-b255-486d-beb2-aa1b549c44b1
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 04
   server: 78.135.73.47
   port: 443
   udp: true
@@ -23,11 +50,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
 rules:
 - MATCH,PROXIES

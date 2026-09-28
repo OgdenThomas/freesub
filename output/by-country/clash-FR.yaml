@@ -4,7 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R42
+- name: 🇫🇷 法国 (France) 01
+  server: 104.21.31.137
+  port: 443
+  udp: true
+  type: vless
+  uuid: 59c70620-d2f3-4255-9d6f-f4c5103d64ce
+  tls: true
+  servername: 59fssIBE-SDDrRs3qW83QQZz0H1NT-o.q7qwsxItB6BYi5nMTa4naAlz.woRkErs.deV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/FpYFoMlg8sRpgV7SSaOaRYa3fagqGu?ed
+    headers:
+      Host: 59fssibe-sddrrs3qw83qqzz0h1nt-o.q7qwsxitb6byi5nmta4naalz.workers.dev
+- name: 🇫🇷 法国 (France) 02 ⚠R
+  server: 151.101.56.9
+  port: 443
+  udp: true
+  type: trojan
+  password: MiTiVPN
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇫🇷 法国 (France) 03
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 04 R42
   server: 137.74.16.237
   port: 443
   udp: true
@@ -16,41 +49,43 @@ proxies:
     public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
     short-id: b390e0a721d242b0
   servername: www.icloud.com
-  client-fingerprint: random
-- name: 🇫🇷 法国 (France) 02
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇫🇷 法国 (France) 03
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05
   server: 54.36.174.134
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇫🇷 法国 (France) 04
-  server: paris.nerabotaet.com
+- name: 🇫🇷 法国 (France) 06
+  server: 199.232.78.160
   port: 443
   udp: true
-  type: hysteria2
-  password: 2561c6b1a3069d3170b4d7e1ecc08c65
-  sni: paris.nerabotaet.com
+  type: vless
+  uuid: XpnTeam-42
+  tls: true
+  servername: ssl.fastly.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 05
-  server: 45.205.0.6
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 07
+  server: 172.239.19.53
+  port: 56890
+  udp: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: rLwUhSlO07MqPfOOvNjRfmFSHrByCO7r4NpgTt2YkCE
+    short-id: '13500590'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 08
   server: fra2.loozerp.wiki
   port: 443
   udp: true
@@ -63,27 +98,107 @@ proxies:
     short-id: ff776ff77be48b88
   servername: fra2.loozerp.wiki
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 09
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 10
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 12
+  server: paris.nerabotaet.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 2561c6b1a3069d3170b4d7e1ecc08c65
+  sni: paris.nerabotaet.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 13 R53
+  server: v35.hdacd.com
+  port: 30835
+  udp: true
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+- name: 🇫🇷 法国 (France) 14 R50
+  server: 104.20.17.127
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  tls: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R42
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 R42
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13 R53
+  - 🇫🇷 法国 (France) 14 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R42
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 R42
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13 R53
+  - 🇫🇷 法国 (France) 14 R50
 rules:
 - MATCH,PROXIES

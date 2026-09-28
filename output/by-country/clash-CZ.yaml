@@ -4,28 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 (家宽)
-  server: 199.232.78.188
+- name: 🇨🇿 捷克 (Czech) 01
+  server: open-39.avl-a47261.workers.dev
   port: 443
   udp: true
   type: trojan
-  password: MiTiVPN
-  sni: ssl.fastly.com
+  password: f88f080e9b4f66c6
+  sni: Open-39.AVL-a47261.WorKErS.DeV
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /
+    path: /tr/SpBOfUvsW3IMjIayEnU4fVTehv9gf4?ed=2560
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 (家宽)
+  - 🇨🇿 捷克 (Czech) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 (家宽)
+  - 🇨🇿 捷克 (Czech) 01
 rules:
 - MATCH,PROXIES
