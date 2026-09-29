@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "93.190.8.89",
+      "server": "93.190.8.84",
       "server_port": 3090,
-      "uuid": "7809f866-9f42-43ae-ae11-34729db23236",
+      "uuid": "d0054d2b-3fea-486e-9592-ea6ce8d7b380",
       "transport": {
         "type": "grpc",
         "service_name": "vless"
@@ -17,22 +17,12 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02",
-      "server": "78.135.73.47",
-      "server_port": 443,
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.datadoghq.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
-          "short_id": "f46cd3ea3d1eb72d"
-        }
+      "server": "93.190.9.38",
+      "server_port": 3090,
+      "uuid": "d0054d2b-3fea-486e-9592-ea6ce8d7b380",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
       }
     },
     {
@@ -57,13 +47,71 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04",
+      "server": "78.135.73.47",
+      "server_port": 443,
+      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.datadoghq.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
+          "short_id": "f46cd3ea3d1eb72d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 05",
+      "server": "myda06.api3-max.ru",
+      "server_port": 443,
+      "uuid": "cdd6bfce-781a-4454-b7d5-4778abb5c24f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "myda06.api3-max.ru",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 06",
+      "server": "myda08.api3-max.ru",
+      "server_port": 443,
+      "uuid": "cdd6bfce-781a-4454-b7d5-4778abb5c24f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "myda08.api3-max.ru",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01",
         "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04",
+        "🇹🇷 土耳其 (Turkey) 05",
+        "🇹🇷 土耳其 (Turkey) 06"
       ]
     },
     {
@@ -72,7 +120,10 @@
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01",
         "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04",
+        "🇹🇷 土耳其 (Turkey) 05",
+        "🇹🇷 土耳其 (Turkey) 06"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

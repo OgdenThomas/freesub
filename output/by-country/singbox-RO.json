@@ -15,7 +15,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +25,32 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 02",
+      "server": "77.74.123.98",
+      "server_port": 8443,
+      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tls": {
+        "enabled": true,
+        "server_name": "grape-test-italy.dynuddns.net",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇴 罗马尼亚 (Romania) 01"
+        "🇷🇴 罗马尼亚 (Romania) 01",
+        "🇷🇴 罗马尼亚 (Romania) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇴 罗马尼亚 (Romania) 01"
+        "🇷🇴 罗马尼亚 (Romania) 01",
+        "🇷🇴 罗马尼亚 (Romania) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

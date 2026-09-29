@@ -5,23 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01",
-      "server": "92.118.127.16",
+      "tag": "🇪🇸 西班牙 (Spain) 01 R50",
+      "server": "193.238.154.5",
       "server_port": 443,
-      "uuid": "2412bd96-925b-43f2-81d1-0ed4f0793699",
-      "flow": "xtls-rprx-vision",
+      "uuid": "e0b9fb0f-1bbd-478b-9580-c2294778338b",
       "tls": {
         "enabled": true,
-        "server_name": "sp1.extremumnews.com",
+        "server_name": "assets-es.pleiades.codes",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Rz8XjYinCcpE7NLktJzNFL7eVSUxaFGuV2Zz82p7IRg",
-          "short_id": "908563a721d9bdcd"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
       }
     },
     {
@@ -46,43 +45,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 03",
-      "server": "sp66.mech-pro.online",
-      "server_port": 443,
-      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sp66.mech-pro.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI",
-          "short_id": "16e0f049"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01",
-        "🇪🇸 西班牙 (Spain) 02",
-        "🇪🇸 西班牙 (Spain) 03"
+        "🇪🇸 西班牙 (Spain) 01 R50",
+        "🇪🇸 西班牙 (Spain) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01",
-        "🇪🇸 西班牙 (Spain) 02",
-        "🇪🇸 西班牙 (Spain) 03"
+        "🇪🇸 西班牙 (Spain) 01 R50",
+        "🇪🇸 西班牙 (Spain) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

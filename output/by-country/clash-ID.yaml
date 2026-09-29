@@ -4,30 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
-  server: 95.85.241.239
+- name: 🇮🇩 印尼 (Indonesia) 01 R55
+  server: 172.235.246.215
   port: 443
   udp: true
   type: vless
-  uuid: 78571e63-1236-4c60-862a-70b7624dfa36
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: nf9hAhB_OqveSsgdqqx7EW0FSoT4XNN_EzfD8lXVDVo
-    short-id: a1b2c3d4e5f6
-  servername: originsw239.aktanow.shop
-  client-fingerprint: firefox
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇩 印尼 (Indonesia) 01 R55
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇩 印尼 (Indonesia) 01 R55
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 85.204.107.172
+  server: 104.143.223.83
+  port: 2085
+  udp: true
+  type: vless
+  uuid: d0054d2b-3fea-486e-9592-ea6ce8d7b380
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: 85.204.107.177
   port: 8080
   udp: true
   type: hysteria2
@@ -18,11 +27,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

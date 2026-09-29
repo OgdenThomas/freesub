@@ -5,31 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 2.26.147.118
-  port: 443
+  server: smart.avenone.ir
+  port: 1085
   udp: true
   type: vless
-  uuid: b97e287f-a24e-0021-a103-7e7ecef83139
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
-    short-id: e1f8a3b6
-  servername: www.amd.com
-  client-fingerprint: chrome
+  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 65.109.28.164
+  server: 153.52.117.131
   port: 443
   udp: true
   type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
+  uuid: 3d9daa27-6283-406d-a2d4-c6f22c635a14
   tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
+  servername: fi.astrafic.ru
+  skip-cert-verify: false
   client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc
 - name: 🇫🇮 芬兰 (Finland) 03
   server: 199.232.78.159
   port: 443
@@ -45,18 +38,18 @@ proxies:
     headers:
       Host: looazjboijji.global.ssl.fastly.net.
 - name: 🇫🇮 芬兰 (Finland) 04
-  server: fi.astrafic.ru
+  server: 65.109.28.164
   port: 443
   udp: true
   type: vless
-  uuid: 3d9daa27-6283-406d-a2d4-c6f22c635a14
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
   tls: true
-  servername: fi.astrafic.ru
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless-grpc
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
