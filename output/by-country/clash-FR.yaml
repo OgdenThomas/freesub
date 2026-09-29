@@ -4,7 +4,20 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R42
+- name: 🇫🇷 法国 (France) 01
+  server: 5.135.45.193
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cnFfWexY7c4G6YE97qcgRgk7D28KOVQf7C9ZrOZAKVQ
+    short-id: 9f9941f324addcb5
+  servername: dlcdn.apache.org
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 02 R42
   server: 137.74.16.237
   port: 443
   udp: true
@@ -17,59 +30,47 @@ proxies:
     short-id: b390e0a721d242b0
   servername: www.icloud.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 02
-  server: 172.239.19.53
-  port: 56890
+- name: 🇫🇷 法国 (France) 03 R42
+  server: 113.30.154.65
+  port: 443
   udp: true
   type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  uuid: 550a69ec-fec1-4eca-b939-4ee076875fa8
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: rLwUhSlO07MqPfOOvNjRfmFSHrByCO7r4NpgTt2YkCE
-    short-id: '13500590'
-  servername: www.cloudflare.com
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: sellflow.org
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 03 R50
-  server: 88.216.69.144
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-4d64f1370eeb
-  tls: true
-  servername: r5zenrelur2s.pqzdileiu8es.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/4d64f1370eeb/loc-0
-    headers:
-      Host: r5zenrelur2s.pqzdileiu8es.workers.dev
 - name: 🇫🇷 法国 (France) 04
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 05 R50
-  server: www.large-files.info
-  port: 8443
+  server: fr.api-music-fa.com
+  port: 2053
   udp: true
   type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
   tls: true
-  servername: www.large-files.info
+  servername: fr.api-music-fa.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+- name: 🇫🇷 法国 (France) 05 R41
+  server: 79.137.192.2
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zcA1E7_aUxhHP1B4po52NeviW16smzEqcyb2qiQYaTc
+  servername: cdn.cloudflare.steamstatic.com
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 06
-  server: 45.87.41.18
+  server: 172.64.150.28
   port: 443
   udp: true
   type: trojan
@@ -79,26 +80,22 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 07
-  server: paris.nerabotaet.com
+- name: 🇫🇷 法国 (France) 07 R50
+  server: megariverport-nayab.org
   port: 443
   udp: true
-  type: hysteria2
-  password: 2561c6b1a3069d3170b4d7e1ecc08c65
-  sni: paris.nerabotaet.com
+  type: vless
+  uuid: 39abda72-f5a5-4ede-9862-bbb8109aba73
+  tls: true
+  servername: bkkkl.maxsparkbox-bekhabdg.site
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 08 R50
-  server: 185.220.100.168
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 09
+    path: /baran
+    headers:
+      Host: bkkkl.maxsparkbox-bekhabdg.site
+- name: 🇫🇷 法国 (France) 08
   server: milan.adaspoloandco.com
   port: 8443
   udp: true
@@ -107,6 +104,7 @@ proxies:
   tls: true
   servername: milan.adaspoloandco.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /RoBeRt
@@ -117,28 +115,26 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R42
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R50
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 03 R42
   - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 R50
+  - 🇫🇷 法国 (France) 05 R41
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R50
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 07 R50
+  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R42
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R50
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 03 R42
   - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 R50
+  - 🇫🇷 法国 (France) 05 R41
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R50
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 07 R50
+  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES

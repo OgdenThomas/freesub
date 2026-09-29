@@ -5,19 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 13.230.30.102
-  port: 38830
+  server: 45.202.255.24
+  port: 8890
   udp: true
   type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  uuid: 45d87ca1-d006-44ac-b62a-cb03d04c7130
+  tls: true
+  reality-opts:
+    public-key: DcHXqq0OOR8N-bd92fSrMjy2yrcAsG1Es7PesCOc7gc
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇯🇵 日本 (Japan) 02
+  server: 18.183.215.124
+  port: 28573
+  udp: true
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 5E5p5boHrgCyBlt5qZPX1XozU9I90JoBgS4zmXngllI
-    short-id: ac12ed79
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 02
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: qq
+- name: 🇯🇵 日本 (Japan) 03
   server: 43.133.11.187
   port: 443
   udp: true
@@ -29,15 +43,7 @@ proxies:
     public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
     short-id: 913e9b95fbc71278
   servername: cloudflare.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 03
-  server: open.w2m.ink
-  port: 443
-  udp: true
-  type: hysteria2
-  password: my_super_password_123
-  sni: open.w2m.ink
-  skip-cert-verify: false
+  client-fingerprint: random
 - name: 🇯🇵 日本 (Japan) 04
   server: jumpernode.online
   port: 443
@@ -52,34 +58,21 @@ proxies:
   servername: amazon.com
   client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 05
-  server: 45.202.255.24
-  port: 8890
-  udp: true
-  type: vless
-  uuid: 45d87ca1-d006-44ac-b62a-cb03d04c7130
-  tls: true
-  reality-opts:
-    public-key: DcHXqq0OOR8N-bd92fSrMjy2yrcAsG1Es7PesCOc7gc
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇯🇵 日本 (Japan) 06
-  server: 162.159.254.3
+  server: open.w2m.ink
   port: 443
   udp: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.w2m.ink
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
+- name: 🇯🇵 日本 (Japan) 06
+  server: open.2ml.bid
+  port: 443
+  udp: true
+  type: hysteria2
+  password: my_super_password_123
+  sni: open.2ml.bid
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

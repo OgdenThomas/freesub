@@ -5,7 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 85.204.107.183
+  server: pl.gazladder.work
+  port: 443
+  udp: true
+  type: vless
+  uuid: e9844617-e393-4876-afa7-11859695f4ee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go
+  servername: pl.gazladder.work
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: 85.204.107.173
   port: 8080
   udp: true
   type: hysteria2
@@ -18,11 +30,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

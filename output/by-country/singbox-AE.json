@@ -4,9 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01",
-      "server": "85.204.107.183",
+      "server": "pl.gazladder.work",
+      "server_port": 443,
+      "uuid": "e9844617-e393-4876-afa7-11859695f4ee",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.gazladder.work",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇪 阿联酋 (UAE) 02",
+      "server": "85.204.107.173",
       "server_port": 8080,
       "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
       "tls": {
@@ -20,14 +41,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇪 阿联酋 (UAE) 01"
+        "🇦🇪 阿联酋 (UAE) 01",
+        "🇦🇪 阿联酋 (UAE) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇪 阿联酋 (UAE) 01"
+        "🇦🇪 阿联酋 (UAE) 01",
+        "🇦🇪 阿联酋 (UAE) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

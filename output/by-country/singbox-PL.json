@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01",
+      "server": "31.59.125.75",
+      "server_port": 443,
+      "uuid": "e9844617-e393-4876-afa7-11859695f4ee",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.gazladder.work",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 02",
       "server": "83.168.95.145",
       "server_port": 443,
       "uuid": "82f37352-85e5-49bb-9edc-a80997065659",
@@ -26,7 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02",
+      "tag": "🇵🇱 波兰 (Poland) 03",
       "server": "82.118.22.161",
       "server_port": 443,
       "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
@@ -46,12 +67,29 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 04 R42",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "aed88e79-5762-4d2f-86fa-f438f32a7654",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02"
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03",
+        "🇵🇱 波兰 (Poland) 04 R42"
       ]
     },
     {
@@ -59,7 +97,9 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02"
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03",
+        "🇵🇱 波兰 (Poland) 04 R42"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

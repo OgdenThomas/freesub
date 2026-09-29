@@ -14,14 +14,18 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: '@mehrosabiran'
+    path: /
 - name: 🇩🇪 德国 (Germany) 02
-  server: 130.61.113.67
-  port: 59924
+  server: 199.232.78.101
+  port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: blAJWikPmYuU27XuzkTPQc+WLKHKmK5PluU5rt1miwU=
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
 - name: 🇩🇪 德国 (Germany) 03
   server: 31.76.11.83
   port: 23226
@@ -30,28 +34,41 @@ proxies:
   uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
   alterId: 0
   cipher: auto
-- name: 🇩🇪 德国 (Germany) 04
-  server: netra-85a0ca.shoameni19.workers.dev
+- name: 🇩🇪 德国 (Germany) 04 ⚠R
+  server: 185.177.229.129
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 05
+  server: 130.61.239.221
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: SHqxWT07Pxp6FnJE3d2aP7NuKJoiq7o9OPkXZi9ccZY=
+- name: 🇩🇪 德国 (Germany) 06
+  server: 82.118.19.153
   port: 443
   udp: true
   type: vless
-  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
   tls: true
-  servername: netra-85a0ca.shoameni19.workers.dev
-  skip-cert-verify: false
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui
-    headers:
-      Host: netra-85a0ca.shoameni19.workers.dev
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 07
   server: 31.76.11.83
-  port: 26085
+  port: 26070
   udp: true
   type: vless
   uuid: e676c6c8-44a8-4a1d-82cc-821a1f70f0c0
-- name: 🇩🇪 德国 (Germany) 06
+- name: 🇩🇪 德国 (Germany) 08
   server: 104.194.159.237
   port: 8443
   udp: true
@@ -64,110 +81,7 @@ proxies:
     short-id: 1aec480577a542ee
   servername: github.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 07 R55
-  server: 172.104.237.173
-  port: 20855
-  udp: true
-  type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: c6Pu0_yAYxIrnYjbwIYLsKB_xhcLsk17BgojLeaIvE8
-    short-id: efe9
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 08 R51
-  server: port2.axiomed.ir
-  port: 443
-  udp: true
-  type: vless
-  uuid: b825ccd6-f90c-4273-afe1-7f85b436a4a2
-  tls: true
-  servername: eJtl1LB-mlYxNz0kO5Iz618MOTR0msa.FoRNEwIRAn-1011.WORkeRS.dEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/6ayyVzPLRWVROzJKD82qZxn?ed=2560
-    headers:
-      Host: ejtl1lb-mlyxnz0ko5iz618motr0msa.fornewiran-1011.workers.dev
 - name: 🇩🇪 德国 (Germany) 09
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 10
-  server: 179.254.127.41
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  servername: www.google.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 11
-  server: de5.bexait.ir
-  port: 2434
-  udp: true
-  type: vless
-  uuid: e7361574-73ce-434a-87f8-65f5c1abec76
-  tls: true
-  reality-opts:
-    public-key: yzCvRpbQ-cRePaJAuQkw42_xEf-R860gFsQwoPki2E0
-    short-id: 9de041877612a718
-  servername: icloud.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 12
-  server: p2s1.iranphlox.ir
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 7b215e64-ab2a-43f0-9615-63fe741d32f7
-  tls: true
-  reality-opts:
-    public-key: _IIPXqSIzf3JmMfVPeZcSMhfWBaQ-x0LyqUcCCzdQEM
-    short-id: 4c3b4f8b5541b7d0
-  servername: dynu.com
-  client-fingerprint: qq
-- name: 🇩🇪 德国 (Germany) 13
-  server: 171.22.129.93
-  port: 443
-  udp: true
-  type: vless
-  uuid: 87838381-724e-4637-935a-3c74ad655991
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1mbH_m6yUCtJzgC_f25LOE7nexg7uTQMaUAgIbo_-2s
-    short-id: eaf543e7ff60ea78
-  servername: ae93.layer.tel
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 14
-  server: 13.143.186.29
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3e2591b2-4739-4c59-b540-344f0b6505ac
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: YTO2eLUPj_pLJijheLCvxg3d53o5BTNSjRSpJKCAa3k
-    short-id: f54ec8b46381247f
-  servername: st2.megabitvpn.org
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 15
   server: 91.132.160.209
   port: 443
   udp: true
@@ -180,21 +94,111 @@ proxies:
     short-id: f1004027e382c2fa
   servername: dlcdn.apache.org
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 16
-  server: 176.108.247.104
-  port: 9881
+- name: 🇩🇪 德国 (Germany) 10
+  server: 130.61.45.32
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: YZxVc5sP8MqNhcA45ia3e1WiebiWSSePUk0K4UZF/UE=
+- name: 🇩🇪 德国 (Germany) 11
+  server: germa12.ggisopi.su
+  port: 443
   udp: true
   type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabb
-  servername: dl.google.com
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: germa12.ggisopi.su
   client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+- name: 🇩🇪 德国 (Germany) 12
+  server: de4ht.sublinkplas.ir
+  port: 15694
+  udp: true
+  type: vless
+  uuid: c09da06c-ad4a-4bd9-a483-9cb9216a9ea6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BY0QfaqwH2Kv1WUU584R7NHcm4Z1Praq5YuYGrJ1BkM
+    short-id: 3e5cba1bd6eb6221
+  servername: ajax.googleapis.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 13
+  server: 179.254.127.41
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
+  servername: www.google.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 14
+  server: 171.22.129.93
+  port: 443
+  udp: true
+  type: vless
+  uuid: 87838381-724e-4637-935a-3c74ad655991
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1mbH_m6yUCtJzgC_f25LOE7nexg7uTQMaUAgIbo_-2s
+    short-id: eaf543e7ff60ea78
+  servername: ae93.layer.tel
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 15
+  server: 264572b2539ab597.RaVEnlO.iR
+  port: 8080
+  udp: true
+  type: vless
+  uuid: bb1cb507-6b2a-41ef-8e24-06a422eb7e5a
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
+- name: 🇩🇪 德国 (Germany) 16
+  server: de2ht.sublinkplas.ir
+  port: 15694
+  udp: true
+  type: vless
+  uuid: c09da06c-ad4a-4bd9-a483-9cb9216a9ea6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BY0QfaqwH2Kv1WUU584R7NHcm4Z1Praq5YuYGrJ1BkM
+    short-id: 8101b9ba16eb77c7
+  servername: ajax.googleapis.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 17
+  server: g1p.crocodil.ir
+  port: 15694
+  udp: true
+  type: vless
+  uuid: c09da06c-ad4a-4bd9-a483-9cb9216a9ea6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BY0QfaqwH2Kv1WUU584R7NHcm4Z1Praq5YuYGrJ1BkM
+    short-id: aa74a7a98e86f2ed
+  servername: ajax.googleapis.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 18
+  server: mk-de6.silalink.sbs
+  port: 443
+  udp: true
+  type: vless
+  uuid: 25c4da6c-51d2-4189-a40b-ca26a1612aef
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mk-de6.silalink.sbs
+  skip-cert-verify: false
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
@@ -203,11 +207,11 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 04 ⚠R
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07 R55
-  - 🇩🇪 德国 (Germany) 08 R51
+  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
@@ -216,6 +220,8 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
+  - 🇩🇪 德国 (Germany) 17
+  - 🇩🇪 德国 (Germany) 18
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -224,11 +230,11 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 04 ⚠R
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07 R55
-  - 🇩🇪 德国 (Germany) 08 R51
+  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
@@ -237,5 +243,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
+  - 🇩🇪 德国 (Germany) 17
+  - 🇩🇪 德国 (Germany) 18
 rules:
 - MATCH,PROXIES
