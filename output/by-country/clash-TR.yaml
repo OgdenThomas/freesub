@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 93.190.8.89
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 7809f866-9f42-43ae-ae11-34729db23236
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,17 +26,34 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: upgrade-isl.applemarket13.ir
+  port: 43312
+  udp: true
+  type: vless
+  uuid: 025b65b5-1283-4885-a0de-c8fe889a31fe
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 06vBWFA7tgljTVI9N1pY6L6Ls88me171hrKzeH9-7EQ
+    short-id: 194eb312877c9c35
+  servername: play.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

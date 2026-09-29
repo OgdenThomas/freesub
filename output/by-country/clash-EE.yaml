@@ -5,57 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 176.109.106.182
-  port: 9881
+  server: 93.89.220.7
+  port: 8443
   udp: true
   type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  uuid: 6eefb4c5-96c2-4b41-a8e3-3dd13e8e09d0
   tls: true
   reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-  servername: dl.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
-  server: 94.183.170.65
-  port: 8081
-  udp: true
-  type: vless
-  uuid: e60bc99b-6630-4799-af84-f90ebdc643b6
-  network: ws
-  ws-opts:
-    path: /ws/generate
-    headers:
-      Host: hys2.arkonsoft.top
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03
-  server: 179.254.126.173
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  servername: www.google.com
-  client-fingerprint: safari
+    public-key: GzQr6fDhigtRAr0n2Y7Nk3snhdytYyOvaYo9zYe1Xn4
+    short-id: b3a1cc510a2001c6
+  servername: eh.vk.com
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
-  - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
-  - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 rules:
 - MATCH,PROXIES

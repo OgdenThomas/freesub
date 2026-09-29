@@ -16,7 +16,7 @@ proxies:
     public-key: Rz8XjYinCcpE7NLktJzNFL7eVSUxaFGuV2Zz82p7IRg
     short-id: 908563a721d9bdcd
   servername: sp1.extremumnews.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
@@ -30,19 +30,19 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03 R50
-  server: 193.238.154.5
+- name: 🇪🇸 西班牙 (Spain) 03
+  server: sp66.mech-pro.online
   port: 443
   udp: true
   type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  uuid: 5dff1842-c02f-4dd4-b1ad-2e597b99dc31
+  flow: xtls-rprx-vision
   tls: true
-  servername: assets-es.pleiades.codes
-  skip-cert-verify: false
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: sp66.mech-pro.online
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,7 +50,7 @@ proxy-groups:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03 R50
+  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +58,6 @@ proxy-groups:
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03 R50
+  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

@@ -5,27 +5,46 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 144.31.27.215
-  port: 43000
+  server: 2.26.147.118
+  port: 443
   udp: true
   type: vless
-  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  uuid: b97e287f-a24e-0021-a103-7e7ecef83139
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
-    short-id: 568d87a47271344e
-  servername: 144.31.27.215
+    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
+    short-id: e1f8a3b6
+  servername: www.amd.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 144.31.212.253
+  server: 65.109.28.164
   port: 443
   udp: true
-  type: hysteria2
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  sni: vps155-edge.kermemehori.ru
-  skip-cert-verify: false
+  type: vless
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 03
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4aadbce0-ce45-411a-a888-14cf02908168
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: looazjboijji.global.ssl.fastly.net.
+- name: 🇫🇮 芬兰 (Finland) 04
   server: fi.astrafic.ru
   port: 443
   udp: true
@@ -34,7 +53,7 @@ proxies:
   tls: true
   servername: fi.astrafic.ru
   skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc
@@ -46,6 +65,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,5 +74,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

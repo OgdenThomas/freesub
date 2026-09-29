@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇪 格鲁吉亚 (Georgia) 01
+  server: 185.143.179.179
+  port: 25026
+  udp: true
+  type: vless
+  uuid: 441a29b2-d9aa-47d5-9209-0a9191479f9f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RVh0D446O5pKnOqlNkJNxSGGbmzl8swn4YBXYce1HSw
+    short-id: 34c465417d7ebca0
+  servername: www.google.com
+  client-fingerprint: safari
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇬🇪 格鲁吉亚 (Georgia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇬🇪 格鲁吉亚 (Georgia) 01
+rules:
+- MATCH,PROXIES

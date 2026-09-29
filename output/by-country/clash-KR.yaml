@@ -5,46 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: kr2-r.link-t7.com
-  port: 10047
+  server: 13.124.217.252
+  port: 8686
   udp: true
   type: vless
-  uuid: 58C828CD-3EBA-46F9-B297-16003D7A6E68
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   tls: true
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  servername: s0.awsstatic.com
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: 628b3c90c98ead4f
+  servername: www.apple.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: update
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: 61.111.247.177
-  port: 443
-  udp: true
-  type: vless
-  uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: upzGwN_6mF1HLEIWveelchmljBlEL1fTNNJryHP1h0Q
-    short-id: 57a9322ca488758c
-  servername: gateway.icloud.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 rules:
 - MATCH,PROXIES

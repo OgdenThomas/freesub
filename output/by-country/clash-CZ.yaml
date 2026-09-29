@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇩 摩尔多瓦 (Moldova) 01
-  server: md.dendiboss.org
+- name: 🇨🇿 捷克 (Czech) 01
+  server: 95.85.241.239
   port: 443
   udp: true
   type: vless
-  uuid: 8d2341a3-13b8-4e5e-84e1-da1c4923149a
+  uuid: 78571e63-1236-4c60-862a-70b7624dfa36
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: PQm4_ELMk_t2_-78lisq7Pt3aal3IVaC519prE_-Fh8
-    short-id: 9c2378562188c3cb
-  servername: md.dendiboss.org
+    public-key: nf9hAhB_OqveSsgdqqx7EW0FSoT4XNN_EzfD8lXVDVo
+    short-id: a1b2c3d4e5f6
+  servername: originsw239.aktanow.shop
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇩 摩尔多瓦 (Moldova) 01
+  - 🇨🇿 捷克 (Czech) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇩 摩尔多瓦 (Moldova) 01
+  - 🇨🇿 捷克 (Czech) 01
 rules:
 - MATCH,PROXIES

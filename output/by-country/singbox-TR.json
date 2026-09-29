@@ -6,6 +6,17 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
+      "server": "93.190.8.89",
+      "server_port": 3090,
+      "uuid": "7809f866-9f42-43ae-ae11-34729db23236",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -25,18 +36,43 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03",
+      "server": "upgrade-isl.applemarket13.ir",
+      "server_port": 43312,
+      "uuid": "025b65b5-1283-4885-a0de-c8fe889a31fe",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "06vBWFA7tgljTVI9N1pY6L6Ls88me171hrKzeH9-7EQ",
+          "short_id": "194eb312877c9c35"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

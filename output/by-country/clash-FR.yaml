@@ -5,13 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
+  server: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5934b979-e128-4c90-a600-744b97bffc8c
+  tls: true
+  servername: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/Fi3kP8cNjBoo8UPv
+    headers:
+      Host: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
+- name: 🇫🇷 法国 (France) 02
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: mrs2e9a
+- name: 🇫🇷 法国 (France) 03
+  server: 45.205.0.6
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 04
+  server: 45.80.215.8
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇫🇷 法国 (France) 05
   server: 54.36.174.134
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mrs2e9a
-- name: 🇫🇷 法国 (France) 02
+- name: 🇫🇷 法国 (France) 06
   server: 172.239.19.53
   port: 56890
   udp: true
@@ -24,20 +65,7 @@ proxies:
     short-id: '13500590'
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 03
-  server: fra2.loozerp.wiki
-  port: 443
-  udp: true
-  type: vless
-  uuid: f495298f-2bdb-4fd8-9ac9-5dd33d1b482a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
-    short-id: ff776ff77be48b88
-  servername: fra2.loozerp.wiki
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 04 R42
+- name: 🇫🇷 法国 (France) 07 R42
   server: 137.74.16.237
   port: 443
   udp: true
@@ -49,37 +77,7 @@ proxies:
     public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
     short-id: b390e0a721d242b0
   servername: www.icloud.com
-  client-fingerprint: random
-- name: 🇫🇷 法国 (France) 05
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mrs2e9a
-- name: 🇫🇷 法国 (France) 06 R41
-  server: 79.137.192.2
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zcA1E7_aUxhHP1B4po52NeviW16smzEqcyb2qiQYaTc
-  servername: cdn.cloudflare.steamstatic.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 07
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 08
   server: 91.245.225.79
   port: 2053
@@ -92,13 +90,92 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 09
-  server: 45.80.215.8
-  port: 22324
+  server: milan.adaspoloandco.com
+  port: 8443
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
+  tls: true
+  servername: milan.adaspoloandco.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /RoBeRt
+    headers:
+      Host: milan.adaspoloandco.com
+- name: 🇫🇷 法国 (France) 10
+  server: paris.nerabotaet.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 2561c6b1a3069d3170b4d7e1ecc08c65
+  sni: paris.nerabotaet.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 11 R41
+  server: 79.137.192.2
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zcA1E7_aUxhHP1B4po52NeviW16smzEqcyb2qiQYaTc
+  servername: cdn.cloudflare.steamstatic.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 12 R50
+  server: www.large-files.info
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  tls: true
+  servername: www.large-files.info
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
+- name: 🇫🇷 法国 (France) 13
+  server: fr.api-music-fa.com
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  tls: true
+  servername: fr.api-music-fa.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+- name: 🇫🇷 法国 (France) 14
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 15 R50
+  server: 88.216.69.144
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-4d64f1370eeb
+  tls: true
+  servername: r5zenrelur2s.pqzdileiu8es.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/4d64f1370eeb/loc-0
+    headers:
+      Host: r5zenrelur2s.pqzdileiu8es.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,12 +184,18 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R42
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R41
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R42
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11 R41
+  - 🇫🇷 法国 (France) 12 R50
+  - 🇫🇷 法国 (France) 13
+  - 🇫🇷 法国 (France) 14
+  - 🇫🇷 法国 (France) 15 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,11 +204,17 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R42
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R41
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R42
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11 R41
+  - 🇫🇷 法国 (France) 12 R50
+  - 🇫🇷 法国 (France) 13
+  - 🇫🇷 法国 (France) 14
+  - 🇫🇷 法国 (France) 15 R50
 rules:
 - MATCH,PROXIES
