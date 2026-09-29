@@ -12,7 +12,19 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 02 R57
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 34.95.28.161
+  port: 443
+  udp: true
+  type: vless
+  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
+  tls: true
+  reality-opts:
+    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
+    short-id: c9d4bf8d94ec8dab
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 03 R57
   server: 158.51.121.123
   port: 443
   udp: true
@@ -26,19 +38,23 @@ proxies:
   network: ws
   ws-opts:
     path: /linkvws
+    headers:
+      Host: mygptagent.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 ⚠R
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03 R57
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 ⚠R
-  - 🇨🇦 加拿大 (Canada) 02 R57
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03 R57
 rules:
 - MATCH,PROXIES

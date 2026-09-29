@@ -4,91 +4,61 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01
-  server: 104.18.34.21
-  port: 8443
+- name: 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  server: 186.190.211.147
+  port: 22324
   udp: true
-  type: vless
-  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
-  tls: true
-  servername: socks5.revil-time3.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /socks5://128.140.46.169:13482
-    headers:
-      Host: socks5.revil-time3.workers.dev
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 129.151.64.23
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: bgO5KO6o1ZQJ2Jm3nMXWkUplEqHxOjE5qHAgSYvDw4A=
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 104.21.79.199
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38d6b629-64c2-4c31-a10d-26eb3a2a053d
-  tls: true
-  servername: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/cxl8Wn1ylnsk63nJ0
-    headers:
-      Host: lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 45.158.199.33
-  port: 4
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 9qGcNiZj4uCi7DGSjxlg5Q
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 129.151.77.138
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Aa5ruIBxlM7EdchzgDPJSS4Qs8sGtE2jaapL+288G34=
-- name: 🇬🇧 英国 (United Kingdom) 06
   server: 129.151.75.241
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: FQrzr8AfOOU7hZ4+8Cr8iDUUzlHz0S6dvyS44jdUe1o=
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 134.65.63.84
+  port: 61312
   udp: true
-  type: vless
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  tls: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇬🇧 英国 (United Kingdom) 08
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: lzhjI3jtrWa2fM7GAWa3TNPZievCEkTqTlOzW+A0Ct8=
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 134.65.57.214
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: UNZ0W60AIJtxUPqtW9sZxhk3229fO2tam+efe3LvqZs=
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: 129.151.93.216
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 129.151.77.246
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: OLSE823mI1o8K0A56QvU38ZcxIjpyhMayqkmo2vnDIs=
-- name: 🇬🇧 英国 (United Kingdom) 10 R55
+  password: H0uNLTJ4GNHkmrVHdpjgcA2UDFQZ/Ty/+a6FS1FBpFM=
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 129.151.91.229
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 5gN3NqmM+iNqUcS217OQTeZvaIM4VSyBMlZ1EAGbJ/c=
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 104.24.196.20
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 6a219111-9ee4-4a7a-b9df-af0a33918cb2
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: usiii.zendegizibast.ir
+- name: 🇬🇧 英国 (United Kingdom) 08 R55
   server: 178.79.131.26
   port: 443
   udp: true
@@ -101,27 +71,7 @@ proxies:
     short-id: 3436aa2833db50fa
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: 134.65.63.84
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: lzhjI3jtrWa2fM7GAWa3TNPZievCEkTqTlOzW+A0Ct8=
-- name: 🇬🇧 英国 (United Kingdom) 12 R40
-  server: 23.81.34.204
-  port: 443
-  udp: true
-  type: vless
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  servername: speed.cloudflare.com
-  client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 13 R55
+- name: 🇬🇧 英国 (United Kingdom) 09 R55
   server: 178.79.129.203
   port: 54865
   udp: true
@@ -134,30 +84,28 @@ proxies:
     short-id: '7436'
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 14
-  server: 176.123.162.100
-  port: 9880
-  udp: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabb
-  servername: dl.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇬🇧 英国 (United Kingdom) 15
+- name: 🇬🇧 英国 (United Kingdom) 10
   server: 134.65.57.26
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: Sm4F5fX+ZJpWpkXMNbw0yYrWolYIiwknVYDwx8eus78=
-- name: 🇬🇧 英国 (United Kingdom) 16 R44
-  server: pahobac.org
+- name: 🇬🇧 英国 (United Kingdom) 11 R40
+  server: 23.81.34.204
+  port: 443
+  udp: true
+  type: vless
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+  servername: speed.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 12 R44
+  server: 186.190.211.67
   port: 443
   udp: true
   type: vmess
@@ -172,20 +120,7 @@ proxies:
     path: /linkvws
     headers:
       Host: pahobac.org
-- name: 🇬🇧 英国 (United Kingdom) 17
-  server: 31.76.62.32
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8e66d40e-6f62-4243-a7d8-ebe83e4c2e77
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: C4kK4uxh9a5ym0-JmcaTwkUwkB0FTRjSAIlHLTKRHlo
-    short-id: 84341e3e
-  servername: lv-rix-1.koolb.org
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 18
+- name: 🇬🇧 英国 (United Kingdom) 13
   server: 87.192.47.10
   port: 52006
   udp: true
@@ -195,79 +130,58 @@ proxies:
   tls: true
   servername: grok.setlisting.ru
   skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 19
-  server: moblemangol.ir
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 6a219111-9ee4-4a7a-b9df-af0a33918cb2
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: usiii.zendegizibast.ir
-- name: 🇬🇧 英国 (United Kingdom) 20
-  server: singin.qamelia.ir
+- name: 🇬🇧 英国 (United Kingdom) 14
+  server: 172.67.131.125
   port: 443
   udp: true
   type: vless
-  uuid: ad5d6bbf-4717-46ae-bbda-6c0602862d58
-  flow: xtls-rprx-vision
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
   tls: true
-  reality-opts:
-    public-key: FvRLHp4sb4eXUBRdPir8mb4JtIeqkjqAu4Cd9akGEXE
-    short-id: d02ab098c0054665
-  servername: s1.opensuse.org
-  client-fingerprint: ios
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
+    headers:
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10 R55
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12 R40
-  - 🇬🇧 英国 (United Kingdom) 13 R55
+  - 🇬🇧 英国 (United Kingdom) 08 R55
+  - 🇬🇧 英国 (United Kingdom) 09 R55
+  - 🇬🇧 英国 (United Kingdom) 10
+  - 🇬🇧 英国 (United Kingdom) 11 R40
+  - 🇬🇧 英国 (United Kingdom) 12 R44
+  - 🇬🇧 英国 (United Kingdom) 13
   - 🇬🇧 英国 (United Kingdom) 14
-  - 🇬🇧 英国 (United Kingdom) 15
-  - 🇬🇧 英国 (United Kingdom) 16 R44
-  - 🇬🇧 英国 (United Kingdom) 17
-  - 🇬🇧 英国 (United Kingdom) 18
-  - 🇬🇧 英国 (United Kingdom) 19
-  - 🇬🇧 英国 (United Kingdom) 20
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10 R55
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12 R40
-  - 🇬🇧 英国 (United Kingdom) 13 R55
+  - 🇬🇧 英国 (United Kingdom) 08 R55
+  - 🇬🇧 英国 (United Kingdom) 09 R55
+  - 🇬🇧 英国 (United Kingdom) 10
+  - 🇬🇧 英国 (United Kingdom) 11 R40
+  - 🇬🇧 英国 (United Kingdom) 12 R44
+  - 🇬🇧 英国 (United Kingdom) 13
   - 🇬🇧 英国 (United Kingdom) 14
-  - 🇬🇧 英国 (United Kingdom) 15
-  - 🇬🇧 英国 (United Kingdom) 16 R44
-  - 🇬🇧 英国 (United Kingdom) 17
-  - 🇬🇧 英国 (United Kingdom) 18
-  - 🇬🇧 英国 (United Kingdom) 19
-  - 🇬🇧 英国 (United Kingdom) 20
 rules:
 - MATCH,PROXIES

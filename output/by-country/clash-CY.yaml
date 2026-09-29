@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL 01
-  server: 194.93.61.100
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01
+  server: india.letsconnectpoint.com
   port: 443
   udp: true
   type: vless
-  uuid: 41e71ba7-d389-47aa-94f7-ed1f55fdbcdf
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ
-    short-id: 17d334ad29b2ff40
-  servername: cdnjs.com
-  client-fingerprint: chrome
+    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
+    short-id: c1e3d5d4
+  servername: india.letsconnectpoint.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇱 AL 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱 AL 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
 rules:
 - MATCH,PROXIES
