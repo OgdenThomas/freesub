@@ -4,17 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01
-  server: 51.161.204.244
+- name: 🇶🇦 卡塔尔 (Qatar) 01
+  server: 34.18.161.225
   port: 443
   udp: true
   type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  flow: xtls-rprx-vision
+  uuid: b6f775c2-70fd-4247-8d12-82cac46fdd50
   tls: true
   reality-opts:
-    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
-    short-id: 0ad08b47f498efd2
+    public-key: tT6wEOh8ASizQYNRb51QdDlxAksSJbEaBnbQBajc6SQ
+    short-id: c5426331173ca15c
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
@@ -22,12 +21,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇶🇦 卡塔尔 (Qatar) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇶🇦 卡塔尔 (Qatar) 01
 rules:
 - MATCH,PROXIES

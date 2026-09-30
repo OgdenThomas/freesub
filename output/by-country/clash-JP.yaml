@@ -15,8 +15,34 @@ proxies:
     public-key: Y0aqDtPHb_inkRBkx1hs5yxMZX9_dZr4t_sGGIU8mmM
     short-id: d6
   servername: www.intel.com
-  client-fingerprint: random
+  client-fingerprint: safari
 - name: 🇯🇵 日本 (Japan) 02
+  server: bgroup.jp1.ilovegairport.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8079ccd4-4b4b-44e2-92f0-8f0367ad9c24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: BJihKW3qLbtwFO_WAZ3htkU5VpWcMoFYX9tqlLmKiUY
+    short-id: f3f3bbfe1c
+  servername: ap-northeast-1.console.aws.amazon.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03
+  server: 18.183.215.124
+  port: 28573
+  udp: true
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: ios
+- name: 🇯🇵 日本 (Japan) 04
   server: 43.133.11.187
   port: 443
   udp: true
@@ -28,21 +54,8 @@ proxies:
     public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
     short-id: 913e9b95fbc71278
   servername: cloudflare.com
-  client-fingerprint: qq
-- name: 🇯🇵 日本 (Japan) 03
-  server: jumpernode.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
-    short-id: 6d962e8d8a0dce
-  servername: amazon.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 04
+- name: 🇯🇵 日本 (Japan) 05
   server: 45.202.255.24
   port: 8890
   udp: true
@@ -56,13 +69,26 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: 🇯🇵 日本 (Japan) 05
-  server: vp3.yysyy.online
+- name: 🇯🇵 日本 (Japan) 06
+  server: jumpernode.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: e4cd263b-c5c7-4410-bf61-8893179ec429
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
+    short-id: 6d962e8d8a0dce
+  servername: amazon.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 07
+  server: open.2ml.bid
   port: 443
   udp: true
   type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
+  password: my_super_password_123
+  sni: open.2ml.bid
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -74,6 +100,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -84,5 +112,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 rules:
 - MATCH,PROXIES
