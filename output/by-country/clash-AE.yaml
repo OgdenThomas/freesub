@@ -17,18 +17,26 @@ proxies:
   servername: pl.gazladder.work
   client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 02
-  server: 139.185.44.42
-  port: 8443
+  server: 157.228.155.198
+  port: 443
   udp: true
   type: vless
-  uuid: b0fa80ad-d759-4bcc-a0fd-f802d53b5a88
+  uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: VlWMFvYxwGIsctI7BfOgC4PCG3EMToD7_H8vWcRB42w
-    short-id: 855834d3b002ad21
-  servername: www.microsoft.com
-  client-fingerprint: firefox
+    public-key: GYuzgp3g96ka0Z2_qGCzFl-ueHyAr7HCc3SV5ZdXa00
+    short-id: ec8febd05ca880a0
+  servername: vimeo.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 03
+  server: 85.204.107.181
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
+  - 🇦🇪 阿联酋 (UAE) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
+  - 🇦🇪 阿联酋 (UAE) 03
 rules:
 - MATCH,PROXIES

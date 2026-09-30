@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: india.letsconnectpoint.com
+- name: 🇧🇬 保加利亚 (Bulgaria) 01
+  server: 131.123.41.223
   port: 443
   udp: true
   type: vless
-  uuid: 914f3806-07a1-4158-9624-e183de065a38
+  uuid: 33e8bd3a-26f0-4e57-bc27-e5552a81c880
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
-    short-id: c1e3d5d4
-  servername: india.letsconnectpoint.com
-  client-fingerprint: random
+    public-key: dsyxDiVtAFRjKOqLdqof2SuygewTO-EWTd34Jk1YYVo
+    short-id: e9433de76a53573b
+  servername: bulgaria.stream-live.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇧🇬 保加利亚 (Bulgaria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇧🇬 保加利亚 (Bulgaria) 01
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02
   server: 45.90.59.15
   port: 443
   udp: true
@@ -17,18 +29,14 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 208.69.78.217
-  port: 2053
+- name: 🇨🇭 瑞士 (Switzerland) 03
+  server: 104.165.205.219
+  port: 9443
   udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  sni: onecloudstream.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 03
 rules:
 - MATCH,PROXIES

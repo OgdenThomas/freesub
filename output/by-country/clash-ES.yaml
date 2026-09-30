@@ -13,51 +13,21 @@ proxies:
   tls: true
   servername: assets-es.pleiades.codes
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
-- name: 🇪🇸 西班牙 (Spain) 02
-  server: 92.118.127.16
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Rz8XjYinCcpE7NLktJzNFL7eVSUxaFGuV2Zz82p7IRg
-    short-id: 908563a721d9bdcd
-  servername: repo1.maven.org
-  client-fingerprint: random
-- name: 🇪🇸 西班牙 (Spain) 03
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01 R50
-  - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01 R50
-  - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

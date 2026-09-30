@@ -11,41 +11,7 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: bdb313adf74c2ede
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: hk3.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 78d36530-c8b9-4ffa-bbe2-850fa11de2d8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zV4Sja0iajpdzkR1iBMbI7RRWL2nlpgwGOtirQSG-zc
-    short-id: b81edf7fdee4
-  servername: hk4e-launcher-static.hoyoverse.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: hk6.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 78d36530-c8b9-4ffa-bbe2-850fa11de2d8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 2kl8isq7ajNv3BR6Z1EPag_LqJHmsfo2pn0dA7yetko
-    short-id: a2d13d677624197e
-  servername: www.hsbc.com.hk
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: mz.hkychina.com
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 05 R42
+- name: 🇭🇰 中国香港 (Hong Kong) 02 R42
   server: 194.99.79.26
   port: 443
   udp: true
@@ -61,8 +27,16 @@ proxies:
     path: /linkvws
     headers:
       Host: aksai.org
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 45.82.244.40
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: 2.27.109.179
+  port: 45464
+  udp: true
+  type: trojan
+  password: XuMweB2PWs
+  sni: 2.27.109.179.sslip.io
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: 103.71.23.247
   port: 443
   udp: true
   type: vless
@@ -82,21 +56,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 02 R42
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05 R42
-  - 🇭🇰 中国香港 (Hong Kong) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 02 R42
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05 R42
-  - 🇭🇰 中国香港 (Hong Kong) 06
 rules:
 - MATCH,PROXIES

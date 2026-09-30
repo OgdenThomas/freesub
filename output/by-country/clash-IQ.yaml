@@ -4,29 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
-  server: fpoixf69hqt3e6d4urtb.mamadneizeh.workers.dev
-  port: 443
+- name: 🇮🇶 IQ 01
+  server: 104.18.34.21
+  port: 8443
   udp: true
   type: vless
-  uuid: 0b41f339-5809-46ef-8351-b03fdc441539
+  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
   tls: true
-  servername: FpoiXF69hQT3E6d4URTB.MamADNEIZeH.WorKers.DEV
+  servername: socks5.revil-time3.workers.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/lYNtP7z8pJUmfp01tz5wEnuDujJtZ
+    path: /socks5://128.140.46.169:13482
+    headers:
+      Host: socks5.revil-time3.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇶 IQ 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇶 IQ 01
 rules:
 - MATCH,PROXIES

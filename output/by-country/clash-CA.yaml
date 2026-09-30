@@ -4,28 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R70
-  server: 198.57.27.190
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: cayosh.fastshot.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 25bc9eee-e900-49c5-b195-7e6a6a323189
-  tls: true
-  servername: cayosh.fastshot.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇨🇦 加拿大 (Canada) 03
+- name: 🇨🇦 加拿大 (Canada) 01
   server: 34.95.28.161
   port: 443
   udp: true
@@ -42,16 +21,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R70
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R70
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 01
 rules:
 - MATCH,PROXIES

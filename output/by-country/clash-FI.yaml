@@ -5,19 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 65.109.199.174
+  server: 2.29.53.116
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: i8yt-VVArkvgqH1zq6UcolE0N6fizmsw
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 65.109.251.9
+  port: 80
+  udp: true
+  type: vless
+  uuid: 002d2e68-8995-4d4d-8b02-224cf73c18f5
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 65.109.28.164
   port: 443
   udp: true
   type: vless
-  uuid: 3ba22938-7323-48ef-a981-7092171dc60e
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
-    short-id: 7a0300af51a1c4cf
-  servername: Miro.com
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
+- name: 🇫🇮 芬兰 (Finland) 04
   server: 2.27.13.61
   port: 2096
   udp: true
@@ -32,6 +48,32 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: st6dbbc.rumedia-cdn.com
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 65.109.199.174
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3ba22938-7323-48ef-a981-7092171dc60e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
+    short-id: 7a0300af51a1c4cf
+  servername: Miro.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: 144.31.27.215
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
+    short-id: 568d87a47271344e
+  servername: 144.31.27.215
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +81,10 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +92,9 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
 rules:
 - MATCH,PROXIES
