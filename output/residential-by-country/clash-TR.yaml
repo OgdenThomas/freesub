@@ -4,25 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国 (Thailand) 01
-  server: 119.46.51.45
-  port: 37515
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: 145.239.30.17
+  port: 2053
   udp: true
-  type: vmess
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 泰国 (Thailand) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 泰国 (Thailand) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 rules:
 - MATCH,PROXIES

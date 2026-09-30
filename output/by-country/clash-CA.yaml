@@ -16,17 +16,35 @@ proxies:
     short-id: c9d4bf8d94ec8dab
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 02 R70
+  server: 198.57.27.190
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 03 R53
+  server: milo.rubinaz.xyz
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02 R70
+  - 🇨🇦 加拿大 (Canada) 03 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02 R70
+  - 🇨🇦 加拿大 (Canada) 03 R53
 rules:
 - MATCH,PROXIES

@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
-    short-id: fa3ea655619a3e78
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
   server: 83.168.95.145
   port: 443
   udp: true
@@ -30,7 +17,7 @@ proxies:
     short-id: d345ad4657adeef9
   servername: google.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 03
+- name: 🇵🇱 波兰 (Poland) 02
   server: 31.59.125.75
   port: 443
   udp: true
@@ -41,20 +28,31 @@ proxies:
   reality-opts:
     public-key: SoMfQzFhE5QfKWMZA7ZNkYP63P5hiyWEbE9fsPIP4Go
   servername: pl.gazladder.work
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 04 R42
-  server: 188.114.96.19
-  port: 80
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03
+  server: pl-irancell7.xelfona.ir
+  port: 2095
   udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
+  type: vless
+  uuid: 452f869f-7720-47c3-a175-b6673e31d3e8
+  network: httpupgrade
+  httpupgrade-opts:
     path: /
     headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+      Host: connectivitycheck.android.com
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 83.168.107.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: b1813cbd-831f-4cb3-baf8-5bc0cc8298bc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
+    short-id: c56d4f1c
+  servername: google.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,7 +61,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R42
+  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -72,6 +70,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R42
+  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

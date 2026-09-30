@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: india.letsconnectpoint.com
+- name: 🇬🇷 希腊 (Greece) 01
+  server: 85.90.197.220
   port: 443
   udp: true
   type: vless
-  uuid: 914f3806-07a1-4158-9624-e183de065a38
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
-    short-id: c1e3d5d4
-  servername: india.letsconnectpoint.com
-  client-fingerprint: random
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇬🇷 希腊 (Greece) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇬🇷 希腊 (Greece) 01
 rules:
 - MATCH,PROXIES

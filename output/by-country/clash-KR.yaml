@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 179.254.126.173
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01
+  server: icn-a-02.auuas.com
+  port: 1891
   udp: true
   type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
+  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  servername: www.google.com
-  client-fingerprint: random
+    public-key: 2olNWILpuviXx_Nr30JZc5tpt3MgtWda7jLGwAOxPxY
+    short-id: 8378f267
+  servername: www.npmjs.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇰🇷 韩国 (South Korea) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇰🇷 韩国 (South Korea) 01
 rules:
 - MATCH,PROXIES

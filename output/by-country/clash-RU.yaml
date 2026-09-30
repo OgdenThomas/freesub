@@ -5,22 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 172.67.167.77
-  port: 443
-  udp: true
-  type: vless
-  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
-  tls: true
-  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/6871nrbnl9WsdAiOUInt
-    headers:
-      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: china.letsconnectpoint.com
+  server: 139.28.168.201
   port: 443
   udp: true
   type: vless
@@ -32,29 +17,17 @@ proxies:
     short-id: 3b74d85e
   servername: china.letsconnectpoint.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 138.124.254.232
-  port: 443
-  udp: true
-  type: hysteria2
-  password: fba73f98-777a-42a6-83c0-7d1f6f070e8d
-  sni: crt.dodopanel.biz
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 rules:
 - MATCH,PROXIES

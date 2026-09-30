@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
+  server: 172.67.131.125
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
+  tls: true
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
+    headers:
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 23.81.34.204
   port: 443
   udp: true
@@ -17,18 +32,15 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 104.24.196.20
-  port: 2082
+- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R
+  server: 186.190.211.147
+  port: 22324
   udp: true
-  type: vless
-  uuid: 6a219111-9ee4-4a7a-b9df-af0a33918cb2
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: usiii.zendegizibast.ir
-- name: 🇬🇧 英国 (United Kingdom) 03
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 95.85.224.51
   port: 443
   udp: true
@@ -41,22 +53,18 @@ proxies:
     short-id: a696de84963656de
   servername: max.ru
   client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 162.159.153.4
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 104.24.196.20
+  port: 2082
   udp: true
   type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rayan-007.maxima.dpdns.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
+  uuid: 6a219111-9ee4-4a7a-b9df-af0a33918cb2
+  network: httpupgrade
+  httpupgrade-opts:
     path: /
     headers:
-      Host: rayan-007.maxima.dpdns.org
-- name: 🇬🇧 英国 (United Kingdom) 05
+      Host: usiii.zendegizibast.ir
+- name: 🇬🇧 英国 (United Kingdom) 06
   server: 87.192.47.10
   port: 52006
   udp: true
@@ -66,6 +74,7 @@ proxies:
   tls: true
   servername: grok.setlisting.ru
   skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,9 +82,10 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,8 +93,9 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
 rules:
 - MATCH,PROXIES

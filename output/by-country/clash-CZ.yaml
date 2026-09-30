@@ -5,28 +5,67 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: fpoixf69hqt3e6d4urtb.mamadneizeh.workers.dev
+  server: 195.133.66.229
   port: 443
   udp: true
   type: vless
-  uuid: 0b41f339-5809-46ef-8351-b03fdc441539
+  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
   tls: true
-  servername: FpoiXF69hQT3E6d4URTB.MamADNEIZeH.WorKers.DEV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vl/lYNtP7z8pJUmfp01tz5wEnuDujJtZ
+  reality-opts:
+    public-key: Zl6Fe6WYQuaFe_QNUB4qU7nRkGujy7LqjoQ96GO3jUc
+  servername: nlll.gaz-service.shop
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 153.76.185.161
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 6dd5eefa-bbee-413a-bf69-255813b5ae66
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 03
+  server: 153.76.185.160
+  port: 3090
+  udp: true
+  type: vless
+  uuid: b24348cd-38f3-483c-aff4-f5355f254f0a
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 04
+  server: 195.133.66.229
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng
+    short-id: b415b8d7a6106ace
+  servername: nlll.gaz-service.shop
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+  - 🇨🇿 捷克 (Czech) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+  - 🇨🇿 捷克 (Czech) 04
 rules:
 - MATCH,PROXIES

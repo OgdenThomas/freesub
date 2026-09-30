@@ -1,0 +1,39 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇱 以色列 (Israel) 01",
+      "server": "31.57.185.82",
+      "server_port": 23114,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "vS/2+E2vOG1C68QgmugNLDAxJqtGQeIJVI8lUu20n9Y="
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇱 以色列 (Israel) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇱 以色列 (Israel) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

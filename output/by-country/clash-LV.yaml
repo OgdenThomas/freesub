@@ -16,32 +16,17 @@ proxies:
     public-key: cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI
   servername: omvpn.info
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
-  server: 31.57.28.147
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d7yg69dK4DkaV1EPpQcgd4GBncMN9u1o1Nk9u-i7wGc
-    short-id: 7a18a196e730e1d5
-  servername: download-cdn.jetbrains.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
-  - 🇱🇻 拉脱维亚 (Latvia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
-  - 🇱🇻 拉脱维亚 (Latvia) 02
 rules:
 - MATCH,PROXIES
