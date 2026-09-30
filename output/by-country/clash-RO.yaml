@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
+  server: 77.74.123.101
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-test-italy.dynuddns.net
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: 46.28.67.55
   port: 443
   udp: true
@@ -17,7 +25,7 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 02
+- name: 🇷🇴 罗马尼亚 (Romania) 03
   server: 162.249.125.133
   port: 443
   udp: true
@@ -34,6 +42,7 @@ proxy-groups:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +50,6 @@ proxy-groups:
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 rules:
 - MATCH,PROXIES

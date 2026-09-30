@@ -16,48 +16,18 @@ proxies:
     public-key: d7yg69dK4DkaV1EPpQcgd4GBncMN9u1o1Nk9u-i7wGc
     short-id: 7a18a196e730e1d5
   servername: download-cdn.jetbrains.com
-  client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
-  server: latvia-3.kochvpn.pw
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8de0e6f4-d365-fa64-d5ba-eed9ea513e06
-  tls: true
-  servername: latvia-3.kochvpn.pw
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /stream/ws
-- name: 🇱🇻 拉脱维亚 (Latvia) 03
-  server: 193.163.203.199
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3e2591b2-4739-4c59-b540-344f0b6505ac
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xa2v36oJSdYGM1SSiMYyehw9RTdlBHOLcE5-YOK6unE
-    short-id: 3c7ab85b281ecc8f
-  servername: x6.megabitvpn.org
-  client-fingerprint: chrome
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
-  - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
-  - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01",
+      "tag": "🇪🇸 西班牙 (Spain) 01 R50",
+      "server": "193.238.154.5",
+      "server_port": 443,
+      "uuid": "e0b9fb0f-1bbd-478b-9580-c2294778338b",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets-es.pleiades.codes",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cdn.v1.AssetService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 02",
       "server": "92.118.127.16",
       "server_port": 443,
       "uuid": "2412bd96-925b-43f2-81d1-0ed4f0793699",
@@ -15,7 +35,7 @@
         "server_name": "repo1.maven.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -26,7 +46,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 02",
+      "tag": "🇪🇸 西班牙 (Spain) 03",
       "server": "46.28.71.247",
       "server_port": 443,
       "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
@@ -46,42 +66,22 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 03 R49",
-      "server": "upes2.plasmoon.ir",
-      "server_port": 443,
-      "uuid": "c09da06c-ad4a-4bd9-a483-9cb9216a9ea6",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ASmPIMB25D2LpasCAfuMuNDN3Kv-Dj3bX8THE7YpknE",
-          "short_id": "0f8938e71c53a6cd"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01",
+        "🇪🇸 西班牙 (Spain) 01 R50",
         "🇪🇸 西班牙 (Spain) 02",
-        "🇪🇸 西班牙 (Spain) 03 R49"
+        "🇪🇸 西班牙 (Spain) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01",
+        "🇪🇸 西班牙 (Spain) 01 R50",
         "🇪🇸 西班牙 (Spain) 02",
-        "🇪🇸 西班牙 (Spain) 03 R49"
+        "🇪🇸 西班牙 (Spain) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,18 +4,18 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01 R55
-  server: 172.235.246.215
-  port: 443
+- name: 🇮🇩 印尼 (Indonesia) 01
+  server: 103.172.197.2
+  port: 29172
   udp: true
   type: vless
-  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
+  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  servername: googleapis.com
-  client-fingerprint: random
+    public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
+  servername: aws.amazon.com
+  client-fingerprint: chrome
 - name: 🇮🇩 印尼 (Indonesia) 02
   server: 103.172.197.3
   port: 16006
@@ -33,14 +33,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01 R55
+  - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01 R55
+  - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
 rules:
 - MATCH,PROXIES
