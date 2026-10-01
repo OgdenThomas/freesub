@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01
-  server: ch.zango.tech
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0b21158e-00f5-4a2f-b242-e3e5574f68a0
-  tls: true
-  reality-opts:
-    public-key: B-q_vYkpKjiiaHyUfr7NutnusdvsmoWEeyr0QJfTfmw
-    short-id: 447abeb4fb111a9c
-  servername: bunny.net
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇨🇭 瑞士 (Switzerland) 02
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -31,6 +16,19 @@ proxies:
     short-id: ad86e2d52ff40ebd
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02
+  server: 179.237.103.152
+  port: 443
+  udp: true
+  type: vless
+  uuid: e0bd9dfa-0cf9-47c0-92ac-7dba08ebcff8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8PZTYkhNhSgagVdaI-iqSCPXJwDhHU23IUwZIu08zH4
+    short-id: 9de8ae53dabf1dc2
+  servername: www.google.com
+  client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 03
   server: 45.90.59.15
   port: 443

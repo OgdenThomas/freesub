@@ -5,61 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 37.143.129.161
-  port: 8443
-  udp: true
-  type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-  tls: true
-  reality-opts:
-    public-key: B5-zPBBAI-UATY7rSvoggM1T65h9CfVw7yBluBNd-yI
-    short-id: 4a5f04a5ea205fc3
-  servername: fi.aksay.pro
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 142.228.52.79
-  port: 8443
-  udp: true
-  type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-  tls: true
-  reality-opts:
-    public-key: B5-zPBBAI-UATY7rSvoggM1T65h9CfVw7yBluBNd-yI
-    short-id: 4a5f04a5ea205fc3
-  servername: fi.aksay.pro
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 77.42.20.51
-  port: 1085
-  udp: true
-  type: vless
-  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
-- name: 🇫🇮 芬兰 (Finland) 04
   server: 204.168.147.195
   port: 1085
   udp: true
   type: vless
   uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: 144.31.27.215
-  port: 43000
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 77.42.20.51
+  port: 1085
   udp: true
   type: vless
-  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
-    short-id: 568d87a47271344e
-  servername: 144.31.27.215
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06
+  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
+- name: 🇫🇮 芬兰 (Finland) 03
   server: 65.109.28.164
   port: 443
   udp: true
@@ -72,38 +29,42 @@ proxies:
     short-id: 90ec9bba2019
   servername: web.eitaa.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 07
-  server: 91.108.241.39
-  port: 443
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 144.31.27.215
+  port: 43000
   udp: true
   type: vless
-  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Kjly4cLUp4_P04_3lM1l_NJu8-vFcING7tBNtAXk7Go
-    short-id: db09859d9be0fa2b
-  servername: mail.ru
+    public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
+    short-id: 568d87a47271344e
+  servername: 144.31.27.215
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 08
-  server: 65.109.187.18
-  port: 49092
-  udp: true
-  type: vless
-  uuid: b7e7ed42-5b9d-462d-8e54-5a4bd46f6822
-- name: 🇫🇮 芬兰 (Finland) 09
-  server: 132.243.231.22
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 144.31.212.253
   port: 443
   udp: true
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: 109.94.164.185
+  port: 10210
+  udp: true
   type: vless
-  uuid: 4496d9fb-37da-4c7f-98bb-eb1ccf110c4d
-  flow: xtls-rprx-vision
+  uuid: ce4b2104-f1fe-4216-ad67-8c21869b9118
   tls: true
   reality-opts:
-    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-    short-id: 2d6d073dc88f22a8
-  servername: nordic.global-cdn.org
-  client-fingerprint: chrome
+    public-key: twRm8a1BBdz2Q5jTuNbXxA7ZdtDPAyQNEycDYkW9DFc
+    short-id: 13121b7150ad7fc6
+  servername: firebaseperusertopics-pa.googleapis.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -115,9 +76,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04
   - 🇫🇮 芬兰 (Finland) 05
   - 🇫🇮 芬兰 (Finland) 06
-  - 🇫🇮 芬兰 (Finland) 07
-  - 🇫🇮 芬兰 (Finland) 08
-  - 🇫🇮 芬兰 (Finland) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -129,8 +87,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04
   - 🇫🇮 芬兰 (Finland) 05
   - 🇫🇮 芬兰 (Finland) 06
-  - 🇫🇮 芬兰 (Finland) 07
-  - 🇫🇮 芬兰 (Finland) 08
-  - 🇫🇮 芬兰 (Finland) 09
 rules:
 - MATCH,PROXIES

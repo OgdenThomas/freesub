@@ -5,24 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 185.87.24.169
-  port: 2085
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: ddceeb62-b629-4163-b4fb-a6fab21054b4
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 - name: 🇹🇷 土耳其 (Turkey) 02
-  server: 93.190.8.118
-  port: 3090
-  udp: true
-  type: vless
-  uuid: ddceeb62-b629-4163-b4fb-a6fab21054b4
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇹🇷 土耳其 (Turkey) 03
   server: 78.135.73.47
   port: 443
   udp: true
@@ -35,55 +23,19 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 04
-  server: 178.83.46.216
-  port: 2053
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: tr2.gigobingo.ru
+  port: 443
   udp: true
   type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 05
-  server: 155.103.70.53
-  port: 30303
-  udp: true
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  uuid: 46e62b9b-f9db-4310-8f18-7d6e449cfd5c
+  flow: xtls-rprx-vision
   tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HAAQNCV1EClxZAgMWAlBZXRlKXU4aTV8WGRQRQkoXFgweUABdHg==
-    headers:
-      Host: wzs.echo.net.eu.org
-- name: 🇹🇷 土耳其 (Turkey) 06
-  server: 104.21.41.247
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0da0a073-a5b0-4229-bf11-24592f6290b9
-  tls: true
-  servername: tcdnu.azad0namah.ir
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tucdn/
-    headers:
-      Host: tcdnu.azad0namah.ir
-- name: 🇹🇷 土耳其 (Turkey) 07
-  server: tcdnu.azad0namah.ir
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 0da0a073-a5b0-4229-bf11-24592f6290b9
-  tls: true
-  servername: tcdnu.azad0namah.ir
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tuws/
-    headers:
-      Host: tcdnu.azad0namah.ir
+  reality-opts:
+    public-key: Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ
+    short-id: ef7c4e4302bd52d7
+  servername: tr2.gigobingo.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,10 +44,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06
-  - 🇹🇷 土耳其 (Turkey) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,9 +52,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06
-  - 🇹🇷 土耳其 (Turkey) 07
 rules:
 - MATCH,PROXIES
