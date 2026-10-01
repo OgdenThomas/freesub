@@ -16,17 +16,31 @@ proxies:
     short-id: b4f2c0e3d8668c2f
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇧🇪 比利时 (Belgium) 02
+  server: 35.240.62.249
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6d341f6e-7b9d-4ae3-999b-00333de7bdfb
+  tls: true
+  reality-opts:
+    public-key: v6QpErcVOVKIYLm53R3bAP8zIKCFr4HAJWW0VwBKtws
+    short-id: 31f187650d9530bb
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇪 比利时 (Belgium) 01
+  - 🇧🇪 比利时 (Belgium) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇪 比利时 (Belgium) 01
+  - 🇧🇪 比利时 (Belgium) 02
 rules:
 - MATCH,PROXIES

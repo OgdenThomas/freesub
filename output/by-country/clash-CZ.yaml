@@ -5,48 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 104.21.96.1
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0836463b-214f-4af6-aa85-85a56a62388e
-  tls: true
-  servername: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
-- name: 🇨🇿 捷克 (Czech) 02
-  server: 153.76.185.163
-  port: 3090
-  udp: true
-  type: vless
-  uuid: ea723504-e8df-4f23-b35f-c93961d5128a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇨🇿 捷克 (Czech) 03
-  server: 194.87.59.29
-  port: 2085
-  udp: true
-  type: vless
-  uuid: ea723504-e8df-4f23-b35f-c93961d5128a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇨🇿 捷克 (Czech) 04
-  server: 153.76.185.162
-  port: 3090
-  udp: true
-  type: vless
-  uuid: ea723504-e8df-4f23-b35f-c93961d5128a
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🇨🇿 捷克 (Czech) 05
   server: 195.133.66.229
   port: 443
   udp: true
@@ -60,8 +18,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: 🇨🇿 捷克 (Czech) 06
-  server: 195.133.66.229
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 194.87.59.20
+  port: 2085
+  udp: true
+  type: vless
+  uuid: a641fd38-0ad7-40bf-9a56-6715c1787be3
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 03
+  server: nlll.gaz-service.shop
   port: 8443
   udp: true
   type: vless
@@ -73,7 +40,16 @@ proxies:
     short-id: b415b8d7a6106ace
   servername: nlll.gaz-service.shop
   client-fingerprint: chrome
-- name: 🇨🇿 捷克 (Czech) 07
+- name: 🇨🇿 捷克 (Czech) 04
+  server: 153.76.185.108
+  port: 3090
+  udp: true
+  type: vless
+  uuid: 14e227c3-5a83-4b4d-a41a-e5f499c79415
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇨🇿 捷克 (Czech) 05
   server: 85.117.235.50
   port: 443
   udp: true
@@ -96,8 +72,6 @@ proxy-groups:
   - 🇨🇿 捷克 (Czech) 03
   - 🇨🇿 捷克 (Czech) 04
   - 🇨🇿 捷克 (Czech) 05
-  - 🇨🇿 捷克 (Czech) 06
-  - 🇨🇿 捷克 (Czech) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -108,7 +82,5 @@ proxy-groups:
   - 🇨🇿 捷克 (Czech) 03
   - 🇨🇿 捷克 (Czech) 04
   - 🇨🇿 捷克 (Czech) 05
-  - 🇨🇿 捷克 (Czech) 06
-  - 🇨🇿 捷克 (Czech) 07
 rules:
 - MATCH,PROXIES

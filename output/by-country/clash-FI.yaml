@@ -15,7 +15,7 @@ proxies:
     public-key: B5-zPBBAI-UATY7rSvoggM1T65h9CfVw7yBluBNd-yI
     short-id: 4a5f04a5ea205fc3
   servername: fi.aksay.pro
-  client-fingerprint: edge
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: ''
@@ -47,19 +47,6 @@ proxies:
   type: vless
   uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
 - name: 🇫🇮 芬兰 (Finland) 05
-  server: 65.109.28.164
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06
   server: 144.31.27.215
   port: 43000
   udp: true
@@ -71,6 +58,19 @@ proxies:
     public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
     short-id: 568d87a47271344e
   servername: 144.31.27.215
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: 65.109.28.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
+    short-id: 90ec9bba2019
+  servername: web.eitaa.com
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 07
   server: 91.108.241.39
@@ -84,18 +84,25 @@ proxies:
     public-key: Kjly4cLUp4_P04_3lM1l_NJu8-vFcING7tBNtAXk7Go
     short-id: db09859d9be0fa2b
   servername: mail.ru
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 08
-  server: ff.ketabkhan24.ir
-  port: 2053
+  server: 65.109.187.18
+  port: 49092
   udp: true
   type: vless
-  uuid: d02fcca7-e77f-42f1-94bf-5545eec68f0a
+  uuid: b7e7ed42-5b9d-462d-8e54-5a4bd46f6822
+- name: 🇫🇮 芬兰 (Finland) 09
+  server: 132.243.231.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4496d9fb-37da-4c7f-98bb-eb1ccf110c4d
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: fY4zG7EPbiRzlabmT4p_LFuHj6vfMAEdxNoCt-bCPz8
-    short-id: 5c56ebc08e4ad1d9
-  servername: play.google.com
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: nordic.global-cdn.org
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -110,6 +117,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06
   - 🇫🇮 芬兰 (Finland) 07
   - 🇫🇮 芬兰 (Finland) 08
+  - 🇫🇮 芬兰 (Finland) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -123,5 +131,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 06
   - 🇫🇮 芬兰 (Finland) 07
   - 🇫🇮 芬兰 (Finland) 08
+  - 🇫🇮 芬兰 (Finland) 09
 rules:
 - MATCH,PROXIES

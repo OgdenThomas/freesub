@@ -5,14 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
-      "server": "178.83.46.216",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -31,11 +24,26 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+      "server": "hi.northcluster.info",
+      "server_port": 52300,
+      "uuid": "6e571484-4166-4699-8f58-b34a1823691f",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/video",
+        "headers": {
+          "Host": "hi.northcluster.info"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
         "🇹🇼 中国台湾 (Taiwan) 02 (家宽)"
       ]
     },
@@ -43,7 +51,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
         "🇹🇼 中国台湾 (Taiwan) 02 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
