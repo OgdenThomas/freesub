@@ -5,17 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 92b6d0ff54070b56.IROnlY4l.Ir
+  server: 45.74.158.103
   port: 443
   udp: true
   type: vless
-  uuid: 0b47cd2c-cd11-4398-a323-ef4a08475e77
+  uuid: 46e62b9b-f9db-4310-8f18-7d6e449cfd5c
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: pLbqDSeEe7biTe6b-w6SOLl2SiRxIBjHMfqUzuRR3Ew
-    short-id: 37d86205006fe1fb
-  servername: play.google.com
-  client-fingerprint: chrome
+    public-key: Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ
+    short-id: ef7c4e4302bd52d7
+  servername: tr2.gigobingo.ru
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
@@ -29,6 +30,21 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: tcdnu.azad0namah.ir
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 0da0a073-a5b0-4229-bf11-24592f6290b9
+  tls: true
+  servername: tcdnu.azad0namah.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tuws/
+    headers:
+      Host: tcdnu.azad0namah.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +52,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +60,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

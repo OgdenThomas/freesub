@@ -5,6 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01
+  server: 179.237.103.152
+  port: 443
+  udp: true
+  type: vless
+  uuid: e0bd9dfa-0cf9-47c0-92ac-7dba08ebcff8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8PZTYkhNhSgagVdaI-iqSCPXJwDhHU23IUwZIu08zH4
+    short-id: 9de8ae53dabf1dc2
+  servername: www.google.com
+  client-fingerprint: random
+- name: 🇨🇭 瑞士 (Switzerland) 02
+  server: p2real5.greewebservices.ir
+  port: 1350
+  udp: true
+  type: vless
+  uuid: da803bc9-ec45-4c72-b81f-15ad8dd02eaa
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03
+  server: areal5.greewebservices.ir
+  port: 5455
+  udp: true
+  type: vless
+  uuid: da803bc9-ec45-4c72-b81f-15ad8dd02eaa
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: e3085d4fc679ba12
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 04
   server: 45.90.59.15
   port: 443
   udp: true
@@ -17,7 +54,7 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 02
+- name: 🇨🇭 瑞士 (Switzerland) 05
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -29,19 +66,19 @@ proxies:
     short-id: ad86e2d52ff40ebd
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 03
-  server: ch3.aimodelhub.top
-  port: 443
+- name: 🇨🇭 瑞士 (Switzerland) 06
+  server: 176.65.144.45
+  port: 2096
   udp: true
   type: vless
-  uuid: 13ef8e97-815a-4469-8688-0154d85d26bf
-  flow: xtls-rprx-vision
+  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
   tls: true
-  reality-opts:
-    public-key: XefKBMe64tsL6evDzPvn85YfLqePXZtwQxL7xpqA5RY
-    short-id: 79fa57c512a3
-  servername: ch3.aimodelhub.top
-  client-fingerprint: random
+  servername: ch.aksay.pro
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,6 +87,9 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 04
+  - 🇨🇭 瑞士 (Switzerland) 05
+  - 🇨🇭 瑞士 (Switzerland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,5 +98,8 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 01
   - 🇨🇭 瑞士 (Switzerland) 02
   - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 04
+  - 🇨🇭 瑞士 (Switzerland) 05
+  - 🇨🇭 瑞士 (Switzerland) 06
 rules:
 - MATCH,PROXIES

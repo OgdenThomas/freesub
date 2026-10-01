@@ -4,30 +4,40 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 ⚠R",
-      "server": "186.190.211.147",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "server": "lucky-lab-ac6d.caveyi8071.workers.dev",
+      "server_port": 443,
+      "uuid": "8a36be1d-7c78-4885-8a1f-bedf5ba7db1c",
+      "tls": {
+        "enabled": true,
+        "server_name": "lucky-lab-ac6d.caveyi8071.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/rN50nmm9L1DeY73C?ed=2560"
+      }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02",
-      "server": "95.85.247.62",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 R55",
+      "server": "199.232.78.159",
       "server_port": 443,
-      "uuid": "b0490f49-7201-4f8e-b456-f99a4d222f5b",
+      "uuid": "bfb1ec97-a326-4cf3-adcf-d2a0e2dc49f8",
       "tls": {
         "enabled": true,
-        "server_name": "neder.yandex-mul.fun",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "55-Q43xORYP1vJOssALwSj1t07qUaUiES8PurqO7ZWs",
-          "short_id": ""
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "pan2e.global.ssl.fastly.net"
         }
       }
     },
@@ -55,6 +65,27 @@
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 04",
+      "server": "95.85.224.51",
+      "server_port": 443,
+      "uuid": "342ab7e4-5a89-0001-8809-304120d4aa83",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc",
+          "short_id": "a696de84963656de"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 05",
       "server": "87.192.47.10",
       "server_port": 52006,
       "uuid": "bc659d88-a1e0-4c65-a49a-7b51b26a7a7f",
@@ -74,24 +105,124 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 06",
+      "server": "95.85.247.62",
+      "server_port": 443,
+      "uuid": "b0490f49-7201-4f8e-b456-f99a4d222f5b",
+      "tls": {
+        "enabled": true,
+        "server_name": "neder.yandex-mul.fun",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "55-Q43xORYP1vJOssALwSj1t07qUaUiES8PurqO7ZWs",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 07",
+      "server": "168.222.194.138",
+      "server_port": 9880,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU",
+          "short_id": "aa"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇬🇧 英国 (United Kingdom) 08 R47",
+      "server": "186.190.211.67",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "pahobac.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "pahobac.org"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇬🇧 英国 (United Kingdom) 09 R65",
+      "server": "199.232.78.188",
+      "server_port": 443,
+      "password": "mitivpn",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN",
+        "headers": {
+          "Host": "mitivpn---gb--s---mitivpn-1.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 ⚠R",
-        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R55",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04"
+        "🇬🇧 英国 (United Kingdom) 04",
+        "🇬🇧 英国 (United Kingdom) 05",
+        "🇬🇧 英国 (United Kingdom) 06",
+        "🇬🇧 英国 (United Kingdom) 07",
+        "🇬🇧 英国 (United Kingdom) 08 R47",
+        "🇬🇧 英国 (United Kingdom) 09 R65"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 ⚠R",
-        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R55",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04"
+        "🇬🇧 英国 (United Kingdom) 04",
+        "🇬🇧 英国 (United Kingdom) 05",
+        "🇬🇧 英国 (United Kingdom) 06",
+        "🇬🇧 英国 (United Kingdom) 07",
+        "🇬🇧 英国 (United Kingdom) 08 R47",
+        "🇬🇧 英国 (United Kingdom) 09 R65"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

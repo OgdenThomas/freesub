@@ -17,18 +17,65 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 02",
+      "server": "159.195.253.15",
+      "server_port": 8443,
+      "uuid": "bc221702-dd43-4642-a203-24d8d6a81165",
+      "tls": {
+        "enabled": true,
+        "server_name": "au1.pad-sservice.lat",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/au1",
+        "headers": {
+          "Host": "au1.pad-service.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 03",
+      "server": "g4.haxat.bestvbest.ir",
+      "server_port": 56126,
+      "uuid": "ce4b2104-f1fe-4216-ad67-8c21869b9118",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "oNv1vk-DHPrbFy__k2B7Am2lTtKfW4dXM7shzi7VFyk",
+          "short_id": "228b68f87a662053"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇦🇹 奥地利 (Austria) 01",
+        "🇦🇹 奥地利 (Austria) 02",
+        "🇦🇹 奥地利 (Austria) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇦🇹 奥地利 (Austria) 01",
+        "🇦🇹 奥地利 (Austria) 02",
+        "🇦🇹 奥地利 (Austria) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

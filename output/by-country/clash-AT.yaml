@@ -14,17 +14,48 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
+- name: 🇦🇹 奥地利 (Austria) 02
+  server: 159.195.253.15
+  port: 8443
+  udp: true
+  type: vless
+  uuid: bc221702-dd43-4642-a203-24d8d6a81165
+  tls: true
+  servername: au1.pad-sservice.lat
+  skip-cert-verify: false
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /au1
+    headers:
+      Host: au1.pad-service.com
+- name: 🇦🇹 奥地利 (Austria) 03
+  server: g4.haxat.bestvbest.ir
+  port: 56126
+  udp: true
+  type: vless
+  uuid: ce4b2104-f1fe-4216-ad67-8c21869b9118
+  tls: true
+  reality-opts:
+    public-key: oNv1vk-DHPrbFy__k2B7Am2lTtKfW4dXM7shzi7VFyk
+    short-id: 228b68f87a662053
+  servername: play.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01
+  - 🇦🇹 奥地利 (Austria) 02
+  - 🇦🇹 奥地利 (Austria) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇹 奥地利 (Austria) 01
+  - 🇦🇹 奥地利 (Austria) 02
+  - 🇦🇹 奥地利 (Austria) 03
 rules:
 - MATCH,PROXIES

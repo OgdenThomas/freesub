@@ -5,17 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 95.179.208.12
+  server: 15.237.255.137
   port: 443
   udp: true
-  type: vless
-  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  servername: googleapis.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇫🇷 法国 (France) 02
   server: 143.246.208.113
   port: 443
@@ -30,6 +25,103 @@ proxies:
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
 - name: 🇫🇷 法国 (France) 03
+  server: 45.80.215.8
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇫🇷 法国 (France) 04 R42
+  server: 137.74.16.237
+  port: 443
+  udp: true
+  type: vless
+  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
+    short-id: b390e0a721d242b0
+  servername: www.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05 R42
+  server: 51.83.6.5
+  port: 20076
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: dHHIUyBuva3crUBRwpOXCA
+- name: 🇫🇷 法国 (France) 06
+  server: 172.67.152.162
+  port: 443
+  udp: true
+  type: vless
+  uuid: 07f9bc85-613f-4a33-8da1-191973c43c0a
+  tls: true
+  servername: app-q0zc4t.user-4gfyh5.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: app-q0zc4t.user-4gfyh5.workers.dev
+- name: 🇫🇷 法国 (France) 07
+  server: 107.161.160.76
+  port: 8443
+  udp: true
+  type: vless
+  uuid: b21bfee6-dbd3-4e0b-840f-d66f07bf3186
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5PeguBXjCYGT4uhrCPgl0mJd4I9AlwL-WgUPauh9Zhg
+    short-id: 3a81109d64c4a69b
+  servername: deepl.com
+  client-fingerprint: safari
+- name: 🇫🇷 法国 (France) 08
+  server: nl-irancell3.xelfona.ir
+  port: 49548
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: zZ+k8UwdTQ9ZTnxEodTN2YI6KrFKEAcBWgCbLZIVUTE=:LbWEdFyjKcvZcv9agyGttSn0HNap+ecf50/UrlGMBCQ=
+- name: 🇫🇷 法国 (France) 09
+  server: 45.87.41.18
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 10
+  server: milan.adaspoloandco.com
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
+  tls: true
+  servername: milan.adaspoloandco.com
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /RoBeRt
+- name: 🇫🇷 法国 (France) 11
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 12
   server: 34.155.146.201
   port: 443
   udp: true
@@ -41,8 +133,8 @@ proxies:
     short-id: 3f95392a418ec8fd
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
-  server: 172.64.152.23
+- name: 🇫🇷 法国 (France) 13 R50
+  server: 185.220.100.168
   port: 443
   udp: true
   type: trojan
@@ -52,8 +144,34 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 05
-  server: 172.67.185.98
+- name: 🇫🇷 法国 (France) 14
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 15 R50
+  server: 172.67.193.182
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  tls: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: 🇫🇷 法国 (France) 16
+  server: 104.21.84.30
   port: 2053
   udp: true
   type: vless
@@ -67,17 +185,6 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-- name: 🇫🇷 法国 (France) 06
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -86,9 +193,19 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 04 R42
+  - 🇫🇷 法国 (France) 05 R42
   - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13 R50
+  - 🇫🇷 法国 (France) 14
+  - 🇫🇷 法国 (France) 15 R50
+  - 🇫🇷 法国 (France) 16
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -97,8 +214,18 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 04 R42
+  - 🇫🇷 法国 (France) 05 R42
   - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13 R50
+  - 🇫🇷 法国 (France) 14
+  - 🇫🇷 法国 (France) 15 R50
+  - 🇫🇷 法国 (France) 16
 rules:
 - MATCH,PROXIES

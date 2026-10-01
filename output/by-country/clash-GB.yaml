@@ -4,25 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 ⚠R
-  server: 186.190.211.147
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 95.85.247.62
+- name: 🇬🇧 英国 (United Kingdom) 01
+  server: lucky-lab-ac6d.caveyi8071.workers.dev
   port: 443
   udp: true
   type: vless
-  uuid: b0490f49-7201-4f8e-b456-f99a4d222f5b
+  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
   tls: true
-  reality-opts:
-    public-key: 55-Q43xORYP1vJOssALwSj1t07qUaUiES8PurqO7ZWs
-  servername: neder.yandex-mul.fun
-  client-fingerprint: safari
+  servername: lucky-lab-ac6d.caveyi8071.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /rN50nmm9L1DeY73C?ed=2560
+- name: 🇬🇧 英国 (United Kingdom) 02 R55
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: bfb1ec97-a326-4cf3-adcf-d2a0e2dc49f8
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pan2e.global.ssl.fastly.net
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 23.81.34.204
   port: 443
@@ -37,6 +45,19 @@ proxies:
   servername: speed.cloudflare.com
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 04
+  server: 95.85.224.51
+  port: 443
+  udp: true
+  type: vless
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  servername: max.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 87.192.47.10
   port: 52006
   udp: true
@@ -47,23 +68,86 @@ proxies:
   servername: grok.setlisting.ru
   skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 95.85.247.62
+  port: 443
+  udp: true
+  type: vless
+  uuid: b0490f49-7201-4f8e-b456-f99a4d222f5b
+  tls: true
+  reality-opts:
+    public-key: 55-Q43xORYP1vJOssALwSj1t07qUaUiES8PurqO7ZWs
+  servername: neder.yandex-mul.fun
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 168.222.194.138
+  port: 9880
+  udp: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aa
+  servername: dl.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇬🇧 英国 (United Kingdom) 08 R47
+  server: 186.190.211.67
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: pahobac.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: pahobac.org
+- name: 🇬🇧 英国 (United Kingdom) 09 R65
+  server: 199.232.78.188
+  port: 443
+  udp: true
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R55
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08 R47
+  - 🇬🇧 英国 (United Kingdom) 09 R65
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R55
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08 R47
+  - 🇬🇧 英国 (United Kingdom) 09 R65
 rules:
 - MATCH,PROXIES
