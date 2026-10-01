@@ -4,19 +4,8 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽)
-  server: 162.159.39.218
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: 118.167.207.194
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  server: hinet1.2yly.com
   port: 24215
   udp: true
   type: vless
@@ -25,20 +14,18 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES

@@ -16,17 +16,27 @@ proxies:
     public-key: yI6maXxTQ8zRHg39X8YMQtKW-IVfNIn0_OCUIQKmcXw
   servername: google.com
   client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: 144.31.49.47
+  port: 443
+  udp: true
+  type: hysteria2
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  sni: admin.wwwinternetvideo.click
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
+  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

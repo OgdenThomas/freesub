@@ -5,54 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01
-  server: 168.107.73.109
-  port: 56927
+  server: 172.64.52.6
+  port: 8880
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: f1gzyT3H7Eu6g+j4WAD5IdouUwyt6vEmyjaYQSi8N+w=
-- name: 🇸🇬 新加坡 (Singapore) 02 R50
-  server: 128.199.172.224
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03 R50
-  server: 68.183.235.122
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04
-  server: 5.223.41.179
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇸🇬 新加坡 (Singapore) 02
+  server: 104.18.46.234
   port: 80
   udp: true
   type: vless
-  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 05
-  server: 5.223.41.119
-  port: 80
-  udp: true
-  type: vless
-  uuid: 31ae842f-a16e-4d94-8d72-776a5b78bc11
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 06
-  server: 5.223.41.164
-  port: 80
-  udp: true
-  type: vless
-  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 07
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇸🇬 新加坡 (Singapore) 03
   server: 5.223.41.51
   port: 80
   udp: true
@@ -61,86 +35,16 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 08 R50
-  server: 68.183.227.4
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 09 R50
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 10
-  server: 5.223.41.188
+- name: 🇸🇬 新加坡 (Singapore) 04
+  server: 5.223.41.93
   port: 80
   udp: true
   type: vless
-  uuid: 8afe27ac-aac9-4ff3-933f-7a12682adb70
+  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 11
-  server: 5.223.41.76
-  port: 80
-  udp: true
-  type: vless
-  uuid: c567daa6-1538-4db7-9b77-7bd5b2beece2
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 12
-  server: sg3.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jpn2pLj_p5lxGwycLht80v2qNeP7jHwh1Gv-nTU8zXY
-    short-id: ddcd71ec09e5893a
-  servername: www.changiairport.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 13
-  server: 136.85.2.50
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-  tls: true
-  reality-opts:
-    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
-    short-id: eb97ce837da2f6ad
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇸🇬 新加坡 (Singapore) 14
-  server: 5.223.41.47
-  port: 80
-  udp: true
-  type: vless
-  uuid: e81daee0-e509-4983-a14a-763d3951c94d
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 15
-  server: sg1.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vUhHTgZiXSho6Nv84w_JZW7Mo7XjJr0TsOBf19Dpols
-    short-id: 37c94ae25b69a93a
-  servername: sg-hyp-api.hoyoverse.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 16
+- name: 🇸🇬 新加坡 (Singapore) 05
   server: 54.169.200.246
   port: 41688
   udp: true
@@ -153,7 +57,53 @@ proxies:
     short-id: 7f342137c20387
   servername: www.intel.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 17
+- name: 🇸🇬 新加坡 (Singapore) 06
+  server: 5.223.41.164
+  port: 80
+  udp: true
+  type: vless
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 07
+  server: 168.107.73.109
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: f1gzyT3H7Eu6g+j4WAD5IdouUwyt6vEmyjaYQSi8N+w=
+- name: 🇸🇬 新加坡 (Singapore) 08 R50
+  server: 128.199.172.224
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 09 R50
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 10
+  server: 5.223.41.179
+  port: 80
+  udp: true
+  type: vless
+  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 11 R50
+  server: 68.183.235.122
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 12
   server: 5.223.41.121
   port: 80
   udp: true
@@ -162,42 +112,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 18
-  server: sg4.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: I2PQq5bidT2RjVCJt2r-eSVpLNY61quSYgS2dseomF8
-    short-id: 1dd8558159ecd0
-  servername: www.changiairport.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 19
-  server: 5.223.41.5
-  port: 80
-  udp: true
-  type: vless
-  uuid: 180252b0-8c59-475c-a3b8-6c33c2ed2359
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇸🇬 新加坡 (Singapore) 20
-  server: 216.195.196.86
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 7c973569-71da-4d18-8c80-aa4c8ee2f257
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5wGgDloyck_L25Y5rkWorpV3IK00pK0Lki7LR0VY0io
-    short-id: 4fba6fd2c74fd18f
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 21
+- name: 🇸🇬 新加坡 (Singapore) 13
   server: 5.223.41.125
   port: 80
   udp: true
@@ -206,27 +121,36 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇸🇬 新加坡 (Singapore) 22 R50
+- name: 🇸🇬 新加坡 (Singapore) 14 R50
   server: 68.183.227.45
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 23
-  server: sg2.miyazono-kaori.com
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 15
+  server: 5.223.41.138
+  port: 80
   udp: true
   type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
+  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇸🇬 新加坡 (Singapore) 16
+  server: sg2-8sb.6121999.dpdns.org
+  port: 19825
+  udp: true
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Oh-r_LCdfRhSzm9zQEv-0jMO57hebZJzOmSTTGveh2c
-    short-id: 5f2ca3da385c
-  servername: sg-hyp-api.hoyoverse.com
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  servername: sg2-8sb.6121999.dpdns.org
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 24
+- name: 🇸🇬 新加坡 (Singapore) 17
   server: 173.234.14.105
   port: 59615
   udp: true
@@ -238,8 +162,8 @@ proxies:
     public-key: 7PB-58vYXFLNhK6kY8bJJO3-fPOXTPQJ0UqDlhSOH3M
     short-id: 6b
   servername: biosmod.partners.nvidia.com
-  client-fingerprint: ios
-- name: 🇸🇬 新加坡 (Singapore) 25 R55
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 18 R55
   server: support.zoom.us
   port: 80
   udp: true
@@ -250,8 +174,21 @@ proxies:
     path: /shalana
     headers:
       Host: onhit.shalana.shop
-- name: 🇸🇬 新加坡 (Singapore) 26 R55
-  server: 91.193.58.131
+- name: 🇸🇬 新加坡 (Singapore) 19
+  server: mdk.mdmekjll.best
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /game/resources
+    headers:
+      Host: mdk.mdmekjll.best
+- name: 🇸🇬 新加坡 (Singapore) 20 R55
+  server: 91.193.58.122
   port: 2096
   udp: true
   type: vless
@@ -265,25 +202,14 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 27 R55
-  server: support.zoom.us
-  port: 80
-  udp: true
-  type: vless
-  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01
-  - 🇸🇬 新加坡 (Singapore) 02 R50
-  - 🇸🇬 新加坡 (Singapore) 03 R50
+  - 🇸🇬 新加坡 (Singapore) 02
+  - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
   - 🇸🇬 新加坡 (Singapore) 05
   - 🇸🇬 新加坡 (Singapore) 06
@@ -291,31 +217,24 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 08 R50
   - 🇸🇬 新加坡 (Singapore) 09 R50
   - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 11 R50
   - 🇸🇬 新加坡 (Singapore) 12
   - 🇸🇬 新加坡 (Singapore) 13
-  - 🇸🇬 新加坡 (Singapore) 14
+  - 🇸🇬 新加坡 (Singapore) 14 R50
   - 🇸🇬 新加坡 (Singapore) 15
   - 🇸🇬 新加坡 (Singapore) 16
   - 🇸🇬 新加坡 (Singapore) 17
-  - 🇸🇬 新加坡 (Singapore) 18
+  - 🇸🇬 新加坡 (Singapore) 18 R55
   - 🇸🇬 新加坡 (Singapore) 19
-  - 🇸🇬 新加坡 (Singapore) 20
-  - 🇸🇬 新加坡 (Singapore) 21
-  - 🇸🇬 新加坡 (Singapore) 22 R50
-  - 🇸🇬 新加坡 (Singapore) 23
-  - 🇸🇬 新加坡 (Singapore) 24
-  - 🇸🇬 新加坡 (Singapore) 25 R55
-  - 🇸🇬 新加坡 (Singapore) 26 R55
-  - 🇸🇬 新加坡 (Singapore) 27 R55
+  - 🇸🇬 新加坡 (Singapore) 20 R55
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01
-  - 🇸🇬 新加坡 (Singapore) 02 R50
-  - 🇸🇬 新加坡 (Singapore) 03 R50
+  - 🇸🇬 新加坡 (Singapore) 02
+  - 🇸🇬 新加坡 (Singapore) 03
   - 🇸🇬 新加坡 (Singapore) 04
   - 🇸🇬 新加坡 (Singapore) 05
   - 🇸🇬 新加坡 (Singapore) 06
@@ -323,22 +242,15 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 08 R50
   - 🇸🇬 新加坡 (Singapore) 09 R50
   - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 11 R50
   - 🇸🇬 新加坡 (Singapore) 12
   - 🇸🇬 新加坡 (Singapore) 13
-  - 🇸🇬 新加坡 (Singapore) 14
+  - 🇸🇬 新加坡 (Singapore) 14 R50
   - 🇸🇬 新加坡 (Singapore) 15
   - 🇸🇬 新加坡 (Singapore) 16
   - 🇸🇬 新加坡 (Singapore) 17
-  - 🇸🇬 新加坡 (Singapore) 18
+  - 🇸🇬 新加坡 (Singapore) 18 R55
   - 🇸🇬 新加坡 (Singapore) 19
-  - 🇸🇬 新加坡 (Singapore) 20
-  - 🇸🇬 新加坡 (Singapore) 21
-  - 🇸🇬 新加坡 (Singapore) 22 R50
-  - 🇸🇬 新加坡 (Singapore) 23
-  - 🇸🇬 新加坡 (Singapore) 24
-  - 🇸🇬 新加坡 (Singapore) 25 R55
-  - 🇸🇬 新加坡 (Singapore) 26 R55
-  - 🇸🇬 新加坡 (Singapore) 27 R55
+  - 🇸🇬 新加坡 (Singapore) 20 R55
 rules:
 - MATCH,PROXIES

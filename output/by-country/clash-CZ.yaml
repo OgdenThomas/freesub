@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 46.28.67.55
+- name: 🇨🇿 捷克 (Czech) 01
+  server: 85.117.235.50
   port: 443
   udp: true
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  uuid: f4d71fd6-1c25-4748-836b-1dbda9268039
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: PmdZ2ETkHc0zjYcs22xT_wyZk5fEpX7mg7RP396HBBc
+    short-id: 232b1b09e45325a4
+  servername: cz1.animeteka.info
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇨🇿 捷克 (Czech) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇨🇿 捷克 (Czech) 01
 rules:
 - MATCH,PROXIES

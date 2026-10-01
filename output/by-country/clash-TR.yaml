@@ -5,11 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: test.keoplentuio.xyz
-  port: 2053
+  server: turkeyy.savlix.ir
+  port: 443
   udp: true
   type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  uuid: 4ea34b32-e23e-4c9e-b698-a47dc0f6a403
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wl_y61vSwl3n0-AN0uR9djz-B3U3t1RtNDmxbbFpc24
+    short-id: 93abf094dc19d13b
+  servername: one.one.one.com
+  client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
@@ -23,19 +30,6 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: tr2.gigobingo.ru
-  port: 443
-  udp: true
-  type: vless
-  uuid: 46e62b9b-f9db-4310-8f18-7d6e449cfd5c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ
-    short-id: ef7c4e4302bd52d7
-  servername: tr2.gigobingo.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -51,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

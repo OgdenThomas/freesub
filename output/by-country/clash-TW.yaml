@@ -5,18 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: tw3.miyazono-kaori.com
-  port: 443
+  server: hi.northcluster.info
+  port: 52300
   udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
-    short-id: 473277e2
-  servername: dlcdnets.asus.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 6e571484-4166-4699-8f58-b34a1823691f
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /video
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,18 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 83.168.68.59
+  server: 149.86.227.200
   port: 443
   udp: true
   type: vless
-  uuid: 8dbcb4ef-65bf-4890-a257-c32073689ee8
+  uuid: 0f4081e7-612b-425f-8def-eebf144aedba
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: UmiO58uvMjH4a9DIkUbLCy5EJYncSsraFFtiJS_oinU
-    short-id: 4e85d77e533afc1c
-  servername: smotret.tv
-  client-fingerprint: random
+    public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
+    short-id: 9e15546f267baa64
+  servername: waypoint.connectserverix.com
+  client-fingerprint: safari
 - name: 🇵🇱 波兰 (Poland) 02
   server: 70.34.255.101
   port: 80
@@ -50,19 +50,27 @@ proxies:
     short-id: 7e7623474d41f032
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 05 R42
-  server: 188.114.96.19
-  port: 80
+- name: 🇵🇱 波兰 (Poland) 05
+  server: 83.168.107.220
+  port: 443
   udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  type: vless
+  uuid: b1813cbd-831f-4cb3-baf8-5bc0cc8298bc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
+    short-id: c56d4f1c
+  servername: google.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 06
+  server: media.embrofree.org
+  port: 443
+  udp: true
+  type: hysteria2
+  password: ce09043a-5d3b-45df-aea0-5599215146bb
+  sni: media.embrofree.org
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,7 +80,8 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05 R42
+  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,6 +91,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05 R42
+  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06
 rules:
 - MATCH,PROXIES

@@ -4,20 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 R50
-  server: 193.238.154.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
-  tls: true
-  servername: assets-es.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: 🇪🇸 西班牙 (Spain) 02
+- name: 🇪🇸 西班牙 (Spain) 01
   server: 34.175.107.233
   port: 443
   udp: true
@@ -29,7 +16,7 @@ proxies:
     short-id: 1c9e101e99bf86bb
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03
+- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -42,21 +29,34 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 03 R50
+  server: assets-es.pleiades.codes
+  port: 443
+  udp: true
+  type: vless
+  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  tls: true
+  servername: assets-es.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 R50
+  - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 03 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 R50
+  - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 03 R50
 rules:
 - MATCH,PROXIES
