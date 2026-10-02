@@ -17,21 +17,21 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02
+- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  server: 186.190.211.147
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 129.151.75.247
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: BHkQ13jCKX876J8TVa/Qx/Awfit4mFt+6V5zdKGczsw=
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: uk-002.xiaoxiaobujidao.xyz
-  port: 19443
-  udp: true
-  type: hysteria2
-  password: 8b60d570-cbce-4791-b3e8-bcb80dd12ac0
-  sni: uk-002.xiaoxiaobujidao.xyz
-  skip-cert-verify: false
 - name: 🇬🇧 英国 (United Kingdom) 04
   server: 3cjsczov.selqora.ir
   port: 51595
@@ -45,52 +45,41 @@ proxies:
     short-id: 768cb7c239d7e2ce
   servername: play.google.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 172.67.131.125
+- name: 🇬🇧 英国 (United Kingdom) 05 R47
+  server: 186.190.211.67
   port: 443
   udp: true
-  type: vless
-  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
+  servername: pahobac.org
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
+    path: /linkvws
     headers:
-      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 87.192.47.10
-  port: 52006
-  udp: true
-  type: vless
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: grok.setlisting.ru
-  skip-cert-verify: false
+      Host: pahobac.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 05 R47
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 05 R47
 rules:
 - MATCH,PROXIES

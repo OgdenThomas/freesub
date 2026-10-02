@@ -16,18 +16,32 @@ proxies:
     public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
     short-id: 6a
   servername: online.1c.ru
-  client-fingerprint: chrome
+  client-fingerprint: safari
+- name: 🇱🇹 立陶宛 (Lithuania) 02
+  server: litva1.ali-bard.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4643976f-85fa-40cf-9e58-ea28b50f253b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: litva1.ali-bard.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇱🇹 立陶宛 (Lithuania) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇱🇹 立陶宛 (Lithuania) 02
 rules:
 - MATCH,PROXIES

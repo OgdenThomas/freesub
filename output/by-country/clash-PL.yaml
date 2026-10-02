@@ -5,19 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 95.85.227.241
+  server: 95.85.253.202
   port: 443
   udp: true
   type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  uuid: 4314a583-3a39-45e1-883e-70bf570d252a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dlX12huNd8CRSGgKGCwi1GiCLFtmRxY9b7ywKCIyWXo
-    short-id: 25934afbedc65791
-  servername: proxy3d.h1guro.ovh
+    public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+  servername: pl0001.kubservice.icu
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 02
+  server: pl193.mech-pro.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: a15d1b88-e3f4-4f4d-9c04-462a2965a60a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: pl193.mech-pro.online
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 03
+  server: pol4.o4ka-internet.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8f6e49e6-7f03-4f10-9da9-1716158d80ed
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8
+    short-id: 5629431325884ff0
+  servername: pol4.o4ka-internet.com
+  client-fingerprint: random
+- name: 🇵🇱 波兰 (Poland) 04
   server: 70.34.255.101
   port: 80
   udp: true
@@ -26,7 +51,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇵🇱 波兰 (Poland) 03
+- name: 🇵🇱 波兰 (Poland) 05
+  server: polo.ali-bard.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4643976f-85fa-40cf-9e58-ea28b50f253b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: polo.ali-bard.online
+  client-fingerprint: edge
+- name: 🇵🇱 波兰 (Poland) 06
   server: 83.168.107.220
   port: 443
   udp: true
@@ -39,44 +76,6 @@ proxies:
     short-id: c56d4f1c
   servername: google.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 04
-  server: 95.85.253.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4314a583-3a39-45e1-883e-70bf570d252a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
-  servername: pl0001.kubservice.icu
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 149.86.227.200
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0f4081e7-612b-425f-8def-eebf144aedba
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
-    short-id: 9e15546f267baa64
-  servername: waypoint.connectserverix.com
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 06 R42
-  server: 188.114.96.19
-  port: 80
-  udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -87,7 +86,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R42
+  - 🇵🇱 波兰 (Poland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -98,6 +97,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R42
+  - 🇵🇱 波兰 (Poland) 06
 rules:
 - MATCH,PROXIES

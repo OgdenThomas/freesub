@@ -4,23 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01
-  server: test.keoplentuio.xyz
-  port: 2053
+- name: 🇦🇹 奥地利 (Austria) 01
+  server: 31.77.227.6
+  port: 52006
   udp: true
   type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: bigdick.gamegrow.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇦🇹 奥地利 (Austria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇦🇹 奥地利 (Austria) 01
 rules:
 - MATCH,PROXIES

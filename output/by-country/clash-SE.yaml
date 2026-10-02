@@ -5,53 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 51.20.72.15
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 02
-  server: 51.20.143.248
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 03
-  server: 13.48.177.148
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 04
-  server: 13.48.104.64
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 05
   server: 51.20.86.152
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 06
-  server: 143.246.196.207
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 13.48.177.148
   port: 443
   udp: true
-  type: vless
-  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
-  servername: www.blocket.se
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 07
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: 13.49.21.155
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 04
   server: 34.51.231.250
   port: 443
   udp: true
@@ -62,8 +36,33 @@ proxies:
     public-key: fV003yDr_sb_Wkgz6MxnIUJMgD15osWhzU-HZ5fLPFg
     short-id: 79ff7d51e3c56323
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 08
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 05
+  server: 143.246.196.207
+  port: 443
+  udp: true
+  type: vless
+  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.blocket.se
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 06
+  server: swed4.o4ka-internet.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8f6e49e6-7f03-4f10-9da9-1716158d80ed
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8
+    short-id: 5629431325884ff0
+  servername: swed4.o4ka-internet.com
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 07
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -90,7 +89,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
-  - 🇸🇪 瑞典 (Sweden) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -103,6 +101,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 05
   - 🇸🇪 瑞典 (Sweden) 06
   - 🇸🇪 瑞典 (Sweden) 07
-  - 🇸🇪 瑞典 (Sweden) 08
 rules:
 - MATCH,PROXIES

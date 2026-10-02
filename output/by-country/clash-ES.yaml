@@ -16,7 +16,20 @@ proxies:
     short-id: 1c9e101e99bf86bb
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02
+- name: 🇪🇸 西班牙 (Spain) 02 R50
+  server: 193.238.154.5
+  port: 443
+  udp: true
+  type: vless
+  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+  tls: true
+  servername: assets-es.pleiades.codes
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇪🇸 西班牙 (Spain) 03
   server: 46.28.71.247
   port: 443
   udp: true
@@ -28,20 +41,22 @@ proxies:
     public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
-  - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 02 R50
+  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
-  - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 02 R50
+  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

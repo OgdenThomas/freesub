@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 巴西 (Brazil) 01
+  server: br.monkora.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
+  tls: true
+  reality-opts:
+    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+  servername: br.monkora.org
+  client-fingerprint: firefox
+- name: 🇧🇷 巴西 (Brazil) 02
   server: 89.39.161.157
   port: 443
   udp: true
@@ -26,11 +37,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01
+  - 🇧🇷 巴西 (Brazil) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 巴西 (Brazil) 01
+  - 🇧🇷 巴西 (Brazil) 02
 rules:
 - MATCH,PROXIES

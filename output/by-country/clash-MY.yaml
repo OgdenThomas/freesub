@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇾 马来西亚 (Malaysia) 01
+  server: 149.33.30.176
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5fffad1b-10f0-41ff-abe7-e5a92696d5ef
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: rk_iTiKEWYK02oF8lCIXrVlM7pWMSYX-Iuaz6Eat5lI
+    short-id: 4b26322b354bd74e
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇲🇾 马来西亚 (Malaysia) 02
   server: 130.94.69.15
   port: 7001
   udp: true
@@ -17,11 +30,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇲🇾 马来西亚 (Malaysia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇲🇾 马来西亚 (Malaysia) 02
 rules:
 - MATCH,PROXIES
