@@ -5,8 +5,37 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 01",
-      "server": "143.246.208.113",
+      "tag": "🇫🇷 法国 (France) 01 R42",
+      "server": "137.74.16.237",
+      "server_port": 443,
+      "uuid": "aaec4e42-a095-44b6-a239-f16d234a0798",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I",
+          "short_id": "b390e0a721d242b0"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 02",
+      "server": "15.237.255.137",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 03",
+      "server": "assets-fr4.pleiades.codes",
       "server_port": 443,
       "uuid": "0dca2cfe-98eb-4f9d-9a47-cf87510c558b",
       "tls": {
@@ -24,33 +53,28 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇫🇷 法国 (France) 02",
-      "server": "45.80.215.8",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 03",
-      "server": "nl-irancell3.xelfona.ir",
-      "server_port": 49548,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "zZ+k8UwdTQ9ZTnxEodTN2YI6KrFKEAcBWgCbLZIVUTE=:LbWEdFyjKcvZcv9agyGttSn0HNap+ecf50/UrlGMBCQ="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 04",
-      "server": "13.38.84.99",
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 04 R50",
+      "server": "172.64.150.28",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇫🇷 法国 (France) 05",
-      "server": "fr.api-music-fa.com",
+      "server": "104.21.84.30",
       "server_port": 2053,
       "uuid": "9d672694-c146-422e-b3b5-3717a38a0fcc",
       "tls": {
@@ -81,7 +105,7 @@
       "uuid": "7c99dc89-bf49-45c9-acc5-e43f36657518",
       "tls": {
         "enabled": true,
-        "server_name": "",
+        "server_name": "www.large-files.info",
         "insecure": false,
         "alpn": [
           "http/1.1"
@@ -97,10 +121,10 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 法国 (France) 01",
+        "🇫🇷 法国 (France) 01 R42",
         "🇫🇷 法国 (France) 02",
         "🇫🇷 法国 (France) 03",
-        "🇫🇷 法国 (France) 04",
+        "🇫🇷 法国 (France) 04 R50",
         "🇫🇷 法国 (France) 05",
         "🇫🇷 法国 (France) 06 R50"
       ]
@@ -109,10 +133,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 法国 (France) 01",
+        "🇫🇷 法国 (France) 01 R42",
         "🇫🇷 法国 (France) 02",
         "🇫🇷 法国 (France) 03",
-        "🇫🇷 法国 (France) 04",
+        "🇫🇷 法国 (France) 04 R50",
         "🇫🇷 法国 (France) 05",
         "🇫🇷 法国 (France) 06 R50"
       ],

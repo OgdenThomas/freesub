@@ -5,6 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
+  server: 95.85.227.241
+  port: 443
+  udp: true
+  type: vless
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dlX12huNd8CRSGgKGCwi1GiCLFtmRxY9b7ywKCIyWXo
+    short-id: 25934afbedc65791
+  servername: proxy3d.h1guro.ovh
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 70.34.255.101
+  port: 80
+  udp: true
+  type: vless
+  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 83.168.107.220
+  port: 443
+  udp: true
+  type: vless
+  uuid: b1813cbd-831f-4cb3-baf8-5bc0cc8298bc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
+    short-id: c56d4f1c
+  servername: google.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 95.85.253.202
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4314a583-3a39-45e1-883e-70bf570d252a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+  servername: pl0001.kubservice.icu
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 05
   server: 149.86.227.200
   port: 443
   udp: true
@@ -17,60 +64,19 @@ proxies:
     short-id: 9e15546f267baa64
   servername: waypoint.connectserverix.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 70.34.255.101
+- name: 🇵🇱 波兰 (Poland) 06 R42
+  server: 188.114.96.19
   port: 80
   udp: true
-  type: vless
-  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
+  type: vmess
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
     path: /
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 95.85.253.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4314a583-3a39-45e1-883e-70bf570d252a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
-  servername: pl0001.kubservice.icu
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04
-  server: 34.118.43.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: 16e310b7-659e-45ee-a4b0-10e0289b8621
-  tls: true
-  reality-opts:
-    public-key: -bjPqNKxxGTKCmH6dwsdGRTUzuatAowBWxyOPW4BiVQ
-    short-id: 7e7623474d41f032
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 83.168.107.220
-  port: 443
-  udp: true
-  type: vless
-  uuid: b1813cbd-831f-4cb3-baf8-5bc0cc8298bc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
-    short-id: c56d4f1c
-  servername: google.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06
-  server: media.embrofree.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: ce09043a-5d3b-45df-aea0-5599215146bb
-  sni: media.embrofree.org
-  skip-cert-verify: false
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,7 +87,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 06 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,6 +98,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 06 R42
 rules:
 - MATCH,PROXIES

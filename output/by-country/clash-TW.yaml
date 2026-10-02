@@ -5,27 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: hi.northcluster.info
-  port: 52300
+  server: sbgfgov.vip23.wogacnmnagfwgov.com
+  port: 11223
   udp: true
   type: vmess
-  uuid: 6e571484-4166-4699-8f58-b34a1823691f
-  alterId: 0
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /video
+- name: 🇹🇼 中国台湾 (Taiwan) 02
+  server: 118.167.235.241
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01
+  - 🇹🇼 中国台湾 (Taiwan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01
+  - 🇹🇼 中国台湾 (Taiwan) 02
 rules:
 - MATCH,PROXIES
