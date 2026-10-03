@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: bale.xv98.ir
-  port: 5051
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 68mL2QkZEBlxWa3hcslGDw
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: 206.1.103.221
-  port: 17721
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: YdXo5FtbFp8lnDRbIvewaOaXbDtf5eR1Bk/O594+x40=:iZdLC0QQ5kSj7Y1QqwR/t23h1gp/jHyiWkf2MJFjq5s=
-- name: 🇹🇷 土耳其 (Turkey) 03
   server: 78.135.73.47
   port: 443
   udp: true
@@ -31,12 +17,21 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04
-  server: 176.96.131.251
-  port: 1280
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 178.83.46.216
+  port: 2053
   udp: true
   type: vless
-  uuid: c0e8fb58-a60f-4c15-9444-4e7c109797a8
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: shop.neexbyte.ir
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8bb52771-052e-40b5-ab53-c6e151ad2290
+  tls: true
+  servername: shop.neexbyte.ir
+  skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
@@ -48,7 +43,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,6 +51,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 rules:
 - MATCH,PROXIES

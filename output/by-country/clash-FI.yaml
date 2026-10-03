@@ -5,17 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 170.168.4.52
-  port: 443
+  server: 62.238.31.173
+  port: 8081
   udp: true
   type: vless
-  uuid: 4643976f-85fa-40cf-9e58-ea28b50f253b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finl11.ali-bard.online
-  client-fingerprint: qq
+  uuid: 57f03653-3af9-4f11-895b-23672338b0ac
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
 - name: 🇫🇮 芬兰 (Finland) 02
   server: 77.42.28.120
   port: 1280
@@ -28,6 +25,14 @@ proxies:
     headers:
       Host: is1-ssl.mzstatic.com
 - name: 🇫🇮 芬兰 (Finland) 03
+  server: 144.31.232.216
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
+  sni: fi01.clgate.network
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 04
   server: v3.tgphoenix.ir
   port: 8443
   udp: true
@@ -39,14 +44,19 @@ proxies:
     short-id: 45d28a6346d04a99
   servername: www.aparat.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: 144.31.212.253
-  port: 443
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 95.163.215.8
+  port: 6002
   udp: true
-  type: hysteria2
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  sni: vps155-edge.kermemehori.ru
+  type: vless
+  uuid: 8e8ea5d2-6941-40fb-9efe-f9062b11b2b9
+  tls: true
+  servername: fin1.centermass.net
   skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: media.playback.v1.SessionGateway
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,6 +66,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,5 +76,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

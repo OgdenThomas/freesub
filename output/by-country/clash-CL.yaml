@@ -5,28 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01
-  server: platform102.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 02
-  server: platform109.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform109
-    headers:
-      Host: platform109.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 03
   server: platform103.golnamakcert.top
   port: 80
   udp: true
@@ -37,18 +15,7 @@ proxies:
     path: /platform103
     headers:
       Host: platform103.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 04
-  server: platform107.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform107
-    headers:
-      Host: platform107.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 05
+- name: 🇨🇱 智利 (Chile) 02
   server: platform106.golnamakcert.top
   port: 80
   udp: true
@@ -59,7 +26,18 @@ proxies:
     path: /platform106
     headers:
       Host: platform106.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 06
+- name: 🇨🇱 智利 (Chile) 03
+  server: platform107.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform107
+    headers:
+      Host: platform107.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 04
   server: platform101.golnamakcert.top
   port: 80
   udp: true
@@ -70,6 +48,17 @@ proxies:
     path: /platform101
     headers:
       Host: platform101.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 05
+  server: platform109.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform109
+    headers:
+      Host: platform109.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,7 +69,6 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 03
   - 🇨🇱 智利 (Chile) 04
   - 🇨🇱 智利 (Chile) 05
-  - 🇨🇱 智利 (Chile) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,6 +79,5 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 03
   - 🇨🇱 智利 (Chile) 04
   - 🇨🇱 智利 (Chile) 05
-  - 🇨🇱 智利 (Chile) 06
 rules:
 - MATCH,PROXIES
