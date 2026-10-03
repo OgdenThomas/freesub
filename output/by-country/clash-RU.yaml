@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: vless.herogoing.top
-  port: 443
-  udp: true
-  type: trojan
-  password: bpb-trojan
-  sni: vless.herogoing.top
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 194.113.235.66
   port: 443
   udp: true
@@ -28,18 +17,26 @@ proxies:
     short-id: 9e4eced6e98ed4d4
   servername: github.com
   client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 194.38.11.86
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 141.98.235.200
+  server: 201.51.11.117
   port: 443
   udp: true
   type: vless
-  uuid: f811a2e8-08ed-4b30-b44c-449a7cab54d8
+  uuid: 5d0e5029-061f-4d75-ac97-718dbf827957
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: vwwHjxmmRYqdtVvLKkMDKXi5LPVKpoLaJaA6X3OZXSI
-  servername: nlafterdate.live
-  client-fingerprint: firefox
+    public-key: 9eiEOSjRUJfWtjR5_h6qYOIIC7oihvCNtyFFvtu7MEM
+    short-id: ed07a0272e0123e0
+  servername: www.samsung.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

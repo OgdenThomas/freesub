@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01
-  server: 103.172.197.3
-  port: 16006
-  udp: true
-  type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇩 印尼 (Indonesia) 02
   server: 103.172.197.2
   port: 29172
   udp: true
@@ -28,6 +16,26 @@ proxies:
     public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
   servername: aws.amazon.com
   client-fingerprint: chrome
+- name: 🇮🇩 印尼 (Indonesia) 02
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16298
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇮🇩 印尼 (Indonesia) 03
+  server: 103.172.197.3
+  port: 16006
+  udp: true
+  type: vless
+  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -35,6 +43,7 @@ proxy-groups:
   - AUTO
   - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
+  - 🇮🇩 印尼 (Indonesia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -42,5 +51,6 @@ proxy-groups:
   proxies:
   - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
+  - 🇮🇩 印尼 (Indonesia) 03
 rules:
 - MATCH,PROXIES

@@ -6,27 +6,6 @@
     {
       "type": "vless",
       "tag": "🇮🇩 印尼 (Indonesia) 01",
-      "server": "103.172.197.3",
-      "server_port": 16006,
-      "uuid": "f8c9d2a1-da40-4f90-b671-11772a0b13d6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇩 印尼 (Indonesia) 02",
       "server": "103.172.197.2",
       "server_port": 29172,
       "uuid": "3977434d-6a9b-4858-8ced-80326ba5e367",
@@ -46,12 +25,42 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇮🇩 印尼 (Indonesia) 02",
+      "server": "zfd-boardv2.kunlun01dns.com",
+      "server_port": 16298,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 印尼 (Indonesia) 03",
+      "server": "103.172.197.3",
+      "server_port": 16006,
+      "uuid": "f8c9d2a1-da40-4f90-b671-11772a0b13d6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU",
+          "short_id": ""
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇮🇩 印尼 (Indonesia) 01",
-        "🇮🇩 印尼 (Indonesia) 02"
+        "🇮🇩 印尼 (Indonesia) 02",
+        "🇮🇩 印尼 (Indonesia) 03"
       ]
     },
     {
@@ -59,7 +68,8 @@
       "tag": "auto",
       "outbounds": [
         "🇮🇩 印尼 (Indonesia) 01",
-        "🇮🇩 印尼 (Indonesia) 02"
+        "🇮🇩 印尼 (Indonesia) 02",
+        "🇮🇩 印尼 (Indonesia) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

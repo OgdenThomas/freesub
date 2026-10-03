@@ -5,58 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 62.238.31.173
-  port: 8081
-  udp: true
-  type: vless
-  uuid: 57f03653-3af9-4f11-895b-23672338b0ac
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 77.42.28.120
-  port: 1280
-  udp: true
-  type: vless
-  uuid: c0e8fb58-a60f-4c15-9444-4e7c109797a8
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: is1-ssl.mzstatic.com
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 144.31.232.216
+  server: 151.241.137.132
   port: 443
   udp: true
-  type: hysteria2
-  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
-  sni: fi01.clgate.network
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: v3.tgphoenix.ir
-  port: 8443
-  udp: true
   type: vless
-  uuid: 6414b234-957e-4777-b39f-9a30080ace9b
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: uYtexW4wx3Ql_q73x3PM2Vbc3xyKxBgEh5FUL0CmogM
-    short-id: 45d28a6346d04a99
-  servername: www.aparat.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: 95.163.215.8
-  port: 6002
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: fi1.rovilo.ir
+  port: 443
   udp: true
   type: vless
-  uuid: 8e8ea5d2-6941-40fb-9efe-f9062b11b2b9
+  uuid: 452f869f-7720-47c3-a175-b6673e31d3e8
+  flow: xtls-rprx-vision
   tls: true
-  servername: fin1.centermass.net
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: media.playback.v1.SessionGateway
+  reality-opts:
+    public-key: i_cD6qpNHvE-j2vFGxEBmXNvX5U8PE4-lBkxcti8Ry8
+    short-id: 714369014b7679bf
+  servername: store.steampowered.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,9 +36,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -74,8 +43,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

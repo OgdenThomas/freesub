@@ -5,36 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 172.67.140.37
-  port: 443
-  udp: true
-  type: vless
-  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
-  tls: true
-  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/ERYN0G44hia16zhR
-    headers:
-      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 172.67.131.125
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
-  tls: true
-  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
-    headers:
-      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03
   server: 23.81.34.204
   port: 443
   udp: true
@@ -46,15 +16,40 @@ proxies:
     public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
-  server: 186.190.211.147
-  port: 22324
+  client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 95.179.192.31
+  port: 443
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 817be056-2afc-4358-9b8d-5dbe836251f3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 78.129.252.54
+  port: 17092
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 7c55c080c3949e03f1a6a559a9851c68
+- name: 🇬🇧 英国 (United Kingdom) 04 R55
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8453bdb7-dd58-419d-b002-9456dd2e73d7
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pan2e.global.ssl.fastly.net
 - name: 🇬🇧 英国 (United Kingdom) 05
   server: 95.85.224.51
   port: 443
@@ -67,33 +62,18 @@ proxies:
     public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
     short-id: a696de84963656de
   servername: max.ru
-  client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 06 R47
-  server: 186.190.211.67
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: pahobac.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: pahobac.org
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 87.192.47.10
-  port: 52006
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: shop.amz-26.info
+  port: 2052
   udp: true
   type: vless
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: grok.setlisting.ru
-  skip-cert-verify: false
+  uuid: e7cea628-417d-1eb5-b742-14993bf0aaba
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: microsoftstore-turkey.ip-venzo.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -102,10 +82,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 04 R55
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06 R47
-  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -114,9 +93,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 04 R55
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06 R47
-  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 06
 rules:
 - MATCH,PROXIES

@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01 R58
-  server: 83.147.18.75
+- name: 🇱🇹 立陶宛 (Lithuania) 01
+  server: 62.77.158.1
   port: 443
   udp: true
   type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
-    short-id: 7f1e29593aa94ad1
-  servername: www.bing.com
-  client-fingerprint: qq
+    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
+    short-id: 6a
+  servername: online.1c.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇦 乌克兰 (Ukraine) 01 R58
+  - 🇱🇹 立陶宛 (Lithuania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01 R58
+  - 🇱🇹 立陶宛 (Lithuania) 01
 rules:
 - MATCH,PROXIES

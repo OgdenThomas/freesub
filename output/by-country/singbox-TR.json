@@ -6,63 +6,23 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "78.135.73.47",
-      "server_port": 443,
-      "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.datadoghq.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8",
-          "short_id": "f46cd3ea3d1eb72d"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02",
-      "server": "178.83.46.216",
+      "server": "test.keoplentuio.xyz",
       "server_port": 2053,
       "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03",
-      "server": "shop.neexbyte.ir",
-      "server_port": 8443,
-      "uuid": "8bb52771-052e-40b5-ab53-c6e151ad2290",
-      "tls": {
-        "enabled": true,
-        "server_name": "shop.neexbyte.ir",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws"
-      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02",
-        "🇹🇷 土耳其 (Turkey) 03"
+        "🇹🇷 土耳其 (Turkey) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

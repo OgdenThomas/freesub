@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇶🇦 卡塔尔 (Qatar) 01
-  server: 34.18.212.19
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01
+  server: cdn.bulkavpn.top
   port: 443
   udp: true
   type: vless
-  uuid: b6f775c2-70fd-4247-8d12-82cac46fdd50
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: tT6wEOh8ASizQYNRb51QdDlxAksSJbEaBnbQBajc6SQ
-    short-id: c5426331173ca15c
-  servername: www.cloudflare.com
+    public-key: bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU
+    short-id: 94f32cfc
+  servername: cdn.bulkavpn.top
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇶🇦 卡塔尔 (Qatar) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇶🇦 卡塔尔 (Qatar) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
 rules:
 - MATCH,PROXIES

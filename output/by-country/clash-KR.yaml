@@ -5,29 +5,41 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: icn-a-01.auuas.com
-  port: 1891
+  server: kr2-r.link-t7.com
+  port: 10047
   udp: true
   type: vless
-  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
-  flow: xtls-rprx-vision
+  uuid: 58c828cd-3eba-46f9-b297-16003d7a6e68
   tls: true
   reality-opts:
-    public-key: mKvw6P0pTdasFPgyT3d_rHJSJfA-aaCxV8krGByqQS0
-    short-id: 8378f267
-  servername: www.npmjs.com
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+  servername: s0.awsstatic.com
   client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: update
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: zfd-krv2.kunlun01dns.com
+  port: 16255
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
 rules:
 - MATCH,PROXIES

@@ -5,18 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 85.117.235.50
+  server: 167.82.76.27
   port: 443
   udp: true
-  type: vless
-  uuid: f4d71fd6-1c25-4748-836b-1dbda9268039
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PmdZ2ETkHc0zjYcs22xT_wyZk5fEpX7mg7RP396HBBc
-    short-id: 232b1b09e45325a4
-  servername: cz1.animeteka.info
-  client-fingerprint: chrome
+  type: trojan
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/des---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
 proxy-groups:
 - name: PROXIES
   type: select
