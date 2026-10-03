@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: g06.jp02-e3-vm0.entry.fr0528.art
-  port: 11778
+  server: 153.121.36.102
+  port: 443
   udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  servername: www.amazon.com
+  client-fingerprint: ios
 - name: 🇯🇵 日本 (Japan) 02
   server: 43.133.11.187
   port: 443
@@ -24,16 +29,34 @@ proxies:
     public-key: ueVbgAT9A7SkGgua_uljhQsvpnRUQlfdc7meiqcaxXE
     short-id: 913e9b95fbc71278
   servername: cloudflare.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
-  server: g06.jp04-1d-vm0.entry.fr0528.art
-  port: 449
+  server: 18.183.215.124
+  port: 28573
   udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
+  type: vless
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 04
+  server: jpga01.jumpernode.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05453546-201f-4e8d-97ae-fd70da0e951f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AgTktefiMM58y7f-KFgEtmVti_YJbd0GPSkxNeJ0RH4
+    short-id: c8e49965
+  servername: amzn.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05
   server: jumpernode.online
   port: 443
   udp: true
@@ -45,88 +68,104 @@ proxies:
     public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
     short-id: 6d962e8d8a0dce
   servername: amazon.com
-  client-fingerprint: edge
-- name: 🇯🇵 日本 (Japan) 05
-  server: g06.jp05-h6-vm0.entry.fr0528.art
-  port: 46487
-  udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 06
-  server: g06.jp03-j7-vm0.entry.fr0528.art
-  port: 21586
+  server: 18.176.61.69
+  port: 443
   udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
-  tls: true
-  servername: g06.jp03-j7-vm0.entry.fr0528.art
+  type: trojan
+  password: UX82473651
+  sni: intense-sole.rooster465.autos
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 07
-  server: 142.91.106.31
-  port: 43000
+  server: fancy-javelin.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: fancy-javelin.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 08
+  server: 34.104.237.214
+  port: 443
   udp: true
   type: vless
-  uuid: f8681dba-d368-4bab-a3c2-a8dc712ba368
+  uuid: 0c4c6ebb-603f-4429-8682-beef6b65b80d
+  tls: true
+  reality-opts:
+    public-key: Ti7zRkfweHdrQ5QHI9o_zEgHn39xRfMG2C2Gfp_AMHE
+    short-id: 8380ad05cd21a69f
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 09
+  server: 54.249.36.167
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: comic-poodle.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 10
+  server: 13.230.139.12
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: brief-glider.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 11
+  server: vp3.yysyy.online
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 12
+  server: assuring-skink.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: assuring-skink.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 13
+  server: 52.192.217.187
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: evolving-platypus.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 14
+  server: promoted-rattler.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: promoted-rattler.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 15
+  server: 54.199.66.128
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: integral-rodent.rooster465.autos
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 16
+  server: jpt.negai.de
+  port: 25874
+  udp: true
+  type: vless
+  uuid: bfac5c43-52f2-4b0a-9fee-3e2281483c81
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: onJvbzSx_vZUyycafvPuhsiSQsr9tw4zotyVMSWCvm4
-    short-id: 8d66106f
-  servername: 142.91.106.31
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 08
-  server: g03.jp04-1d-vm0.entry.fr0528.art
-  port: 446
-  udp: true
-  type: vmess
-  uuid: a85150ba-dae3-3055-8984-700faca4d576
-  alterId: 1
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 09
-  server: g06.jp01-nn-vm0.entry.fr0528.art
-  port: 21586
-  udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
-  tls: true
-  servername: g06.jp01-nn-vm0.entry.fr0528.art
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 10
-  server: g06.jp07-sh-vm0.entry.fr0528.art
-  port: 28788
-  udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 11
-  server: g06.jp06-jz-vm0.entry.fr0528.art
-  port: 28788
-  udp: true
-  type: vmess
-  uuid: 9c955dfc-c1d6-3de3-8230-deac3bd9c1a2
-  alterId: 1
-  cipher: auto
-  tls: true
-  servername: g06.jp06-jz-vm0.entry.fr0528.art
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 12
-  server: lstqj-g03.jp06-7c5a-vm0.entry.fr0307a.art
-  port: 28785
-  udp: true
-  type: vmess
-  uuid: 8e555d33-4ce4-395e-93cd-670297aeeb0f
-  alterId: 99999
-  cipher: auto
-  tls: true
-  servername: lstqj-g03.jp06-7c5a-vm0.entry.fr0307a.art
-  skip-cert-verify: false
+    public-key: aBdmSZuchSwd7IKT4PPb8hgTFWZeb-4iGSyf8lIGUSE
+    short-id: 6ba85179e30d4fc2
+  servername: jpt.negai.de
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -144,6 +183,10 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 10
   - 🇯🇵 日本 (Japan) 11
   - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
+  - 🇯🇵 日本 (Japan) 14
+  - 🇯🇵 日本 (Japan) 15
+  - 🇯🇵 日本 (Japan) 16
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -161,5 +204,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 10
   - 🇯🇵 日本 (Japan) 11
   - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
+  - 🇯🇵 日本 (Japan) 14
+  - 🇯🇵 日本 (Japan) 15
+  - 🇯🇵 日本 (Japan) 16
 rules:
 - MATCH,PROXIES

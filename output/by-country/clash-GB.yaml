@@ -16,7 +16,7 @@ proxies:
     public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 02
   server: 95.179.192.31
   port: 443
@@ -30,27 +30,6 @@ proxies:
   servername: googleapis.com
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03
-  server: 78.129.252.54
-  port: 17092
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 7c55c080c3949e03f1a6a559a9851c68
-- name: 🇬🇧 英国 (United Kingdom) 04 R55
-  server: 199.232.78.159
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8453bdb7-dd58-419d-b002-9456dd2e73d7
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pan2e.global.ssl.fastly.net
-- name: 🇬🇧 英国 (United Kingdom) 05
   server: 95.85.224.51
   port: 443
   udp: true
@@ -63,17 +42,44 @@ proxies:
     short-id: a696de84963656de
   servername: max.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: shop.amz-26.info
-  port: 2052
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 179.254.109.69
+  port: 443
   udp: true
   type: vless
-  uuid: e7cea628-417d-1eb5-b742-14993bf0aaba
+  uuid: 61bd5829-a243-4548-97f0-a210c2069fec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: u9_Ta0DYmqruY94DwuZv4g_gnvY1xGMF1iT1SdV3cT8
+    short-id: d3a09fd1
+  servername: m.swegg.daxaryx.fun
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 05 R66
+  server: lv1.rovilo.ir
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 452f869f-7720-47c3-a175-b6673e31d3e8
   network: httpupgrade
   httpupgrade-opts:
     path: /
     headers:
-      Host: microsoftstore-turkey.ip-venzo.com
+      Host: connectivitycheck.android.com
+- name: 🇬🇧 英国 (United Kingdom) 06 R55
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pannn1.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,9 +88,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 R55
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05 R66
+  - 🇬🇧 英国 (United Kingdom) 06 R55
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,8 +99,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 R55
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05 R66
+  - 🇬🇧 英国 (United Kingdom) 06 R55
 rules:
 - MATCH,PROXIES

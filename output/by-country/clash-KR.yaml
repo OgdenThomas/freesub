@@ -5,28 +5,61 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: kr2-r.link-t7.com
-  port: 10047
+  server: 34.158.210.177
+  port: 443
   udp: true
   type: vless
-  uuid: 58c828cd-3eba-46f9-b297-16003d7a6e68
+  uuid: 700a7a0e-3f27-406c-81d1-aa1abe411af8
   tls: true
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  servername: s0.awsstatic.com
+    public-key: kqIDhDhYFrXD-1GeurwjzFwbB0zWipgWmcbADXwmyy8
+    short-id: 3fd0a8ddef3ae5c6
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: update
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: zfd-krv2.kunlun01dns.com
-  port: 16255
+  server: 43.201.252.164
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: trojan
+  password: UX82473651
+  sni: balanced-stag.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: 3.34.131.153
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: pretty-rat.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 3.35.207.188
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: main-fawn.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 05
+  server: 13.125.69.162
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: engaging-toucan.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: 34.47.83.187
+  port: 443
+  udp: true
+  type: vless
+  uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+  tls: true
+  reality-opts:
+    public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+    short-id: 8685f8b4d9f4f51e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,6 +67,10 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +78,9 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
+  - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
 rules:
 - MATCH,PROXIES

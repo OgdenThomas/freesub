@@ -5,32 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01
-  server: 2.27.249.133
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0f4081e7-612b-425f-8def-eebf144aedba
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
-    short-id: 9e15546f267baa64
-  servername: vault.connectiux.com
-  client-fingerprint: safari
-- name: 🇳🇱 荷兰 (Netherlands) 02
-  server: 87.58.201.67
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6e38d9f6-0c9d-437b-8135-20f93f94c572
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: G3Ljfvmg8X2VYuxSgGCBdn3Rca207x86GNRBLLmxuUQ
-    short-id: 0aaf3be85ef94749
-  servername: ne3.paledweld.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 03
   server: 162.35.242.252
   port: 443
   udp: true
@@ -41,8 +15,8 @@ proxies:
     public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
     short-id: 82c2b7d5e70ff000
   servername: nl.aksay.pro
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 04
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 02
   server: 130.12.242.106
   port: 443
   udp: true
@@ -55,7 +29,37 @@ proxies:
     short-id: 15affa0af66dfc79
   servername: deepl.com
   client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 03
+  server: 87.58.201.67
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6e38d9f6-0c9d-437b-8135-20f93f94c572
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: G3Ljfvmg8X2VYuxSgGCBdn3Rca207x86GNRBLLmxuUQ
+    short-id: 0aaf3be85ef94749
+  servername: ne3.paledweld.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 04
+  server: 141.144.205.157
+  port: 62145
+  udp: true
+  type: vless
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
 - name: 🇳🇱 荷兰 (Netherlands) 05
+  server: mypanel.unixzone.us
+  port: 12068
+  udp: true
+  type: vless
+  uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: mypanel.unixzone.us
+- name: 🇳🇱 荷兰 (Netherlands) 06
   server: 144.31.122.33
   port: 2054
   udp: true
@@ -67,8 +71,8 @@ proxies:
     public-key: YfO61P-1nE3eQlo_QOYbSlrYpQto89TFVD2B3T_V30Q
     short-id: f5a2972048210937
   servername: www.tripadvisor.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 06
+  client-fingerprint: random
+- name: 🇳🇱 荷兰 (Netherlands) 07
   server: 45.150.33.33
   port: 443
   udp: true
@@ -81,30 +85,7 @@ proxies:
     short-id: eba1498e012ef580
   servername: amazon.de
   client-fingerprint: edge
-- name: 🇳🇱 荷兰 (Netherlands) 07
-  server: 13.143.175.56
-  port: 443
-  udp: true
-  type: vless
-  uuid: f811a2e8-08ed-4b30-b44c-449a7cab54d8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EEL-yDPBfol_fiEEM8Pd0zue7SSz5MtZlXEePVak2jc
-  servername: newhollandafter.world
-  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 08
-  server: 85.17.145.65
-  port: 12068
-  udp: true
-  type: vless
-  uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: mypanel.unixzone.us
-- name: 🇳🇱 荷兰 (Netherlands) 09
   server: 94.156.79.93
   port: 443
   udp: true
@@ -130,7 +111,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
-  - 🇳🇱 荷兰 (Netherlands) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -144,6 +124,5 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
-  - 🇳🇱 荷兰 (Netherlands) 09
 rules:
 - MATCH,PROXIES

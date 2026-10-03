@@ -14,27 +14,17 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
-- name: 🇦🇹 奥地利 (Austria) 02
-  server: zfd-boardv2.kunlun01dns.com
-  port: 16308
-  udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01
-  - 🇦🇹 奥地利 (Austria) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇹 奥地利 (Austria) 01
-  - 🇦🇹 奥地利 (Austria) 02
 rules:
 - MATCH,PROXIES

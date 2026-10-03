@@ -25,18 +25,6 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 03
-  server: 82.118.16.245
-  port: 443
-  udp: true
-  type: vless
-  uuid: d6bd3ec0-84f5-4df3-bd5a-ef69469ce642
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: aHFq0S4UJBSUr5it5_mw4JN4sPG6lnHjdYXsWJVVdXk
-  servername: mxc.mtmajestic.space
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
-  - 🇮🇹 意大利 (Italy) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
-  - 🇮🇹 意大利 (Italy) 03
 rules:
 - MATCH,PROXIES
