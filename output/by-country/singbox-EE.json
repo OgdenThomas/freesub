@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 01",
+      "server": "89.125.13.202",
+      "server_port": 443,
+      "uuid": "87fd990d-ca93-440a-bbd4-e8281c4a0910",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "d3-ee1.cloud-cdn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ",
+          "short_id": "ad6e08b22389abd2"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02",
       "server": "ee174.mech-pro.online",
       "server_port": 443,
       "uuid": "a15d1b88-e3f4-4f4d-9c04-462a2965a60a",
@@ -26,7 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 03",
       "server": "93.89.220.37",
       "server_port": 443,
       "uuid": "185e2bb3-2934-48d0-bbd5-dd20d16e83ee",
@@ -36,7 +57,7 @@
         "server_name": "ibm.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -46,12 +67,58 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 04 R55",
+      "server": "194.26.141.148",
+      "server_port": 8443,
+      "uuid": "6c713691-3ca2-4446-ad25-113d1bed6b03",
+      "tls": {
+        "enabled": true,
+        "server_name": "fdghyt.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vpn-wss/fluxor/59011/",
+        "headers": {
+          "Host": "fdghyt.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 05",
+      "server": "ee.h1cloud.net",
+      "server_port": 25895,
+      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k",
+          "short_id": "a73f0410d728c823"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇪🇪 爱沙尼亚 (Estonia) 01",
-        "🇪🇪 爱沙尼亚 (Estonia) 02"
+        "🇪🇪 爱沙尼亚 (Estonia) 02",
+        "🇪🇪 爱沙尼亚 (Estonia) 03",
+        "🇪🇪 爱沙尼亚 (Estonia) 04 R55",
+        "🇪🇪 爱沙尼亚 (Estonia) 05"
       ]
     },
     {
@@ -59,7 +126,10 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 爱沙尼亚 (Estonia) 01",
-        "🇪🇪 爱沙尼亚 (Estonia) 02"
+        "🇪🇪 爱沙尼亚 (Estonia) 02",
+        "🇪🇪 爱沙尼亚 (Estonia) 03",
+        "🇪🇪 爱沙尼亚 (Estonia) 04 R55",
+        "🇪🇪 爱沙尼亚 (Estonia) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

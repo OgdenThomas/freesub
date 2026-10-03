@@ -6,40 +6,81 @@
     {
       "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 01",
-      "server": "kr2-r.link-t7.com",
-      "server_port": 10047,
-      "uuid": "58C828CD-3EBA-46F9-B297-16003D7A6E68",
+      "server": "icn-a-01.auuas.com",
+      "server_port": 1891,
+      "uuid": "81c4547b-e5d8-4af8-baf0-91c5c0c05a9b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "s0.awsstatic.com",
+        "server_name": "www.npmjs.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE",
-          "short_id": "686c0ef0"
+          "public_key": "mKvw6P0pTdasFPgyT3d_rHJSJfA-aaCxV8krGByqQS0",
+          "short_id": "8378f267"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "update"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 02",
+      "server": "ce1fc2d8.krkt.hkssip.com",
+      "server_port": 49642,
+      "method": "aes-256-gcm",
+      "password": "ac9c0a7b"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 03",
+      "server": "icn-a-02.auuas.com",
+      "server_port": 1891,
+      "uuid": "81c4547b-e5d8-4af8-baf0-91c5c0c05a9b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.npmjs.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "2olNWILpuviXx_Nr30JZc5tpt3MgtWda7jLGwAOxPxY",
+          "short_id": "8378f267"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 04",
+      "server": "goldcnmltyljgfwgov.vip64.wogcnmnnagfwgov.com",
+      "server_port": 11264,
+      "uuid": "605956ee-544d-308e-8b90-51e67c6ea8da",
+      "security": "auto",
+      "alter_id": 2
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

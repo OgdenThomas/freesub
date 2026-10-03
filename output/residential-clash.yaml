@@ -1,0 +1,89 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: 178.83.46.216
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇺🇸 美国 (United States) 02 (家宽)
+  server: 104.21.35.17
+  port: 443
+  udp: true
+  type: vless
+  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  tls: true
+  servername: xstack.mahanfixe.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /xiron
+    headers:
+      Host: xstack.mahanfixe.workers.dev
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  server: 324d64f1-tmm5c0-tnsc3a-1f0gu.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 3085fcf8-a69c-11ec-bd7c-f23c913c8d2b
+  sni: 324d64f1-tmm5c0-tnsc3a-1f0gu.hk3.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (家宽)
+  server: a4c15874-tmm5c0-tvvhcz-tl32.nw4.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+  sni: a4c15874-tmm5c0-tvvhcz-tl32.nw4.hyhuawei.com
+  skip-cert-verify: false
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
+  server: ttww11.bpca2026.top
+  port: 443
+  udp: true
+  type: trojan
+  password: 9efd3f19-c7cb-4fa9-8d66-0598043597dc
+  sni: ttww11.bpca2026.top
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /images
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇺🇸 美国 (United States) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇺🇸 美国 (United States) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
+rules:
+- MATCH,PROXIES

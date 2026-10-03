@@ -5,31 +5,63 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: kr2-r.link-t7.com
-  port: 10047
+  server: icn-a-01.auuas.com
+  port: 1891
   udp: true
   type: vless
-  uuid: 58C828CD-3EBA-46F9-B297-16003D7A6E68
+  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  servername: s0.awsstatic.com
+    public-key: mKvw6P0pTdasFPgyT3d_rHJSJfA-aaCxV8krGByqQS0
+    short-id: 8378f267
+  servername: www.npmjs.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: update
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: ce1fc2d8.krkt.hkssip.com
+  port: 49642
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ac9c0a7b
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: icn-a-02.auuas.com
+  port: 1891
+  udp: true
+  type: vless
+  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2olNWILpuviXx_Nr30JZc5tpt3MgtWda7jLGwAOxPxY
+    short-id: 8378f267
+  servername: www.npmjs.com
+  client-fingerprint: edge
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: goldcnmltyljgfwgov.vip64.wogcnmnnagfwgov.com
+  port: 11264
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
+  server: 172.67.216.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: 23e34376-aa47-4c8d-97ea-02915e01fcca
+  tls: true
+  servername: J3Bx1S9MK2syLW66yJ-hSk.TJsJrKk8GbHTS0Q5-0Os.wOrKeRS.DEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/uwojyr8LT2gMeHnQJVf2HntOGHsvRH3
+    headers:
+      Host: j3bx1s9mk2sylw66yj-hsk.tjsjrkk8gbhts0q5-0os.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02
   server: 85.117.235.50
   port: 443
   udp: true
@@ -17,14 +32,6 @@ proxies:
     short-id: 232b1b09e45325a4
   servername: cz1.animeteka.info
   client-fingerprint: chrome
-- name: 🇨🇿 捷克 (Czech) 02
-  server: 153.76.190.41
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 3a92b39a-5f02-415e-a908-783ec320e83f
-  sni: speedtestmark.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select

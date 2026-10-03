@@ -4,14 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R70
-  server: 198.57.27.190
-  port: 22324
+- name: 🇨🇦 加拿大 (Canada) 01 R50
+  server: 188.114.97.6
+  port: 2052
   udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 - name: 🇨🇦 加拿大 (Canada) 02 R42
   server: 138.199.48.82
   port: 9443
@@ -19,7 +22,28 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-- name: 🇨🇦 加拿大 (Canada) 03
+- name: 🇨🇦 加拿大 (Canada) 03 R70
+  server: 198.57.27.190
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  tls: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+- name: 🇨🇦 加拿大 (Canada) 05 R55
   server: 199.232.78.159
   port: 443
   udp: true
@@ -33,21 +57,33 @@ proxies:
     path: /
     headers:
       Host: canadajji.global.ssl.fastly.net.
+- name: 🇨🇦 加拿大 (Canada) 06 R53
+  server: milo.rubinaz.xyz
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 01 R50
   - 🇨🇦 加拿大 (Canada) 02 R42
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 03 R70
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R55
+  - 🇨🇦 加拿大 (Canada) 06 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 01 R50
   - 🇨🇦 加拿大 (Canada) 02 R42
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 03 R70
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R55
+  - 🇨🇦 加拿大 (Canada) 06 R53
 rules:
 - MATCH,PROXIES

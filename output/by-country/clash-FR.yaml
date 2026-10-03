@@ -5,72 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 172.64.32.108
-  port: 80
+  server: 15.237.255.137
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 02 R42
+  server: 137.74.16.237
+  port: 443
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 02
-  server: 108.162.198.178
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 03 R41
-  server: 162.159.0.169
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 04 R41
-  server: 172.64.32.103
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 05 R41
-  server: 162.159.24.131
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 06
-  server: 104.18.39.218
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇫🇷 法国 (France) 07 R42
+  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
+    short-id: b390e0a721d242b0
+  servername: www.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 03 R42
   server: 145.239.69.111
   port: 20369
   udp: true
@@ -81,8 +35,28 @@ proxies:
     path: /knight-hu
     headers:
       Host: ''
-- name: 🇫🇷 法国 (France) 08
-  server: 172.67.185.98
+- name: 🇫🇷 法国 (France) 04
+  server: 143.246.208.113
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  tls: true
+  servername: assets-fr4.pleiades.codes
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇫🇷 法国 (France) 05
+  server: 45.80.215.8
+  port: 22324
+  udp: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 🇫🇷 法国 (France) 06
+  server: 104.21.84.30
   port: 2053
   udp: true
   type: vless
@@ -96,8 +70,46 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
+- name: 🇫🇷 法国 (France) 07
+  server: 151.101.215.97
+  port: 443
+  udp: true
+  type: vless
+  uuid: XpnTeam-63
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 08 R50
+  server: www.large-files.info
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  tls: true
+  servername: www.large-files.info
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
 - name: 🇫🇷 法国 (France) 09
-  server: 162.159.253.41
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 10
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -107,33 +119,81 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
+- name: 🇫🇷 法国 (France) 11
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 12 R50
+  server: 172.67.175.23
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  tls: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: 🇫🇷 法国 (France) 13
+  server: 57.131.21.102
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
+  tls: true
+  servername: milan.adaspoloandco.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /RoBeRt
+    headers:
+      Host: milan.adaspoloandco.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04 R41
-  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 03 R42
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07 R42
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08 R50
   - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12 R50
+  - 🇫🇷 法国 (France) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04 R41
-  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 03 R42
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07 R42
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08 R50
   - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12 R50
+  - 🇫🇷 法国 (France) 13
 rules:
 - MATCH,PROXIES

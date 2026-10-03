@@ -17,69 +17,123 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  server: 186.190.211.147
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 129.151.75.247
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: BHkQ13jCKX876J8TVa/Qx/Awfit4mFt+6V5zdKGczsw=
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 3cjsczov.selqora.ir
-  port: 51595
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 104.21.79.199
+  port: 443
   udp: true
   type: vless
-  uuid: c2abb151-f683-46f9-9099-b0455852e6f9
+  uuid: 38d6b629-64c2-4c31-a10d-26eb3a2a053d
+  tls: true
+  servername: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/cxl8Wn1ylnsk63nJ0
+    headers:
+      Host: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 95.179.192.31
+  port: 443
+  udp: true
+  type: vless
+  uuid: 817be056-2afc-4358-9b8d-5dbe836251f3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: AJjXkgHlDAdrUkG8hK3_ECdPa-baeGYacNmLPyc_hEo
-    short-id: 768cb7c239d7e2ce
-  servername: play.google.com
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05 R47
-  server: 186.190.211.67
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  server: 188.114.96.19
+  port: 80
   udp: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: af4be52a-aab3-4db1-a6bb-c23700dcb9c2
   alterId: 0
   cipher: auto
+  network: ws
+  ws-opts:
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+- name: 🇬🇧 英国 (United Kingdom) 05 R55
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66
   tls: true
-  servername: pahobac.org
+  servername: ssl.fastly.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /linkvws
+    path: /
     headers:
-      Host: pahobac.org
+      Host: pannn1.global.ssl.fastly.net
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 168.222.194.138
+  port: 9880
+  udp: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aa
+  servername: dl.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 95.85.224.51
+  port: 443
+  udp: true
+  type: vless
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  servername: max.ru
+  client-fingerprint: qq
+- name: 🇬🇧 英国 (United Kingdom) 08
+  server: 87.192.47.10
+  port: 52006
+  udp: true
+  type: vless
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: grok.setlisting.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R47
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05 R55
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R47
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05 R55
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
 rules:
 - MATCH,PROXIES

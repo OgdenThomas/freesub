@@ -4,12 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R70",
-      "server": "198.57.27.190",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 01 R50",
+      "server": "188.114.97.6",
+      "server_port": 2052,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+        }
+      }
     },
     {
       "type": "shadowsocks",
@@ -20,8 +26,39 @@
       "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
     },
     {
+      "type": "vmess",
+      "tag": "🇨🇦 加拿大 (Canada) 03 R70",
+      "server": "198.57.27.190",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto"
+    },
+    {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 03",
+      "tag": "🇨🇦 加拿大 (Canada) 04",
+      "server": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
+      "server_port": 443,
+      "uuid": "527451fe-ee1f-4e6f-94ca-808f055f7c9b",
+      "tls": {
+        "enabled": true,
+        "server_name": "05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/ERYN0G44hia16zhR"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 05 R55",
       "server": "199.232.78.159",
       "server_port": 443,
       "uuid": "c0e8fb58-a60f-4c15-9444-4e7c109797a8",
@@ -39,22 +76,35 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 06 R53",
+      "server": "milo.rubinaz.xyz",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R70",
+        "🇨🇦 加拿大 (Canada) 01 R50",
         "🇨🇦 加拿大 (Canada) 02 R42",
-        "🇨🇦 加拿大 (Canada) 03"
+        "🇨🇦 加拿大 (Canada) 03 R70",
+        "🇨🇦 加拿大 (Canada) 04",
+        "🇨🇦 加拿大 (Canada) 05 R55",
+        "🇨🇦 加拿大 (Canada) 06 R53"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R70",
+        "🇨🇦 加拿大 (Canada) 01 R50",
         "🇨🇦 加拿大 (Canada) 02 R42",
-        "🇨🇦 加拿大 (Canada) 03"
+        "🇨🇦 加拿大 (Canada) 03 R70",
+        "🇨🇦 加拿大 (Canada) 04",
+        "🇨🇦 加拿大 (Canada) 05 R55",
+        "🇨🇦 加拿大 (Canada) 06 R53"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
