@@ -4,7 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: tutaim.azad0namah.ir
+  port: 5566
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: 8NwabdWBXK1q1QaBhF69rw==:d8C1FciKoaFD6xRFbCYyFQ==
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,31 +24,19 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: tr.xelnivo.ir
-  port: 5589
-  udp: true
-  type: vless
-  uuid: bf155a74-0560-46ff-ba40-9c8d34917f0e
-  tls: true
-  reality-opts:
-    public-key: rlWw1txOKfyTIegqGc5YUQo1CxqZEXBPeQZppA6H014
-    short-id: 8f798d413a5dbf01
-  servername: play.google.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
   - 🇹🇷 土耳其 (Turkey) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
   - 🇹🇷 土耳其 (Turkey) 02
 rules:
 - MATCH,PROXIES

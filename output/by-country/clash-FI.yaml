@@ -5,25 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 151.241.137.132
-  port: 443
+  server: 65.109.208.97
+  port: 47851
   udp: true
   type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
-  client-fingerprint: firefox
+  uuid: 1240607b-86ed-4ef1-9123-8061144cbdbf
+  network: h2
+  h2-opts:
+    host: []
+    path: /
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: foodal.color-shop.ir
-  port: 5566
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: olF2/aNyAxEBf0CHoFlkGlAXUdw+ap1CzFd3AL4WuuM=:d8C1FciKoaFD6xRFbCYyFYlT44MV3zYlXvD6DfhsSqo=
-- name: 🇫🇮 芬兰 (Finland) 03
   server: 2.27.207.30
   port: 443
   udp: true
@@ -36,14 +27,18 @@ proxies:
     short-id: da4d87fa
   servername: jdbdb.huinaduok.fans
   client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: 144.31.232.216
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 151.241.137.132
   port: 443
   udp: true
-  type: hysteria2
-  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
-  sni: fi01.clgate.network
-  skip-cert-verify: false
+  type: vless
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +47,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +55,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

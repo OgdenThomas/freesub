@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
+      "server": "tutaim.azad0namah.ir",
+      "server_port": 5566,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "8NwabdWBXK1q1QaBhF69rw==:d8C1FciKoaFD6xRFbCYyFQ=="
+    },
+    {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 01",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
       "server": "78.135.73.47",
       "server_port": 443,
       "uuid": "25e16692-d097-4e69-9e2d-8415609c1968",
@@ -25,31 +33,11 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02",
-      "server": "tr.xelnivo.ir",
-      "server_port": 5589,
-      "uuid": "bf155a74-0560-46ff-ba40-9c8d34917f0e",
-      "tls": {
-        "enabled": true,
-        "server_name": "play.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "rlWw1txOKfyTIegqGc5YUQo1CxqZEXBPeQZppA6H014",
-          "short_id": "8f798d413a5dbf01"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
         "🇹🇷 土耳其 (Turkey) 02"
       ]
     },
@@ -57,7 +45,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
         "🇹🇷 土耳其 (Turkey) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"

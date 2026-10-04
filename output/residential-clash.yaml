@@ -4,24 +4,34 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
-  server: hinet1.2yly.com
-  port: 24215
-  udp: true
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
   server: tutaim.azad0namah.ir
   port: 8080
   udp: true
   type: vless
   uuid: fdc1206a-9d2e-42b7-b615-9ccea8cf70ee
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇯🇵 日本 (Japan) 03 (家宽)
+  server: 57.129.130.200
+  port: 52014
+  udp: true
+  type: vless
+  uuid: c8b0617e-010f-43a8-b3d0-d5358febf0c9
+  tls: true
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
   server: argo6.5671234.xyz
   port: 443
   udp: true
@@ -35,29 +45,23 @@ proxies:
     path: /e8e2cecb6188f7fb
     headers:
       Host: argo6.5671234.xyz
-- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
+  - 🇯🇵 日本 (Japan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
+  - 🇯🇵 日本 (Japan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 rules:
 - MATCH,PROXIES
