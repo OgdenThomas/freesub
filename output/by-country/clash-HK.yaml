@@ -13,63 +13,99 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  port: 443
+  udp: true
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: 6jdvarazgu3qqr6q.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 6jdvarazgu3qqr6q.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 03
   server: dog-hk.kunlun01dns.com
-  port: 21022
+  port: 21018
   udp: true
   type: vmess
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03 R58
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: 34.96.188.243
+  port: 443
+  udp: true
+  type: vless
+  uuid: 75d38591-267e-4d89-98bc-164f25b50880
+  tls: true
+  reality-opts:
+    public-key: HV_4dmK3rwzqhWP1yOpC1L8BObd5lpZRYTzUflsi2x4
+    short-id: 64b3f192fc0669e1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 05 R58
+  server: telegramx.khp25.com
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: m5nsedvdczx6x06e
+- name: 🇭🇰 中国香港 (Hong Kong) 06
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16114
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 07 R58
   server: sth.free-outline.giize.com
   port: 1081
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: 5koepr9k4rjabc1z
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: 11158b9a-tmm5c0-u3xqxa-1q91p.nw4.hyhuawei.com
+  password: f8asl798zconw8rx
+- name: 🇭🇰 中国香港 (Hong Kong) 08
+  server: 2dd0472e-tmm5c0-twj07b-fm2v.hk3.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: c11ff50c-f582-11ee-94df-f23c9164ca5d
-  sni: 11158b9a-tmm5c0-u3xqxa-1q91p.nw4.hyhuawei.com
+  password: 3fed19ea-1671-11f0-bd2e-f23c9164ca5d
+  sni: 2dd0472e-tmm5c0-twj07b-fm2v.hk3.hyhuawei.com
   skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: champion.xn--kivt58h.lol
-  port: 80
-  udp: true
-  type: vless
-  uuid: ed2864f9-37b3-4222-8c54-014aedc400a2
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ak.mcdonaldshamburgergoodgoodgood.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 861726bb-c61a-b0e0-99fa-5ddfdcf21902
-  sni: 117776f2-tmm5c0-ttxkqc-e06r.hk3.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 07
-  server: yg1.ygkkk.dpdns.org
+- name: 🇭🇰 中国香港 (Hong Kong) 09 R42
+  server: 194.99.79.26
   port: 443
   udp: true
   type: vmess
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   tls: true
-  servername: jmp1.907737.xyz
+  servername: aksai.org
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-    headers:
-      Host: jmp1.907737.xyz
+    path: /linkvws
+- name: 🇭🇰 中国香港 (Hong Kong) 10
+  server: i2psm3knof5qjjix.v.3dns.vip
+  port: 443
+  udp: true
+  type: vmess
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: i2psm3knof5qjjix.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,11 +113,14 @@ proxy-groups:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
   - 🇭🇰 中国香港 (Hong Kong) 02
-  - 🇭🇰 中国香港 (Hong Kong) 03 R58
+  - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 05 R58
   - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 07 R58
+  - 🇭🇰 中国香港 (Hong Kong) 08
+  - 🇭🇰 中国香港 (Hong Kong) 09 R42
+  - 🇭🇰 中国香港 (Hong Kong) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,10 +128,13 @@ proxy-groups:
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
   - 🇭🇰 中国香港 (Hong Kong) 02
-  - 🇭🇰 中国香港 (Hong Kong) 03 R58
+  - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
-  - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 05 R58
   - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 07 R58
+  - 🇭🇰 中国香港 (Hong Kong) 08
+  - 🇭🇰 中国香港 (Hong Kong) 09 R42
+  - 🇭🇰 中国香港 (Hong Kong) 10
 rules:
 - MATCH,PROXIES

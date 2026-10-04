@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 172.67.131.125
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
-  tls: true
-  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
-    headers:
-      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02
   server: 23.81.34.204
   port: 443
   udp: true
@@ -31,20 +16,18 @@ proxies:
     public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
 rules:
 - MATCH,PROXIES

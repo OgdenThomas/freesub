@@ -11,20 +11,7 @@ proxies:
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 02 R50
-  server: www.large-files.info
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-  tls: true
-  servername: www.large-files.info
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
-- name: 🇫🇷 法国 (France) 03
+- name: 🇫🇷 法国 (France) 02
   server: 95.179.208.12
   port: 443
   udp: true
@@ -36,38 +23,106 @@ proxies:
     public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
   servername: googleapis.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
-  server: 199.232.78.160
+- name: 🇫🇷 法国 (France) 03
+  server: 104.17.148.22
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 04 R50
+  server: www.large-files.info
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  tls: true
+  servername: www.large-files.info
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
+    headers:
+      Host: www.large-files.info
+- name: 🇫🇷 法国 (France) 05 R50
+  server: megariverport-nayab.org
   port: 443
   udp: true
   type: vless
-  uuid: XpnTeam-70
+  uuid: 5f2cfa07-db6f-415d-9ad9-d49a3d3466a3
   tls: true
-  servername: ssl.fastly.com
+  servername: ngkje.bluefieldbox-nexolo.sbs
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /jar
     headers:
-      Host: Appxdn.global.ssl.fastly.net
+      Host: ngkje.bluefieldbox-nexolo.sbs
+- name: 🇫🇷 法国 (France) 06
+  server: 185.220.100.168
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 07 R50
+  server: maxfieldbox-nayab.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: 317ac662-c9da-4a69-ab73-1676c247f31e
+  tls: true
+  servername: moonleaflab-jamesbondi.info
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /other
+    headers:
+      Host: moonleaflab-jamesbondi.info
+- name: 🇫🇷 法国 (France) 08
+  server: 45.87.41.18
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R50
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 R50
+  - 🇫🇷 法国 (France) 05 R50
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R50
+  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R50
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 R50
+  - 🇫🇷 法国 (France) 05 R50
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R50
+  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES

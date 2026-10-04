@@ -16,43 +16,33 @@ proxies:
     public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
   servername: www.blocket.se
   client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 02 R55
-  server: stsr.hospitaldt.ir
-  port: 8443
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 62.60.159.81
+  port: 2053
   udp: true
   type: vless
-  uuid: 9cdcec15-2c73-40d5-b50f-d00381fddd26
+  uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a
   tls: true
-  servername: stsr.hospitaldt.ir
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
+  reality-opts:
+    public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
+    short-id: d0ea1847066af5a6
+  servername: www.samsung.com
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 03
-  server: swed4.o4ka-internet.com
-  port: 443
+  server: 172.234.123.209
+  port: 31146
   udp: true
   type: vless
-  uuid: 8f6e49e6-7f03-4f10-9da9-1716158d80ed
+  uuid: f0466557-2fd5-442e-94cb-12c6b764155e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8
-    short-id: 5629431325884ff0
-  servername: swed4.o4ka-internet.com
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 04
-  server: 177.3.209.165
-  port: 443
-  udp: true
-  type: vless
-  uuid: a5dd2dd9-0995-449e-be67-4a409890dc42
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: mYtQrGiR9EkOpUsvsI7E18AWnFZZqfOPXUdpzE3luz8
-    short-id: da4d87fa
-  servername: owkd.pashalloh.org
+    public-key: QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE
+    short-id: cf4e6f8338
+  servername: play-fe.googleapis.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -60,17 +50,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02 R55
+  - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02 R55
+  - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
 rules:
 - MATCH,PROXIES
