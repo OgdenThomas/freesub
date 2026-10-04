@@ -14,6 +14,19 @@ proxies:
   ws-opts:
     path: /
 - name: 🇵🇱 波兰 (Poland) 02
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03
   server: 70.34.252.154
   port: 80
   udp: true
@@ -22,46 +35,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 83.168.95.145
-  port: 443
-  udp: true
-  type: vless
-  uuid: f28e0ce1-ed75-4e90-b069-5215a80dfb4a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AcuvO982QLzf76fVydfSuJIiF5520rmj7AxpaxyRwUg
-    short-id: d345ad4657adeef9
-  servername: google.com
-  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 04
-  server: 201.10.90.91
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9e224fd8-cbf0-4d0f-a0c8-316657c4cd3d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1he5EyHxI595x0mNkFNxOebUOQZGVGIy_c92bn1qO2o
-    short-id: ac31827454d7f693
-  servername: ge-ex-cdn.api.vvplnte.top
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 05
-  server: pol4.o4ka-internet.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8f6e49e6-7f03-4f10-9da9-1716158d80ed
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8
-    short-id: 5629431325884ff0
-  servername: pol4.o4ka-internet.com
-  client-fingerprint: random
-- name: 🇵🇱 波兰 (Poland) 06
   server: 83.168.107.220
   port: 443
   udp: true
@@ -74,15 +48,7 @@ proxies:
     short-id: c56d4f1c
   servername: google.com
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 07
-  server: 222.167.245.240
-  port: 28015
-  udp: true
-  type: hysteria2
-  password: e19b5aa3-16c9-435a-8bc9-76f2f6ddff43
-  sni: api-test-udp-traffic.kaneki.cfd
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 08 R42
+- name: 🇵🇱 波兰 (Poland) 05 R42
   server: 188.114.96.19
   port: 80
   udp: true
@@ -104,10 +70,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08 R42
+  - 🇵🇱 波兰 (Poland) 05 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -117,9 +80,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08 R42
+  - 🇵🇱 波兰 (Poland) 05 R42
 rules:
 - MATCH,PROXIES

@@ -5,40 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 164.37.111.117
-  port: 2020
-  udp: true
-  type: vless
-  uuid: 0dbacd35-9159-4648-89ac-c38b741567a8
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: netra-85a0ca.shoameni19.workers.dev
+  server: 172.67.131.125
   port: 443
   udp: true
   type: vless
-  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
   tls: true
-  servername: netra-85a0ca.shoameni19.workers.dev
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: '/vl/bluTTbb7MO8rvX1COEYH4WW4qzbr2aui?ed=2560 '
+    path: /vl/zInkY7qcXuM6P1AZTQ?ed=2560
     headers:
-      Host: netra-85a0ca.shoameni19.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
-  tls: true
-  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/ERYN0G44hia16zhR
-- name: 🇬🇧 英国 (United Kingdom) 04
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 23.81.34.204
   port: 443
   udp: true
@@ -51,45 +32,6 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05 R55
-  server: 199.232.78.159
-  port: 443
-  udp: true
-  type: vless
-  uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66
-  tls: true
-  servername: ssl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pannn1.global.ssl.fastly.net
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 104.194.144.195
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6bcb8792-50d9-4e4c-8cbe-f1343a62acbc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 3vgqsFm1j-00-_jN25zuuty59lk7yn5YFMIfL5LwwRw
-    short-id: 2bd6a47090adc591
-  servername: cdn.tbank.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 5.39.254.50
-  port: 443
-  udp: true
-  type: vless
-  uuid: 903396f5-50cf-47fe-a5fd-56251674baeb
-  tls: true
-  reality-opts:
-    public-key: UDlM3OadeskS_9U-bhn4HWiH0BijsT22otsv-FzJERU
-    short-id: 90980caa18ed
-  servername: yahoo.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -97,11 +39,6 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R55
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -109,10 +46,5 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05 R55
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 rules:
 - MATCH,PROXIES

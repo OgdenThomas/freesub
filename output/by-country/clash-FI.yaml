@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 65.109.208.97
-  port: 47851
-  udp: true
-  type: vless
-  uuid: 1240607b-86ed-4ef1-9123-8061144cbdbf
-  network: h2
-  h2-opts:
-    host: []
-    path: /
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 2.27.207.30
   port: 443
   udp: true
@@ -27,7 +17,7 @@ proxies:
     short-id: da4d87fa
   servername: jdbdb.huinaduok.fans
   client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 03
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 151.241.137.132
   port: 443
   udp: true
@@ -46,7 +36,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,6 +43,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

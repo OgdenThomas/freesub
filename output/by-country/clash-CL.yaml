@@ -5,28 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01
-  server: platform101.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 02
-  server: platform118.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform118
-    headers:
-      Host: platform118.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 03
   server: platform113.golnamakcert.top
   port: 80
   udp: true
@@ -37,8 +15,8 @@ proxies:
     path: /platform113
     headers:
       Host: platform113.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 04
-  server: platform109.golnamakcert.top
+- name: 🇨🇱 智利 (Chile) 02
+  server: 64.176.2.25
   port: 80
   udp: true
   type: vless
@@ -48,19 +26,39 @@ proxies:
     path: /platform109
     headers:
       Host: platform109.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 05
-  server: platform117.golnamakcert.top
+- name: 🇨🇱 智利 (Chile) 03
+  server: platform108.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform117
+    path: /platform108
     headers:
-      Host: platform117.halalkhor.info
+      Host: platform108.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 04
+  server: 64.176.22.185
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform107
+- name: 🇨🇱 智利 (Chile) 05
+  server: platform118.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform118
+    headers:
+      Host: platform118.halalkhor.info
 - name: 🇨🇱 智利 (Chile) 06
-  server: platform103.golnamakcert.top
+  server: 64.176.5.68
   port: 80
   udp: true
   type: vless
@@ -71,7 +69,18 @@ proxies:
     headers:
       Host: platform103.halalkhor.info
 - name: 🇨🇱 智利 (Chile) 07
-  server: platform106.golnamakcert.top
+  server: 64.176.21.217
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform115
+    headers:
+      Host: platform115.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 08
+  server: 64.176.25.168
   port: 80
   udp: true
   type: vless
@@ -81,17 +90,39 @@ proxies:
     path: /platform106
     headers:
       Host: platform106.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 08
-  server: platform107.golnamakcert.top
+- name: 🇨🇱 智利 (Chile) 09
+  server: platform117.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform107
+    path: /platform117
     headers:
-      Host: platform107.halalkhor.info
+      Host: platform117.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 10
+  server: platform101.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform101
+    headers:
+      Host: platform101.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 11
+  server: 64.176.10.89
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform102
+    headers:
+      Host: platform102.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -105,6 +136,9 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 06
   - 🇨🇱 智利 (Chile) 07
   - 🇨🇱 智利 (Chile) 08
+  - 🇨🇱 智利 (Chile) 09
+  - 🇨🇱 智利 (Chile) 10
+  - 🇨🇱 智利 (Chile) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -118,5 +152,8 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 06
   - 🇨🇱 智利 (Chile) 07
   - 🇨🇱 智利 (Chile) 08
+  - 🇨🇱 智利 (Chile) 09
+  - 🇨🇱 智利 (Chile) 10
+  - 🇨🇱 智利 (Chile) 11
 rules:
 - MATCH,PROXIES
