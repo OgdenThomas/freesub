@@ -5,22 +5,20 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇹 立陶宛 (Lithuania) 01",
-      "server": "62.77.158.1",
+      "tag": "🇬🇪 格鲁吉亚 (Georgia) 01 R45",
+      "server": "104.21.50.89",
       "server_port": 443,
-      "uuid": "2eceaf2b-a775-5a9c-9990-dad2b3660fb6",
-      "flow": "xtls-rprx-vision",
+      "uuid": "76ac91c5-ea82-4046-8ee7-2ffbb563ac94",
       "tls": {
         "enabled": true,
-        "server_name": "online.1c.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs",
-          "short_id": "6a"
+        "server_name": "geo.shkola112.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api-vless",
+        "headers": {
+          "Host": "geo.shkola112.site"
         }
       }
     },
@@ -29,14 +27,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 立陶宛 (Lithuania) 01"
+        "🇬🇪 格鲁吉亚 (Georgia) 01 R45"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 立陶宛 (Lithuania) 01"
+        "🇬🇪 格鲁吉亚 (Georgia) 01 R45"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

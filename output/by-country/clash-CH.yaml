@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 立陶宛 (Lithuania) 01
-  server: 62.77.158.1
+- name: 🇨🇭 瑞士 (Switzerland) 01
+  server: 45.90.59.15
   port: 443
   udp: true
   type: vless
-  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
-    short-id: 6a
-  servername: online.1c.ru
-  client-fingerprint: chrome
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇨🇭 瑞士 (Switzerland) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇨🇭 瑞士 (Switzerland) 01
 rules:
 - MATCH,PROXIES

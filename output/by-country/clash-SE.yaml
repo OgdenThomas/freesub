@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 143.246.196.207
+  server: 143.246.199.124
   port: 443
   udp: true
   type: vless
-  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
+  uuid: 79ccb156-bfc6-11f1-9811-525400d1d4f7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -31,7 +31,30 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 03
+- name: 🇸🇪 瑞典 (Sweden) 03 R55
+  server: psf-2.weedly.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: 33016f3d-8509-493c-bd8b-d26447d48135
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stigmata.ir
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: 143.246.196.207
+  port: 443
+  udp: true
+  type: vless
+  uuid: ac0c2945-b758-11f1-8181-54db13ea7d40
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+  servername: www.blocket.se
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 05
   server: 172.234.123.209
   port: 31146
   udp: true
@@ -51,7 +74,9 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 03 R55
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,6 +84,8 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 03 R55
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
 rules:
 - MATCH,PROXIES
