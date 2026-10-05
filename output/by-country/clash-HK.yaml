@@ -11,49 +11,22 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: m5nsedvdczx6x06e
-- name: 🇭🇰 中国香港 (Hong Kong) 02 R58
-  server: sth.free-outline.giize.com
-  port: 1081
+- name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16112
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: f8asl798zconw8rx
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 212.192.15.48
-  port: 8388
+  server: avrku8ft.4ya21vwd0lw6ngzk.awstrack.vip
+  port: 16464
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: 705syYDLPLMzEfcC
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: 34.96.188.243
-  port: 443
-  udp: true
-  type: vless
-  uuid: 75d38591-267e-4d89-98bc-164f25b50880
-  tls: true
-  reality-opts:
-    public-key: HV_4dmK3rwzqhWP1yOpC1L8BObd5lpZRYTzUflsi2x4
-    short-id: 64b3f192fc0669e1
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: 116.49.85.111
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-  sni: 007618a8-tmm5c0-tvvhcz-tl32.hk3.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 149.88.78.173
-  port: 443
-  udp: true
-  type: trojan
-  password: 66974838-ee71-481c-b9dd-172edbccece7
-  sni: node2.luoye.ee
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 07 R42
+  cipher: 2022-blake3-aes-128-gcm
+  password: MzUxNDUyY2IzYTQ5ODQzMw==:MjA3ZmY5MWEtOWE3MC00Mg==
+- name: 🇭🇰 中国香港 (Hong Kong) 04 R42
   server: 194.99.79.26
   port: 443
   udp: true
@@ -69,39 +42,7 @@ proxies:
     path: /linkvws
     headers:
       Host: aksai.org
-- name: 🇭🇰 中国香港 (Hong Kong) 08
-  server: 2b9hwy8ocx7q74nm.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: 2b9hwY8oCx7Q74NM.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
-- name: 🇭🇰 中国香港 (Hong Kong) 09
-  server: yg1.ygkkk.dpdns.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: jmp1.907737.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-    headers:
-      Host: jmp1.907737.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 10
+- name: 🇭🇰 中国香港 (Hong Kong) 05
   server: 2.27.109.179
   port: 45464
   udp: true
@@ -115,29 +56,19 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 R58
-  - 🇭🇰 中国香港 (Hong Kong) 02 R58
+  - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
+  - 🇭🇰 中国香港 (Hong Kong) 04 R42
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07 R42
-  - 🇭🇰 中国香港 (Hong Kong) 08
-  - 🇭🇰 中国香港 (Hong Kong) 09
-  - 🇭🇰 中国香港 (Hong Kong) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 R58
-  - 🇭🇰 中国香港 (Hong Kong) 02 R58
+  - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
+  - 🇭🇰 中国香港 (Hong Kong) 04 R42
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07 R42
-  - 🇭🇰 中国香港 (Hong Kong) 08
-  - 🇭🇰 中国香港 (Hong Kong) 09
-  - 🇭🇰 中国香港 (Hong Kong) 10
 rules:
 - MATCH,PROXIES

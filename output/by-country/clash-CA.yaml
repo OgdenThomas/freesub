@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R42
-  server: 138.199.48.82
-  port: 9443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-- name: 🇨🇦 加拿大 (Canada) 02 R70
+- name: 🇨🇦 加拿大 (Canada) 01 R70
   server: 198.57.27.190
   port: 22324
   udp: true
@@ -19,6 +12,13 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
+- name: 🇨🇦 加拿大 (Canada) 02 R42
+  server: 138.199.48.82
+  port: 9443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
 - name: 🇨🇦 加拿大 (Canada) 03 R53
   server: 212.74.39.235
   port: 8080
@@ -30,16 +30,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R42
-  - 🇨🇦 加拿大 (Canada) 02 R70
+  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 02 R42
   - 🇨🇦 加拿大 (Canada) 03 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R42
-  - 🇨🇦 加拿大 (Canada) 02 R70
+  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 02 R42
   - 🇨🇦 加拿大 (Canada) 03 R53
 rules:
 - MATCH,PROXIES
