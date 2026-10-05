@@ -5,19 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01
-  server: 103.172.197.3
-  port: 16006
-  udp: true
-  type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇮🇩 印尼 (Indonesia) 02
-  server: 43.255.156.166
+  server: 43.255.156.57
   port: 31094
   udp: true
   type: vless
@@ -29,6 +17,30 @@ proxies:
     short-id: c761f990d786f2
   servername: www.lamer.com.sg
   client-fingerprint: firefox
+- name: 🇮🇩 印尼 (Indonesia) 02
+  server: 103.172.197.2
+  port: 29172
+  udp: true
+  type: vless
+  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: 🇮🇩 印尼 (Indonesia) 03
+  server: 103.172.197.3
+  port: 16006
+  udp: true
+  type: vless
+  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +48,7 @@ proxy-groups:
   - AUTO
   - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
+  - 🇮🇩 印尼 (Indonesia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +56,6 @@ proxy-groups:
   proxies:
   - 🇮🇩 印尼 (Indonesia) 01
   - 🇮🇩 印尼 (Indonesia) 02
+  - 🇮🇩 印尼 (Indonesia) 03
 rules:
 - MATCH,PROXIES
