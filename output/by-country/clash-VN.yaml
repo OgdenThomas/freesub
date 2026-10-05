@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01
-  server: 45.90.59.15
-  port: 443
+- name: 🇻🇳 越南 (Vietnam) 01
+  server: 43.255.157.118
+  port: 44988
   udp: true
   type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
-  servername: www.cloudflare.com
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  servername: www.tesla.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01
+  - 🇻🇳 越南 (Vietnam) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01
+  - 🇻🇳 越南 (Vietnam) 01
 rules:
 - MATCH,PROXIES

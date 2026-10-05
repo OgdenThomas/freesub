@@ -4,50 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R66
-  server: 82.152.197.167
-  port: 20003
-  udp: true
-  type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3423809a-08e5-4b93-bd76-c6cdcbfd9b52
-  tls: true
-  servername: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/qAuPpP8UsUmtA5NiXmiGs
-    headers:
-      Host: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03 R66
-  server: 82.152.197.167
-  port: 20004
-  udp: true
-  type: vmess
-  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
-  alterId: 0
-  cipher: auto
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  tls: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇬🇧 英国 (United Kingdom) 05
+- name: 🇬🇧 英国 (United Kingdom) 01
   server: 23.81.34.204
   port: 443
   udp: true
@@ -60,7 +17,7 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 06
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 95.85.224.51
   port: 443
   udp: true
@@ -73,42 +30,19 @@ proxies:
     short-id: a696de84963656de
   servername: max.ru
   client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R66
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 R66
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R66
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 R66
-  - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07
 rules:
 - MATCH,PROXIES
