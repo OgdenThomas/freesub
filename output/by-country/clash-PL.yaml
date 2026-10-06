@@ -5,15 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 70.34.255.101
-  port: 80
-  udp: true
-  type: vless
-  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇵🇱 波兰 (Poland) 02
   server: 70.34.252.154
   port: 80
   udp: true
@@ -22,8 +13,28 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 81.90.20.200
+  port: 443
+  udp: true
+  type: vless
+  uuid: 51c14658-8873-4454-9383-c41fc80bde4b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl.pupoe.sbs
+  skip-cert-verify: false
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 03
-  server: 144.31.93.231
+  server: 70.34.255.101
+  port: 80
+  udp: true
+  type: vless
+  uuid: a889262f-5fe3-4c93-9aaa-3721318dd389
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇵🇱 波兰 (Poland) 04
+  server: av513u.sysopnova.art
   port: 443
   udp: true
   type: vless
@@ -34,53 +45,28 @@ proxies:
     public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
     short-id: b97e7d4582b6fa6e
   servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04
-  server: 83.168.107.220
-  port: 443
-  udp: true
-  type: vless
-  uuid: b1813cbd-831f-4cb3-baf8-5bc0cc8298bc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: s0lbZ5BO3ctZjE8DzsXkNL0NvLl6FgLG6532NQzXigo
-    short-id: c56d4f1c
-  servername: google.com
-  client-fingerprint: safari
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 05
-  server: 83.168.95.145
+  server: 144.31.49.47
+  port: 443
+  udp: true
+  type: hysteria2
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  sni: admin.wwwinternetvideo.click
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 06
+  server: 179.198.49.99
   port: 443
   udp: true
   type: vless
-  uuid: f28e0ce1-ed75-4e90-b069-5215a80dfb4a
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: AcuvO982QLzf76fVydfSuJIiF5520rmj7AxpaxyRwUg
-    short-id: d345ad4657adeef9
-  servername: google.com
-  client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 06
-  server: ruot.ayucloudservices.nl
-  port: 35031
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 35c15fe7-ae8e-4ab7-9b03-d0cc69f1131a
-- name: 🇵🇱 波兰 (Poland) 07 R42
-  server: 188.114.96.19
-  port: 80
-  udp: true
-  type: vmess
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    public-key: iwHKqXfMtE61bupFq0qdpc8_uGwQswGc3JpLvDVB9Wo
+    short-id: 088b263ae349cc97
+  servername: pl1.nztvpn.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,7 +78,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,6 +89,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07 R42
 rules:
 - MATCH,PROXIES

@@ -4,22 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21018
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) R50
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16112
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽)
+  server: p141.panda001.net
+  port: 4652
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 - name: 🇦🇹 奥地利 (Austria) 03 (家宽)
   server: 31.77.227.6
   port: 52006
@@ -30,63 +27,21 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
-  server: 104.20.36.205
-  port: 443
-  udp: true
-  type: vless
-  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
-  tls: true
-  servername: argo6.5671234.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /e8e2cecb6188f7fb
-    headers:
-      Host: argo6.5671234.xyz
-- name: 🇯🇵 日本 (Japan) 05 (家宽)
-  server: 54.178.110.17
-  port: 4443
-  udp: true
-  type: vless
-  uuid: d5fbd83b-7346-4ad9-94c0-76293724824d
-  tls: true
-  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-- name: 🇰🇷 韩国 (South Korea) 06 (家宽)
-  server: p141.panda001.net
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) R50
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
   - 🇦🇹 奥地利 (Austria) 03 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
-  - 🇯🇵 日本 (Japan) 05 (家宽)
-  - 🇰🇷 韩国 (South Korea) 06 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) R50
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
   - 🇦🇹 奥地利 (Austria) 03 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
-  - 🇯🇵 日本 (Japan) 05 (家宽)
-  - 🇰🇷 韩国 (South Korea) 06 (家宽)
 rules:
 - MATCH,PROXIES

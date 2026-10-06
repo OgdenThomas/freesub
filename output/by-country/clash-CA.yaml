@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R70
+- name: 🇨🇦 加拿大 (Canada) 01 R67
   server: 198.57.27.190
   port: 22324
   udp: true
@@ -12,21 +12,14 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 02 R42
-  server: 138.199.48.82
+- name: 🇨🇦 加拿大 (Canada) 02 R40
+  server: yyz-ca-01.blncvpn4u.cc
   port: 9443
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-- name: 🇨🇦 加拿大 (Canada) 03 R53
-  server: 51.222.107.43
-  port: 2083
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
-- name: 🇨🇦 加拿大 (Canada) 04 R53
+- name: 🇨🇦 加拿大 (Canada) 03 R59
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -37,18 +30,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R70
-  - 🇨🇦 加拿大 (Canada) 02 R42
-  - 🇨🇦 加拿大 (Canada) 03 R53
-  - 🇨🇦 加拿大 (Canada) 04 R53
+  - 🇨🇦 加拿大 (Canada) 01 R67
+  - 🇨🇦 加拿大 (Canada) 02 R40
+  - 🇨🇦 加拿大 (Canada) 03 R59
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R70
-  - 🇨🇦 加拿大 (Canada) 02 R42
-  - 🇨🇦 加拿大 (Canada) 03 R53
-  - 🇨🇦 加拿大 (Canada) 04 R53
+  - 🇨🇦 加拿大 (Canada) 01 R67
+  - 🇨🇦 加拿大 (Canada) 02 R40
+  - 🇨🇦 加拿大 (Canada) 03 R59
 rules:
 - MATCH,PROXIES

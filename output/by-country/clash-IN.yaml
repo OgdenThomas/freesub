@@ -4,31 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
-  server: 104.20.36.205
+- name: 🇮🇳 印度 (India) 01
+  server: aksai.org
   port: 443
   udp: true
-  type: vless
-  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: argo6.5671234.xyz
+  servername: aksai.org
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /e8e2cecb6188f7fb
+    path: /linkvws
     headers:
-      Host: argo6.5671234.xyz
+      Host: aksai.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇮🇳 印度 (India) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇮🇳 印度 (India) 01
 rules:
 - MATCH,PROXIES
