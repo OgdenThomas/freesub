@@ -12,34 +12,34 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 02 R40
-  server: yyz-ca-01.blncvpn4u.cc
-  port: 9443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-- name: 🇨🇦 加拿大 (Canada) 03 R59
+- name: 🇨🇦 加拿大 (Canada) 02 R59
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
   type: vless
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- name: 🇨🇦 加拿大 (Canada) 03 R50
+  server: 138.197.141.58
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R67
-  - 🇨🇦 加拿大 (Canada) 02 R40
-  - 🇨🇦 加拿大 (Canada) 03 R59
+  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 03 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R67
-  - 🇨🇦 加拿大 (Canada) 02 R40
-  - 🇨🇦 加拿大 (Canada) 03 R59
+  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 03 R50
 rules:
 - MATCH,PROXIES

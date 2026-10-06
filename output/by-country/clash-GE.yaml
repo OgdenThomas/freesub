@@ -4,32 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: 45.192.201.140
+- name: 🇬🇪 格鲁吉亚 (Georgia) 01 R45
+  server: geo.shkola112.site
   port: 443
   udp: true
   type: vless
-  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
   tls: true
-  servername: argo6.5671234.xyz
+  servername: geo.shkola112.site
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /e8e2cecb6188f7fb
+    path: /api-vless
     headers:
-      Host: argo6.5671234.xyz
+      Host: geo.shkola112.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 R45
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01
+  - 🇬🇪 格鲁吉亚 (Georgia) 01 R45
 rules:
 - MATCH,PROXIES

@@ -5,41 +5,57 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 35.181.55.52
+  server: 13.36.178.160
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇫🇷 法国 (France) 02
-  server: 15.237.215.103
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 03
-  server: ay6axoz5ad92.unfixablity.com
-  port: 40973
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: hZycIr9ffe++4mxk+rkZHPgFXY1nmfb23fIeZNS3HeI=:HNUZ1NG1sNLqEe6v7XAY39JLPBTA2vAB9PGvS9VZGEA=
-- name: 🇫🇷 法国 (France) 04
   server: 13.36.167.227
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 05
-  server: 35.180.75.226
+- name: 🇫🇷 法国 (France) 03
+  server: 35.181.55.52
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 06 R48
+- name: 🇫🇷 法国 (France) 04
+  server: 15.237.215.103
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 05
+  server: 95.179.208.12
+  port: 443
+  udp: true
+  type: vless
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 06
+  server: 45.130.125.190
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 07 R48
   server: fmwf6gbnad0a.dop16.com
   port: 443
   udp: true
@@ -47,21 +63,8 @@ proxies:
   password: 2e631f0c-226a-484b-9e7c-d6c9c444ef13
   sni: fmwf6gbnad0a.dop16.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07
-  server: 45.140.165.192
-  port: 443
-  udp: true
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8EU4QO_Md_9ohyl1TfE5gtgPyxQ0QNTrXggljxOOvz0
-    short-id: 0da7e14db353e7d0
-  servername: france.nztvpn.com
-  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 08
-  server: 104.16.72.41
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -72,21 +75,8 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 09
-  server: fr.api-music-fa.com
+  server: 91.245.225.79
   port: 2053
-  udp: true
-  type: vless
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-  tls: true
-  servername: fr.api-music-fa.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-- name: 🇫🇷 法国 (France) 10
-  server: 5.78.92.27
-  port: 8443
   udp: true
   type: trojan
   password: humanity
@@ -95,16 +85,45 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 11 R47
-  server: 155.94.134.183
-  port: 11592
+- name: 🇫🇷 法国 (France) 10
+  server: 185.255.179.166
+  port: 443
   udp: true
-  type: hysteria2
-  password: ca78f919e6
-  sni: srv-3fc7c9.21freedom.net
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: ec66908dbc46e6920143d9b684adf277
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11
+  server: frjssj.povrak.ir
+  port: 24336
+  udp: true
+  type: vmess
+  uuid: 493015b3-8fb1-451d-b1df-09a4c7eeebb7
+  alterId: 0
+  cipher: auto
+- name: 🇫🇷 法国 (France) 12
+  server: fera3.povrak.ir
+  port: 65075
+  udp: true
+  type: vmess
+  uuid: 493015b3-8fb1-451d-b1df-09a4c7eeebb7
+  alterId: 0
+  cipher: auto
+- name: 🇫🇷 法国 (France) 13
+  server: lv1d.lynch.ir
+  port: 4040
+  udp: true
+  type: vless
+  uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
+  tls: true
+  reality-opts:
+    public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
+    short-id: 73693dea6faae051
+  servername: www.actionvfx.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -115,12 +134,14 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R48
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R48
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
   - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11 R47
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -131,11 +152,13 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R48
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R48
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
   - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11 R47
+  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13
 rules:
 - MATCH,PROXIES

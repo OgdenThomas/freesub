@@ -4,8 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01
-  server: 104.21.48.18
+- name: 🇹🇷 土耳其 (Turkey) 01 R50
+  server: 144.225.65.202
+  port: 37523
+  udp: true
+  type: vmess
+  uuid: 493015b3-8fb1-451d-b1df-09a4c7eeebb7
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 02 R50
+  server: cookie.wookshop.ir
+  port: 43233
+  udp: true
+  type: vless
+  uuid: 568bcbbc-7a90-4164-8b5d-1c0bbeccfa38
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cookie.wookshop.ir
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: nimm.mpd.cc.cd
   port: 2053
   udp: true
   type: trojan
@@ -20,12 +39,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 02 R50
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 01 R50
+  - 🇹🇷 土耳其 (Turkey) 02 R50
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

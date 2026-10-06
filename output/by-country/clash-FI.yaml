@@ -9,10 +9,23 @@ proxies:
   port: 58179
   udp: true
   type: vmess
-  uuid: 381e0782-92b0-40ef-806f-76ebbcde3a16
+  uuid: 9371d6ef-97a4-47f3-bfa2-ce10bc50436a
   alterId: 0
   cipher: auto
 - name: 🇫🇮 芬兰 (Finland) 02
+  server: 13.143.174.201
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 689b65e0-57a8-41ba-804d-10c079c2b393
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dBvFkg2zny545Ws6H_LXKEohOYV2MW_zACRrRQE1IUg
+    short-id: 992e5a9a
+  servername: files.meridian-labs.net
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
   server: 151.241.137.132
   port: 443
   udp: true
@@ -24,6 +37,19 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
   client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 13.143.129.45
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CsoM3VUYii1XxgxnrT4VEe-EALgn60k6BaKMJVP9qAM
+    short-id: 7dd08043
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +57,8 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +66,7 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

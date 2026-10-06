@@ -5,24 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01
-  server: 188.114.96.3
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: cdtfrgmtcsbaarmz-9owpz7g4.f9w96pzky6un-covzx6b-hzlm80woj2.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/3F3fUAGJks9doKvjt8AREH4QR?ed=2560
-- name: 🇳🇱 荷兰 (Netherlands) 02
-  server: c3.nastuh.link
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
-- name: 🇳🇱 荷兰 (Netherlands) 03
   server: 130.12.242.106
   port: 443
   udp: true
@@ -34,8 +16,39 @@ proxies:
     public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
     short-id: 15affa0af66dfc79
   servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 02
+  server: c3.nastuh.link
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: y7KeRTzmH0vXT2kp
+- name: 🇳🇱 荷兰 (Netherlands) 03
+  server: 2.59.183.167
+  port: 443
+  udp: true
+  type: vless
+  uuid: 301d514e-4aa0-47b0-ba44-a0cb891cd52f
+  tls: true
+  reality-opts:
+    public-key: OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4
+    short-id: a1b2c3d4
+  servername: www.samsung.com
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 04
+  server: 162.35.242.252
+  port: 443
+  udp: true
+  type: vless
+  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
+  tls: true
+  reality-opts:
+    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
+    short-id: 82c2b7d5e70ff000
+  servername: nl.aksay.pro
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 05
   server: 2.27.71.54
   port: 443
   udp: true
@@ -48,32 +61,7 @@ proxies:
     short-id: '10358810'
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 05
-  server: 162.35.242.252
-  port: 443
-  udp: true
-  type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
-  tls: true
-  reality-opts:
-    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
-    short-id: 82c2b7d5e70ff000
-  servername: nl.aksay.pro
-  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 06
-  server: 177.3.212.16
-  port: 443
-  udp: true
-  type: vless
-  uuid: ace5e70e-f9ab-447a-a86c-b7e884de13ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1he5EyHxI595x0mNkFNxOebUOQZGVGIy_c92bn1qO2o
-    short-id: ac31827454d7f693
-  servername: el.api.kvnplan.com
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 07
   server: 2.27.39.233
   port: 443
   udp: true
@@ -86,32 +74,41 @@ proxies:
     short-id: f3c023cc
   servername: addons.mozilla.org
   client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 07
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8453bdb7-dd58-419d-b002-9456dd2e73d7
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pan2e.global.ssl.fastly.net
 - name: 🇳🇱 荷兰 (Netherlands) 08
-  server: 2.27.61.143
+  server: 109.235.49.234
   port: 443
   udp: true
-  type: vless
-  uuid: 0243cef3-6acd-4cfe-8134-73c10375e61b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: J9yuGstyASp2Y4uKucVAp5lfS6IWwXgcZu45iMHcnjM
-    short-id: 8622922189abcdef
-  servername: qwe111.moneyvpn.org
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  sni: tcp-reset-club.net
+  skip-cert-verify: false
 - name: 🇳🇱 荷兰 (Netherlands) 09
-  server: 144.31.237.85
+  server: 31.76.71.23
   port: 443
   udp: true
   type: vless
-  uuid: ace5e70e-f9ab-447a-a86c-b7e884de13ec
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1he5EyHxI595x0mNkFNxOebUOQZGVGIy_c92bn1qO2o
-    short-id: ac31827454d7f693
-  servername: test.api.vplnte.info
-  client-fingerprint: chrome
+    public-key: Z5PBrg8agBtO8S01rPiAiC57YI7dz5TgYbs13LAX7lc
+    short-id: 0d284a63346248c2
+  servername: origin.media.cdn.videoclothing.xyz
+  client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 10
   server: 45.150.33.33
   port: 443
@@ -126,27 +123,6 @@ proxies:
   servername: amazon.de
   client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 11
-  server: 31.76.71.23
-  port: 443
-  udp: true
-  type: vless
-  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Z5PBrg8agBtO8S01rPiAiC57YI7dz5TgYbs13LAX7lc
-    short-id: 0d284a63346248c2
-  servername: origin.media.cdn.videoclothing.xyz
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 12
-  server: nl-hy-test.tcp-reset-club.net
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 13
   server: 2.27.71.48
   port: 443
   udp: true
@@ -159,6 +135,33 @@ proxies:
     short-id: 4d767145
   servername: addons.mozilla.org
   client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 12
+  server: 144.124.241.131
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 8fd937f7-f3ff-4178-8ced-782bc1aadc1e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9AkU8NXh0yS1ALTVV-CJLRFXThl6BbcquEkWZio7Znk
+    short-id: 7e7ff35522f6870c
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 13
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6ead3f4c-023f-4322-b5c4-ac4e327d259d
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pannn1.global.ssl.fastly.net
 - name: 🇳🇱 荷兰 (Netherlands) 14
   server: 94.156.79.93
   port: 443

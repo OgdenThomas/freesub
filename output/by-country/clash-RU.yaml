@@ -1,0 +1,56 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 130.49.188.120
+  port: 443
+  udp: true
+  type: vless
+  uuid: 76d1bd6e-6ba0-44c0-a4a4-becb4e0a9b3d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RsUYIPGTv1QIAC1wERleUBoyMZ-mpxHPRT_hA80u-BM
+    short-id: 1aa760b0
+  servername: dk-1.alpha-ai-studio.com
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 194.38.11.86
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 45.151.71.63
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3984a6ee-9fc6-4219-93fd-706c59e02171
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: abuse.sellflow.org
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+rules:
+- MATCH,PROXIES

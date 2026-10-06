@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 109.104.106.149
-  port: 443
-  udp: true
-  type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw
-    short-id: 87709fed663228e5
-  servername: d3-ro.cloud-cdn.xyz
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: 162.249.125.133
   port: 443
   udp: true
@@ -27,20 +14,7 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 03
-  server: bl3fk52.sysopnova.art
-  port: 443
-  udp: true
-  type: vless
-  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
-    short-id: 5ee019e02e6ed99a
-  servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 04
+- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: 31.76.84.61
   port: 8443
   udp: true
@@ -53,6 +27,19 @@ proxies:
     short-id: 38a85846b72a1e51
   servername: brightdesk.videoclothing.xyz
   client-fingerprint: firefox
+- name: 🇷🇴 罗马尼亚 (Romania) 03
+  server: 193.163.203.253
+  port: 443
+  udp: true
+  type: vless
+  uuid: 441afe11-a180-4516-bb80-80a8a6b38705
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gE8LUmGFXik94SoDXNiAG5KprGyhjoRwDuhGebgAVWk
+    short-id: 5ee019e02e6ed99a
+  servername: yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -61,7 +48,6 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
   - 🇷🇴 罗马尼亚 (Romania) 03
-  - 🇷🇴 罗马尼亚 (Romania) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -70,6 +56,5 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
   - 🇷🇴 罗马尼亚 (Romania) 03
-  - 🇷🇴 罗马尼亚 (Romania) 04
 rules:
 - MATCH,PROXIES
