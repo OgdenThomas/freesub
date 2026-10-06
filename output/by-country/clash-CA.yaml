@@ -19,13 +19,48 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 03 R50
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
+  tls: true
+  servername: auto-scale-238b2b.infra-core-1630dd.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
+    headers:
+      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 188.114.96.3
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 756e8f39-04e8-436d-b5c6-905d37d9562c
+  tls: true
+  servername: Ez-98919A.MOtoRicb.Workers.DeV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiR1BxUFhYR0w1TlBLMTRsIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
+    headers:
+      Host: ez-98919a.motoricb.workers.dev
+- name: 🇨🇦 加拿大 (Canada) 05 R50
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
+- name: 🇨🇦 加拿大 (Canada) 06 R53
+  server: milo.rubinaz.xyz
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,7 +68,10 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R42
   - 🇨🇦 加拿大 (Canada) 02 R70
-  - 🇨🇦 加拿大 (Canada) 03 R50
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R50
+  - 🇨🇦 加拿大 (Canada) 06 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,6 +79,9 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R42
   - 🇨🇦 加拿大 (Canada) 02 R70
-  - 🇨🇦 加拿大 (Canada) 03 R50
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R50
+  - 🇨🇦 加拿大 (Canada) 06 R53
 rules:
 - MATCH,PROXIES

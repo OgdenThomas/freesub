@@ -5,37 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽)",
-      "server": "172.64.52.6",
-      "server_port": 2052,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
-      "server": "argo6.5671234.xyz",
-      "server_port": 443,
-      "uuid": "08aaab35-a42d-4755-a03e-20c18cb1b3e8",
-      "tls": {
-        "enabled": true,
-        "server_name": "argo6.5671234.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/e8e2cecb6188f7fb"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 03 (家宽)",
+      "tag": "🇦🇹 奥地利 (Austria) 01 (家宽)",
       "server": "31.77.227.6",
       "server_port": 52006,
       "uuid": "bc659d88-a1e0-076c-a49a-7b51b26a7a7f",
@@ -47,22 +17,73 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
+      "server": "test.keoplentuio.xyz",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 (家宽)",
+      "server": "185.125.103.62",
+      "server_port": 8082,
+      "uuid": "81f042b3-13d9-4686-9d92-5350f19d909c",
+      "tls": {
+        "enabled": true,
+        "server_name": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽)",
+      "server": "argo6.5671234.xyz",
+      "server_port": 443,
+      "uuid": "08aaab35-a42d-4755-a03e-20c18cb1b3e8",
+      "tls": {
+        "enabled": true,
+        "server_name": "argo6.5671234.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/e8e2cecb6188f7fb",
+        "headers": {
+          "Host": "argo6.5671234.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
-        "🇦🇹 奥地利 (Austria) 03 (家宽)"
+        "🇦🇹 奥地利 (Austria) 01 (家宽)",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
+        "🇯🇵 日本 (Japan) 03 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
-        "🇦🇹 奥地利 (Austria) 03 (家宽)"
+        "🇦🇹 奥地利 (Austria) 01 (家宽)",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
+        "🇯🇵 日本 (Japan) 03 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
