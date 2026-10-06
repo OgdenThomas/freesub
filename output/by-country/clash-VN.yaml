@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇻🇳 越南 (Vietnam) 01
-  server: 103.214.173.39
+  server: 103.30.76.197
   port: 44988
   udp: true
   type: vless
@@ -17,17 +17,35 @@ proxies:
     short-id: bb82c8
   servername: www.tesla.com
   client-fingerprint: firefox
+- name: 🇻🇳 越南 (Vietnam) 02
+  server: opc-jp.sharecentre.online
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: opc-jp.sharecentre.online
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /shirker
+    headers:
+      Host: opc-jp.sharecentre.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇻🇳 越南 (Vietnam) 01
+  - 🇻🇳 越南 (Vietnam) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇻🇳 越南 (Vietnam) 01
+  - 🇻🇳 越南 (Vietnam) 02
 rules:
 - MATCH,PROXIES

@@ -25,18 +25,51 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "finla2.povrak.ir",
+      "server_port": 58179,
+      "uuid": "ce0bcb75-baa7-41a7-833e-eb54a8f6a08e",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "server": "13.143.129.45",
+      "server_port": 443,
+      "uuid": "df53b6c2-8005-475c-9eb9-74e1be785dc8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CsoM3VUYii1XxgxnrT4VEe-EALgn60k6BaKMJVP9qAM",
+          "short_id": "7dd08043"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01"
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01"
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

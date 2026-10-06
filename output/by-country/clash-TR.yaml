@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 206.1.103.221
+  port: 17390
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: 4zo9pQzwxsh1bMeReRoD/Ma2N3ZKvTJ6gZRhRcOGtzU=:5bsD1WmoheBbkMn4uYAa3A3ERVpjp3CRyYylrTg4sg8=
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 78.135.73.47
   port: 443
   udp: true
@@ -17,24 +24,28 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: netork.povrak.ir
+  port: 37523
+  udp: true
+  type: vmess
+  uuid: ce0bcb75-baa7-41a7-833e-eb54a8f6a08e
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 04
   server: 206.1.103.221
   port: 42264
   udp: true
   type: ss
   cipher: 2022-blake3-aes-256-gcm
   password: Rzv4KXTXvFEqeALuBgzETlujcXrzIAsrSMAevky5x8c=:hdA4n/xn83dcbzxCAxapim47QxGlbAUPQ8I1rbC2RN8=
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: nimm.mpd.cc.cd
-  port: 2053
+- name: 🇹🇷 土耳其 (Turkey) 05
+  server: 206.1.103.221
+  port: 48817
   udp: true
-  type: trojan
-  password: e309e031-991e-4656-9934-44d10deb8fd8
-  sni: nimm.mpd.cc.cd
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /0962
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: XNWvNbl1I5SxIHjWAeXXqqY9Q+/WiMWcADpQsBvES/M=:dGrGoAnnNADlAXihqvdLzMiLSihBXI0FMv6UCNp9k4Q=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,6 +54,8 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -51,5 +64,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 rules:
 - MATCH,PROXIES

@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R42
-  server: 138.199.48.82
-  port: 9443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
-- name: 🇨🇦 加拿大 (Canada) 02 R70
+- name: 🇨🇦 加拿大 (Canada) 01 R70
   server: 198.57.27.190
   port: 22324
   udp: true
@@ -19,43 +12,21 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  type: vless
-  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
-  tls: true
-  servername: auto-scale-238b2b.infra-core-1630dd.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUjJBU3JkVlRwSWtnciIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0
-    headers:
-      Host: auto-scale-238b2b.infra-core-1630dd.workers.dev
-- name: 🇨🇦 加拿大 (Canada) 04
-  server: 188.114.96.3
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 756e8f39-04e8-436d-b5c6-905d37d9562c
-  tls: true
-  servername: Ez-98919A.MOtoRicb.Workers.DeV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiR1BxUFhYR0w1TlBLMTRsIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
-    headers:
-      Host: ez-98919a.motoricb.workers.dev
-- name: 🇨🇦 加拿大 (Canada) 05 R50
-  server: 138.197.141.58
-  port: 8080
+- name: 🇨🇦 加拿大 (Canada) 02 R42
+  server: 138.199.48.82
+  port: 9443
   udp: true
   type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 06 R53
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+- name: 🇨🇦 加拿大 (Canada) 03 R53
+  server: 51.222.107.43
+  port: 2083
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:HWFFJN19JkvbTKo/79AfnbRBK9uHUUaFNZJyLjEoJGs=
+- name: 🇨🇦 加拿大 (Canada) 04 R53
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -66,22 +37,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R42
-  - 🇨🇦 加拿大 (Canada) 02 R70
-  - 🇨🇦 加拿大 (Canada) 03
-  - 🇨🇦 加拿大 (Canada) 04
-  - 🇨🇦 加拿大 (Canada) 05 R50
-  - 🇨🇦 加拿大 (Canada) 06 R53
+  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 02 R42
+  - 🇨🇦 加拿大 (Canada) 03 R53
+  - 🇨🇦 加拿大 (Canada) 04 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R42
-  - 🇨🇦 加拿大 (Canada) 02 R70
-  - 🇨🇦 加拿大 (Canada) 03
-  - 🇨🇦 加拿大 (Canada) 04
-  - 🇨🇦 加拿大 (Canada) 05 R50
-  - 🇨🇦 加拿大 (Canada) 06 R53
+  - 🇨🇦 加拿大 (Canada) 01 R70
+  - 🇨🇦 加拿大 (Canada) 02 R42
+  - 🇨🇦 加拿大 (Canada) 03 R53
+  - 🇨🇦 加拿大 (Canada) 04 R53
 rules:
 - MATCH,PROXIES

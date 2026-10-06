@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇪 格鲁吉亚 (Georgia) 01 R45
-  server: 104.21.50.89
+- name: 🇨🇿 捷克 (Czech) 01
+  server: frosty-pond-7436.shhabbyat914.workers.dev
   port: 443
   udp: true
   type: vless
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  uuid: de78c0b1-c5c8-412a-bd92-430d1f2e2642
   tls: true
-  servername: geo.shkola112.site
+  servername: FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
+    path: /NmrU9ImDG7jA7oFEem
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇪 格鲁吉亚 (Georgia) 01 R45
+  - 🇨🇿 捷克 (Czech) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇪 格鲁吉亚 (Georgia) 01 R45
+  - 🇨🇿 捷克 (Czech) 01
 rules:
 - MATCH,PROXIES
