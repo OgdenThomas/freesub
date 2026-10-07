@@ -7,23 +7,48 @@
       "type": "shadowsocks",
       "tag": "🇮🇱 以色列 (Israel) 01",
       "server": "31.57.185.180",
-      "server_port": 30966,
+      "server_port": 24110,
       "method": "2022-blake3-aes-256-gcm",
-      "password": "Pil67PqflZg0TtPVO/PoFLTMrJDyC5p27jc0S7fuFCQ=:SXou9caBcLaritdsJnL/7rwkcSbAoMnjszimt/5vmEg="
+      "password": "gNFg0epW6zPt3VrbEdbLAogBehBPta16HrWNnrNBfcE=:Ultj5/Lb2FLYk9lH/gvVSd4AsBxotO3lFw8+ujM7rCw="
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇱 以色列 (Israel) 02",
+      "server": "177.3.208.65",
+      "server_port": 443,
+      "uuid": "4f34bc04-479c-49ba-91a8-6bb9ed15031c",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgmansion.site",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless-il",
+        "headers": {
+          "Host": "tgmansion.site"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 以色列 (Israel) 01"
+        "🇮🇱 以色列 (Israel) 01",
+        "🇮🇱 以色列 (Israel) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 以色列 (Israel) 01"
+        "🇮🇱 以色列 (Israel) 01",
+        "🇮🇱 以色列 (Israel) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

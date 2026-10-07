@@ -5,12 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.149.114.171
-  port: 777
+  server: 144.31.212.253
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02
   server: 13.143.129.45
   port: 443
@@ -23,15 +24,19 @@ proxies:
     public-key: CsoM3VUYii1XxgxnrT4VEe-EALgn60k6BaKMJVP9qAM
     short-id: 7dd08043
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: randomized
 - name: 🇫🇮 芬兰 (Finland) 03
-  server: fi.zhabulik.ru
+  server: 151.241.137.132
   port: 443
   udp: true
-  type: trojan
-  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
-  sni: fi.zhabulik.ru
-  skip-cert-verify: false
+  type: vless
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 04
   server: 159.194.250.154
   port: 443
@@ -45,16 +50,17 @@ proxies:
   servername: api-maps.yandex.ru
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 05
-  server: 151.241.137.132
+  server: 185.166.154.111
   port: 443
   udp: true
   type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
+    public-key: bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU
+    short-id: 94f32cfc
+  servername: cdn.bulkavpn.top
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES

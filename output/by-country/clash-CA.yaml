@@ -4,18 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
-  server: 188.114.97.6
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇨🇦 加拿大 (Canada) 02 R67
+- name: 🇨🇦 加拿大 (Canada) 01 R67
   server: 198.57.27.190
   port: 22324
   udp: true
@@ -23,14 +12,14 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 03 R50
+- name: 🇨🇦 加拿大 (Canada) 02 R50
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 04 R59
+- name: 🇨🇦 加拿大 (Canada) 03 R59
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -41,18 +30,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R67
-  - 🇨🇦 加拿大 (Canada) 03 R50
-  - 🇨🇦 加拿大 (Canada) 04 R59
+  - 🇨🇦 加拿大 (Canada) 01 R67
+  - 🇨🇦 加拿大 (Canada) 02 R50
+  - 🇨🇦 加拿大 (Canada) 03 R59
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R67
-  - 🇨🇦 加拿大 (Canada) 03 R50
-  - 🇨🇦 加拿大 (Canada) 04 R59
+  - 🇨🇦 加拿大 (Canada) 01 R67
+  - 🇨🇦 加拿大 (Canada) 02 R50
+  - 🇨🇦 加拿大 (Canada) 03 R59
 rules:
 - MATCH,PROXIES
