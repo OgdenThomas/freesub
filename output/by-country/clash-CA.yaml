@@ -4,51 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R67
-  server: 198.57.27.190
-  port: 22324
-  udp: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: 🇨🇦 加拿大 (Canada) 02 R50
+- name: 🇨🇦 加拿大 (Canada) 01 R50
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 03 R59
-  server: amphetamine.adaspoloandco.com
-  port: 2087
+- name: 🇨🇦 加拿大 (Canada) 02 R59
+  server: milo.rubinaz.xyz
+  port: 8080
   udp: true
   type: vless
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  tls: true
-  servername: amphetamine.adaspoloandco.com
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /download.php
-    headers:
-      Host: amphetamine.adaspoloandco.com
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R67
-  - 🇨🇦 加拿大 (Canada) 02 R50
-  - 🇨🇦 加拿大 (Canada) 03 R59
+  - 🇨🇦 加拿大 (Canada) 01 R50
+  - 🇨🇦 加拿大 (Canada) 02 R59
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R67
-  - 🇨🇦 加拿大 (Canada) 02 R50
-  - 🇨🇦 加拿大 (Canada) 03 R59
+  - 🇨🇦 加拿大 (Canada) 01 R50
+  - 🇨🇦 加拿大 (Canada) 02 R59
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01
+  server: 162.35.242.252
+  port: 443
+  udp: true
+  type: vless
+  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
+  tls: true
+  reality-opts:
+    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
+    short-id: 82c2b7d5e70ff000
+  servername: nl.aksay.pro
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 02
   server: 130.12.242.106
   port: 443
   udp: true
@@ -17,27 +29,7 @@ proxies:
     short-id: 15affa0af66dfc79
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 02
-  server: c3.nastuh.link
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
 - name: 🇳🇱 荷兰 (Netherlands) 03
-  server: 2.27.71.53
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
-    short-id: f3c023cc
-  servername: addons.mozilla.org
-  client-fingerprint: randomized
-- name: 🇳🇱 荷兰 (Netherlands) 04
   server: 2.27.71.54
   port: 443
   udp: true
@@ -49,19 +41,33 @@ proxies:
     public-key: -u9DSQ5RMebplY_ti-Vy4BJP9dEoQ1lTOvjoxK8CqS4
     short-id: '10358810'
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 05
-  server: 162.35.242.252
+  client-fingerprint: randomized
+- name: 🇳🇱 荷兰 (Netherlands) 04
+  server: 2.27.39.233
   port: 443
   udp: true
   type: vless
-  uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
-    short-id: 82c2b7d5e70ff000
-  servername: nl.aksay.pro
+    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
+    short-id: f3c023cc
+  servername: addons.mozilla.org
   client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 05
+  server: 45.150.33.33
+  port: 443
+  udp: true
+  type: vless
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
+    short-id: eba1498e012ef580
+  servername: amazon.de
+  client-fingerprint: edge
 - name: 🇳🇱 荷兰 (Netherlands) 06
   server: 2.27.71.48
   port: 443
@@ -74,15 +80,8 @@ proxies:
     public-key: FTB4bvTP-3JAbScj_vvkIOPFGjtN2TaNTUfeY-Ew8EU
     short-id: 4d767145
   servername: addons.mozilla.org
-  client-fingerprint: randomized
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 07
-  server: 20.101.46.229
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
-- name: 🇳🇱 荷兰 (Netherlands) 08
   server: 109.235.49.234
   port: 443
   udp: true
@@ -90,18 +89,23 @@ proxies:
   password: 529f1911-04d5-4427-94b9-c851fd459a27
   sni: tcp-reset-club.net
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 09
-  server: 104.18.37.127
+- name: 🇳🇱 荷兰 (Netherlands) 08
+  server: uk3-2.998998.best
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: wWw.Volumeroot.cOm.
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server22.9966338.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇳🇱 荷兰 (Netherlands) 10
+    path: /serhrdftshg
+    headers:
+      Host: server22.9966338.xyz
+- name: 🇳🇱 荷兰 (Netherlands) 09
   server: 94.156.79.93
   port: 443
   udp: true
@@ -114,7 +118,7 @@ proxies:
     short-id: f129dcdbf64f
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 11
+- name: 🇳🇱 荷兰 (Netherlands) 10
   server: 208.67.106.154
   port: 443
   udp: true
@@ -142,7 +146,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10
-  - 🇳🇱 荷兰 (Netherlands) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -158,6 +161,5 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10
-  - 🇳🇱 荷兰 (Netherlands) 11
 rules:
 - MATCH,PROXIES

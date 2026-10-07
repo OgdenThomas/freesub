@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R67",
-      "server": "198.57.27.190",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 02 R50",
+      "tag": "🇨🇦 加拿大 (Canada) 01 R50",
       "server": "138.197.141.58",
       "server_port": 8080,
       "method": "rc4-md5",
@@ -21,44 +13,26 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 03 R59",
-      "server": "amphetamine.adaspoloandco.com",
-      "server_port": 2087,
-      "uuid": "97ea73b6-2043-4238-903c-a1e3d4a43c96",
-      "tls": {
-        "enabled": true,
-        "server_name": "amphetamine.adaspoloandco.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/download.php",
-        "headers": {
-          "Host": "amphetamine.adaspoloandco.com"
-        }
-      }
+      "tag": "🇨🇦 加拿大 (Canada) 02 R59",
+      "server": "milo.rubinaz.xyz",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R67",
-        "🇨🇦 加拿大 (Canada) 02 R50",
-        "🇨🇦 加拿大 (Canada) 03 R59"
+        "🇨🇦 加拿大 (Canada) 01 R50",
+        "🇨🇦 加拿大 (Canada) 02 R59"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R67",
-        "🇨🇦 加拿大 (Canada) 02 R50",
-        "🇨🇦 加拿大 (Canada) 03 R59"
+        "🇨🇦 加拿大 (Canada) 01 R50",
+        "🇨🇦 加拿大 (Canada) 02 R59"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

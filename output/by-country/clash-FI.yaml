@@ -17,18 +17,28 @@ proxies:
   servername: finland.ali-bard.online
   client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 185.166.154.111
+  server: 159.194.250.154
   port: 443
   udp: true
   type: vless
-  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
+  uuid: f0482c9d-ff67-4a43-af8e-76fc5d55c250
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: bQZcMViJWXus9rMSTOa-ZAaUJC0mIlPx7XmzrLp8GQU
-    short-id: 94f32cfc
-  servername: cdn.bulkavpn.top
-  client-fingerprint: firefox
+    public-key: x9yfMdHRe9ZAJJUF9kZnDnO3Y7otoyFBCS9RoaIG3Es
+  servername: api-maps.yandex.ru
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: psf-3.weedly.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: b0fae3b7-02de-4002-b8ca-b7159fe33841
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: machinemag.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

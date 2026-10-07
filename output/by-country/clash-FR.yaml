@@ -5,33 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 13.38.79.223
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇫🇷 法国 (France) 02
   server: 35.181.55.52
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇫🇷 法国 (France) 03
-  server: 185.255.179.166
+- name: 🇫🇷 法国 (France) 02
+  server: 13.38.79.223
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 03
+  server: 95.179.208.12
+  port: 443
+  udp: true
+  type: vless
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  servername: googleapis.com
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 04
-  server: 185.114.72.31
-  port: 2053
+  server: 172.64.152.23
+  port: 443
   udp: true
   type: trojan
   password: humanity
@@ -41,15 +42,19 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 05
-  server: 13.36.167.227
-  port: 443
+  server: 91.245.225.79
+  port: 2053
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 法国 (France) 06
-  server: 88.99.189.60
-  port: 443
+  server: 89.150.34.41
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -59,7 +64,7 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 07
-  server: 185.220.100.168
+  server: 155.103.71.142
   port: 443
   udp: true
   type: trojan
@@ -69,13 +74,6 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 08
-  server: 13.36.178.160
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,7 +86,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -101,6 +98,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES
