@@ -5,38 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 R50
-  server: 206.1.100.83
-  port: 25178
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
-- name: 🇹🇷 土耳其 (Turkey) 02 R50
-  server: 91.228.227.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8fc806fa-350b-4548-937a-2bf35f7fe7eb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0
-    short-id: ae64c9b46bff174a
-  servername: tr1.sky-vault.top
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: ststictr.hamiramkemax.ir
-  port: 1081
-  udp: true
-  type: vless
-  uuid: 250865f0-4a0f-4e2e-8d14-4c39a25d0bef
-  tls: true
-  reality-opts:
-    public-key: _UlBf1BRa52KM89xxvfbSHuLZWrvWuGuhvbsL3gx01A
-    short-id: daa22fbb023ab4a2
-  servername: www12.gameservice-iramn3.com
-  client-fingerprint: edge
-- name: 🇹🇷 土耳其 (Turkey) 04 R50
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
@@ -48,17 +16,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 R50
-  - 🇹🇷 土耳其 (Turkey) 02 R50
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 R50
-  - 🇹🇷 土耳其 (Turkey) 02 R50
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04 R50
 rules:
 - MATCH,PROXIES

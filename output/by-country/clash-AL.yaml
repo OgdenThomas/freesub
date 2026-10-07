@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01
-  server: 103.172.197.3
-  port: 16006
+- name: 🇦🇱 AL 01
+  server: 45.89.60.202
+  port: 443
   udp: true
   type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: al-root.sworkingvpn.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇦🇱 AL 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇦🇱 AL 01
 rules:
 - MATCH,PROXIES

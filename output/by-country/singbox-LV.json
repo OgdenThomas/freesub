@@ -5,45 +5,43 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 01",
-      "server": "193.233.232.96",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 01",
+      "server": "195.123.213.28",
       "server_port": 443,
-      "uuid": "4d852af3-a121-41aa-9aed-4ca40a6f7b4d",
+      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "uC4W93YTVI5kbpN5ih2WZfQjikpNBn61-AhljO8ExFg",
-          "short_id": "fa764ccf"
+          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
+          "short_id": "5c256336e3b673fa"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 02",
-      "server": "195.74.90.122",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 02",
+      "server": "216.173.71.43",
       "server_port": 443,
-      "uuid": "698b212d-ca12-4794-8256-252a6e1b4533",
+      "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "w2p6.vpnpolar.online",
-        "insecure": false,
+        "server_name": "lv.nztvpn.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/beeline",
-        "headers": {
-          "Host": "w2p6.vpnpolar.online"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "miDhSALrcCvSfc38VjCDYlzNh5M61NMR5IkUli7IN08",
+          "short_id": "0da7e14db353e7d0"
         }
       }
     },
@@ -52,16 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01",
-        "🇦🇹 奥地利 (Austria) 02"
+        "🇱🇻 拉脱维亚 (Latvia) 01",
+        "🇱🇻 拉脱维亚 (Latvia) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01",
-        "🇦🇹 奥地利 (Austria) 02"
+        "🇱🇻 拉脱维亚 (Latvia) 01",
+        "🇱🇻 拉脱维亚 (Latvia) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
