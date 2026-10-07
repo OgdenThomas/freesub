@@ -4,19 +4,26 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 01",
+      "server": "188.114.97.6",
+      "server_port": 2082,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R67",
+      "tag": "🇨🇦 加拿大 (Canada) 02 R67",
       "server": "198.57.27.190",
       "server_port": 22324,
       "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
       "security": "auto"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 02 R59",
-      "server": "milo.rubinaz.xyz",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
     },
     {
       "type": "shadowsocks",
@@ -27,22 +34,31 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 04 R59",
+      "server": "milo.rubinaz.xyz",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R67",
-        "🇨🇦 加拿大 (Canada) 02 R59",
-        "🇨🇦 加拿大 (Canada) 03 R50"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R67",
+        "🇨🇦 加拿大 (Canada) 03 R50",
+        "🇨🇦 加拿大 (Canada) 04 R59"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R67",
-        "🇨🇦 加拿大 (Canada) 02 R59",
-        "🇨🇦 加拿大 (Canada) 03 R50"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R67",
+        "🇨🇦 加拿大 (Canada) 03 R50",
+        "🇨🇦 加拿大 (Canada) 04 R59"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

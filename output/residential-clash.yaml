@@ -4,18 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01 (家宽)
-  server: 31.77.227.6
-  port: 52006
+- name: 🇯🇵 日本 (Japan) 01 (家宽)
+  server: 128.241.25.11
+  port: 30021
   udp: true
   type: vless
-  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision
+  uuid: 088b8483-f76b-46be-b710-4f756a0fe487
   tls: true
-  servername: bigdick.gamegrow.ru
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
   skip-cert-verify: false
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: hinet1.2yly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) R50
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  server: 61.230.172.241
   port: 24215
   udp: true
   type: vless
@@ -24,9 +35,9 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  server: argo6.5671234.xyz
+  client-fingerprint: firefox
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  server: 45.192.201.140
   port: 443
   udp: true
   type: vless
@@ -34,6 +45,7 @@ proxies:
   tls: true
   servername: argo6.5671234.xyz
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /e8e2cecb6188f7fb
@@ -44,16 +56,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇯🇵 日本 (Japan) 01 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) R50
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇯🇵 日本 (Japan) 01 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) R50
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 rules:
 - MATCH,PROXIES

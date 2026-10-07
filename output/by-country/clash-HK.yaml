@@ -5,24 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 162.159.0.53
-  port: 2052
+  server: 104.21.70.21
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 43.161.230.103
-  port: 8443
+      Host: a3f19.fwu4.6bv.hh.vavava.kdns.fr
+- name: 🇭🇰 中国香港 (Hong Kong) 02 R41
+  server: 194.99.79.26
+  port: 443
   udp: true
-  type: hysteria2
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: aksai.org
   skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
 - name: 🇭🇰 中国香港 (Hong Kong) 03
   server: yg1.ygkkk.dpdns.org
   port: 443
@@ -45,7 +53,7 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 02 R41
   - 🇭🇰 中国香港 (Hong Kong) 03
 - name: AUTO
   type: url-test
@@ -53,7 +61,7 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
+  - 🇭🇰 中国香港 (Hong Kong) 02 R41
   - 🇭🇰 中国香港 (Hong Kong) 03
 rules:
 - MATCH,PROXIES

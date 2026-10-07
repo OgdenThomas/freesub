@@ -5,39 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: fisgww.povrak.ir
-  port: 58179
+  server: 45.149.114.171
+  port: 777
   udp: true
-  type: vmess
-  uuid: 9371d6ef-97a4-47f3-bfa2-ce10bc50436a
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 13.143.174.201
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 689b65e0-57a8-41ba-804d-10c079c2b393
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dBvFkg2zny545Ws6H_LXKEohOYV2MW_zACRrRQE1IUg
-    short-id: 992e5a9a
-  servername: files.meridian-labs.net
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 151.241.137.132
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 04
   server: 13.143.129.45
   port: 443
   udp: true
@@ -49,7 +23,39 @@ proxies:
     public-key: CsoM3VUYii1XxgxnrT4VEe-EALgn60k6BaKMJVP9qAM
     short-id: 7dd08043
   servername: addons.mozilla.org
-  client-fingerprint: randomized
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: fi.zhabulik.ru
+  port: 443
+  udp: true
+  type: trojan
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  sni: fi.zhabulik.ru
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 159.194.250.154
+  port: 443
+  udp: true
+  type: vless
+  uuid: f0482c9d-ff67-4a43-af8e-76fc5d55c250
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: x9yfMdHRe9ZAJJUF9kZnDnO3Y7otoyFBCS9RoaIG3Es
+  servername: api-maps.yandex.ru
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 151.241.137.132
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -59,6 +65,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,5 +75,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

@@ -4,26 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇴🇲 OM 01",
-      "server": "w7k2mf.5tencent.asia",
-      "server_port": 35016,
-      "method": "aes-128-gcm",
-      "password": "6ee847c4-04ef-4786-9720-eb6f73fbd80b"
+      "type": "vmess",
+      "tag": "🇨🇳 CN 01",
+      "server": "39.108.113.127",
+      "server_port": 10086,
+      "uuid": "fde10e39-48bb-4dcf-b3ba-71d711323a54",
+      "security": "auto",
+      "transport": {
+        "type": "ws"
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇴🇲 OM 01"
+        "🇨🇳 CN 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇴🇲 OM 01"
+        "🇨🇳 CN 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

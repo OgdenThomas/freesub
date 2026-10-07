@@ -17,33 +17,17 @@ proxies:
     short-id: e8daed2d
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇸🇨 塞舌尔 (Seychelles) 02
-  server: 185.94.165.207
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇨 塞舌尔 (Seychelles) 01
-  - 🇸🇨 塞舌尔 (Seychelles) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 塞舌尔 (Seychelles) 01
-  - 🇸🇨 塞舌尔 (Seychelles) 02
 rules:
 - MATCH,PROXIES

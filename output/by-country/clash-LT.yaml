@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇬 KG 01
-  server: 217.177.45.159
-  port: 8443
+- name: 🇱🇹 立陶宛 (Lithuania) 01
+  server: 62.77.158.1
+  port: 443
   udp: true
   type: vless
-  uuid: 1452d8ce-d9b9-49a6-83c6-94bbf92c1792
+  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 5748PzTZVfjHeZcJUTixWlXRG1d3TNfseYM7g3HExEI
-    short-id: 5e011d4ba2b6b940
-  servername: login.yahoo.com
+    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
+    short-id: 6a
+  servername: online.1c.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇬 KG 01
+  - 🇱🇹 立陶宛 (Lithuania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇬 KG 01
+  - 🇱🇹 立陶宛 (Lithuania) 01
 rules:
 - MATCH,PROXIES

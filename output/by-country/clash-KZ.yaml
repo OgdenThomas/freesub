@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  server: 206.223.245.125
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5e16365b-2a2d-43af-a973-852711b192bd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 7VDaTbO6QMT8ZkkYSqFTiKLdu7RQGADy0u8pecwLF3A
-  servername: kztravel.myfirstsite.party
-  client-fingerprint: chrome
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -34,13 +22,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 rules:
 - MATCH,PROXIES

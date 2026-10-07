@@ -5,35 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 R50
-  server: 144.225.65.202
-  port: 37523
+  server: 206.1.100.83
+  port: 25178
   udp: true
-  type: vmess
-  uuid: 493015b3-8fb1-451d-b1df-09a4c7eeebb7
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
 - name: 🇹🇷 土耳其 (Turkey) 02 R50
-  server: cookie.wookshop.ir
-  port: 43233
+  server: 91.228.227.9
+  port: 443
   udp: true
   type: vless
-  uuid: 568bcbbc-7a90-4164-8b5d-1c0bbeccfa38
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cookie.wookshop.ir
+  uuid: 8fc806fa-350b-4548-937a-2bf35f7fe7eb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0
+    short-id: ae64c9b46bff174a
+  servername: tr1.sky-vault.top
+  client-fingerprint: safari
 - name: 🇹🇷 土耳其 (Turkey) 03
-  server: nimm.mpd.cc.cd
-  port: 2053
+  server: ststictr.hamiramkemax.ir
+  port: 1081
   udp: true
-  type: trojan
-  password: e309e031-991e-4656-9934-44d10deb8fd8
-  sni: nimm.mpd.cc.cd
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /0962
+  type: vless
+  uuid: 250865f0-4a0f-4e2e-8d14-4c39a25d0bef
+  tls: true
+  reality-opts:
+    public-key: _UlBf1BRa52KM89xxvfbSHuLZWrvWuGuhvbsL3gx01A
+    short-id: daa22fbb023ab4a2
+  servername: www12.gameservice-iramn3.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

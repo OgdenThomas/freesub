@@ -5,6 +5,49 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
+  server: 162.159.153.4
+  port: 443
+  udp: true
+  type: vless
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rayan-007.maxima.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 8.6.112.9
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  tls: true
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: lucky-lab-ac6d.caveyi8071.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
+  tls: true
+  servername: lucky-lab-ac6d.caveyi8071.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /rN50nmm9L1DeY73C?ed=2560
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 23.81.34.204
   port: 443
   udp: true
@@ -17,18 +60,45 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 150.241.73.119
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 95.85.224.51
   port: 443
   udp: true
   type: vless
-  uuid: 3cf5b062-214c-440b-afc6-d151e5fbecf9
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ZPCvZ35GG6s9XAIIbF2Xj9zRWHntn3Ystcus_0TF3n8
-  servername: node-04.koshsky.ru
-  client-fingerprint: chrome
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  servername: max.ru
+  client-fingerprint: qq
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 144.31.93.211
+  port: 443
+  udp: true
+  type: vless
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wG33xSq40jo8zLhy8TE2Uuuw_60OpNQvWQKFs0TlaTY
+    short-id: f4498272a12371c9
+  servername: brightdesk.videoclothing.xyz
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 31.76.6.4
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dhu6bLcaJC9Dp8YPsVWWjeoswiPWkaw_OmX0-n0jAF4
+    short-id: f3bd8a54f8fd990f
+  servername: olivepress.gazette.help
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +106,11 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +118,10 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
 rules:
 - MATCH,PROXIES
