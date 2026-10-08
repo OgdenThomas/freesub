@@ -11,7 +11,51 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 R59
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 104.26.4.57
+  port: 443
+  udp: true
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  tls: true
+  servername: c379b284.vs-494.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: c379b284.vs-494.pages.dev
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: a5_alist.yzqiang.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  tls: true
+  servername: c379b284.vs-494.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: c379b284.vs-494.pages.dev
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 789156.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
+  tls: true
+  servername: 789156.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048fp=chrome
+    headers:
+      Host: 789156.xyz
+- name: 🇨🇦 加拿大 (Canada) 05 R59
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -23,13 +67,19 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R59
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 02
+  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05 R59
 rules:
 - MATCH,PROXIES
