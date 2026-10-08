@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  server: 199.189.254.16
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5b5e4cbf-2366-499a-8327-0cd9918c687d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: panel.surfweb.club
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -33,13 +22,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02
 rules:
 - MATCH,PROXIES
