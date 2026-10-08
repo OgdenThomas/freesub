@@ -5,31 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 157.228.155.238
+  server: 94.183.193.24
   port: 443
   udp: true
   type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
-    short-id: 6f76ad09
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇦🇪 阿联酋 (UAE) 02
-  server: eu86.vaultberry.cloud
-  port: 443
-  udp: true
-  type: vless
-  uuid: 73bec071-8d42-4294-a453-de168627649b
+  uuid: 327487f5-8665-48df-9e76-f1bee6d16557
   tls: true
   reality-opts:
     public-key: zYNnGVEkMFCUR_9NcYeaXfm9A_L-PP6iG2sIIST6S0M
     short-id: 1ed136481e0ede74
   servername: eu86.vaultberry.cloud
-  client-fingerprint: chrome
-- name: 🇦🇪 阿联酋 (UAE) 03
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02
   server: eu86.vaultberry.cloud
   port: 443
   udp: true
@@ -41,7 +28,59 @@ proxies:
     short-id: 1ed136481e0ede74
   servername: eu86.vaultberry.cloud
   client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 03
+  server: 94.183.193.79
+  port: 443
+  udp: true
+  type: vless
+  uuid: 327487f5-8665-48df-9e76-f1bee6d16557
+  tls: true
+  reality-opts:
+    public-key: zYNnGVEkMFCUR_9NcYeaXfm9A_L-PP6iG2sIIST6S0M
+    short-id: 1ed136481e0ede74
+  servername: eu86.vaultberry.cloud
+  client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 04
+  server: 94.183.193.4
+  port: 443
+  udp: true
+  type: vless
+  uuid: 327487f5-8665-48df-9e76-f1bee6d16557
+  tls: true
+  reality-opts:
+    public-key: zYNnGVEkMFCUR_9NcYeaXfm9A_L-PP6iG2sIIST6S0M
+    short-id: 1ed136481e0ede74
+  servername: eu86.vaultberry.cloud
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 05
+  server: 157.228.155.238
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
+    short-id: 6f76ad09
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 06
+  server: 31.59.210.26
+  port: 2088
+  udp: true
+  type: vless
+  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+  tls: true
+  reality-opts:
+    public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg
+    short-id: b1ad165f903c62fe
+  servername: www.yandex.ru
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: astracat
+- name: 🇦🇪 阿联酋 (UAE) 07
   server: 31.59.210.24
   port: 2087
   udp: true
@@ -56,7 +95,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 05
+- name: 🇦🇪 阿联酋 (UAE) 08
   server: 31.59.210.37
   port: 443
   udp: true
@@ -81,6 +120,9 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
+  - 🇦🇪 阿联酋 (UAE) 06
+  - 🇦🇪 阿联酋 (UAE) 07
+  - 🇦🇪 阿联酋 (UAE) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,5 +133,8 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 03
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
+  - 🇦🇪 阿联酋 (UAE) 06
+  - 🇦🇪 阿联酋 (UAE) 07
+  - 🇦🇪 阿联酋 (UAE) 08
 rules:
 - MATCH,PROXIES

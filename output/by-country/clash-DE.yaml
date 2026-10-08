@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: 151.101.38.7
-  port: 443
-  udp: true
-  type: trojan
-  password: mitivpn
-  sni: jjl.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇩🇪 德国 (Germany) 02
   server: 144.31.63.114
   port: 443
   udp: true
@@ -28,25 +17,21 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: cdn.v1.AssetService
-- name: 🇩🇪 德国 (Germany) 03
-  server: 188.114.96.3
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: cdtfrgmtcsbaarmz-9owpz7g4.f9w96pzky6un-covzx6b-hzlm80woj2.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/3F3fUAGJks9doKvjt8AREH4QR?ed=2560
-- name: 🇩🇪 德国 (Germany) 04
-  server: 18.196.88.40
+- name: 🇩🇪 德国 (Germany) 02
+  server: 63.177.230.112
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 03
+  server: 3.67.197.81
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 04
   server: 2.27.69.117
   port: 443
   udp: true
@@ -58,34 +43,15 @@ proxies:
     public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
     short-id: 123c2bff
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 06
-  server: 2.27.35.55
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
-    short-id: e696e744
-  servername: addons.mozilla.org
   client-fingerprint: randomized
-- name: 🇩🇪 德国 (Germany) 07
-  server: 163.245.43.50
+- name: 🇩🇪 德国 (Germany) 05
+  server: 3.75.231.76
   port: 443
   udp: true
-  type: vless
-  uuid: 203d434a-2a92-45df-8973-ca80434ecf73
-  tls: true
-  servername: se-twitch.global-cdn.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: content.v1.Feed
-- name: 🇩🇪 德国 (Germany) 08
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 06
   server: 31.70.111.146
   port: 443
   udp: true
@@ -97,26 +63,76 @@ proxies:
     public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
     short-id: d7de3a6ff4018957
   servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 09
-  server: psf-2.weedly.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e4ed5619-5e91-442a-92f1-755a7f6331b8
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: beat.ir
-- name: 🇩🇪 德国 (Germany) 10
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 07
   server: 3.66.88.253
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
+- name: 🇩🇪 德国 (Germany) 08
+  server: 2.27.69.128
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+- name: 🇩🇪 德国 (Germany) 09
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 10
+  server: 18.196.88.40
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 11
+  server: cdn-de.bulkavpn.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
+    short-id: c885e8f8
+  servername: cdn-de.bulkavpn.top
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 12
+  server: meet-goshawk.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: meet-goshawk.rooster465.autos
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 13 R48
+  server: 57.129.113.16
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+- name: 🇩🇪 德国 (Germany) 14
   server: 2.27.69.157
   port: 443
   udp: true
@@ -128,36 +144,7 @@ proxies:
     public-key: zAmNLsLPizp96b55zNe2kJ3zXBdpuNY0olnRaOpluks
     short-id: 34e797af
   servername: addons.mozilla.org
-  client-fingerprint: randomized
-- name: 🇩🇪 德国 (Germany) 12
-  server: 130.185.121.69
-  port: 443
-  udp: true
-  type: vless
-  uuid: d3c9d170-80fa-489a-8ba2-f4cc80d240e3
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 13
-  server: freesocks.work
-  port: 2052
-  udp: true
-  type: vless
-  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: 🇩🇪 德国 (Germany) 14
-  server: 91.107.169.224
-  port: 80
-  udp: true
-  type: vmess
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
+  client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 15
   server: 189.24.82.195
   port: 443
@@ -176,29 +163,53 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🇩🇪 德国 (Germany) 16
-  server: 63.178.198.94
+  server: rkiioxth.asrarshimi.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6f0f17f0-d45c-4584-bf50-a00cb6e423d3
+  tls: true
+  reality-opts:
+    public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
+    short-id: 73693dea6faae051
+  servername: www.actionvfx.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 17
+  server: 3.120.109.26
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: pleased-albacore.rooster465.autos
+  sni: actual-squid.rooster465.autos
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 17
-  server: 141.98.7.193
-  port: 2087
+- name: 🇩🇪 德国 (Germany) 18
+  server: 176.108.252.139
+  port: 9881
   udp: true
   type: vless
-  uuid: e9e60f73-1618-491c-a85b-477bdc959ae6
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
   tls: true
-  servername: 141.98.7.193
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 18 R48
-  server: 57.129.113.16
-  port: 8388
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aabb
+  servername: dl.google.com
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇩🇪 德国 (Germany) 19
+  server: 212.100.171.154
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
+  type: vless
+  uuid: a5ce10af-5e95-4eb3-ab87-bf4f95cb059b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8u8r2iWMt8Isz2ZNRbn3g4cfldhcePRB-1hxGYLTnSg
+    short-id: aa6582cf25e243ce
+  servername: www.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -216,12 +227,13 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
-  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 13 R48
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
   - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18 R48
+  - 🇩🇪 德国 (Germany) 18
+  - 🇩🇪 德国 (Germany) 19
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -239,11 +251,12 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
-  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 13 R48
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
   - 🇩🇪 德国 (Germany) 17
-  - 🇩🇪 德国 (Germany) 18 R48
+  - 🇩🇪 德国 (Germany) 18
+  - 🇩🇪 德国 (Germany) 19
 rules:
 - MATCH,PROXIES

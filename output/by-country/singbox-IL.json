@@ -4,62 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇮🇱 以色列 (Israel) 01",
-      "server": "es.srv.dvzh.net",
-      "server_port": 443,
-      "uuid": "91344c03-b37f-42c5-90f1-cbb95c5cf256",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "es.srv.dvzh.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0",
-          "short_id": "e4e77e76e6e49da7"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇱 以色列 (Israel) 02",
-      "server": "85.209.158.187",
-      "server_port": 443,
-      "uuid": "ab9929fd-ab22-48e3-8723-480733c0eca9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "isr.vpnskyline.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "4aN0Mr6AENm6-K7mokUioB8xe99zKP4UDHnzHtWEvBU",
-          "short_id": "eb1a94ed"
-        }
-      }
+      "server": "31.57.185.253",
+      "server_port": 49143,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "U0CNvKnt8lVDd+vt9pTJ8bcyZwC1BFNZFzofM+l6eDA=:SQlBCHM9Ug6aCRE6XIykIzIjKl40eV2nh0rvP99U/po="
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇱 以色列 (Israel) 01",
-        "🇮🇱 以色列 (Israel) 02"
+        "🇮🇱 以色列 (Israel) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇱 以色列 (Israel) 01",
-        "🇮🇱 以色列 (Israel) 02"
+        "🇮🇱 以色列 (Israel) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

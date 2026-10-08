@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
-  server: 138.124.62.158
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-    short-id: 15bcc0a77c3cacdf
-  servername: es-root.sworkingvpn.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -30,21 +17,19 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03
-  server: 185.220.249.44
-  port: 2053
+- name: 🇪🇸 西班牙 (Spain) 02
+  server: 138.124.62.158
+  port: 443
   udp: true
   type: vless
-  uuid: 6d1590ed-4c0f-4bbc-931d-2431737615dd
+  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
+  flow: xtls-rprx-vision
   tls: true
-  servername: 185.220.249.44
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /ws-cdn1-vless
-    headers:
-      Host: es.fastmirror-labs.xyz
+  reality-opts:
+    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
+    short-id: 15bcc0a77c3cacdf
+  servername: es-root.sworkingvpn.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -60,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

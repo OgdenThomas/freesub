@@ -5,44 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01
-  server: es.srv.dvzh.net
-  port: 443
+  server: 31.57.185.253
+  port: 49143
   udp: true
-  type: vless
-  uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: e4e77e76e6e49da7
-  servername: es.srv.dvzh.net
-  client-fingerprint: chrome
-- name: 🇮🇱 以色列 (Israel) 02
-  server: 85.209.158.187
-  port: 443
-  udp: true
-  type: vless
-  uuid: ab9929fd-ab22-48e3-8723-480733c0eca9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4aN0Mr6AENm6-K7mokUioB8xe99zKP4UDHnzHtWEvBU
-    short-id: eb1a94ed
-  servername: isr.vpnskyline.com
-  client-fingerprint: random
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: U0CNvKnt8lVDd+vt9pTJ8bcyZwC1BFNZFzofM+l6eDA=:SQlBCHM9Ug6aCRE6XIykIzIjKl40eV2nh0rvP99U/po=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇱 以色列 (Israel) 01
-  - 🇮🇱 以色列 (Israel) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇱 以色列 (Israel) 01
-  - 🇮🇱 以色列 (Israel) 02
 rules:
 - MATCH,PROXIES
