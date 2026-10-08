@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: p141.panda001.net
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
   server: t4.qifei.app
   port: 443
   udp: true
@@ -29,14 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
 rules:
 - MATCH,PROXIES

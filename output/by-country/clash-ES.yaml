@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
-  server: 193.238.154.5
-  port: 443
-  udp: true
-  type: vless
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
-  tls: true
-  servername: assets-es.pleiades.codes
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: 🇪🇸 西班牙 (Spain) 02
   server: 138.124.62.158
   port: 443
   udp: true
@@ -30,7 +17,7 @@ proxies:
     short-id: 15bcc0a77c3cacdf
   servername: es-root.sworkingvpn.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 03
+- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -43,6 +30,21 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 03
+  server: 185.220.249.44
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 6d1590ed-4c0f-4bbc-931d-2431737615dd
+  tls: true
+  servername: 185.220.249.44
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /ws-cdn1-vless
+    headers:
+      Host: es.fastmirror-labs.xyz
 proxy-groups:
 - name: PROXIES
   type: select
