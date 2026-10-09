@@ -15,21 +15,35 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: swidenlanzerotte.live
+  port: 443
+  udp: true
+  type: vless
+  uuid: 56de13ac-086e-4789-8e1e-1bf2bd90216b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
+  servername: swidenlanzerotte.live
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 02
 rules:
 - MATCH,PROXIES

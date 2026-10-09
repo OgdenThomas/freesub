@@ -5,27 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv2.kunlun01dns.com
+  server: 46.17.42.141
+  port: 50660
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
+- name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: dog-hk.kunlun01dns.com
+  port: 21041
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: zfd-hkv1.kunlun01dns.com
   port: 16115
   udp: true
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
   alterId: 0
   cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 8.217.110.53
-  port: 443
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: 46.17.45.31
+  port: 50660
   udp: true
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wet3gh-OtTXd6G20ic3hdldK4wEbwtI1WGr4bvXtVmQ
-    short-id: 3467b2ee
-  servername: www.amazon.com
-  client-fingerprint: random
-- name: 🇭🇰 中国香港 (Hong Kong) 03
+  type: ss
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
+- name: 🇭🇰 中国香港 (Hong Kong) 05
+  server: dog-hk.kunlun01dns.com
+  port: 21022
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 06
   server: t4.qifei.app
   port: 443
   udp: true
@@ -35,42 +52,30 @@ proxies:
   tls: true
   reality-opts:
     public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
   servername: s3.ap-east-1.amazonaws.com
   client-fingerprint: random
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: 20.235.220.189
-  port: 443
+- name: 🇭🇰 中国香港 (Hong Kong) 07
+  server: 43.161.230.103
+  port: 8443
   udp: true
-  type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+  type: hysteria2
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
-- name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: nycqg19zkwacpm1b.v.3dns.vip
-  port: 443
+- name: 🇭🇰 中国香港 (Hong Kong) 08
+  server: 111.243.83.19
+  port: 32134
   udp: true
-  type: vmess
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
+  flow: xtls-rprx-vision
   tls: true
-  servername: NYcQg19zkwaCPM1B.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: NYcQg19zkwaCPM1B.v.3dns.vip
-- name: 🇭🇰 中国香港 (Hong Kong) 06
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+  servername: buylite.music.apple.com
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 09
   server: yg1.ygkkk.dpdns.org
   port: 443
   udp: true
@@ -97,6 +102,9 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
   - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 08
+  - 🇭🇰 中国香港 (Hong Kong) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -108,5 +116,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
   - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
+  - 🇭🇰 中国香港 (Hong Kong) 08
+  - 🇭🇰 中国香港 (Hong Kong) 09
 rules:
 - MATCH,PROXIES

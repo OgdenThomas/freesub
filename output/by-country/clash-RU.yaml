@@ -1,0 +1,77 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01
+  server: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 1460bcd2-4268-4576-914e-184ce8ea9b88
+  tls: true
+  servername: CD0ftGJ4R79qU6f7NL0LdWPTxv.s2gZvUGNc7ArQ-nzWDwAVAZ.WORkErs.Dev
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /vl/UD7xxzMf68Jt2a0T43Hr1jBP0qy3u022?ed=2560
+    headers:
+      Host: cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 194.87.68.140
+  port: 50660
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 81a20429165df87e
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 157.22.240.206
+  port: 28152
+  udp: true
+  type: hysteria2
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: alb1337.zaebalsanoproxyklinus.lol
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 194.38.11.86
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: 188.130.209.227
+  port: 444
+  udp: true
+  type: vless
+  uuid: a6be94fc-e742-4714-8a38-c8d7410ae066
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: P7F65GjTQGZju-N8CVHtlKNaWebVe_76Xt7Lm00RuH0
+  servername: vextor.win
+  client-fingerprint: random
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+rules:
+- MATCH,PROXIES

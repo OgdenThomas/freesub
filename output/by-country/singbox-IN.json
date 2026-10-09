@@ -1,0 +1,51 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 01",
+      "server": "382d.n9ne.com.tr",
+      "server_port": 33303,
+      "uuid": "e81e1114-99b5-4fea-aafc-84426e845a14",
+      "tls": {
+        "enabled": true,
+        "server_name": "n9ne.com.tr",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "p6B2mBPsdjNOY64TTplBXRcsrh3sL0SzqVlbyCRR8Us",
+          "short_id": "dd4ef91df2f00d60"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇳 印度 (India) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇳 印度 (India) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

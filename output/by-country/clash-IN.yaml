@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇳 印度 (India) 01
+  server: 382d.n9ne.com.tr
+  port: 33303
+  udp: true
+  type: vless
+  uuid: e81e1114-99b5-4fea-aafc-84426e845a14
+  tls: true
+  reality-opts:
+    public-key: p6B2mBPsdjNOY64TTplBXRcsrh3sL0SzqVlbyCRR8Us
+    short-id: dd4ef91df2f00d60
+  servername: n9ne.com.tr
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇳 印度 (India) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇳 印度 (India) 01
+rules:
+- MATCH,PROXIES

@@ -1,0 +1,114 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 01",
+      "server": "cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev",
+      "server_port": 2083,
+      "uuid": "1460bcd2-4268-4576-914e-184ce8ea9b88",
+      "tls": {
+        "enabled": true,
+        "server_name": "CD0ftGJ4R79qU6f7NL0LdWPTxv.s2gZvUGNc7ArQ-nzWDwAVAZ.WORkErs.Dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/UD7xxzMf68Jt2a0T43Hr1jBP0qy3u022?ed=2560",
+        "headers": {
+          "Host": "cd0ftgj4r79qu6f7nl0ldwptxv.s2gzvugnc7arq-nzwdwavaz.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02",
+      "server": "194.87.68.140",
+      "server_port": 50660,
+      "method": "aes-256-gcm",
+      "password": "81a20429165df87e"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03",
+      "server": "157.22.240.206",
+      "server_port": 28152,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "alb1337.zaebalsanoproxyklinus.lol",
+        "insecure": false
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 俄罗斯 (Russia) 04",
+      "server": "194.38.11.86",
+      "server_port": 65443,
+      "method": "aes-256-cfb",
+      "password": "7eadc6dbe2ae"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 05",
+      "server": "188.130.209.227",
+      "server_port": 444,
+      "uuid": "a6be94fc-e742-4714-8a38-c8d7410ae066",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vextor.win",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "P7F65GjTQGZju-N8CVHtlKNaWebVe_76Xt7Lm00RuH0",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇷🇺 俄罗斯 (Russia) 01",
+        "🇷🇺 俄罗斯 (Russia) 02",
+        "🇷🇺 俄罗斯 (Russia) 03",
+        "🇷🇺 俄罗斯 (Russia) 04",
+        "🇷🇺 俄罗斯 (Russia) 05"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇷🇺 俄罗斯 (Russia) 01",
+        "🇷🇺 俄罗斯 (Russia) 02",
+        "🇷🇺 俄罗斯 (Russia) 03",
+        "🇷🇺 俄罗斯 (Russia) 04",
+        "🇷🇺 俄罗斯 (Russia) 05"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

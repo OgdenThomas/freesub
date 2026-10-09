@@ -1,0 +1,77 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇶 IQ 01",
+      "server": "www.speedtest.net",
+      "server_port": 443,
+      "uuid": "4ccf70f9-7632-4b5a-9557-10d2dd347bb2",
+      "tls": {
+        "enabled": true,
+        "server_name": "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0fp=chrome",
+        "headers": {
+          "Host": "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇶 IQ 02 R41",
+      "server": "arcturus.yokkastars.com",
+      "server_port": 40443,
+      "uuid": "bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4",
+          "short_id": "db46e2946fc466fd"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇶 IQ 01",
+        "🇮🇶 IQ 02 R41"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇶 IQ 01",
+        "🇮🇶 IQ 02 R41"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 01",
+      "server": "www.speedtest.net",
+      "server_port": 443,
+      "uuid": "2db92da9-8ffb-491b-81d6-6e8d50876020",
+      "tls": {
+        "enabled": true,
+        "server_name": "bpB-01c11365.HJdBcvDbKV.WORKErS.dEV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0",
+        "headers": {
+          "Host": "bpb-01c11365.hjdbcvdbkv.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02",
+      "server": "ger6.fytpn.com",
+      "server_port": 56789,
+      "uuid": "a889fba5-5472-4022-a6b4-9710157fda2f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ger6.fytpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ",
+          "short_id": "a2aa"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇿 捷克 (Czech) 03",
+      "server": "ger6.fytpn.com",
+      "server_port": 2097,
+      "password": "gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU",
+      "tls": {
+        "enabled": true,
+        "server_name": "ger6.fytpn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

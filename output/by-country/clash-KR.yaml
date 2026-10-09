@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: icn-a-02.auuas.com
+  port: 1891
+  udp: true
+  type: vless
+  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2olNWILpuviXx_Nr30JZc5tpt3MgtWda7jLGwAOxPxY
+    short-id: 8378f267
+  servername: www.npmjs.com
+  client-fingerprint: edge
+- name: 🇰🇷 韩国 (South Korea) 02
   server: optimum-snapper.rooster465.autos
   port: 443
   udp: true
@@ -12,28 +25,16 @@ proxies:
   password: UX82473651
   sni: optimum-snapper.rooster465.autos
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: 47.80.19.173
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: 3c4041d3
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 03
-  server: p141.panda001.net
-  port: 4652
+  server: engaging-toucan.rooster465.autos
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
+  type: trojan
+  password: UX82473651
+  sni: engaging-toucan.rooster465.autos
+  skip-cert-verify: false
 - name: 🇰🇷 韩国 (South Korea) 04
-  server: delicate-buck.rooster465.autos
+  server: 52.78.203.191
   port: 443
   udp: true
   type: trojan
@@ -41,13 +42,28 @@ proxies:
   sni: delicate-buck.rooster465.autos
   skip-cert-verify: false
 - name: 🇰🇷 韩国 (South Korea) 05
-  server: noted-cougar.rooster465.autos
+  server: 3.35.207.188
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: noted-cougar.rooster465.autos
+  sni: main-fawn.rooster465.autos
   skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: kind-stork.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: kind-stork.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 07
+  server: p141.panda001.net
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,6 +74,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
   - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
+  - 🇰🇷 韩国 (South Korea) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,5 +86,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03
   - 🇰🇷 韩国 (South Korea) 04
   - 🇰🇷 韩国 (South Korea) 05
+  - 🇰🇷 韩国 (South Korea) 06
+  - 🇰🇷 韩国 (South Korea) 07
 rules:
 - MATCH,PROXIES

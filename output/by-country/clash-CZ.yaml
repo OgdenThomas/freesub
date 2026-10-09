@@ -1,0 +1,60 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2db92da9-8ffb-491b-81d6-6e8d50876020
+  tls: true
+  servername: bpB-01c11365.HJdBcvDbKV.WORKErS.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlFRWlMwRDdLakVqMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: bpb-01c11365.hjdbcvdbkv.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02
+  server: ger6.fytpn.com
+  port: 56789
+  udp: true
+  type: vless
+  uuid: a889fba5-5472-4022-a6b4-9710157fda2f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ
+    short-id: a2aa
+  servername: ger6.fytpn.com
+  client-fingerprint: firefox
+- name: 🇨🇿 捷克 (Czech) 03
+  server: ger6.fytpn.com
+  port: 2097
+  udp: true
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: ger6.fytpn.com
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+rules:
+- MATCH,PROXIES
