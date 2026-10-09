@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
+  server: fintest3.povrak.ir
+  port: 39458
+  udp: true
+  type: vmess
+  uuid: 5551d2e8-d3d4-42d2-95c8-fb780b4f6e6d
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 151.241.137.132
   port: 443
   udp: true
@@ -16,26 +24,54 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: van2.ragnarok-it.xyz
-  port: 8446
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: fertest2.povrak.ir
+  port: 37483
+  udp: true
+  type: vmess
+  uuid: 5551d2e8-d3d4-42d2-95c8-fb780b4f6e6d
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: vpn.cyrionflare.xyz
+  port: 2087
   udp: true
   type: vless
-  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
+  uuid: 15f434b8-aaec-4306-98c9-dd8f5ef608d4
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: 87.242.94.90
+  port: 8443
+  udp: true
+  type: vless
+  uuid: f23bc4f1-cc71-4003-ae6c-d6abe21d8191
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
-    short-id: 7bac4b112d30d1
-  servername: amd.com
-  client-fingerprint: edge
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 45.149.114.171
-  port: 777
+    public-key: pobC1laHCtpMK1EA520CyOpYeel0t90hEV_eRJExFAE
+    short-id: 20272c52657d22da
+  servername: passport.yandex.ru
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: gw1.edgemedia.lol
+  port: 13443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
+  type: vless
+  uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+    short-id: d2061bb1
+  servername: ya.ru
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 07
+  server: ger6.fytpn.com
+  port: 2097
+  udp: true
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: ger6.fytpn.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,6 +80,10 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
+  - 🇫🇮 芬兰 (Finland) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +92,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
+  - 🇫🇮 芬兰 (Finland) 07
 rules:
 - MATCH,PROXIES

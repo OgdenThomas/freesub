@@ -5,24 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 95.85.253.241
-  port: 2083
+  server: 222.167.245.248
+  port: 8443
   udp: true
   type: vless
-  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
+  uuid: a889fba5-5472-4022-a6b4-9710157fda2f
+  flow: xtls-rprx-vision
   tls: true
-  servername: 95.85.253.241
-  skip-cert-verify: false
+  reality-opts:
+    public-key: 7JLSiscJksRdmmRLnbqXlBgc4nce6lTvhKp3NIlXHFg
+    short-id: a2aa
+  servername: pol2.fytpn.com
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 02
-  server: 95.85.253.241
-  port: 2053
+  server: 222.167.245.248
+  port: 2097
   udp: true
-  type: vless
-  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
-  tls: true
-  servername: 95.85.253.241
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: pol2.fytpn.com
   skip-cert-verify: false
-  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 03
   server: 95.85.253.241
   port: 2087
@@ -32,7 +34,7 @@ proxies:
   tls: true
   servername: 95.85.253.241
   skip-cert-verify: false
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 04
   server: 95.85.253.241
   port: 8443
@@ -49,66 +51,15 @@ proxies:
     headers:
       Host: pl.fastmirror-labs.xyz
 - name: 🇵🇱 波兰 (Poland) 05
-  server: 177.1.192.72
-  port: 443
+  server: 95.85.253.241
+  port: 2053
   udp: true
   type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-  flow: xtls-rprx-vision
+  uuid: ee0a38e3-d148-48ac-ba99-5133446c2377
   tls: true
-  reality-opts:
-    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
-    short-id: 46455ff0
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06
-  server: 82.118.22.161
-  port: 443
-  udp: true
-  type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
-    short-id: fa3ea655619a3e78
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 07
-  server: pl.flen-vpn.xyz
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
-  tls: true
-  servername: pl.flen-vpn.xyz
+  servername: 95.85.253.241
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 08
-  server: 177.1.192.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
-    short-id: 770618b6
-  servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 09
-  server: av513u.sysopnova.art
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3710fc0f-5f0c-4b9c-a5d4-40cb419e943a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
-    short-id: b97e7d4582b6fa6e
-  servername: yandex.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -119,10 +70,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08
-  - 🇵🇱 波兰 (Poland) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -133,9 +80,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08
-  - 🇵🇱 波兰 (Poland) 09
 rules:
 - MATCH,PROXIES
