@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.149.114.171
-  port: 777
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: fertest2.povrak.ir
-  port: 37483
-  udp: true
-  type: vmess
-  uuid: beb22b15-2c6f-4bc4-b4ef-309b5a797a57
-  alterId: 0
-  cipher: auto
-- name: 🇫🇮 芬兰 (Finland) 03
   server: 151.241.137.132
   port: 443
   udp: true
@@ -31,15 +16,7 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: fintest3.povrak.ir
-  port: 39458
-  udp: true
-  type: vmess
-  uuid: beb22b15-2c6f-4bc4-b4ef-309b5a797a57
-  alterId: 0
-  cipher: auto
-- name: 🇫🇮 芬兰 (Finland) 05
+- name: 🇫🇮 芬兰 (Finland) 02
   server: van2.ragnarok-it.xyz
   port: 8446
   udp: true
@@ -52,6 +29,13 @@ proxies:
     short-id: 7bac4b112d30d1
   servername: amd.com
   client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 45.149.114.171
+  port: 777
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,8 +44,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -70,7 +52,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

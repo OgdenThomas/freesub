@@ -30,20 +30,6 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03
-  server: 217.26.30.125
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 4f466863-b6c5-4fdc-955e-7a601c18d89a
-  tls: true
-  reality-opts:
-    public-key: EuRD8QK-uL3uQqnQ_IC2Ybj7v8feXRxCiEaXYjhHx3c
-  servername: yahoo.com
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

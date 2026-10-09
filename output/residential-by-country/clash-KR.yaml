@@ -4,28 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇬 KG 01
-  server: 162.159.152.81
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: p141.panda001.net
+  port: 4652
   udp: true
-  type: trojan
-  password: '123456'
-  sni: now-pages-sub-em4.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇬 KG 01
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇬 KG 01
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 rules:
 - MATCH,PROXIES

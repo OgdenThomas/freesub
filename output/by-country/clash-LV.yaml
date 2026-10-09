@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01
+  server: lit.fytpn.com
+  port: 2097
+  udp: true
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: lit.fytpn.com
+  skip-cert-verify: false
+- name: 🇱🇻 拉脱维亚 (Latvia) 02
   server: 195.123.213.28
   port: 443
   udp: true
@@ -17,7 +25,7 @@ proxies:
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
+- name: 🇱🇻 拉脱维亚 (Latvia) 03
   server: 216.173.71.43
   port: 443
   udp: true
@@ -37,6 +45,7 @@ proxy-groups:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
+  - 🇱🇻 拉脱维亚 (Latvia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +53,6 @@ proxy-groups:
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
+  - 🇱🇻 拉脱维亚 (Latvia) 03
 rules:
 - MATCH,PROXIES

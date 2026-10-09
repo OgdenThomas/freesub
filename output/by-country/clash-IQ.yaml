@@ -4,22 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
-  tls: true
-  servername: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0fp=chrome
-    headers:
-      Host: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
-- name: 🇮🇶 IQ 02 R41
+- name: 🇮🇶 IQ 01 R41
   server: arcturus.yokkastars.com
   port: 40443
   udp: true
@@ -37,14 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01
-  - 🇮🇶 IQ 02 R41
+  - 🇮🇶 IQ 01 R41
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01
-  - 🇮🇶 IQ 02 R41
+  - 🇮🇶 IQ 01 R41
 rules:
 - MATCH,PROXIES

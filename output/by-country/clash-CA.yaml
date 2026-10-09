@@ -4,46 +4,41 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R50
+- name: 🇨🇦 加拿大 (Canada) 01 R52
+  server: 64.74.161.149
+  port: 17202
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 1cbb3e347ee86e1980a7c731e9dd00a0
+- name: 🇨🇦 加拿大 (Canada) 02 R50
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 R59
+- name: 🇨🇦 加拿大 (Canada) 03 R59
   server: 168.222.43.200
   port: 8080
   udp: true
   type: vless
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: f0b7.n9ne.com.tr
-  port: 35306
-  udp: true
-  type: vless
-  uuid: e81e1114-99b5-4fea-aafc-84426e845a14
-  tls: true
-  reality-opts:
-    public-key: NHurz_4uphCHgIbrnr3HRzfsq-LmIaPaUopWwHNJ8HU
-    short-id: ceb4496ab0cc7a9f
-  servername: n9ne.com.tr
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 01 R52
+  - 🇨🇦 加拿大 (Canada) 02 R50
+  - 🇨🇦 加拿大 (Canada) 03 R59
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 01 R52
+  - 🇨🇦 加拿大 (Canada) 02 R50
+  - 🇨🇦 加拿大 (Canada) 03 R59
 rules:
 - MATCH,PROXIES

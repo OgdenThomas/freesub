@@ -4,36 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 R50
-  server: 206.1.103.150
-  port: 64035
-  udp: true
-  type: vmess
-  uuid: beb22b15-2c6f-4bc4-b4ef-309b5a797a57
-  alterId: 0
-  cipher: auto
-- name: 🇹🇷 土耳其 (Turkey) 02 R50
-  server: 168.222.43.200
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 03 R50
-  server: 206.1.100.83
-  port: 25178
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: ADzlhA3ndouUCY3JbLddR/jwgYY7IDGc1T+5DuCix9Y=:KyFe2akGo5hcrswbMkD2+BM52si+D7lzyccZFTd4xaU=
-- name: 🇹🇷 土耳其 (Turkey) 04 R50
-  server: 206.1.103.150
-  port: 62396
-  udp: true
-  type: vmess
-  uuid: beb22b15-2c6f-4bc4-b4ef-309b5a797a57
-  alterId: 0
-  cipher: auto
-- name: 🇹🇷 土耳其 (Turkey) 05
+- name: 🇹🇷 土耳其 (Turkey) 01
   server: 78.135.73.47
   port: 443
   udp: true
@@ -46,15 +17,8 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 06 R50
-  server: clients.n9ne.com.tr
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: SqJYP4gDS1I6XGkioX3RCE3BimKj8dtj
-- name: 🇹🇷 土耳其 (Turkey) 07
-  server: 104.21.48.18
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: 172.67.176.3
   port: 2053
   udp: true
   type: trojan
@@ -64,43 +28,19 @@ proxies:
   network: ws
   ws-opts:
     path: /0962
-- name: 🇹🇷 土耳其 (Turkey) 08 R50
-  server: docs.n9ne.com.tr
-  port: 8444
-  udp: true
-  type: vless
-  uuid: e81e1114-99b5-4fea-aafc-84426e845a14
-  tls: true
-  reality-opts:
-    public-key: DhMAmplGrCBD7hwyDu7u2unWxsxMpZVKk_d7e3OZCWE
-    short-id: 15f380e8388ee5a0
-  servername: n9ne.com.tr
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 R50
-  - 🇹🇷 土耳其 (Turkey) 02 R50
-  - 🇹🇷 土耳其 (Turkey) 03 R50
-  - 🇹🇷 土耳其 (Turkey) 04 R50
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06 R50
-  - 🇹🇷 土耳其 (Turkey) 07
-  - 🇹🇷 土耳其 (Turkey) 08 R50
+  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 R50
-  - 🇹🇷 土耳其 (Turkey) 02 R50
-  - 🇹🇷 土耳其 (Turkey) 03 R50
-  - 🇹🇷 土耳其 (Turkey) 04 R50
-  - 🇹🇷 土耳其 (Turkey) 05
-  - 🇹🇷 土耳其 (Turkey) 06 R50
-  - 🇹🇷 土耳其 (Turkey) 07
-  - 🇹🇷 土耳其 (Turkey) 08 R50
+  - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 rules:
 - MATCH,PROXIES

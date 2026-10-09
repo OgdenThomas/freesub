@@ -5,27 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: icn-a-02.auuas.com
-  port: 1891
+  server: kr2-r.link-t7.com
+  port: 10047
   udp: true
   type: vless
-  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
-  flow: xtls-rprx-vision
+  uuid: 745A6079-6A61-423D-BDD9-B344C1D26E62
   tls: true
   reality-opts:
-    public-key: 2olNWILpuviXx_Nr30JZc5tpt3MgtWda7jLGwAOxPxY
-    short-id: 8378f267
-  servername: www.npmjs.com
-  client-fingerprint: edge
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+  servername: s0.awsstatic.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: update
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: optimum-snapper.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: optimum-snapper.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 03
   server: engaging-toucan.rooster465.autos
   port: 443
   udp: true
@@ -33,7 +27,7 @@ proxies:
   password: UX82473651
   sni: engaging-toucan.rooster465.autos
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 04
+- name: 🇰🇷 韩国 (South Korea) 03
   server: 52.78.203.191
   port: 443
   udp: true
@@ -41,7 +35,36 @@ proxies:
   password: UX82473651
   sni: delicate-buck.rooster465.autos
   skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 64.176.231.183
+  port: 443
+  udp: true
+  type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
+    short-id: ca193e889d958f81
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 05
+  server: pretty-rat.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: pretty-rat.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: noted-cougar.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: noted-cougar.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 07
   server: 3.35.207.188
   port: 443
   udp: true
@@ -49,21 +72,14 @@ proxies:
   password: UX82473651
   sni: main-fawn.rooster465.autos
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 06
-  server: kind-stork.rooster465.autos
+- name: 🇰🇷 韩国 (South Korea) 08
+  server: optimum-snapper.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: kind-stork.rooster465.autos
+  sni: optimum-snapper.rooster465.autos
   skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 07
-  server: p141.panda001.net
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,6 +92,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 05
   - 🇰🇷 韩国 (South Korea) 06
   - 🇰🇷 韩国 (South Korea) 07
+  - 🇰🇷 韩国 (South Korea) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -88,5 +105,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 05
   - 🇰🇷 韩国 (South Korea) 06
   - 🇰🇷 韩国 (South Korea) 07
+  - 🇰🇷 韩国 (South Korea) 08
 rules:
 - MATCH,PROXIES
