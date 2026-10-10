@@ -6,33 +6,13 @@ log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
   server: zfd-hkv2.kunlun01dns.com
-  port: 16116
+  port: 16112
   udp: true
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
   alterId: 0
   cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: dog-hk.kunlun01dns.com
-  port: 21019
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 20.205.14.234
-  port: 26480
-  udp: true
-  type: vless
-  uuid: 01de63ee-d2d6-4842-b2f0-d54c7eca267a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: thefrz26hPQjCrKszJ6m_41nLmThPGkTEKBjYVDGM0E
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 82.29.36.250
   port: 443
   udp: true
@@ -44,8 +24,8 @@ proxies:
     public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
     short-id: 09353d6dc5b789
   servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 03
   server: 156.224.77.171
   port: 9443
   udp: true
@@ -58,30 +38,19 @@ proxies:
     short-id: b390142456517acc
   servername: www.amazon.com
   client-fingerprint: random
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 130.94.33.80
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: t4.qifei.app
   port: 443
   udp: true
   type: vless
-  uuid: 365bebc8-894e-424f-95bf-7edbef311b23
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
   tls: true
-  servername: hk.sepporated.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: hk.sepporated.com
-- name: 🇭🇰 中国香港 (Hong Kong) 07
-  server: 2.27.109.179
-  port: 45464
-  udp: true
-  type: trojan
-  password: XuMweB2PWs
-  sni: 2.27.109.179.sslip.io
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 08
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  servername: s3.ap-east-1.amazonaws.com
+  client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 05
   server: yg1.ygkkk.dpdns.org
   port: 443
   udp: true
@@ -107,9 +76,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07
-  - 🇭🇰 中国香港 (Hong Kong) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -120,8 +86,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
-  - 🇭🇰 中国香港 (Hong Kong) 06
-  - 🇭🇰 中国香港 (Hong Kong) 07
-  - 🇭🇰 中国香港 (Hong Kong) 08
 rules:
 - MATCH,PROXIES

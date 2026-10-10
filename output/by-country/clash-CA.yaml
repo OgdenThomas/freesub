@@ -4,29 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
-  server: 104.17.189.184
-  port: 2096
-  udp: true
-  type: vless
-  uuid: da30a28c-5c01-4c93-8da8-c8d39d58bfb9
-  tls: true
-  servername: hk.yindu.cc.cd
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: hk.yindu.cc.cd
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: 138.197.141.58
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 03 R61
+- name: 🇨🇦 加拿大 (Canada) 01 R61
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -37,16 +15,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R61
+  - 🇨🇦 加拿大 (Canada) 01 R61
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R61
+  - 🇨🇦 加拿大 (Canada) 01 R61
 rules:
 - MATCH,PROXIES

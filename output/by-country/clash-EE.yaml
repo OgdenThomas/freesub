@@ -5,41 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: stoniy.fytpn.com
-  port: 56789
+  server: 185.252.177.216
+  port: 443
   udp: true
   type: vless
-  uuid: a889fba5-5472-4022-a6b4-9710157fda2f
+  uuid: 616c7b3b-41f4-4038-88c6-d6fedd0ae4a7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ
-    short-id: a2aa
-  servername: stoniy.fytpn.com
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
-  server: 31.76.70.225
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 8ff3db5a-5f41-4f25-a8a4-7fbf00f1c319
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-    short-id: d2061bb1
-  servername: ya.ru
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03
-  server: 79.98.37.18
-  port: 2097
-  udp: true
-  type: trojan
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  sni: stoniy.fytpn.com
-  skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 R56
-  server: 194.26.141.148
+    public-key: PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs
+    short-id: 9ea74b83f4993ca9
+  servername: est-1.ardesnode.ru
+  client-fingerprint: random
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02 R56
+  server: 77.72.85.247
   port: 8443
   udp: true
   type: vless
@@ -47,13 +26,12 @@ proxies:
   tls: true
   servername: fdghyt.com
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03
   server: 212.87.190.93
   port: 25895
   udp: true
@@ -71,19 +49,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
-  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 R56
   - 🇪🇪 爱沙尼亚 (Estonia) 03
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 R56
-  - 🇪🇪 爱沙尼亚 (Estonia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
-  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 02 R56
   - 🇪🇪 爱沙尼亚 (Estonia) 03
-  - 🇪🇪 爱沙尼亚 (Estonia) 04 R56
-  - 🇪🇪 爱沙尼亚 (Estonia) 05
 rules:
 - MATCH,PROXIES

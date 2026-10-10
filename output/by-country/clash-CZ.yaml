@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: 194.87.6.192
-  port: 2097
+  server: 95.85.238.142
+  port: 443
   udp: true
-  type: trojan
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  sni: ger6.fytpn.com
-  skip-cert-verify: false
+  type: vless
+  uuid: e937b92c-701f-420e-a621-3eb3b75de467
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WrqktJc0i6tesi_bVc6WS1mYM0yxhbriI4jrU_butSA
+    short-id: cd529c087b552f2f
+  servername: bobr.puffixhosting.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

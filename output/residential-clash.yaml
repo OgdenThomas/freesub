@@ -4,15 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: 218.237.185.234
-  port: 4652
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  server: dog-hk.kunlun01dns.com
+  port: 21021
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  server: tumspr.azad0namah.ir
+  port: 5566
   udp: true
   type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  server: 61.230.162.88
+  cipher: 2022-blake3-aes-128-gcm
+  password: 8NwabdWBXK1q1QaBhF69rw==:Lzvg7nuGDOIqso68553eNQ==
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  server: hinet1.2yly.com
   port: 24215
   udp: true
   type: vless
@@ -21,34 +29,22 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: safari
-- name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
-  server: t4.qifei.app
-  port: 443
-  udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: s3.ap-east-1.amazonaws.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 03 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
 rules:
 - MATCH,PROXIES

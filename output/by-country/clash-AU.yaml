@@ -4,29 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01
-  server: 103.172.197.3
-  port: 16006
+- name: 🇦🇺 澳大利亚 (Australia) 01
+  server: sy2.australiacaregroup.site
+  port: 10002
   udp: true
   type: vless
-  uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
-  flow: xtls-rprx-vision
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
   tls: true
-  reality-opts:
-    public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-  servername: www.cloudflare.com
+  servername: sy2.australiacaregroup.site
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇦🇺 澳大利亚 (Australia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇦🇺 澳大利亚 (Australia) 01
 rules:
 - MATCH,PROXIES
