@@ -1,0 +1,60 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01
+  server: 104.21.82.226
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36a857e4-f3d4-43aa-8b90-d7da849da989
+  tls: true
+  servername: 002.Inc-ElectROcElL-001-002.WoRKERS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 002.inc-electrocell-001-002.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02
+  server: 194.87.6.192
+  port: 2097
+  udp: true
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: ger6.fytpn.com
+  skip-cert-verify: false
+- name: 🇨🇿 捷克 (Czech) 03
+  server: 194.87.6.192
+  port: 56789
+  udp: true
+  type: vless
+  uuid: a889fba5-5472-4022-a6b4-9710157fda2f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ
+    short-id: a2aa
+  servername: ger6.fytpn.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 03
+rules:
+- MATCH,PROXIES

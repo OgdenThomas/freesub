@@ -1,0 +1,26 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇳 印度 (India) 01
+  server: 103.194.228.102
+  port: 4443
+  udp: true
+  type: vless
+  uuid: f247f7e4-04bb-48a5-828d-b8e75ec4c3af
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇳 印度 (India) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇳 印度 (India) 01
+rules:
+- MATCH,PROXIES

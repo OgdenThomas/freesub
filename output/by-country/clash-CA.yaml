@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01 R50
+- name: 🇨🇦 加拿大 (Canada) 01
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 R59
-  server: 194.77.220.104
+- name: 🇨🇦 加拿大 (Canada) 02 R61
+  server: 212.74.39.188
   port: 8080
   udp: true
   type: vless
@@ -22,14 +22,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02 R61
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01 R50
-  - 🇨🇦 加拿大 (Canada) 02 R59
+  - 🇨🇦 加拿大 (Canada) 01
+  - 🇨🇦 加拿大 (Canada) 02 R61
 rules:
 - MATCH,PROXIES

@@ -6,16 +6,40 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 01",
+      "server": "62.60.159.81",
+      "server_port": 2053,
+      "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw",
+          "short_id": "d0ea1847066af5a6"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpce5bb9e71"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 02",
       "server": "swidenlanzerotte.live",
       "server_port": 443,
       "uuid": "56de13ac-086e-4789-8e1e-1bf2bd90216b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "swidenlanzerotte.live",
+        "server_name": "",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -25,18 +49,43 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03",
+      "server": "hz-online-balancer.nyxenpro.ir",
+      "server_port": 2080,
+      "uuid": "0783c6fc-16a8-46ff-a408-a099d2f6f3ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "A2-_TVXJkWh9CZ7aD4NT9CsfAalIAn9r3BYXNJ3vhlc",
+          "short_id": "6ee75d75c8607846"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02",
+        "🇸🇪 瑞典 (Sweden) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02",
+        "🇸🇪 瑞典 (Sweden) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

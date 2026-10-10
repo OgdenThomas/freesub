@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇲 亚美尼亚 (Armenia) 01
+  server: 157.228.69.91
+  port: 27313
+  udp: true
+  type: hysteria2
+  password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
+  sni: spainspeedboostjbl88.qcloud.surf
+  skip-cert-verify: false
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇲 亚美尼亚 (Armenia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇲 亚美尼亚 (Armenia) 01
+rules:
+- MATCH,PROXIES

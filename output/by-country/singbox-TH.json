@@ -4,10 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇹🇭 泰国 (Thailand) 01",
-      "server": "2610sgdodo.volkvpn.com",
-      "server_port": 25102,
+      "server": "119.46.51.45",
+      "server_port": 37515,
+      "uuid": "9b76bc31-17a5-4454-934a-8d5fb602cd70",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇭 泰国 (Thailand) 02",
+      "server": "154.64.251.118",
+      "server_port": 21033,
       "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -15,7 +23,7 @@
         "server_name": "www.kaidee.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +37,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇹🇭 泰国 (Thailand) 01",
+        "🇹🇭 泰国 (Thailand) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇹🇭 泰国 (Thailand) 01",
+        "🇹🇭 泰国 (Thailand) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -1,0 +1,39 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇭🇷 克罗地亚 (Croatia) 01",
+      "server": "ruot.ayucloudservices.nl",
+      "server_port": 35193,
+      "method": "aes-128-gcm",
+      "password": "2581cebb-e452-4ee3-8849-3cd358bf9394"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇭🇷 克罗地亚 (Croatia) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇭🇷 克罗地亚 (Croatia) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

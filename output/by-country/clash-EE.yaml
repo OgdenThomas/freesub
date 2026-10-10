@@ -4,8 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 R58
-  server: ee10.zazazuza.ru
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: stoniy.fytpn.com
+  port: 56789
+  udp: true
+  type: vless
+  uuid: a889fba5-5472-4022-a6b4-9710157fda2f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ
+    short-id: a2aa
+  servername: stoniy.fytpn.com
+  client-fingerprint: firefox
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
+  server: 79.98.37.18
+  port: 2097
+  udp: true
+  type: trojan
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  sni: stoniy.fytpn.com
+  skip-cert-verify: false
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 R56
+  server: 194.26.141.148
   port: 8443
   udp: true
   type: vless
@@ -13,23 +34,41 @@ proxies:
   tls: true
   servername: fdghyt.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04
+  server: ee.h1cloud.net
+  port: 25895
+  udp: true
+  type: vless
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  tls: true
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  servername: www.samsung.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 R58
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03 R56
+  - 🇪🇪 爱沙尼亚 (Estonia) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 R58
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03 R56
+  - 🇪🇪 爱沙尼亚 (Estonia) 04
 rules:
 - MATCH,PROXIES
