@@ -4,37 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "45.149.114.171",
-      "server_port": 777,
-      "method": "chacha20-ietf-poly1305",
-      "password": "Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242"
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02",
-      "server": "van2.ragnarok-it.xyz",
-      "server_port": 8446,
-      "uuid": "a61496c3-f256-4a36-8a52-8638b9cc900a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM",
-          "short_id": "7bac4b112d30d1"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
       "server": "finland02.azotvpn.xyz",
       "server_port": 8443,
       "uuid": "5a96c1fc-f167-44b9-9020-8f6867537d14",
@@ -43,7 +14,7 @@
         "server_name": "finland02.azotvpn.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -57,7 +28,31 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04",
+      "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "87.228.92.114",
+      "server_port": 25481,
+      "uuid": "68c3d665-b2b5-4ffb-9f37-9f3d8c47324d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E",
+          "short_id": "3b84fc70657725af"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "8cb5baa18cd7"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
       "server": "151.241.137.132",
       "server_port": 443,
       "uuid": "5786d86f-7731-4174-b1a3-84297e54b015",
@@ -77,63 +72,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 05",
-      "server": "36a466g.fi1.h1clayd.click",
-      "server_port": 443,
-      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
-      "tls": {
-        "enabled": true,
-        "server_name": "36a466g.fi1.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
-          "short_id": "b3c9d0c6bdd114a6"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "0adb9638509b"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 06",
-      "server": "46.243.235.219",
-      "server_port": 6443,
-      "uuid": "d1004cfe-c279-e865-d865-71964dbdf85d",
-      "tls": {
-        "enabled": true,
-        "server_name": "viksa.subsvdragontoo.online",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "viksa.subsvdragontoo.online"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03",
-        "🇫🇮 芬兰 (Finland) 04",
-        "🇫🇮 芬兰 (Finland) 05",
-        "🇫🇮 芬兰 (Finland) 06"
+        "🇫🇮 芬兰 (Finland) 03"
       ]
     },
     {
@@ -142,10 +87,7 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03",
-        "🇫🇮 芬兰 (Finland) 04",
-        "🇫🇮 芬兰 (Finland) 05",
-        "🇫🇮 芬兰 (Finland) 06"
+        "🇫🇮 芬兰 (Finland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

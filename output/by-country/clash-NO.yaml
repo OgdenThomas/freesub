@@ -4,25 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01
-  server: 5.254.51.108
-  port: 9443
+- name: 🇳🇴 挪威 (Norway) 01 R40
+  server: 185.213.23.55
+  port: 16619
   udp: true
-  type: hysteria2
-  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
-  sni: keyhop-voxility-at.dynuddns.com
-  skip-cert-verify: false
+  type: ss
+  cipher: aes-128-gcm
+  password: 813114095aea40ebb7ac00967a9e3ca7
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01
+  - 🇳🇴 挪威 (Norway) 01 R40
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01
+  - 🇳🇴 挪威 (Norway) 01 R40
 rules:
 - MATCH,PROXIES

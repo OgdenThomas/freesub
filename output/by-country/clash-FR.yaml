@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 02
   server: 185.114.72.31
   port: 2053
   udp: true
@@ -15,19 +26,8 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 02
-  server: 5.253.189.238
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 - name: 🇫🇷 法国 (France) 03
-  server: 193.239.160.134
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -37,23 +37,20 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 04 R48
-  server: 172.67.190.248
-  port: 8443
+- name: 🇫🇷 法国 (France) 04 R44
+  server: 7q4eiwcseu-193708596-direct.rahbarii.com
+  port: 443
   udp: true
   type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  uuid: 7q4eiwcseu
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.large-files.info
+  servername: 7q4eiwcseu-193708596-direct.rahbarii.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
-    headers:
-      Host: www.large-files.info
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 05
-  server: 5.78.92.27
-  port: 8443
+  server: 85.31.102.163
+  port: 443
   udp: true
   type: trojan
   password: humanity
@@ -70,7 +67,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R48
+  - 🇫🇷 法国 (France) 04 R44
   - 🇫🇷 法国 (France) 05
 - name: AUTO
   type: url-test
@@ -80,7 +77,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R48
+  - 🇫🇷 法国 (France) 04 R44
   - 🇫🇷 法国 (France) 05
 rules:
 - MATCH,PROXIES

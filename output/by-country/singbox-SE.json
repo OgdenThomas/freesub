@@ -4,23 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇸🇪 瑞典 (Sweden) 01",
-      "server": "sweedenqfds777.qcloud.surf",
-      "server_port": 21223,
-      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
-      "tls": {
-        "enabled": true,
-        "server_name": "sweedenqfds777.qcloud.surf",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 02",
+      "tag": "🇸🇪 瑞典 (Sweden) 01",
       "server": "62.60.159.81",
       "server_port": 2053,
       "uuid": "fc00adfb-232a-46ce-8b93-0c70e516aa8a",
@@ -29,7 +14,7 @@
         "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -43,43 +28,18 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03",
-      "server": "se3.h1cloud.net",
-      "server_port": 25119,
-      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4",
-          "short_id": "10f517"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01",
-        "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01",
-        "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

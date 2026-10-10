@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
-  udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: sweedenqfds777.qcloud.surf
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 02
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -23,38 +15,21 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 03
-  server: se3.h1cloud.net
-  port: 25119
-  udp: true
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-  servername: www.samsung.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
 rules:
 - MATCH,PROXIES

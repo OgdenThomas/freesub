@@ -4,9 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21022
+- name: 🇹🇼 中国台湾 (Taiwan) 01
+  server: dog-tw.kunlun01dns.com
+  port: 21037
   udp: true
   type: vmess
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
@@ -17,12 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01
 rules:
 - MATCH,PROXIES

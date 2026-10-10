@@ -19,12 +19,6 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇹🇷 土耳其 (Turkey) 02
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 03
   server: 78.135.73.47
   port: 443
   udp: true
@@ -36,7 +30,7 @@ proxies:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +38,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +45,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

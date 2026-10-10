@@ -4,25 +4,45 @@
   },
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 01",
+      "server": "138.197.141.58",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 01 R61",
-      "server": "milo.rubinaz.xyz",
+      "tag": "🇨🇦 加拿大 (Canada) 02 R61",
+      "server": "212.74.39.188",
       "server_port": 8080,
       "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 加拿大 (Canada) 03 R61",
+      "server": "ca225.vpnbook.com",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e5c65ph"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 R61"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R61",
+        "🇨🇦 加拿大 (Canada) 03 R61"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 R61"
+        "🇨🇦 加拿大 (Canada) 01",
+        "🇨🇦 加拿大 (Canada) 02 R61",
+        "🇨🇦 加拿大 (Canada) 03 R61"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

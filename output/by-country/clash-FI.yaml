@@ -5,26 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.149.114.171
-  port: 777
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: van2.ragnarok-it.xyz
-  port: 8446
-  udp: true
-  type: vless
-  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
-    short-id: 7bac4b112d30d1
-  servername: amd.com
-  client-fingerprint: edge
-- name: 🇫🇮 芬兰 (Finland) 03
   server: finland02.azotvpn.xyz
   port: 8443
   udp: true
@@ -35,11 +15,26 @@ proxies:
     public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
     short-id: 07f508fe5d2355d3
   servername: finland02.azotvpn.xyz
-  client-fingerprint: random
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 04
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 87.228.92.114
+  port: 25481
+  udp: true
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E
+    short-id: 3b84fc70657725af
+  servername: www.bing.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 8cb5baa18cd7
+- name: 🇫🇮 芬兰 (Finland) 03
   server: 151.241.137.132
   port: 443
   udp: true
@@ -51,36 +46,6 @@ proxies:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: 36a466g.fi1.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
-  tls: true
-  reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
-- name: 🇫🇮 芬兰 (Finland) 06
-  server: 46.243.235.219
-  port: 6443
-  udp: true
-  type: vless
-  uuid: d1004cfe-c279-e865-d865-71964dbdf85d
-  tls: true
-  servername: viksa.subsvdragontoo.online
-  skip-cert-verify: false
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: viksa.subsvdragontoo.online
 proxy-groups:
 - name: PROXIES
   type: select
@@ -89,9 +54,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -100,8 +62,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
 rules:
 - MATCH,PROXIES

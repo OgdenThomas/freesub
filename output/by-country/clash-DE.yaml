@@ -5,32 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: 104.19.1.115
-  port: 443
-  udp: true
-  type: vless
-  uuid: e285fb9b-ce0a-45ea-84da-4ad64cacd216
-  tls: true
-  servername: apP-874a55-219AFC.rEigNsskY2.WORKerS.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vl/dOH03263y00uTucKhyn?ed
-    headers:
-      Host: app-874a55-219afc.reignssky2.workers.dev
-- name: 🇩🇪 德国 (Germany) 02
-  server: mci.amir12.ir
-  port: 1222
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: www.forvo.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 03
   server: 178.17.57.33
   port: 8444
   udp: true
@@ -41,20 +15,33 @@ proxies:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
     short-id: 457fab2ac885dbe0
   servername: github.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇩🇪 德国 (Germany) 04
-  server: cuddly-sheepdog.rooster465.autos
+- name: 🇩🇪 德国 (Germany) 02
+  server: 178.105.168.171
+  port: 2110
+  udp: true
+  type: vmess
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+  alterId: 0
+  cipher: auto
+- name: 🇩🇪 德国 (Germany) 03
+  server: 82.118.19.153
   port: 443
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: cuddly-sheepdog.rooster465.autos
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 05
-  server: 2.27.69.117
+  type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 04
+  server: 2.27.69.128
   port: 443
   udp: true
   type: vless
@@ -62,23 +49,32 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
-    short-id: 123c2bff
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
   servername: addons.mozilla.org
   client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 05
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  type: vmess
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
 - name: 🇩🇪 德国 (Germany) 06
-  server: 163.245.43.50
+  server: 31.70.111.146
   port: 443
   udp: true
   type: vless
-  uuid: 203d434a-2a92-45df-8973-ca80434ecf73
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
   tls: true
-  servername: se-twitch.global-cdn.org
-  skip-cert-verify: false
+  reality-opts:
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
+  servername: www.apple.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: content.v1.Feed
 - name: 🇩🇪 德国 (Germany) 07
   server: 168.119.155.195
   port: 2112
@@ -92,6 +88,19 @@ proxies:
   servername: www3.donyumvps.tr
   client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 08
+  server: cdn-de.bulkavpn.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
+    short-id: c885e8f8
+  servername: cdn-de.bulkavpn.top
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 09
   server: 189.24.82.195
   port: 443
   udp: true
@@ -108,7 +117,15 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇩🇪 德国 (Germany) 09
+- name: 🇩🇪 德国 (Germany) 10
+  server: lm10.ehsanazizi-speed-server.com
+  port: 2127
+  udp: true
+  type: trojan
+  password: zgRfB1MMJDJ65rwKSnGCZuzLpTiUSfgzHmTb26ye7mM=
+  sni: lm10.ehsanazizi-speed-server.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 11
   server: ge-s-1.pythonmakemigreat.wiki
   port: 443
   udp: true
@@ -121,116 +138,15 @@ proxies:
     short-id: 2c9a2790ad5900b2
   servername: ge-s-1.pythonmakemigreat.wiki
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 10
-  server: 91.107.169.224
-  port: 80
-  udp: true
-  type: vmess
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-- name: 🇩🇪 德国 (Germany) 11
-  server: cdn-de.bulkavpn.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
-    short-id: c885e8f8
-  servername: cdn-de.bulkavpn.top
-  client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 12
-  server: 2.27.69.128
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
-    short-id: e696e744
-  servername: addons.mozilla.org
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 13
-  server: 31.70.111.146
-  port: 443
-  udp: true
-  type: vless
-  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
-    short-id: d7de3a6ff4018957
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 14
-  server: 82.118.19.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
-    short-id: 670ed9f350bd8ee0
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 15
-  server: 212.100.171.154
-  port: 443
-  udp: true
-  type: vless
-  uuid: a5ce10af-5e95-4eb3-ab87-bf4f95cb059b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8u8r2iWMt8Isz2ZNRbn3g4cfldhcePRB-1hxGYLTnSg
-    short-id: aa6582cf25e243ce
-  servername: www.google.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 16
-  server: 45.32.152.194
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2b5798ed-8acc-57fa-ad1a-e378ab143a43
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4O9OGLb8X8wUSx1mWlSG67kRZk7Jey4-MVyt8tzaNFk
-    short-id: 17d65a607618697d
-  servername: www.vimeo.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 17 R54
-  server: 199.232.78.159
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5b44c4dc-3b6b-4e61-96fa-6e89b349e6c4
-  tls: true
-  servername: safa.fastly.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pannn1.global.ssl.fastly.net
-- name: 🇩🇪 德国 (Germany) 18
-  server: 3.75.93.113
+  server: actual-squid.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: meet-goshawk.rooster465.autos
+  sni: actual-squid.rooster465.autos
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 19
+- name: 🇩🇪 德国 (Germany) 13
   server: defrnode.xyy123.bid
   port: 443
   udp: true
@@ -243,7 +159,66 @@ proxies:
     short-id: 0fa4a0e2493392
   servername: p-y3-www-amazon-com-kalias.amazon.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 20
+- name: 🇩🇪 德国 (Germany) 14
+  server: meet-goshawk.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: meet-goshawk.rooster465.autos
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 15
+  server: 2.27.69.117
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
+    short-id: 123c2bff
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+- name: 🇩🇪 德国 (Germany) 16
+  server: cuddly-sheepdog.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: cuddly-sheepdog.rooster465.autos
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 17
+  server: 65.109.188.155
+  port: 443
+  udp: true
+  type: vless
+  uuid: a95c18d0-1b39-4bc7-8521-b62b5ab3f3f7
+  tls: true
+  servername: marz.zovip2.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /gropcdn
+    headers:
+      Host: marz.zovip2.ir
+- name: 🇩🇪 德国 (Germany) 18
+  server: fun.zovip2.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: a95c18d0-1b39-4bc7-8521-b62b5ab3f3f7
+  tls: true
+  servername: toping.zovip2.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /gropcdn
+    headers:
+      Host: toping.zovip2.ir
+- name: 🇩🇪 德国 (Germany) 19
   server: germany02.azotvpn.xyz
   port: 8443
   udp: true
@@ -258,28 +233,13 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
-- name: 🇩🇪 德国 (Germany) 21
-  server: 5.78.83.177
+- name: 🇩🇪 德国 (Germany) 20
+  server: dehy.bbobr.win
   port: 443
   udp: true
-  type: vless
-  uuid: a95c18d0-1b39-4bc7-8521-b62b5ab3f3f7
-  tls: true
-  servername: marz.zovip2.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /gropcdn
-    headers:
-      Host: marz.zovip2.ir
-- name: 🇩🇪 德国 (Germany) 22
-  server: qcloudge1.exitvpn.shop
-  port: 20270
-  udp: true
   type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: qcloudge1.exitvpn.shop
+  password: 267b3a79-81f2-42ac-a409-c23b05b6329d
+  sni: dehy.bbobr.win
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -302,12 +262,10 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
-  - 🇩🇪 德国 (Germany) 17 R54
+  - 🇩🇪 德国 (Germany) 17
   - 🇩🇪 德国 (Germany) 18
   - 🇩🇪 德国 (Germany) 19
   - 🇩🇪 德国 (Germany) 20
-  - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -329,11 +287,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
-  - 🇩🇪 德国 (Germany) 17 R54
+  - 🇩🇪 德国 (Germany) 17
   - 🇩🇪 德国 (Germany) 18
   - 🇩🇪 德国 (Germany) 19
   - 🇩🇪 德国 (Germany) 20
-  - 🇩🇪 德国 (Germany) 21
-  - 🇩🇪 德国 (Germany) 22
 rules:
 - MATCH,PROXIES

@@ -5,8 +5,29 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01",
-      "server": "179.255.191.86",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01 R47",
+      "server": "45.90.59.15",
+      "server_port": 443,
+      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
+          "short_id": "19253fae84102271"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02",
+      "server": "dobro.ali-bard.online",
       "server_port": 443,
       "uuid": "12e95f93-443c-45f0-9a2a-5b318b9124cf",
       "flow": "xtls-rprx-vision",
@@ -29,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01"
+        "🇨🇭 瑞士 (Switzerland) 01 R47",
+        "🇨🇭 瑞士 (Switzerland) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01"
+        "🇨🇭 瑞士 (Switzerland) 01 R47",
+        "🇨🇭 瑞士 (Switzerland) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

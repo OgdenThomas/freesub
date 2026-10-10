@@ -20,34 +20,13 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 194.87.196.107
-  port: 40440
+  server: 194.38.11.86
+  port: 65443
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: 4938e975724d0ed1
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: edge.cloudtechone.org
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5036de9b-1a18-40e2-97f6-9cbb4a4753e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
-    short-id: f93c9d5127e622e4
-  servername: edge.cloudtechone.org
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: msk.frkn.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 157.22.240.206
   port: 28152
   udp: true
@@ -55,7 +34,7 @@ proxies:
   password: 8bd04756-3beb-4348-82c9-d35453df50ce
   sni: alb1337.zaebalsanoproxyklinus.lol
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 06
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: 153.80.241.206
   port: 8444
   udp: true
@@ -69,20 +48,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 07
-  server: ru-1-2.unturned-rust-dead.lol
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: edge.cloudtechone.org
   port: 443
   udp: true
   type: vless
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  uuid: 5036de9b-1a18-40e2-97f6-9cbb4a4753e4
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  servername: ru-1-2.unturned-rust-dead.lol
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ru-api
+    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
+    short-id: f93c9d5127e622e4
+  servername: edge.cloudtechone.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -93,8 +71,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -105,7 +81,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
 rules:
 - MATCH,PROXIES

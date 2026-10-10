@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16112
+  server: 156.224.77.171
+  port: 9443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: safari
 - name: 🇭🇰 中国香港 (Hong Kong) 02
   server: 82.29.36.250
   port: 443
@@ -24,32 +29,23 @@ proxies:
     public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
     short-id: 09353d6dc5b789
   servername: aws.amazon.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 156.224.77.171
-  port: 9443
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16113
   udp: true
-  type: vless
-  uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  servername: www.amazon.com
-  client-fingerprint: random
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: t4.qifei.app
-  port: 443
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16114
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: s3.ap-east-1.amazonaws.com
-  client-fingerprint: random
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 05
   server: yg1.ygkkk.dpdns.org
   port: 443
@@ -66,6 +62,22 @@ proxies:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 06
+  server: 2.27.109.179
+  port: 45464
+  udp: true
+  type: trojan
+  password: XuMweB2PWs
+  sni: 2.27.109.179.sslip.io
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 07
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16116
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,6 +88,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -86,5 +100,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 03
   - 🇭🇰 中国香港 (Hong Kong) 04
   - 🇭🇰 中国香港 (Hong Kong) 05
+  - 🇭🇰 中国香港 (Hong Kong) 06
+  - 🇭🇰 中国香港 (Hong Kong) 07
 rules:
 - MATCH,PROXIES

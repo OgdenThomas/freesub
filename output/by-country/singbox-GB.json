@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 R47",
-      "server": "78.129.252.65",
-      "server_port": 17096,
-      "method": "aes-128-gcm",
-      "password": "7c55c080c3949e03f1a6a559a9851c68"
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02",
+      "tag": "🇬🇧 英国 (United Kingdom) 01",
       "server": "23.81.34.204",
       "server_port": 443,
       "uuid": "99955907-9070-46f0-a200-9c7a0b9d74fe",
@@ -34,7 +26,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
       "server": "95.85.224.51",
       "server_port": 443,
       "uuid": "342ab7e4-5a89-0001-8809-304120d4aa83",
@@ -54,21 +46,32 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇬🇧 英国 (United Kingdom) 04",
-      "server": "gb.tronsg.com",
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03",
+      "server": "5.199.0.226",
       "server_port": 443,
-      "password": "Trojan@82164024",
+      "uuid": "b0a100ee-c397-43f2-bdae-2adfb7a0d4e5",
       "tls": {
         "enabled": true,
-        "server_name": "gb.tronsg.com",
-        "insecure": false
+        "server_name": "rnxq-1lpi3m.linmeisoft.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/b0a100ee-c397-43f2-bdae-2adfb7a0d4e5",
+        "headers": {
+          "Host": "rnxq-1lpi3m.linmeisoft.com"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05",
-      "server": "sql.popmintxo.cc",
+      "tag": "🇬🇧 英国 (United Kingdom) 04",
+      "server": "104.238.2.82",
       "server_port": 443,
       "uuid": "d806a58b-33aa-42e0-b170-395e49c16b37",
       "flow": "xtls-rprx-vision",
@@ -91,22 +94,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 R47",
+        "🇬🇧 英国 (United Kingdom) 01",
         "🇬🇧 英国 (United Kingdom) 02",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04",
-        "🇬🇧 英国 (United Kingdom) 05"
+        "🇬🇧 英国 (United Kingdom) 04"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 R47",
+        "🇬🇧 英国 (United Kingdom) 01",
         "🇬🇧 英国 (United Kingdom) 02",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04",
-        "🇬🇧 英国 (United Kingdom) 05"
+        "🇬🇧 英国 (United Kingdom) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

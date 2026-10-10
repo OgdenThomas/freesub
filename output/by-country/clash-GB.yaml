@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R47
-  server: 78.129.252.65
-  port: 17096
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 7c55c080c3949e03f1a6a559a9851c68
-- name: 🇬🇧 英国 (United Kingdom) 02
+- name: 🇬🇧 英国 (United Kingdom) 01
   server: 23.81.34.204
   port: 443
   udp: true
@@ -24,7 +17,7 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 03
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 95.85.224.51
   port: 443
   udp: true
@@ -37,16 +30,23 @@ proxies:
     short-id: a696de84963656de
   servername: max.ru
   client-fingerprint: qq
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: gb.tronsg.com
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 5.199.0.226
   port: 443
   udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: gb.tronsg.com
+  type: vless
+  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+  tls: true
+  servername: rnxq-1lpi3m.linmeisoft.com
   skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: sql.popmintxo.cc
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+    headers:
+      Host: rnxq-1lpi3m.linmeisoft.com
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 104.238.2.82
   port: 443
   udp: true
   type: vless
@@ -63,20 +63,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R47
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R47
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
 rules:
 - MATCH,PROXIES
