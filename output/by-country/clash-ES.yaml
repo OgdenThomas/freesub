@@ -17,17 +17,48 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 02
+  server: es3.h1cloud.net
+  port: 25136
+  udp: true
+  type: vless
+  uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
+  tls: true
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+    short-id: f78838fbd85e59ae
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 03
+  server: 185.220.249.44
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 6d1590ed-4c0f-4bbc-931d-2431737615dd
+  tls: true
+  servername: 185.220.249.44
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws-cdn1-vless
+    headers:
+      Host: es.fastmirror-labs.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

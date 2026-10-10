@@ -25,18 +25,65 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 02",
+      "server": "es3.h1cloud.net",
+      "server_port": 25136,
+      "uuid": "c1c13ef7-affa-47e1-8967-25cc67679c10",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w",
+          "short_id": "f78838fbd85e59ae"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 03",
+      "server": "185.220.249.44",
+      "server_port": 2053,
+      "uuid": "6d1590ed-4c0f-4bbc-931d-2431737615dd",
+      "tls": {
+        "enabled": true,
+        "server_name": "185.220.249.44",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-cdn1-vless",
+        "headers": {
+          "Host": "es.fastmirror-labs.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01"
+        "🇪🇸 西班牙 (Spain) 01",
+        "🇪🇸 西班牙 (Spain) 02",
+        "🇪🇸 西班牙 (Spain) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01"
+        "🇪🇸 西班牙 (Spain) 01",
+        "🇪🇸 西班牙 (Spain) 02",
+        "🇪🇸 西班牙 (Spain) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

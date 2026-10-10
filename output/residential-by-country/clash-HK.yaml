@@ -5,19 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
-  server: 61.18.134.10
+  server: t4.qifei.app
   port: 443
   udp: true
   type: vless
-  uuid: e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  flow: xtls-rprx-vision
   tls: true
-  servername: mswo-gy191m.zhiyuantech.cloud
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
-    headers:
-      Host: mswo-gy191m.zhiyuantech.cloud
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  servername: s3.ap-east-1.amazonaws.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
