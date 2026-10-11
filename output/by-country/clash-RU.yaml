@@ -20,21 +20,21 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 194.38.11.86
-  port: 65443
+  server: 188.42.145.123
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 157.22.240.206
-  port: 28152
-  udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: alb1337.zaebalsanoproxyklinus.lol
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  tls: true
+  servername: notls.lukongtou.eu.org
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 04
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 153.80.241.206
   port: 8444
   udp: true
@@ -48,6 +48,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 217.149.30.73
+  port: 8443
+  udp: true
+  type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: p87u9cOh91BaXsKS-HoCoOUXxHcOwkM6ByTWmz_6b2Y
+    short-id: 0da7e14db353e7d0
+  servername: time.nztvpn.com
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 05
   server: edge.cloudtechone.org
   port: 443
@@ -61,6 +74,28 @@ proxies:
     short-id: f93c9d5127e622e4
   servername: edge.cloudtechone.org
   client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: 157.22.240.206
+  port: 28152
+  udp: true
+  type: hysteria2
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: alb1337.zaebalsanoproxyklinus.lol
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 07
+  server: 93.188.184.150
+  port: 443
+  udp: true
+  type: vless
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  tls: true
+  reality-opts:
+    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
+  servername: ru-1-2.unturned-rust-dead.lol
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ru-api
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,6 +106,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,5 +118,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 rules:
 - MATCH,PROXIES

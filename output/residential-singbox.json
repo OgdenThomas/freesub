@@ -4,12 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21022,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
+      "server": "p141.panda001.net",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
     },
     {
       "type": "vless",
@@ -32,20 +32,43 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽)",
+      "server": "ali-hk.qrfly.top",
+      "server_port": 10102,
+      "uuid": "bcfbb19f-5b0e-4862-a77b-904fffd0b513",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kVpVhfT5_4__Sxj4i0S2DOQKKfK549rgy2HWP9QU4iw",
+          "short_id": "db6c60f1"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

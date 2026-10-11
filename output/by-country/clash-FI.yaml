@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: finland02.azotvpn.xyz
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 5a96c1fc-f167-44b9-9020-8f6867537d14
-  tls: true
-  reality-opts:
-    public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
-    short-id: 07f508fe5d2355d3
-  servername: finland02.azotvpn.xyz
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 87.228.92.114
   port: 25481
   udp: true
@@ -34,18 +19,94 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 8cb5baa18cd7
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 151.241.137.132
-  port: 443
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 170.168.4.59
+  port: 17170
   udp: true
   type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  uuid: 3eec23c1-2a0d-4d53-afa5-62745a1f5ffe
+  tls: true
+  servername: northerntrail.gazette.help
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trail-grpc
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 83.220.175.235
+  port: 2096
+  udp: true
+  type: vless
+  uuid: f13b36ac-3765-4458-8a4d-08575038c463
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: id.vk.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: van2.ragnarok-it.xyz
+  port: 8446
+  udp: true
+  type: vless
+  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
+    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
+    short-id: 7bac4b112d30d1
+  servername: amd.com
+  client-fingerprint: edge
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: fi.pythonsetupbib.online
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
+    short-id: bdf5852d1423e694
+  servername: fi.pythonsetupbib.online
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 06
+  server: 177.3.218.191
+  port: 20326
+  udp: true
+  type: hysteria2
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: finkawwwbroy5.qcloud.surf
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 07
+  server: specific3.kandnet.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
+  servername: specific3.kandnet.com
   client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 08
+  server: 194.226.121.119
+  port: 443
+  udp: true
+  type: vless
+  uuid: ec6f8131-7a5d-4117-9627-6fb2b39ae0da
+  tls: true
+  servername: drive.korroh.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /remote.php/dav/89f7661a0011ce46
+    headers:
+      Host: drive.korroh.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +115,11 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
+  - 🇫🇮 芬兰 (Finland) 07
+  - 🇫🇮 芬兰 (Finland) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -62,5 +128,10 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
+  - 🇫🇮 芬兰 (Finland) 06
+  - 🇫🇮 芬兰 (Finland) 07
+  - 🇫🇮 芬兰 (Finland) 08
 rules:
 - MATCH,PROXIES
