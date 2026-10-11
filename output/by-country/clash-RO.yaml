@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 162.249.125.133
-  port: 443
-  udp: true
-  type: hysteria2
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: 46.28.67.55
   port: 443
   udp: true
@@ -27,7 +17,7 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 03
+- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: 95.133.247.98
   port: 995
   udp: true
@@ -42,6 +32,19 @@ proxies:
     path: /api/v1
     headers:
       Host: love-paris.roxa.org
+- name: 🇷🇴 罗马尼亚 (Romania) 03
+  server: ro1.gigobingo.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3e0c1fbf-467a-49d7-abd2-3a158628f3d0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ
+    short-id: ef7c4e4302bd52d7
+  servername: ro1.gigobingo.ru
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select

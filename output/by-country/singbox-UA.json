@@ -5,22 +5,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 01",
-      "server": "46.28.71.247",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01",
+      "server": "45.158.185.172",
       "server_port": 443,
-      "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
-      "flow": "xtls-rprx-vision",
+      "uuid": "49e4b91a-bd15-4e54-9b51-41a3380afb51",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
-          "short_id": "0dfc23fe80778c00"
+        "server_name": "z5n1.vpnpolar.online",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/beeline",
+        "headers": {
+          "Host": "z5n1.vpnpolar.online"
         }
       }
     },
@@ -29,14 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇸 西班牙 (Spain) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇸 西班牙 (Spain) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,32 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
-  server: www.speedtest.net
+- name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: 45.158.185.172
   port: 443
   udp: true
   type: vless
-  uuid: 3423809a-08e5-4b93-bd76-c6cdcbfd9b52
+  uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51
   tls: true
-  servername: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
+  servername: z5n1.vpnpolar.online
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/qAuPpP8UsUmtA5NiXmiGs
+    path: /beeline
     headers:
-      Host: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
+      Host: z5n1.vpnpolar.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 rules:
 - MATCH,PROXIES

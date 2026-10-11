@@ -5,13 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.149.114.171
-  port: 777
+  server: edge10.cyrionflare.com
+  port: 2052
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 - name: 🇫🇮 芬兰 (Finland) 02
+  server: 45.133.151.188
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  tls: true
+  reality-opts:
+    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
+    short-id: b3c9d0c6bdd114a6
+  servername: 36a466g.fi1.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 0adb9638509b
+- name: 🇫🇮 芬兰 (Finland) 03
   server: 87.228.92.114
   port: 25481
   udp: true
@@ -26,64 +40,14 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 8cb5baa18cd7
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: feow.nomush.ir
-  port: 11497
-  udp: true
-  type: vless
-  uuid: 2c5f2d6e-d683-49f7-a12b-a95460b90a92
-  tls: true
-  reality-opts:
-    public-key: J3DhtzId04tRrOF9HmIxpv6QOGY1g6j2wJ_UtVKmimk
-    short-id: b0063cec752e829a
-  servername: dynu.com
-  client-fingerprint: qq
 - name: 🇫🇮 芬兰 (Finland) 04
   server: finkawwwbroy5.qcloud.surf
   port: 20326
   udp: true
   type: hysteria2
-  password: 408c51e8-9246-483d-ba73-34ab4e202eb9
+  password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
   sni: finkawwwbroy5.qcloud.surf
   skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: feow.nomush.ir
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: K63q-WhHdJoC_AIxT6E4r_IIuGIb6CuV
-- name: 🇫🇮 芬兰 (Finland) 06
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇫🇮 芬兰 (Finland) 07
-  server: fi.pythonsetupbib.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
-    short-id: bdf5852d1423e694
-  servername: fi.pythonsetupbib.online
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 08
-  server: specific3.kandnet.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
-  servername: specific3.kandnet.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -93,10 +57,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
-  - 🇫🇮 芬兰 (Finland) 07
-  - 🇫🇮 芬兰 (Finland) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -106,9 +66,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
-  - 🇫🇮 芬兰 (Finland) 07
-  - 🇫🇮 芬兰 (Finland) 08
 rules:
 - MATCH,PROXIES

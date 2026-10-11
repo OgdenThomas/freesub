@@ -4,45 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01
-  server: dobro.ali-bard.online
+- name: 🇨🇭 瑞士 (Switzerland) 01 R47
+  server: 45.90.59.15
   port: 443
   udp: true
   type: vless
-  uuid: 12e95f93-443c-45f0-9a2a-5b318b9124cf
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: dobro.ali-bard.online
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 81.94.148.104
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: id.vk.com
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01
-  - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 01 R47
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01
-  - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 01 R47
 rules:
 - MATCH,PROXIES
