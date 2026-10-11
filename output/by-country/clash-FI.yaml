@@ -5,26 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
+  server: 170.168.4.59
+  port: 17170
+  udp: true
+  type: vless
+  uuid: 3eec23c1-2a0d-4d53-afa5-62745a1f5ffe
+  tls: true
+  servername: northerntrail.gazette.help
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trail-grpc
+- name: 🇫🇮 芬兰 (Finland) 02
   server: edge10.cyrionflare.com
   port: 2052
   udp: true
   type: vless
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 45.133.151.188
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
-  tls: true
-  reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
 - name: 🇫🇮 芬兰 (Finland) 03
   server: 87.228.92.114
   port: 25481
@@ -41,13 +39,18 @@ proxies:
   grpc-opts:
     grpc-service-name: 8cb5baa18cd7
 - name: 🇫🇮 芬兰 (Finland) 04
-  server: finkawwwbroy5.qcloud.surf
-  port: 20326
+  server: fi.pythonsetupbib.online
+  port: 443
   udp: true
-  type: hysteria2
-  password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
-  sni: finkawwwbroy5.qcloud.surf
-  skip-cert-verify: false
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
+    short-id: bdf5852d1423e694
+  servername: fi.pythonsetupbib.online
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

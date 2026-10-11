@@ -4,34 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  server: tumspr.azad0namah.ir
-  port: 5566
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-128-gcm
-  password: 8NwabdWBXK1q1QaBhF69rw==:Lzvg7nuGDOIqso68553eNQ==
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21019
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  server: 24864168545164.d6f54hd1j.cc
+  port: 443
   udp: true
   type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
   alterId: 0
   cipher: auto
+  tls: true
+  servername: 24864168545164.d6f54hd1j.cc
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 24864168545164.d6f54hd1j.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES
