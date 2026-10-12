@@ -4,7 +4,50 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+- name: 🇺🇸 美国 (United States) 01 (家宽)
+  server: 162.159.153.42
+  port: 443
+  udp: true
+  type: trojan
+  password: '123456'
+  sni: now-pages-sub-em4.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  server: dog-hk.kunlun01dns.com
+  port: 21018
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16116
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
+  server: dog-hk.kunlun01dns.com
+  port: 21041
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)
+  server: dog-hk.kunlun01dns.com
+  port: 21021
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
   server: 24864168545164.d6f54hd1j.cc
   port: 443
   udp: true
@@ -18,19 +61,45 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🇹🇼 中国台湾 (Taiwan) 07 (家宽)
+  server: 654168416355441.d6f54hd1j.cc
+  port: 443
+  udp: true
+  type: vmess
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: 654168416355441.d6f54hd1j.cc
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
     headers:
-      Host: 24864168545164.d6f54hd1j.cc
+      Host: 654168416355441.d6f54hd1j.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇺🇸 美国 (United States) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
+  - 🇺🇸 美国 (United States) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 06 (家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 07 (家宽)
 rules:
 - MATCH,PROXIES

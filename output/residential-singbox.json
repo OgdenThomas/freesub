@@ -4,8 +4,66 @@
   },
   "outbounds": [
     {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽)",
+      "server": "162.159.153.42",
+      "server_port": 443,
+      "password": "123456",
+      "tls": {
+        "enabled": true,
+        "server_name": "now-pages-sub-em4.pages.dev",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "now-pages-sub-em4.pages.dev"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21018,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16116,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21041,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21021,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 06 (家宽)",
       "server": "24864168545164.d6f54hd1j.cc",
       "server_port": 443,
       "uuid": "ecdc303d-bcbf-4129-bc02-dd67703f7081",
@@ -17,9 +75,26 @@
       },
       "transport": {
         "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽)",
+      "server": "654168416355441.d6f54hd1j.cc",
+      "server_port": 443,
+      "uuid": "ecdc303d-bcbf-4129-bc02-dd67703f7081",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "654168416355441.d6f54hd1j.cc",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "24864168545164.d6f54hd1j.cc"
+          "Host": "654168416355441.d6f54hd1j.cc"
         }
       }
     },
@@ -28,14 +103,26 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)"
+        "🇺🇸 美国 (United States) 01 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)"
+        "🇺🇸 美国 (United States) 01 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 05 (移动家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 06 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
