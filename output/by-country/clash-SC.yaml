@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 立陶宛 (Lithuania) 01
-  server: 84.32.109.20
-  port: 443
+- name: 🇸🇨 塞舌尔 (Seychelles) 01
+  server: hk3n.wxgqlfx.vip
+  port: 35193
   udp: true
   type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 3jySGemfaqPZ2vM66Qtzo5SotO3eoRn1FeGaKp6KBQ4
-    short-id: 0da7e14db353e7d0
-  servername: litv.nztvpn.com
-  client-fingerprint: random
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: e8daed2d
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇸🇨 塞舌尔 (Seychelles) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇸🇨 塞舌尔 (Seychelles) 01
 rules:
 - MATCH,PROXIES

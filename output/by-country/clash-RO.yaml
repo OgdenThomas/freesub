@@ -5,45 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 82.152.132.120
+  server: 162.249.125.133
   port: 443
   udp: true
-  type: vless
-  uuid: 3e0c1fbf-467a-49d7-abd2-3a158628f3d0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Aj6Op88j_eYXxoBw095KS_NnKCBm5uwa874uumXdiDQ
-    short-id: ef7c4e4302bd52d7
-  servername: ro1.gigobingo.ru
-  client-fingerprint: firefox
+  type: hysteria2
+  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
+  sni: hy2-new.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: c1b4086fea89914496c7e10967a419216566
 - name: 🇷🇴 罗马尼亚 (Romania) 02
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 03
-  server: herbalromania.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 62610fc6-8333-41f9-9258-08915e4343ab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EMM388R9SzURuXjJiD8vzI8pzGaaTdJM5UvRUAuxEg4
-    short-id: e27ba09622ff673a
-  servername: herbalromania.top
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 04
   server: app-str-53.nexus-infinitus.com
   port: 443
   udp: true
@@ -55,7 +26,7 @@ proxies:
     public-key: gLO2GRqV0iVDmVdytcJLqGyZEB5Swxb-NAOC9AL13UM
     short-id: 344f1f56582dda0f
   servername: assets-str-53.nexus-infinitus.com
-  client-fingerprint: randomized
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,8 +34,6 @@ proxy-groups:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
-  - 🇷🇴 罗马尼亚 (Romania) 03
-  - 🇷🇴 罗马尼亚 (Romania) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -72,7 +41,5 @@ proxy-groups:
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
-  - 🇷🇴 罗马尼亚 (Romania) 03
-  - 🇷🇴 罗马尼亚 (Romania) 04
 rules:
 - MATCH,PROXIES

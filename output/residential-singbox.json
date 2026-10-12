@@ -4,23 +4,12 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽)",
-      "server": "ld.235231.xyz",
-      "server_port": 443,
-      "uuid": "65d3f9b3-d289-4a8e-9c87-90bba156de30",
-      "tls": {
-        "enabled": true,
-        "server_name": "ld.235231.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fp=chrome",
-        "headers": {
-          "Host": "ld.235231.xyz"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
+      "server": "218.237.185.234",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
     },
     {
       "type": "vless",
@@ -32,7 +21,7 @@
     {
       "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽)",
-      "server": "hinet1.2yly.com",
+      "server": "118.167.248.243",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
       "tls": {
@@ -40,7 +29,7 @@
         "server_name": "addons.mozilla.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -50,66 +39,22 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽)",
-      "server": "654168416355441.d6f54hd1j.cc",
-      "server_port": 443,
-      "uuid": "ecdc303d-bcbf-4129-bc02-dd67703f7081",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "654168416355441.d6f54hd1j.cc",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "654168416355441.d6f54hd1j.cc"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽)",
-      "server": "24864168545164.d6f54hd1j.cc",
-      "server_port": 443,
-      "uuid": "ecdc303d-bcbf-4129-bc02-dd67703f7081",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "24864168545164.d6f54hd1j.cc",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "24864168545164.d6f54hd1j.cc"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽)",
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
         "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽)"
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽)",
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
         "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 05 (家宽)"
+        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

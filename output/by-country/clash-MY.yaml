@@ -4,31 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01
-  server: z5n1.vpnpolar.online
+- name: 🇲🇾 马来西亚 (Malaysia) 01 ⚠R
+  server: 66.154.113.180
   port: 443
   udp: true
-  type: vless
-  uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51
+  type: vmess
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: z5n1.vpnpolar.online
+  servername: my.lovehk.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /beeline
+    path: /KualaLumpur1
     headers:
-      Host: z5n1.vpnpolar.online
+      Host: my.lovehk.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇲🇾 马来西亚 (Malaysia) 01 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇲🇾 马来西亚 (Malaysia) 01 ⚠R
 rules:
 - MATCH,PROXIES
