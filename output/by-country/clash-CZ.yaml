@@ -1,0 +1,51 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01
+  server: 188.114.97.3
+  port: 8443
+  udp: true
+  type: vless
+  uuid: a6fd8b83-7926-4b4e-884b-14f64e578815
+  tls: true
+  servername: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl/w47aznWVyUF9g3ciQ6GVv?ed=2560
+    headers:
+      Host: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3423809a-08e5-4b93-bd76-c6cdcbfd9b52
+  tls: true
+  servername: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/qAuPpP8UsUmtA5NiXmiGs
+    headers:
+      Host: bn1jywok-7txq9p7e.fbgbjr7g344b78sqlruz7u621njij.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 02
+rules:
+- MATCH,PROXIES

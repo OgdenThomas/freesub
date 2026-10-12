@@ -5,16 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽)
-  server: 162.159.153.42
+  server: ld.235231.xyz
   port: 443
   udp: true
-  type: trojan
-  password: '123456'
-  sni: now-pages-sub-em4.pages.dev
+  type: vless
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  tls: true
+  servername: ld.235231.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /fp=chrome
+    headers:
+      Host: ld.235231.xyz
 proxy-groups:
 - name: PROXIES
   type: select

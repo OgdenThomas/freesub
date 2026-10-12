@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 185.252.177.216
-  port: 443
-  udp: true
-  type: vless
-  uuid: 616c7b3b-41f4-4038-88c6-d6fedd0ae4a7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs
-    short-id: 9ea74b83f4993ca9
-  servername: est-1.ardesnode.ru
-  client-fingerprint: chrome
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
   server: 13.143.239.81
   port: 443
   udp: true
@@ -31,7 +18,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ee-grpc
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
   server: 185.31.242.61
   port: 443
   udp: true
@@ -43,8 +30,8 @@ proxies:
     public-key: 7mRrVzTchVLWWBru5fCgTvtdkL7lVJ_qRj9HW8Rd8X0
     short-id: 0da7e14db353e7d0
   servername: est.nztvpn.com
-  client-fingerprint: chrome
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04
+  client-fingerprint: random
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03
   server: ee.h1cloud.net
   port: 25895
   udp: true
@@ -55,20 +42,9 @@ proxies:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
   servername: www.samsung.com
-  client-fingerprint: random
-- name: 🇪🇪 爱沙尼亚 (Estonia) 05
-  server: 5.45.120.3
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3bad8c9f-ff41-428b-8ea2-1076b7a16067
-  flow: xtls-rprx-vision
-  tls: true
-  servername: est2.god-sky.com
-  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇪🇪 爱沙尼亚 (Estonia) 06 R56
-  server: 194.26.141.148
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 R56
+  server: 77.72.85.246
   port: 8443
   udp: true
   type: vless
@@ -81,6 +57,19 @@ proxies:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05
+  server: 185.252.177.216
+  port: 443
+  udp: true
+  type: vless
+  uuid: 616c7b3b-41f4-4038-88c6-d6fedd0ae4a7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs
+    short-id: 9ea74b83f4993ca9
+  servername: est-1.ardesnode.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -89,9 +78,8 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
   - 🇪🇪 爱沙尼亚 (Estonia) 03
-  - 🇪🇪 爱沙尼亚 (Estonia) 04
+  - 🇪🇪 爱沙尼亚 (Estonia) 04 R56
   - 🇪🇪 爱沙尼亚 (Estonia) 05
-  - 🇪🇪 爱沙尼亚 (Estonia) 06 R56
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -100,8 +88,7 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
   - 🇪🇪 爱沙尼亚 (Estonia) 03
-  - 🇪🇪 爱沙尼亚 (Estonia) 04
+  - 🇪🇪 爱沙尼亚 (Estonia) 04 R56
   - 🇪🇪 爱沙尼亚 (Estonia) 05
-  - 🇪🇪 爱沙尼亚 (Estonia) 06 R56
 rules:
 - MATCH,PROXIES

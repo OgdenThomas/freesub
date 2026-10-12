@@ -19,32 +19,18 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇹🇷 土耳其 (Turkey) 02
-  server: 78.135.73.47
+  server: trn24.mobileemdad.top
   port: 443
   udp: true
   type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  uuid: 4bab42ab-6370-45d1-86a3-69d2b58cd12c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
-    short-id: f46cd3ea3d1eb72d
-  servername: www.datadoghq.com
+    public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
+    short-id: f88610dd
+  servername: delivery.mp.microsoft.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇹🇷 土耳其 (Turkey) 04
-  server: zfd-boardv2.kunlun01dns.com
-  port: 16272
-  udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,8 +38,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,7 +45,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 rules:
 - MATCH,PROXIES
