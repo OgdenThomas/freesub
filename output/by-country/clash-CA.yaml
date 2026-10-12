@@ -4,28 +4,62 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
-  server: 138.197.141.58
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02 R61
+- name: 🇨🇦 加拿大 (Canada) 01 R60
   server: ca225.vpnbook.com
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e5c65ph
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: 15.223.120.64
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 3.97.11.240
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 04 R61
+- name: 🇨🇦 加拿大 (Canada) 03
+  server: 138.197.141.58
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 64.74.163.67
+  port: 18764
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 4efe1af272e7292139b889f6a63ee071
+- name: 🇨🇦 加拿大 (Canada) 05
+  server: 3.96.202.28
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 06
+  server: 51.79.31.36
+  port: 31146
+  udp: true
+  type: vless
+  uuid: f0466557-2fd5-442e-94cb-12c6b764155e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE
+    short-id: cf4e6f8338
+  servername: play-fe.googleapis.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 07
+  server: 3.99.191.16
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 08 R60
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -36,18 +70,26 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R61
+  - 🇨🇦 加拿大 (Canada) 01 R60
+  - 🇨🇦 加拿大 (Canada) 02
   - 🇨🇦 加拿大 (Canada) 03
-  - 🇨🇦 加拿大 (Canada) 04 R61
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05
+  - 🇨🇦 加拿大 (Canada) 06
+  - 🇨🇦 加拿大 (Canada) 07
+  - 🇨🇦 加拿大 (Canada) 08 R60
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02 R61
+  - 🇨🇦 加拿大 (Canada) 01 R60
+  - 🇨🇦 加拿大 (Canada) 02
   - 🇨🇦 加拿大 (Canada) 03
-  - 🇨🇦 加拿大 (Canada) 04 R61
+  - 🇨🇦 加拿大 (Canada) 04
+  - 🇨🇦 加拿大 (Canada) 05
+  - 🇨🇦 加拿大 (Canada) 06
+  - 🇨🇦 加拿大 (Canada) 07
+  - 🇨🇦 加拿大 (Canada) 08 R60
 rules:
 - MATCH,PROXIES

@@ -4,25 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇱 AL 01
-  server: alb1337.zaebalsanoproxyklinus.lol
-  port: 28152
+- name: 🇦🇷 阿根廷 (Argentina) 01
+  server: mm.good2026.com
+  port: 11182
   udp: true
-  type: hysteria2
-  password: f83ce3c4-07d9-4895-bd14-cb74abbcab37
-  sni: alb1337.zaebalsanoproxyklinus.lol
-  skip-cert-verify: false
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 99234c60-b01a-4d67-889a-cab58ab0061a
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇱 AL 01
+  - 🇦🇷 阿根廷 (Argentina) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇱 AL 01
+  - 🇦🇷 阿根廷 (Argentina) 01
 rules:
 - MATCH,PROXIES

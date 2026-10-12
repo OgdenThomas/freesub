@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
-  udp: true
-  type: hysteria2
-  password: f83ce3c4-07d9-4895-bd14-cb74abbcab37
-  sni: sweedenqfds777.qcloud.surf
-  skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 02
   server: swe.wizard.select
   port: 443
   udp: true
@@ -24,7 +16,43 @@ proxies:
     public-key: Sikc1gu5t_uwitf1xTTChP9tpT_sjY530p2tioHbmz0
     short-id: 3b20e438da99
   servername: swe.wizard.select
-  client-fingerprint: qq
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 62.60.159.81
+  port: 2053
+  udp: true
+  type: vless
+  uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a
+  tls: true
+  reality-opts:
+    public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
+    short-id: d0ea1847066af5a6
+  servername: www.samsung.com
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpce5bb9e71
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: cape.flowzari.info
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6c21cf57-a9a9-4075-ad9f-631152bd911e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5DdSLIpnYjqYTI4-yC-ulr8PGMA8YML_EWdKvOjdinc
+    short-id: 693e339ad3613446
+  servername: cape.flowzari.info
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: sweedenqfds777.qcloud.surf
+  port: 21223
+  udp: true
+  type: hysteria2
+  password: 6656cc0a-5908-4d04-a436-64f5843c0c7a
+  sni: sweedenqfds777.qcloud.surf
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +60,8 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +69,7 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
 rules:
 - MATCH,PROXIES

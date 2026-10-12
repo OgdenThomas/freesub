@@ -5,34 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 23.81.36.65
-  port: 443
-  udp: true
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: UcFVpzbYTy8Iym6ZnCAtLQK-MeRg6wZuyni4xEOKG18
-    short-id: 0da7e14db353e7d0
-  servername: uk.nztvpn.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 13.40.25.145
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: gb.tronsg.com
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: gb.tronsg.com
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 04
   server: 23.81.34.204
   port: 443
   udp: true
@@ -45,20 +17,26 @@ proxies:
     short-id: b19b017d6f453873
   servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 104.238.2.82
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 13.40.25.145
   port: 443
   udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 23.81.36.148
+  port: 1222
+  udp: true
   type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
-  flow: xtls-rprx-vision
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
   tls: true
   reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: b558b9305a0b
-  servername: www.microsoft.com
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: www.forvo.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 06
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 95.85.224.51
   port: 443
   udp: true
@@ -70,7 +48,7 @@ proxies:
     public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
     short-id: a696de84963656de
   servername: max.ru
-  client-fingerprint: qq
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,8 +58,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,7 +67,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
 rules:
 - MATCH,PROXIES

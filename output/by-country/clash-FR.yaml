@@ -5,34 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 88.151.197.213
+  server: www.speedtest.net
   port: 443
   udp: true
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 7gPPAdSE90GC5DWQhNH3-7oAHulpWz6iN8dIuKfBflc
-    short-id: 0da7e14db353e7d0
-  servername: frafra.nztvpn.com
-  client-fingerprint: random
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 法国 (France) 02
-  server: pl134.vpnbook.com
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 03
   server: pl140.vpnbook.com
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e5c65ph
-- name: 🇫🇷 法国 (France) 04 R44
-  server: 7q4eiwcseu-193708596-direct.rahbarii.com
+- name: 🇫🇷 法国 (France) 03 R43
+  server: 193.70.85.96
   port: 443
   udp: true
   type: vless
@@ -41,6 +32,14 @@ proxies:
   tls: true
   servername: 7q4eiwcseu-193708596-direct.rahbarii.com
   skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 04
+  server: pl134.vpnbook.com
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
 - name: 🇫🇷 法国 (France) 05
   server: 185.114.72.31
   port: 2053
@@ -53,7 +52,7 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 06
-  server: 85.31.102.163
+  server: 185.255.179.166
   port: 443
   udp: true
   type: trojan
@@ -64,20 +63,27 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 07
-  server: 172.67.118.45
-  port: 2053
+  server: 155.103.71.142
+  port: 443
   udp: true
-  type: vless
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-  tls: true
-  servername: fr.api-music-fa.com
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
+    path: /assignment
+- name: 🇫🇷 法国 (France) 08
+  server: 45.87.41.18
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -85,11 +91,12 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R44
+  - 🇫🇷 法国 (France) 03 R43
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -97,10 +104,11 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 R44
+  - 🇫🇷 法国 (France) 03 R43
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES
