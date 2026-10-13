@@ -5,31 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01
-  server: 54.72.130.222
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: adapting-basilisk.rooster465.autos
-  skip-cert-verify: false
-- name: 🇮🇪 爱尔兰 (Ireland) 02
-  server: master-possum.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: master-possum.rooster465.autos
-  skip-cert-verify: false
-- name: 🇮🇪 爱尔兰 (Ireland) 03
-  server: sacred-anemone.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: sacred-anemone.rooster465.autos
-  skip-cert-verify: false
-- name: 🇮🇪 爱尔兰 (Ireland) 04
-  server: loved-shark.rooster465.autos
+  server: 3.253.106.233
   port: 443
   udp: true
   type: trojan
@@ -42,17 +18,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01
-  - 🇮🇪 爱尔兰 (Ireland) 02
-  - 🇮🇪 爱尔兰 (Ireland) 03
-  - 🇮🇪 爱尔兰 (Ireland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01
-  - 🇮🇪 爱尔兰 (Ireland) 02
-  - 🇮🇪 爱尔兰 (Ireland) 03
-  - 🇮🇪 爱尔兰 (Ireland) 04
 rules:
 - MATCH,PROXIES
