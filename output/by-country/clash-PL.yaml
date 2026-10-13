@@ -18,19 +18,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 02
-  server: 177.1.192.72
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
-    short-id: 46455ff0
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03
   server: 144.31.101.196
   port: 33891
   udp: true
@@ -43,19 +30,7 @@ proxies:
     short-id: 5bd7b68ca4c04443
   servername: browser.yandex.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04
-  server: lineartronic-iii.subaru-volga.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
-  tls: true
-  reality-opts:
-    public-key: HGQg7VrNlEhfOEjLR1LNeBZaVJg-J1f4DhxqOp-orjA
-    short-id: 6facda
-  servername: lineartronic-iii.subaru-volga.com
-  client-fingerprint: random
-- name: 🇵🇱 波兰 (Poland) 05
+- name: 🇵🇱 波兰 (Poland) 03
   server: 177.1.192.81
   port: 443
   udp: true
@@ -68,15 +43,15 @@ proxies:
     short-id: 85766a81
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06
-  server: 45.192.12.93
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 144.31.49.47
   port: 443
   udp: true
   type: hysteria2
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   sni: admin.wwwinternetvideo.click
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 07 R43
+- name: 🇵🇱 波兰 (Poland) 05 R43
   server: 54.37.131.126
   port: 80
   udp: true
@@ -89,15 +64,32 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 08
-  server: 2.26.225.89
-  port: 8443
+- name: 🇵🇱 波兰 (Poland) 06
+  server: av513u.sysopnova.art
+  port: 443
   udp: true
   type: vless
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
+  uuid: 3710fc0f-5f0c-4b9c-a5d4-40cb419e943a
+  flow: xtls-rprx-vision
   tls: true
-  servername: pl.flen-vpn.xyz
-  skip-cert-verify: false
+  reality-opts:
+    public-key: WKN5yaRN05O2WdCURXRmS-yBVYaabaFWOvGudX6ohWc
+    short-id: b97e7d4582b6fa6e
+  servername: yandex.ru
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 07
+  server: 87.242.127.113
+  port: 4510
+  udp: true
+  type: vless
+  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM
+    short-id: 2d0c188798bae174
+  servername: 9c99da.usecache.net
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,10 +99,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 05 R43
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07 R43
-  - 🇵🇱 波兰 (Poland) 08
+  - 🇵🇱 波兰 (Poland) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -120,9 +111,8 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 05 R43
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07 R43
-  - 🇵🇱 波兰 (Poland) 08
+  - 🇵🇱 波兰 (Poland) 07
 rules:
 - MATCH,PROXIES
