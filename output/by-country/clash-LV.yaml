@@ -4,7 +4,20 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01
+- name: 🇱🇻 拉脱维亚 (Latvia) 01 R43
+  server: 31.57.106.241
+  port: 443
+  udp: true
+  type: vless
+  uuid: a4801105-c0c7-4cab-87c6-f257ff2afc09
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4SJB--DChFNhmOUz0-BZK2dS3GhZ1yZwMVIhmpobB0o
+    short-id: 44f7c5615039ae1b
+  servername: www.lmt.lv
+  client-fingerprint: firefox
+- name: 🇱🇻 拉脱维亚 (Latvia) 02
   server: 216.173.71.43
   port: 443
   udp: true
@@ -17,28 +30,19 @@ proxies:
     short-id: 0da7e14db353e7d0
   servername: lv.nztvpn.com
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
-  server: api.vofino.ir
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 0e961427-c505-406b-8156-fbd6c1ea2afc
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01 R43
   - 🇱🇻 拉脱维亚 (Latvia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01 R43
   - 🇱🇻 拉脱维亚 (Latvia) 02
 rules:
 - MATCH,PROXIES
