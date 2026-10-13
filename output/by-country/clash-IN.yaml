@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
+  server: tttyder.wsone.icu
+  port: 443
+  udp: true
+  type: trojan
+  password: M7v%w11Se*
+  sni: tttyder.wsone.icu
+  skip-cert-verify: false
+- name: 🇮🇳 印度 (India) 02
   server: 172.105.39.124
   port: 7002
   udp: true
@@ -17,11 +25,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
 rules:
 - MATCH,PROXIES

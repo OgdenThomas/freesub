@@ -17,17 +17,43 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: googol.wookshop.ir
+  port: 17915
+  udp: true
+  type: vless
+  uuid: 439628ee-ef8e-4a3e-ba0f-091b7376dcb8
+  tls: true
+  servername: googol.wookshop.ir
+  skip-cert-verify: false
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: tr.ultran.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1ac4358d-76de-477b-9400-1bbef47814ad
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JF-Lpu6qTA2gz2Dsho2n_q9mgU6LzWC4gI4W1V1HNSE
+    short-id: 59cab42f52890fd7
+  servername: action.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES

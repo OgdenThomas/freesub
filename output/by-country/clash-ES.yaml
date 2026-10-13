@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
+  server: es3.h1cloud.net
+  port: 25136
+  udp: true
+  type: vless
+  uuid: 440b5558-e701-4c6f-8de2-d24dcf1ebbe6
+  tls: true
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+    short-id: f78838fbd85e59ae
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -23,11 +35,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 rules:
 - MATCH,PROXIES
