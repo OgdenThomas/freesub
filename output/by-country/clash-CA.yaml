@@ -11,40 +11,17 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: 51.79.31.36
-  port: 31146
-  udp: true
-  type: vless
-  uuid: f0466557-2fd5-442e-94cb-12c6b764155e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QAoJHZT6_DZsBu-jH74uYZUTpGgxmvN2tXpRKj4CygE
-    short-id: cf4e6f8338
-  servername: play-fe.googleapis.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03 R60
-  server: milo.rubinaz.xyz
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R60
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R60
 rules:
 - MATCH,PROXIES

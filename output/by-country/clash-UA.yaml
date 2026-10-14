@@ -4,28 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44
-  server: 77.110.105.122
+- name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: 45.158.185.172
   port: 443
   udp: true
   type: vless
-  uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a
-  flow: xtls-rprx-vision
+  uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51
   tls: true
-  servername: co-pl.speedtec.ru
+  servername: z5n1.vpnpolar.online
   skip-cert-verify: false
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /beeline
+    headers:
+      Host: z5n1.vpnpolar.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
+  - 🇺🇦 乌克兰 (Ukraine) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
+  - 🇺🇦 乌克兰 (Ukraine) 01
 rules:
 - MATCH,PROXIES

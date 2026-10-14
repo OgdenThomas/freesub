@@ -4,19 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇦🇺 澳大利亚 (Australia) 01",
-      "server": "137.23.16.77",
-      "server_port": 20000,
-      "password": "a34f3990b69f44bfa0d32385",
+      "type": "vless",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01",
+      "server": "45.158.185.172",
+      "server_port": 443,
+      "uuid": "49e4b91a-bd15-4e54-9b51-41a3380afb51",
       "tls": {
         "enabled": true,
-        "server_name": "rmgyvpn.rest",
+        "server_name": "z5n1.vpnpolar.online",
         "insecure": false
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "a34f3990b69f44bfa0d32385"
+      "transport": {
+        "type": "ws",
+        "path": "/beeline",
+        "headers": {
+          "Host": "z5n1.vpnpolar.online"
+        }
       }
     },
     {
@@ -24,14 +27,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇺🇦 乌克兰 (Ukraine) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

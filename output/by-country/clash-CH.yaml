@@ -16,50 +16,18 @@ proxies:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
     short-id: 19253fae84102271
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 157.228.156.211
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7b9b233c-c646-4859-88b2-2a55695c6487
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jQx41aPKBwFCRKregjdLMmwo4ShIYfjHWIMIl-0HJhc
-    short-id: 288d01b5
-  servername: br.urobotix.tech
   client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 03
-  server: 138.124.96.88
-  port: 41826
-  udp: true
-  type: vless
-  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
-  tls: true
-  servername: sweden.homyak.app
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R41
-  - 🇨🇭 瑞士 (Switzerland) 02
-  - 🇨🇭 瑞士 (Switzerland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R41
-  - 🇨🇭 瑞士 (Switzerland) 02
-  - 🇨🇭 瑞士 (Switzerland) 03
 rules:
 - MATCH,PROXIES

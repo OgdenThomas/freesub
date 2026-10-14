@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 153.80.241.206
+  server: 193.233.74.6
   port: 8444
   udp: true
   type: vless
@@ -13,44 +13,35 @@ proxies:
   tls: true
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
   servername: github.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 217.60.72.238
-  port: 443
+  server: 91.196.32.121
+  port: 2443
   udp: true
   type: vless
-  uuid: 0de1d303-d7de-0001-8679-c4cb67e2e2cc
-  flow: xtls-rprx-vision
+  uuid: c635b5f6-b5ea-4e57-927f-75860b0cb984
   tls: true
   reality-opts:
-    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
-    short-id: a696de84963656de
-  servername: amd.com
-  client-fingerprint: qq
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 194.38.11.86
-  port: 65443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 159.194.240.128
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0de1d303-d7de-0001-8679-c4cb67e2e2cc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
-    short-id: a696de84963656de
-  servername: amd.com
+    public-key: cnmFHIiPbBDSOiui-ZJw8JIWSa4UARyNrHhBp3p7sBc
+    short-id: f1b2c3d4
+  servername: fonts.google.com
   client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: hy9.shamanfun.ru
+  port: 1443
+  udp: true
+  type: hysteria2
+  password: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  sni: hy9.shamanfun.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -59,7 +50,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,6 +58,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
 rules:
 - MATCH,PROXIES
