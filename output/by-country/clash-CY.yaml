@@ -4,14 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: frr.drwrdoh.org
-  port: 8086
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y=
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02 R44
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44
   server: 77.110.105.122
   port: 443
   udp: true
@@ -27,14 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 R44
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01
-  - 🇨🇾 塞浦路斯 (Cyprus) 02 R44
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 rules:
 - MATCH,PROXIES

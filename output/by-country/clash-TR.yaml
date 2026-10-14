@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 62.60.233.157
   port: 8444
   udp: true
@@ -18,8 +31,14 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: 104.21.48.18
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇷 土耳其 (Turkey) 04
+  server: 172.67.176.3
   port: 2053
   udp: true
   type: trojan
@@ -29,7 +48,18 @@ proxies:
   network: ws
   ws-opts:
     path: /0962
-- name: 🇹🇷 土耳其 (Turkey) 03
+- name: 🇹🇷 土耳其 (Turkey) 05
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  type: trojan
+  password: e309e031-991e-4656-9934-44d10deb8fd8
+  sni: nimm.mpd.cc.cd
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /0962
+- name: 🇹🇷 土耳其 (Turkey) 06
   server: 153.56.210.61
   port: 443
   udp: true
@@ -42,19 +72,6 @@ proxies:
     short-id: a696de84963656de
   servername: amd.com
   client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04
-  server: 78.135.73.47
-  port: 443
-  udp: true
-  type: vless
-  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
-    short-id: f46cd3ea3d1eb72d
-  servername: www.datadoghq.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,6 +81,8 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
   - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -73,5 +92,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02
   - 🇹🇷 土耳其 (Turkey) 03
   - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
+  - 🇹🇷 土耳其 (Turkey) 06
 rules:
 - MATCH,PROXIES

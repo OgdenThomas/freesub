@@ -5,18 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 154.37.216.186
-  port: 443
+  server: dog-hk.kunlun01dns.com
+  port: 21021
   udp: true
-  type: vless
-  uuid: ebdec762-050b-4d54-b7bf-0406ce22f734
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KkSH2hoA6PuNJL5ZNUDGuWoAYe5kIwcGbrbCYuxHTx8
-    short-id: f39ad9d9eb26df47
-  servername: www.bing.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
   server: 103.193.173.51
   port: 39485
@@ -31,18 +26,13 @@ proxies:
   servername: www.icloud.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 82.29.36.250
+  server: node1.luoye.ee
   port: 443
   udp: true
-  type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-    short-id: 09353d6dc5b789
-  servername: aws.amazon.com
-  client-fingerprint: random
+  type: trojan
+  password: 11b8f196-ae72-47b5-9707-0cb51b26edbc
+  sni: node1.luoye.ee
+  skip-cert-verify: false
 - name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 2.27.109.179
   port: 45464
