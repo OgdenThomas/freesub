@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: p141.panda001.net
-  port: 4652
+- name: 🇲🇾 马来西亚 (Malaysia) 01
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16317
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇲🇾 马来西亚 (Malaysia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇲🇾 马来西亚 (Malaysia) 01
 rules:
 - MATCH,PROXIES

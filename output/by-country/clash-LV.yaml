@@ -17,17 +17,32 @@ proxies:
     short-id: 0da7e14db353e7d0
   servername: lv.nztvpn.com
   client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 02
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 02
 rules:
 - MATCH,PROXIES

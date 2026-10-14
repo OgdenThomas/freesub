@@ -4,35 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01
-  server: 54.36.174.140
-  port: 443
+- name: 🇫🇷 法国 (France) 01 ⚠R
+  server: 51.195.248.89
+  port: 14117
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
+  cipher: aes-128-gcm
+  password: 3391e35fc7a532f6a9b86adb077b2b34
 - name: 🇫🇷 法国 (France) 02
-  server: 54.36.174.134
+  server: pl140.vpnbook.com
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e5c65ph
 - name: 🇫🇷 法国 (France) 03
-  server: 199.232.78.170
+  server: 162.159.244.91
   port: 443
   udp: true
-  type: vless
-  uuid: XpnTeam-1
-  tls: true
-  servername: ssl.fastly.com
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
+    path: /assignment
 - name: 🇫🇷 法国 (France) 04
   server: 5.253.189.238
   port: 443
@@ -45,26 +41,7 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 05
-  server: v35.hdacd.com
-  port: 30835
-  udp: true
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-- name: 🇫🇷 法国 (France) 06
-  server: 91.245.225.79
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07
-  server: 155.103.71.142
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -74,8 +51,15 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 08
-  server: 185.255.179.166
+- name: 🇫🇷 法国 (France) 06
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
+- name: 🇫🇷 法国 (France) 07
+  server: 155.103.71.142
   port: 443
   udp: true
   type: trojan
@@ -90,26 +74,24 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES
