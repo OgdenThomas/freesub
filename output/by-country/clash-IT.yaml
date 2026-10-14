@@ -18,19 +18,6 @@ proxies:
   servername: italynew.nztvpn.com
   client-fingerprint: firefox
 - name: 🇮🇹 意大利 (Italy) 02
-  server: 82.118.16.189
-  port: 443
-  udp: true
-  type: vless
-  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
-    short-id: 37fbf155c7a9f3ff
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 03
   server: 82.118.16.187
   port: 443
   udp: true
@@ -43,17 +30,19 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 04
-  server: firstitaly.iranfreemarz.com
-  port: 7005
+- name: 🇮🇹 意大利 (Italy) 03
+  server: 82.118.16.189
+  port: 443
   udp: true
   type: vless
-  uuid: f4c2dd69-124f-4134-bcf3-8b56e96b2bd3
+  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 7aICTN0hv6bhd8bYOjNZniDYSXgD20LunZ3BW6_Zyk4
-  servername: play.googleapis.com
-  client-fingerprint: ios
+    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
+    short-id: 37fbf155c7a9f3ff
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,7 +51,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,6 +59,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04
 rules:
 - MATCH,PROXIES

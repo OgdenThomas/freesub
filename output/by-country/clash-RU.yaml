@@ -5,6 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 104.18.34.21
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
+  tls: true
+  servername: socks5.revil-time3.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /socks5:/128.140.46.169:13482
+    headers:
+      Host: socks5.revil-time3.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 104.21.87.238
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
+  network: ws
+  ws-opts:
+    path: /vl/Wp4FqWLcoYNYXCovu4?ed=2560
+    headers:
+      Host: ApI-hub-C9A393.ALiMiRZAi539-484.WOrKerS.DeV
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 193.233.74.6
   port: 8444
   udp: true
@@ -15,11 +41,18 @@ proxies:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
     short-id: 457fab2ac885dbe0
   servername: github.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 02
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 194.38.11.86
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 153.80.241.206
   port: 8444
   udp: true
@@ -33,20 +66,30 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 93.188.184.150
-  port: 443
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: spainspeedboostjbl88.qcloud.surf
+  port: 27313
   udp: true
-  type: vless
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  tls: true
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  servername: ru-1-2.unturned-rust-dead.lol
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ru-api
+  type: hysteria2
+  password: 408c51e8-9246-483d-ba73-34ab4e202eb9
+  sni: spainspeedboostjbl88.qcloud.surf
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 07
+  server: alb1337.zaebalsanoproxyklinus.lol
+  port: 28152
+  udp: true
+  type: hysteria2
+  password: 6656cc0a-5908-4d04-a436-64f5843c0c7a
+  sni: alb1337.zaebalsanoproxyklinus.lol
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 08
+  server: hy9.shamanfun.ru
+  port: 1443
+  udp: true
+  type: hysteria2
+  password: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  sni: hy9.shamanfun.ru
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +98,11 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,5 +111,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 rules:
 - MATCH,PROXIES

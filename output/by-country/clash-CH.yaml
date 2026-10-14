@@ -18,6 +18,21 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇨🇭 瑞士 (Switzerland) 02
+  server: ch.srv.vbuste.ru
+  port: 444
+  udp: true
+  type: vless
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+  tls: true
+  reality-opts:
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
+  servername: ch.srv.vbuste.ru
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇨🇭 瑞士 (Switzerland) 03
   server: 138.124.96.88
   port: 41826
   udp: true
@@ -26,7 +41,7 @@ proxies:
   tls: true
   servername: sweden.homyak.app
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: random
   network: httpupgrade
   httpupgrade-opts:
     path: /
@@ -39,6 +54,7 @@ proxy-groups:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R41
   - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +62,6 @@ proxy-groups:
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R41
   - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 03
 rules:
 - MATCH,PROXIES

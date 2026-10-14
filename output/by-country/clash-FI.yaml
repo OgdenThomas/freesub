@@ -5,26 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 185.239.141.248
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: j_Z9yWqItCz_9yhD5YVY4w
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: fi.pythonsetupbib.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg
-    short-id: bdf5852d1423e694
-  servername: fi.pythonsetupbib.online
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03
   server: 152.233.71.81
   port: 443
   udp: true
@@ -37,25 +17,7 @@ proxies:
     short-id: 1c3e8241a8743df9
   servername: brointelengence.com
   client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: fi-p1.h1cloud.net
-  port: 25633
-  udp: true
-  type: vless
-  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
-  tls: true
-  reality-opts:
-    public-key: YLIRYJ8UkT0nSSgxJr7YckNuXnokVyEs2G6thNyx1GE
-    short-id: 200811f031ae7463
-  servername: www.icloud.com
-  client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 06
+- name: 🇫🇮 芬兰 (Finland) 02
   server: freefl.aiage.work
   port: 443
   udp: true
@@ -68,6 +30,39 @@ proxies:
     short-id: ff0ddf949624ef2a
   servername: freefl.aiage.work
   client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: edge10.cyrionflare.com
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: fi-p1.h1cloud.net
+  port: 25481
+  udp: true
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E
+    short-id: 3b84fc70657725af
+  servername: www.bing.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 8cb5baa18cd7
+- name: 🇫🇮 芬兰 (Finland) 05
+  server: fi-p1.h1cloud.net
+  port: 25633
+  udp: true
+  type: vless
+  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  tls: true
+  reality-opts:
+    public-key: YLIRYJ8UkT0nSSgxJr7YckNuXnokVyEs2G6thNyx1GE
+    short-id: 200811f031ae7463
+  servername: www.icloud.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -78,7 +73,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
   - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,6 +83,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03
   - 🇫🇮 芬兰 (Finland) 04
   - 🇫🇮 芬兰 (Finland) 05
-  - 🇫🇮 芬兰 (Finland) 06
 rules:
 - MATCH,PROXIES
