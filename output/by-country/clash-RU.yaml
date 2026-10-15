@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 104.17.100.185
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1e922b22-d169-4461-89c1-07e09ff2617c
-  tls: true
-  servername: vlesss.xttd.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=proxyip.fxxk.dedyn.io
-    headers:
-      Host: vlesss.xttd.eu.org
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 193.233.74.6
   port: 8444
   udp: true
@@ -34,7 +19,28 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 89.125.103.208
+  port: 20111
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 994ccabf6f0950d6
 - name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 194.38.11.86
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: ruot.ayucloudservices.nl
+  port: 40040
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: edad69d9-ea99-4ce9-bae8-8fedc2afcbf4
+- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 153.80.241.206
   port: 8444
   udp: true
@@ -48,21 +54,30 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 91.196.32.121
-  port: 2443
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: 139.28.168.75
+  port: 10444
   udp: true
   type: vless
-  uuid: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  uuid: 154bd388-4968-4900-a088-18676f428a20
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: cnmFHIiPbBDSOiui-ZJw8JIWSa4UARyNrHhBp3p7sBc
-    short-id: f1b2c3d4
-  servername: fonts.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 07
+  server: 109.248.201.24
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 35228d96-64b9-4616-9f2d-080936bb37ff
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 109.248.201.24
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,6 +87,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,5 +99,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 rules:
 - MATCH,PROXIES

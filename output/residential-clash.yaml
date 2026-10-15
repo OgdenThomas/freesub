@@ -4,27 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  server: 206.1.102.64
-  port: 8080
-  udp: true
-  type: vmess
-  uuid: 184a0393-5c9e-403c-9be6-427b066308e1
-  alterId: 0
-  cipher: auto
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
-  server: p141.panda001.net
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: 218.237.185.234
   port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16113
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
+  server: 49.254.204.133
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
 - name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
   server: fujrdt.d6f54hd1j.cc
   port: 443
@@ -46,8 +47,8 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
   - 🇰🇷 韩国 (South Korea) 03 (家宽)
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 - name: AUTO
@@ -55,8 +56,8 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
   - 🇰🇷 韩国 (South Korea) 03 (家宽)
   - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
 rules:

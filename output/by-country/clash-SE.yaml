@@ -15,37 +15,11 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 02
-  server: 31.207.7.120
-  port: 2443
-  udp: true
-  type: vless
-  uuid: c635b5f6-b5ea-4e57-927f-75860b0cb984
-  tls: true
-  reality-opts:
-    public-key: cnmFHIiPbBDSOiui-ZJw8JIWSa4UARyNrHhBp3p7sBc
-    short-id: f1b2c3d4
-  servername: fonts.google.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇸🇪 瑞典 (Sweden) 03
-  server: 5.178.109.174
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
-- name: 🇸🇪 瑞典 (Sweden) 04
   server: 46.246.125.153
   port: 443
   udp: true
@@ -57,28 +31,28 @@ proxies:
     public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
     short-id: a83b77e064761e3c
   servername: res.cdn.office.net
-  client-fingerprint: random
-- name: 🇸🇪 瑞典 (Sweden) 05
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 03 R54
+  server: 104.105.108.105
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36918dcb-18ed-4857-91b5-c23c04aff614
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: NpLxdCOOBjBKekpZEe4U2lsnLO1nd6g2dyN_qpRsO3o
+    short-id: 66fc26309a36b121
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 04
   server: sweedenqfds777.qcloud.surf
   port: 21223
   udp: true
   type: hysteria2
-  password: f83ce3c4-07d9-4895-bd14-cb74abbcab37
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
   sni: sweedenqfds777.qcloud.surf
   skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 06
-  server: se3.h1cloud.net
-  port: 25119
-  udp: true
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-  servername: www.samsung.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -86,10 +60,8 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 03 R54
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05
-  - 🇸🇪 瑞典 (Sweden) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -97,9 +69,7 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 03 R54
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05
-  - 🇸🇪 瑞典 (Sweden) 06
 rules:
 - MATCH,PROXIES

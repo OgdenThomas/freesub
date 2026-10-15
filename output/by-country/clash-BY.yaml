@@ -4,31 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01
-  server: z5n1.vpnpolar.online
-  port: 443
+- name: 🇧🇾 白俄罗斯 (Belarus) 01
+  server: 178.172.227.124
+  port: 14430
   udp: true
   type: vless
-  uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51
-  tls: true
-  servername: z5n1.vpnpolar.online
-  skip-cert-verify: false
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   network: ws
   ws-opts:
-    path: /beeline
+    path: /vless
     headers:
-      Host: z5n1.vpnpolar.online
+      Host: 178.172.227.124
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇧🇾 白俄罗斯 (Belarus) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇧🇾 白俄罗斯 (Belarus) 01
 rules:
 - MATCH,PROXIES
