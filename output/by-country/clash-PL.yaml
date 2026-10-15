@@ -5,15 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: pl9.aiage.work
+  server: pl.golangwikito.cfd
   port: 443
   udp: true
   type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
   flow: xtls-rprx-vision
   tls: true
-  servername: pl9.aiage.work
-  skip-cert-verify: false
+  reality-opts:
+    public-key: DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg
+    short-id: acccaaaa9f72147d
+  servername: pl.golangwikito.cfd
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 02
   server: 177.1.192.81
   port: 443
@@ -39,8 +42,14 @@ proxies:
     public-key: HXXIkFRPeRpluXJ7SOoUGf9EOq4Lw-oJpvg1W0UPbEw
     short-id: 5bd7b68ca4c04443
   servername: browser.yandex.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇵🇱 波兰 (Poland) 04
+  server: 45.137.43.168
+  port: 10443
+  udp: true
+  type: vless
+  uuid: b4cc503a-c352-4775-85ad-fc982086884a
+- name: 🇵🇱 波兰 (Poland) 05
   server: 45.137.43.168
   port: 10444
   udp: true
@@ -53,32 +62,16 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
   client-fingerprint: safari
-- name: 🇵🇱 波兰 (Poland) 05
-  server: pl.golangwikito.cfd
-  port: 443
-  udp: true
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DsTVLCehsKvfFGtNZU5leKOLTlEp28qeifHYtRKOFwg
-    short-id: f8b695e5c59d028c
-  servername: pl.golangwikito.cfd
-  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 06
-  server: 177.1.192.72
+  server: pl9.aiage.work
   port: 443
   udp: true
   type: vless
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
-    short-id: 46455ff0
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
+  servername: pl9.aiage.work
+  skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 07
   server: 177.1.192.74
   port: 443
@@ -92,7 +85,18 @@ proxies:
     short-id: 770618b6
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 08 R43
+- name: 🇵🇱 波兰 (Poland) 08
+  server: 45.137.43.168
+  port: 14430
+  udp: true
+  type: vless
+  uuid: b4cc503a-c352-4775-85ad-fc982086884a
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.137.43.168
+- name: 🇵🇱 波兰 (Poland) 09 R43
   server: 54.37.131.126
   port: 80
   udp: true
@@ -105,28 +109,32 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 09
-  server: pl.flen-vpn.xyz
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
-  tls: true
-  servername: pl.flen-vpn.xyz
-  skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 10
-  server: ya-ne-nefor.whitenw.net
-  port: 4510
+  server: 177.1.192.72
+  port: 443
   udp: true
   type: vless
-  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM
-    short-id: 2d0c188798bae174
-  servername: 9c99da.usecache.net
-  client-fingerprint: firefox
+    public-key: y3YCXTqEVks0nGfiSwJ43ol4pY69-mWFUZsdmveoVDM
+    short-id: 46455ff0
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 11
+  server: 191.217.251.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7452aeba-5f06-4c96-a60d-c19500f6c45a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cg2xMuk1_2vptpwFzf3bk-gTRKTxdprmlWpLWS3-sx4
+    short-id: e3d3f391
+  servername: hlm5p1tv.huinaduok.fans
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -139,9 +147,10 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
   - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08 R43
-  - 🇵🇱 波兰 (Poland) 09
+  - 🇵🇱 波兰 (Poland) 08
+  - 🇵🇱 波兰 (Poland) 09 R43
   - 🇵🇱 波兰 (Poland) 10
+  - 🇵🇱 波兰 (Poland) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -154,8 +163,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
   - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08 R43
-  - 🇵🇱 波兰 (Poland) 09
+  - 🇵🇱 波兰 (Poland) 08
+  - 🇵🇱 波兰 (Poland) 09 R43
   - 🇵🇱 波兰 (Poland) 10
+  - 🇵🇱 波兰 (Poland) 11
 rules:
 - MATCH,PROXIES

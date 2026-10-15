@@ -20,39 +20,46 @@ proxies:
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 02
-  server: 46.246.125.153
-  port: 443
+  server: se3.h1cloud.net
+  port: 25119
   udp: true
   type: vless
-  uuid: a16a3e32-8d63-4dec-8c67-1361388a64ca
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
-    short-id: a83b77e064761e3c
-  servername: res.cdn.office.net
+    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
+    short-id: 10f517
+  servername: www.samsung.com
   client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03 R54
-  server: 104.105.108.105
-  port: 443
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: se3.h1cloud.net
+  port: 25643
   udp: true
   type: vless
-  uuid: 36918dcb-18ed-4857-91b5-c23c04aff614
+  uuid: 83383473-0d62-4089-ac4d-d7ecb413504a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: NpLxdCOOBjBKekpZEe4U2lsnLO1nd6g2dyN_qpRsO3o
-    short-id: 66fc26309a36b121
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
+    public-key: NBKdM5Q5Tiue7YkxEldtShCCHi1GJ0WKCizyhPXQTy4
+    short-id: 20672f0333e23e84
+  servername: ru1.boutique-hotel1108.ru
+  client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 04
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
+  server: se1.h1cloud.net
+  port: 26128
   udp: true
-  type: hysteria2
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: sweedenqfds777.qcloud.surf
-  skip-cert-verify: false
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: sACiHit5lNtPRK_eFP6jT8dMPUZ4kQRsfPj_LL5p7Uk
+    short-id: 13ac4d3bdadf1ea1
+  servername: www.icloud.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: df50147201bf
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,7 +67,7 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03 R54
+  - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
 - name: AUTO
   type: url-test
@@ -69,7 +76,7 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03 R54
+  - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
 rules:
 - MATCH,PROXIES
