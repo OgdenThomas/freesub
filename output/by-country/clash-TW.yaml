@@ -4,30 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 马来西亚 (Malaysia) 01
-  server: my2.oh-node.com
-  port: 443
+- name: 🇹🇼 中国台湾 (Taiwan) 01
+  server: hinet1.2yly.com
+  port: 24215
   udp: true
   type: vless
-  uuid: 7cfd34ae-edad-4cc5-9d6f-066f7add7829
-  flow: xtls-rprx-vision
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
   reality-opts:
-    public-key: R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM
-    short-id: ed77ac35a310
-  servername: www.setel.com
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 rules:
 - MATCH,PROXIES

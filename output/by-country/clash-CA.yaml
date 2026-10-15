@@ -5,13 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01
+  server: 15.175.213.130
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 15.223.182.197
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦 加拿大 (Canada) 03
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: ca.tronsg.com
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: ca.tronsg.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 05
   server: 51.79.31.36
   port: 31146
   udp: true
@@ -24,20 +46,7 @@ proxies:
     short-id: cf4e6f8338
   servername: play-fe.googleapis.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: can1.ragnarok-it.xyz
-  port: 8449
-  udp: true
-  type: vless
-  uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
-    short-id: dee4ffbdbe515f0d
-  servername: amd.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 04
+- name: 🇨🇦 加拿大 (Canada) 06
   server: 511.150333.xyz
   port: 21002
   udp: true
@@ -49,7 +58,7 @@ proxies:
     short-id: 3ab8d93dd9b1a5be
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 05
+- name: 🇨🇦 加拿大 (Canada) 07
   server: 511.150333.xyz
   port: 21003
   udp: true
@@ -61,7 +70,19 @@ proxies:
     short-id: bab49aa4c2a88d27
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 06
+- name: 🇨🇦 加拿大 (Canada) 08
+  server: 511.150333.xyz
+  port: 21004
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 09
   server: 511.150333.xyz
   port: 21001
   udp: true
@@ -84,6 +105,9 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 04
   - 🇨🇦 加拿大 (Canada) 05
   - 🇨🇦 加拿大 (Canada) 06
+  - 🇨🇦 加拿大 (Canada) 07
+  - 🇨🇦 加拿大 (Canada) 08
+  - 🇨🇦 加拿大 (Canada) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -95,5 +119,8 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 04
   - 🇨🇦 加拿大 (Canada) 05
   - 🇨🇦 加拿大 (Canada) 06
+  - 🇨🇦 加拿大 (Canada) 07
+  - 🇨🇦 加拿大 (Canada) 08
+  - 🇨🇦 加拿大 (Canada) 09
 rules:
 - MATCH,PROXIES

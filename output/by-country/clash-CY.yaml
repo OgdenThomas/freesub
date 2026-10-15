@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
-  server: 195.123.226.21
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R44
+  server: co-a.speedtec.ru
   port: 443
   udp: true
   type: vless
-  uuid: 6589c320-db68-43cd-a273-b46299bab355
+  uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo
-    short-id: 77bb0d07bddbc832
-  servername: gateway.icloud.com
+    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
+    short-id: 226509f017e4c36d
+  servername: co-pl.speedtec.ru
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 R44
 rules:
 - MATCH,PROXIES

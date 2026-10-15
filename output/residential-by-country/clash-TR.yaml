@@ -4,28 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇾 白俄罗斯 (Belarus) 01
-  server: 178.172.227.124
-  port: 14430
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.124
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇾 白俄罗斯 (Belarus) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇾 白俄罗斯 (Belarus) 01
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 rules:
 - MATCH,PROXIES
