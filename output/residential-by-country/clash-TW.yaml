@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
   server: fujrdt.d6f54hd1j.cc
   port: 443
   udp: true
@@ -20,32 +20,17 @@ proxies:
     path: /
     headers:
       Host: fujrdt.d6f54hd1j.cc
-- name: 🇹🇼 中国台湾 (Taiwan) 02
-  server: tw3.dexlos.com
-  port: 8080
-  udp: true
-  type: tuic
-  uuid: 8a9905b7-801b-41af-bfc9-2034212770f6
-  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  sni: tw3.dexlos.com
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: native
-  alpn:
-  - h3
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01
-  - 🇹🇼 中国台湾 (Taiwan) 02
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01
-  - 🇹🇼 中国台湾 (Taiwan) 02
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽)
 rules:
 - MATCH,PROXIES

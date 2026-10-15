@@ -6,6 +6,32 @@
     {
       "type": "vless",
       "tag": "🇷🇺 俄罗斯 (Russia) 01",
+      "server": "104.17.100.185",
+      "server_port": 443,
+      "uuid": "1e922b22-d169-4461-89c1-07e09ff2617c",
+      "tls": {
+        "enabled": true,
+        "server_name": "vlesss.xttd.eu.org",
+        "insecure": false,
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=proxyip.fxxk.dedyn.io",
+        "headers": {
+          "Host": "vlesss.xttd.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 02",
       "server": "193.233.74.6",
       "server_port": 8444,
       "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
@@ -14,7 +40,7 @@
         "server_name": "github.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -29,7 +55,31 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 俄罗斯 (Russia) 02",
+      "tag": "🇷🇺 俄罗斯 (Russia) 03",
+      "server": "153.80.241.206",
+      "server_port": 8444,
+      "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 俄罗斯 (Russia) 04",
       "server": "91.196.32.121",
       "server_port": 2443,
       "uuid": "c635b5f6-b5ea-4e57-927f-75860b0cb984",
@@ -52,25 +102,14 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 俄罗斯 (Russia) 03",
-      "server": "hy9.shamanfun.ru",
-      "server_port": 1443,
-      "password": "c635b5f6-b5ea-4e57-927f-75860b0cb984",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy9.shamanfun.ru",
-        "insecure": false
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
-        "🇷🇺 俄罗斯 (Russia) 03"
+        "🇷🇺 俄罗斯 (Russia) 03",
+        "🇷🇺 俄罗斯 (Russia) 04"
       ]
     },
     {
@@ -79,7 +118,8 @@
       "outbounds": [
         "🇷🇺 俄罗斯 (Russia) 01",
         "🇷🇺 俄罗斯 (Russia) 02",
-        "🇷🇺 俄罗斯 (Russia) 03"
+        "🇷🇺 俄罗斯 (Russia) 03",
+        "🇷🇺 俄罗斯 (Russia) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

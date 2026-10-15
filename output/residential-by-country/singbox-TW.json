@@ -5,7 +5,7 @@
   "outbounds": [
     {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
       "server": "fujrdt.d6f54hd1j.cc",
       "server_port": 443,
       "uuid": "d877dc6f-7323-4b47-a7dd-14228cbae854",
@@ -24,38 +24,18 @@
       }
     },
     {
-      "type": "tuic",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02",
-      "server": "tw3.dexlos.com",
-      "server_port": 8080,
-      "uuid": "8a9905b7-801b-41af-bfc9-2034212770f6",
-      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw3.dexlos.com",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01",
-        "🇹🇼 中国台湾 (Taiwan) 02"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01",
-        "🇹🇼 中国台湾 (Taiwan) 02"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

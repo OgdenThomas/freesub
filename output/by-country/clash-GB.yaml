@@ -5,25 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 138.124.90.177
-  port: 10443
+  server: 188.114.98.112
+  port: 80
   udp: true
   type: vless
-  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  network: ws
+  ws-opts:
+    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro.
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 23.81.34.204
+  server: 172.67.131.125
   port: 443
   udp: true
   type: vless
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-  flow: xtls-rprx-vision
+  uuid: 8d0f652c-3caa-4570-a138-668364f3d25e
   tls: true
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  servername: speed.cloudflare.com
-  client-fingerprint: random
+  servername: SqqfQ0vy-l4v0qA0ZLxNJd79-ykvkw.mRmamaLi.WoRKerS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/zInkY7qcXuM6P1AZTQ
+    headers:
+      Host: sqqfq0vy-l4v0qa0zlxnjd79-ykvkw.mrmamali.workers.dev
 - name: 🇬🇧 英国 (United Kingdom) 03
+  server: 193.188.21.253
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 193.188.21.253
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 193.163.203.170
   port: 443
   udp: true
@@ -36,20 +54,33 @@ proxies:
     short-id: b28db60d77c50b4f
   servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: webdisk.jaggyslawa.org
+- name: 🇬🇧 英国 (United Kingdom) 05
+  server: 23.81.34.204
   port: 443
   udp: true
   type: vless
-  uuid: 8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 87174b37ce3b
-  servername: www.microsoft.com
-  client-fingerprint: edge
-- name: 🇬🇧 英国 (United Kingdom) 05
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+  servername: speed.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 193.188.21.253
+  port: 10444
+  udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 07
   server: 104.238.2.82
   port: 443
   udp: true
@@ -62,6 +93,27 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 08
+  server: v36.hdacd.com
+  port: 30836
+  udp: true
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+- name: 🇬🇧 英国 (United Kingdom) 09
+  server: webdisk.jaggyslawa.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: 87174b37ce3b
+  servername: www.microsoft.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,6 +124,10 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,5 +138,9 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 09
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,28 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 01 R43",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 01",
+      "server": "216.173.71.43",
+      "server_port": 443,
+      "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lv.nztvpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "miDhSALrcCvSfc38VjCDYlzNh5M61NMR5IkUli7IN08",
+          "short_id": "0da7e14db353e7d0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 R43",
       "server": "31.57.106.241",
       "server_port": 443,
       "uuid": "a4801105-c0c7-4cab-87c6-f257ff2afc09",
@@ -26,7 +47,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 R44",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 03",
       "server": "195.123.208.32",
       "server_port": 443,
       "uuid": "1ebcb694-875c-4be7-b6a2-d53c8208991b",
@@ -46,33 +67,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 03",
-      "server": "195.123.213.28",
-      "server_port": 443,
-      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
-          "short_id": "5c256336e3b673fa"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 拉脱维亚 (Latvia) 01 R43",
-        "🇱🇻 拉脱维亚 (Latvia) 02 R44",
+        "🇱🇻 拉脱维亚 (Latvia) 01",
+        "🇱🇻 拉脱维亚 (Latvia) 02 R43",
         "🇱🇻 拉脱维亚 (Latvia) 03"
       ]
     },
@@ -80,8 +80,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 拉脱维亚 (Latvia) 01 R43",
-        "🇱🇻 拉脱维亚 (Latvia) 02 R44",
+        "🇱🇻 拉脱维亚 (Latvia) 01",
+        "🇱🇻 拉脱维亚 (Latvia) 02 R43",
         "🇱🇻 拉脱维亚 (Latvia) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"

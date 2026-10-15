@@ -4,7 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R41
+- name: 🇨🇭 瑞士 (Switzerland) 01
+  server: ch.srv.vbuste.ru
+  port: 444
+  udp: true
+  type: vless
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+  tls: true
+  reality-opts:
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
+  servername: ch.srv.vbuste.ru
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇨🇭 瑞士 (Switzerland) 02 R41
   server: 45.90.59.15
   port: 443
   udp: true
@@ -22,12 +37,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R41
+  - 🇨🇭 瑞士 (Switzerland) 01
+  - 🇨🇭 瑞士 (Switzerland) 02 R41
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R41
+  - 🇨🇭 瑞士 (Switzerland) 01
+  - 🇨🇭 瑞士 (Switzerland) 02 R41
 rules:
 - MATCH,PROXIES

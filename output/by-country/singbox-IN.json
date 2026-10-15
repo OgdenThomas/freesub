@@ -4,29 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇸🇰 斯洛伐克 (Slovakia) 01",
-      "server": "80.243.228.130",
-      "server_port": 2085,
-      "uuid": "71dcf48f-14b6-4e5b-8b42-4644ca8e2c1b",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
+      "type": "shadowsocks",
+      "tag": "🇮🇳 印度 (India) 01",
+      "server": "172.105.39.124",
+      "server_port": 7002,
+      "method": "aes-256-gcm",
+      "password": "RexnBgU7EV5ADxG"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇰 斯洛伐克 (Slovakia) 01"
+        "🇮🇳 印度 (India) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇰 斯洛伐克 (Slovakia) 01"
+        "🇮🇳 印度 (India) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

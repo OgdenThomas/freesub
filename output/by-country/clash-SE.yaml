@@ -15,11 +15,37 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 02
+  server: 31.207.7.120
+  port: 2443
+  udp: true
+  type: vless
+  uuid: c635b5f6-b5ea-4e57-927f-75860b0cb984
+  tls: true
+  reality-opts:
+    public-key: cnmFHIiPbBDSOiui-ZJw8JIWSa4UARyNrHhBp3p7sBc
+    short-id: f1b2c3d4
+  servername: fonts.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
+- name: 🇸🇪 瑞典 (Sweden) 04
   server: 46.246.125.153
   port: 443
   udp: true
@@ -31,8 +57,16 @@ proxies:
     public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
     short-id: a83b77e064761e3c
   servername: res.cdn.office.net
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 03
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 05
+  server: sweedenqfds777.qcloud.surf
+  port: 21223
+  udp: true
+  type: hysteria2
+  password: f83ce3c4-07d9-4895-bd14-cb74abbcab37
+  sni: sweedenqfds777.qcloud.surf
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 06
   server: se3.h1cloud.net
   port: 25119
   udp: true
@@ -53,6 +87,9 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +98,8 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
 rules:
 - MATCH,PROXIES

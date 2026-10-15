@@ -5,7 +5,30 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R41",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01",
+      "server": "ch.srv.vbuste.ru",
+      "server_port": 444,
+      "uuid": "318c935d-c195-41d3-99ad-9bbcfdab3386",
+      "tls": {
+        "enabled": true,
+        "server_name": "ch.srv.vbuste.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08",
+          "short_id": "4be4110078ebed4a"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 02 R41",
       "server": "45.90.59.15",
       "server_port": 443,
       "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
@@ -29,14 +52,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R41"
+        "🇨🇭 瑞士 (Switzerland) 01",
+        "🇨🇭 瑞士 (Switzerland) 02 R41"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R41"
+        "🇨🇭 瑞士 (Switzerland) 01",
+        "🇨🇭 瑞士 (Switzerland) 02 R41"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

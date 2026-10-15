@@ -5,16 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 185.253.116.33
-  port: 14430
+  server: 157.228.155.185
+  port: 443
   udp: true
   type: vless
-  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 185.253.116.33
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
+    short-id: 5ea112e8
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
 - name: 🇦🇪 阿联酋 (UAE) 02
   server: 157.228.155.238
   port: 443
@@ -29,19 +31,6 @@ proxies:
   servername: addons.mozilla.org
   client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 03
-  server: 157.228.155.185
-  port: 443
-  udp: true
-  type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg
-    short-id: 5ea112e8
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇦🇪 阿联酋 (UAE) 04
   server: 31.59.210.37
   port: 443
   udp: true
@@ -56,7 +45,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 05
+- name: 🇦🇪 阿联酋 (UAE) 04
   server: 31.59.210.32
   port: 443
   udp: true
@@ -71,7 +60,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 06
+- name: 🇦🇪 阿联酋 (UAE) 05
   server: 31.59.210.26
   port: 2088
   udp: true
@@ -86,21 +75,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 07
-  server: 31.59.210.25
-  port: 2087
+- name: 🇦🇪 阿联酋 (UAE) 06
+  server: 185.253.116.33
+  port: 14430
   udp: true
   type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: KDBhxT2YMtMjDEC9VdoDEISdCwxd6KFrSE8uyUaHcTY
-    short-id: ed435c242097fd05
-  servername: www.yandex.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 185.253.116.33
 proxy-groups:
 - name: PROXIES
   type: select
@@ -112,7 +97,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
   - 🇦🇪 阿联酋 (UAE) 06
-  - 🇦🇪 阿联酋 (UAE) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -124,6 +108,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 04
   - 🇦🇪 阿联酋 (UAE) 05
   - 🇦🇪 阿联酋 (UAE) 06
-  - 🇦🇪 阿联酋 (UAE) 07
 rules:
 - MATCH,PROXIES
