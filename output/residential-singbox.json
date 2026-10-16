@@ -6,7 +6,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
-      "server": "218.237.185.234",
+      "server": "p141.panda001.net",
       "server_port": 4652,
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@"
@@ -19,12 +19,57 @@
       "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 03 (家宽)",
+      "server": "104.21.78.9",
+      "server_port": 443,
+      "uuid": "5ffee9b2-4514-4719-97b3-67810ece038d",
+      "tls": {
+        "enabled": true,
+        "server_name": "ali-panel-1.terhav.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vertex",
+        "headers": {
+          "Host": "ali-panel-1.terhav.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 (家宽)",
+      "server": "hinet1.2yly.com",
+      "server_port": 24215,
+      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
+          "short_id": ""
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01 (家宽)",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)"
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
+        "🇺🇸 美国 (United States) 03 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)"
       ]
     },
     {
@@ -32,7 +77,9 @@
       "tag": "auto",
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01 (家宽)",
-        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)"
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽)",
+        "🇺🇸 美国 (United States) 03 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 04 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

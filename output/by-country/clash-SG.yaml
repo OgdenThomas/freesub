@@ -11,19 +11,13 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 02 R54
-  server: 172.104.49.9
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 02 R51
+  server: 68.183.227.236
+  port: 8080
   udp: true
-  type: vless
-  uuid: d9677f03-95c1-4357-9b31-b35b732bd188
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wSLW8DGUOMkRuCFWnBs31PYwBtvcHbBUGHu_dDTBYgc
-    short-id: 829330332af8c863
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 03 R51
   server: 128.199.172.224
   port: 8080
@@ -31,7 +25,27 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04
+- name: 🇸🇬 新加坡 (Singapore) 04 R51
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 05
+  server: 54.251.9.130
+  port: 24146
+  udp: true
+  type: vless
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: 7205d9079521832c
+  servername: www.intel.com
+  client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 06
   server: 54.169.200.246
   port: 41688
   udp: true
@@ -44,14 +58,19 @@ proxies:
     short-id: 7f342137c20387
   servername: www.intel.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 05 R51
-  server: 68.183.227.4
-  port: 8080
+- name: 🇸🇬 新加坡 (Singapore) 07
+  server: 34.87.113.18
+  port: 443
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 06
+  type: vless
+  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+  tls: true
+  reality-opts:
+    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
+    short-id: eb97ce837da2f6ad
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 08
   server: 88.216.191.10
   port: 443
   udp: true
@@ -64,100 +83,28 @@ proxies:
     short-id: 868419504747f6de
   servername: si1.lazeroe.com
   client-fingerprint: firefox
-- name: 🇸🇬 新加坡 (Singapore) 07 R41
-  server: 5.34.177.164
-  port: 443
-  udp: true
-  type: vless
-  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
-    short-id: b2efed6d157e7bb0
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 08
-  server: sg2-8sb.6121999.dpdns.org
-  port: 33738
-  udp: true
-  type: tuic
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  password: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  sni: sg2-8sb.6121999.dpdns.org
-  skip-cert-verify: false
-  congestion-controller: bbr
-  udp-relay-mode: quic
-  alpn:
-  - h3
-- name: 🇸🇬 新加坡 (Singapore) 09
-  server: 34.87.113.18
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-  tls: true
-  reality-opts:
-    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
-    short-id: eb97ce837da2f6ad
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 10
-  server: glorious-glider.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: glorious-glider.rooster465.autos
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 11 R51
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 12
-  server: simple-molly.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: simple-molly.rooster465.autos
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 13
-  server: moral-basilisk.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: moral-basilisk.rooster465.autos
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 14
-  server: 18.141.136.8
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: musical-mouse.rooster465.autos
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 15 R51
+- name: 🇸🇬 新加坡 (Singapore) 09 R51
   server: 68.183.235.122
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 16
-  server: inviting-ferret.rooster465.autos
+- name: 🇸🇬 新加坡 (Singapore) 10 R54
+  server: 172.104.49.9
   port: 443
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: inviting-ferret.rooster465.autos
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 17 R54
-  server: 188.114.98.0
+  type: vless
+  uuid: d9677f03-95c1-4357-9b31-b35b732bd188
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: wSLW8DGUOMkRuCFWnBs31PYwBtvcHbBUGHu_dDTBYgc
+    short-id: 829330332af8c863
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 11 R54
+  server: free.nadun.store
   port: 443
   udp: true
   type: vless
@@ -169,9 +116,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: free.nadun.store
-- name: 🇸🇬 新加坡 (Singapore) 18 R54
+- name: 🇸🇬 新加坡 (Singapore) 12 R54
   server: 139.162.27.96
   port: 2096
   udp: true
@@ -186,20 +131,75 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: 🇸🇬 新加坡 (Singapore) 19
-  server: 54.251.9.130
-  port: 24146
+- name: 🇸🇬 新加坡 (Singapore) 13
+  server: 103.180.20.132
+  port: 20007
   udp: true
   type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+  uuid: 4fcd1f98-0f62-467e-9516-8df807386953
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
+    public-key: h67BY8lUGUOtatqfbLJ8pgxS-bYXqODnS_aBIRUrIDw
+    short-id: 22b82cf5d70ea10e
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇸🇬 新加坡 (Singapore) 14
+  server: musical-mouse.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: musical-mouse.rooster465.autos
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 15
+  server: funagfrdfs.alixxplay.com
+  port: 46105
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik
+    short-id: 28f5c1f8f98a
+  servername: www.lamer.com.sg
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 16 R41
+  server: 5.34.177.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
+    short-id: b2efed6d157e7bb0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 17
+  server: 46.137.202.178
+  port: 12512
+  udp: true
+  type: vless
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
   servername: www.intel.com
-  client-fingerprint: ios
-- name: 🇸🇬 新加坡 (Singapore) 20
+  client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 18
+  server: 56.10.9.77
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: inviting-ferret.rooster465.autos
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 19
   server: 147.93.173.45
   port: 10444
   udp: true
@@ -211,8 +211,24 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
-  client-fingerprint: safari
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 20
+  server: brave-tomcat.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: brave-tomcat.rooster465.autos
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡 (Singapore) 21
+  server: moral-basilisk.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: moral-basilisk.rooster465.autos
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 22
   server: eu3.998998.best
   port: 443
   udp: true
@@ -228,37 +244,29 @@ proxies:
     path: /aiaiai
     headers:
       Host: server40.9966338.xyz
-- name: 🇸🇬 新加坡 (Singapore) 22
-  server: brave-tomcat.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: brave-tomcat.rooster465.autos
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 R51
-  - 🇸🇬 新加坡 (Singapore) 02 R54
+  - 🇸🇬 新加坡 (Singapore) 02 R51
   - 🇸🇬 新加坡 (Singapore) 03 R51
-  - 🇸🇬 新加坡 (Singapore) 04
-  - 🇸🇬 新加坡 (Singapore) 05 R51
+  - 🇸🇬 新加坡 (Singapore) 04 R51
+  - 🇸🇬 新加坡 (Singapore) 05
   - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R41
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08
-  - 🇸🇬 新加坡 (Singapore) 09
-  - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11 R51
-  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 09 R51
+  - 🇸🇬 新加坡 (Singapore) 10 R54
+  - 🇸🇬 新加坡 (Singapore) 11 R54
+  - 🇸🇬 新加坡 (Singapore) 12 R54
   - 🇸🇬 新加坡 (Singapore) 13
   - 🇸🇬 新加坡 (Singapore) 14
-  - 🇸🇬 新加坡 (Singapore) 15 R51
-  - 🇸🇬 新加坡 (Singapore) 16
-  - 🇸🇬 新加坡 (Singapore) 17 R54
-  - 🇸🇬 新加坡 (Singapore) 18 R54
+  - 🇸🇬 新加坡 (Singapore) 15
+  - 🇸🇬 新加坡 (Singapore) 16 R41
+  - 🇸🇬 新加坡 (Singapore) 17
+  - 🇸🇬 新加坡 (Singapore) 18
   - 🇸🇬 新加坡 (Singapore) 19
   - 🇸🇬 新加坡 (Singapore) 20
   - 🇸🇬 新加坡 (Singapore) 21
@@ -269,23 +277,23 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 R51
-  - 🇸🇬 新加坡 (Singapore) 02 R54
+  - 🇸🇬 新加坡 (Singapore) 02 R51
   - 🇸🇬 新加坡 (Singapore) 03 R51
-  - 🇸🇬 新加坡 (Singapore) 04
-  - 🇸🇬 新加坡 (Singapore) 05 R51
+  - 🇸🇬 新加坡 (Singapore) 04 R51
+  - 🇸🇬 新加坡 (Singapore) 05
   - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R41
+  - 🇸🇬 新加坡 (Singapore) 07
   - 🇸🇬 新加坡 (Singapore) 08
-  - 🇸🇬 新加坡 (Singapore) 09
-  - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11 R51
-  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 09 R51
+  - 🇸🇬 新加坡 (Singapore) 10 R54
+  - 🇸🇬 新加坡 (Singapore) 11 R54
+  - 🇸🇬 新加坡 (Singapore) 12 R54
   - 🇸🇬 新加坡 (Singapore) 13
   - 🇸🇬 新加坡 (Singapore) 14
-  - 🇸🇬 新加坡 (Singapore) 15 R51
-  - 🇸🇬 新加坡 (Singapore) 16
-  - 🇸🇬 新加坡 (Singapore) 17 R54
-  - 🇸🇬 新加坡 (Singapore) 18 R54
+  - 🇸🇬 新加坡 (Singapore) 15
+  - 🇸🇬 新加坡 (Singapore) 16 R41
+  - 🇸🇬 新加坡 (Singapore) 17
+  - 🇸🇬 新加坡 (Singapore) 18
   - 🇸🇬 新加坡 (Singapore) 19
   - 🇸🇬 新加坡 (Singapore) 20
   - 🇸🇬 新加坡 (Singapore) 21

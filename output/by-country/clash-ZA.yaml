@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇿🇦 南非 (South Africa) 01
-  server: 34.35.189.111
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4758aee6-6d1a-4306-b460-2398b5af4e35
-  tls: true
-  reality-opts:
-    public-key: dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4
-    short-id: 5ced03e42cc31aab
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇿🇦 南非 (South Africa) 02
   server: 34.35.186.228
   port: 443
   udp: true
@@ -34,13 +22,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇿🇦 南非 (South Africa) 01
-  - 🇿🇦 南非 (South Africa) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇿🇦 南非 (South Africa) 01
-  - 🇿🇦 南非 (South Africa) 02
 rules:
 - MATCH,PROXIES
