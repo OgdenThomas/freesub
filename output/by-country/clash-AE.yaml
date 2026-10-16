@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 31.59.210.32
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA
-    short-id: 7ec4374ffc6308fd
-  servername: www.yandex.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 02
   server: 31.59.210.26
   port: 2088
   udp: true
@@ -31,6 +16,21 @@ proxies:
     short-id: b1ad165f903c62fe
   servername: www.yandex.ru
   client-fingerprint: ios
+  network: grpc
+  grpc-opts:
+    grpc-service-name: astracat
+- name: 🇦🇪 阿联酋 (UAE) 02
+  server: 31.59.210.32
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
+  tls: true
+  reality-opts:
+    public-key: qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA
+    short-id: 7ec4374ffc6308fd
+  servername: www.yandex.ru
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: astracat
@@ -50,6 +50,19 @@ proxies:
   grpc-opts:
     grpc-service-name: astracat
 - name: 🇦🇪 阿联酋 (UAE) 04
+  server: mog.keyblack.site
+  port: 8444
+  udp: true
+  type: vless
+  uuid: ef8c7169-87fc-49ad-be91-1f3984ab446d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DQGwrxOgoiyBDrbdFUofP88FGtxHDA2duzNXKkyxaig
+    short-id: 6ba85179e30d4fc2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 05
   server: 45.59.120.217
   port: 443
   udp: true
@@ -70,6 +83,7 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
   - 🇦🇪 阿联酋 (UAE) 04
+  - 🇦🇪 阿联酋 (UAE) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -79,5 +93,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02
   - 🇦🇪 阿联酋 (UAE) 03
   - 🇦🇪 阿联酋 (UAE) 04
+  - 🇦🇪 阿联酋 (UAE) 05
 rules:
 - MATCH,PROXIES

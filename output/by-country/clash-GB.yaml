@@ -5,29 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 193.188.21.253
-  port: 10444
+  server: 138.124.90.177
+  port: 10443
   udp: true
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
+- name: 🇬🇧 英国 (United Kingdom) 02 R70
+  server: 195.72.166.251
+  port: 443
+  udp: true
+  type: vless
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 193.188.21.253
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
+    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
+    short-id: 25349b36802f
+  servername: www.lloydsbankinggroup.com
+  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 31.59.217.164
   port: 443
@@ -42,18 +37,16 @@ proxies:
   servername: www.adobe.com
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 04
-  server: 138.124.125.193
-  port: 10444
+  server: 193.188.21.253
+  port: 14430
   udp: true
   type: vless
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: ads.x5.ru
-  client-fingerprint: safari
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 193.188.21.253
 - name: 🇬🇧 英国 (United Kingdom) 05
   server: 213.176.92.168
   port: 14430
@@ -65,8 +58,63 @@ proxies:
     path: /vless
     headers:
       Host: 213.176.92.168
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 104.238.2.82
+- name: 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  server: 172.67.137.209
+  port: 443
+  udp: true
+  type: vmess
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: ukl.lovehk.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /London31
+    headers:
+      Host: ukl.lovehk.xyz
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 193.188.21.253
+  port: 10444
+  udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 08
+  server: 213.176.92.168
+  port: 10444
+  udp: true
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇬🇧 英国 (United Kingdom) 09
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 10
+  server: sql.popmintxo.cc
   port: 443
   udp: true
   type: vless
@@ -78,27 +126,50 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 11
+  server: 107.181.151.128
+  port: 443
+  udp: true
+  type: vless
+  uuid: 73cb2a0d-e2a9-4e61-a343-f2845e8c272e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: 611ceeb0ae78
+  servername: www.tradingview.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R70
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 09
+  - 🇬🇧 英国 (United Kingdom) 10
+  - 🇬🇧 英国 (United Kingdom) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R70
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07
+  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 09
+  - 🇬🇧 英国 (United Kingdom) 10
+  - 🇬🇧 英国 (United Kingdom) 11
 rules:
 - MATCH,PROXIES

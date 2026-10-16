@@ -4,31 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
-  server: t4.qifei.app
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: 218.237.185.234
+  port: 4652
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  servername: s3.ap-east-1.amazonaws.com
-  client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽)
-  server: 183.109.131.75
-  port: 20086
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  server: dog-hk.kunlun01dns.com
+  port: 21021
   udp: true
   type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
@@ -39,16 +41,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
-  - 🇰🇷 韩国 (South Korea) 02 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽)
-  - 🇰🇷 韩国 (South Korea) 02 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
 rules:
 - MATCH,PROXIES
