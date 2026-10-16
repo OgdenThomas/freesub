@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
+  server: ruot.ayucloudservices.nl
+  port: 40018
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: c855b71e-f3c2-442a-9429-0844eb4346c5
+- name: 🇯🇵 日本 (Japan) 02
   server: 43.167.232.174
   port: 443
   udp: true
@@ -15,29 +22,8 @@ proxies:
     public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
     short-id: b51e057820d3e14c
   servername: www.microsoft.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 02
-  server: vp3.yysyy.online
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
+  client-fingerprint: random
 - name: 🇯🇵 日本 (Japan) 03
-  server: 142.91.108.25
-  port: 443
-  udp: true
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  servername: jp3.nztvpn.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 04
   server: t5.qifei.app
   port: 443
   udp: true
@@ -50,40 +36,35 @@ proxies:
     short-id: 1a
   servername: s3.ap-east-1.amazonaws.com
   client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 04
+  server: jp.tronsg.com
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: jp.tronsg.com
+  skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 05
-  server: 39.109.110.80
-  port: 27916
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
-    short-id: 6772eb2b7a
-  servername: cdn-dynmedia-1.microsoft.com
-  client-fingerprint: random
-- name: 🇯🇵 日本 (Japan) 06
-  server: oc.imfun.fun
-  port: 18112
-  udp: true
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-  alterId: 0
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 07
-  server: t9.qifei.app
+  server: 142.91.108.25
   port: 443
   udp: true
   type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
-  servername: www.amazon.com
-  client-fingerprint: random
+    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
+    short-id: ea36c03d86f91287
+  servername: jp3.nztvpn.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 06
+  server: vp3.yysyy.online
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -95,7 +76,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
-  - 🇯🇵 日本 (Japan) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -107,6 +87,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
-  - 🇯🇵 日本 (Japan) 07
 rules:
 - MATCH,PROXIES

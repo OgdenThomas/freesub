@@ -4,27 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇺 澳大利亚 (Australia) 01
-  server: 192.9.175.191
-  port: 20000
+- name: 🇦🇺 澳大利亚 (Australia) 01 R62
+  server: 172.67.195.146
+  port: 443
   udp: true
-  type: hysteria2
-  password: a34f3990b69f44bfa0d32385
-  sni: rmgyvpn.rest
+  type: vmess
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: aus.lovehk.xyz
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: a34f3990b69f44bfa0d32385
+  network: ws
+  ws-opts:
+    path: /Sydney3
+    headers:
+      Host: aus.lovehk.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇦🇺 澳大利亚 (Australia) 01 R62
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇦🇺 澳大利亚 (Australia) 01 R62
 rules:
 - MATCH,PROXIES
