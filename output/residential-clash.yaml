@@ -4,36 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: p141.panda001.net
-  port: 4652
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16112
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- name: 🇺🇸 美国 (United States) 03 (家宽)
-  server: 104.21.78.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5ffee9b2-4514-4719-97b3-67810ece038d
-  tls: true
-  servername: ali-panel-1.terhav.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vertex
-    headers:
-      Host: ali-panel-1.terhav.workers.dev
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
-  server: hinet1.2yly.com
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  server: 118.167.219.24
   port: 24215
   udp: true
   type: vless
@@ -42,24 +22,33 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
+  server: 183.109.131.75
+  port: 20086
+  udp: true
+  type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇺🇸 美国 (United States) 03 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇰🇷 韩国 (South Korea) 03 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇺🇸 美国 (United States) 03 (家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽)
+  - 🇰🇷 韩国 (South Korea) 03 (家宽)
 rules:
 - MATCH,PROXIES

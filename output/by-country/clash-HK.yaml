@@ -5,8 +5,8 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16113
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16114
   udp: true
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
@@ -20,19 +20,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 6qmp91myp2jj13dt
 - name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 82.29.36.250
-  port: 443
-  udp: true
-  type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-    short-id: 09353d6dc5b789
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 103.180.20.132
   port: 20002
   udp: true
@@ -45,6 +32,19 @@ proxies:
     short-id: c0196c432a03dcb5
   servername: www.cloudflare.com
   client-fingerprint: safari
+- name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: hk03.ccdn3.work
+  port: 798
+  udp: true
+  type: vless
+  uuid: fc12fb20-4380-11ec-8c97-d707e267af0b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: czEoNozTky8HvZ2j4Tnkr6c9L-rAhsdoaBvEz1vjAkU
+    short-id: 6aa9279c1fbab9c9
+  servername: i1.hdslb.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 05
   server: yg1.ygkkk.dpdns.org
   port: 443
@@ -62,13 +62,18 @@ proxies:
     headers:
       Host: jmp1.907737.xyz
 - name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 2.27.109.179
-  port: 45464
+  server: 3696b38bsg.murphyweb.sbs
+  port: 32134
   udp: true
-  type: trojan
-  password: XuMweB2PWs
-  sni: 2.27.109.179.sslip.io
-  skip-cert-verify: false
+  type: vless
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+  servername: buylite.music.apple.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
