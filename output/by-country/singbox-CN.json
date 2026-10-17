@@ -4,26 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇸 冰岛 (Iceland) 01",
-      "server": "b2a2.velqixa.ir",
-      "server_port": 39221,
-      "method": "chacha20-ietf-poly1305",
-      "password": "Pzlcb_PeV3uRgiC2NNoNKw"
+      "type": "vmess",
+      "tag": "🇨🇳 CN 01",
+      "server": "120.48.133.162",
+      "server_port": 10086,
+      "uuid": "4fc543d5-23ce-4556-ae2b-01685edd4397",
+      "security": "auto",
+      "transport": {
+        "type": "ws"
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇸 冰岛 (Iceland) 01"
+        "🇨🇳 CN 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇸 冰岛 (Iceland) 01"
+        "🇨🇳 CN 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

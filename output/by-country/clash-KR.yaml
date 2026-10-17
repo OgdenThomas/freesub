@@ -5,39 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 13.124.9.166
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  network: h2
-  h2-opts:
-    host: []
-    path: /
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: 218.237.185.234
-  port: 4652
+  server: 49.254.204.133
+  port: 1774
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 03
-  server: 43.201.100.203
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: optimum-snapper.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 04
-  server: pure-kodiak.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: pure-kodiak.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 05
+  password: 1234!@#$
+- name: 🇰🇷 韩国 (South Korea) 02
   server: 64.176.231.183
   port: 443
   udp: true
@@ -50,23 +24,7 @@ proxies:
     short-id: ca193e889d958f81
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 06
-  server: 3.35.168.225
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: noted-cougar.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 07
-  server: central-jawfish.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: central-jawfish.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 08
+- name: 🇰🇷 韩国 (South Korea) 03
   server: 3.34.131.153
   port: 443
   udp: true
@@ -74,6 +32,73 @@ proxies:
   password: UX82473651
   sni: pretty-rat.rooster465.autos
   skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: 13.124.9.166
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇰🇷 韩国 (South Korea) 05
+  server: 43.203.219.68
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇰🇷 韩国 (South Korea) 06
+  server: 218.237.185.234
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇰🇷 韩国 (South Korea) 07
+  server: pure-kodiak.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: pure-kodiak.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 08
+  server: 3.34.192.47
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: central-jawfish.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 09
+  server: noted-cougar.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: UX82473651
+  sni: noted-cougar.rooster465.autos
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 10
+  server: jp4.998998.best
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nat12.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vvvvvvvvv
+    headers:
+      Host: nat12.9966338.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -87,6 +112,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 06
   - 🇰🇷 韩国 (South Korea) 07
   - 🇰🇷 韩国 (South Korea) 08
+  - 🇰🇷 韩国 (South Korea) 09
+  - 🇰🇷 韩国 (South Korea) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -100,5 +127,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 06
   - 🇰🇷 韩国 (South Korea) 07
   - 🇰🇷 韩国 (South Korea) 08
+  - 🇰🇷 韩国 (South Korea) 09
+  - 🇰🇷 韩国 (South Korea) 10
 rules:
 - MATCH,PROXIES

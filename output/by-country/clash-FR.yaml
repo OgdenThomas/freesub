@@ -5,100 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 02
   server: 37.148.203.124
   port: 12238
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 03 R41
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 04
-  server: 172.64.152.23
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 05
-  server: 5.253.189.238
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06
-  server: 45.87.41.18
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07 R43
-  server: skycitybox-bidarbash.sbs
-  port: 443
+- name: 🇫🇷 法国 (France) 02 R43
+  server: 51.75.118.149
+  port: 20016
   udp: true
   type: vless
-  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
-  tls: true
-  servername: skycitybox-bidarbash.sbs
-  skip-cert-verify: false
+  uuid: e558719d-e09b-442c-a0c4-f9471fcc3075
   network: ws
   ws-opts:
-    path: /zoodi
+    path: /alibodama-ws
     headers:
-      Host: skycitybox-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 08
-  server: 213.1.145.50
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 09
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 10
+      Host: 51.75.118.149
+- name: 🇫🇷 法国 (France) 03
   server: 155.103.71.142
   port: 443
   udp: true
@@ -109,7 +33,40 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 11
+- name: 🇫🇷 法国 (France) 04
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 05
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 06
+  server: 85.31.102.163
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 07
   server: 5.78.92.27
   port: 8443
   udp: true
@@ -126,31 +83,23 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 02 R43
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07 R43
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 02 R43
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07 R43
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 07
 rules:
 - MATCH,PROXIES

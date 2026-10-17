@@ -4,24 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇸 冰岛 (Iceland) 01
-  server: b2a2.velqixa.ir
-  port: 39221
+- name: 🇨🇳 CN 01
+  server: 120.48.133.162
+  port: 10086
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Pzlcb_PeV3uRgiC2NNoNKw
+  type: vmess
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇸 冰岛 (Iceland) 01
+  - 🇨🇳 CN 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇸 冰岛 (Iceland) 01
+  - 🇨🇳 CN 01
 rules:
 - MATCH,PROXIES
