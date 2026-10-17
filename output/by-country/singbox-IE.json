@@ -1,0 +1,77 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 01",
+      "server": "18.171.245.198",
+      "server_port": 443,
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 02",
+      "server": "3.8.150.222",
+      "server_port": 443,
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 03",
+      "server": "34.253.212.171",
+      "server_port": 443,
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 04",
+      "server": "34.245.208.137",
+      "server_port": 443,
+      "uuid": "7060231d-b9ba-495f-a218-bf427940cf3e",
+      "transport": {
+        "type": "http"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇪 爱尔兰 (Ireland) 01",
+        "🇮🇪 爱尔兰 (Ireland) 02",
+        "🇮🇪 爱尔兰 (Ireland) 03",
+        "🇮🇪 爱尔兰 (Ireland) 04"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇪 爱尔兰 (Ireland) 01",
+        "🇮🇪 爱尔兰 (Ireland) 02",
+        "🇮🇪 爱尔兰 (Ireland) 03",
+        "🇮🇪 爱尔兰 (Ireland) 04"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

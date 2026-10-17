@@ -5,24 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽)",
-      "server": "172.66.47.45",
-      "server_port": 2083,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "🇬🇷 希腊 (Greece) 01",
+      "server": "85.90.197.220",
+      "server_port": 443,
+      "uuid": "8f704ed6-9a1a-4d04-94dd-1bff501716de",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "wk1.f1w.de5.net",
-        "insecure": false,
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "wk1.f1w.de5.net"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4",
+          "short_id": "94acb54627612d43"
         }
       }
     },
@@ -31,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇬🇷 希腊 (Greece) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇬🇷 希腊 (Greece) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

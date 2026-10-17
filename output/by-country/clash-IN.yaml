@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
-  server: 172.105.39.124
-  port: 7002
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 🇮🇳 印度 (India) 02
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -28,13 +21,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01
-  - 🇮🇳 印度 (India) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01
-  - 🇮🇳 印度 (India) 02
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇹 奥地利 (Austria) 01
+  server: kozyavka.yandex-api.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
+    short-id: a9dc98a7dc87a7dc
+  servername: kozyavka.yandex-api.com
+  client-fingerprint: random
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇹 奥地利 (Austria) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇹 奥地利 (Austria) 01
+rules:
+- MATCH,PROXIES

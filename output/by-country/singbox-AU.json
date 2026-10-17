@@ -4,8 +4,24 @@
   },
   "outbounds": [
     {
+      "type": "hysteria2",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01",
+      "server": "137.23.2.56",
+      "server_port": 20000,
+      "password": "b42d90fa667942aebc734d60",
+      "tls": {
+        "enabled": true,
+        "server_name": "rmgyvpn.rest",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "b42d90fa667942aebc734d60"
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇦🇺 澳大利亚 (Australia) 01 R62",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 R62",
       "server": "172.67.195.146",
       "server_port": 443,
       "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
@@ -24,36 +40,20 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇦🇺 澳大利亚 (Australia) 02",
-      "server": "137.23.2.56",
-      "server_port": 20000,
-      "password": "b42d90fa667942aebc734d60",
-      "tls": {
-        "enabled": true,
-        "server_name": "rmgyvpn.rest",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "b42d90fa667942aebc734d60"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01 R62",
-        "🇦🇺 澳大利亚 (Australia) 02"
+        "🇦🇺 澳大利亚 (Australia) 01",
+        "🇦🇺 澳大利亚 (Australia) 02 R62"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01 R62",
-        "🇦🇺 澳大利亚 (Australia) 02"
+        "🇦🇺 澳大利亚 (Australia) 01",
+        "🇦🇺 澳大利亚 (Australia) 02 R62"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
