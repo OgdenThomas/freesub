@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 塞舌尔 (Seychelles) 01
+  server: ld.235231.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  tls: true
+  servername: ld.235231.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ld.235231.xyz
+- name: 🇸🇨 塞舌尔 (Seychelles) 02
   server: hk3n.wxgqlfx.vip
   port: 35193
   udp: true
@@ -23,11 +37,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇨 塞舌尔 (Seychelles) 01
+  - 🇸🇨 塞舌尔 (Seychelles) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 塞舌尔 (Seychelles) 01
+  - 🇸🇨 塞舌尔 (Seychelles) 02
 rules:
 - MATCH,PROXIES

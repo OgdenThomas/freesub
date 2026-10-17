@@ -4,42 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01
+- name: 🇫🇷 法国 (France) 01 R41
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
+- name: 🇫🇷 法国 (France) 02
   server: 37.148.203.124
   port: 12238
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 02 R41
+- name: 🇫🇷 法国 (France) 03 R41
   server: 54.36.174.140
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e5c65ph
-- name: 🇫🇷 法国 (France) 03
-  server: 46.226.166.208
+- name: 🇫🇷 法国 (France) 04
+  server: 138.124.70.41
   port: 14430
   udp: true
   type: vless
-  uuid: af827fd0-6381-426f-bc5e-dcd9a7baeaac
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   network: ws
   ws-opts:
     path: /vless
-- name: 🇫🇷 法国 (France) 04
-  server: 162.159.244.91
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+    headers:
+      Host: 138.124.70.41
 - name: 🇫🇷 法国 (France) 05
-  server: 185.220.100.168
+  server: www.speedtest.net
   port: 443
   udp: true
   type: trojan
@@ -50,18 +48,7 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 06
-  server: 212.227.144.37
-  port: 8443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07
-  server: 91.245.225.79
+  server: 185.114.72.31
   port: 2053
   udp: true
   type: trojan
@@ -71,18 +58,7 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 08
-  server: 5.253.189.238
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 09
+- name: 🇫🇷 法国 (France) 07
   server: 45.87.41.18
   port: 443
   udp: true
@@ -93,7 +69,44 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 10 R43
+- name: 🇫🇷 法国 (France) 08
+  server: 5.78.92.27
+  port: 8443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 09
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 10
+  server: 199.232.78.160
+  port: 443
+  udp: true
+  type: vless
+  uuid: XpnTeam-14
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 11 R43
   server: skycitybox-bidarbash.sbs
   port: 443
   udp: true
@@ -102,13 +115,34 @@ proxies:
   tls: true
   servername: skycitybox-bidarbash.sbs
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /zoodi
     headers:
       Host: skycitybox-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 11
+- name: 🇫🇷 法国 (France) 12
+  server: 91.245.225.79
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 13
+  server: 85.31.102.163
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 14
   server: 155.103.71.142
   port: 443
   udp: true
@@ -119,50 +153,43 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 12
-  server: 185.253.116.33
-  port: 14430
-  udp: true
-  type: vless
-  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 185.253.116.33
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03
+  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03 R41
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R43
-  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11 R43
   - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13
+  - 🇫🇷 法国 (France) 14
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03
+  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03 R41
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
   - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R43
-  - 🇫🇷 法国 (France) 11
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11 R43
   - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 13
+  - 🇫🇷 法国 (France) 14
 rules:
 - MATCH,PROXIES

@@ -4,33 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+- name: 🇺🇸 美国 (United States) 01 (移动家宽)
+  server: 172.66.47.45
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: wk1.f1w.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wk1.f1w.de5.net
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽)
   server: 218.237.185.234
   port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21021
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  server: hinet1.2yly.com
-  port: 24215
-  udp: true
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
   server: test.keoplentuio.xyz
   port: 2053
   udp: true
@@ -41,18 +37,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽)
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 02 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽)
 rules:
 - MATCH,PROXIES

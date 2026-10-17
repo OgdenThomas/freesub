@@ -6,6 +6,12 @@ log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01
   server: 5.253.29.254
+  port: 10443
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02
+  server: 5.253.29.254
   port: 14430
   udp: true
   type: vless
@@ -21,11 +27,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 02
 rules:
 - MATCH,PROXIES
