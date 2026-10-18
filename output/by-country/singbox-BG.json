@@ -1,0 +1,51 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 01",
+      "server": "p2real4.greewebservices.ir",
+      "server_port": 1340,
+      "uuid": "cc1af2a1-4d1a-42c9-99df-7303b267f967",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.googleapis.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8",
+          "short_id": "9b60d3"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇧🇬 保加利亚 (Bulgaria) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇧🇬 保加利亚 (Bulgaria) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

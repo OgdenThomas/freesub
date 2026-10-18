@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇧🇬 保加利亚 (Bulgaria) 01
+  server: p2real4.greewebservices.ir
+  port: 1340
+  udp: true
+  type: vless
+  uuid: cc1af2a1-4d1a-42c9-99df-7303b267f967
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇧🇬 保加利亚 (Bulgaria) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇧🇬 保加利亚 (Bulgaria) 01
+rules:
+- MATCH,PROXIES

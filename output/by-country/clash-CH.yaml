@@ -17,17 +17,31 @@ proxies:
     short-id: 19253fae84102271
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 02
+  server: areal5.greewebservices.ir
+  port: 5455
+  udp: true
+  type: vless
+  uuid: cc1af2a1-4d1a-42c9-99df-7303b267f967
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: e3085d4fc679ba12
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R48
+  - 🇨🇭 瑞士 (Switzerland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R48
+  - 🇨🇭 瑞士 (Switzerland) 02
 rules:
 - MATCH,PROXIES

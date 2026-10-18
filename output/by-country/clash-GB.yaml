@@ -5,25 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 191.215.46.37
+  server: 31.59.217.164
   port: 443
   udp: true
-  type: hysteria2
-  password: b3a11068-1a7e-4643-85de-7c82cce46943
-  sni: uk.shamanapp.online
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 138.124.125.193
-  port: 10444
-  udp: true
   type: vless
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: ads.x5.ru
+    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
+    short-id: 1625a2a79d01328f
+  servername: www.adobe.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 23.81.36.148
+  port: 1222
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: play.google.com
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 193.188.21.253
@@ -37,6 +41,19 @@ proxies:
     headers:
       Host: 193.188.21.253
 - name: 🇬🇧 英国 (United Kingdom) 04
+  server: 138.124.125.193
+  port: 10444
+  udp: true
+  type: vless
+  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 213.176.92.168
   port: 14430
   udp: true
@@ -47,17 +64,6 @@ proxies:
     path: /vless
     headers:
       Host: 213.176.92.168
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: britaniapnl.mamadhpbot.ir
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 732ec777-bf4a-4fee-835a-25d6a8b58563
-  network: ws
-  ws-opts:
-    path: /real
-    headers:
-      Host: britaniapnl.mamadhpbot.ir
 - name: 🇬🇧 英国 (United Kingdom) 06
   server: 193.188.21.253
   port: 10444
@@ -71,64 +77,7 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
   client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 07 ⚠R
-  server: 172.67.137.209
-  port: 443
-  udp: true
-  type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: ukl.lovehk.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /London31
-    headers:
-      Host: ukl.lovehk.xyz
-- name: 🇬🇧 英国 (United Kingdom) 08
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: 188.114.96.25
-  port: 443
-  udp: true
-  type: vless
-  uuid: ed6c724c-435f-4f83-a781-f57579af320b
-  tls: true
-  servername: gbi.els1v0u3t31v.info
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /9d9fdbc18c834cffab4276811501fbae
-    headers:
-      Host: gbi.els1v0u3t31v.info
-- name: 🇬🇧 英国 (United Kingdom) 10
-  server: reaza.localip.ir
-  port: 443
-  udp: true
-  type: vless
-  uuid: ed6c724c-435f-4f83-a781-f57579af320b
-  tls: true
-  servername: gbi.els1v0u3t31v.info
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /9d9fdbc18c834cffab4276811501fbae
-    headers:
-      Host: gbi.els1v0u3t31v.info
-- name: 🇬🇧 英国 (United Kingdom) 11
+- name: 🇬🇧 英国 (United Kingdom) 07
   server: sql.popmintxo.cc
   port: 443
   udp: true
@@ -141,18 +90,18 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 12
+- name: 🇬🇧 英国 (United Kingdom) 08
   server: webdisk.jaggyslawa.org
   port: 443
   udp: true
   type: vless
-  uuid: 8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435
+  uuid: 75113671-63e3-452d-87d3-261a37e8b472
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 87174b37ce3b
-  servername: www.microsoft.com
+    short-id: baf023e1026a
+  servername: www.mozilla.org
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -165,12 +114,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -182,11 +127,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12
 rules:
 - MATCH,PROXIES

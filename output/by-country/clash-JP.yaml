@@ -5,7 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: platform118.golnamakcert.top
+  server: 130.94.67.50
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform113
+    headers:
+      Host: platform113.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 02
+  server: platform101.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform101
+    headers:
+      Host: platform101.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 03
+  server: 142.91.108.25
+  port: 443
+  udp: true
+  type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
+    short-id: ea36c03d86f91287
+  servername: jp3.nztvpn.com
+  client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 04
+  server: 130.94.67.180
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 05
+  server: 130.94.67.40
   port: 80
   udp: true
   type: vless
@@ -15,20 +61,20 @@ proxies:
     path: /platform118
     headers:
       Host: platform118.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 02
-  server: 141.11.138.132
+- name: 🇯🇵 日本 (Japan) 06
+  server: t5.qifei.app
   port: 443
   udp: true
   type: vless
-  uuid: b47cc98c-54f4-4ab2-acb9-b493a04ccc6b
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Kb511WMVMJe1nImN8kCi9PdPQSGu3aZCrffMOvzv43A
-    short-id: f9ca9286d0ff8920
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 03
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: 1a
+  servername: s3.ap-east-1.amazonaws.com
+  client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 07
   server: 43.167.232.174
   port: 443
   udp: true
@@ -39,9 +85,20 @@ proxies:
     public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
     short-id: b51e057820d3e14c
   servername: www.microsoft.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 04
-  server: 130.94.65.201
+  client-fingerprint: random
+- name: 🇯🇵 日本 (Japan) 08
+  server: platform102.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform102
+    headers:
+      Host: platform102.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 09
+  server: platform115.golnamakcert.top
   port: 80
   udp: true
   type: vless
@@ -51,37 +108,53 @@ proxies:
     path: /platform115
     headers:
       Host: platform115.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 05
-  server: platform113.golnamakcert.top
+- name: 🇯🇵 日本 (Japan) 10
+  server: platform103.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform113
+    path: /platform103
     headers:
-      Host: platform113.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 06
-  server: 45.32.10.7
+      Host: platform103.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 11
+  server: jp.tronsg.com
   port: 443
   udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
+  type: trojan
+  password: Trojan@82164024
+  sni: jp.tronsg.com
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 07
-  server: platform117.golnamakcert.top
-  port: 80
+- name: 🇯🇵 日本 (Japan) 12
+  server: 39.109.110.80
+  port: 27916
   udp: true
   type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: 6772eb2b7a
+  servername: cdn-dynmedia-1.microsoft.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 13
+  server: 188.114.98.0
+  port: 443
+  udp: true
+  type: vless
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  tls: true
+  servername: jp.lovehk.xyz
+  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /platform117
+    path: /Tokyo1
     headers:
-      Host: platform117.halalkhor.info
-- name: 🇯🇵 日本 (Japan) 08
+      Host: jp.lovehk.xyz
+- name: 🇯🇵 日本 (Japan) 14
   server: jp5.998998.best
   port: 443
   udp: true
@@ -97,51 +170,14 @@ proxies:
     path: /ieusrdgfhteuirgfiuws
     headers:
       Host: server11.9966338.xyz
-- name: 🇯🇵 日本 (Japan) 09
-  server: 18.183.215.124
-  port: 28573
+- name: 🇯🇵 日本 (Japan) 15
+  server: oc.imfun.fun
+  port: 18112
   udp: true
-  type: vless
-  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-    short-id: 03653bc03be10c97
-  servername: www.sony.com
-  client-fingerprint: qq
-- name: 🇯🇵 日本 (Japan) 10
-  server: 108.61.186.37
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: jp.tronsg.com
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 11
-  server: 39.109.110.80
-  port: 27916
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
-    short-id: 6772eb2b7a
-  servername: cdn-dynmedia-1.microsoft.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 12
-  server: platform103.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform103
-    headers:
-      Host: platform103.halalkhor.info
+  type: vmess
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -159,6 +195,9 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 10
   - 🇯🇵 日本 (Japan) 11
   - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
+  - 🇯🇵 日本 (Japan) 14
+  - 🇯🇵 日本 (Japan) 15
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -176,5 +215,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 10
   - 🇯🇵 日本 (Japan) 11
   - 🇯🇵 日本 (Japan) 12
+  - 🇯🇵 日本 (Japan) 13
+  - 🇯🇵 日本 (Japan) 14
+  - 🇯🇵 日本 (Japan) 15
 rules:
 - MATCH,PROXIES

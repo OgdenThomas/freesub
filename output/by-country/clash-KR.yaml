@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
+  server: p141.panda001.net
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇰🇷 韩国 (South Korea) 02
   server: 64.176.231.183
   port: 443
   udp: true
@@ -17,62 +24,6 @@ proxies:
     short-id: ca193e889d958f81
   servername: www.apple.com
   client-fingerprint: random
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: noted-cougar.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: noted-cougar.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 03
-  server: 43.201.100.203
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: optimum-snapper.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 04
-  server: 3.34.131.153
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: pretty-rat.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 05
-  server: main-fawn.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: main-fawn.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 06
-  server: pure-kodiak.rooster465.autos
-  port: 443
-  udp: true
-  type: trojan
-  password: UX82473651
-  sni: pure-kodiak.rooster465.autos
-  skip-cert-verify: false
-- name: 🇰🇷 韩国 (South Korea) 07
-  server: jp4.998998.best
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: nat12.9966338.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vvvvvvvvv
-    headers:
-      Host: nat12.9966338.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,11 +31,6 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
-  - 🇰🇷 韩国 (South Korea) 04
-  - 🇰🇷 韩国 (South Korea) 05
-  - 🇰🇷 韩国 (South Korea) 06
-  - 🇰🇷 韩国 (South Korea) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -92,10 +38,5 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
-  - 🇰🇷 韩国 (South Korea) 03
-  - 🇰🇷 韩国 (South Korea) 04
-  - 🇰🇷 韩国 (South Korea) 05
-  - 🇰🇷 韩国 (South Korea) 06
-  - 🇰🇷 韩国 (South Korea) 07
 rules:
 - MATCH,PROXIES

@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 152.233.71.81
-  port: 443
-  udp: true
-  type: vless
-  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: 1c3e8241a8743df9
-  servername: brointelengence.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -28,28 +15,17 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 200.181.82.92
-  port: 21940
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 0dad9116-eb88-47b6-98dd-67c9ed43afa6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
-  - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
-  - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

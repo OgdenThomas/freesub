@@ -11,21 +11,7 @@ proxies:
   type: ss
   cipher: aes-128-gcm
   password: 6163d9d532e40f417dd8ebb5f9716495
-- name: 🇫🇷 法国 (France) 02 R41
-  server: pl140.vpnbook.com
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 03 R41
-  server: pl134.vpnbook.com
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: e5c65ph
-- name: 🇫🇷 法国 (France) 04
+- name: 🇫🇷 法国 (France) 02
   server: 138.124.70.41
   port: 14430
   udp: true
@@ -36,9 +22,9 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 05
-  server: www.calmlunch.com
-  port: 443
+- name: 🇫🇷 法国 (France) 03
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -47,49 +33,38 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 06 ⚠R
-  server: ru3.radiolumens.uk
-  port: 8444
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru3.radiolumens.uk
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-uk
-- name: 🇫🇷 法国 (France) 07
-  server: 167.104.216.230
+- name: 🇫🇷 法国 (France) 04 R43
+  server: redcloudport-bidarbash.sbs
   port: 443
   udp: true
-  type: hysteria2
-  password: dd1b14f6-d290-428b-8d22-12105541c4c9
-  sni: fr167230.cdn-video.pro
+  type: vless
+  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
+  tls: true
+  servername: redcloudport-bidarbash.sbs
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /zoodi
+    headers:
+      Host: redcloudport-bidarbash.sbs
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 ⚠R
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03
+  - 🇫🇷 法国 (France) 04 R43
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 ⚠R
-  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03
+  - 🇫🇷 法国 (France) 04 R43
 rules:
 - MATCH,PROXIES

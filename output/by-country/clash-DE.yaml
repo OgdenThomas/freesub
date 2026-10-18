@@ -14,7 +14,7 @@ proxies:
   cipher: auto
   network: httpupgrade
 - name: 🇩🇪 德国 (Germany) 02
-  server: 2.27.35.55
+  server: 2.27.69.128
   port: 443
   udp: true
   type: vless
@@ -25,8 +25,21 @@ proxies:
     public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
     short-id: e696e744
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: randomized
 - name: 🇩🇪 德国 (Germany) 03
+  server: 31.70.111.146
+  port: 443
+  udp: true
+  type: vless
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇩🇪 德国 (Germany) 04
   server: 82.118.19.153
   port: 443
   udp: true
@@ -39,20 +52,32 @@ proxies:
     short-id: 670ed9f350bd8ee0
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04
-  server: 31.70.111.146
+- name: 🇩🇪 德国 (Germany) 05
+  server: 91.107.247.173
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 06
+  server: 179.61.145.245
   port: 443
   udp: true
   type: vless
-  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
-    short-id: d7de3a6ff4018957
-  servername: www.apple.com
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
+  servername: de2.srv.vbuste.ru
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 07
   server: 2.27.69.117
   port: 443
   udp: true
@@ -65,33 +90,42 @@ proxies:
     short-id: 123c2bff
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 06
-  server: 46.28.69.123
+- name: 🇩🇪 德国 (Germany) 08
+  server: 91.107.130.73
+  port: 29163
+  udp: true
+  type: vmess
+  uuid: telegram-id-----MiMiTDL-----
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /index.php
+    headers:
+      Host: dynu.com
+- name: 🇩🇪 德国 (Germany) 09
+  server: de8.dedushka.top
+  port: 443
+  udp: true
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: de8.dedushka.top
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 10
+  server: 144.31.215.162
   port: 443
   udp: true
   type: vless
-  uuid: b945f9aa-1b45-4912-aa7e-248509472bad
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 7KnJYp2-sE3o35mnbSZzX3fNg-ns9n8xyNfkRSHCD3E
-    short-id: 238e23c5150f02e4
-  servername: gateway.icloud.com
+    public-key: kqKpUiLtm5SPT2NO5Ss4LuH9xpTOxi79UJZWURwulwI
+    short-id: 547f159030aedc64
+  servername: c1.qwyak.ru
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 07
-  server: 91.107.247.173
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 08
-  server: hoert1rert.localip.ir
+- name: 🇩🇪 德国 (Germany) 11
+  server: 46.225.46.136
   port: 2087
   udp: true
   type: vless
@@ -99,12 +133,13 @@ proxies:
   tls: true
   servername: hoert1rert.localip.ir
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /hokm
     headers:
       Host: hoert1rert.localip.ir
-- name: 🇩🇪 德国 (Germany) 09
+- name: 🇩🇪 德国 (Germany) 12
   server: de-d21e56c13c.shamanapp.online
   port: 33744
   udp: true
@@ -117,6 +152,18 @@ proxies:
     path: /ShamanVMESS2026
     headers:
       Host: de-d21e56c13c.shamanapp.online:33744
+- name: 🇩🇪 德国 (Germany) 13
+  server: 185.125.50.181
+  port: 443
+  udp: true
+  type: vless
+  uuid: ee3de8a9-ce8a-4316-b128-101d0816df4d
+  tls: true
+  servername: de-game.pink-service.ru
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: degrpc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -131,6 +178,10 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -145,5 +196,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
 rules:
 - MATCH,PROXIES
