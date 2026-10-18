@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
+  server: spain.unixzone.us
+  port: 36326
+  udp: true
+  type: vless
+  uuid: 63ff4bfa-0f1d-48e4-8314-e882b14e602c
+  network: ws
+  ws-opts:
+    path: /jdiedjiedjijd
+- name: 🇪🇸 西班牙 (Spain) 02
   server: 46.28.71.247
   port: 443
   udp: true
@@ -17,7 +26,7 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02
+- name: 🇪🇸 西班牙 (Spain) 03
   server: 193.238.154.78
   port: 443
   udp: true
@@ -37,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
   - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
 rules:
 - MATCH,PROXIES

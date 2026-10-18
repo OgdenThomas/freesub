@@ -4,61 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 (家宽)
-  server: 209.38.238.229
-  port: 20202
+- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=
-    headers:
-      Host: wzs.echo.net.eu.org
-- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  server: game.jafarghasemivip.ir
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 53373a04-2dd2-472e-af5d-d55fbffa7dbd
-  tls: true
-  servername: game.jafarghasemivip.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 03 (家宽)
-  server: 185.115.207.141
-  port: 443
-  udp: true
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HV1ZNVwcHTQsJSgAJVBQUG0dCQEwWAx4AAg4c
-    headers:
-      Host: wzs.echo.net.eu.org
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇸🇬 新加坡 (Singapore) 03 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (家宽)
-  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽)
-  - 🇸🇬 新加坡 (Singapore) 03 (家宽)
+  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
 rules:
 - MATCH,PROXIES
