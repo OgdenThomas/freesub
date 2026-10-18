@@ -4,8 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇫🇷 法国 (France) 01",
+      "server": "51.44.122.146",
+      "server_port": 22222,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 02",
       "server": "37.148.203.124",
       "server_port": 12238,
       "method": "aes-128-gcm",
@@ -13,21 +20,162 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 02 R43",
-      "server": "51.75.118.149",
-      "server_port": 20016,
-      "uuid": "e558719d-e09b-442c-a0c4-f9471fcc3075",
+      "tag": "🇫🇷 法国 (France) 03",
+      "server": "138.124.70.41",
+      "server_port": 14430,
+      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
       "transport": {
         "type": "ws",
-        "path": "/alibodama-ws",
+        "path": "/vless",
         "headers": {
-          "Host": "51.75.118.149"
+          "Host": "138.124.70.41"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 04 R41",
+      "server": "54.36.174.140",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e5c65ph"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 法国 (France) 05 R41",
+      "server": "pl134.vpnbook.com",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e5c65ph"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 06",
+      "server": "185.114.72.31",
+      "server_port": 2053,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 03",
+      "tag": "🇫🇷 法国 (France) 07",
+      "server": "185.220.100.168",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 08",
+      "server": "199.232.78.170",
+      "server_port": 443,
+      "uuid": "XpnTeam-17",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "Appxdn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 09",
+      "server": "5.253.189.238",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 10",
+      "server": "45.88.12.168",
+      "server_port": 2083,
+      "uuid": "5062e1a7-89aa-4bd0-be2a-4f4a88f6c325",
+      "tls": {
+        "enabled": true,
+        "server_name": "va.stream-room.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ws"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 11",
+      "server": "212.227.144.37",
+      "server_port": 8443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false,
+        "alpn": [
+          "v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 法国 (France) 12",
       "server": "155.103.71.142",
       "server_port": 443,
       "password": "humanity",
@@ -49,21 +197,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 04",
-      "server": "138.124.70.41",
-      "server_port": 14430,
-      "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
+      "tag": "🇫🇷 法国 (France) 13",
+      "server": "farancenew.mamadhpbot.ir",
+      "server_port": 8080,
+      "uuid": "732ec777-bf4a-4fee-835a-25d6a8b58563",
       "transport": {
         "type": "ws",
-        "path": "/vless",
+        "path": "/real",
         "headers": {
-          "Host": "138.124.70.41"
+          "Host": "farancenew.mamadhpbot.ir"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 05",
+      "tag": "🇫🇷 法国 (France) 14",
       "server": "91.245.225.79",
       "server_port": 2053,
       "password": "humanity",
@@ -82,8 +230,8 @@
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 06",
-      "server": "85.31.102.163",
+      "tag": "🇫🇷 法国 (France) 15",
+      "server": "185.255.179.166",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -100,8 +248,15 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 16",
+      "server": "51.44.122.146",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
       "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 07",
+      "tag": "🇫🇷 法国 (France) 17",
       "server": "5.78.92.27",
       "server_port": 8443,
       "password": "humanity",
@@ -124,12 +279,22 @@
       "outbounds": [
         "auto",
         "🇫🇷 法国 (France) 01",
-        "🇫🇷 法国 (France) 02 R43",
+        "🇫🇷 法国 (France) 02",
         "🇫🇷 法国 (France) 03",
-        "🇫🇷 法国 (France) 04",
-        "🇫🇷 法国 (France) 05",
+        "🇫🇷 法国 (France) 04 R41",
+        "🇫🇷 法国 (France) 05 R41",
         "🇫🇷 法国 (France) 06",
-        "🇫🇷 法国 (France) 07"
+        "🇫🇷 法国 (France) 07",
+        "🇫🇷 法国 (France) 08",
+        "🇫🇷 法国 (France) 09",
+        "🇫🇷 法国 (France) 10",
+        "🇫🇷 法国 (France) 11",
+        "🇫🇷 法国 (France) 12",
+        "🇫🇷 法国 (France) 13",
+        "🇫🇷 法国 (France) 14",
+        "🇫🇷 法国 (France) 15",
+        "🇫🇷 法国 (France) 16",
+        "🇫🇷 法国 (France) 17"
       ]
     },
     {
@@ -137,12 +302,22 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇷 法国 (France) 01",
-        "🇫🇷 法国 (France) 02 R43",
+        "🇫🇷 法国 (France) 02",
         "🇫🇷 法国 (France) 03",
-        "🇫🇷 法国 (France) 04",
-        "🇫🇷 法国 (France) 05",
+        "🇫🇷 法国 (France) 04 R41",
+        "🇫🇷 法国 (France) 05 R41",
         "🇫🇷 法国 (France) 06",
-        "🇫🇷 法国 (France) 07"
+        "🇫🇷 法国 (France) 07",
+        "🇫🇷 法国 (France) 08",
+        "🇫🇷 法国 (France) 09",
+        "🇫🇷 法国 (France) 10",
+        "🇫🇷 法国 (France) 11",
+        "🇫🇷 法国 (France) 12",
+        "🇫🇷 法国 (France) 13",
+        "🇫🇷 法国 (France) 14",
+        "🇫🇷 法国 (France) 15",
+        "🇫🇷 法国 (France) 16",
+        "🇫🇷 法国 (France) 17"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
   server: 195.123.226.21
   port: 443
   udp: true
@@ -17,31 +17,17 @@ proxies:
     short-id: 77bb0d07bddbc832
   servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 02
-  server: p1real4.greewebservices.ir
-  port: 1260
-  udp: true
-  type: vless
-  uuid: b374647d-7516-4d1e-8c85-544c7d734c1f
-  tls: true
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 9b60d3
-  servername: play.googleapis.com
-  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02
+  - 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01
-  - 🇧🇬 保加利亚 (Bulgaria) 02
+  - 🇧🇬 保加利亚 (Bulgaria) 01 ⚠R
 rules:
 - MATCH,PROXIES

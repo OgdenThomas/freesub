@@ -4,8 +4,28 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01 R62",
+      "server": "212.81.47.99",
+      "server_port": 51106,
+      "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "tls": {
+        "enabled": true,
+        "server_name": "apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "2k8UhfxEK4WSVLWUr-uRExRiTiAsacWpe6I1xrnyt38",
+          "short_id": "abcd1234"
+        }
+      }
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇦🇺 澳大利亚 (Australia) 01",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02",
       "server": "137.23.2.56",
       "server_port": 20000,
       "password": "b42d90fa667942aebc734d60",
@@ -20,18 +40,60 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇦🇺 澳大利亚 (Australia) 03",
+      "server": "137.23.27.143",
+      "server_port": 20000,
+      "password": "a34f3990b69f44bfa0d32385",
+      "tls": {
+        "enabled": true,
+        "server_name": "rmgyvpn.rest",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a34f3990b69f44bfa0d32385"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 04 R62",
+      "server": "172.67.197.71",
+      "server_port": 443,
+      "uuid": "1c22bf94-702b-49ac-8f5e-24259beed2d8",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "aus.lovehk.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Sydney3",
+        "headers": {
+          "Host": "aus.lovehk.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇦🇺 澳大利亚 (Australia) 01 R62",
+        "🇦🇺 澳大利亚 (Australia) 02",
+        "🇦🇺 澳大利亚 (Australia) 03",
+        "🇦🇺 澳大利亚 (Australia) 04 R62"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇦🇺 澳大利亚 (Australia) 01 R62",
+        "🇦🇺 澳大利亚 (Australia) 02",
+        "🇦🇺 澳大利亚 (Australia) 03",
+        "🇦🇺 澳大利亚 (Australia) 04 R62"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
