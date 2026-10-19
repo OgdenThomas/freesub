@@ -19,8 +19,21 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 5.253.29.254
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03
+  server: 2.56.175.179
+  port: 9443
+  udp: true
+  type: vless
+  uuid: 8179d7cc-82bc-4eae-a97f-5d30c6c2a812
+  tls: true
+  reality-opts:
+    public-key: 8bhS-nnIN67a292RpJsCPzXQy4CzpzOVLTPn5CiAFyg
+    short-id: 6ba7b810
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -28,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
+  - 🇨🇾 塞浦路斯 (Cyprus) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -35,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇨🇾 塞浦路斯 (Cyprus) 01
   - 🇨🇾 塞浦路斯 (Cyprus) 02
+  - 🇨🇾 塞浦路斯 (Cyprus) 03
 rules:
 - MATCH,PROXIES
