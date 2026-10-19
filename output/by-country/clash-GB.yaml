@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
+  server: 212.134.252.249
+  port: 15407
+  udp: true
+  type: vless
+  uuid: b2332eff-b231-4c10-8552-5dfad84f5521
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qO5TgVOZ6xTBvxe9_1mByF5yx4ViCuGPsDaJRvAUTBE
+    short-id: 48ebac29ede6e8f3
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 138.124.125.193
   port: 10444
   udp: true
@@ -16,20 +29,7 @@ proxies:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 31.59.217.164
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
-    short-id: 1625a2a79d01328f
-  servername: www.adobe.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 191.44.108.31
   port: 443
@@ -43,7 +43,46 @@ proxies:
     short-id: 3ba10d9ce34380c9
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 04
+- name: 🇬🇧 英国 (United Kingdom) 04 R47
+  server: 98.98.207.163
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 05 ⚠R
+  server: connect.hondamotor.site
+  port: 10002
+  udp: true
+  type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+- name: 🇬🇧 英国 (United Kingdom) 06 R50
+  server: 57.128.164.21
+  port: 80
+  udp: true
+  type: vmess
+  uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 31.59.217.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
+    short-id: 1625a2a79d01328f
+  servername: www.adobe.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 08
   server: 193.188.21.253
   port: 14430
   udp: true
@@ -54,36 +93,15 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 05 ⚠R
-  server: connect.hondamotor.site
-  port: 10002
+- name: 🇬🇧 英国 (United Kingdom) 09
+  server: uk-d9ca48498a.shamanapp.online
+  port: 443
   udp: true
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 213.176.92.168
-  port: 14430
-  udp: true
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
-- name: 🇬🇧 英国 (United Kingdom) 07 ⚠R
-  server: 151.243.101.126
-  port: 51105
-  udp: true
-  type: vless
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  tls: true
-  reality-opts:
-    public-key: _DxG0K_Hvw7qfGTtfeYm95vCBS_3E2x1gzVzfJqQGjE
-    short-id: abcd1234
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 08
+  type: hysteria2
+  password: b3a11068-1a7e-4643-85de-7c82cce46943
+  sni: uk.shamanapp.online
+  skip-cert-verify: false
+- name: 🇬🇧 英国 (United Kingdom) 10
   server: 193.188.21.253
   port: 10444
   udp: true
@@ -96,20 +114,25 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: video.yandex.ru
   client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 09
+- name: 🇬🇧 英国 (United Kingdom) 11
+  server: 98.98.142.161
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 12
   server: 213.176.92.168
-  port: 10444
+  port: 14430
   udp: true
   type: vless
   uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 10
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: 🇬🇧 英国 (United Kingdom) 13
   server: 193.163.203.170
   port: 443
   udp: true
@@ -122,20 +145,7 @@ proxies:
     short-id: b28db60d77c50b4f
   servername: yandex.ru
   client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: 144.48.11.97
-  port: 43000
-  udp: true
-  type: vless
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
-  servername: 144.48.11.97
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 12
+- name: 🇬🇧 英国 (United Kingdom) 14
   server: sql.popmintxo.cc
   port: 443
   udp: true
@@ -148,34 +158,32 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 13
+- name: 🇬🇧 英国 (United Kingdom) 15
   server: webdisk.jaggyslawa.org
   port: 443
   udp: true
   type: vless
-  uuid: 73cb2a0d-e2a9-4e61-a343-f2845e8c272e
+  uuid: 75113671-63e3-452d-87d3-261a37e8b472
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 611ceeb0ae78
-  servername: www.tradingview.com
-  client-fingerprint: edge
-- name: 🇬🇧 英国 (United Kingdom) 14 ⚠R
-  server: uk1.connectsuite.org
-  port: 443
+    short-id: baf023e1026a
+  servername: www.mozilla.org
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 16
+  server: 144.48.11.97
+  port: 43000
   udp: true
   type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
+  flow: xtls-rprx-vision
   tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
+  reality-opts:
+    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
+    short-id: 725e6ea0
+  servername: 144.48.11.97
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: uk1.connectsuite.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -184,17 +192,19 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 04 R47
   - 🇬🇧 英国 (United Kingdom) 05 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 06 R50
+  - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
   - 🇬🇧 英国 (United Kingdom) 10
   - 🇬🇧 英国 (United Kingdom) 11
   - 🇬🇧 英国 (United Kingdom) 12
   - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 14
+  - 🇬🇧 英国 (United Kingdom) 15
+  - 🇬🇧 英国 (United Kingdom) 16
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -203,16 +213,18 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 04 R47
   - 🇬🇧 英国 (United Kingdom) 05 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 06 R50
+  - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
   - 🇬🇧 英国 (United Kingdom) 10
   - 🇬🇧 英国 (United Kingdom) 11
   - 🇬🇧 英国 (United Kingdom) 12
   - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 14
+  - 🇬🇧 英国 (United Kingdom) 15
+  - 🇬🇧 英国 (United Kingdom) 16
 rules:
 - MATCH,PROXIES

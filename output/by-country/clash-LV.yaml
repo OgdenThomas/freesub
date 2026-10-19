@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01
-  server: 185.220.223.24
+  server: 185.220.223.25
   port: 443
   udp: true
   type: vless
@@ -18,19 +18,6 @@ proxies:
   servername: lv.aiage.work
   client-fingerprint: chrome
 - name: 🇱🇻 拉脱维亚 (Latvia) 02
-  server: 185.220.223.25
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
-    short-id: 3c6afdc4124d0560
-  servername: lv.aiage.work
-  client-fingerprint: firefox
-- name: 🇱🇻 拉脱维亚 (Latvia) 03 R42
   server: 195.123.208.32
   port: 443
   udp: true
@@ -50,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03 R42
 rules:
 - MATCH,PROXIES
