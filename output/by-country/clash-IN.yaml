@@ -13,17 +13,43 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 13.140.56.100
+- name: 🇮🇳 印度 (India) 02
+  server: 140.245.28.182
+  port: 443
+  udp: true
+  type: vless
+  uuid: acaaa258-e833-490b-a330-db4b97d605aa
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sE7iHMdyFUNBBSGfqDm_XdIIgeEv734REAGl6oP-XAQ
+    short-id: 6c782575
+  servername: updates.cdn-apple.com
+  client-fingerprint: ios
+- name: 🇮🇳 印度 (India) 03
+  server: 172.105.39.124
+  port: 7002
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
+  - 🇮🇳 印度 (India) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
+  - 🇮🇳 印度 (India) 03
 rules:
 - MATCH,PROXIES

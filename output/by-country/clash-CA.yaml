@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01
-  server: 138.197.141.58
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02
   server: 103.106.229.37
   port: 21004
   udp: true
@@ -21,6 +14,18 @@ proxies:
   reality-opts:
     public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
     short-id: 2df2bd9d8366cef1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 02
+  server: 511.150333.xyz
+  port: 21002
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 3ab8d93dd9b1a5be
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 03
@@ -47,19 +52,7 @@ proxies:
     short-id: bab49aa4c2a88d27
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 05
-  server: 511.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: 3ab8d93dd9b1a5be
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 06 R51
+- name: 🇨🇦 加拿大 (Canada) 05 R51
   server: milo.rubinaz.xyz
   port: 8080
   udp: true
@@ -74,8 +67,7 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 02
   - 🇨🇦 加拿大 (Canada) 03
   - 🇨🇦 加拿大 (Canada) 04
-  - 🇨🇦 加拿大 (Canada) 05
-  - 🇨🇦 加拿大 (Canada) 06 R51
+  - 🇨🇦 加拿大 (Canada) 05 R51
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,7 +77,6 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 02
   - 🇨🇦 加拿大 (Canada) 03
   - 🇨🇦 加拿大 (Canada) 04
-  - 🇨🇦 加拿大 (Canada) 05
-  - 🇨🇦 加拿大 (Canada) 06 R51
+  - 🇨🇦 加拿大 (Canada) 05 R51
 rules:
 - MATCH,PROXIES

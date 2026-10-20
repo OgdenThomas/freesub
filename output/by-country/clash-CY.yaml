@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01
-  server: 5.253.29.254
-  port: 10443
-  udp: true
-  type: vless
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-- name: 🇨🇾 塞浦路斯 (Cyprus) 02
-  server: 5.253.29.254
-  port: 14430
-  udp: true
-  type: vless
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇨🇾 塞浦路斯 (Cyprus) 03
   server: 2.56.175.179
   port: 9443
   udp: true
@@ -34,6 +19,23 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02
+  server: 5.253.29.254
+  port: 10443
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+- name: 🇨🇾 塞浦路斯 (Cyprus) 03
+  server: 5.253.29.254
+  port: 14430
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
 proxy-groups:
 - name: PROXIES
   type: select
