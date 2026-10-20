@@ -24,18 +24,40 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02 R62",
+      "server": "199.34.228.160",
+      "server_port": 8443,
+      "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "aus.frnhk.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Sydney3",
+        "headers": {
+          "Host": "aus.frnhk.xyz"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01 R62"
+        "🇦🇺 澳大利亚 (Australia) 01 R62",
+        "🇦🇺 澳大利亚 (Australia) 02 R62"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01 R62"
+        "🇦🇺 澳大利亚 (Australia) 01 R62",
+        "🇦🇺 澳大利亚 (Australia) 02 R62"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

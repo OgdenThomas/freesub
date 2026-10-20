@@ -16,17 +16,35 @@ proxies:
     short-id: abcd1234
   servername: apple.com
   client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 02 R62
+  server: 199.34.228.160
+  port: 8443
+  udp: true
+  type: vmess
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: aus.frnhk.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /Sydney3
+    headers:
+      Host: aus.frnhk.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 R62
+  - 🇦🇺 澳大利亚 (Australia) 02 R62
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 R62
+  - 🇦🇺 澳大利亚 (Australia) 02 R62
 rules:
 - MATCH,PROXIES

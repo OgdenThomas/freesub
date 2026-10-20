@@ -5,7 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01
-  server: 51.24.54.202
+  server: 52.214.157.27
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇮🇪 爱尔兰 (Ireland) 02 R63
+  server: ie1.dedushka.top
+  port: 443
+  udp: true
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: ie1.dedushka.top
+  skip-cert-verify: false
+- name: 🇮🇪 爱尔兰 (Ireland) 03
+  server: 18.169.146.8
   port: 22222
   udp: true
   type: vless
@@ -16,11 +31,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇪 爱尔兰 (Ireland) 02 R63
+  - 🇮🇪 爱尔兰 (Ireland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇪 爱尔兰 (Ireland) 02 R63
+  - 🇮🇪 爱尔兰 (Ireland) 03
 rules:
 - MATCH,PROXIES

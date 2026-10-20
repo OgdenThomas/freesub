@@ -12,7 +12,7 @@ proxies:
   cipher: aes-256-cfb
   password: qwerREWQ@@
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: 158.247.199.164
+  server: 64.176.231.183
   port: 443
   udp: true
   type: vless
@@ -23,7 +23,39 @@ proxies:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
     short-id: ca193e889d958f81
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: seoul01.zgjok.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 182f1650-ca13-480c-b0b4-1ca44ed0504e
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: seoul01.zgjok.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /henis01
+    headers:
+      Host: seoul01.zgjok.com
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: jp4.998998.best
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nat12.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vvvvvvvvv
+    headers:
+      Host: nat12.9966338.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +63,8 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +72,7 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES
