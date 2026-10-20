@@ -4,7 +4,13 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇾 塞浦路斯 (Cyprus) 01 R42
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01
+  server: 5.253.29.254
+  port: 10443
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+- name: 🇨🇾 塞浦路斯 (Cyprus) 02 R42
   server: 2.56.175.179
   port: 9443
   udp: true
@@ -24,12 +30,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R42
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 02 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇾 塞浦路斯 (Cyprus) 01 R42
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
+  - 🇨🇾 塞浦路斯 (Cyprus) 02 R42
 rules:
 - MATCH,PROXIES

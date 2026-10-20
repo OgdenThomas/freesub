@@ -5,30 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  type: trojan
-  password: mitivpn
-  sni: d-e.mitivpn.in.net
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-- name: 🇩🇪 德国 (Germany) 02
-  server: 64.188.66.181
-  port: 443
-  udp: true
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
-    short-id: 2c9a2790ad5900b2
-  servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: random
-- name: 🇩🇪 德国 (Germany) 03
   server: 66.151.40.60
   port: 8444
   udp: true
@@ -42,44 +18,63 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇩🇪 德国 (Germany) 04
-  server: 172.67.213.218
-  port: 2095
+- name: 🇩🇪 德国 (Germany) 02
+  server: 217.60.183.95
+  port: 33744
   udp: true
   type: vmess
-  uuid: a55cdc40-5af5-4f02-9a46-41685120fe6f
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   alterId: 0
   cipher: auto
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: www.asamping.ir
-- name: 🇩🇪 德国 (Germany) 05
-  server: 31.70.111.146
-  port: 443
+    path: /ShamanVMESS2026
+- name: 🇩🇪 德国 (Germany) 03 R58
+  server: 185.176.204.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇩🇪 德国 (Germany) 04
+  server: 193.148.253.53
+  port: 25363
   udp: true
   type: vless
-  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
-  flow: xtls-rprx-vision
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
   tls: true
   reality-opts:
-    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
-    short-id: d7de3a6ff4018957
-  servername: www.apple.com
+    public-key: shUbIWcBJdXaDzO80KqTU9exgMarUCOiiZ56Dwl7XVU
+    short-id: 7a8e24da4eb2c1b5
+  servername: www.chip.de
   client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 06
-  server: 2.27.69.117
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 43f41cd7fee0
+- name: 🇩🇪 德国 (Germany) 05
+  server: 50.7.157.237
   port: 443
   udp: true
   type: vless
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: 258d8fc5-206c-48fd-88df-169dbbe44d3f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
-    short-id: 123c2bff
-  servername: addons.mozilla.org
+    public-key: ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY
+  servername: edge-fr.extazy.net
+  client-fingerprint: safari
+- name: 🇩🇪 德国 (Germany) 06
+  server: 177.3.222.100
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
+    short-id: 2c9a2790ad5900b2
+  servername: ge-s-1.pythonmakemigreat.wiki
   client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 07
   server: 82.118.19.153
@@ -95,7 +90,20 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 08
-  server: 2.27.35.55
+  server: 31.70.111.146
+  port: 443
+  udp: true
+  type: vless
+  uuid: 84ed0e09-6803-4ef9-a977-74b657d971e5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZNmuzIn-zyJi2C0sWRpL9fsMYCgYauXpJElXTqY_LEE
+    short-id: d7de3a6ff4018957
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 09
+  server: 2.27.69.128
   port: 443
   udp: true
   type: vless
@@ -107,28 +115,51 @@ proxies:
     short-id: e696e744
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 09
-  server: de9.dedushka.top
+- name: 🇩🇪 德国 (Germany) 10
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  type: vmess
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇩🇪 德国 (Germany) 11
+  server: 2.27.69.117
+  port: 443
+  udp: true
+  type: vless
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y
+    short-id: 123c2bff
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 12
+  server: hoert1rert.localip.ir
+  port: 2087
+  udp: true
+  type: vless
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e4c0d
+  tls: true
+  servername: hoert1rert.localip.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: hoert1rert.localip.ir
+- name: 🇩🇪 德国 (Germany) 13
+  server: 188.241.241.235
   port: 443
   udp: true
   type: trojan
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: de9.dedushka.top
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 10
-  server: sino.bestsellers1.site
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  tls: true
-  servername: sino.bestsellers1.site
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -136,7 +167,7 @@ proxy-groups:
   - AUTO
   - 🇩🇪 德国 (Germany) 01
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 03 R58
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
@@ -144,6 +175,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -151,7 +185,7 @@ proxy-groups:
   proxies:
   - 🇩🇪 德国 (Germany) 01
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 03 R58
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
@@ -159,5 +193,8 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
 rules:
 - MATCH,PROXIES

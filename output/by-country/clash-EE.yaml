@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇷 克罗地亚 (Croatia) 01
-  server: 5.181.2.168
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: 77.110.105.122
   port: 443
   udp: true
   type: vless
-  uuid: 9ab9291e-fd72-4af9-b227-93419e90ff2e
+  uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: FSoosmyb1Odcc6yucO4B-0YC0fKytdBbvuwJKn7Wbkg
-    short-id: 86afa150bc3a48f6
-  servername: hr1-4v.zvcorp24.com
-  client-fingerprint: firefox
+    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
+    short-id: 226509f017e4c36d
+  servername: co-es.speedtec.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇷 克罗地亚 (Croatia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇷 克罗地亚 (Croatia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 rules:
 - MATCH,PROXIES
