@@ -4,36 +4,16 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R43
-  server: speedtest.org
-  port: 8443
+- name: 🇫🇷 法国 (France) 01
+  server: 138.124.70.41
+  port: 14430
   udp: true
   type: vless
-  uuid: c3571d81-38bd-44a8-9b75-5af8a125fc42
-  tls: true
-  servername: pbsjv.megalionzone-vexina.sbs
-  skip-cert-verify: false
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   network: ws
   ws-opts:
-    path: /bala
-    headers:
-      Host: pbsjv.megalionzone-vexina.sbs
+    path: /vless
 - name: 🇫🇷 法国 (France) 02 R43
-  server: 104.21.47.118
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2bdcf0ac-f84e-471f-98dc-a1807acab1cb
-  tls: true
-  servername: redcloudport-bidarbash.sbs
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /zoodi
-    headers:
-      Host: redcloudport-bidarbash.sbs
-- name: 🇫🇷 法国 (France) 03 R43
   server: 172.67.171.33
   port: 443
   udp: true
@@ -53,16 +33,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R43
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02 R43
-  - 🇫🇷 法国 (France) 03 R43
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R43
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02 R43
-  - 🇫🇷 法国 (France) 03 R43
 rules:
 - MATCH,PROXIES
