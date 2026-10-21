@@ -5,64 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: 157.228.155.184
+  server: 185.253.116.46
   port: 443
   udp: true
   type: vless
-  uuid: c39f95b5-64b5-4f7a-a93d-fa9e9cf24de8
+  uuid: CQ9D5NqEbxPfdg
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: uYU7UXkfNB-BEfjyrCUtRcN2JfFdlFWfMHCeX7bz4Qc
-    short-id: e022bfea
-  servername: addons.mozilla.org
+    public-key: RQ4Z91En99W1IloruReNIuqeIY1PHfrd-Unv7XL--jU
+    short-id: 11a7579d
+  servername: www.heise.de
   client-fingerprint: chrome
 - name: 🇦🇪 阿联酋 (UAE) 02
-  server: 31.59.210.25
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: KDBhxT2YMtMjDEC9VdoDEISdCwxd6KFrSE8uyUaHcTY
-    short-id: ed435c242097fd05
-  servername: www.yandex.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 03
-  server: 31.59.210.32
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: qvVoQPNyuM86jBvBqOL-Z9VO_C9jMi_ZH8bb4fotNWA
-    short-id: 7ec4374ffc6308fd
-  servername: www.yandex.ru
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 04
-  server: 31.59.210.37
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5413edfb-08d6-4fba-b51c-809c04feb127
-  tls: true
-  reality-opts:
-    public-key: 5k0dtOSzmshCubdYeKppsUdHU4i2ghaB9uSJSzGjHW4
-    short-id: 6dbf4931096f9890
-  servername: www.yandex.ru
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: astracat
-- name: 🇦🇪 阿联酋 (UAE) 05
   server: 45.59.120.217
   port: 443
   udp: true
@@ -81,9 +36,6 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
-  - 🇦🇪 阿联酋 (UAE) 03
-  - 🇦🇪 阿联酋 (UAE) 04
-  - 🇦🇪 阿联酋 (UAE) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,8 +43,5 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
   - 🇦🇪 阿联酋 (UAE) 02
-  - 🇦🇪 阿联酋 (UAE) 03
-  - 🇦🇪 阿联酋 (UAE) 04
-  - 🇦🇪 阿联酋 (UAE) 05
 rules:
 - MATCH,PROXIES

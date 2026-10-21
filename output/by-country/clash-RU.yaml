@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 77.90.61.135
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8815925b-c7b8-4f94-9c24-9dc864f63a29
+  tls: true
+  reality-opts:
+    public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
+    short-id: ce1dc482
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 193.233.253.180
   port: 8444
   udp: true
@@ -19,31 +31,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 77.90.61.135
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8815925b-c7b8-4f94-9c24-9dc864f63a29
-  tls: true
-  reality-opts:
-    public-key: XlEzAhUOUC-hZA2Uk2sctG5WR9lPeAUAHGNQVu9oAVg
-    short-id: ce1dc482
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 139.28.168.75
-  port: 10444
-  udp: true
-  type: vless
-  uuid: 154bd388-4968-4900-a088-18676f428a20
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +38,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,6 +45,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
-  - 🇷🇺 俄罗斯 (Russia) 03
 rules:
 - MATCH,PROXIES
