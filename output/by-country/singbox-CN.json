@@ -4,8 +4,38 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇨🇳 CN 01",
+      "server": "39.108.113.127",
+      "server_port": 10086,
+      "uuid": "7547daaa-1577-49b0-9519-bd1823add1a7",
+      "security": "auto",
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇳 CN 02",
+      "server": "vpn.cintaku.qzz.io",
+      "server_port": 443,
+      "uuid": "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.cintaku.qzz.io",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vlessws",
+        "headers": {
+          "Host": "vpn.cintaku.qzz.io"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇳 CN 03",
       "server": "188.114.98.0",
       "server_port": 443,
       "uuid": "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349",
@@ -13,9 +43,6 @@
         "enabled": true,
         "server_name": "vpn.cintaku.qzz.io",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -34,14 +61,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇳 CN 01"
+        "🇨🇳 CN 01",
+        "🇨🇳 CN 02",
+        "🇨🇳 CN 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇳 CN 01"
+        "🇨🇳 CN 01",
+        "🇨🇳 CN 02",
+        "🇨🇳 CN 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

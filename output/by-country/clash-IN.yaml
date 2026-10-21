@@ -27,6 +27,17 @@ proxies:
     public-key: SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4
   servername: in1.vkusnews.com
   client-fingerprint: chrome
+- name: 🇮🇳 印度 (India) 03
+  server: 5.253.29.254
+  port: 14430
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,6 +45,7 @@ proxy-groups:
   - AUTO
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
+  - 🇮🇳 印度 (India) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -41,5 +53,6 @@ proxy-groups:
   proxies:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
+  - 🇮🇳 印度 (India) 03
 rules:
 - MATCH,PROXIES

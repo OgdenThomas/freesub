@@ -4,28 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01
-  server: 131.196.252.59
-  port: 20521
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: p141.panda001.net
+  port: 4652
   udp: true
-  type: vmess
-  uuid: 5809911a-a16e-43d3-90b0-2c94cfc2035e
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 rules:
 - MATCH,PROXIES

@@ -15,7 +15,7 @@
         "server_name": "d1-ro.cloud-cdn.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -25,8 +25,15 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇷🇴 罗马尼亚 (Romania) 02",
+      "server": "edge10.cyrionflare.com",
+      "server_port": 2052,
+      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 03",
       "server": "it1.dedushka.top",
       "server_port": 443,
       "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
@@ -37,42 +44,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 03",
-      "server": "46.28.67.55",
-      "server_port": 443,
-      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU",
-          "short_id": "d06d78e974491b6e"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 04",
-      "server": "edge10.cyrionflare.com",
-      "server_port": 2052,
-      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇷🇴 罗马尼亚 (Romania) 01",
         "🇷🇴 罗马尼亚 (Romania) 02",
-        "🇷🇴 罗马尼亚 (Romania) 03",
-        "🇷🇴 罗马尼亚 (Romania) 04"
+        "🇷🇴 罗马尼亚 (Romania) 03"
       ]
     },
     {
@@ -81,8 +59,7 @@
       "outbounds": [
         "🇷🇴 罗马尼亚 (Romania) 01",
         "🇷🇴 罗马尼亚 (Romania) 02",
-        "🇷🇴 罗马尼亚 (Romania) 03",
-        "🇷🇴 罗马尼亚 (Romania) 04"
+        "🇷🇴 罗马尼亚 (Romania) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
