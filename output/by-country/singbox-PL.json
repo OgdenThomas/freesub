@@ -4,41 +4,24 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "144.31.101.196",
-      "server_port": 33891,
-      "uuid": "1c794e75-bcd4-4a65-9f69-ed0a10f33d60",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "browser.yandex.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "HXXIkFRPeRpluXJ7SOoUGf9EOq4Lw-oJpvg1W0UPbEw",
-          "short_id": "5bd7b68ca4c04443"
-        }
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇵🇱 波兰 (Poland) 02",
+      "tag": "🇵🇱 波兰 (Poland) 01",
       "server": "pl1.dedushka.top",
       "server_port": 443,
       "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
       "tls": {
         "enabled": true,
         "server_name": "pl1.dedushka.top",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03",
+      "tag": "🇵🇱 波兰 (Poland) 02",
       "server": "site.teslamotor.site",
       "server_port": 20001,
       "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
@@ -49,8 +32,7 @@
       "outbounds": [
         "auto",
         "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03"
+        "🇵🇱 波兰 (Poland) 02"
       ]
     },
     {
@@ -58,8 +40,7 @@
       "tag": "auto",
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03"
+        "🇵🇱 波兰 (Poland) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

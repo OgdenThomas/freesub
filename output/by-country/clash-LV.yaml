@@ -4,15 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01 R50
-  server: lv1.dedushka.top
-  port: 443
-  udp: true
-  type: trojan
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: lv1.dedushka.top
-  skip-cert-verify: false
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
+- name: 🇱🇻 拉脱维亚 (Latvia) 01
   server: 195.123.208.32
   port: 443
   udp: true
@@ -30,14 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01 R50
-  - 🇱🇻 拉脱维亚 (Latvia) 02
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01 R50
-  - 🇱🇻 拉脱维亚 (Latvia) 02
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 rules:
 - MATCH,PROXIES

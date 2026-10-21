@@ -5,25 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 109.104.106.101
-  port: 443
-  udp: true
-  type: vless
-  uuid: e5544327-834c-455a-9db5-2454c788fa17
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: V-6tk21giXjug4ZXwpAhT4aXHjsXYwkgznT4dQEc9Aw
-    short-id: 48d6ed723454f6db
-  servername: d1-ro.cloud-cdn.xyz
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: edge10.cyrionflare.com
   port: 2052
   udp: true
   type: vless
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇷🇴 罗马尼亚 (Romania) 03
+- name: 🇷🇴 罗马尼亚 (Romania) 02
   server: it1.dedushka.top
   port: 443
   udp: true
@@ -38,7 +25,6 @@ proxy-groups:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
-  - 🇷🇴 罗马尼亚 (Romania) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,6 +32,5 @@ proxy-groups:
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
-  - 🇷🇴 罗马尼亚 (Romania) 03
 rules:
 - MATCH,PROXIES
