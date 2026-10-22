@@ -4,27 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 R52
-  server: 108.181.71.5
-  port: 15995
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 882dd5b0e0f2cf05bb5de75f59bbe953
-- name: 🇪🇸 西班牙 (Spain) 02
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 03
+- name: 🇪🇸 西班牙 (Spain) 01
   server: 193.238.154.78
   port: 443
   udp: true
@@ -42,16 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 R52
-  - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 R52
-  - 🇪🇸 西班牙 (Spain) 02
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 01
 rules:
 - MATCH,PROXIES
