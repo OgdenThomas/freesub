@@ -4,8 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 01",
+      "server": "64.176.231.183",
+      "server_port": 443,
+      "uuid": "583cc910-b57c-4dd0-a4a7-cea51a30b032",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE",
+          "short_id": "ca193e889d958f81"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 02",
       "server": "jp4.998998.best",
       "server_port": 443,
       "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
@@ -28,14 +49,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01"
+        "🇰🇷 韩国 (South Korea) 01",
+        "🇰🇷 韩国 (South Korea) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

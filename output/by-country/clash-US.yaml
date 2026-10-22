@@ -4,42 +4,81 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01
-  server: 44.248.233.99
-  port: 443
+- name: 🇺🇸 美国 (United States) 01 R67
+  server: 193.151.163.18
+  port: 19999
   udp: true
-  type: vless
-  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
-    short-id: 21270a66
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 02
-  server: 104.16.148.244
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  tls: true
-  servername: c7dabe95.proxy-978.pages.dev
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c7dabe95.proxy-978.pages.dev
-- name: 🇺🇸 美国 (United States) 03 R58
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 02 R58
   server: 185.215.132.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 04
+- name: 🇺🇸 美国 (United States) 03 R58
+  server: 45.86.51.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 04 R50
+  server: 193.151.160.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 05
+  server: 195.211.98.43
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+    short-id: 9c56fddf237e8eaf
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 06
+  server: 162.35.126.130
+  port: 10453
+  udp: true
+  type: vless
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  tls: true
+  reality-opts:
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+  servername: www.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇺🇸 美国 (United States) 07
+  server: 95.215.201.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 08 ⚠R
+  server: 15.204.97.195
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 09
   server: 147.45.60.160
   port: 8444
   udp: true
@@ -53,119 +92,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🇺🇸 美国 (United States) 05 R65
-  server: 15.204.97.198
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 06
-  server: 172.236.227.60
-  port: 443
-  udp: true
-  type: vless
-  uuid: e1ca5089-4e86-4fa9-b5e7-aa94cd91e71d
-  tls: true
-  reality-opts:
-    public-key: RTuOfZq_rHg1mbEZ_Xh0p9jDaRjIv_CYy5E-oLfUUR4
-    short-id: 59ad82ce
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇺🇸 美国 (United States) 07 ⚠R
-  server: 15.204.97.197
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 08
-  server: 144.202.126.147
-  port: 443
-  udp: true
-  type: vless
-  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
-  tls: true
-  reality-opts:
-    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
-    short-id: 77c4230d
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇺🇸 美国 (United States) 09
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-    short-id: 9c56fddf237e8eaf
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 10
-  server: 95.215.201.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 11
-  server: 45.76.172.197
-  port: 443
-  udp: true
-  type: vless
-  uuid: b256c867-a020-48e0-be80-1b079f2613a2
-  tls: true
-  reality-opts:
-    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
-    short-id: ff3597db
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇺🇸 美国 (United States) 12 R58
-  server: 185.215.132.9
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 13
-  server: 162.35.126.235
-  port: 10453
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  servername: www.google.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇺🇸 美国 (United States) 14
   server: 45.32.69.110
   port: 443
   udp: true
@@ -182,48 +109,113 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 15
-  server: 154.40.55.185
-  port: 443
+- name: 🇺🇸 美国 (United States) 11
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 12
+  server: 15.204.97.219
+  port: 23576
   udp: true
   type: vless
-  uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
-    short-id: 7f
-  servername: www.oracle.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 16
-  server: 131.143.180.110
+- name: 🇺🇸 美国 (United States) 13 R60
+  server: 5.34.178.120
   port: 443
   udp: true
   type: vless
-  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
+  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
-    short-id: 62169cb853fb7503
-  servername: learn.microsoft.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 17
-  server: 104.26.5.60
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  tls: true
-  servername: c7dabe95.proxy-978.pages.dev
-  skip-cert-verify: false
+    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
+    short-id: 55ab5559e3a6d10a
+  servername: www.cloudflare.com
   client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 14 R60
+  server: 15.204.97.214
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 15
+  server: 154.29.145.196
+  port: 443
+  udp: true
+  type: vless
+  uuid: 62fdae06-6692-4b79-8f34-470784e55fd6
+  tls: true
+  reality-opts:
+    public-key: h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0
+    short-id: 33b15a3e
+  servername: itunes.apple.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: c7dabe95.proxy-978.pages.dev
-- name: 🇺🇸 美国 (United States) 18
+    path: /ws
+- name: 🇺🇸 美国 (United States) 16 R65
+  server: 15.204.97.198
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  servername: fuck.rkn
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 17 ⚠R
+  server: 15.204.97.197
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 18 ⚠R
+  server: 15.204.97.209
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 19
+  server: us3.dedushka.top
+  port: 443
+  udp: true
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: us3.dedushka.top
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 20
   server: 45.63.53.81
   port: 443
   udp: true
@@ -240,138 +232,22 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 19 ⚠R
-  server: 15.204.97.195
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 20
-  server: 154.29.145.196
-  port: 443
-  udp: true
-  type: vless
-  uuid: 62fdae06-6692-4b79-8f34-470784e55fd6
-  tls: true
-  reality-opts:
-    public-key: h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0
-    short-id: 33b15a3e
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
 - name: 🇺🇸 美国 (United States) 21
-  server: 174.136.204.23
-  port: 34539
+  server: 144.202.126.147
+  port: 443
   udp: true
   type: vless
-  uuid: 6877f68f-2443-445d-8c11-16c77a2699a5
-  flow: xtls-rprx-vision
+  uuid: 45d51389-0c38-4843-8ae8-cffb94e97a72
   tls: true
   reality-opts:
-    public-key: KZ95U9GVT36nb3EPuraPI2BwyikGlQv8sIyRvgECt2E
-    short-id: ab400d5a
-  servername: apple.com
-  client-fingerprint: ios
+    public-key: jO7THaLxz0Oz3kePAJcuwcKNTlsWoEWGh18zzRmiXgo
+    short-id: 77c4230d
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
 - name: 🇺🇸 美国 (United States) 22
-  server: 154.12.38.202
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2a9ab69b-26e7-44d0-a325-e5056d849900
-  tls: true
-  reality-opts:
-    public-key: iJDZHJQcTGl2VIwbsRmlOG9JGbbmxNY5wmv1hc6OwQM
-    short-id: c31176b6
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 23
-  server: 172.67.67.178
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.nAsTaRaN.DpDnS.OrG
-- name: 🇺🇸 美国 (United States) 24
-  server: 23.94.251.190
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4a54f9e1-1cb0-4873-8f35-38bcf1650966
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: H-jO-7NT8LAkA9o8SOpFC-GeEqk-Jhpesmx5jJ_3n14
-    short-id: 312d6625929ec3df
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 25
-  server: 104.18.0.1
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
-  tls: true
-  servername: all.speedtest03.ccwu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: all.speedtest03.ccwu.cc
-- name: 🇺🇸 美国 (United States) 26 R67
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 27 R63
-  server: 216.106.186.32
-  port: 443
-  udp: true
-  type: trojan
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 28
-  server: 172.67.187.145
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸 美国 (United States) 29
   server: 154.12.38.159
   port: 443
   udp: true
@@ -388,83 +264,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇺🇸 美国 (United States) 30
-  server: 208.84.100.209
-  port: 2112
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
-  servername: play.google.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 31
-  server: mybb.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇺🇸 美国 (United States) 32 R58
-  server: 45.86.51.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 33
-  server: 172.64.146.66
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  tls: true
-  servername: c7dabe95.proxy-978.pages.dev
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c7dabe95.proxy-978.pages.dev
-- name: 🇺🇸 美国 (United States) 34
-  server: 162.35.8.62
-  port: 443
-  udp: true
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
-    short-id: 257420d9d430152a
-  servername: a0688bt.us4.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 35
-  server: 188.114.97.3
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: newwk1.f1w.de5.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: newwk1.f1w.de5.net
-- name: 🇺🇸 美国 (United States) 36
+- name: 🇺🇸 美国 (United States) 23
   server: 156.229.164.4
   port: 9443
   udp: true
@@ -477,135 +277,60 @@ proxies:
     short-id: b390142456517acc
   servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 37 R60
-  server: 5.34.178.120
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM
-    short-id: 55ab5559e3a6d10a
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 38
-  server: 185.230.230.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 39
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 40 R60
-  server: 15.204.97.214
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-  servername: fuck.rkn
-  client-fingerprint: random
-- name: 🇺🇸 美国 (United States) 41
-  server: 104.24.31.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇺🇸 美国 (United States) 42 R66
-  server: 104.18.42.54
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: newwk1.f1w.de5.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: newwk1.f1w.de5.net
-- name: 🇺🇸 美国 (United States) 43
-  server: 104.26.5.157
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  tls: true
-  servername: c7dabe95.proxy-978.pages.dev
-  skip-cert-verify: false
-  client-fingerprint: random
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c7dabe95.proxy-978.pages.dev
-- name: 🇺🇸 美国 (United States) 44 R50
-  server: 193.151.160.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 45
-  server: cf.090227.xyz
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸 美国 (United States) 46 R67
-  server: 216.106.186.33
+- name: 🇺🇸 美国 (United States) 24 ⚠R
+  server: blog.findlocaljobnetworkandbuildcommunityconnections.com
   port: 443
   udp: true
   type: trojan
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  password: dba20dcb635e430fa4d3bfc303a149d2
+  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
   skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 47
-  server: t15.qifei.app
+- name: 🇺🇸 美国 (United States) 25
+  server: tk1.high-speed-test-56424.me
   port: 443
   udp: true
   type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: www.amazon.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 48
-  server: nomino.11hi8itbaf.workers.dev
+    public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM
+    short-id: 21270a66
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 26 R42
+  server: us5-1.998998.best
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: server4.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /androirfdsreoightrjh
+    headers:
+      Host: server4.9966338.xyz
+- name: 🇺🇸 美国 (United States) 27
+  server: 172.236.227.60
+  port: 443
+  udp: true
+  type: vless
+  uuid: e1ca5089-4e86-4fa9-b5e7-aa94cd91e71d
+  tls: true
+  reality-opts:
+    public-key: RTuOfZq_rHg1mbEZ_Xh0p9jDaRjIv_CYy5E-oLfUUR4
+    short-id: 59ad82ce
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+- name: 🇺🇸 美国 (United States) 28
+  server: www.shopify.com
   port: 443
   udp: true
   type: vmess
@@ -613,14 +338,29 @@ proxies:
   alterId: 0
   cipher: auto
   tls: true
-  servername: nomino.11hi8itbaf.workers.dev
+  servername: guanwang.awsno.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /guanwang.awsno.com/hls/cctv5phd.m3u8
+    path: /hls/cctv5phd.m3u8
     headers:
-      Host: nomino.11hi8itbaf.workers.dev
-- name: 🇺🇸 美国 (United States) 49
+      Host: guanwang.awsno.com
+- name: 🇺🇸 美国 (United States) 29
+  server: 45.76.172.197
+  port: 443
+  udp: true
+  type: vless
+  uuid: b256c867-a020-48e0-be80-1b079f2613a2
+  tls: true
+  reality-opts:
+    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
+    short-id: ff3597db
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+- name: 🇺🇸 美国 (United States) 30
   server: clash2.deep-links.com
   port: 443
   udp: true
@@ -628,57 +368,14 @@ proxies:
   password: 4c858cccff331e64c711a199a6cb256a
   sni: clash2.deep-links.com
   skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 50
-  server: 176.122.158.11
-  port: 443
+- name: 🇺🇸 美国 (United States) 31 R58
+  server: 185.215.132.9
+  port: 19999
   udp: true
-  type: vless
-  uuid: 154c54e0-028d-4c8a-9512-7ad1588cce2a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dV6-Xn1FCpiYvbJ1o79HjMr0IJg29xacSQcaD4jeKAM
-    short-id: f8d85e1a92219c3c
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: 🇺🇸 美国 (United States) 51
-  server: 208.84.100.209
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇺🇸 美国 (United States) 52
-  server: 107.150.27.178
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c4ec8b8d-d8b1-49f2-8eb8-5903745f6381
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _7gRLyI2odDAG_D5YV4fbbOoCEH4BfF5XigHTPHPl3I
-    short-id: c71dd992a5c26702
-  servername: www.sme.com.au
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 53
-  server: 104.24.30.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇺🇸 美国 (United States) 54
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 32
   server: us16-4.998998.best
   port: 443
   udp: true
@@ -694,29 +391,34 @@ proxies:
     path: /efrsdioy98wert
     headers:
       Host: server1.9966338.xyz
-- name: 🇺🇸 美国 (United States) 55
-  server: 172.245.253.16
+- name: 🇺🇸 美国 (United States) 33
+  server: 216.167.126.97
   port: 443
   udp: true
   type: vless
-  uuid: b67422ff-101b-433b-8f66-4ab282960b36
+  uuid: e5c3d067-7a15-4977-90c0-7e0f6e896a09
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Vh8dv6ENmfFd4JlPgj9-R1Fbet2m6JyRFukcVvDq5A8
-    short-id: e7dc2c820ba8bbd4
-  servername: www.apple.com
+    public-key: yFvOpugh65xKQNAwKrhitv4d2pflD8QwNFMj-jDOmT8
+    short-id: 0123456789abcdef
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 56
-  server: us3.dedushka.top
+- name: 🇺🇸 美国 (United States) 34
+  server: 195.123.221.36
   port: 443
   udp: true
-  type: trojan
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  sni: us3.dedushka.top
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 57
-  server: rib9jxayoqjgn2kw.v.3dns.vip
+  type: vless
+  uuid: 9c60369d-e5f9-4cec-9e63-1560e88e119a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dIv6pPS-x6IzbiPyHX8nNdRrwI2yZl4y3YCeRWy9UgE
+    short-id: 3e67326f98ddb407
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 35
+  server: Rib9JXAYoqjGN2KW.v.3dns.vip
   port: 443
   udp: true
   type: vmess
@@ -731,47 +433,7 @@ proxies:
     path: /ws-vmess
     headers:
       Host: Rib9JXAYoqjGN2KW.v.3dns.vip
-- name: 🇺🇸 美国 (United States) 58
-  server: 15.204.97.219
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 59
-  server: 195.123.221.36
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9c60369d-e5f9-4cec-9e63-1560e88e119a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: dIv6pPS-x6IzbiPyHX8nNdRrwI2yZl4y3YCeRWy9UgE
-    short-id: 3e67326f98ddb407
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 60
-  server: 104.18.0.181
-  port: 443
-  udp: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  tls: true
-  servername: a.cwvps.eu.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- name: 🇺🇸 美国 (United States) 61
+- name: 🇺🇸 美国 (United States) 36
   server: 185.243.99.100
   port: 1222
   udp: true
@@ -783,7 +445,7 @@ proxies:
     short-id: a25d0f
   servername: play.google.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 62
+- name: 🇺🇸 美国 (United States) 37
   server: mix2.998998.best
   port: 443
   udp: true
@@ -799,7 +461,30 @@ proxies:
     path: /rthiugoyretdsuigg
     headers:
       Host: server10.9966338.xyz
-- name: 🇺🇸 美国 (United States) 63
+- name: 🇺🇸 美国 (United States) 38
+  server: 208.84.100.209
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 39
+  server: 104.19.4.149
+  port: 443
+  udp: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  tls: true
+  servername: a.cwvps.eu.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: 🇺🇸 美国 (United States) 40
   server: 77.91.68.70
   port: 55983
   udp: true
@@ -816,136 +501,90 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01
-  - 🇺🇸 美国 (United States) 02
+  - 🇺🇸 美国 (United States) 01 R67
+  - 🇺🇸 美国 (United States) 02 R58
   - 🇺🇸 美国 (United States) 03 R58
-  - 🇺🇸 美国 (United States) 04
-  - 🇺🇸 美国 (United States) 05 R65
+  - 🇺🇸 美国 (United States) 04 R50
+  - 🇺🇸 美国 (United States) 05
   - 🇺🇸 美国 (United States) 06
-  - 🇺🇸 美国 (United States) 07 ⚠R
-  - 🇺🇸 美国 (United States) 08
+  - 🇺🇸 美国 (United States) 07
+  - 🇺🇸 美国 (United States) 08 ⚠R
   - 🇺🇸 美国 (United States) 09
   - 🇺🇸 美国 (United States) 10
   - 🇺🇸 美国 (United States) 11
-  - 🇺🇸 美国 (United States) 12 R58
-  - 🇺🇸 美国 (United States) 13
-  - 🇺🇸 美国 (United States) 14
+  - 🇺🇸 美国 (United States) 12
+  - 🇺🇸 美国 (United States) 13 R60
+  - 🇺🇸 美国 (United States) 14 R60
   - 🇺🇸 美国 (United States) 15
-  - 🇺🇸 美国 (United States) 16
-  - 🇺🇸 美国 (United States) 17
-  - 🇺🇸 美国 (United States) 18
-  - 🇺🇸 美国 (United States) 19 ⚠R
+  - 🇺🇸 美国 (United States) 16 R65
+  - 🇺🇸 美国 (United States) 17 ⚠R
+  - 🇺🇸 美国 (United States) 18 ⚠R
+  - 🇺🇸 美国 (United States) 19
   - 🇺🇸 美国 (United States) 20
   - 🇺🇸 美国 (United States) 21
   - 🇺🇸 美国 (United States) 22
   - 🇺🇸 美国 (United States) 23
-  - 🇺🇸 美国 (United States) 24
+  - 🇺🇸 美国 (United States) 24 ⚠R
   - 🇺🇸 美国 (United States) 25
-  - 🇺🇸 美国 (United States) 26 R67
-  - 🇺🇸 美国 (United States) 27 R63
+  - 🇺🇸 美国 (United States) 26 R42
+  - 🇺🇸 美国 (United States) 27
   - 🇺🇸 美国 (United States) 28
   - 🇺🇸 美国 (United States) 29
   - 🇺🇸 美国 (United States) 30
-  - 🇺🇸 美国 (United States) 31
-  - 🇺🇸 美国 (United States) 32 R58
+  - 🇺🇸 美国 (United States) 31 R58
+  - 🇺🇸 美国 (United States) 32
   - 🇺🇸 美国 (United States) 33
   - 🇺🇸 美国 (United States) 34
   - 🇺🇸 美国 (United States) 35
   - 🇺🇸 美国 (United States) 36
-  - 🇺🇸 美国 (United States) 37 R60
+  - 🇺🇸 美国 (United States) 37
   - 🇺🇸 美国 (United States) 38
   - 🇺🇸 美国 (United States) 39
-  - 🇺🇸 美国 (United States) 40 R60
-  - 🇺🇸 美国 (United States) 41
-  - 🇺🇸 美国 (United States) 42 R66
-  - 🇺🇸 美国 (United States) 43
-  - 🇺🇸 美国 (United States) 44 R50
-  - 🇺🇸 美国 (United States) 45
-  - 🇺🇸 美国 (United States) 46 R67
-  - 🇺🇸 美国 (United States) 47
-  - 🇺🇸 美国 (United States) 48
-  - 🇺🇸 美国 (United States) 49
-  - 🇺🇸 美国 (United States) 50
-  - 🇺🇸 美国 (United States) 51
-  - 🇺🇸 美国 (United States) 52
-  - 🇺🇸 美国 (United States) 53
-  - 🇺🇸 美国 (United States) 54
-  - 🇺🇸 美国 (United States) 55
-  - 🇺🇸 美国 (United States) 56
-  - 🇺🇸 美国 (United States) 57
-  - 🇺🇸 美国 (United States) 58
-  - 🇺🇸 美国 (United States) 59
-  - 🇺🇸 美国 (United States) 60
-  - 🇺🇸 美国 (United States) 61
-  - 🇺🇸 美国 (United States) 62
-  - 🇺🇸 美国 (United States) 63
+  - 🇺🇸 美国 (United States) 40
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01
-  - 🇺🇸 美国 (United States) 02
+  - 🇺🇸 美国 (United States) 01 R67
+  - 🇺🇸 美国 (United States) 02 R58
   - 🇺🇸 美国 (United States) 03 R58
-  - 🇺🇸 美国 (United States) 04
-  - 🇺🇸 美国 (United States) 05 R65
+  - 🇺🇸 美国 (United States) 04 R50
+  - 🇺🇸 美国 (United States) 05
   - 🇺🇸 美国 (United States) 06
-  - 🇺🇸 美国 (United States) 07 ⚠R
-  - 🇺🇸 美国 (United States) 08
+  - 🇺🇸 美国 (United States) 07
+  - 🇺🇸 美国 (United States) 08 ⚠R
   - 🇺🇸 美国 (United States) 09
   - 🇺🇸 美国 (United States) 10
   - 🇺🇸 美国 (United States) 11
-  - 🇺🇸 美国 (United States) 12 R58
-  - 🇺🇸 美国 (United States) 13
-  - 🇺🇸 美国 (United States) 14
+  - 🇺🇸 美国 (United States) 12
+  - 🇺🇸 美国 (United States) 13 R60
+  - 🇺🇸 美国 (United States) 14 R60
   - 🇺🇸 美国 (United States) 15
-  - 🇺🇸 美国 (United States) 16
-  - 🇺🇸 美国 (United States) 17
-  - 🇺🇸 美国 (United States) 18
-  - 🇺🇸 美国 (United States) 19 ⚠R
+  - 🇺🇸 美国 (United States) 16 R65
+  - 🇺🇸 美国 (United States) 17 ⚠R
+  - 🇺🇸 美国 (United States) 18 ⚠R
+  - 🇺🇸 美国 (United States) 19
   - 🇺🇸 美国 (United States) 20
   - 🇺🇸 美国 (United States) 21
   - 🇺🇸 美国 (United States) 22
   - 🇺🇸 美国 (United States) 23
-  - 🇺🇸 美国 (United States) 24
+  - 🇺🇸 美国 (United States) 24 ⚠R
   - 🇺🇸 美国 (United States) 25
-  - 🇺🇸 美国 (United States) 26 R67
-  - 🇺🇸 美国 (United States) 27 R63
+  - 🇺🇸 美国 (United States) 26 R42
+  - 🇺🇸 美国 (United States) 27
   - 🇺🇸 美国 (United States) 28
   - 🇺🇸 美国 (United States) 29
   - 🇺🇸 美国 (United States) 30
-  - 🇺🇸 美国 (United States) 31
-  - 🇺🇸 美国 (United States) 32 R58
+  - 🇺🇸 美国 (United States) 31 R58
+  - 🇺🇸 美国 (United States) 32
   - 🇺🇸 美国 (United States) 33
   - 🇺🇸 美国 (United States) 34
   - 🇺🇸 美国 (United States) 35
   - 🇺🇸 美国 (United States) 36
-  - 🇺🇸 美国 (United States) 37 R60
+  - 🇺🇸 美国 (United States) 37
   - 🇺🇸 美国 (United States) 38
   - 🇺🇸 美国 (United States) 39
-  - 🇺🇸 美国 (United States) 40 R60
-  - 🇺🇸 美国 (United States) 41
-  - 🇺🇸 美国 (United States) 42 R66
-  - 🇺🇸 美国 (United States) 43
-  - 🇺🇸 美国 (United States) 44 R50
-  - 🇺🇸 美国 (United States) 45
-  - 🇺🇸 美国 (United States) 46 R67
-  - 🇺🇸 美国 (United States) 47
-  - 🇺🇸 美国 (United States) 48
-  - 🇺🇸 美国 (United States) 49
-  - 🇺🇸 美国 (United States) 50
-  - 🇺🇸 美国 (United States) 51
-  - 🇺🇸 美国 (United States) 52
-  - 🇺🇸 美国 (United States) 53
-  - 🇺🇸 美国 (United States) 54
-  - 🇺🇸 美国 (United States) 55
-  - 🇺🇸 美国 (United States) 56
-  - 🇺🇸 美国 (United States) 57
-  - 🇺🇸 美国 (United States) 58
-  - 🇺🇸 美国 (United States) 59
-  - 🇺🇸 美国 (United States) 60
-  - 🇺🇸 美国 (United States) 61
-  - 🇺🇸 美国 (United States) 62
-  - 🇺🇸 美国 (United States) 63
+  - 🇺🇸 美国 (United States) 40
 rules:
 - MATCH,PROXIES
