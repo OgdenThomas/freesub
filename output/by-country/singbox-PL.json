@@ -4,14 +4,48 @@
   },
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 01 R43",
+      "server": "54.37.131.126",
+      "server_port": 80,
+      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
+    },
+    {
       "type": "trojan",
-      "tag": "🇵🇱 波兰 (Poland) 01",
+      "tag": "🇵🇱 波兰 (Poland) 02",
       "server": "pl1.dedushka.top",
       "server_port": 443,
       "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
       "tls": {
         "enabled": true,
         "server_name": "pl1.dedushka.top",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 03",
+      "server": "site.teslamotor.site",
+      "server_port": 20001,
+      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 04",
+      "server": "pl.flen-vpn.xyz",
+      "server_port": 8443,
+      "uuid": "51a1fd52-fd88-4905-a976-35e44be28e4b",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.flen-vpn.xyz",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -20,27 +54,45 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02",
-      "server": "site.teslamotor.site",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 05",
+      "server": "78.17.171.137",
+      "server_port": 443,
+      "password": "u93yPGuY2zgIsisJZKS2QzJzg",
+      "tls": {
+        "enabled": true,
+        "server_name": "2.HI-L.IM",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/f2fc2a1f",
+        "headers": {
+          "Host": "2.hi-l.im"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02"
+        "🇵🇱 波兰 (Poland) 01 R43",
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03",
+        "🇵🇱 波兰 (Poland) 04",
+        "🇵🇱 波兰 (Poland) 05"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 波兰 (Poland) 01",
-        "🇵🇱 波兰 (Poland) 02"
+        "🇵🇱 波兰 (Poland) 01 R43",
+        "🇵🇱 波兰 (Poland) 02",
+        "🇵🇱 波兰 (Poland) 03",
+        "🇵🇱 波兰 (Poland) 04",
+        "🇵🇱 波兰 (Poland) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

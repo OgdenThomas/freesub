@@ -5,30 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01
-  server: 16.60.128.74
-  port: 22222
+  server: 3.252.104.83
+  port: 443
   udp: true
   type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  network: h2
+  h2-opts:
+    host:
+    - play.googleapis.com
+    path: /
 - name: 🇮🇪 爱尔兰 (Ireland) 02
-  server: 16.60.128.74
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 03
-  server: 16.60.128.74
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 04
   server: 18.169.214.179
   port: 22223
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 05 R63
+- name: 🇮🇪 爱尔兰 (Ireland) 03
+  server: 3.11.145.4
+  port: 22222
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 04
+  server: 3.11.145.4
+  port: 22223
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 05
+  server: 16.60.128.74
+  port: 22224
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 06
+  server: 16.60.128.74
+  port: 22223
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 07 R63
   server: ie1.dedushka.top
   port: 443
   udp: true
@@ -45,7 +62,9 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 02
   - 🇮🇪 爱尔兰 (Ireland) 03
   - 🇮🇪 爱尔兰 (Ireland) 04
-  - 🇮🇪 爱尔兰 (Ireland) 05 R63
+  - 🇮🇪 爱尔兰 (Ireland) 05
+  - 🇮🇪 爱尔兰 (Ireland) 06
+  - 🇮🇪 爱尔兰 (Ireland) 07 R63
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,6 +74,8 @@ proxy-groups:
   - 🇮🇪 爱尔兰 (Ireland) 02
   - 🇮🇪 爱尔兰 (Ireland) 03
   - 🇮🇪 爱尔兰 (Ireland) 04
-  - 🇮🇪 爱尔兰 (Ireland) 05 R63
+  - 🇮🇪 爱尔兰 (Ireland) 05
+  - 🇮🇪 爱尔兰 (Ireland) 06
+  - 🇮🇪 爱尔兰 (Ireland) 07 R63
 rules:
 - MATCH,PROXIES

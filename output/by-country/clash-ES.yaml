@@ -4,7 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01
+- name: 🇪🇸 西班牙 (Spain) 01 R55
+  server: 5.22.212.81
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 7f36e606-3eb9-4b60-b783-8d8806818286
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇪🇸 西班牙 (Spain) 02
+  server: 45.198.54.249
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8d4c35bd-d04a-43fe-8390-47133ab90dbf
+  tls: true
+  reality-opts:
+    public-key: rHCPMrwRVCwxdwv4YOCso7zlYTPoX8w7x1f5Yqv2bGM
+    short-id: b73ab21227d33c1e
+  servername: 6a4a06t.es3.h1clayd.click
+  client-fingerprint: firefox
+- name: 🇪🇸 西班牙 (Spain) 03
   server: 46.28.71.247
   port: 443
   udp: true
@@ -17,7 +38,7 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02
+- name: 🇪🇸 西班牙 (Spain) 04
   server: 193.238.154.78
   port: 443
   udp: true
@@ -35,14 +56,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 01 R55
   - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 01 R55
   - 🇪🇸 西班牙 (Spain) 02
+  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 04
 rules:
 - MATCH,PROXIES

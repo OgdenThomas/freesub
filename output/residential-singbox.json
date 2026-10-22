@@ -4,36 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
-      "server": "61.230.160.34",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
-          "short_id": ""
-        }
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
+      "server": "183.109.131.75",
+      "server_port": 20086,
+      "uuid": "b26c4803-0bca-467c-a245-c9a80bdd72ec",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 02 (家宽)",
-      "server": "p141.panda001.net",
-      "server_port": 4652,
-      "method": "aes-256-cfb",
-      "password": "qwerREWQ@@"
-    },
-    {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 (家宽)",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
       "server": "9641684.sdf65h4.top",
       "server_port": 443,
       "uuid": "250c015d-bab0-4ed3-b638-b4eda48f5840",
@@ -52,22 +36,30 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 03 (家宽)",
+      "server": "p141.panda001.net",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
-        "🇰🇷 韩国 (South Korea) 02 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+        "🇰🇷 韩国 (South Korea) 03 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽)",
-        "🇰🇷 韩国 (South Korea) 02 (家宽)",
-        "🇹🇼 中国台湾 (Taiwan) 03 (家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇹🇼 中国台湾 (Taiwan) 02 (家宽)",
+        "🇰🇷 韩国 (South Korea) 03 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
