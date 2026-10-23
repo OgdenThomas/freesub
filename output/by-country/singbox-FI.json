@@ -4,12 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "65.109.209.239",
-      "server_port": 16911,
-      "uuid": "c5f59d68-5a26-40b8-a086-2f531e06737c",
-      "security": "auto"
+      "server": "static.86.39.13.49.clients.your-server.de",
+      "server_port": 443,
+      "uuid": "6c688f63-fad4-45d8-a6a1-1e978ed26b8b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.75.209.109.65.clients.your-server.de",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "vless",
@@ -19,26 +32,35 @@
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
       "transport": {
         "type": "ws",
-        "path": "/vless"
+        "path": "/vless",
+        "headers": {
+          "Host": "45.144.234.157"
+        }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 03",
-      "server": "areal1.greewebservices.ir",
-      "server_port": 2425,
-      "uuid": "2582857a-632b-4c4e-9b67-96213cbaf58c",
+      "server": "144.31.34.146",
+      "server_port": 2096,
+      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
       "tls": {
         "enabled": true,
-        "server_name": "play.googleapis.com",
+        "server_name": "fi1.merky.one",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o",
-          "short_id": "9b60d3"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mky-ws-4f19c8a7",
+        "headers": {
+          "Host": "fi1.merky.one"
         }
       }
     },

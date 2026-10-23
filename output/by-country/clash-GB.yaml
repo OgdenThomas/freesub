@@ -4,45 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R67
-  server: gb.srv.dvzh.net
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 01
+  server: 98.98.142.161
+  port: 8080
   udp: true
-  type: vless
-  uuid: 9ab3a362-1518-496d-b08d-eced45cec936
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
-    short-id: d30f9d846a7c8cba
-  servername: gb.srv.dvzh.net
-  client-fingerprint: firefox
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 138.124.125.193
-  port: 10444
+  server: 213.176.92.168
+  port: 14430
   udp: true
   type: vless
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 31.59.217.164
-  port: 443
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R
+  server: connect.hondamotor.site
+  port: 10002
   udp: true
   type: vless
-  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
-    short-id: 1625a2a79d01328f
-  servername: www.adobe.com
-  client-fingerprint: firefox
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
 - name: 🇬🇧 英国 (United Kingdom) 04
   server: 193.188.21.253
   port: 14430
@@ -54,18 +39,18 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 191.44.108.31
+- name: 🇬🇧 英国 (United Kingdom) 05 R67
+  server: gb.srv.dvzh.net
   port: 443
   udp: true
   type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  uuid: 9ab3a362-1518-496d-b08d-eced45cec936
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
-    short-id: 3ba10d9ce34380c9
-  servername: www.google.com
+    public-key: 9GEc6lOjnGQyyE1951OZSBMWt4uCXsOjKyj9fysxHH0
+    short-id: d30f9d846a7c8cba
+  servername: gb.srv.dvzh.net
   client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 06
   server: 144.48.11.97
@@ -81,39 +66,40 @@ proxies:
   servername: 144.48.11.97
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 07
-  server: 213.176.92.168
-  port: 14430
+  server: 23.81.36.148
+  port: 1222
   udp: true
   type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: play.google.com
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 08
-  server: sql.popmintxo.cc
+  server: 107.181.151.128
   port: 443
   udp: true
   type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
+  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: b558b9305a0b
-  servername: www.microsoft.com
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: 8f79726c5002
+  servername: www.mozilla.org
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R67
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 05 R67
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08
@@ -122,11 +108,11 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R67
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 05 R67
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
   - 🇬🇧 英国 (United Kingdom) 08

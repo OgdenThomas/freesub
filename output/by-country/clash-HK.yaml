@@ -5,20 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 165.154.63.139
-  port: 443
+  server: dog-hk.kunlun01dns.com
+  port: 21019
   udp: true
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
-  servername: www.amazon.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 141.11.149.174
+  server: 154.83.86.85
   port: 9443
   udp: true
   type: vless
@@ -31,6 +26,21 @@ proxies:
   servername: www.amazon.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: n1.fazelino.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: dd688bb9-41d9-4eb7-b5eb-6175f612cdb6
+  tls: true
+  servername: api.fazelino.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/get
+    headers:
+      Host: api.fazelino.site
+- name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 151.242.85.236
   port: 443
   udp: true
@@ -42,22 +52,9 @@ proxies:
     public-key: gUu1n11Ef_GEoatNQzJJucvIjGTt4qxOWdxMzjoHwDM
     short-id: 9b6fa4047c24629f
   servername: addons.mozilla.org
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: 45.39.198.205
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 4a3d18d7-dfbe-4077-986a-6b145e417568
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pOOWxG69IvNxQyZUtd4QDK0KEtFHVsjC-m5-zcsi5Do
-    short-id: c5b8bed4faee8363
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: 🇭🇰 中国香港 (Hong Kong) 05
-  server: 45.207.157.8
+  server: 141.11.149.174
   port: 9443
   udp: true
   type: vless
@@ -70,42 +67,19 @@ proxies:
   servername: www.amazon.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 526.150333.xyz
-  port: 21001
+  server: 45.39.198.205
+  port: 8443
   udp: true
   type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  uuid: 4a3d18d7-dfbe-4077-986a-6b145e417568
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-    short-id: b6dfd5c750351c57
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: 🇭🇰 中国香港 (Hong Kong) 07
-  server: 526.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
-  tls: true
-  reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-    short-id: eb9539689690d35c
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇭🇰 中国香港 (Hong Kong) 08
-  server: 526.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
-  tls: true
-  reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-    short-id: f0e6a8bb98db3efd
-  servername: www.cloudflare.com
+    public-key: pOOWxG69IvNxQyZUtd4QDK0KEtFHVsjC-m5-zcsi5Do
+    short-id: c5b8bed4faee8363
+  servername: gateway.icloud.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 09
+- name: 🇭🇰 中国香港 (Hong Kong) 07
   server: 526.150333.xyz
   port: 21004
   udp: true
@@ -117,22 +91,55 @@ proxies:
     short-id: 2f34703f16523c80
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 08
+  server: 526.150333.xyz
+  port: 21002
+  udp: true
+  type: vless
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  tls: true
+  reality-opts:
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: f0e6a8bb98db3efd
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+- name: 🇭🇰 中国香港 (Hong Kong) 09
+  server: 526.150333.xyz
+  port: 21001
+  udp: true
+  type: vless
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  tls: true
+  reality-opts:
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: b6dfd5c750351c57
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 10
-  server: 47.76.57.83
+  server: 526.150333.xyz
+  port: 21003
+  udp: true
+  type: vless
+  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  tls: true
+  reality-opts:
+    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
+    short-id: eb9539689690d35c
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 11
+  server: 82.29.36.250
   port: 443
   udp: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
+  flow: xtls-rprx-vision
   tls: true
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
+  reality-opts:
+    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
+    short-id: 09353d6dc5b789
+  servername: aws.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -148,6 +155,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 08
   - 🇭🇰 中国香港 (Hong Kong) 09
   - 🇭🇰 中国香港 (Hong Kong) 10
+  - 🇭🇰 中国香港 (Hong Kong) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -163,5 +171,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 08
   - 🇭🇰 中国香港 (Hong Kong) 09
   - 🇭🇰 中国香港 (Hong Kong) 10
+  - 🇭🇰 中国香港 (Hong Kong) 11
 rules:
 - MATCH,PROXIES

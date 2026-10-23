@@ -4,32 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 CN 01
-  server: vpn.cintaku.qzz.io
-  port: 443
+- name: 🇸🇪 瑞典 (Sweden) 01
+  server: 5.178.109.174
+  port: 14430
   udp: true
   type: vless
-  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-  tls: true
-  servername: vpn.cintaku.qzz.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   network: ws
   ws-opts:
-    path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN 01
+  - 🇸🇪 瑞典 (Sweden) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN 01
+  - 🇸🇪 瑞典 (Sweden) 01
 rules:
 - MATCH,PROXIES

@@ -13,33 +13,17 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 185.253.116.33
-- name: 🇦🇪 阿联酋 (UAE) 02
-  server: 45.59.120.217
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8732f92b-ba85-48f7-92e4-ad029f1cd4e7
-  tls: true
-  reality-opts:
-    public-key: mWxcYeYE-M3iE0RBjTzG88QI9kj2wivJDoIYDu_aG3w
-    short-id: 29c2dd1e3ef7c4d4
-  servername: strm.yandex.net
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
-  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
-  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

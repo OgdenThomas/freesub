@@ -11,31 +11,17 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 46.254.17.88
-  port: 30065
-  udp: true
-  type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-  servername: a3.eosapp.net
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 rules:
 - MATCH,PROXIES
