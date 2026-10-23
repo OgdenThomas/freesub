@@ -5,36 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 15.224.143.133
+  server: 15.188.252.7
   port: 22222
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 02
-  server: 15.188.252.7
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 03
-  server: 15.188.252.7
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 04
-  server: 15.224.143.133
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 05
-  server: 15.188.252.7
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇫🇷 法国 (France) 06
   server: ai.smrtai.top
   port: 443
   udp: true
@@ -46,19 +22,8 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 07
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 08
-  server: 185.255.179.166
+- name: 🇫🇷 法国 (France) 03
+  server: 85.31.102.163
   port: 443
   udp: true
   type: trojan
@@ -68,19 +33,28 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 09
-  server: 161.97.160.224
+- name: 🇫🇷 法国 (France) 04
+  server: 45.87.41.18
   port: 443
   udp: true
-  type: vless
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
-    short-id: e6
-  servername: passport.yandex.ru
-  client-fingerprint: chrome
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 05
+  server: 185.220.100.168
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -91,10 +65,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -105,9 +75,5 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
 rules:
 - MATCH,PROXIES

@@ -4,55 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01
-  server: 18.168.90.187
-  port: 22223
+- name: 🇮🇪 爱尔兰 (Ireland) 01 R63
+  server: 188.211.233.134
+  port: 443
   udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 02
-  server: 13.134.125.31
-  port: 22223
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 03
-  server: 18.168.90.187
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 04
-  server: 13.134.125.31
-  port: 22222
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇮🇪 爱尔兰 (Ireland) 05
-  server: 18.168.90.187
-  port: 22224
-  udp: true
-  type: vless
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  type: trojan
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  sni: ie1.dedushka.top
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇪 爱尔兰 (Ireland) 01
-  - 🇮🇪 爱尔兰 (Ireland) 02
-  - 🇮🇪 爱尔兰 (Ireland) 03
-  - 🇮🇪 爱尔兰 (Ireland) 04
-  - 🇮🇪 爱尔兰 (Ireland) 05
+  - 🇮🇪 爱尔兰 (Ireland) 01 R63
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01
-  - 🇮🇪 爱尔兰 (Ireland) 02
-  - 🇮🇪 爱尔兰 (Ireland) 03
-  - 🇮🇪 爱尔兰 (Ireland) 04
-  - 🇮🇪 爱尔兰 (Ireland) 05
+  - 🇮🇪 爱尔兰 (Ireland) 01 R63
 rules:
 - MATCH,PROXIES

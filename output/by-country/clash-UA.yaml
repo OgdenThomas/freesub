@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: staging.lastilhame.monster
+  port: 49917
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+- name: 🇺🇦 乌克兰 (Ukraine) 02
   server: netx.smrtai.top
   port: 443
   udp: true
@@ -16,17 +23,17 @@ proxies:
     short-id: d8b58872
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇺🇦 乌克兰 (Ukraine) 02
+- name: 🇺🇦 乌克兰 (Ukraine) 03
   server: staging.lastilhame.monster
   port: 443
   udp: true
   type: vless
-  uuid: 455cfdc6-9abf-4e40-863f-5ff6cc63457c
+  uuid: 594d466e-8ac3-4fda-b1d1-eeb817853518
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 18e4d2d21241
+    short-id: 5a018643df03
   servername: www.microsoft.com
   client-fingerprint: chrome
 proxy-groups:
@@ -36,6 +43,7 @@ proxy-groups:
   - AUTO
   - 🇺🇦 乌克兰 (Ukraine) 01
   - 🇺🇦 乌克兰 (Ukraine) 02
+  - 🇺🇦 乌克兰 (Ukraine) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +51,6 @@ proxy-groups:
   proxies:
   - 🇺🇦 乌克兰 (Ukraine) 01
   - 🇺🇦 乌克兰 (Ukraine) 02
+  - 🇺🇦 乌克兰 (Ukraine) 03
 rules:
 - MATCH,PROXIES
