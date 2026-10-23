@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 64.176.231.183
-  port: 443
-  udp: true
-  type: vless
-  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
-    short-id: ca193e889d958f81
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 02
   server: jp4.998998.best
   port: 443
   udp: true
@@ -39,13 +26,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 rules:
 - MATCH,PROXIES

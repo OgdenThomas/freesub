@@ -5,40 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 45.202.254.20
-  port: 9443
-  udp: true
-  type: vless
-  uuid: 82eb8419-59f4-4d3e-9106-d05d22af615c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-  servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 02
-  server: vp3.yysyy.online
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 03
-  server: 142.91.108.25
-  port: 443
-  udp: true
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-  servername: jp3.nztvpn.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 04
   server: 45.76.98.127
   port: 443
   udp: true
@@ -53,10 +19,8 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 05
-  server: jp.yi-yi.xyz
+- name: 🇯🇵 日本 (Japan) 02
+  server: 154.36.155.142
   port: 8443
   udp: true
   type: vless
@@ -67,8 +31,8 @@ proxies:
     public-key: g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY
     short-id: 956d8072a694ff37
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 06
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 03
   server: jp5.998998.best
   port: 443
   udp: true
@@ -92,9 +56,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -103,8 +64,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
 rules:
 - MATCH,PROXIES

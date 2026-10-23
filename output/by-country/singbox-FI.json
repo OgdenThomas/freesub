@@ -4,12 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "65.109.209.239",
-      "server_port": 16911,
-      "uuid": "c5f59d68-5a26-40b8-a086-2f531e06737c",
-      "security": "auto"
+      "server": "2.26.106.232",
+      "server_port": 8443,
+      "uuid": "5a96c1fc-f167-44b9-9020-8f6867537d14",
+      "tls": {
+        "enabled": true,
+        "server_name": "finland02.azotvpn.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ",
+          "short_id": "07f508fe5d2355d3"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
     },
     {
       "type": "vless",
@@ -19,32 +34,9 @@
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
       "transport": {
         "type": "ws",
-        "path": "/vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
-      "server": "144.31.34.146",
-      "server_port": 2096,
-      "uuid": "6e05822a-e9da-4135-a9db-71aa07a944af",
-      "tls": {
-        "enabled": true,
-        "server_name": "fi1.merky.one",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/mky-ws-4f19c8a7",
+        "path": "/vless",
         "headers": {
-          "Host": "fi1.merky.one"
+          "Host": "45.144.234.157"
         }
       }
     },
@@ -54,8 +46,7 @@
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 02"
       ]
     },
     {
@@ -63,8 +54,7 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

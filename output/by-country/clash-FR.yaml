@@ -5,12 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 15.188.252.7
-  port: 22222
+  server: 15.188.237.199
+  port: 22224
   udp: true
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: 🇫🇷 法国 (France) 02
+  server: 141.101.115.104
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 03
   server: ai.smrtai.top
   port: 443
   udp: true
@@ -22,30 +33,31 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 03
-  server: 85.31.102.163
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 - name: 🇫🇷 法国 (France) 04
-  server: 45.87.41.18
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇫🇷 法国 (France) 05
+  server: 151.101.129.242
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
+  type: vless
+  uuid: 1b3837df-41d5-4740-8a36-467ea03adfc3
+  tls: true
+  servername: adheres-scruple.quick-cdn.net
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 05
-  server: 185.220.100.168
+    path: /ws
+    headers:
+      Host: adheres-scruple.quick-cdn.net
+- name: 🇫🇷 法国 (France) 06
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -65,6 +77,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,5 +88,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
 rules:
 - MATCH,PROXIES
