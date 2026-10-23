@@ -5,6 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
+  server: vp3.yysyy.online
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 02
+  server: jp.yi-yi.xyz
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 36c06e11-028b-40a1-a91f-c8f38f03e829
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY
+    short-id: 956d8072a694ff37
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 03
   server: 45.76.98.127
   port: 443
   udp: true
@@ -19,20 +40,17 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
-- name: 🇯🇵 日本 (Japan) 02
-  server: 154.36.155.142
-  port: 8443
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 04
+  server: jp1.frnhk.xyz
+  port: 9443
   udp: true
-  type: vless
-  uuid: 36c06e11-028b-40a1-a91f-c8f38f03e829
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY
-    short-id: 956d8072a694ff37
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 03
+  type: hysteria2
+  password: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  sni: jp1.frnhk.xyz
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 05
   server: jp5.998998.best
   port: 443
   udp: true
@@ -56,6 +74,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 04
+  - 🇯🇵 日本 (Japan) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,5 +84,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 04
+  - 🇯🇵 日本 (Japan) 05
 rules:
 - MATCH,PROXIES

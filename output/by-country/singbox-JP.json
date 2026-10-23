@@ -4,8 +4,41 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 01",
+      "server": "vp3.yysyy.online",
+      "server_port": 443,
+      "password": "96ab5cd282733fd4c312a61f972f330a",
+      "tls": {
+        "enabled": true,
+        "server_name": "vp3.yysyy.online",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02",
+      "server": "jp.yi-yi.xyz",
+      "server_port": 8443,
+      "uuid": "36c06e11-028b-40a1-a91f-c8f38f03e829",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY",
+          "short_id": "956d8072a694ff37"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03",
       "server": "45.76.98.127",
       "server_port": 443,
       "uuid": "18ce1302-4e37-4eac-bd4f-e3e0a983e589",
@@ -24,33 +57,27 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 02",
-      "server": "154.36.155.142",
-      "server_port": 8443,
-      "uuid": "36c06e11-028b-40a1-a91f-c8f38f03e829",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY",
-          "short_id": "956d8072a694ff37"
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
         }
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 04",
+      "server": "jp1.frnhk.xyz",
+      "server_port": 9443,
+      "password": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp1.frnhk.xyz",
+        "insecure": false
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 03",
+      "tag": "🇯🇵 日本 (Japan) 05",
       "server": "jp5.998998.best",
       "server_port": 443,
       "uuid": "5504eaa8-1395-402f-8e0e-75ecd762e627",
@@ -75,7 +102,9 @@
         "auto",
         "🇯🇵 日本 (Japan) 01",
         "🇯🇵 日本 (Japan) 02",
-        "🇯🇵 日本 (Japan) 03"
+        "🇯🇵 日本 (Japan) 03",
+        "🇯🇵 日本 (Japan) 04",
+        "🇯🇵 日本 (Japan) 05"
       ]
     },
     {
@@ -84,7 +113,9 @@
       "outbounds": [
         "🇯🇵 日本 (Japan) 01",
         "🇯🇵 日本 (Japan) 02",
-        "🇯🇵 日本 (Japan) 03"
+        "🇯🇵 日本 (Japan) 03",
+        "🇯🇵 日本 (Japan) 04",
+        "🇯🇵 日本 (Japan) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

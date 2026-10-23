@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 2.26.106.232
+  server: 31.77.202.166
   port: 8443
   udp: true
   type: vless
@@ -15,7 +15,7 @@ proxies:
     public-key: fQ1M2sO50w5A3oM55Hfs8vmZ320I8VaKdzRqeXOMMnQ
     short-id: 07f508fe5d2355d3
   servername: finland02.azotvpn.xyz
-  client-fingerprint: random
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: ''
@@ -30,6 +30,19 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 1.bmi.ir.asopardaz.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2ff
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: e915
+  servername: timeline.www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

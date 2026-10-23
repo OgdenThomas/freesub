@@ -6,7 +6,7 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "2.26.106.232",
+      "server": "31.77.202.166",
       "server_port": 8443,
       "uuid": "5a96c1fc-f167-44b9-9020-8f6867537d14",
       "tls": {
@@ -14,7 +14,7 @@
         "server_name": "finland02.azotvpn.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -41,12 +41,34 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "server": "1.bmi.ir.asopardaz.ir",
+      "server_port": 443,
+      "uuid": "ce71b8c2-54a4-4dd0-b780-a4521b16f2ff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "timeline.www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs",
+          "short_id": "e915"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ]
     },
     {
@@ -54,7 +76,8 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

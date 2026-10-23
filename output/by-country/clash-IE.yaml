@@ -1,0 +1,58 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇪 爱尔兰 (Ireland) 01
+  server: 16.60.44.179
+  port: 22224
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 02
+  server: 51.24.209.55
+  port: 22224
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 03
+  server: 51.24.209.55
+  port: 22223
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 04
+  server: 51.24.209.55
+  port: 22222
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇮🇪 爱尔兰 (Ireland) 05
+  server: 16.60.44.179
+  port: 22223
+  udp: true
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇪 爱尔兰 (Ireland) 02
+  - 🇮🇪 爱尔兰 (Ireland) 03
+  - 🇮🇪 爱尔兰 (Ireland) 04
+  - 🇮🇪 爱尔兰 (Ireland) 05
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇪 爱尔兰 (Ireland) 01
+  - 🇮🇪 爱尔兰 (Ireland) 02
+  - 🇮🇪 爱尔兰 (Ireland) 03
+  - 🇮🇪 爱尔兰 (Ireland) 04
+  - 🇮🇪 爱尔兰 (Ireland) 05
+rules:
+- MATCH,PROXIES

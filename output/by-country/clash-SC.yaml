@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
-  server: p141.panda001.net
-  port: 4652
+- name: 🇸🇨 塞舌尔 (Seychelles) 01
+  server: ui108.pacemakere.com
+  port: 20008
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
+  type: trojan
+  password: 6ab93ec68bd94b76
+  sni: ui108.pacemakere.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇸🇨 塞舌尔 (Seychelles) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇸🇨 塞舌尔 (Seychelles) 01
 rules:
 - MATCH,PROXIES
