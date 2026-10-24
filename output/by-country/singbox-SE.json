@@ -4,26 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇵🇪 秘鲁 (Peru) 01",
-      "server": "zfd-boardv2.kunlun01dns.com",
-      "server_port": 16322,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 01",
+      "server": "5.178.109.174",
+      "server_port": 14430,
+      "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "5.178.109.174"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇪 秘鲁 (Peru) 01"
+        "🇸🇪 瑞典 (Sweden) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇪 秘鲁 (Peru) 01"
+        "🇸🇪 瑞典 (Sweden) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

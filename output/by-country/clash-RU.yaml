@@ -20,6 +20,18 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 147.45.47.83
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 46.243.142.104
   port: 443
   udp: true
@@ -41,6 +53,7 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,5 +61,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03
 rules:
 - MATCH,PROXIES

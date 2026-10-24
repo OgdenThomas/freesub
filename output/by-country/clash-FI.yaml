@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 2.29.101.158
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
-  tls: true
-  reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -30,8 +15,8 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: hw3.divarkhaghazi.com
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: hw3.divarkhaghazi.com.
   port: 465
   udp: true
   type: vless
@@ -45,6 +30,34 @@ proxies:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 185.119.81.7
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2f5cfa10-43e5-4912-800d-557308a26a29
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9BUlinkTIxNgD2Em4KShtEbXOjBKvz2mDwT1VqoeR1k
+    short-id: 80c4e0bda641d6c9
+  servername: ht689zw45oor.cloudydigital.net
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: finp2g.yandex-api.store
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 78559873-84ef-4cab-a0b2-46d4cd20de4a
+  tls: true
+  servername: finp2g.yandex-api.store
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /assets
+    headers:
+      Host: finp2g.yandex-api.store
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,6 +66,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +75,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

@@ -4,8 +4,27 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇫🇷 法国 (France) 01",
+      "server": "104.18.9.83",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 02",
       "server": "138.124.70.41",
       "server_port": 14430,
       "uuid": "6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
@@ -18,28 +37,20 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 02",
-      "server": "185.18.250.252",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
-      },
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 03",
+      "server": "185.253.116.33",
+      "server_port": 14430,
+      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
       "transport": {
         "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        }
+        "path": "/vless"
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 法国 (France) 03",
-      "server": "161.97.66.16",
+      "tag": "🇫🇷 法国 (France) 04",
+      "server": "ai.smrtai.top",
       "server_port": 443,
       "uuid": "086bf957-9cd0-4e55-8280-bbef10435b41",
       "tls": {
@@ -47,31 +58,12 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
           "public_key": "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc",
           "short_id": "086bf957"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇫🇷 法国 (France) 04",
-      "server": "185.255.179.166",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
         }
       }
     },
@@ -97,8 +89,8 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 法国 (France) 06",
-      "server": "85.31.102.163",
-      "server_port": 443,
+      "server": "185.114.72.31",
+      "server_port": 2053,
       "password": "humanity",
       "tls": {
         "enabled": true,
@@ -116,8 +108,8 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 法国 (France) 07",
-      "server": "185.114.72.31",
-      "server_port": 2053,
+      "server": "185.255.179.166",
+      "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,

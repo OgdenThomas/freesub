@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
+  server: 104.18.9.83
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 02
   server: 138.124.70.41
   port: 14430
   udp: true
@@ -15,19 +26,17 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 02
-  server: 185.18.250.252
-  port: 443
+- name: 🇫🇷 法国 (France) 03
+  server: 185.253.116.33
+  port: 14430
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  type: vless
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 03
-  server: 161.97.66.16
+    path: /vless
+- name: 🇫🇷 法国 (France) 04
+  server: ai.smrtai.top
   port: 443
   udp: true
   type: vless
@@ -37,18 +46,7 @@ proxies:
     public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
     short-id: 086bf957
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 04
-  server: 185.255.179.166
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 05
   server: 45.87.41.18
   port: 443
@@ -61,8 +59,8 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 06
-  server: 85.31.102.163
-  port: 443
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -72,8 +70,8 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 07
-  server: 185.114.72.31
-  port: 2053
+  server: 185.255.179.166
+  port: 443
   udp: true
   type: trojan
   password: humanity

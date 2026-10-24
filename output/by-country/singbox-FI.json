@@ -6,30 +6,6 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "2.29.101.158",
-      "server_port": 443,
-      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
-      "tls": {
-        "enabled": true,
-        "server_name": "36a466g.fi1.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
-          "short_id": "b3c9d0c6bdd114a6"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "0adb9638509b"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02",
       "server": "45.144.234.157",
       "server_port": 14430,
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
@@ -43,17 +19,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
-      "server": "hw3.divarkhaghazi.com",
+      "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "hw3.divarkhaghazi.com.",
       "server_port": 465,
       "uuid": "924e20da-fcad-4e7e-8113-c62d27a0d01e",
       "tls": {
         "enabled": true,
         "server_name": "hw3.divarkhaghazi.com.",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -68,13 +41,61 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "server": "185.119.81.7",
+      "server_port": 443,
+      "uuid": "2f5cfa10-43e5-4912-800d-557308a26a29",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ht689zw45oor.cloudydigital.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9BUlinkTIxNgD2Em4KShtEbXOjBKvz2mDwT1VqoeR1k",
+          "short_id": "80c4e0bda641d6c9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 04",
+      "server": "finp2g.yandex-api.store",
+      "server_port": 8443,
+      "uuid": "78559873-84ef-4cab-a0b2-46d4cd20de4a",
+      "tls": {
+        "enabled": true,
+        "server_name": "finp2g.yandex-api.store",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assets",
+        "headers": {
+          "Host": "finp2g.yandex-api.store"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ]
     },
     {
@@ -83,7 +104,8 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

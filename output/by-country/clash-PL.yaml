@@ -5,19 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 82.118.22.161
+  server: 5.22.221.127
   port: 443
   udp: true
   type: vless
-  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
-    short-id: fa3ea655619a3e78
-  servername: www.cloudflare.com
-  client-fingerprint: safari
+  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
 - name: 🇵🇱 波兰 (Poland) 02
+  server: 49.12.249.167
+  port: 147
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 5uDrCF_iLoxCiRkKku6f7A
+- name: 🇵🇱 波兰 (Poland) 03
   server: site.teslamotor.site
   port: 20001
   udp: true
@@ -30,6 +30,7 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -37,5 +38,6 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES
