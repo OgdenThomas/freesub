@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: ee-central.v8x2b.lol
+  port: 443
+  udp: true
+  type: vless
+  uuid: 846cedee-2a52-0001-a0b9-11850ead6a8b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw
+  servername: ee-central.v8x2b.lol
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
+rules:
+- MATCH,PROXIES

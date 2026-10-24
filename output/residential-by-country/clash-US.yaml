@@ -1,0 +1,26 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇸 美国 (United States) 01 (家宽) R50
+  server: 23.160.56.99
+  port: 2087
+  udp: true
+  type: vless
+  uuid: f1e7eafa-0d6f-441e-8565-29f34171aef2
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇸 美国 (United States) 01 (家宽) R50
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇸 美国 (United States) 01 (家宽) R50
+rules:
+- MATCH,PROXIES

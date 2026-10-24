@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 195.58.49.34
-  port: 18443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 193.233.253.180
   port: 8444
   udp: true
@@ -26,7 +19,42 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 157.22.240.50
+  port: 443
+  udp: true
+  type: vless
+  uuid: iCaYLyqSFgn5Nt
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: XMvZvBbY8rIlWFNGB6IDzDOf-xBPm4737KN9weKltBc
+    short-id: f5bce2ac
+  servername: www.ovhcloud.com
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 195.58.49.34
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 46.243.142.104
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9ba53795-4356-40ab-8067-76ec2ae2a3d8
+  tls: true
+  servername: santehdv.site
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /media/stream/qUWu2oaFgxAw
+    headers:
+      Host: santehdv.site
+- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 176.32.33.153
   port: 18443
   udp: true
@@ -41,6 +69,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,5 +79,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES
