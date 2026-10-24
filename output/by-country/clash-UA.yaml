@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 乌克兰 (Ukraine) 01
-  server: staging.lastilhame.monster
-  port: 49917
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
-- name: 🇺🇦 乌克兰 (Ukraine) 02
   server: 104.253.216.227
   port: 443
   udp: true
@@ -30,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇺🇦 乌克兰 (Ukraine) 01
-  - 🇺🇦 乌克兰 (Ukraine) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇦 乌克兰 (Ukraine) 01
-  - 🇺🇦 乌克兰 (Ukraine) 02
 rules:
 - MATCH,PROXIES
