@@ -15,17 +15,31 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- name: 🇮🇳 印度 (India) 02
+  server: 178.212.35.198
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  tls: true
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 02
 rules:
 - MATCH,PROXIES

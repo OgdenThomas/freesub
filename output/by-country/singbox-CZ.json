@@ -25,18 +25,67 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02",
+      "server": "server.slavkiti.monster",
+      "server_port": 443,
+      "uuid": "4d017db2-7655-4276-9557-e2ec25b04ee7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tradingview.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk",
+          "short_id": "ee1716767f9b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 03 R46",
+      "server": "static.freeinternet.skin",
+      "server_port": 443,
+      "uuid": "55c98c63-8e67-4750-a574-5f586782c1ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.freeinternet.skin",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "f2evGKO94_eMGIuWv7OXrcVXTnqJjSxoflPqb24DFg0",
+          "short_id": "f362281040d91a1e"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03 R46"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01",
+        "🇨🇿 捷克 (Czech) 02",
+        "🇨🇿 捷克 (Czech) 03 R46"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

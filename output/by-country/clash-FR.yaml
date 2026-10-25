@@ -5,16 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 ⚠R
-  server: 45.151.71.174
-  port: 443
+  server: 54.37.2.245
+  port: 8443
   udp: true
   type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: gb.ozon.ru
+  servername: ozon.ru
   client-fingerprint: firefox
 - name: 🇫🇷 法国 (France) 02
   server: 138.124.70.41
@@ -25,7 +25,74 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 138.124.70.41
 - name: 🇫🇷 法国 (France) 03
+  server: ger1.4ebur.app
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: kBQA4ihPCmDzgdEd2RCu6A
+- name: 🇫🇷 法国 (France) 04 R40
+  server: pl140.vpnbook.com
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 05
+  server: 213.152.165.203
+  port: 2092
+  udp: true
+  type: vless
+  uuid: 901cb432-3807-404a-9bb8-987814b000ca
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 06 ⚠R
+  server: www.ubuntuupdates.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
+- name: 🇫🇷 法国 (France) 07
+  server: 45.87.41.18
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 08
+  server: 185.114.72.31
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 09
   server: ai.smrtai.top
   port: 443
   udp: true
@@ -37,42 +104,8 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
-  server: 104.16.72.41
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 05 ⚠R
-  server: 54.37.5.203
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 06
+- name: 🇫🇷 法国 (France) 10
   server: 185.220.100.168
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 07
-  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -90,10 +123,13 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 ⚠R
-  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 04 R40
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06 ⚠R
   - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -102,9 +138,12 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 ⚠R
-  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 04 R40
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06 ⚠R
   - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
 rules:
 - MATCH,PROXIES

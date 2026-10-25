@@ -4,23 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇻🇳 越南 (Vietnam) 01
-  server: 150.95.109.109
-  port: 2086
+- name: 🇵🇭 菲律宾 (Philippines) 01
+  server: ph001.zestapp778.com
+  port: 15656
   udp: true
   type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: ph001.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇵🇭 菲律宾 (Philippines) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇵🇭 菲律宾 (Philippines) 01
 rules:
 - MATCH,PROXIES

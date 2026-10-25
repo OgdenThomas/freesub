@@ -6,13 +6,13 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01",
-      "server": "45.151.71.152",
-      "server_port": 443,
-      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
+      "server": "185.98.63.6",
+      "server_port": 8443,
+      "uuid": "6845a59f-970b-4e1e-8e26-06a34ee663d6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "abuse.ozon.ru",
+        "server_name": "apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -25,18 +25,44 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02",
+      "server": "62.133.63.45",
+      "server_port": 8444,
+      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
+          "short_id": "457fab2ac885dbe0"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "GunService"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01"
+        "🇹🇷 土耳其 (Turkey) 01",
+        "🇹🇷 土耳其 (Turkey) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

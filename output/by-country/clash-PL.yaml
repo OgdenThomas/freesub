@@ -5,52 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 5.22.221.127
-  port: 443
-  udp: true
-  type: vless
-  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 150.241.87.200
-  port: 2096
-  udp: true
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  tls: true
-  servername: stb6390.rumedia-cdn.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: stb6390.rumedia-cdn.com
-- name: 🇵🇱 波兰 (Poland) 04 R40
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 05
   server: site.teslamotor.site
   port: 20001
   udp: true
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-- name: 🇵🇱 波兰 (Poland) 06 R43
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 2.26.6.1
+  port: 2087
+  udp: true
+  type: vless
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  tls: true
+  servername: 2.26.6.1
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 5.22.221.127
+  port: 443
+  udp: true
+  type: vless
+  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
+- name: 🇵🇱 波兰 (Poland) 04 R43
   server: 54.37.131.126
   port: 80
   udp: true
@@ -71,9 +47,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R43
+  - 🇵🇱 波兰 (Poland) 04 R43
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,8 +56,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R43
+  - 🇵🇱 波兰 (Poland) 04 R43
 rules:
 - MATCH,PROXIES

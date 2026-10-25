@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: fuji.etherhub.cc
+  server: 31.76.91.98
   port: 443
   udp: true
   type: vless
@@ -32,6 +32,27 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
+- name: 🇯🇵 日本 (Japan) 03
+  server: 66.90.115.124
+  port: 2090
+  udp: true
+  type: vless
+  uuid: 3644635c-f8c4-449c-a665-fce1897a7bf3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+    short-id: bb472a184677af64
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 04
+  server: 45.32.10.7
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +60,8 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
+  - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +69,7 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
+  - 🇯🇵 日本 (Japan) 03
+  - 🇯🇵 日本 (Japan) 04
 rules:
 - MATCH,PROXIES
