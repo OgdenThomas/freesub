@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 巴西 (Brazil) 01
-  server: 92.53.119.212
-  port: 40849
+- name: 🇱🇻 拉脱维亚 (Latvia) 01
+  server: 195.123.208.32
+  port: 443
   udp: true
   type: vless
-  uuid: 1ef7d97f-3aa5-0001-8521-84cf4794bf7a
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: jkVcZ_b3iWs2FcSjC8Mb1NoRuwPgCH9HpeOOYAXBSU0
-  servername: ru-hub10.lovely.my
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
+  servername: gateway.icloud.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 巴西 (Brazil) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 巴西 (Brazil) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 rules:
 - MATCH,PROXIES
