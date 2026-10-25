@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 46.28.67.55
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: 13.143.239.119
   port: 443
   udp: true
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  uuid: f36c82e2-e33e-4054-960a-34619d9fdd5b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: kYbLeoF13TKNPtlYwRsAqFQR3l7v6NMe6ydARMIfEC0
+    short-id: 7230e3b3f137543c
+  servername: www.transip.nl
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 01
 rules:
 - MATCH,PROXIES

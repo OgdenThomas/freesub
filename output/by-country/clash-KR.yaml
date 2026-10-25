@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 158.247.241.102
+  server: 64.176.231.183
   port: 443
   udp: true
   type: vless
@@ -17,26 +17,17 @@ proxies:
     short-id: ca193e889d958f81
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 02
-  server: p141.panda001.net
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
-  - 🇰🇷 韩国 (South Korea) 02
 rules:
 - MATCH,PROXIES

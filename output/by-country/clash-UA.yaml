@@ -5,17 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: staging.lastilhame.monster
+  port: 49917
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+- name: 🇺🇦 乌克兰 (Ukraine) 02
+  server: netx.smrtai.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
+  tls: true
+  reality-opts:
+    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
+    short-id: d8b58872
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇦 乌克兰 (Ukraine) 03
   server: 104.253.216.227
   port: 443
   udp: true
   type: vless
-  uuid: de38389f-5651-4f2f-8276-5aabf3b861c9
+  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 225e930cfd4d
-  servername: www.hollywoodreporter.com
+    short-id: 60500a63ad12
+  servername: www.microsoft.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -23,11 +42,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇺🇦 乌克兰 (Ukraine) 02
+  - 🇺🇦 乌克兰 (Ukraine) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇦 乌克兰 (Ukraine) 01
+  - 🇺🇦 乌克兰 (Ukraine) 02
+  - 🇺🇦 乌克兰 (Ukraine) 03
 rules:
 - MATCH,PROXIES

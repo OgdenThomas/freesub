@@ -1,0 +1,46 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇪 瑞典 (Sweden) 01 R53
+  server: 91.242.228.29
+  port: 443
+  udp: true
+  type: vless
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: afee962d
+  servername: se1.mycloud1.org
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 02
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇪 瑞典 (Sweden) 01 R53
+  - 🇸🇪 瑞典 (Sweden) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇪 瑞典 (Sweden) 01 R53
+  - 🇸🇪 瑞典 (Sweden) 02
+rules:
+- MATCH,PROXIES
