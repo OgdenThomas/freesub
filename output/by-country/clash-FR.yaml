@@ -4,31 +4,18 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 ⚠R
-  server: 51.77.108.218
-  port: 8443
+- name: 🇫🇷 法国 (France) 01
+  server: 138.124.70.41
+  port: 14430
   udp: true
   type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
 - name: 🇫🇷 法国 (France) 02 ⚠R
-  server: 185.88.173.215
-  port: 443
-  udp: true
-  type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: gb.ozon.ru
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 03 ⚠R
   server: 54.37.2.245
   port: 8443
   udp: true
@@ -40,67 +27,33 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 04
-  server: 138.124.70.41
-  port: 14430
+- name: 🇫🇷 法国 (France) 03 ⚠R
+  server: 51.77.108.218
+  port: 8443
   udp: true
   type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 05
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06
-  server: ai.smrtai.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
-  tls: true
-  reality-opts:
-    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
-    short-id: 086bf957
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 07
-  server: ww3.levikogjgfdd.ir
-  port: 443
-  udp: true
-  type: vless
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
-    short-id: e6
-  servername: passport.yandex.ru
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 08
-  server: 185.220.100.168
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 04 ⚠R
+  server: 185.88.173.215
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 09
-  server: 191.96.94.226
-  port: 443
+  type: vless
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: gb.ozon.ru
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 05
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -114,28 +67,20 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 ⚠R
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03 ⚠R
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 ⚠R
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 ⚠R
+  - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03 ⚠R
-  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 04 ⚠R
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09
 rules:
 - MATCH,PROXIES

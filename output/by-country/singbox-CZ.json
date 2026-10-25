@@ -5,14 +5,59 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01",
-      "server": "193.124.17.190",
+      "tag": "🇨🇿 捷克 (Czech) 01 R44",
+      "server": "195.123.245.241",
       "server_port": 443,
-      "uuid": "d84c13b2-c2b9-4a7c-838f-05ac09ee422e",
+      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.mozilla.org",
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw",
+          "short_id": "23d0950d60bc0d5b"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 R46",
+      "server": "static.freeinternet.skin",
+      "server_port": 443,
+      "uuid": "55c98c63-8e67-4750-a574-5f586782c1ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.freeinternet.skin",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "f2evGKO94_eMGIuWv7OXrcVXTnqJjSxoflPqb24DFg0",
+          "short_id": "f362281040d91a1e"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 03",
+      "server": "193.124.17.190",
+      "server_port": 443,
+      "uuid": "fad0b9a6-187d-4fcc-96fc-498bc5b3135a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.foxsports.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -20,7 +65,7 @@
         "reality": {
           "enabled": true,
           "public_key": "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk",
-          "short_id": "2a2ce9e42980"
+          "short_id": "8325360e8bd2"
         }
       }
     },
@@ -29,14 +74,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01 R44",
+        "🇨🇿 捷克 (Czech) 02 R46",
+        "🇨🇿 捷克 (Czech) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01"
+        "🇨🇿 捷克 (Czech) 01 R44",
+        "🇨🇿 捷克 (Czech) 02 R46",
+        "🇨🇿 捷克 (Czech) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

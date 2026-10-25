@@ -5,38 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 98.98.142.161
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 02
   server: sql.popmintxo.cc
   port: 43385
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R
-  server: connect.hondamotor.site
-  port: 10002
+- name: 🇬🇧 英国 (United Kingdom) 02 R47
+  server: 98.98.207.163
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 191.44.108.31
+  port: 443
   udp: true
   type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 193.188.21.253
-  port: 10444
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
+    public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
+    short-id: 3ba10d9ce34380c9
+  servername: www.google.com
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 193.188.21.253
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 193.188.21.253
 - name: 🇬🇧 英国 (United Kingdom) 05
   server: 144.48.11.97
   port: 43000
@@ -50,7 +55,25 @@ proxies:
     short-id: 725e6ea0
   servername: 144.48.11.97
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 06
+- name: 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  server: connect.hondamotor.site
+  port: 10002
+  udp: true
+  type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+- name: 🇬🇧 英国 (United Kingdom) 07 ⚠R
+  server: 45.151.71.142
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: gb.ozon.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 08
   server: 193.163.203.170
   port: 443
   udp: true
@@ -62,20 +85,8 @@ proxies:
     public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
     short-id: b28db60d77c50b4f
   servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 07 R67
-  server: uk.2ul.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 77479eaf-c35e-4088-ae47-a2beb88a7272
-  tls: true
-  reality-opts:
-    public-key: C-e3vasFC42zQmJblol4foZozTe6j1c7TJMGqjvRm2U
-    short-id: 77479eaf
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 08
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 09
   server: 104.239.12.81
   port: 443
   udp: true
@@ -88,31 +99,18 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: 107.181.151.128
-  port: 443
-  udp: true
-  type: vless
-  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 8f79726c5002
-  servername: www.mozilla.org
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02 R47
+  - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 R67
+  - 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
 - name: AUTO
@@ -121,12 +119,12 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02 R47
+  - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
-  - 🇬🇧 英国 (United Kingdom) 07 R67
+  - 🇬🇧 英国 (United Kingdom) 06 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 07 ⚠R
   - 🇬🇧 英国 (United Kingdom) 08
   - 🇬🇧 英国 (United Kingdom) 09
 rules:

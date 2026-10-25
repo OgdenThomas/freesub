@@ -16,19 +16,7 @@ proxies:
     headers:
       Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 177.3.214.156
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo
-  servername: finlandlanzarotte.live
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: hw3.divarkhaghazi.com
+  server: hw3.divarkhaghazi.com.
   port: 465
   udp: true
   type: vless
@@ -36,11 +24,24 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: areal1.greewebservices.ir
+  port: 2425
+  udp: true
+  type: vless
+  uuid: 7c4e57be-ff6f-4ef7-ba17-f839351d9af9
+  tls: true
+  reality-opts:
+    public-key: MnPGY1Vo4ZbYdpLRTYHoolv5s_pwO41karyJfnQ0F3o
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
