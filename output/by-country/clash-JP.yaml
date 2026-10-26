@@ -12,27 +12,19 @@ proxies:
   cipher: aes-256-gcm
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
 - name: 🇯🇵 日本 (Japan) 02
-  server: 31.76.91.70
-  port: 443
+  server: 103.27.133.17
+  port: 41438
   udp: true
   type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  uuid: f12d0220-e1de-4232-bcef-7e5a12f05062
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: bd6f67b6b2152b45
-  servername: fuji.etherhub.cc
-  client-fingerprint: firefox
+    public-key: w_X-vOLSkQ0Cv4sMRU7j9lq-WVX_rZqYkTcgDkIgUF8
+    short-id: 1fbda82b6856a6d3
+  servername: jp15.static-s3.org
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
-  server: vp3.yysyy.online
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 04
   server: 45.76.98.127
   port: 443
   udp: true
@@ -47,55 +39,20 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
+- name: 🇯🇵 日本 (Japan) 04
+  server: funagfrdfs.alixxplay.com
+  port: 35544
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc
+    short-id: 25c79e5856c7
+  servername: iosapps.itunes.apple.com
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 05
-  server: JP032012.ssgreen.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 0cf58a80-6fc7-40d1-b491-cb1c42cc8777
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: JP032012.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032012.ssgreen.org
-- name: 🇯🇵 日本 (Japan) 06
-  server: JP032007.ssgreen.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 2458b4f7-1f67-4b26-876c-4080c086cce9
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: JP032007.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032007.ssgreen.org
-- name: 🇯🇵 日本 (Japan) 07
-  server: jp032004.ssgreen.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 3a331c35-433c-4609-a86a-9f9bc3c9b6c8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: jp032004.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: jp032004.ssgreen.org
-- name: 🇯🇵 日本 (Japan) 08
   server: 66.90.115.122
   port: 2090
   udp: true
@@ -118,9 +75,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
-  - 🇯🇵 日本 (Japan) 07
-  - 🇯🇵 日本 (Japan) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -131,8 +85,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
-  - 🇯🇵 日本 (Japan) 07
-  - 🇯🇵 日本 (Japan) 08
 rules:
 - MATCH,PROXIES

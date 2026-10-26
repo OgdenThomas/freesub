@@ -5,31 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 13.143.239.69
+  server: 179.254.126.223
   port: 8443
   udp: true
   type: vless
   uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   tls: true
-  servername: ee4.pad-sservice.lat
+  servername: ee2.pad-sservice.lat
   skip-cert-verify: false
   client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /EE4W
+    path: /EE2W
     headers:
-      Host: ee4.pad-sservice.lat
+      Host: ee2.pad-service.com
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
+  server: ee1.pad-sservice.lat
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: ee1.pad-sservice.lat
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /EE1W
+    headers:
+      Host: ee1.pad-service.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
 rules:
 - MATCH,PROXIES

@@ -5,53 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: 165.154.63.139
-  port: 443
+  server: dog-hk.kunlun01dns.com
+  port: 21021
   udp: true
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
-  servername: www.amazon.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: 151.242.85.236
+  server: dog-hk.kunlun01dns.com
+  port: 21019
+  udp: true
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: 8.217.254.88
   port: 443
   udp: true
-  type: vless
-  uuid: 7aec627e-a258-4ded-9fd9-fbd7c024f950
-  flow: xtls-rprx-vision
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
   tls: true
-  reality-opts:
-    public-key: gUu1n11Ef_GEoatNQzJJucvIjGTt4qxOWdxMzjoHwDM
-    short-id: 9b6fa4047c24629f
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 501.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
-  tls: true
-  reality-opts:
-    public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
-    short-id: 09acf476305bdc56
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
 - name: 🇭🇰 中国香港 (Hong Kong) 04
   server: 501.150333.xyz
-  port: 21001
+  port: 21004
   udp: true
   type: vless
   uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
   tls: true
   reality-opts:
     public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
-    short-id: 15d7e7f1939e82e5
+    short-id: 04f9f3b03c9a6d79
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 05
@@ -68,14 +62,14 @@ proxies:
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 06
   server: 501.150333.xyz
-  port: 21004
+  port: 21003
   udp: true
   type: vless
   uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
   tls: true
   reality-opts:
     public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
-    short-id: 04f9f3b03c9a6d79
+    short-id: 09acf476305bdc56
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:

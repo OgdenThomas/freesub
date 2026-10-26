@@ -4,45 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 R44
-  server: 195.123.245.241
+- name: 🇨🇿 捷克 (Czech) 01
+  server: 193.124.17.190
   port: 443
   udp: true
   type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇨🇿 捷克 (Czech) 02
-  server: server.slavkiti.monster
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1896c6c9-a941-4688-a865-29027bf7f8e6
+  uuid: 68cf8d29-5aa0-44b3-88a9-f1a576b6e84c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: 6c825bc79850
+    short-id: 73a9e631a09b
   servername: www.microsoft.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 R44
-  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 R44
-  - 🇨🇿 捷克 (Czech) 02
+  - 🇨🇿 捷克 (Czech) 01
 rules:
 - MATCH,PROXIES

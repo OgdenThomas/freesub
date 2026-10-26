@@ -23,18 +23,41 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 02",
+      "server": "softice.net",
+      "server_port": 443,
+      "uuid": "ef328563-cda1-4530-9b0a-988cc5a74d78",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "softice.net",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇦🇹 奥地利 (Austria) 01",
+        "🇦🇹 奥地利 (Austria) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01"
+        "🇦🇹 奥地利 (Austria) 01",
+        "🇦🇹 奥地利 (Austria) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

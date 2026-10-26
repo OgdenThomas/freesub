@@ -24,8 +24,14 @@ proxies:
     short-id: 8a9725533854a7e8
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 03
-  server: 511.150333.xyz
+- name: 🇨🇦 加拿大 (Canada) 03 R52
+  server: 168.222.49.164
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- name: 🇨🇦 加拿大 (Canada) 04
+  server: 103.106.229.37
   port: 21004
   udp: true
   type: vless
@@ -35,44 +41,8 @@ proxies:
     public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
     short-id: 2df2bd9d8366cef1
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 04
-  server: 511.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: 3ab8d93dd9b1a5be
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇨🇦 加拿大 (Canada) 05
-  server: 510.150333.xyz
-  port: 21004
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 4e0418d648f86141
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇨🇦 加拿大 (Canada) 06
-  server: 510.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: d9a6b52e98121db2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 07
   server: 511.150333.xyz
   port: 21001
   udp: true
@@ -84,19 +54,19 @@ proxies:
     short-id: ab39fc68ab3dee81
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 08
+- name: 🇨🇦 加拿大 (Canada) 06
   server: 510.150333.xyz
-  port: 21001
+  port: 21004
   udp: true
   type: vless
   uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: a51c3ccb2320024a
+    short-id: 4e0418d648f86141
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 09
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 07
   server: 511.150333.xyz
   port: 21003
   udp: true
@@ -108,6 +78,42 @@ proxies:
     short-id: bab49aa4c2a88d27
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 08
+  server: 510.150333.xyz
+  port: 21003
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: f3602a3a1cf928b7
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 09
+  server: 511.150333.xyz
+  port: 21002
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 3ab8d93dd9b1a5be
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 10
+  server: 510.150333.xyz
+  port: 21001
+  udp: true
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: a51c3ccb2320024a
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -115,13 +121,14 @@ proxy-groups:
   - AUTO
   - 🇨🇦 加拿大 (Canada) 01
   - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 03 R52
   - 🇨🇦 加拿大 (Canada) 04
   - 🇨🇦 加拿大 (Canada) 05
   - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
   - 🇨🇦 加拿大 (Canada) 09
+  - 🇨🇦 加拿大 (Canada) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -129,12 +136,13 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大 (Canada) 01
   - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03
+  - 🇨🇦 加拿大 (Canada) 03 R52
   - 🇨🇦 加拿大 (Canada) 04
   - 🇨🇦 加拿大 (Canada) 05
   - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
   - 🇨🇦 加拿大 (Canada) 09
+  - 🇨🇦 加拿大 (Canada) 10
 rules:
 - MATCH,PROXIES

@@ -4,26 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇳 印度 (India) 01
-  server: 139.84.132.62
-  port: 443
+- name: 🇮🇳 印度 (India) 01 R53
+  server: 172.105.39.124
+  port: 7002
   udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: in.tronsg.com
-  skip-cert-verify: false
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 - name: 🇮🇳 印度 (India) 02
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: 🇮🇳 印度 (India) 03
   server: in.smrtai.top
   port: 443
   udp: true
@@ -35,12 +23,23 @@ proxies:
     short-id: 6bdc8320
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇮🇳 印度 (India) 03
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 01 R53
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
 - name: AUTO
@@ -48,7 +47,7 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇳 印度 (India) 01
+  - 🇮🇳 印度 (India) 01 R53
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
 rules:
