@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 (家宽)
-  server: 209.38.238.229
-  port: 20202
+- name: 🇭🇺 匈牙利 (Hungary) 01
+  server: 172.67.131.125
+  port: 2083
   udp: true
   type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  uuid: f418674e-f518-4318-8ff9-e10000000046
   tls: true
-  servername: wzs.echo.net.eu.org
+  servername: smart-edge-424.arti98399-1905.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=
+    path: /sync
     headers:
-      Host: wzs.echo.net.eu.org
+      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 (家宽)
+  - 🇭🇺 匈牙利 (Hungary) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (家宽)
+  - 🇭🇺 匈牙利 (Hungary) 01
 rules:
 - MATCH,PROXIES

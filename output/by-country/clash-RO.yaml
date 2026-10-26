@@ -16,26 +16,18 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇷🇴 罗马尼亚 (Romania) 02
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
-  - 🇷🇴 罗马尼亚 (Romania) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
-  - 🇷🇴 罗马尼亚 (Romania) 02
 rules:
 - MATCH,PROXIES

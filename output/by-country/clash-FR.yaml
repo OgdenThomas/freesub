@@ -5,6 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 ⚠R
+  server: 54.37.2.245
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: ozon.ru
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 02
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 03
+  server: ger1.4ebur.app
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: kBQA4ihPCmDzgdEd2RCu6A
+- name: 🇫🇷 法国 (France) 04
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 05 ⚠R
   server: 51.77.108.218
   port: 8443
   udp: true
@@ -16,19 +57,7 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: ozon.ru
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 02 ⚠R
-  server: 54.37.5.203
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 03
+- name: 🇫🇷 法国 (France) 06
   server: 161.97.66.16
   port: 443
   udp: true
@@ -40,8 +69,24 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 04 ⚠R
-  server: 45.151.71.148
+- name: 🇫🇷 法国 (France) 07 ⚠R
+  server: www.ubuntuupdates.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
+- name: 🇫🇷 法国 (France) 08 ⚠R
+  server: 45.151.71.159
   port: 443
   udp: true
   type: vless
@@ -52,51 +97,8 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: gb.ozon.ru
   client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 05
-  server: 45.130.125.126
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇫🇷 法国 (France) 07 ⚠R
-  server: 54.37.2.245
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: ozon.ru
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 08
-  server: 185.114.72.31
-  port: 2053
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 - name: 🇫🇷 法国 (France) 09
-  server: 213.152.165.201
+  server: 213.152.165.203
   port: 2092
   udp: true
   type: vless
@@ -108,7 +110,29 @@ proxies:
     short-id: 716b7eba38125f3a
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 10 R43
+- name: 🇫🇷 法国 (France) 10
+  server: 185.114.72.31
+  port: 2053
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 12 R43
   server: www.windowssearchtools.com
   port: 443
   udp: true
@@ -124,8 +148,8 @@ proxies:
     path: /truth
     headers:
       Host: www.windowssearchtools.com
-- name: 🇫🇷 法国 (France) 11
-  server: 161.97.160.224
+- name: 🇫🇷 法国 (France) 13
+  server: ww3.levikogjgfdd.ir
   port: 443
   udp: true
   type: vless
@@ -137,50 +161,41 @@ proxies:
     short-id: e6
   servername: passport.yandex.ru
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 12
-  server: 185.255.179.166
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 ⚠R
-  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 ⚠R
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05 ⚠R
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07 ⚠R
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 ⚠R
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R43
+  - 🇫🇷 法国 (France) 10
   - 🇫🇷 法国 (France) 11
-  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 12 R43
+  - 🇫🇷 法国 (France) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 ⚠R
-  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04 ⚠R
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05 ⚠R
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07 ⚠R
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 ⚠R
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R43
+  - 🇫🇷 法国 (France) 10
   - 🇫🇷 法国 (France) 11
-  - 🇫🇷 法国 (France) 12
+  - 🇫🇷 法国 (France) 12 R43
+  - 🇫🇷 法国 (France) 13
 rules:
 - MATCH,PROXIES

@@ -4,23 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇿 捷克 (Czech) 01",
-      "server": "zfd-boardv2.kunlun01dns.com",
-      "server_port": 16280,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 01 R44",
+      "server": "195.123.245.241",
+      "server_port": 443,
+      "uuid": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw",
+          "short_id": "23d0950d60bc0d5b"
+        }
+      }
     },
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 02",
       "server": "server.slavkiti.monster",
       "server_port": 443,
-      "uuid": "4d017db2-7655-4276-9557-e2ec25b04ee7",
+      "uuid": "1896c6c9-a941-4688-a865-29027bf7f8e6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tradingview.com",
+        "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -28,32 +41,8 @@
         "reality": {
           "enabled": true,
           "public_key": "J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk",
-          "short_id": "ee1716767f9b"
+          "short_id": "6c825bc79850"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 03 R46",
-      "server": "static.freeinternet.skin",
-      "server_port": 443,
-      "uuid": "55c98c63-8e67-4750-a574-5f586782c1ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "static.freeinternet.skin",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "f2evGKO94_eMGIuWv7OXrcVXTnqJjSxoflPqb24DFg0",
-          "short_id": "f362281040d91a1e"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
@@ -61,18 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01",
-        "🇨🇿 捷克 (Czech) 02",
-        "🇨🇿 捷克 (Czech) 03 R46"
+        "🇨🇿 捷克 (Czech) 01 R44",
+        "🇨🇿 捷克 (Czech) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01",
-        "🇨🇿 捷克 (Czech) 02",
-        "🇨🇿 捷克 (Czech) 03 R46"
+        "🇨🇿 捷克 (Czech) 01 R44",
+        "🇨🇿 捷克 (Czech) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
