@@ -27,6 +27,27 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 02",
+      "server": "45.151.71.164",
+      "server_port": 443,
+      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "abuse.ozon.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 03",
       "server": "62.133.63.45",
       "server_port": 8444,
       "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
@@ -49,12 +70,37 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04",
+      "server": "trdatair.egekaradecojistik.net.tr",
+      "server_port": 35577,
+      "uuid": "b7d3a581-74d6-4ead-9235-ce9dedf08152",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "play.google.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇷 土耳其 (Turkey) 05",
+      "server": "zfd-boardv2.kunlun01dns.com",
+      "server_port": 16272,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02"
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04",
+        "🇹🇷 土耳其 (Turkey) 05"
       ]
     },
     {
@@ -62,7 +108,10 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01",
-        "🇹🇷 土耳其 (Turkey) 02"
+        "🇹🇷 土耳其 (Turkey) 02",
+        "🇹🇷 土耳其 (Turkey) 03",
+        "🇹🇷 土耳其 (Turkey) 04",
+        "🇹🇷 土耳其 (Turkey) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

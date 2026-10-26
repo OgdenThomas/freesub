@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 2.27.203.251
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1ef7d97f-3aa5-4fe6-8521-84cf4794bf7a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: QYdQmsVvUj4jwo9gH20nJA5x015gaAL0nGipORe6ZmY
-  servername: edge-fi2.lovely.my
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -25,10 +13,20 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 177.3.214.156
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6lZ5dkQN2sH9tYca374W4N1n9eCanD_F2FfghcksKSo
+  servername: finlandlanzarotte.live
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 03
-  server: hw3.divarkhaghazi.com
+  server: hw3.divarkhaghazi.com.
   port: 465
   udp: true
   type: vless
@@ -36,26 +34,26 @@ proxies:
   tls: true
   servername: hw3.divarkhaghazi.com.
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: hw3.divarkhaghazi.com.
 - name: 🇫🇮 芬兰 (Finland) 04
-  server: 2.29.101.158
-  port: 443
+  server: fin2.pad-sservice.lat
+  port: 8443
   udp: true
   type: vless
-  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   tls: true
-  reality-opts:
-    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
-    short-id: b3c9d0c6bdd114a6
-  servername: 36a466g.fi1.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 0adb9638509b
+  servername: fin2.pad-sservice.lat
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /fin2-1
+    headers:
+      Host: fin2.pad-service.com
 proxy-groups:
 - name: PROXIES
   type: select

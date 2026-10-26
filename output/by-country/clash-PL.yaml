@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: site.teslamotor.site
-  port: 20001
+  server: 5.22.221.127
+  port: 443
   udp: true
   type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
 - name: 🇵🇱 波兰 (Poland) 02
   server: 2.26.6.1
   port: 2087
@@ -19,14 +19,27 @@ proxies:
   tls: true
   servername: 2.26.6.1
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 03
-  server: 5.22.221.127
-  port: 443
+  server: site.teslamotor.site
+  port: 20001
   udp: true
   type: vless
-  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
-- name: 🇵🇱 波兰 (Poland) 04 R43
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🇵🇱 波兰 (Poland) 04 R40
+  server: 77.232.135.141
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
+- name: 🇵🇱 波兰 (Poland) 05 R43
   server: 54.37.131.126
   port: 80
   udp: true
@@ -39,6 +52,48 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: 🇵🇱 波兰 (Poland) 06
+  server: pl3.pad-sservice.lat
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: pl3.pad-sservice.lat
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /PL3W
+    headers:
+      Host: pl3.pad-service.com
+- name: 🇵🇱 波兰 (Poland) 07
+  server: pl2.pad-sservice.lat
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: pl2.pad-sservice.lat
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /PL2W
+    headers:
+      Host: pl2.pad-service.com
+- name: 🇵🇱 波兰 (Poland) 08
+  server: pl1.pad-sservice.lat
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: pl1.pad-sservice.lat
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /PL1W
+    headers:
+      Host: pl1.pad-service.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,7 +102,11 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R43
+  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 05 R43
+  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 07
+  - 🇵🇱 波兰 (Poland) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -56,6 +115,10 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R43
+  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 05 R43
+  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 07
+  - 🇵🇱 波兰 (Poland) 08
 rules:
 - MATCH,PROXIES

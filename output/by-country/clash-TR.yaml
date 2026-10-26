@@ -17,6 +17,18 @@ proxies:
   servername: apple.com
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02
+  server: 45.151.71.164
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: abuse.ozon.ru
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 03
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -31,6 +43,25 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
+- name: 🇹🇷 土耳其 (Turkey) 04
+  server: trdatair.egekaradecojistik.net.tr
+  port: 35577
+  udp: true
+  type: vless
+  uuid: b7d3a581-74d6-4ead-9235-ce9dedf08152
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
+- name: 🇹🇷 土耳其 (Turkey) 05
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16272
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,6 +69,9 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -45,5 +79,8 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
+  - 🇹🇷 土耳其 (Turkey) 04
+  - 🇹🇷 土耳其 (Turkey) 05
 rules:
 - MATCH,PROXIES

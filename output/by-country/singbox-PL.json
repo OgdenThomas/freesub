@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "site.teslamotor.site",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+      "server": "5.22.221.127",
+      "server_port": 443,
+      "uuid": "44dfa3a7-f648-4587-819b-e653c0823f28"
     },
     {
       "type": "vless",
@@ -22,20 +22,40 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 03",
-      "server": "5.22.221.127",
-      "server_port": 443,
-      "uuid": "44dfa3a7-f648-4587-819b-e653c0823f28"
+      "server": "site.teslamotor.site",
+      "server_port": 20001,
+      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 04 R40",
+      "server": "77.232.135.141",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-pl"
+      }
     },
     {
       "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 04 R43",
+      "tag": "🇵🇱 波兰 (Poland) 05 R43",
       "server": "54.37.131.126",
       "server_port": 80,
       "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
@@ -49,6 +69,63 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 06",
+      "server": "pl3.pad-sservice.lat",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl3.pad-sservice.lat",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL3W",
+        "headers": {
+          "Host": "pl3.pad-service.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 07",
+      "server": "pl2.pad-sservice.lat",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl2.pad-sservice.lat",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL2W",
+        "headers": {
+          "Host": "pl2.pad-service.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 08",
+      "server": "pl1.pad-sservice.lat",
+      "server_port": 8443,
+      "uuid": "2b0e5676-fb62-4bf0-9607-6e7818421e8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl1.pad-sservice.lat",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/PL1W",
+        "headers": {
+          "Host": "pl1.pad-service.com"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -56,7 +133,11 @@
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
         "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04 R43"
+        "🇵🇱 波兰 (Poland) 04 R40",
+        "🇵🇱 波兰 (Poland) 05 R43",
+        "🇵🇱 波兰 (Poland) 06",
+        "🇵🇱 波兰 (Poland) 07",
+        "🇵🇱 波兰 (Poland) 08"
       ]
     },
     {
@@ -66,7 +147,11 @@
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
         "🇵🇱 波兰 (Poland) 03",
-        "🇵🇱 波兰 (Poland) 04 R43"
+        "🇵🇱 波兰 (Poland) 04 R40",
+        "🇵🇱 波兰 (Poland) 05 R43",
+        "🇵🇱 波兰 (Poland) 06",
+        "🇵🇱 波兰 (Poland) 07",
+        "🇵🇱 波兰 (Poland) 08"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

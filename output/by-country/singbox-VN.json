@@ -1,0 +1,74 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇻🇳 越南 (Vietnam) 01",
+      "server": "163.61.182.194",
+      "server_port": 34646,
+      "uuid": "608af979-75ff-4480-b1fd-9c4a36962835",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.receptivity.io",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "UuXUXzPnZM8IY-D5bQPy4iBIzEpK4PJFEOJzeObISRA",
+          "short_id": "4710d669"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇻🇳 越南 (Vietnam) 02",
+      "server": "154.21.203.106",
+      "server_port": 51279,
+      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A",
+          "short_id": "bb82c8"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇻🇳 越南 (Vietnam) 01",
+        "🇻🇳 越南 (Vietnam) 02"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇻🇳 越南 (Vietnam) 01",
+        "🇻🇳 越南 (Vietnam) 02"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
