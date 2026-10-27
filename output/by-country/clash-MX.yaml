@@ -4,16 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01
-  server: 149.104.90.21
-  port: 19167
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: mx001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇲🇽 墨西哥 (Mexico) 02 R42
+- name: 🇲🇽 墨西哥 (Mexico) 01 R42
   server: 216.238.80.100
   port: 443
   udp: true
@@ -26,14 +17,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01
-  - 🇲🇽 墨西哥 (Mexico) 02 R42
+  - 🇲🇽 墨西哥 (Mexico) 01 R42
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01
-  - 🇲🇽 墨西哥 (Mexico) 02 R42
+  - 🇲🇽 墨西哥 (Mexico) 01 R42
 rules:
 - MATCH,PROXIES
