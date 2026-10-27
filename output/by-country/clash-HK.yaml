@@ -5,38 +5,58 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: dog-hk.kunlun01dns.com
-  port: 21021
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: dog-hk.kunlun01dns.com
-  port: 21019
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 8.217.254.88
+  server: 165.154.63.139
   port: 443
   udp: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
   tls: true
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  reality-opts:
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 02
+  server: 501.150333.xyz
+  port: 21003
+  udp: true
+  type: vless
+  uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
+  tls: true
+  reality-opts:
+    public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
+    short-id: 09acf476305bdc56
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 03
+  server: 43.254.166.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: c6553c99-837d-490a-af1c-c526d8c38e99
+  tls: true
+  servername: usyun.cc
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /trial-gs-relay
     headers:
-      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
+      Host: usyun.cc
 - name: 🇭🇰 中国香港 (Hong Kong) 04
+  server: 501.150333.xyz
+  port: 21001
+  udp: true
+  type: vless
+  uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
+  tls: true
+  reality-opts:
+    public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
+    short-id: 15d7e7f1939e82e5
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 05
   server: 501.150333.xyz
   port: 21004
   udp: true
@@ -48,7 +68,7 @@ proxies:
     short-id: 04f9f3b03c9a6d79
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05
+- name: 🇭🇰 中国香港 (Hong Kong) 06
   server: 501.150333.xyz
   port: 21002
   udp: true
@@ -58,18 +78,6 @@ proxies:
   reality-opts:
     public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
     short-id: 48b41af29b500164
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 06
-  server: 501.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 972be0be-1831-4b5e-b26b-3b6e139a1cd0
-  tls: true
-  reality-opts:
-    public-key: OCs6EIBsSg-f8MW0RE7QDwjZafk09F1aGl7olF7yAW0
-    short-id: 09acf476305bdc56
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:

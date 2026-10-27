@@ -5,43 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇹 奥地利 (Austria) 01
-  server: 62.83.41.69
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au6.pad-sservice.lat
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /AU6W
-    headers:
-      Host: au6.pad-sservice.lat
-- name: 🇦🇹 奥地利 (Austria) 02
-  server: softice.net
+  server: 146.19.143.218
   port: 443
   udp: true
   type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   flow: xtls-rprx-vision
   tls: true
-  servername: softice.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  reality-opts:
+    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+    short-id: 4a7b1c8d
+  servername: tau1.freerunet.online
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01
-  - 🇦🇹 奥地利 (Austria) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇹 奥地利 (Austria) 01
-  - 🇦🇹 奥地利 (Austria) 02
 rules:
 - MATCH,PROXIES

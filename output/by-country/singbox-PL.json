@@ -4,31 +4,42 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "45.144.48.32",
-      "server_port": 57072,
-      "uuid": "d8f45bbb-e84d-4ad5-aa63-970f1345b164",
-      "security": "auto"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇵🇱 波兰 (Poland) 02",
-      "server": "201.58.180.143",
-      "server_port": 4443,
-      "password": "c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3",
+      "server": "92.118.150.146",
+      "server_port": 443,
+      "password": "Trojan@82164024",
       "tls": {
         "enabled": true,
-        "server_name": "pl2.shvpn.ru",
-        "insecure": false
+        "server_name": "pl.tronsg.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03",
+      "tag": "🇵🇱 波兰 (Poland) 02",
       "server": "site.teslamotor.site",
       "server_port": 20001,
       "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇵🇱 波兰 (Poland) 03",
+      "server": "54.37.131.126",
+      "server_port": 80,
+      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
     },
     {
       "type": "vless",
@@ -39,11 +50,7 @@
       "tls": {
         "enabled": true,
         "server_name": "ru1.radiolumens.uk",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "grpc",
@@ -67,21 +74,6 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 06",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -90,8 +82,7 @@
         "🇵🇱 波兰 (Poland) 02",
         "🇵🇱 波兰 (Poland) 03",
         "🇵🇱 波兰 (Poland) 04 R40",
-        "🇵🇱 波兰 (Poland) 05",
-        "🇵🇱 波兰 (Poland) 06"
+        "🇵🇱 波兰 (Poland) 05"
       ]
     },
     {
@@ -102,8 +93,7 @@
         "🇵🇱 波兰 (Poland) 02",
         "🇵🇱 波兰 (Poland) 03",
         "🇵🇱 波兰 (Poland) 04 R40",
-        "🇵🇱 波兰 (Poland) 05",
-        "🇵🇱 波兰 (Poland) 06"
+        "🇵🇱 波兰 (Poland) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

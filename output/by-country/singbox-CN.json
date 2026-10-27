@@ -4,14 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇨🇳 CN 01",
-      "server": "39.108.113.127",
-      "server_port": 10086,
-      "uuid": "2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10",
-      "security": "auto",
+      "server": "8.35.211.242",
+      "server_port": 443,
+      "uuid": "fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.cintaku.qzz.io",
+        "insecure": false
+      },
       "transport": {
-        "type": "ws"
+        "type": "ws",
+        "path": "/vlessws",
+        "headers": {
+          "Host": "vpn.cintaku.qzz.io"
+        }
       }
     },
     {
