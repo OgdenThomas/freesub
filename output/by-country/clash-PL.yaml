@@ -11,6 +11,57 @@ proxies:
   type: vless
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 - name: 🇵🇱 波兰 (Poland) 02
+  server: site.teslamotor.site
+  port: 20001
+  udp: true
+  type: vless
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🇵🇱 波兰 (Poland) 03
+  server: pl1.obxodvpn.us
+  port: 4443
+  udp: true
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 79.182.39.35
+  port: 25548
+  udp: true
+  type: vless
+  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+  tls: true
+  reality-opts:
+    public-key: lceynvFy326oU4ew9OPR7079m-L5ZcFELgCl0sqxU2M
+    short-id: bceb5b2197b76818
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 05
+  server: 31.184.253.134
+  port: 53869
+  udp: true
+  type: vless
+  uuid: 252b4a9c-520d-459c-9dbc-366995206089
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: rtc2Krk2fVhHCRG82EsUc4_mlw304HKHkl6MggQZEAU
+    short-id: 0f2cc340a69ed7
+  servername: www.moddb.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 06 R40
+  server: 77.232.135.141
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
+- name: 🇵🇱 波兰 (Poland) 07
   server: 45.148.119.127
   port: 443
   udp: true
@@ -23,35 +74,6 @@ proxies:
     short-id: '50'
   servername: cloudflare.com
   client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 03
-  server: site.teslamotor.site
-  port: 20001
-  udp: true
-  type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-- name: 🇵🇱 波兰 (Poland) 04 R40
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 2.26.6.1
-  port: 2087
-  udp: true
-  type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  tls: true
-  servername: 2.26.6.1
-  skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,8 +82,10 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06 R40
+  - 🇵🇱 波兰 (Poland) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -70,7 +94,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 06 R40
+  - 🇵🇱 波兰 (Poland) 07
 rules:
 - MATCH,PROXIES

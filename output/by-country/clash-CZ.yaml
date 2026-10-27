@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
+- name: 🇨🇿 捷克 (Czech) 01 R59
   server: 195.123.245.241
   port: 443
   udp: true
@@ -18,31 +18,31 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇨🇿 捷克 (Czech) 02
-  server: 193.124.17.190
+  server: server.slavkiti.monster
   port: 443
   udp: true
   type: vless
-  uuid: ff40696b-06d6-443b-9481-8d01eddd13e1
+  uuid: 4d017db2-7655-4276-9557-e2ec25b04ee7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: d659da01fb94
-  servername: www.foxsports.com
-  client-fingerprint: firefox
+    short-id: ee1716767f9b
+  servername: www.tradingview.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 01 R59
   - 🇨🇿 捷克 (Czech) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 01 R59
   - 🇨🇿 捷克 (Czech) 02
 rules:
 - MATCH,PROXIES
