@@ -17,7 +17,7 @@ proxies:
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
 - name: 🇵🇱 波兰 (Poland) 03
-  server: pl1.obxodvpn.us
+  server: 191.217.251.225
   port: 4443
   udp: true
   type: hysteria2
@@ -25,55 +25,18 @@ proxies:
   sni: nl1.obxodvpn.us
   skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 04
-  server: 79.182.39.35
-  port: 25548
+  server: 54.37.131.126
+  port: 80
   udp: true
-  type: vless
-  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-  tls: true
-  reality-opts:
-    public-key: lceynvFy326oU4ew9OPR7079m-L5ZcFELgCl0sqxU2M
-    short-id: bceb5b2197b76818
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 31.184.253.134
-  port: 53869
-  udp: true
-  type: vless
-  uuid: 252b4a9c-520d-459c-9dbc-366995206089
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rtc2Krk2fVhHCRG82EsUc4_mlw304HKHkl6MggQZEAU
-    short-id: 0f2cc340a69ed7
-  servername: www.moddb.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06 R40
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 07
-  server: 45.148.119.127
-  port: 443
-  udp: true
-  type: vless
-  uuid: 329e13e4-ee7c-4802-ac72-5fcab79c2402
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
-    short-id: '50'
-  servername: cloudflare.com
-  client-fingerprint: firefox
+  type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -83,9 +46,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R40
-  - 🇵🇱 波兰 (Poland) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -95,8 +55,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06 R40
-  - 🇵🇱 波兰 (Poland) 07
 rules:
 - MATCH,PROXIES

@@ -11,44 +11,26 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 02 ⚠R
-  server: www.ubuntuupdates.com
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.ubuntuupdates.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.ubuntuupdates.com
-- name: 🇫🇷 法国 (France) 03 R40
+- name: 🇫🇷 法国 (France) 02 R40
   server: pl140.vpnbook.com
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 04
-  server: 213.152.165.197
-  port: 2092
+- name: 🇫🇷 法国 (France) 03
+  server: 138.124.70.41
+  port: 14430
   udp: true
   type: vless
-  uuid: 1c640e86-51fe-45f0-9afb-efa55c4d1997
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-    short-id: 716b7eba38125f3a
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 05
-  server: ai.smrtai.top
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 04
+  server: 161.97.66.16
   port: 443
   udp: true
   type: vless
@@ -59,9 +41,22 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05
+  server: 213.152.165.203
+  port: 2092
+  udp: true
+  type: vless
+  uuid: 901cb432-3807-404a-9bb8-987814b000ca
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 06
-  server: 104.21.103.254
-  port: 443
+  server: 185.114.72.31
+  port: 2053
   udp: true
   type: trojan
   password: humanity
@@ -71,53 +66,39 @@ proxies:
   ws-opts:
     path: /assignment
 - name: 🇫🇷 法国 (France) 07
-  server: 199.232.78.170
+  server: 185.220.100.168
   port: 443
   udp: true
-  type: vless
-  uuid: XpnTeam-56
-  tls: true
-  servername: ssl.fastly.com
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-- name: 🇫🇷 法国 (France) 08
-  server: fr2-cl3.happy-glonaris.top
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 4b1be712-774c-4b65-8491-a3339e124a70
-  sni: fr2-cl3.happy-glonaris.top
-  skip-cert-verify: false
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R40
+  - 🇫🇷 法国 (France) 02 R40
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R40
+  - 🇫🇷 法国 (France) 02 R40
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES

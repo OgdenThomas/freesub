@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 45.32.10.7
+  server: 31.76.91.70
   port: 443
   udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
+  type: vless
+  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
+    short-id: bd6f67b6b2152b45
+  servername: fuji.etherhub.cc
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 02
   server: 45.76.98.127
   port: 443
@@ -28,7 +33,7 @@ proxies:
   ws-opts:
     path: /ws
 - name: 🇯🇵 日本 (Japan) 03
-  server: jap2.nexfile.net
+  server: 31.77.29.74
   port: 4444
   udp: true
   type: hysteria2
@@ -36,20 +41,20 @@ proxies:
   sni: jap2.nexfile.net
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 04
-  server: 31.76.91.98
-  port: 443
+  server: funagfrdfs.alixxplay.com
+  port: 35544
   udp: true
   type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: bd6f67b6b2152b45
-  servername: fuji.etherhub.cc
-  client-fingerprint: firefox
+    public-key: HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc
+    short-id: 25c79e5856c7
+  servername: iosapps.itunes.apple.com
+  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 05
-  server: 66.90.115.122
+  server: 66.90.115.130
   port: 2090
   udp: true
   type: vless
@@ -60,7 +65,7 @@ proxies:
     public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
     short-id: bb472a184677af64
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

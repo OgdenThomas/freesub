@@ -4,26 +4,56 @@
   },
   "outbounds": [
     {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21018,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21019,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
-      "server": "p141.panda001.net",
+      "tag": "🇰🇷 韩国 (South Korea) 03 (家宽)",
+      "server": "218.237.185.234",
       "server_port": 4652,
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21021,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 (家宽)"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+        "🇰🇷 韩国 (South Korea) 03 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 (家宽)"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)",
+        "🇰🇷 韩国 (South Korea) 03 (家宽)",
+        "🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

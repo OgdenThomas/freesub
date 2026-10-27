@@ -6,13 +6,38 @@
     {
       "type": "vless",
       "tag": "🇹🇭 泰国 (Thailand) 01",
-      "server": "th001.zestapp778.com",
+      "server": "38.60.254.50",
       "server_port": 22222,
       "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
       "tls": {
         "enabled": true,
         "server_name": "th001.zestapp778.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇭 泰国 (Thailand) 02",
+      "server": "funagfrdfs.alixxplay.com",
+      "server_port": 56415,
+      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kaidee.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "EG-jzQw1RyOwAM4L9rMKondSx7cyFmPyv1OP7xXkIk4",
+          "short_id": "cbd39bea0805e2"
+        }
       }
     },
     {
@@ -20,14 +45,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇹🇭 泰国 (Thailand) 01",
+        "🇹🇭 泰国 (Thailand) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇹🇭 泰国 (Thailand) 01",
+        "🇹🇭 泰国 (Thailand) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
