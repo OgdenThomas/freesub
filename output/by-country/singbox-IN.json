@@ -6,20 +6,16 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01",
-      "server": "in.smrtai.top",
-      "server_port": 443,
-      "uuid": "6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
+      "server": "139.84.145.241",
+      "server_port": 46362,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "in002.zestapp778.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q",
-          "short_id": "6bdc8320"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -38,12 +34,33 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 03",
+      "server": "in.smrtai.top",
+      "server_port": 443,
+      "uuid": "6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q",
+          "short_id": "6bdc8320"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇮🇳 印度 (India) 01",
-        "🇮🇳 印度 (India) 02"
+        "🇮🇳 印度 (India) 02",
+        "🇮🇳 印度 (India) 03"
       ]
     },
     {
@@ -51,7 +68,8 @@
       "tag": "auto",
       "outbounds": [
         "🇮🇳 印度 (India) 01",
-        "🇮🇳 印度 (India) 02"
+        "🇮🇳 印度 (India) 02",
+        "🇮🇳 印度 (India) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

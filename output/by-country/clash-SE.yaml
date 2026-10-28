@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: se1-cl3.vless-fiberstasis.top
+  server: 136.148.211.243
   port: 443
   udp: true
   type: vless
@@ -15,7 +15,7 @@ proxies:
     public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
     short-id: 11d37dd92940329e
   servername: se1-cl3.vless-fiberstasis.top
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-se-3
@@ -31,6 +31,19 @@ proxies:
     headers:
       Host: 5.178.109.174
 - name: 🇸🇪 瑞典 (Sweden) 03
+  server: 191.44.114.179
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WEHGKyXsOD5i2kNCJ3GrjeNZQBsrzH76OrPDJ7x2YwY
+    short-id: 9d48935b2c2b8011
+  servername: www.wikipedia.org
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 04
   server: 191.44.114.154
   port: 8443
   udp: true
@@ -43,7 +56,7 @@ proxies:
     short-id: c4359f3827231250
   servername: www.wikipedia.org
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 04
+- name: 🇸🇪 瑞典 (Sweden) 05
   server: 191.44.114.179
   port: 2096
   udp: true
@@ -58,6 +71,14 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: st33614.rumedia-cdn.com
+- name: 🇸🇪 瑞典 (Sweden) 06
+  server: promo.betust.net
+  port: 443
+  udp: true
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +88,8 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,5 +99,7 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
 rules:
 - MATCH,PROXIES

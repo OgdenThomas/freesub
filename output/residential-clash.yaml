@@ -4,54 +4,41 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21018
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21019
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽)
-  server: 218.237.185.234
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: p141.panda001.net
   port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
-  server: dog-hk.kunlun01dns.com
-  port: 21021
+- name: 🇮🇳 印度 (India) 02 (家宽)
+  server: 122.176.216.52
+  port: 443
   udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
+  skip-cert-verify: false
+  client-fingerprint: android
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  - 🇰🇷 韩国 (South Korea) 03 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇮🇳 印度 (India) 02 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 02 (移动家宽)
-  - 🇰🇷 韩国 (South Korea) 03 (家宽)
-  - 🇭🇰 中国香港 (Hong Kong) 04 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
+  - 🇮🇳 印度 (India) 02 (家宽)
 rules:
 - MATCH,PROXIES

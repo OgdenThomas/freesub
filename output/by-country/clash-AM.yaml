@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01
-  server: 195.123.208.32
+- name: 🇦🇲 亚美尼亚 (Armenia) 01
+  server: am1.pc-nodalys.top
   port: 443
   udp: true
   type: vless
-  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
-    short-id: 757b9e1ef18e60f0
-  servername: gateway.icloud.com
+    public-key: v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk
+    short-id: a9c3f7e2
+  servername: am1.pc-nodalys.top
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇦🇲 亚美尼亚 (Armenia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇦🇲 亚美尼亚 (Armenia) 01
 rules:
 - MATCH,PROXIES
