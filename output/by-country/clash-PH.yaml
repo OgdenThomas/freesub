@@ -4,32 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇺 匈牙利 (Hungary) 01
-  server: 172.67.131.125
-  port: 2083
+- name: 🇵🇭 菲律宾 (Philippines) 01
+  server: 130.94.52.94
+  port: 15656
   udp: true
   type: vless
-  uuid: f418674e-f518-4318-8ff9-e10000000046
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
+  servername: ph001.zestapp778.com
   skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇺 匈牙利 (Hungary) 01
+  - 🇵🇭 菲律宾 (Philippines) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇺 匈牙利 (Hungary) 01
+  - 🇵🇭 菲律宾 (Philippines) 01
 rules:
 - MATCH,PROXIES
