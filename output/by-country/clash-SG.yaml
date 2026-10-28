@@ -4,36 +4,42 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 R55
-  server: 128.1.186.132
-  port: 8080
+- name: 🇸🇬 新加坡 (Singapore) 01
+  server: 134.185.81.5
+  port: 47881
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  type: vless
+  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
+    short-id: 38d72071
+  servername: www.tesla.com
+  client-fingerprint: random
 - name: 🇸🇬 新加坡 (Singapore) 02 R52
-  server: 128.199.172.224
+  server: 68.183.227.236
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 03 R52
-  server: 68.183.235.122
+  server: 68.183.227.4
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 04 R52
-  server: 68.183.235.240
+  server: 68.183.235.122
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R52
-  server: 68.183.227.45
+- name: 🇸🇬 新加坡 (Singapore) 05 R55
+  server: 128.1.186.73
   port: 8080
   udp: true
   type: ss
@@ -53,44 +59,13 @@ proxies:
   servername: zoom.us
   client-fingerprint: chrome
 - name: 🇸🇬 新加坡 (Singapore) 07 R52
-  server: 68.183.227.4
+  server: 68.183.235.240
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 08
-  server: 134.185.81.5
-  port: 47881
-  udp: true
-  type: vless
-  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
-    short-id: 38d72071
-  servername: www.tesla.com
-  client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 09 R56
-  server: v2.drsachi.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2.drsachi.com
-- name: 🇸🇬 新加坡 (Singapore) 10 R52
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 11
   server: 45.77.40.28
   port: 443
   udp: true
@@ -99,7 +74,28 @@ proxies:
   tls: true
   servername: sg003.zestapp778.com
   skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 12 R59
+- name: 🇸🇬 新加坡 (Singapore) 09 R52
+  server: 128.199.172.224
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 10 R52
+  server: 68.183.227.45
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 11 R55
+  server: 128.1.186.132
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 12
   server: 5.34.177.164
   port: 443
   udp: true
@@ -111,34 +107,23 @@ proxies:
     public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
     short-id: b2efed6d157e7bb0
   servername: gateway.icloud.com
-  client-fingerprint: firefox
-- name: 🇸🇬 新加坡 (Singapore) 13 R55
-  server: 172.237.88.103
-  port: 447
-  udp: true
-  type: vless
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
-    short-id: 5a42dbd7e26a0415
-  servername: netflix.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 14
-  server: 54.251.9.130
-  port: 24146
+- name: 🇸🇬 新加坡 (Singapore) 13 R41
+  server: 139.162.27.96
+  port: 2096
   udp: true
   type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  flow: xtls-rprx-vision
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   tls: true
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-  servername: www.intel.com
-  client-fingerprint: random
-- name: 🇸🇬 新加坡 (Singapore) 15
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: 🇸🇬 新加坡 (Singapore) 14
   server: 8.219.97.17
   port: 443
   udp: true
@@ -154,75 +139,132 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofhsqteueywxeq.v.3dns.vip
-- name: 🇸🇬 新加坡 (Singapore) 16
-  server: 178.94.25.73
-  port: 14430
+- name: 🇸🇬 新加坡 (Singapore) 15
+  server: 54.251.9.130
+  port: 24146
   udp: true
   type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.94.25.73
-- name: 🇸🇬 新加坡 (Singapore) 17 R55
-  server: 139.162.27.96
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+  flow: xtls-rprx-vision
   tls: true
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: 7205d9079521832c
+  servername: www.intel.com
+  client-fingerprint: edge
+- name: 🇸🇬 新加坡 (Singapore) 16 R55
+  server: 172.237.88.103
+  port: 447
+  udp: true
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
+    short-id: 5a42dbd7e26a0415
+  servername: netflix.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 17
+  server: 54.169.200.246
+  port: 41688
+  udp: true
+  type: vless
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: 7f342137c20387
+  servername: www.intel.com
+  client-fingerprint: safari
+- name: 🇸🇬 新加坡 (Singapore) 18
+  server: 45.132.75.213
+  port: 2053
+  udp: true
+  type: vless
+  uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
+  tls: true
+  reality-opts:
+    public-key: TpWeZocgNOygOhMo0l7oJawPu7STkn9D-SOa0UppcyY
+    short-id: cd7e85995ae2afc9
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇸🇬 新加坡 (Singapore) 19
+  server: 147.93.173.45
+  port: 10444
+  udp: true
+  type: vless
+  uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
+- name: 🇸🇬 新加坡 (Singapore) 20
+  server: 146.235.16.130
+  port: 19825
+  udp: true
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+  servername: sg2-8sb.6121999.dpdns.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 R55
+  - 🇸🇬 新加坡 (Singapore) 01
   - 🇸🇬 新加坡 (Singapore) 02 R52
   - 🇸🇬 新加坡 (Singapore) 03 R52
   - 🇸🇬 新加坡 (Singapore) 04 R52
-  - 🇸🇬 新加坡 (Singapore) 05 R52
+  - 🇸🇬 新加坡 (Singapore) 05 R55
   - 🇸🇬 新加坡 (Singapore) 06 R55
   - 🇸🇬 新加坡 (Singapore) 07 R52
   - 🇸🇬 新加坡 (Singapore) 08
-  - 🇸🇬 新加坡 (Singapore) 09 R56
+  - 🇸🇬 新加坡 (Singapore) 09 R52
   - 🇸🇬 新加坡 (Singapore) 10 R52
-  - 🇸🇬 新加坡 (Singapore) 11
-  - 🇸🇬 新加坡 (Singapore) 12 R59
-  - 🇸🇬 新加坡 (Singapore) 13 R55
+  - 🇸🇬 新加坡 (Singapore) 11 R55
+  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 13 R41
   - 🇸🇬 新加坡 (Singapore) 14
   - 🇸🇬 新加坡 (Singapore) 15
-  - 🇸🇬 新加坡 (Singapore) 16
-  - 🇸🇬 新加坡 (Singapore) 17 R55
+  - 🇸🇬 新加坡 (Singapore) 16 R55
+  - 🇸🇬 新加坡 (Singapore) 17
+  - 🇸🇬 新加坡 (Singapore) 18
+  - 🇸🇬 新加坡 (Singapore) 19
+  - 🇸🇬 新加坡 (Singapore) 20
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 R55
+  - 🇸🇬 新加坡 (Singapore) 01
   - 🇸🇬 新加坡 (Singapore) 02 R52
   - 🇸🇬 新加坡 (Singapore) 03 R52
   - 🇸🇬 新加坡 (Singapore) 04 R52
-  - 🇸🇬 新加坡 (Singapore) 05 R52
+  - 🇸🇬 新加坡 (Singapore) 05 R55
   - 🇸🇬 新加坡 (Singapore) 06 R55
   - 🇸🇬 新加坡 (Singapore) 07 R52
   - 🇸🇬 新加坡 (Singapore) 08
-  - 🇸🇬 新加坡 (Singapore) 09 R56
+  - 🇸🇬 新加坡 (Singapore) 09 R52
   - 🇸🇬 新加坡 (Singapore) 10 R52
-  - 🇸🇬 新加坡 (Singapore) 11
-  - 🇸🇬 新加坡 (Singapore) 12 R59
-  - 🇸🇬 新加坡 (Singapore) 13 R55
+  - 🇸🇬 新加坡 (Singapore) 11 R55
+  - 🇸🇬 新加坡 (Singapore) 12
+  - 🇸🇬 新加坡 (Singapore) 13 R41
   - 🇸🇬 新加坡 (Singapore) 14
   - 🇸🇬 新加坡 (Singapore) 15
-  - 🇸🇬 新加坡 (Singapore) 16
-  - 🇸🇬 新加坡 (Singapore) 17 R55
+  - 🇸🇬 新加坡 (Singapore) 16 R55
+  - 🇸🇬 新加坡 (Singapore) 17
+  - 🇸🇬 新加坡 (Singapore) 18
+  - 🇸🇬 新加坡 (Singapore) 19
+  - 🇸🇬 新加坡 (Singapore) 20
 rules:
 - MATCH,PROXIES

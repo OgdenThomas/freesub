@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01
-  server: 149.28.177.190
+  server: au001.zestapp778.com
   port: 35652
   udp: true
   type: vless
@@ -13,18 +13,38 @@ proxies:
   tls: true
   servername: au001.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 02
+  server: au.tronsg.com
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: au.tronsg.com
+  skip-cert-verify: false
+- name: 🇦🇺 澳大利亚 (Australia) 03 ⚠R
+  server: 45.63.30.142
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectwithemployerstohireyouridealteam.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇦🇺 澳大利亚 (Australia) 02
+  - 🇦🇺 澳大利亚 (Australia) 03 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01
+  - 🇦🇺 澳大利亚 (Australia) 02
+  - 🇦🇺 澳大利亚 (Australia) 03 ⚠R
 rules:
 - MATCH,PROXIES

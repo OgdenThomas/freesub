@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01
-  server: ams1.rvpn.app
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: x2A6AsyZ-rAllz0wbKHzWA
-- name: 🇦🇪 阿联酋 (UAE) 02
   server: forshynewh.duckdns.org
   port: 443
   udp: true
@@ -25,13 +18,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01
-  - 🇦🇪 阿联酋 (UAE) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01
-  - 🇦🇪 阿联酋 (UAE) 02
 rules:
 - MATCH,PROXIES

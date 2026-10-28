@@ -4,28 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R40
-  server: 54.36.174.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 02 R42
-  server: node11.botkeep.cloud
-  port: 53567
+- name: 🇫🇷 法国 (France) 01 R42
+  server: 51.75.118.79
+  port: 20230
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: SnOSRfo0h6mnWehTG_Xang
-- name: 🇫🇷 法国 (France) 03 R40
-  server: 54.36.174.140
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 04
+  password: 6dAYwYpjLF-5r3UbrpGUUA
+- name: 🇫🇷 法国 (France) 02
   server: 138.124.70.41
   port: 14430
   udp: true
@@ -36,31 +22,14 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 05
-  server: 141.193.213.172
+- name: 🇫🇷 法国 (France) 03 R40
+  server: 54.36.174.140
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷 法国 (France) 06
-  server: 213.152.180.55
-  port: 2092
-  udp: true
-  type: vless
-  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-    short-id: 716b7eba38125f3a
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 07
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 04
   server: 15.236.109.186
   port: 2053
   udp: true
@@ -70,15 +39,8 @@ proxies:
   servername: w.geogame.ir
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 08 R66
-  server: dns22.m3hrzd.ir
-  port: 1352
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
-- name: 🇫🇷 法国 (France) 09
-  server: 161.97.66.16
+- name: 🇫🇷 法国 (France) 05
+  server: ai.smrtai.top
   port: 443
   udp: true
   type: vless
@@ -89,33 +51,62 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 06 R40
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 07
+  server: 185.255.179.166
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 08
+  server: 161.97.160.224
+  port: 443
+  udp: true
+  type: vless
+  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
+    short-id: e6
+  servername: passport.yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 01 R42
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03 R40
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R66
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02 R42
+  - 🇫🇷 法国 (France) 01 R42
+  - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03 R40
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R66
-  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 08
 rules:
 - MATCH,PROXIES

@@ -5,23 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: jap2.nexfile.net
-  port: 4444
-  udp: true
-  type: hysteria2
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  sni: jap2.nexfile.net
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02
-  server: 45.32.10.7
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 03
-  server: fuji.etherhub.cc
+  server: 31.76.91.70
   port: 443
   udp: true
   type: vless
@@ -33,7 +17,49 @@ proxies:
     short-id: bd6f67b6b2152b45
   servername: fuji.etherhub.cc
   client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 02
+  server: 31.77.29.75
+  port: 4444
+  udp: true
+  type: hysteria2
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  sni: jap2.nexfile.net
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 03
+  server: 45.32.10.7
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 04
+  server: 45.202.255.92
+  port: 9443
+  udp: true
+  type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05
+  server: 161.33.167.20
+  port: 443
+  udp: true
+  type: vless
+  uuid: c69e7fcd-115e-483a-accb-bfd4e50ce048
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: agxOIgWPqcmkKEPzEfNUjsgrHi4vlBmjtbdUoE-mvEk
+    short-id: fd9f6074
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 06
   server: 45.76.98.127
   port: 443
   udp: true
@@ -48,19 +74,21 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
-- name: 🇯🇵 日本 (Japan) 05
-  server: 66.90.115.123
-  port: 2090
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 07
+  server: 18.183.215.124
+  port: 28573
   udp: true
   type: vless
-  uuid: 3644635c-f8c4-449c-a665-fce1897a7bf3
+  uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-    short-id: bb472a184677af64
-  servername: www.apple.com
-  client-fingerprint: chrome
+    public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
+    short-id: 03653bc03be10c97
+  servername: www.sony.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,6 +99,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,5 +111,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
+  - 🇯🇵 日本 (Japan) 06
+  - 🇯🇵 日本 (Japan) 07
 rules:
 - MATCH,PROXIES

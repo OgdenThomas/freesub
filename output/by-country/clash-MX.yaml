@@ -12,28 +12,17 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: connectwithtopemployersandfindidealjobs.com
   skip-cert-verify: false
-- name: 🇲🇽 墨西哥 (Mexico) 02
-  server: mx001.zestapp778.com
-  port: 19167
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: mx001.zestapp778.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇽 墨西哥 (Mexico) 01 R42
-  - 🇲🇽 墨西哥 (Mexico) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇽 墨西哥 (Mexico) 01 R42
-  - 🇲🇽 墨西哥 (Mexico) 02
 rules:
 - MATCH,PROXIES

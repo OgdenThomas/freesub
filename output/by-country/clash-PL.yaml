@@ -28,31 +28,8 @@ proxies:
     public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
     short-id: '50'
   servername: cloudflare.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 04 R40
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 2.26.6.1
-  port: 2087
-  udp: true
-  type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  tls: true
-  servername: 2.26.6.1
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06
+- name: 🇵🇱 波兰 (Poland) 04
   server: 54.37.131.126
   port: 80
   udp: true
@@ -65,6 +42,18 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: 🇵🇱 波兰 (Poland) 05
+  server: 79.182.39.37
+  port: 27591
+  udp: true
+  type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  reality-opts:
+    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
+    short-id: 6c5c7900406a1ae7
+  servername: www.samsung.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,9 +62,8 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -84,8 +72,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04 R40
+  - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
 rules:
 - MATCH,PROXIES
