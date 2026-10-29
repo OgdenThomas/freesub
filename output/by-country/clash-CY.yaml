@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01
+  server: 5.253.29.253
+  port: 443
+  udp: true
+  type: vless
+  uuid: 76ef5ab3-7075-4e23-b445-f3b1bd05d431
+  tls: true
+  servername: indi.qikbro.com
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: assets
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇾 塞浦路斯 (Cyprus) 01
+rules:
+- MATCH,PROXIES

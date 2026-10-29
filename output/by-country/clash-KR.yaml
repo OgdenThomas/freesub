@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇰🇷 韩国 (South Korea) 01
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇰🇷 韩国 (South Korea) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇰🇷 韩国 (South Korea) 01
+rules:
+- MATCH,PROXIES

@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 R59
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02 R59
   server: 45.90.57.119
   port: 8443
   udp: true
@@ -16,35 +29,32 @@ proxies:
     public-key: L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI
     short-id: 16036bbef04d0509
   servername: twitch.tv
-  client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 02
-  server: 109.120.155.155
-  port: 444
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 03
+  server: 149.33.15.213
+  port: 443
   udp: true
   type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
   tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  servername: swz.proxyplankton.ru
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R59
-  - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 02 R59
+  - 🇨🇭 瑞士 (Switzerland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R59
-  - 🇨🇭 瑞士 (Switzerland) 02
+  - 🇨🇭 瑞士 (Switzerland) 02 R59
+  - 🇨🇭 瑞士 (Switzerland) 03
 rules:
 - MATCH,PROXIES

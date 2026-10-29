@@ -11,13 +11,7 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  server: 155.117.5.208
-  port: 10002
-  udp: true
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: 🇬🇧 英国 (United Kingdom) 03
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 191.44.108.31
   port: 443
   udp: true
@@ -29,61 +23,34 @@ proxies:
     public-key: QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU
     short-id: 3ba10d9ce34380c9
   servername: www.google.com
-  client-fingerprint: random
+  client-fingerprint: ios
+- name: 🇬🇧 英国 (United Kingdom) 03
+  server: 98.98.142.161
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
-  server: www.ubuntuupdates.com
-  port: 443
+  server: connect.hondamotor.site
+  port: 10002
   udp: true
-  type: vmess
-  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.ubuntuupdates.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.ubuntuupdates.com
+  type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
 - name: 🇬🇧 英国 (United Kingdom) 05
-  server: 193.188.21.253
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 06
-  server: 144.48.11.97
-  port: 43000
-  udp: true
-  type: vless
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
-  servername: 144.48.11.97
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 146.19.143.218
+  server: 193.163.203.170
   port: 443
   udp: true
   type: vless
-  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-    short-id: 4a7b1c8d
-  servername: tau1.freerunet.online
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 08 R67
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 06 R67
   server: 92.113.107.120
   port: 443
   udp: true
@@ -96,20 +63,7 @@ proxies:
   network: ws
   ws-opts:
     path: /ws
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: 193.188.21.253
-  port: 10444
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 10
+- name: 🇬🇧 英国 (United Kingdom) 07
   server: 104.239.12.81
   port: 443
   udp: true
@@ -122,50 +76,29 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: 107.181.151.128
-  port: 443
-  udp: true
-  type: vless
-  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 8f79726c5002
-  servername: www.mozilla.org
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 06 R67
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08 R67
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R
   - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06
+  - 🇬🇧 英国 (United Kingdom) 06 R67
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08 R67
-  - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10
-  - 🇬🇧 英国 (United Kingdom) 11
 rules:
 - MATCH,PROXIES

@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
-  server: 178.212.35.198
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
-  tls: true
-  reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-    short-id: 6bdc8320
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇮🇳 印度 (India) 02
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -27,21 +15,26 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- name: 🇮🇳 印度 (India) 03
-  server: 122.176.216.52
+- name: 🇮🇳 印度 (India) 02
+  server: 178.212.35.198
   port: 443
   udp: true
   type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
   tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇮🇳 印度 (India) 03
+  server: in002.zestapp778.com
+  port: 42733
+  udp: true
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: in002.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select

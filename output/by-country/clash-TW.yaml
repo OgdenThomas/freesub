@@ -4,32 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01
-  server: 104.21.77.142
-  port: 2096
+- name: 🇹🇼 中国台湾 (Taiwan) 01
+  server: n04.jinggai.online
+  port: 8443
   udp: true
   type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
   tls: true
-  servername: courses.mftplus.qzz.io
+  servername: n04.jinggai.online
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /nvl-n04-ws/e0577fe8fd7c8823
     headers:
-      Host: courses.mftplus.qzz.io
+      Host: n04.jinggai.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 rules:
 - MATCH,PROXIES

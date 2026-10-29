@@ -6,14 +6,26 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "45.144.234.157",
-      "server_port": 14430,
-      "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
+      "server": "65.109.211.81",
+      "server_port": 465,
+      "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
+      "tls": {
+        "enabled": true,
+        "server_name": "hw6.divarkhaghazi.com.",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/vless",
+        "path": "/",
         "headers": {
-          "Host": "45.144.234.157"
+          "Host": "hw6.divarkhaghazi.com."
         }
       }
     },
@@ -44,64 +56,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
-      "server": "hw6.divarkhaghazi.com",
-      "server_port": 465,
-      "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
-      "tls": {
-        "enabled": true,
-        "server_name": "hw6.divarkhaghazi.com.",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "hw6.divarkhaghazi.com."
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04",
-      "server": "77.42.12.225",
-      "server_port": 443,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "8fc752g.fi3.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18",
-          "short_id": "09d0a94a1c6fc9d5"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "f345a414c040"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03",
-        "🇫🇮 芬兰 (Finland) 04"
+        "🇫🇮 芬兰 (Finland) 02"
       ]
     },
     {
@@ -109,9 +69,7 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03",
-        "🇫🇮 芬兰 (Finland) 04"
+        "🇫🇮 芬兰 (Finland) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
