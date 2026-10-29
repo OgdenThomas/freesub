@@ -6,44 +6,20 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01",
-      "server": "168.222.43.53",
-      "server_port": 2052,
-      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02",
       "server": "155.117.5.208",
       "server_port": 20001,
       "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 03 R40",
-      "server": "77.232.135.141",
-      "server_port": 8445,
-      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.radiolumens.uk",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "beru-pl"
-      }
+      "tag": "🇵🇱 波兰 (Poland) 02",
+      "server": "168.222.43.53",
+      "server_port": 2052,
+      "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
     },
     {
       "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 04",
+      "tag": "🇵🇱 波兰 (Poland) 03",
       "server": "54.37.131.126",
       "server_port": 80,
       "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
@@ -57,13 +33,25 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 04",
+      "server": "70.34.252.255",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03 R40",
+        "🇵🇱 波兰 (Poland) 03",
         "🇵🇱 波兰 (Poland) 04"
       ]
     },
@@ -73,7 +61,7 @@
       "outbounds": [
         "🇵🇱 波兰 (Poland) 01",
         "🇵🇱 波兰 (Poland) 02",
-        "🇵🇱 波兰 (Poland) 03 R40",
+        "🇵🇱 波兰 (Poland) 03",
         "🇵🇱 波兰 (Poland) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
