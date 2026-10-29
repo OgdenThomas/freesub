@@ -15,17 +15,8 @@ proxies:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
     short-id: 6bdc8320
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇮🇳 印度 (India) 02
-  server: in002.zestapp778.com
-  port: 46362
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: in002.zestapp778.com
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 03
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -36,14 +27,21 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- name: 🇮🇳 印度 (India) 04
-  server: in.tronsg.com
+- name: 🇮🇳 印度 (India) 03
+  server: 122.176.216.52
   port: 443
   udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: in.tronsg.com
+  type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +50,6 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
-  - 🇮🇳 印度 (India) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,6 +58,5 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
   - 🇮🇳 印度 (India) 03
-  - 🇮🇳 印度 (India) 04
 rules:
 - MATCH,PROXIES

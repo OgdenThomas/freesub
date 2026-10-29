@@ -4,23 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇻🇳 越南 (Vietnam) 01
-  server: 150.95.109.109
-  port: 2086
+- name: 🇨🇱 智利 (Chile) 01
+  server: 64.176.7.205
+  port: 443
   udp: true
-  type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇨🇱 智利 (Chile) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇨🇱 智利 (Chile) 01
 rules:
 - MATCH,PROXIES

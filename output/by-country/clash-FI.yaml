@@ -16,6 +16,21 @@ proxies:
     headers:
       Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 02
+  server: hw3.divarkhaghazi.com
+  port: 465
+  udp: true
+  type: vless
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  tls: true
+  servername: hw3.divarkhaghazi.com.
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw3.divarkhaghazi.com.
+- name: 🇫🇮 芬兰 (Finland) 03
   server: hw6.divarkhaghazi.com
   port: 465
   udp: true
@@ -30,21 +45,21 @@ proxies:
     path: /
     headers:
       Host: hw6.divarkhaghazi.com.
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: hw3.divarkhaghazi.com.
-  port: 465
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 77.42.12.225
+  port: 443
   udp: true
   type: vless
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
   tls: true
-  servername: hw3.divarkhaghazi.com.
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
+  reality-opts:
+    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
+    short-id: 09d0a94a1c6fc9d5
+  servername: 8fc752g.fi3.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: f345a414c040
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,6 +68,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +77,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

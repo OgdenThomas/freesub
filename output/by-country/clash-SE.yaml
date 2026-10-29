@@ -4,26 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01
-  server: 130.94.95.198
-  port: 57353
+- name: 🇸🇪 瑞典 (Sweden) 01
+  server: 5.178.109.174
+  port: 14430
   udp: true
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: in001.zestapp778.com
-  skip-cert-verify: false
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇸🇪 瑞典 (Sweden) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01
+  - 🇸🇪 瑞典 (Sweden) 01
 rules:
 - MATCH,PROXIES

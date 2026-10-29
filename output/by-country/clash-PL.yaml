@@ -5,17 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 168.222.43.53
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇵🇱 波兰 (Poland) 02
   server: 155.117.5.208
   port: 20001
   udp: true
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 168.222.43.53
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 - name: 🇵🇱 波兰 (Poland) 03
   server: 45.148.119.127
   port: 443
@@ -28,8 +28,34 @@ proxies:
     public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
     short-id: '50'
   servername: cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 04
+  server: 82.118.22.161
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇵🇱 波兰 (Poland) 05 R40
+  server: ru1.radiolumens.uk
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
+- name: 🇵🇱 波兰 (Poland) 06
   server: 54.37.131.126
   port: 80
   udp: true
@@ -42,18 +68,16 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 79.182.39.37
-  port: 27591
+- name: 🇵🇱 波兰 (Poland) 07
+  server: 2.26.6.1
+  port: 2087
   udp: true
   type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   tls: true
-  reality-opts:
-    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
-    short-id: 6c5c7900406a1ae7
-  servername: www.samsung.com
-  client-fingerprint: firefox
+  servername: 2.26.6.1
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,7 +87,9 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 05 R40
+  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -73,6 +99,8 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
+  - 🇵🇱 波兰 (Poland) 05 R40
+  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 07
 rules:
 - MATCH,PROXIES

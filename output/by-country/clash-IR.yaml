@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇷 IR 01
+  server: 198.16.113.219
+  port: 8443
+  udp: true
+  type: vless
+  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
+    short-id: 69984b9e02545831
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇮🇷 IR 02
   server: 198.16.113.221
   port: 8443
   udp: true
@@ -17,7 +30,7 @@ proxies:
     short-id: 69984b9e02545831
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇮🇷 IR 02
+- name: 🇮🇷 IR 03
   server: 198.16.113.222
   port: 8443
   udp: true
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇮🇷 IR 01
   - 🇮🇷 IR 02
+  - 🇮🇷 IR 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇮🇷 IR 01
   - 🇮🇷 IR 02
+  - 🇮🇷 IR 03
 rules:
 - MATCH,PROXIES

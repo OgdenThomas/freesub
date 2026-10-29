@@ -5,14 +5,16 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇩 印尼 (Indonesia) 01",
-      "server": "130.94.95.198",
-      "server_port": 57353,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
-      "tls": {
-        "enabled": true,
-        "server_name": "in001.zestapp778.com",
-        "insecure": false
+      "tag": "🇸🇪 瑞典 (Sweden) 01",
+      "server": "5.178.109.174",
+      "server_port": 14430,
+      "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "5.178.109.174"
+        }
       }
     },
     {
@@ -20,14 +22,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇩 印尼 (Indonesia) 01"
+        "🇸🇪 瑞典 (Sweden) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇩 印尼 (Indonesia) 01"
+        "🇸🇪 瑞典 (Sweden) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

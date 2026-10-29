@@ -12,29 +12,17 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
   skip-cert-verify: false
-- name: 🇧🇷 巴西 (Brazil) 02
-  server: br001.zestapp778.com
-  port: 15040
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: br.zestapp778.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01
-  - 🇧🇷 巴西 (Brazil) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 巴西 (Brazil) 01
-  - 🇧🇷 巴西 (Brazil) 02
 rules:
 - MATCH,PROXIES

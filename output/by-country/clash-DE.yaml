@@ -4,22 +4,57 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 R62
+- name: 🇩🇪 德国 (Germany) 01
+  server: 167.233.147.148
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7a96136a-20ad-4aec-86bd-f6622fbb8ce6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0E-OTXVHsukKvwgwynrI49nTaT5m6rxdaFPg4D_UszI
+    short-id: 9cc0
+  servername: dynu.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 02
+  server: 104.18.35.86
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1c7f675f-5923-463f-83fb-af4c898cecea
+  tls: true
+  servername: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZWhuWFFGNWRISXBjSmRGWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
+- name: 🇩🇪 德国 (Germany) 03 R40
+  server: 162.159.153.4
+  port: 443
+  udp: true
+  type: vless
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rayan-007.maxima.dpdns.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: 🇩🇪 德国 (Germany) 04 R62
   server: 185.176.204.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 德国 (Germany) 02 R45
-  server: 57.129.113.16
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
-- name: 🇩🇪 德国 (Germany) 03
-  server: 64.188.66.181
+- name: 🇩🇪 德国 (Germany) 05
+  server: 2.26.98.95
   port: 443
   udp: true
   type: vless
@@ -30,21 +65,16 @@ proxies:
     public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
     short-id: 2c9a2790ad5900b2
   servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 04
-  server: 91.107.188.129
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
-  tls: true
-  servername: site.check-looks.space
-  skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 06
+  server: 151.243.169.164
+  port: 12824
+  udp: true
+  type: hysteria2
+  password: d62s7ghfehm742us
+  sni: derfderf.ru
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 07
   server: hw7.divarkhaghazi.com
   port: 465
   udp: true
@@ -59,20 +89,65 @@ proxies:
     path: /
     headers:
       Host: hw7.divarkhaghazi.com.
-- name: 🇩🇪 德国 (Germany) 06
-  server: fly.lumexa.ir
+- name: 🇩🇪 德国 (Germany) 08
+  server: 94.228.162.222
   port: 443
   udp: true
   type: vless
-  uuid: 7a96136a-20ad-4aec-86bd-f6622fbb8ce6
+  uuid: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0E-OTXVHsukKvwgwynrI49nTaT5m6rxdaFPg4D_UszI
-    short-id: 9cc0
-  servername: dynu.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 07
+    public-key: rvDa0xNkcJYEIJ-1Ncrq54BUjjwm99C_8Vv_-He6j1U
+  servername: vena.solomon-planet.ru
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 09
+  server: mci.amir12.ir
+  port: 2112
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 10
+  server: 179.254.127.159
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 11
+  server: 91.107.188.129
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 12
+  server: sino.bestsellers1.site
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 13
   server: 31.76.15.24
   port: 443
   udp: true
@@ -85,26 +160,23 @@ proxies:
     short-id: a5543a67f52ea8ab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 08
-  server: derfderf.ru
-  port: 12824
-  udp: true
-  type: hysteria2
-  password: d62s7ghfehm742us
-  sni: derfderf.ru
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 09
-  server: req.apptrendv.com
-  port: 2083
+- name: 🇩🇪 德国 (Germany) 14
+  server: 148-253-210-191.sslip.io
+  port: 443
   udp: true
   type: vless
-  uuid: 7cc18adc-1ef0-42c9-8e7b-722d7622c7dd
+  uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
   tls: true
-  servername: email.apptrendv.com
+  servername: 148-253-210-191.sslip.io
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 10
-  server: mci1.amir12.ir
+  network: ws
+  ws-opts:
+    path: /test-ws
+    headers:
+      Host: 148-253-210-191.sslip.io
+- name: 🇩🇪 德国 (Germany) 15
+  server: 157.90.175.178
   port: 1222
   udp: true
   type: vless
@@ -114,36 +186,46 @@ proxies:
     public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
     short-id: a25d0f
   servername: play.google.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 R62
-  - 🇩🇪 德国 (Germany) 02 R45
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 03 R40
+  - 🇩🇪 德国 (Germany) 04 R62
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 15
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 R62
-  - 🇩🇪 德国 (Germany) 02 R45
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 03 R40
+  - 🇩🇪 德国 (Germany) 04 R62
   - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 15
 rules:
 - MATCH,PROXIES
