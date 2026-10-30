@@ -4,19 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01
+- name: 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  server: 155.117.5.208
+  port: 10002
+  udp: true
+  type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 104.239.12.81
   port: 43385
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  server: 168.222.43.53
-  port: 10002
-  udp: true
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 191.44.108.31
   port: 443
@@ -31,52 +31,6 @@ proxies:
   servername: www.google.com
   client-fingerprint: random
 - name: 🇬🇧 英国 (United Kingdom) 04
-  server: 146.19.143.218
-  port: 443
-  udp: true
-  type: vless
-  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-    short-id: 4a7b1c8d
-  servername: tau1.freerunet.online
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 06 R45
-  server: 144.48.11.97
-  port: 43000
-  udp: true
-  type: vless
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
-  servername: 144.48.11.97
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 07
-  server: 98.98.142.161
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 08
   server: 138.124.125.193
   port: 10444
   udp: true
@@ -89,46 +43,83 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
   client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 09
-  server: webdisk.jaggyslawa.org
+- name: 🇬🇧 英国 (United Kingdom) 05 R46
+  server: 98.98.207.163
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 98.98.142.161
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 07
+  server: 146.19.143.218
   port: 443
   udp: true
   type: vless
-  uuid: b62e3646-b84d-443c-9c94-718b646502e0
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: dda5f542d835
-  servername: www.foxsports.com
+    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+    short-id: 4a7b1c8d
+  servername: tau1.freerunet.online
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 08 ⚠R
+  server: node-uk.connectsuite.org
+  port: 8443
+  udp: true
+  type: vless
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  tls: true
+  servername: node-uk.connectsuite.org
+  skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 09
+  server: 104.239.12.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
+    short-id: b558b9305a0b
+  servername: www.microsoft.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06 R45
+  - 🇬🇧 英国 (United Kingdom) 05 R46
+  - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 08 ⚠R
   - 🇬🇧 英国 (United Kingdom) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
-  - 🇬🇧 英国 (United Kingdom) 05
-  - 🇬🇧 英国 (United Kingdom) 06 R45
+  - 🇬🇧 英国 (United Kingdom) 05 R46
+  - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08
+  - 🇬🇧 英国 (United Kingdom) 08 ⚠R
   - 🇬🇧 英国 (United Kingdom) 09
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 178.83.45.226
+  server: 95.133.245.250
+  port: 2027
+  udp: true
+  type: vless
+  uuid: 6a6ac9b3-b336-44f7-a1c4-a03d6c2fae9e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
+    short-id: 6ba7b8109dad11d1
+  servername: deo.skysafe.online
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 02
+  server: 155.117.5.208
   port: 2052
   udp: true
   type: vless
@@ -16,11 +29,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 02
 rules:
 - MATCH,PROXIES
