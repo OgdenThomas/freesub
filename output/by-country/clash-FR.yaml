@@ -4,33 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 02 R40
-  server: pl134.vpnbook.com
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 03 R40
+- name: 🇫🇷 法国 (France) 01 R40
   server: 54.36.174.140
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 04
-  server: 104.19.229.21
+- name: 🇫🇷 法国 (France) 02
+  server: 185.18.250.252
   port: 443
   udp: true
   type: trojan
@@ -39,9 +21,35 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
+- name: 🇫🇷 法国 (France) 03 ⚠R
+  server: www.ubuntuupdates.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
+- name: 🇫🇷 法国 (France) 04
+  server: 15.236.109.186
+  port: 2053
+  udp: true
+  type: vless
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+  tls: true
+  servername: w.geogame.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🇫🇷 法国 (France) 05
-  server: 45.87.41.18
+  server: 194.147.149.54
   port: 443
   udp: true
   type: trojan
@@ -61,9 +69,9 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: //assignment
+    path: /assignment
 - name: 🇫🇷 法国 (France) 07
-  server: 193.239.160.134
+  server: 45.87.41.18
   port: 443
   udp: true
   type: trojan
@@ -73,51 +81,56 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 08 R42
-  server: node11.botkeep.cloud
-  port: 53567
+- name: 🇫🇷 法国 (France) 08
+  server: 5.78.92.27
+  port: 8443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: SnOSRfo0h6mnWehTG_Xang
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷 法国 (France) 09
-  server: 194.147.149.54
+  server: 161.97.66.16
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R40
-  - 🇫🇷 法国 (France) 03 R40
+  - 🇫🇷 法国 (France) 01 R40
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03 ⚠R
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R42
+  - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02 R40
-  - 🇫🇷 法国 (France) 03 R40
+  - 🇫🇷 法国 (France) 01 R40
+  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 03 ⚠R
   - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R42
+  - 🇫🇷 法国 (France) 08
   - 🇫🇷 法国 (France) 09
 rules:
 - MATCH,PROXIES
