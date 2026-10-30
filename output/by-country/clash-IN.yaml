@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
+  server: 13.140.56.100
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇮🇳 印度 (India) 02
   server: 178.212.35.198
   port: 443
   udp: true
@@ -15,18 +24,7 @@ proxies:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
     short-id: 6bdc8320
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇮🇳 印度 (India) 02
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

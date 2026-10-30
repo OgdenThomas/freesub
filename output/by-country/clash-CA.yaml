@@ -4,60 +4,67 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇦 加拿大 (Canada) 01
+- name: 🇨🇦 加拿大 (Canada) 01 R61
+  server: 216.152.147.152
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.connectingpeoplewithgreatjobs.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 02 R61
+  server: 216.152.147.201
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.connectingpeoplewithgreatjobs.com
+  skip-cert-verify: false
+- name: 🇨🇦 加拿大 (Canada) 03
   server: 138.197.141.58
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇨🇦 加拿大 (Canada) 02
-  server: 16.52.78.159
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇨🇦 加拿大 (Canada) 03 R61
-  server: 216.152.147.85
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
 - name: 🇨🇦 加拿大 (Canada) 04 R61
-  server: 216.152.147.74
+  server: 216.152.147.48
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.connectingpeoplewithgreatjobs.com
+  sni: courses.connectingpeoplewithgreatjobs.com
   skip-cert-verify: false
-- name: 🇨🇦 加拿大 (Canada) 05
-  server: 149.248.50.252
-  port: 32355
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: ca001.zestapp778.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇨🇦 加拿大 (Canada) 06 R52
-  server: 155.117.5.208
+- name: 🇨🇦 加拿大 (Canada) 05 R52
+  server: 168.222.43.53
   port: 8080
   udp: true
   type: vless
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: 🇨🇦 加拿大 (Canada) 07
-  server: ca001.zestapp778.com
-  port: 46977
+- name: 🇨🇦 加拿大 (Canada) 06
+  server: 510.150333.xyz
+  port: 21004
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: ca001.zestapp778.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+  tls: true
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: 4e0418d648f86141
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇨🇦 加拿大 (Canada) 07
+  server: 103.106.229.37
+  port: 21001
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: ab39fc68ab3dee81
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 08
   server: 103.106.229.37
   port: 21004
@@ -84,14 +91,14 @@ proxies:
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 10
   server: 510.150333.xyz
-  port: 21001
+  port: 21003
   udp: true
   type: vless
   uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: a51c3ccb2320024a
+    short-id: f3602a3a1cf928b7
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 11
@@ -108,91 +115,49 @@ proxies:
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 12
   server: 510.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: d9a6b52e98121db2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 13
-  server: 511.150333.xyz
   port: 21001
   udp: true
   type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
   reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: ab39fc68ab3dee81
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: a51c3ccb2320024a
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 14
-  server: 510.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: f3602a3a1cf928b7
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇨🇦 加拿大 (Canada) 15
-  server: 510.150333.xyz
-  port: 21004
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: 4e0418d648f86141
-  servername: www.cloudflare.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R61
+  - 🇨🇦 加拿大 (Canada) 01 R61
+  - 🇨🇦 加拿大 (Canada) 02 R61
+  - 🇨🇦 加拿大 (Canada) 03
   - 🇨🇦 加拿大 (Canada) 04 R61
-  - 🇨🇦 加拿大 (Canada) 05
-  - 🇨🇦 加拿大 (Canada) 06 R52
+  - 🇨🇦 加拿大 (Canada) 05 R52
+  - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
   - 🇨🇦 加拿大 (Canada) 09
   - 🇨🇦 加拿大 (Canada) 10
   - 🇨🇦 加拿大 (Canada) 11
   - 🇨🇦 加拿大 (Canada) 12
-  - 🇨🇦 加拿大 (Canada) 13
-  - 🇨🇦 加拿大 (Canada) 14
-  - 🇨🇦 加拿大 (Canada) 15
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇦 加拿大 (Canada) 01
-  - 🇨🇦 加拿大 (Canada) 02
-  - 🇨🇦 加拿大 (Canada) 03 R61
+  - 🇨🇦 加拿大 (Canada) 01 R61
+  - 🇨🇦 加拿大 (Canada) 02 R61
+  - 🇨🇦 加拿大 (Canada) 03
   - 🇨🇦 加拿大 (Canada) 04 R61
-  - 🇨🇦 加拿大 (Canada) 05
-  - 🇨🇦 加拿大 (Canada) 06 R52
+  - 🇨🇦 加拿大 (Canada) 05 R52
+  - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
   - 🇨🇦 加拿大 (Canada) 09
   - 🇨🇦 加拿大 (Canada) 10
   - 🇨🇦 加拿大 (Canada) 11
   - 🇨🇦 加拿大 (Canada) 12
-  - 🇨🇦 加拿大 (Canada) 13
-  - 🇨🇦 加拿大 (Canada) 14
-  - 🇨🇦 加拿大 (Canada) 15
 rules:
 - MATCH,PROXIES
