@@ -4,12 +4,11 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇰🇷 韩国 (South Korea) 01",
-      "server": "49.254.204.133",
-      "server_port": 1774,
-      "method": "aes-256-cfb",
-      "password": "1234!@#$"
+      "server": "112.169.175.199",
+      "server_port": 31157,
+      "uuid": "bd2fb303-b4c7-49af-a8e3-5c6f11b005dd"
     },
     {
       "type": "vless",
@@ -18,13 +17,17 @@
       "server_port": 25555,
       "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d",
       "transport": {
-        "type": "ws"
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "152.69.226.63"
+        }
       }
     },
     {
       "type": "trojan",
       "tag": "🇰🇷 韩国 (South Korea) 03",
-      "server": "kr002.zestapp778.com",
+      "server": "158.247.255.150",
       "server_port": 48851,
       "password": "5t6i121em5lkmsmk",
       "tls": {
@@ -34,13 +37,22 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 04",
+      "server": "p141.panda001.net",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01",
         "🇰🇷 韩国 (South Korea) 02",
-        "🇰🇷 韩国 (South Korea) 03"
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ]
     },
     {
@@ -49,7 +61,8 @@
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01",
         "🇰🇷 韩国 (South Korea) 02",
-        "🇰🇷 韩国 (South Korea) 03"
+        "🇰🇷 韩国 (South Korea) 03",
+        "🇰🇷 韩国 (South Korea) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

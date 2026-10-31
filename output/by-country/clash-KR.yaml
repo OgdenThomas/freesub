@@ -5,12 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: 49.254.204.133
-  port: 1774
+  server: 112.169.175.199
+  port: 31157
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
+  type: vless
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 - name: 🇰🇷 韩国 (South Korea) 02
   server: 152.69.226.63
   port: 25555
@@ -20,14 +19,23 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 03
-  server: kr002.zestapp778.com
+  server: 158.247.255.150
   port: 48851
   udp: true
   type: trojan
   password: 5t6i121em5lkmsmk
   sni: kr002.zestapp778.com
   skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 04
+  server: p141.panda001.net
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +44,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +53,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
   - 🇰🇷 韩国 (South Korea) 03
+  - 🇰🇷 韩国 (South Korea) 04
 rules:
 - MATCH,PROXIES
