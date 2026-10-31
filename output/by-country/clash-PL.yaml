@@ -5,57 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 168.222.43.53
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 177.1.192.117
-  port: 443
-  udp: true
-  type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Lt3gSdGmfQMx50yH-OOJaNBSg80vzIveaNVwUUWJwzQ
-    short-id: 3952a220c86628a8
-  servername: up7.uni-plan.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03
-  server: site.teslamotor.site
-  port: 20001
-  udp: true
-  type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-- name: 🇵🇱 波兰 (Poland) 04
-  server: 31.59.143.147
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
-    short-id: ae97223a8f799889
-  servername: pl2.waspnest.space
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 05
-  server: 177.1.192.67
-  port: 443
-  udp: true
-  type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5QmUszafz1gigUjf3R2GwZ9RVsEwZT-polu0l8zfNgA
-    short-id: 830e615a39f4c811
-  servername: up4.uni-plan.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 06
   server: 70.34.252.255
   port: 443
   udp: true
@@ -63,6 +12,28 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
   skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 2.26.6.1
+  port: 2087
+  udp: true
+  type: vless
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  tls: true
+  servername: 2.26.6.1
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 03 R40
+  server: 77.232.135.141
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 proxy-groups:
 - name: PROXIES
   type: select
@@ -70,10 +41,7 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 03 R40
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -81,9 +49,6 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
-  - 🇵🇱 波兰 (Poland) 05
-  - 🇵🇱 波兰 (Poland) 06
+  - 🇵🇱 波兰 (Poland) 03 R40
 rules:
 - MATCH,PROXIES

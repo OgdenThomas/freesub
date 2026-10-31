@@ -23,6 +23,19 @@ proxies:
     short-id: 31e91d43e553bf32
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 03
+  server: 2.26.89.192
+  port: 443
+  udp: true
+  type: vless
+  uuid: 07680ffb-0666-4836-b6ad-ec0de62bc38f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HA8RX24k72lyACy0T1mCDeYcUQh22XRlT4wuhj3Onl4
+    short-id: 36b707a341db758d
+  servername: assets-ms-90.next-gen-shopping.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +43,7 @@ proxy-groups:
   - AUTO
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -37,5 +51,6 @@ proxy-groups:
   proxies:
   - 🇷🇴 罗马尼亚 (Romania) 01
   - 🇷🇴 罗马尼亚 (Romania) 02
+  - 🇷🇴 罗马尼亚 (Romania) 03
 rules:
 - MATCH,PROXIES

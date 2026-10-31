@@ -4,52 +4,35 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 ⚠R",
+      "server": "155.117.5.208",
+      "server_port": 10002,
+      "uuid": "c6362720-0931-4b91-b187-d8ecf3149734"
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
       "server": "104.239.12.81",
       "server_port": 43385,
       "method": "chacha20-ietf-poly1305",
       "password": "AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa"
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 ⚠R",
-      "server": "155.117.5.208",
-      "server_port": 10002,
-      "uuid": "c6362720-0931-4b91-b187-d8ecf3149734"
-    },
-    {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇬🇧 英国 (United Kingdom) 03",
-      "server": "191.44.108.30",
-      "server_port": 443,
-      "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
-      "flow": "xtls-rprx-vision",
+      "server": "en001.zestapp778.com",
+      "server_port": 29813,
+      "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
-        "server_name": "c8.qwyak.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE",
-          "short_id": "b2baf331493d3de1"
-        }
+        "server_name": "en001.zestapp778.com",
+        "insecure": false
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 R46",
-      "server": "98.98.207.163",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 05",
+      "tag": "🇬🇧 英国 (United Kingdom) 04",
       "server": "138.124.125.193",
       "server_port": 10444,
       "uuid": "e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4",
@@ -70,7 +53,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 06",
+      "tag": "🇬🇧 英国 (United Kingdom) 05",
       "server": "191.44.108.31",
       "server_port": 443,
       "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
@@ -90,6 +73,27 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 06",
+      "server": "191.44.108.30",
+      "server_port": 443,
+      "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "c8.qwyak.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE",
+          "short_id": "b2baf331493d3de1"
+        }
+      }
+    },
+    {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 07",
       "server": "98.98.142.161",
@@ -98,20 +102,12 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 08 ⚠R",
-      "server": "51.38.71.147",
-      "server_port": 8443,
-      "uuid": "c08f0056-7a6d-4931-813b-aaa3cdd00aed",
-      "tls": {
-        "enabled": true,
-        "server_name": "node-uk.connectsuite.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 08 R46",
+      "server": "98.98.207.163",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "vless",
@@ -125,7 +121,7 @@
         "server_name": "tau1.freerunet.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -135,64 +131,29 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇬🇧 英国 (United Kingdom) 10 R67",
-      "server": "57.128.164.21",
-      "server_port": 80,
-      "uuid": "bda82bcd-f6e2-46ae-9552-673f0b87ac30",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/d3d3LmlyYW5ob3N0LmNvbQ==",
-        "headers": {
-          "Host": "https.http.www.net.com.ramseyv2.ir."
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 10 R45",
+      "server": "144.48.11.97",
+      "server_port": 43000,
+      "uuid": "4799abf0-d0d9-4a46-9c31-b1f76ae00e1e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "144.48.11.97",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0",
+          "short_id": "725e6ea0"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 11",
-      "server": "s12.bsh-net.ru",
-      "server_port": 443,
-      "uuid": "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "s12.bsh-net.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk",
-          "short_id": "51079f144d661484"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 12 ⚠R",
-      "server": "uk1.connectsuite.org",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
-      "tls": {
-        "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 13",
       "server": "104.239.12.81",
       "server_port": 443,
       "uuid": "d806a58b-33aa-42e0-b170-395e49c16b37",
@@ -212,65 +173,38 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 14",
-      "server": "webdisk.jaggyslawa.org",
-      "server_port": 443,
-      "uuid": "75113671-63e3-452d-87d3-261a37e8b472",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s",
-          "short_id": "baf023e1026a"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01",
-        "🇬🇧 英国 (United Kingdom) 02 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 01 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 02",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04 R46",
+        "🇬🇧 英国 (United Kingdom) 04",
         "🇬🇧 英国 (United Kingdom) 05",
         "🇬🇧 英国 (United Kingdom) 06",
         "🇬🇧 英国 (United Kingdom) 07",
-        "🇬🇧 英国 (United Kingdom) 08 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 08 R46",
         "🇬🇧 英国 (United Kingdom) 09",
-        "🇬🇧 英国 (United Kingdom) 10 R67",
-        "🇬🇧 英国 (United Kingdom) 11",
-        "🇬🇧 英国 (United Kingdom) 12 ⚠R",
-        "🇬🇧 英国 (United Kingdom) 13",
-        "🇬🇧 英国 (United Kingdom) 14"
+        "🇬🇧 英国 (United Kingdom) 10 R45",
+        "🇬🇧 英国 (United Kingdom) 11"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01",
-        "🇬🇧 英国 (United Kingdom) 02 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 01 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 02",
         "🇬🇧 英国 (United Kingdom) 03",
-        "🇬🇧 英国 (United Kingdom) 04 R46",
+        "🇬🇧 英国 (United Kingdom) 04",
         "🇬🇧 英国 (United Kingdom) 05",
         "🇬🇧 英国 (United Kingdom) 06",
         "🇬🇧 英国 (United Kingdom) 07",
-        "🇬🇧 英国 (United Kingdom) 08 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 08 R46",
         "🇬🇧 英国 (United Kingdom) 09",
-        "🇬🇧 英国 (United Kingdom) 10 R67",
-        "🇬🇧 英国 (United Kingdom) 11",
-        "🇬🇧 英国 (United Kingdom) 12 ⚠R",
-        "🇬🇧 英国 (United Kingdom) 13",
-        "🇬🇧 英国 (United Kingdom) 14"
+        "🇬🇧 英国 (United Kingdom) 10 R45",
+        "🇬🇧 英国 (United Kingdom) 11"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

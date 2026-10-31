@@ -4,25 +4,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 泰国 (Thailand) 01 R43
-  server: th001.zestapp778.com
-  port: 33079
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽)
+  server: 112.169.175.199
+  port: 31157
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: th001.zestapp778.com
-  skip-cert-verify: false
+  type: vless
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 泰国 (Thailand) 01 R43
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 泰国 (Thailand) 01 R43
+  - 🇰🇷 韩国 (South Korea) 01 (家宽)
 rules:
 - MATCH,PROXIES

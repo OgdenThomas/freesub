@@ -4,19 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 01",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 02",
       "server": "152.69.226.63",
       "server_port": 25555,
       "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d",
       "transport": {
-        "type": "ws",
-        "path": "/"
+        "type": "ws"
       }
     },
     {
       "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 02",
+      "tag": "🇰🇷 韩国 (South Korea) 03",
       "server": "kr002.zestapp778.com",
       "server_port": 48851,
       "password": "5t6i121em5lkmsmk",
@@ -32,7 +39,8 @@
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01",
-        "🇰🇷 韩国 (South Korea) 02"
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ]
     },
     {
@@ -40,7 +48,8 @@
       "tag": "auto",
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01",
-        "🇰🇷 韩国 (South Korea) 02"
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

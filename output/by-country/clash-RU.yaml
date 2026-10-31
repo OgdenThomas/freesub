@@ -14,46 +14,12 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 159.194.251.76
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: MODziWLa9qMuW-4yPa0rfw
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 130.49.189.54
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: hTTg7lwQMzpaF7KXpY3A8w
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 130.49.177.193
-  port: 443
-  udp: true
-  type: vless
-  uuid: 727a9178-d7f0-4142-8205-b0d19959ded0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc
-    short-id: 681fc2dd643bc2f3
-  servername: de-2.ffpn.pro
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 05
-  server: 185.22.155.121
-  port: 18443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 06
-  server: xnod13x.artemida.live
+  server: 178.236.242.254
   port: 8443
   udp: true
   type: vless
@@ -64,7 +30,14 @@ proxies:
     public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU
     short-id: a1b2c3d4e5f6a7b8
   servername: xnod13x.artemida.live
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 185.22.155.121
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,9 +46,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -84,8 +54,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
 rules:
 - MATCH,PROXIES

@@ -4,40 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01
+- name: 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  server: 155.117.5.208
+  port: 10002
+  udp: true
+  type: vless
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 104.239.12.81
   port: 43385
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  server: 155.117.5.208
-  port: 10002
-  udp: true
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
 - name: 🇬🇧 英国 (United Kingdom) 03
-  server: 191.44.108.30
-  port: 443
+  server: en001.zestapp778.com
+  port: 29813
   udp: true
-  type: vless
-  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE
-    short-id: b2baf331493d3de1
-  servername: c8.qwyak.ru
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04 R46
-  server: 98.98.207.163
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 05
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: en001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 138.124.125.193
   port: 10444
   udp: true
@@ -50,7 +38,7 @@ proxies:
     short-id: 8debcf36f1cc69ff
   servername: ads.x5.ru
   client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 06
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 191.44.108.31
   port: 443
   udp: true
@@ -63,6 +51,19 @@ proxies:
     short-id: 3ba10d9ce34380c9
   servername: www.google.com
   client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 06
+  server: 191.44.108.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 3pBHfffYFRPpe8Lt47cLSSgCgwNR-70blFzpEbm11AE
+    short-id: b2baf331493d3de1
+  servername: c8.qwyak.ru
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 07
   server: 98.98.142.161
   port: 8080
@@ -70,16 +71,13 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 08 ⚠R
-  server: 51.38.71.147
-  port: 8443
+- name: 🇬🇧 英国 (United Kingdom) 08 R46
+  server: 98.98.207.163
+  port: 8080
   udp: true
-  type: vless
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  tls: true
-  servername: node-uk.connectsuite.org
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇬🇧 英国 (United Kingdom) 09
   server: 146.19.143.218
   port: 443
@@ -92,47 +90,21 @@ proxies:
     public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
     short-id: 4a7b1c8d
   servername: tau1.freerunet.online
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 10 R67
-  server: 57.128.164.21
-  port: 80
-  udp: true
-  type: vmess
-  uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-- name: 🇬🇧 英国 (United Kingdom) 11
-  server: s12.bsh-net.ru
-  port: 443
+  client-fingerprint: qq
+- name: 🇬🇧 英国 (United Kingdom) 10 R45
+  server: 144.48.11.97
+  port: 43000
   udp: true
   type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
-    short-id: 51079f144d661484
-  servername: s12.bsh-net.ru
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 12 ⚠R
-  server: uk1.connectsuite.org
-  port: 443
-  udp: true
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
+    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
+    short-id: 725e6ea0
+  servername: 144.48.11.97
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-- name: 🇬🇧 英国 (United Kingdom) 13
+- name: 🇬🇧 英国 (United Kingdom) 11
   server: 104.239.12.81
   port: 443
   udp: true
@@ -145,56 +117,37 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 14
-  server: webdisk.jaggyslawa.org
-  port: 443
-  udp: true
-  type: vless
-  uuid: 75113671-63e3-452d-87d3-261a37e8b472
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: baf023e1026a
-  servername: www.mozilla.org
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 R46
+  - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 08 R46
   - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10 R67
+  - 🇬🇧 英国 (United Kingdom) 10 R45
   - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 R46
+  - 🇬🇧 英国 (United Kingdom) 04
   - 🇬🇧 英国 (United Kingdom) 05
   - 🇬🇧 英国 (United Kingdom) 06
   - 🇬🇧 英国 (United Kingdom) 07
-  - 🇬🇧 英国 (United Kingdom) 08 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 08 R46
   - 🇬🇧 英国 (United Kingdom) 09
-  - 🇬🇧 英国 (United Kingdom) 10 R67
+  - 🇬🇧 英国 (United Kingdom) 10 R45
   - 🇬🇧 英国 (United Kingdom) 11
-  - 🇬🇧 英国 (United Kingdom) 12 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 13
-  - 🇬🇧 英国 (United Kingdom) 14
 rules:
 - MATCH,PROXIES

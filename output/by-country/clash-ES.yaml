@@ -4,20 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01
-  server: 46.28.71.247
-  port: 443
-  udp: true
-  type: vless
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE
-    short-id: 0dfc23fe80778c00
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 02 R63
+- name: 🇪🇸 西班牙 (Spain) 01 R63
   server: 66.163.118.166
   port: 443
   udp: true
@@ -25,7 +12,23 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: learn.discovergreatjobsandadvanceyourcareer.com
   skip-cert-verify: false
-- name: 🇪🇸 西班牙 (Spain) 03
+- name: 🇪🇸 西班牙 (Spain) 02 R63
+  server: 66.163.118.244
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.discovergreatjobsandadvanceyourcareer.com
+  skip-cert-verify: false
+- name: 🇪🇸 西班牙 (Spain) 03 R63
+  server: 66.163.118.131
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.discovergreatjobsandadvanceyourcareer.com
+  skip-cert-verify: false
+- name: 🇪🇸 西班牙 (Spain) 04
   server: 156.252.229.30
   port: 8443
   udp: true
@@ -37,7 +40,7 @@ proxies:
     short-id: 974f7f8f
   servername: play.googleapis.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 04
+- name: 🇪🇸 西班牙 (Spain) 05
   server: 156.252.229.136
   port: 8443
   udp: true
@@ -49,33 +52,25 @@ proxies:
     short-id: 974f7f8f
   servername: play.googleapis.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 05 R63
-  server: 66.163.118.131
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 01 R63
   - 🇪🇸 西班牙 (Spain) 02 R63
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 03 R63
   - 🇪🇸 西班牙 (Spain) 04
-  - 🇪🇸 西班牙 (Spain) 05 R63
+  - 🇪🇸 西班牙 (Spain) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 01 R63
   - 🇪🇸 西班牙 (Spain) 02 R63
-  - 🇪🇸 西班牙 (Spain) 03
+  - 🇪🇸 西班牙 (Spain) 03 R63
   - 🇪🇸 西班牙 (Spain) 04
-  - 🇪🇸 西班牙 (Spain) 05 R63
+  - 🇪🇸 西班牙 (Spain) 05
 rules:
 - MATCH,PROXIES

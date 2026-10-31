@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇷 希腊 (Greece) 01
-  server: 62.60.229.216
+- name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: staging.lastilhame.monster
   port: 443
   udp: true
   type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  uuid: 317bc783-340f-453c-afb5-b6bf637c0b23
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: eh8WqxaSUlfNmlGzFLYFYrJzk1novnvfU6qmaLLOiX4
-    short-id: 72d410ce5f2036c9
-  servername: aezaf1.uni-plan.com
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: fc994ae7eb10
+  servername: www.tradingview.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇷 希腊 (Greece) 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇷 希腊 (Greece) 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 rules:
 - MATCH,PROXIES
