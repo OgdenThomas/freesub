@@ -16,14 +16,6 @@ proxies:
     headers:
       Host: 13.140.56.100
 - name: 🇮🇳 印度 (India) 02
-  server: in002.zestapp778.com
-  port: 42733
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: in002.zestapp778.com
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 03
   server: in.smrtai.top
   port: 443
   udp: true
@@ -34,7 +26,7 @@ proxies:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
     short-id: 6bdc8320
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -42,7 +34,6 @@ proxy-groups:
   - AUTO
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
-  - 🇮🇳 印度 (India) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -50,6 +41,5 @@ proxy-groups:
   proxies:
   - 🇮🇳 印度 (India) 01
   - 🇮🇳 印度 (India) 02
-  - 🇮🇳 印度 (India) 03
 rules:
 - MATCH,PROXIES

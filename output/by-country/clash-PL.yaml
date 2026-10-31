@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 155.117.5.208
-  port: 20001
+  server: 168.222.43.53
+  port: 2052
   udp: true
   type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 - name: 🇵🇱 波兰 (Poland) 02
   server: 177.1.192.117
   port: 443
@@ -24,19 +24,24 @@ proxies:
   servername: up7.uni-plan.com
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 03
-  server: 168.222.43.53
-  port: 2052
+  server: site.teslamotor.site
+  port: 20001
   udp: true
   type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
 - name: 🇵🇱 波兰 (Poland) 04
-  server: 70.34.252.255
+  server: 31.59.143.147
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
+    short-id: ae97223a8f799889
+  servername: pl2.waspnest.space
+  client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 05
   server: 177.1.192.67
   port: 443
@@ -51,36 +56,13 @@ proxies:
   servername: up4.uni-plan.com
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 06
-  server: 2.26.6.1
-  port: 2087
-  udp: true
-  type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-  tls: true
-  servername: 2.26.6.1
-  skip-cert-verify: false
-  client-fingerprint: ios
-- name: 🇵🇱 波兰 (Poland) 07
-  server: 92.118.150.146
+  server: 70.34.252.255
   port: 443
   udp: true
   type: trojan
-  password: Trojan@82164024
-  sni: pl.tronsg.com
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 08
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,8 +74,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -105,7 +85,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 04
   - 🇵🇱 波兰 (Poland) 05
   - 🇵🇱 波兰 (Poland) 06
-  - 🇵🇱 波兰 (Poland) 07
-  - 🇵🇱 波兰 (Poland) 08
 rules:
 - MATCH,PROXIES

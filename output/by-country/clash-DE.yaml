@@ -5,65 +5,57 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
+  server: mci.amir12.ir
+  port: 2112
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
+    short-id: 125ba3
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 02
   server: 8.211.196.252
   port: 443
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
-- name: 🇩🇪 德国 (Germany) 02 R62
+- name: 🇩🇪 德国 (Germany) 03 R62
   server: 185.176.204.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 德国 (Germany) 03
-  server: mci1.amir12.ir
-  port: 1222
+- name: 🇩🇪 德国 (Germany) 04
+  server: 144.31.140.125
+  port: 8443
   udp: true
   type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: play.google.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04 R65
-  server: 193.108.119.193
+    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
+    short-id: 168c15efac9df5fd
+  servername: twitch.tv
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 05
+  server: 201.58.183.99
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.iloverussia2026.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 05 R65
-  server: 193.108.119.29
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.iloverussia2026.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _aURfmVUjvCRZipDI2eqMO0VQa64BJRGYFOdlBFi1XQ
+  servername: geminilanzerotte.live
+  client-fingerprint: firefox
 - name: 🇩🇪 德国 (Germany) 06
-  server: steel7.hadsvpn.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 07 R50
-  server: 91.107.169.224
-  port: 80
-  udp: true
-  type: vmess
-  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-- name: 🇩🇪 德国 (Germany) 08
   server: 91.107.179.0
   port: 10105
   udp: true
@@ -75,21 +67,18 @@ proxies:
     public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
     short-id: 12e321badd07906e
   servername: play.google.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 09
-  server: 193.148.253.194
-  port: 25362
-  udp: true
-  type: vless
-  uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-  tls: true
-  reality-opts:
-    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-    short-id: 23732d14a527990d
-  servername: www.chip.de
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 10
-  server: hw7.divarkhaghazi.com
+- name: 🇩🇪 德国 (Germany) 07 R50
+  server: 91.107.169.224
+  port: 80
+  udp: true
+  type: vmess
+  uuid: d4b69108-f756-48af-a331-e8356bc95eb4
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇩🇪 德国 (Germany) 08
+  server: 91.107.180.176
   port: 465
   udp: true
   type: vless
@@ -103,22 +92,56 @@ proxies:
     path: /
     headers:
       Host: hw7.divarkhaghazi.com.
-- name: 🇩🇪 德国 (Germany) 11
-  server: 148.253.210.191
+- name: 🇩🇪 德国 (Germany) 09 R65
+  server: 193.108.119.78
   port: 443
   udp: true
-  type: vless
-  uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-  tls: true
-  servername: 148-253-210-191.sslip.io
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.iloverussia2026.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 10 R65
+  server: 193.108.119.96
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.iloverussia2026.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 11 R65
+  server: 193.108.119.193
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.iloverussia2026.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 12
+  server: 140.225.208.60
+  port: 2083
+  udp: true
+  type: vless
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  tls: true
+  servername: speedtestmark.com
+  skip-cert-verify: false
+  client-fingerprint: safari
   network: ws
   ws-opts:
-    path: /test-ws
-    headers:
-      Host: 148-253-210-191.sslip.io
-- name: 🇩🇪 德国 (Germany) 12 R45
+    path: /vless-ws
+- name: 🇩🇪 德国 (Germany) 13
+  server: 91.107.247.173
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
+  tls: true
+  servername: sino.bestsellers1.site
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 14 R45
   server: www.gptcloudai.com
   port: 443
   udp: true
@@ -134,19 +157,7 @@ proxies:
     path: /truth
     headers:
       Host: www.gptcloudai.com
-- name: 🇩🇪 德国 (Germany) 13
-  server: hile.ratzofinder.ir
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 890c12b5-c3dd-48d4-accc-0dce2db1b637
-  tls: true
-  reality-opts:
-    public-key: mRKBERszJtP2vL6peLVkAsTrnRJdbRigzUjYvb-K534
-    short-id: 336516d9
-  servername: play.google.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 14
+- name: 🇩🇪 德国 (Germany) 15
   server: derfderf.ru
   port: 12824
   udp: true
@@ -154,31 +165,14 @@ proxies:
   password: d62s7ghfehm742us
   sni: derfderf.ru
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 15
-  server: 157.90.175.178
-  port: 2112
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ
-    short-id: 125ba3
-  servername: play.google.com
-  client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 16
-  server: gernode.barnikle1.me
-  port: 1412
+  server: steel7.hadsvpn.com
+  port: 443
   udp: true
-  type: vless
-  uuid: 94c5a8a7-4296-400d-b413-639157be5224
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: bNpg56GtTArrVyrnonNlMA-3JyYIAFATdgsH_wn0gmc
-    short-id: 4ea6a183
-  servername: www.dhl.de
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+  skip-cert-verify: false
 - name: 🇩🇪 德国 (Germany) 17
   server: 92.42.203.240
   port: 2052
@@ -187,49 +181,137 @@ proxies:
   uuid: 6a9d4c0b-938a-4b58-911d-e3ca45d17ab5
   alterId: 0
   cipher: auto
+- name: 🇩🇪 德国 (Germany) 18 R65
+  server: 193.108.119.29
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.iloverussia2026.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 19
+  server: 148.253.210.191
+  port: 443
+  udp: true
+  type: vless
+  uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
+  tls: true
+  servername: 148-253-210-191.sslip.io
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /test-ws
+    headers:
+      Host: 148-253-210-191.sslip.io
+- name: 🇩🇪 德国 (Germany) 20
+  server: 5.181.158.195
+  port: 8463
+  udp: true
+  type: vless
+  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
+    short-id: f017b721750fd683
+  servername: svoboda2.bystriynet.online
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 21
+  server: 5.181.158.195
+  port: 8466
+  udp: true
+  type: vless
+  uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4
+    short-id: f017b721750fd683
+  servername: svoboda20.bystriynet.online
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 22 R45
+  server: 104.17.70.206
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 5f704d93-7e7f-45b5-81f5-08db4a946220
+  tls: true
+  servername: free.sahanwickramasinghe.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.com
+- name: 🇩🇪 德国 (Germany) 23
+  server: mci1.amir12.ir
+  port: 1222
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: play.google.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01
-  - 🇩🇪 德国 (Germany) 02 R62
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04 R65
-  - 🇩🇪 德国 (Germany) 05 R65
+  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 03 R62
+  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07 R50
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
-  - 🇩🇪 德国 (Germany) 10
-  - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R45
+  - 🇩🇪 德国 (Germany) 09 R65
+  - 🇩🇪 德国 (Germany) 10 R65
+  - 🇩🇪 德国 (Germany) 11 R65
+  - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
-  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 14 R45
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
   - 🇩🇪 德国 (Germany) 17
+  - 🇩🇪 德国 (Germany) 18 R65
+  - 🇩🇪 德国 (Germany) 19
+  - 🇩🇪 德国 (Germany) 20
+  - 🇩🇪 德国 (Germany) 21
+  - 🇩🇪 德国 (Germany) 22 R45
+  - 🇩🇪 德国 (Germany) 23
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01
-  - 🇩🇪 德国 (Germany) 02 R62
-  - 🇩🇪 德国 (Germany) 03
-  - 🇩🇪 德国 (Germany) 04 R65
-  - 🇩🇪 德国 (Germany) 05 R65
+  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 03 R62
+  - 🇩🇪 德国 (Germany) 04
+  - 🇩🇪 德国 (Germany) 05
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07 R50
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
-  - 🇩🇪 德国 (Germany) 10
-  - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R45
+  - 🇩🇪 德国 (Germany) 09 R65
+  - 🇩🇪 德国 (Germany) 10 R65
+  - 🇩🇪 德国 (Germany) 11 R65
+  - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
-  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 14 R45
   - 🇩🇪 德国 (Germany) 15
   - 🇩🇪 德国 (Germany) 16
   - 🇩🇪 德国 (Germany) 17
+  - 🇩🇪 德国 (Germany) 18 R65
+  - 🇩🇪 德国 (Germany) 19
+  - 🇩🇪 德国 (Germany) 20
+  - 🇩🇪 德国 (Germany) 21
+  - 🇩🇪 德国 (Germany) 22 R45
+  - 🇩🇪 德国 (Germany) 23
 rules:
 - MATCH,PROXIES
