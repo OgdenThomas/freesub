@@ -14,7 +14,7 @@ proxies:
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
   servername: github.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
@@ -32,32 +32,25 @@ proxies:
   servername: de-2.ffpn.pro
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 135.106.153.131
+  server: 157.22.240.20
   port: 443
   udp: true
   type: vless
-  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
+  uuid: f28ce4eb-62cd-45f5-b3b3-be1c1a95e335
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: OIWmjOL9lOxVRm-ejEvQf_G-Km-5Rw3L-w5d8rhVzQw
-    short-id: 69b1363a7dfd97d3
-  servername: rug.tems.bet
+    public-key: T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8
+    short-id: 6ad3c0f1e9b2478a
+  servername: yandex.ru
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 185.229.9.135
-  port: 443
+  server: 46.17.46.27
+  port: 18443
   udp: true
-  type: vless
-  uuid: d8a47403-5dbf-4450-8640-0134719b1d86
-  tls: true
-  servername: business.lesotorg-kirov.ru
-  skip-cert-verify: false
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /chws
-    headers:
-      Host: business.lesotorg-kirov.ru
+  type: ss
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
 proxy-groups:
 - name: PROXIES
   type: select

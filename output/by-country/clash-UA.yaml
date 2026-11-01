@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 乌克兰 (Ukraine) 01
-  server: 31.222.235.81
-  port: 443
-  udp: true
-  type: vless
-  uuid: d8b58872-cc25-4bb2-badb-b86399c075fa
-  tls: true
-  reality-opts:
-    public-key: L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk
-    short-id: d8b58872
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇦 乌克兰 (Ukraine) 02
   server: staging.lastilhame.monster
   port: 443
   udp: true
@@ -35,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇺🇦 乌克兰 (Ukraine) 01
-  - 🇺🇦 乌克兰 (Ukraine) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇦 乌克兰 (Ukraine) 01
-  - 🇺🇦 乌克兰 (Ukraine) 02
 rules:
 - MATCH,PROXIES
