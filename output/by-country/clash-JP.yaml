@@ -5,37 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 45.32.10.7
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02
-  server: r8f4n-g05.jp02-e3-vm0.entry.fr0528.art
-  port: 11777
-  udp: true
-  type: vmess
-  uuid: 8ee65c79-4487-32ff-b896-62c8dce05921
-  alterId: 1
-  cipher: auto
-- name: 🇯🇵 日本 (Japan) 03
-  server: 45.76.98.127
-  port: 443
-  udp: true
-  type: vless
-  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
-  tls: true
-  reality-opts:
-    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
-    short-id: 49fa0dad
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🇯🇵 日本 (Japan) 04
   server: ga1data.xyy123.bid
   port: 443
   udp: true
@@ -48,36 +17,17 @@ proxies:
     short-id: 00b0389a
   servername: www.amzn.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05
-  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  port: 28787
-  udp: true
-  type: vmess
-  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
-  alterId: 1
-  cipher: auto
-  tls: true
-  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05
 rules:
 - MATCH,PROXIES

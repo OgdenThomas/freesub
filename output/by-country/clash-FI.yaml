@@ -5,17 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.144.234.157
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 65.109.211.81
   port: 465
   udp: true
@@ -36,13 +25,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
-  - 🇫🇮 芬兰 (Finland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
-  - 🇫🇮 芬兰 (Finland) 02
 rules:
 - MATCH,PROXIES

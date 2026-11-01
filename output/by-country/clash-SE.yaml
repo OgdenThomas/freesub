@@ -5,24 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 5.178.109.174
-  port: 14430
+  server: 179.253.179.109
+  port: 54083
   udp: true
   type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
+  uuid: 0ef03752-c8bf-4482-8710-e563ca4808f9
+  tls: true
+  servername: 177.3.215.54
+  skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🇸🇪 瑞典 (Sweden) 02
-  server: 70.34.207.14
+  server: swidenafterlanzerotte.space
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MQrvfivvEfLGzDee7h0j5uC-DwaD_38_NXOY9-NhqxM
+  servername: swidenafterlanzerotte.space
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

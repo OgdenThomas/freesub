@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇨 塞舌尔 (Seychelles) 01
+  server: 200.169.184.168
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6036c28a-8db2-432e-8118-ff0c16641ad0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2IylNqpuTBeUvd333tXWY6i0l8nkH6o5qfRVKZm6FA0
+    short-id: e0aadc6f38ff06a8
+  servername: tm6.24convertflow.ru
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇨 塞舌尔 (Seychelles) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇨 塞舌尔 (Seychelles) 01
+rules:
+- MATCH,PROXIES
