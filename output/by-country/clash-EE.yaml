@@ -5,27 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 13.143.239.127
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02
-  server: 31.77.68.36
-  port: 443
+  server: 179.253.179.109
+  port: 57043
   udp: true
   type: vless
-  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
-  flow: xtls-rprx-vision
+  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
   tls: true
-  reality-opts:
-    public-key: Daj7jHuHFEC_LV-Fv1fBSaTSQRM9vfgf_DtjMn9svl0
-    short-id: 64e4efa1
-  servername: addons.mozilla.org
-  client-fingerprint: qq
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03
+  servername: 87.121.86.24
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
   server: ee.h1cloud.net
   port: 25895
   udp: true
@@ -44,7 +33,6 @@ proxy-groups:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +40,5 @@ proxy-groups:
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
   - 🇪🇪 爱沙尼亚 (Estonia) 02
-  - 🇪🇪 爱沙尼亚 (Estonia) 03
 rules:
 - MATCH,PROXIES

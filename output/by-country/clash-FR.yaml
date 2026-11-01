@@ -11,7 +11,14 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 02
+- name: 🇫🇷 法国 (France) 02 R40
+  server: 54.36.174.134
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 03
   server: 138.124.70.41
   port: 14430
   udp: true
@@ -22,7 +29,15 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: 🇫🇷 法国 (France) 03
+- name: 🇫🇷 法国 (France) 04
+  server: 108.61.177.57
+  port: 16778
+  udp: true
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 05
   server: ai.smrtai.top
   port: 443
   udp: true
@@ -34,9 +49,24 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
-  server: 185.114.72.31
-  port: 2053
+- name: 🇫🇷 法国 (France) 06
+  server: 199.232.78.160
+  port: 443
+  udp: true
+  type: vless
+  uuid: XpnTeam-72
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: 🇫🇷 法国 (France) 07
+  server: 81.22.132.136
+  port: 443
   udp: true
   type: trojan
   password: humanity
@@ -45,41 +75,82 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇫🇷 法国 (France) 05 ⚠R
-  server: www.ubuntuupdates.com
+- name: 🇫🇷 法国 (France) 08
+  server: 45.87.41.18
   port: 443
   udp: true
-  type: vmess
-  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: www.ubuntuupdates.com
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /truth
-    headers:
-      Host: www.ubuntuupdates.com
+    path: /assignment
+- name: 🇫🇷 法国 (France) 09
+  server: 15.236.109.186
+  port: 2053
+  udp: true
+  type: vless
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+  tls: true
+  servername: w.geogame.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 10
+  server: 212.227.144.37
+  port: 8443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷 法国 (France) 11
+  server: 161.97.160.224
+  port: 443
+  udp: true
+  type: vless
+  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
+    short-id: e6
+  servername: passport.yandex.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 02 R40
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 ⚠R
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 R40
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 02 R40
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
-  - 🇫🇷 法国 (France) 05 ⚠R
+  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07
+  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
 rules:
 - MATCH,PROXIES

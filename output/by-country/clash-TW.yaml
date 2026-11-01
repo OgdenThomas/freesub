@@ -5,18 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01
-  server: 152.32.167.33
-  port: 443
+  server: n04.jinggai.online
+  port: 8443
   udp: true
   type: vless
   uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: Q8QwBSGN6J-FqgDV1pYNm0VThS_xNRyQ3DPPa9YZ3j4
-    short-id: cff998a4
-  servername: www.amazon.com
-  client-fingerprint: firefox
+  servername: n04.jinggai.online
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /nvl-n04-ws/e0577fe8fd7c8823
 proxy-groups:
 - name: PROXIES
   type: select

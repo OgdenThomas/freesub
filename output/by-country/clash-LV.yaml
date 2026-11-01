@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01
-  server: 45.43.79.92
-  port: 443
-  udp: true
-  type: vless
-  uuid: 042b12d8-bac4-4b3a-b661-79e333f08e4e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM
-    short-id: af4ca5d16438c938
-  servername: vikt659.isgood.host
-  client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 02
   server: 195.123.213.28
   port: 443
   udp: true
@@ -30,7 +17,7 @@ proxies:
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 03
+- name: 🇱🇻 拉脱维亚 (Latvia) 02
   server: 195.123.208.32
   port: 443
   udp: true
@@ -50,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
   - 🇱🇻 拉脱维亚 (Latvia) 02
-  - 🇱🇻 拉脱维亚 (Latvia) 03
 rules:
 - MATCH,PROXIES
