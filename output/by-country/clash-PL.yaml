@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
+  server: 191.217.245.227
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
+  servername: pl.lenvex.cc
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 02
   server: 2.26.255.215
   port: 443
   udp: true
@@ -17,18 +29,18 @@ proxies:
     short-id: '50'
   servername: cloudflare.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 191.217.245.227
-  port: 443
+- name: 🇵🇱 波兰 (Poland) 03
+  server: pl1.h1cloud.net
+  port: 27591
   udp: true
   type: vless
-  uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
-  flow: xtls-rprx-vision
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
   tls: true
   reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-  servername: pl.lenvex.cc
-  client-fingerprint: firefox
+    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
+    short-id: 6c5c7900406a1ae7
+  servername: www.samsung.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +48,7 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +56,6 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES

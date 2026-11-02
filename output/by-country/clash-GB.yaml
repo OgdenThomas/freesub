@@ -4,13 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 ⚠R
-  server: 155.117.5.208
-  port: 10002
-  udp: true
-  type: vless
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: 🇬🇧 英国 (United Kingdom) 02
+- name: 🇬🇧 英国 (United Kingdom) 01
   server: 23.81.36.148
   port: 1222
   udp: true
@@ -22,7 +16,20 @@ proxies:
     short-id: a25d0f
   servername: play.google.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 03 R45
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 144.48.11.97
   port: 43000
   udp: true
@@ -40,16 +47,16 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 R45
+  - 🇬🇧 英国 (United Kingdom) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03 R45
+  - 🇬🇧 英国 (United Kingdom) 03
 rules:
 - MATCH,PROXIES

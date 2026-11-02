@@ -4,8 +4,24 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇯🇵 日本 (Japan) 01",
+      "server": "167.179.108.225",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "discoverparttimepositionsandsupplementyourincomeguide.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02",
       "server": "ga1data.xyy123.bid",
       "server_port": 443,
       "uuid": "81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
@@ -29,14 +45,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

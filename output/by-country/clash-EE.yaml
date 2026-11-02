@@ -5,16 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 179.253.179.109
-  port: 57043
+  server: 185.225.205.53
+  port: 443
   udp: true
   type: vless
-  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
+  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
+  flow: xtls-rprx-vision
   tls: true
-  servername: 87.121.86.24
-  skip-cert-verify: false
+  reality-opts:
+    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
+    short-id: 2e82d7ac
+  servername: addons.mozilla.org
+  client-fingerprint: qq
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02
-  server: 79.182.39.237
+  server: 79.182.39.232
   port: 25895
   udp: true
   type: vless
@@ -24,7 +28,7 @@ proxies:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
   servername: www.samsung.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

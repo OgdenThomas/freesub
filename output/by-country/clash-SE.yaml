@@ -5,16 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 179.253.179.109
-  port: 54083
-  udp: true
-  type: vless
-  uuid: 0ef03752-c8bf-4482-8710-e563ca4808f9
-  tls: true
-  servername: 177.3.215.54
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 02
   server: swidenafterlanzerotte.space
   port: 443
   udp: true
@@ -32,13 +22,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02
 rules:
 - MATCH,PROXIES

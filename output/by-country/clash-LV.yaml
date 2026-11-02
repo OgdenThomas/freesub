@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇪 阿联酋 (UAE) 01
-  server: uae.purchasebot.net
+- name: 🇱🇻 拉脱维亚 (Latvia) 01
+  server: 195.123.208.32
   port: 443
   udp: true
   type: vless
-  uuid: 0d607d84-0ae0-4b9c-a4f3-1766ab456e02
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: _0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM
-    short-id: e7c5f2a9
-  servername: bunny.net
-  client-fingerprint: firefox
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+    short-id: 757b9e1ef18e60f0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇪 阿联酋 (UAE) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇪 阿联酋 (UAE) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 01
 rules:
 - MATCH,PROXIES
