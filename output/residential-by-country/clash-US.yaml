@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇭 菲律宾 (Philippines) 01
-  server: ph001.zestapp778.com
-  port: 46298
+- name: 🇺🇸 美国 (United States) 01 (移动家宽)
+  server: 130.94.19.95
+  port: 57277
   udp: true
   type: trojan
   password: 5t6i121em5lkmsmk
-  sni: ph001.zestapp778.com
+  sni: us001.zestapp778.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇭 菲律宾 (Philippines) 01
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇭 菲律宾 (Philippines) 01
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
 rules:
 - MATCH,PROXIES

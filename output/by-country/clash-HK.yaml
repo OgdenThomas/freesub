@@ -4,24 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 46.17.46.27
-  port: 18443
+- name: 🇭🇰 中国香港 (Hong Kong) 01
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16115
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇭🇰 中国香港 (Hong Kong) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇭🇰 中国香港 (Hong Kong) 01
 rules:
 - MATCH,PROXIES
