@@ -4,12 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "zfd-hkv1.kunlun01dns.com",
-      "server_port": 16115,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "server": "dubai-cdn-keno.keno.su",
+      "server_port": 443,
+      "uuid": "dc413f44-7dce-4cc4-b2c7-878ef70ce464",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "dubai-cdn-keno.keno.su",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9MgNwdrftjPf18DG8qYo6iHJw7IG7uSnULScDQ0WDy4",
+          "short_id": "0123456789abcdef"
+        }
+      }
     },
     {
       "type": "selector",

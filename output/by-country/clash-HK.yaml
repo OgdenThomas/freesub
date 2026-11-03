@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv1.kunlun01dns.com
-  port: 16115
+  server: dubai-cdn-keno.keno.su
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: dc413f44-7dce-4cc4-b2c7-878ef70ce464
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9MgNwdrftjPf18DG8qYo6iHJw7IG7uSnULScDQ0WDy4
+    short-id: 0123456789abcdef
+  servername: dubai-cdn-keno.keno.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,43 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 191.217.245.227
+  server: 2.26.255.215
   port: 443
   udp: true
   type: vless
-  uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
+  uuid: 69e41e64-a832-471a-b740-94577ca85520
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-  servername: pl.lenvex.cc
-  client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
+    short-id: '50'
+  servername: cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01
-  - 🇵🇱 波兰 (Poland) 02
 rules:
 - MATCH,PROXIES

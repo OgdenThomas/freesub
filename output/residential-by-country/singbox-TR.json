@@ -1,0 +1,52 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽)",
+      "server": "tr2.h1cloud.net",
+      "server_port": 25021,
+      "uuid": "2446e2e2-1ce3-4502-9050-1dd32bacc68c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg",
+          "short_id": "17fa3af0924c88b3"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇹🇷 土耳其 (Turkey) 01 (移动家宽)"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

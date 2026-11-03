@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 拉脱维亚 (Latvia) 01
-  server: 72.56.52.248
-  port: 443
+- name: 🇻🇳 越南 (Vietnam) 01
+  server: 154.21.203.106
+  port: 51279
   udp: true
   type: vless
-  uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-  servername: lv.dexlen.cc
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  servername: www.tesla.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇻🇳 越南 (Vietnam) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇻🇳 越南 (Vietnam) 01
 rules:
 - MATCH,PROXIES

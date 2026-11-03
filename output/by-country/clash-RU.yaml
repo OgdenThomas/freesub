@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 157.22.240.20
+  port: 443
+  udp: true
+  type: vless
+  uuid: f28ce4eb-62cd-45f5-b3b3-be1c1a95e335
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8
+    short-id: 6ad3c0f1e9b2478a
+  servername: yandex.ru
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇺 俄罗斯 (Russia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇺 俄罗斯 (Russia) 01
+rules:
+- MATCH,PROXIES
