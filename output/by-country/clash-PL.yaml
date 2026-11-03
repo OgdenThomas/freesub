@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 2.26.255.215
-  port: 443
-  udp: true
-  type: vless
-  uuid: 69e41e64-a832-471a-b740-94577ca85520
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
-    short-id: '50'
-  servername: cloudflare.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
   server: 179.198.49.218
   port: 443
   udp: true
@@ -30,6 +17,58 @@ proxies:
     short-id: 75fe71d16ccae610
   servername: assets-44.topp-con.xyz
   client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 2.26.255.215
+  port: 443
+  udp: true
+  type: vless
+  uuid: 69e41e64-a832-471a-b740-94577ca85520
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
+    short-id: '50'
+  servername: cloudflare.com
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 217.60.33.67
+  port: 8443
+  udp: true
+  type: vless
+  uuid: dc413f44-7dce-4cc4-b2c7-878ef70ce464
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: -r5xcA3iTzAf63kkb0VIILrLHH1VUq550pFZ-M74Jlc
+    short-id: de
+  servername: go-obsh-auto-drun.keno.su
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: 🇵🇱 波兰 (Poland) 05
+  server: 201.58.181.231
+  port: 2083
+  udp: true
+  type: vless
+  uuid: fafc7c16-f890-45ee-a856-02df225172dd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: uKk4cvAJii_YbhzUm9IeMKLHR851E_1sfiMP-ncyeyM
+    short-id: e69c662141e37e7b
+  servername: ya.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +76,9 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
+  - 🇵🇱 波兰 (Poland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +86,8 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
+  - 🇵🇱 波兰 (Poland) 05
 rules:
 - MATCH,PROXIES

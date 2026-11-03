@@ -19,6 +19,24 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
 - name: 🇫🇷 法国 (France) 03
+  server: 108.61.177.57
+  port: 16778
+  udp: true
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 04
+  server: 15.236.109.186
+  port: 2053
+  udp: true
+  type: vless
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+  tls: true
+  servername: w.geogame.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05
   server: ai.smrtai.top
   port: 443
   udp: true
@@ -30,14 +48,6 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 04
-  server: 108.61.177.57
-  port: 16778
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,6 +57,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -56,5 +67,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 02
   - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05
 rules:
 - MATCH,PROXIES

@@ -4,35 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 R52
-  server: 68.183.227.4
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 02 R52
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 03 R52
-  server: 68.183.235.240
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R55
-  server: 128.1.186.73
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R56
+- name: 🇸🇬 新加坡 (Singapore) 01 R56
   server: 172.237.88.103
   port: 443
   udp: true
@@ -44,8 +16,49 @@ proxies:
     public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
     short-id: 5a42dbd7e26a0415
   servername: zoom.us
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 02 R52
+  server: 68.183.235.122
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 03 R52
+  server: 68.183.227.236
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 04 R52
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 05 R52
+  server: 68.183.235.240
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🇸🇬 新加坡 (Singapore) 06
+  server: 46.137.202.178
+  port: 12512
+  udp: true
+  type: vless
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: e692a8250d2e2fd0
+  servername: www.intel.com
+  client-fingerprint: ios
+- name: 🇸🇬 新加坡 (Singapore) 07
   server: 54.251.9.130
   port: 24146
   udp: true
@@ -58,14 +71,27 @@ proxies:
     short-id: 7205d9079521832c
   servername: www.intel.com
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡 (Singapore) 07 R52
-  server: 68.183.235.122
+- name: 🇸🇬 新加坡 (Singapore) 08 R55
+  server: 128.1.186.73
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 08
+- name: 🇸🇬 新加坡 (Singapore) 09 R56
+  server: 172.237.88.103
+  port: 447
+  udp: true
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EeLAX-BAjzSdRes-zpUFzVOYsBedmP8lUOHhXXJFXyI
+    short-id: 5a42dbd7e26a0415
+  servername: netflix.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 10
   server: wjofHsQtEuEywxEq.v.3dns.vip
   port: 443
   udp: true
@@ -81,7 +107,7 @@ proxies:
     path: /ws-vmess
     headers:
       Host: wjofHsQtEuEywxEq.v.3dns.vip
-- name: 🇸🇬 新加坡 (Singapore) 09 R56
+- name: 🇸🇬 新加坡 (Singapore) 11 R56
   server: 141.193.213.20
   port: 8443
   udp: true
@@ -101,28 +127,32 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 R52
+  - 🇸🇬 新加坡 (Singapore) 01 R56
   - 🇸🇬 新加坡 (Singapore) 02 R52
   - 🇸🇬 新加坡 (Singapore) 03 R52
-  - 🇸🇬 新加坡 (Singapore) 04 R55
-  - 🇸🇬 新加坡 (Singapore) 05 R56
+  - 🇸🇬 新加坡 (Singapore) 04 R52
+  - 🇸🇬 新加坡 (Singapore) 05 R52
   - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R52
-  - 🇸🇬 新加坡 (Singapore) 08
+  - 🇸🇬 新加坡 (Singapore) 07
+  - 🇸🇬 新加坡 (Singapore) 08 R55
   - 🇸🇬 新加坡 (Singapore) 09 R56
+  - 🇸🇬 新加坡 (Singapore) 10
+  - 🇸🇬 新加坡 (Singapore) 11 R56
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 R52
+  - 🇸🇬 新加坡 (Singapore) 01 R56
   - 🇸🇬 新加坡 (Singapore) 02 R52
   - 🇸🇬 新加坡 (Singapore) 03 R52
-  - 🇸🇬 新加坡 (Singapore) 04 R55
-  - 🇸🇬 新加坡 (Singapore) 05 R56
+  - 🇸🇬 新加坡 (Singapore) 04 R52
+  - 🇸🇬 新加坡 (Singapore) 05 R52
   - 🇸🇬 新加坡 (Singapore) 06
-  - 🇸🇬 新加坡 (Singapore) 07 R52
-  - 🇸🇬 新加坡 (Singapore) 08
+  - 🇸🇬 新加坡 (Singapore) 07
+  - 🇸🇬 新加坡 (Singapore) 08 R55
   - 🇸🇬 新加坡 (Singapore) 09 R56
+  - 🇸🇬 新加坡 (Singapore) 10
+  - 🇸🇬 新加坡 (Singapore) 11 R56
 rules:
 - MATCH,PROXIES

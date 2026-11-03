@@ -6,28 +6,20 @@
     {
       "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "zfd-hkv1.kunlun01dns.com",
-      "server_port": 16115,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
-    },
-    {
-      "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
-      "server": "45.207.156.110",
-      "server_port": 8443,
-      "uuid": "eb8c97f7-a154-4442-91b0-54c0d055ad0b",
+      "server": "rhhierkwrf6fhs2h.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "78b3f149-f037-465d-b2fb-11adb6f73ff8",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "github.githubassets.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA",
-          "short_id": "4ad2e4e660550e43"
+        "server_name": "rhhierkwrf6fhs2h.v.3dns.vip",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "Host": "rhhierkwrf6fhs2h.v.3dns.vip"
         }
       }
     },
@@ -36,16 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02"
+        "🇭🇰 中国香港 (Hong Kong) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02"
+        "🇭🇰 中国香港 (Hong Kong) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
