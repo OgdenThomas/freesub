@@ -17,78 +17,17 @@ proxies:
     short-id: 59d2296aa6320c76
   servername: get-37.topp-con.xyz
   client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 02 R50
-  server: 162.159.153.4
-  port: 443
-  udp: true
-  type: vless
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  tls: true
-  servername: rayan-007.maxima.dpdns.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.maxima.dpdns.org
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 23.81.36.148
-  port: 1222
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: play.google.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
-  server: 51.38.71.147
-  port: 443
-  udp: true
-  type: vless
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  tls: true
-  servername: uk1.connectsuite.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-- name: 🇬🇧 英国 (United Kingdom) 05
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  type: vless
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  servername: yandex.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 R50
-  - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02 R50
-  - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 05
 rules:
 - MATCH,PROXIES

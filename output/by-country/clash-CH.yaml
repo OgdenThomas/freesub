@@ -5,6 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 R56
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇨🇭 瑞士 (Switzerland) 02 R53
+  server: 208.69.78.222
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 03 R53
   server: 208.69.78.60
   port: 443
   udp: true
@@ -12,54 +33,21 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 02 R56
-  server: 208.69.78.29
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 03 R56
-  server: 208.69.78.208
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 04
-  server: 37.120.222.70
-  port: 8082
-  udp: true
-  type: vless
-  uuid: 59c3c1c7-62d0-4707-9d67-5ff9c008591c
-  tls: true
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R56
-  - 🇨🇭 瑞士 (Switzerland) 02 R56
-  - 🇨🇭 瑞士 (Switzerland) 03 R56
-  - 🇨🇭 瑞士 (Switzerland) 04
+  - 🇨🇭 瑞士 (Switzerland) 02 R53
+  - 🇨🇭 瑞士 (Switzerland) 03 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R56
-  - 🇨🇭 瑞士 (Switzerland) 02 R56
-  - 🇨🇭 瑞士 (Switzerland) 03 R56
-  - 🇨🇭 瑞士 (Switzerland) 04
+  - 🇨🇭 瑞士 (Switzerland) 02 R53
+  - 🇨🇭 瑞士 (Switzerland) 03 R53
 rules:
 - MATCH,PROXIES

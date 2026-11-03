@@ -17,17 +17,32 @@ proxies:
     short-id: '50'
   servername: cloudflare.com
   client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 179.198.49.218
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 9CKMhiYPXEIfQh_XFbbN1GoBxeLxJkaar2wg9FZKfBo
+    short-id: 75fe71d16ccae610
+  servername: assets-44.topp-con.xyz
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 02
 rules:
 - MATCH,PROXIES
