@@ -4,28 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇰🇷 韩国 (South Korea) 01",
+      "server": "kr002.zestapp778.com",
+      "server_port": 48851,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "kr002.zestapp778.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 02",
       "server": "129.154.61.196",
       "server_port": 800,
       "uuid": "a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0",
       "security": "auto"
     },
     {
-      "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 02",
-      "server": "158.247.255.150",
-      "server_port": 48851,
-      "password": "5t6i121em5lkmsmk",
-      "tls": {
-        "enabled": true,
-        "server_name": "kr002.zestapp778.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 03",
+      "server": "dog-kr.kunlun01dns.com",
+      "server_port": 21004,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "selector",
@@ -33,7 +37,8 @@
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01",
-        "🇰🇷 韩国 (South Korea) 02"
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ]
     },
     {
@@ -41,7 +46,8 @@
       "tag": "auto",
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01",
-        "🇰🇷 韩国 (South Korea) 02"
+        "🇰🇷 韩国 (South Korea) 02",
+        "🇰🇷 韩国 (South Korea) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

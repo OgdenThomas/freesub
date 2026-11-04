@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01
+  server: 5.129.202.80
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
+    short-id: 2ef2b10d5143d798
+  servername: mirror-50.topp-con.xyz
+  client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02
   server: 147.45.245.17
   port: 443
   udp: true
@@ -17,17 +30,49 @@ proxies:
     short-id: 38146bd64aece7a5
   servername: defs-64.topp-con.xyz
   client-fingerprint: firefox
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03
+  server: 185.225.205.53
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
+    short-id: 2e82d7ac
+  servername: addons.mozilla.org
+  client-fingerprint: qq
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04
+  server: 109.71.247.200
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+  servername: static-47.topp-con.xyz
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03
+  - 🇪🇪 爱沙尼亚 (Estonia) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇪🇪 爱沙尼亚 (Estonia) 02
+  - 🇪🇪 爱沙尼亚 (Estonia) 03
+  - 🇪🇪 爱沙尼亚 (Estonia) 04
 rules:
 - MATCH,PROXIES

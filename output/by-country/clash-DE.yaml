@@ -4,7 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01
+- name: 🇩🇪 德国 (Germany) 01 R46
+  server: 57.129.113.16
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+- name: 🇩🇪 德国 (Germany) 02
   server: 150.241.79.124
   port: 443
   udp: true
@@ -17,20 +24,20 @@ proxies:
     short-id: 5212dad2aa9723d7
   servername: de1.waspnest.space
   client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 02
-  server: d2.anonix.cloud
-  port: 8018
-  udp: true
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /websocket/transfer/gayporn
-    headers:
-      Host: shit.67133767.xyz
 - name: 🇩🇪 德国 (Germany) 03
+  server: 77.90.2.130
+  port: 43086
+  udp: true
+  type: vless
+  uuid: d782aa4c-9284-4a60-a9d9-f61412f8a2a4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SRKTZm_KYvsD9ONd5VU54ABZxudjR65r5Uhxc-1lLko
+    short-id: 1c601fed
+  servername: apple.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 04
   server: 45.129.242.56
   port: 443
   udp: true
@@ -43,20 +50,68 @@ proxies:
     short-id: abcdef
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04
-  server: d2hplu8rn1zhez.cloudfront.net
+- name: 🇩🇪 德国 (Germany) 05
+  server: 217.60.99.115
   port: 443
   udp: true
   type: vless
-  uuid: f17a82cc-4b2b-49bc-8875-51c43cc49c36
+  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
+  flow: xtls-rprx-vision
   tls: true
-  servername: d2hplu8rn1zhez.cloudfront.net
-  skip-cert-verify: false
-  client-fingerprint: safari
+  reality-opts:
+    public-key: q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ
+  servername: music.3apes.online
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 06
+  server: 193.23.218.107
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6f433cf6-4221-48b2-ad29-01121952ef8a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cBTZdCBwrYTTarw6B_lu2TN1M6_Lku68FfWCQT9svhc
+    short-id: cb620aa2f04bce33
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 07
+  server: 201.10.90.113
+  port: 443
+  udp: true
+  type: vless
+  uuid: 610ac982-04eb-34c0-80b1-5dd3c2ca131e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6z3VlbF2v0C3FTWQQemYDxX-MIzwaz_k8_B-xyc0Xyg
+  servername: undef-aut-0.undef.network
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 08
+  server: 2.26.54.200
+  port: 8018
+  udp: true
+  type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /api/v3/ws/events
-- name: 🇩🇪 德国 (Germany) 05
+    path: /websocket/transfer/gayporn
+- name: 🇩🇪 德国 (Germany) 09
+  server: 91.107.179.0
+  port: 10105
+  udp: true
+  type: vless
+  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
+    short-id: 12e321badd07906e
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 10
   server: 91.107.243.131
   port: 465
   udp: true
@@ -70,7 +125,7 @@ proxies:
     path: /
     headers:
       Host: hw14.roghanmo.com
-- name: 🇩🇪 德国 (Germany) 06 R46
+- name: 🇩🇪 德国 (Germany) 11 R46
   server: 104.17.70.206
   port: 8443
   udp: true
@@ -84,42 +139,37 @@ proxies:
     path: /
     headers:
       Host: free.sahanwickramasinghe.com
-- name: 🇩🇪 德国 (Germany) 07
-  server: 45.148.117.151
-  port: 38291
-  udp: true
-  type: vless
-  uuid: 483079ae-79ba-48aa-9071-340b79117a22
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PNT2xM-R4OpFcV-bVO1Fgdb_C8tuB32bGIznjy2YYzc
-    short-id: 55e00de72e977e65
-  servername: reality.airvpn.su
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R46
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R46
+  - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11 R46
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R46
   - 🇩🇪 德国 (Germany) 02
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R46
+  - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11 R46
 rules:
 - MATCH,PROXIES
