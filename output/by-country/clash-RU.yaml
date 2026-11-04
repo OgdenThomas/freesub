@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: steel7.hadsvpn.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 46.17.46.27
   port: 18443
   udp: true
@@ -25,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
-  - 🇷🇺 俄罗斯 (Russia) 02
 rules:
 - MATCH,PROXIES

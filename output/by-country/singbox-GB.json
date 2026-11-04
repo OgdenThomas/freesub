@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 R61",
+      "server": "185.4.115.146",
+      "server_port": 1353,
+      "method": "chacha20-ietf-poly1305",
+      "password": "v1c-i5SSFXP8n4g1Wbc0L9gX82x5O2Qa"
+    },
+    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
       "server": "23.81.36.148",
       "server_port": 1222,
       "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
@@ -25,23 +33,42 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02",
-      "server": "132.243.207.154",
-      "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+      "server": "51.38.71.147",
+      "server_port": 8443,
+      "uuid": "c08f0056-7a6d-4931-813b-aaa3cdd00aed",
       "tls": {
         "enabled": true,
-        "server_name": "get-37.topp-con.xyz",
+        "server_name": "node-uk.connectsuite.org",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "tVx2o1LD0BI7CCoXfFSv-Rr_etGde9XpQ-iNA9P3338",
-          "short_id": "59d2296aa6320c76"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 ⚠R",
+      "server": "uk1.connectsuite.org",
+      "server_port": 443,
+      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
+      "tls": {
+        "enabled": true,
+        "server_name": "uk1.connectsuite.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn-cgi/ws"
       }
     },
     {
@@ -49,16 +76,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01",
-        "🇬🇧 英国 (United Kingdom) 02"
+        "🇬🇧 英国 (United Kingdom) 01 R61",
+        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 04 ⚠R"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01",
-        "🇬🇧 英国 (United Kingdom) 02"
+        "🇬🇧 英国 (United Kingdom) 01 R61",
+        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 04 ⚠R"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
