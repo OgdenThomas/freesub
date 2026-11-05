@@ -31,20 +31,18 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 - name: 🇵🇱 波兰 (Poland) 03
-  server: 145.63.143.205
-  port: 8444
+  server: ru1.radiolumens.uk
+  port: 8445
   udp: true
   type: vless
-  uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
   tls: true
-  servername: pl1.meshbeat.online
+  servername: ru1.radiolumens.uk
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /api/v1/devices/10be32b380/telemetry
-    headers:
-      Host: pl1.meshbeat.online
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 - name: 🇵🇱 波兰 (Poland) 04
   server: 84.23.52.120
   port: 28453
@@ -58,6 +56,19 @@ proxies:
   network: ws
   ws-opts:
     path: /lovelive
+- name: 🇵🇱 波兰 (Poland) 05
+  server: 84.23.52.120
+  port: 28448
+  udp: true
+  type: vless
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lovelive
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +78,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
+  - 🇵🇱 波兰 (Poland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,5 +88,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
   - 🇵🇱 波兰 (Poland) 04
+  - 🇵🇱 波兰 (Poland) 05
 rules:
 - MATCH,PROXIES

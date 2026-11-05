@@ -4,28 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇸 塞尔维亚 (Serbia) 01
-  server: 185.72.11.43
+- name: 🇬🇷 希腊 (Greece) 01
+  server: 85.90.197.220
   port: 443
   udp: true
   type: vless
-  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   flow: xtls-rprx-vision
   tls: true
-  servername: rs8.speedtestinternet.link
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  reality-opts:
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇸 塞尔维亚 (Serbia) 01
+  - 🇬🇷 希腊 (Greece) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇸 塞尔维亚 (Serbia) 01
+  - 🇬🇷 希腊 (Greece) 01
 rules:
 - MATCH,PROXIES

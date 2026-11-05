@@ -5,39 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01
-  server: 54.36.174.140
+  server: pl140.vpnbook.com
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
 - name: 🇫🇷 法国 (France) 02
-  server: 108.61.177.57
-  port: 16778
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 03
-  server: 54.36.174.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 04
-  server: 161.97.66.16
-  port: 443
+  server: 15.236.109.186
+  port: 2053
   udp: true
   type: vless
-  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
   tls: true
-  reality-opts:
-    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
-    short-id: 086bf957
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  servername: w.geogame.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,8 +28,6 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -54,7 +35,5 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01
   - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03
-  - 🇫🇷 法国 (France) 04
 rules:
 - MATCH,PROXIES

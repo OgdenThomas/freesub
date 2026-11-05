@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
+  server: 217.144.188.185
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
+  servername: www.nordea.fi
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 89.144.53.4
   port: 8445
   udp: true
@@ -17,28 +29,8 @@ proxies:
     short-id: 1a2b3c4d
   servername: videos.porsche.com
   client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 92.242.165.40
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 2f0fccb6-4a86-4d9f-9e03-a2dfee6ed7f5
-  sni: speedtestmark.com
-  skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 03
-  server: 217.144.188.185
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
-  servername: www.nordea.fi
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04
-  server: 104.18.0.1
+  server: 188.114.96.3
   port: 2053
   udp: true
   type: trojan
@@ -56,7 +48,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,6 +56,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES

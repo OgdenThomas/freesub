@@ -5,50 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: hk.wawojk.dpdns.org
-  port: 50007
+  server: dog-hk.kunlun01dns.com
+  port: 21021
   udp: true
   type: vmess
-  uuid: 0d824a74-1207-48c4-a7a0-d283d5f10b4e
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
-  tls: true
-  servername: hk.wawojk.dpdns.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /hk-vmess-ws-c9f3a2
-    headers:
-      Host: hk.wawojk.dpdns.org
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: rhHiErkwRf6fHs2H.v.3dns.vip
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: rhHiErkwRf6fHs2H.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: rhHiErkwRf6fHs2H.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
 rules:
 - MATCH,PROXIES

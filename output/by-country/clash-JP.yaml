@@ -5,17 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 45.192.248.29
-  port: 8443
+  server: 167.179.108.225
+  port: 443
   udp: true
-  type: vless
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  tls: true
-  reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
-  servername: github.githubassets.com
-  client-fingerprint: chrome
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: discoverparttimepositionsandsupplementyourincomeguide.com
+  skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 02
   server: ga1data.xyy123.bid
   port: 443
@@ -29,14 +25,6 @@ proxies:
     short-id: 00b0389a
   servername: www.amzn.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 03
-  server: 167.179.108.225
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: discoverparttimepositionsandsupplementyourincomeguide.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +32,6 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,6 +39,5 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 rules:
 - MATCH,PROXIES
