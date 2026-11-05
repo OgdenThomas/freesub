@@ -4,31 +4,39 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R53",
-      "server": "208.69.78.33",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 01",
+      "server": "138.124.86.230",
+      "server_port": 48115,
+      "uuid": "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
       "tls": {
         "enabled": true,
-        "server_name": "courses.yourultimateprofessionalcareerhub.com",
+        "server_name": "138-124-86-230.sslip.io",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "138-124-86-230-sslip-io"
       }
     },
     {
       "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 02 R53",
-      "server": "208.69.78.158",
+      "tag": "🇸🇪 瑞典 (Sweden) 02 R50",
+      "server": "95.143.196.97",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF",
       "tls": {
         "enabled": true,
-        "server_name": "api.yourultimateprofessionalcareerhub.com",
+        "server_name": "connect-se.mimowhat.online",
         "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -40,16 +48,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R53",
-        "🇨🇭 瑞士 (Switzerland) 02 R53"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02 R50"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R53",
-        "🇨🇭 瑞士 (Switzerland) 02 R53"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02 R50"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

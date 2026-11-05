@@ -11,29 +11,30 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
-- name: 🇫🇷 法国 (France) 02
-  server: 15.236.109.186
-  port: 2053
+- name: 🇫🇷 法国 (France) 02 R41
+  server: 162.19.82.57
+  port: 1270
   udp: true
-  type: vless
-  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: w.geogame.ir
+  servername: xmfhlpy.com
   skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 02 R41
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01
-  - 🇫🇷 法国 (France) 02
+  - 🇫🇷 法国 (France) 02 R41
 rules:
 - MATCH,PROXIES

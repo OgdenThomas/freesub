@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
-  server: 156.252.229.50
+  server: 156.252.229.136
   port: 8443
   udp: true
   type: vless
@@ -17,6 +17,30 @@ proxies:
   servername: play.googleapis.com
   client-fingerprint: chrome
 - name: 🇪🇸 西班牙 (Spain) 02
+  server: 156.252.229.30
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 03
+  server: 156.252.229.188
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: chrome
+- name: 🇪🇸 西班牙 (Spain) 04
   server: 46.28.71.247
   port: 443
   udp: true
@@ -29,8 +53,8 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 03
-  server: 156.252.229.136
+- name: 🇪🇸 西班牙 (Spain) 05
+  server: 156.252.229.159
   port: 8443
   udp: true
   type: vless
@@ -41,20 +65,8 @@ proxies:
     short-id: 974f7f8f
   servername: play.googleapis.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 04
-  server: 156.252.229.30
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 3e21e3d3-6d26-4155-b851-764dd8e8c6b5
-  tls: true
-  reality-opts:
-    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
-    short-id: 974f7f8f
-  servername: play.googleapis.com
-  client-fingerprint: firefox
-- name: 🇪🇸 西班牙 (Spain) 05
-  server: 156.252.229.188
+- name: 🇪🇸 西班牙 (Spain) 06
+  server: 156.252.229.11
   port: 8443
   udp: true
   type: vless
@@ -75,6 +87,7 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03
   - 🇪🇸 西班牙 (Spain) 04
   - 🇪🇸 西班牙 (Spain) 05
+  - 🇪🇸 西班牙 (Spain) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,5 +98,6 @@ proxy-groups:
   - 🇪🇸 西班牙 (Spain) 03
   - 🇪🇸 西班牙 (Spain) 04
   - 🇪🇸 西班牙 (Spain) 05
+  - 🇪🇸 西班牙 (Spain) 06
 rules:
 - MATCH,PROXIES
