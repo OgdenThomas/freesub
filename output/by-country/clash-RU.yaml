@@ -5,7 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: fi3game.japancase.site
+  server: novonl.subv.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: golos.mail.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: ee.subv.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: dvizhok.su
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 03 R40
+  server: se1.japancase.site
   port: 443
   udp: true
   type: vless
@@ -13,21 +39,50 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 1ONSjyJWD3lAomwIqFmmzb6lAhg077bvMJ7rGJCDk0g
-    short-id: 38559e47f5536913
-  servername: fi3game.japancase.site
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: 41ae8e266bc3346f
+  servername: se1.japancase.site
   client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: fduknew.titun.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: bizorg.su
+  client-fingerprint: edge
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: steel7.hadsvpn.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03 R40
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01
+  - 🇷🇺 俄罗斯 (Russia) 02
+  - 🇷🇺 俄罗斯 (Russia) 03 R40
+  - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES

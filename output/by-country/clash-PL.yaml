@@ -18,48 +18,26 @@ proxies:
   servername: cloudflare.com
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 02
-  server: ru1.radiolumens.uk
-  port: 8445
+  server: 13.143.189.106
+  port: 4444
   udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
+  type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  sni: pl2.nexfile.net
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
 - name: 🇵🇱 波兰 (Poland) 03
-  server: 145.63.143.205
-  port: 8444
+  server: 54.37.131.126
+  port: 80
   udp: true
-  type: vless
-  uuid: 35c9f200-7520-4005-b78e-f8a2fb9f68f7
-  tls: true
-  servername: pl1.meshbeat.online
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  type: vmess
+  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /api/v1/devices/10be32b380/telemetry
+    path: /
     headers:
-      Host: pl1.meshbeat.online
-- name: 🇵🇱 波兰 (Poland) 04
-  server: lte-v2-ws.gacvpn.site
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
-  tls: true
-  servername: lte-v2-ws.gacvpn.site
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /static/js/runtime.9d03c7.js
-    headers:
-      Host: lte-v2-ws.gacvpn.site
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,7 +46,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -77,6 +54,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

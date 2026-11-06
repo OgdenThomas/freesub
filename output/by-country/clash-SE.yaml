@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
+  server: 138.199.55.243
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇸🇪 瑞典 (Sweden) 02
   server: se3.shtil.io
   port: 443
   udp: true
@@ -13,17 +20,59 @@ proxies:
   tls: true
   servername: se3.shtil.io
   skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: 138.124.86.230
+  port: 48115
+  udp: true
+  type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: sw.golangwikito.cfd
+  port: 443
+  udp: true
+  type: vless
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
+    short-id: a1037b25dcef6aa7
+  servername: sw.golangwikito.cfd
+  client-fingerprint: chrome
+- name: 🇸🇪 瑞典 (Sweden) 05 R50
+  server: 95.143.196.97
+  port: 443
+  udp: true
+  type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
+  - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
+  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 05 R50
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,50 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇧 英国 (United Kingdom) 01
+  server: 178.214.109.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc
+    short-id: 1cfa55abe4d2dc7a
+  servername: promo-digital.wb.ru
+  client-fingerprint: edge
+- name: 🇬🇧 英国 (United Kingdom) 02
+  server: 82.148.225.244
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852
+  tls: true
+  reality-opts:
+    public-key: ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg
+    short-id: 00f7359d92c884cc
+  servername: sw2.cloudvienta.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-reality
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02
+rules:
+- MATCH,PROXIES

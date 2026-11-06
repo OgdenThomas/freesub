@@ -4,18 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01
-  server: 13.143.192.200
-  port: 443
+- name: 🇩🇪 德国 (Germany) 01 R50
+  server: 91.107.169.224
+  port: 80
   udp: true
-  type: vless
-  uuid: caedb3a1-6395-40b9-a9a8-4b9694eb224a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: gOzBi_a99jyGQyM5tVwDpi7EQ_3eaj-v15mHOTs9xkY
-  servername: kulek.tech
-  client-fingerprint: firefox
+  type: vmess
+  uuid: 78ed2c82-20d6-48ed-a76d-294065803259
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
 - name: 🇩🇪 德国 (Germany) 02
   server: 2.26.99.150
   port: 8018
@@ -29,7 +26,20 @@ proxies:
     path: /websocket/transfer/gayporn
     headers:
       Host: shit.67133767.xyz
-- name: 🇩🇪 德国 (Germany) 03
+- name: 🇩🇪 德国 (Germany) 03 R69
+  server: 94.183.234.245
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
+    short-id: 7f1e29593aa94ad1
+  servername: www.bing.com
+  client-fingerprint: qq
+- name: 🇩🇪 德国 (Germany) 04
   server: 193.23.218.107
   port: 443
   udp: true
@@ -42,87 +52,37 @@ proxies:
     short-id: cb620aa2f04bce33
   servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04
-  server: 77.90.2.130
-  port: 43086
+- name: 🇩🇪 德国 (Germany) 05
+  server: music.3apes.online
+  port: 443
   udp: true
   type: vless
-  uuid: d782aa4c-9284-4a60-a9d9-f61412f8a2a4
+  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SRKTZm_KYvsD9ONd5VU54ABZxudjR65r5Uhxc-1lLko
-    short-id: 1c601fed
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 05 R66
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 06
-  server: 91.107.244.35
-  port: 465
-  udp: true
-  type: vless
-  uuid: a356fa77-7199-417a-80dd-0c0925789161
-  tls: true
-  servername: hw5.roghanmo.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 07
-  server: steel7.hadsvpn.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 08
-  server: 91.107.243.131
-  port: 465
-  udp: true
-  type: vless
-  uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
-  tls: true
-  servername: hw14.roghanmo.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw14.roghanmo.com
+    public-key: q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ
+  servername: music.3apes.online
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R50
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 03 R69
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R66
-  - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 01 R50
   - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 03 R69
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R66
-  - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 05
 rules:
 - MATCH,PROXIES
