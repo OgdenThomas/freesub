@@ -5,25 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: 138.124.86.230
-  port: 48115
-  udp: true
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-  tls: true
-  servername: 138-124-86-230.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 138-124-86-230-sslip-io
-- name: 🇸🇪 瑞典 (Sweden) 02 R50
-  server: 95.143.196.97
+  server: se3.shtil.io
   port: 443
   udp: true
-  type: trojan
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  sni: connect-se.mimowhat.online
+  type: vless
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
+  tls: true
+  servername: se3.shtil.io
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -31,13 +19,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
-  - 🇸🇪 瑞典 (Sweden) 02 R50
 rules:
 - MATCH,PROXIES

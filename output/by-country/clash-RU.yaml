@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01
-  server: 46.28.67.55
+- name: 🇷🇺 俄罗斯 (Russia) 01
+  server: fi3game.japancase.site
   port: 443
   udp: true
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
+    public-key: 1ONSjyJWD3lAomwIqFmmzb6lAhg077bvMJ7rGJCDk0g
+    short-id: 38559e47f5536913
+  servername: fi3game.japancase.site
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇺 俄罗斯 (Russia) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01
+  - 🇷🇺 俄罗斯 (Russia) 01
 rules:
 - MATCH,PROXIES
