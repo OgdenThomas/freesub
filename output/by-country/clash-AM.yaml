@@ -17,17 +17,32 @@ proxies:
     short-id: bd44ae7c721b8252
   servername: gb1.japancase.site
   client-fingerprint: chrome
+- name: 🇦🇲 亚美尼亚 (Armenia) 02
+  server: it1.japancase.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: 41ae8e266bc3346f
+  servername: it1.japancase.site
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇲 亚美尼亚 (Armenia) 01
+  - 🇦🇲 亚美尼亚 (Armenia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇲 亚美尼亚 (Armenia) 01
+  - 🇦🇲 亚美尼亚 (Armenia) 02
 rules:
 - MATCH,PROXIES
