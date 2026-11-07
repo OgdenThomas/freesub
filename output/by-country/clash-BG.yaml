@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 保加利亚 (Bulgaria) 01 R50
-  server: p2real4.greewebservices.ir
-  port: 1340
+- name: 🇧🇬 保加利亚 (Bulgaria) 01
+  server: 2.27.105.13
+  port: 31238
   udp: true
   type: vless
-  uuid: fb1d2d8a-d9bd-496f-9d5f-f179cbd00123
+  uuid: 9c05ffa3-cc8f-4d44-9ce0-015a7465e786
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 9b60d3
-  servername: play.googleapis.com
-  client-fingerprint: ios
+    public-key: 1KhMuUHbT2C7FKp0DHT1MNE-NHiQhy5yiOqqstvthlQ
+    short-id: a9d8f11690e70dd8
+  servername: rbc.ru
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 保加利亚 (Bulgaria) 01 R50
+  - 🇧🇬 保加利亚 (Bulgaria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 保加利亚 (Bulgaria) 01 R50
+  - 🇧🇬 保加利亚 (Bulgaria) 01
 rules:
 - MATCH,PROXIES

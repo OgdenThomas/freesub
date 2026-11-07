@@ -4,44 +4,41 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R46
-  server: 57.129.76.233
+- name: 🇫🇷 法国 (France) 01 R41
+  server: 79.137.99.183
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 02
-  server: 54.36.174.134
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
-- name: 🇫🇷 法国 (France) 03 ⚠R
+- name: 🇫🇷 法国 (France) 02 ⚠R
   server: 198.244.202.215
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 03
+  server: 54.36.174.140
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
 - name: 🇫🇷 法国 (France) 04 R46
-  server: 57.129.83.85
+  server: 57.129.76.233
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 05 R41
-  server: 46.105.222.157
-  port: 1270
+- name: 🇫🇷 法国 (France) 05
+  server: 108.61.177.57
+  port: 16778
   udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
   skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 06 R41
   server: 46.105.222.155
@@ -65,13 +62,17 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 08
-  server: pl140.vpnbook.com
-  port: 443
+- name: 🇫🇷 法国 (France) 08 R41
+  server: 46.105.222.157
+  port: 1270
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6heexyz
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 09 R41
   server: 79.137.99.183
   port: 1270
@@ -84,26 +85,30 @@ proxies:
   servername: xmfhlpy.com
   skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 10
-  server: 108.61.177.57
-  port: 16778
+  server: ai.smrtai.top
+  port: 443
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R46
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 ⚠R
+  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04 R46
-  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06 R41
   - 🇫🇷 法国 (France) 07 R41
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 R41
   - 🇫🇷 法国 (France) 09 R41
   - 🇫🇷 法国 (France) 10
 - name: AUTO
@@ -111,14 +116,14 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R46
-  - 🇫🇷 法国 (France) 02
-  - 🇫🇷 法国 (France) 03 ⚠R
+  - 🇫🇷 法国 (France) 01 R41
+  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 03
   - 🇫🇷 法国 (France) 04 R46
-  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 05
   - 🇫🇷 法国 (France) 06 R41
   - 🇫🇷 法国 (France) 07 R41
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 R41
   - 🇫🇷 法国 (France) 09 R41
   - 🇫🇷 法国 (France) 10
 rules:

@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
+  server: 150.230.217.160
+  port: 27777
+  udp: true
+  type: trojan
+  password: e79bb958-2a79-4eea-87a3-7e73d0059ebf
+  sni: ol1.ssn571.top
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 02
   server: 167.179.108.225
   port: 443
   udp: true
@@ -18,11 +26,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
+  - 🇯🇵 日本 (Japan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01
+  - 🇯🇵 日本 (Japan) 02
 rules:
 - MATCH,PROXIES
