@@ -5,19 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01
-  server: 188.116.27.6
+  server: 79.141.164.81
   port: 443
   udp: true
   type: vless
-  uuid: a4a03a70-47c1-4c5f-89d6-dd9d3d2c5ada
-  flow: xtls-rprx-vision
+  uuid: cff462b8-bf0e-41ee-8d45-13048c463a0f
   tls: true
   reality-opts:
-    public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
-    short-id: '1174'
-  servername: www.sony.co.uk
-  client-fingerprint: chrome
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  servername: nla.kosmosapp.net
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
 - name: 🇳🇱 荷兰 (Netherlands) 02
+  server: 5.149.249.94
+  port: 443
+  udp: true
+  type: vless
+  uuid: f038bdac-d9f7-47b5-a376-47ebc71c950a
+  tls: true
+  reality-opts:
+    public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ
+    short-id: 27350908de933e09
+  servername: nlb.kosmosapp.net
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: neurex
+- name: 🇳🇱 荷兰 (Netherlands) 03
   server: 80.71.227.102
   port: 443
   udp: true
@@ -30,7 +47,27 @@ proxies:
     short-id: c498d5e4a069592c
   servername: nl5.japancase.site
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 03 R52
+- name: 🇳🇱 荷兰 (Netherlands) 04
+  server: 188.116.27.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3b9189fd-9d29-465e-8c1f-5651af043fe4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
+    short-id: '1174'
+  servername: www.sony.co.uk
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 05
+  server: 77.221.132.206
+  port: 24759
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: hCgbUnMaoAfSgvE8IKdnGu
+- name: 🇳🇱 荷兰 (Netherlands) 06 R52
   server: 188.166.81.135
   port: 1270
   udp: true
@@ -41,15 +78,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 04 R63
-  server: 66.163.127.225
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 05
+- name: 🇳🇱 荷兰 (Netherlands) 07
   server: 177.177.215.45
   port: 444
   udp: true
@@ -60,32 +89,22 @@ proxies:
   servername: ams2.shtil.io
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 06
-  server: 130.12.242.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 07
-  server: 76574ct.nl7.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: 9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc
-    short-id: 2ca59bdc5121f921
-  servername: 76574ct.nl7.h1clayd.click
-  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 08
+  server: 95.142.32.42
+  port: 8444
+  udp: true
+  type: vless
+  uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
+  tls: true
+  servername: nl18.meshbeat.online
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /api/v1/devices/86f81c4330/telemetry
+    headers:
+      Host: nl18.meshbeat.online
+- name: 🇳🇱 荷兰 (Netherlands) 09
   server: 15d7fft.nl11.h1clayd.click
   port: 443
   udp: true
@@ -97,52 +116,6 @@ proxies:
     short-id: c71118d9399fb8c2
   servername: 15d7fft.nl11.h1clayd.click
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 09
-  server: 95.142.32.42
-  port: 8444
-  udp: true
-  type: vless
-  uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
-  tls: true
-  servername: nl18.meshbeat.online
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /api/v1/devices/86f81c4330/telemetry
-    headers:
-      Host: nl18.meshbeat.online
-- name: 🇳🇱 荷兰 (Netherlands) 10
-  server: f0d7aft.nl13.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
-    short-id: 8956c57cb4c4f8d2
-  servername: f0d7aft.nl13.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 11
-  server: 77.221.132.206
-  port: 24759
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: hCgbUnMaoAfSgvE8IKdnGu
-- name: 🇳🇱 荷兰 (Netherlands) 12
-  server: vdsin.xvanta.online
-  port: 443
-  udp: true
-  type: vless
-  uuid: 71b566cb-78c4-48e4-af5b-720e4f7884f2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xEDYfxVdiRkY-z7qiUvoly7fYDz4U6wI5p69oNbjWA4
-    short-id: f9d991431c87703c
-  servername: vdsin.xvanta.online
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -150,16 +123,13 @@ proxy-groups:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03 R52
-  - 🇳🇱 荷兰 (Netherlands) 04 R63
+  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06
+  - 🇳🇱 荷兰 (Netherlands) 06 R52
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
-  - 🇳🇱 荷兰 (Netherlands) 11
-  - 🇳🇱 荷兰 (Netherlands) 12
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -167,15 +137,12 @@ proxy-groups:
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03 R52
-  - 🇳🇱 荷兰 (Netherlands) 04 R63
+  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06
+  - 🇳🇱 荷兰 (Netherlands) 06 R52
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
-  - 🇳🇱 荷兰 (Netherlands) 11
-  - 🇳🇱 荷兰 (Netherlands) 12
 rules:
 - MATCH,PROXIES

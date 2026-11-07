@@ -6,25 +6,79 @@
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01",
-      "server": "82.148.225.244",
-      "server_port": 8445,
-      "uuid": "0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852",
+      "server": "82.148.255.201",
+      "server_port": 8443,
+      "uuid": "49fdd350-6ffb-4343-b467-14e269bb95de",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sw2.cloudvienta.com",
+        "server_name": "360.yandex.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg",
-          "short_id": "00f7359d92c884cc"
+          "public_key": "DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ",
+          "short_id": "2bf10fc0a85601e5"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
+      "server": "34.39.80.57",
+      "server_port": 50818,
+      "uuid": "408c814e-f70a-4d16-b3b3-8182bb70211d",
+      "tls": {
+        "enabled": true,
+        "server_name": "yingguo.rymaker.cn",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/GunService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+      "server": "51.38.71.147",
+      "server_port": 443,
+      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
+      "tls": {
+        "enabled": true,
+        "server_name": "uk1.connectsuite.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc-reality"
+        "type": "ws",
+        "path": "/cdn-cgi/ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04",
+      "server": "193.163.203.170",
+      "server_port": 443,
+      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+          "short_id": "b28db60d77c50b4f"
+        }
       }
     },
     {
@@ -32,14 +86,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 04"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+        "🇬🇧 英国 (United Kingdom) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

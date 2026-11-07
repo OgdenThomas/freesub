@@ -5,7 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 104.24.0.1
+  server: 217.144.188.185
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
+  servername: www.nordea.fi
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 188.114.96.3
   port: 2053
   udp: true
   type: trojan
@@ -21,11 +33,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
 rules:
 - MATCH,PROXIES
