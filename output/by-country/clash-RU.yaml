@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 89.105.218.138
+  server: 89.105.218.148
   port: 443
   udp: true
   type: vless
@@ -18,39 +18,6 @@ proxies:
   servername: golos.mail.ru
   client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 38.60.223.125
-  port: 13108
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 193.233.199.84
-  port: 443
-  udp: true
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1ONSjyJWD3lAomwIqFmmzb6lAhg077bvMJ7rGJCDk0g
-    short-id: 38559e47f5536913
-  servername: fi3game.japancase.site
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 179.43.166.190
-  port: 443
-  udp: true
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  servername: perevodchiki.su
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 66.90.106.28
   port: 443
   udp: true
@@ -63,20 +30,14 @@ proxies:
     short-id: 428ef87fd47a3a32
   servername: banket-restoran.su
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 06
-  server: 147.45.104.86
-  port: 7443
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 38.60.223.125
+  port: 13108
   udp: true
-  type: vless
-  uuid: af185070-7170-46a8-b1e9-d61a035f4691
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho
-    short-id: a7eb8a4e
-  servername: max.ru
-  client-fingerprint: qq
-- name: 🇷🇺 俄罗斯 (Russia) 07
+  type: ss
+  cipher: aes-128-gcm
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: ee.subv.ru
   port: 443
   udp: true
@@ -89,19 +50,13 @@ proxies:
     short-id: 428ef87fd47a3a32
   servername: dvizhok.su
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 08 R40
-  server: se1.japancase.site
-  port: 443
+- name: 🇷🇺 俄罗斯 (Russia) 05 R50
+  server: 46.17.47.58
+  port: 18443
   udp: true
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
-    short-id: 41ae8e266bc3346f
-  servername: se1.japancase.site
-  client-fingerprint: firefox
+  type: ss
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
 proxy-groups:
 - name: PROXIES
   type: select
@@ -111,10 +66,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08 R40
+  - 🇷🇺 俄罗斯 (Russia) 05 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -124,9 +76,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08 R40
+  - 🇷🇺 俄罗斯 (Russia) 05 R50
 rules:
 - MATCH,PROXIES
