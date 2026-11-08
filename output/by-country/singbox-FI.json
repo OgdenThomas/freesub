@@ -1,0 +1,68 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇮 芬兰 (Finland) 01",
+      "server": "fi1.obxodvpn.us",
+      "server_port": 443,
+      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi1.obxodvpn.us",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "146.103.118.189",
+      "server_port": 443,
+      "uuid": "ce698f0c-a8ec-474a-b5d8-3be8032deeb8",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl2.574ck.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/574ck-finland",
+        "headers": {
+          "Host": "nl2.574ck.xyz"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

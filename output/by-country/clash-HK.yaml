@@ -5,34 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16116
+  server: ad6ea328-ace0-45e1-8b69-e698536fa709.67dc6e59-0fd8-4ca5-ba29-26a8817e203b.byteprivatelink.com
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇭🇰 中国香港 (Hong Kong) 02
-  server: dog-hk.kunlun01dns.com
-  port: 21022
-  udp: true
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 2a778078-9f4f-4203-a204-6fb94547b707
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xBBebAa3_FmRJAzPnEP9seJneZtPiIZVLHo23pHxRxc
+    short-id: a0134868
+  servername: live.douyin.com
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01
-  - 🇭🇰 中国香港 (Hong Kong) 02
 rules:
 - MATCH,PROXIES

@@ -4,36 +4,39 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "zfd-hkv2.kunlun01dns.com",
-      "server_port": 16116,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21022,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
+      "server": "ad6ea328-ace0-45e1-8b69-e698536fa709.67dc6e59-0fd8-4ca5-ba29-26a8817e203b.byteprivatelink.com",
+      "server_port": 443,
+      "uuid": "2a778078-9f4f-4203-a204-6fb94547b707",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "live.douyin.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xBBebAa3_FmRJAzPnEP9seJneZtPiIZVLHo23pHxRxc",
+          "short_id": "a0134868"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02"
+        "🇭🇰 中国香港 (Hong Kong) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02"
+        "🇭🇰 中国香港 (Hong Kong) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

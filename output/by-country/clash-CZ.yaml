@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
-  server: 195.123.245.241
+- name: 🇨🇿 捷克 (Czech) 01 R45
+  server: 212.102.38.25
   port: 443
   udp: true
   type: vless
-  uuid: 7c053ca8-38cc-45e2-930c-eda1fd66f903
+  uuid: b34a52cb-cd52-49a8-9362-b8e97c151d49
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
-    short-id: 23d0950d60bc0d5b
-  servername: gateway.icloud.com
+    public-key: 23cb4W9THzBKsrECsLh-A_FcKZfkAtUONoDze8-GnQE
+    short-id: e90360ec7cc61b20
+  servername: udemy.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 01 R45
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇨🇿 捷克 (Czech) 01 R45
 rules:
 - MATCH,PROXIES

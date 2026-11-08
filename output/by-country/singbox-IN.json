@@ -4,26 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇹🇭 泰国 (Thailand) 01",
-      "server": "119.46.51.45",
-      "server_port": 37515,
-      "uuid": "9b76bc31-17a5-4454-934a-8d5fb602cd70",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 01",
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "13.140.56.100"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇮🇳 印度 (India) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇮🇳 印度 (India) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

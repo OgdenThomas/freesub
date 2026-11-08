@@ -13,35 +13,13 @@ proxies:
   sni: discoverparttimepositionsandsupplementyourincomeguide.com
   skip-cert-verify: false
 - name: 🇯🇵 日本 (Japan) 02
-  server: 79.137.199.52
-  port: 21
+  server: df.668fx.com
+  port: 11353
   udp: true
-  type: vless
-  uuid: 763e2ddd-c830-4f4f-801c-f6f2c3418d4f
-  tls: true
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-- name: 🇯🇵 日本 (Japan) 03
-  server: jp01.cf.sh-cloudflare.sbs
-  port: 2096
-  udp: true
-  type: vless
-  uuid: a8d9c86f-cddb-4fa5-96f7-f68eb48b3cb3
-  tls: true
-  servername: jp01.cdn00.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /shanhai/jp01
-    headers:
-      Host: jp01.cdn00.top
+  type: vmess
+  uuid: d105eadc-c3ea-4a82-a299-373d75f2d2b7
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,7 +27,6 @@ proxy-groups:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,6 +34,5 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 rules:
 - MATCH,PROXIES
