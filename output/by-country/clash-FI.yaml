@@ -5,18 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: static.117.242.109.65.clients.your-server.de
-  port: 443
+  server: 65.108.240.210
+  port: 39018
   udp: true
-  type: vless
-  uuid: 320536e8-b0d3-4afa-a5ec-de93356ce562
-  flow: xtls-rprx-vision
-  tls: true
-  servername: static.0.72.42.77.clients.your-server.de
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 8ca123a8-720b-47c5-bd0c-637431418b09
+  alterId: 0
+  cipher: auto
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 172.66.0.1
+  server: 188.114.96.3
   port: 2053
   udp: true
   type: trojan
@@ -26,13 +23,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: fn1s.sublinkplas.ir
-  port: 53731
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: tztS0JGqX91pDVi5g8QyffaUPJlPUnWm
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,7 +30,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -48,6 +37,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

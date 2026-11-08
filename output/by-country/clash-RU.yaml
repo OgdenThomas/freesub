@@ -5,13 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
+  server: 89.105.218.138
+  port: 443
+  udp: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: golos.mail.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 38.60.223.125
   port: 13108
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: 8722de56b6c0b3f6a4d01cf91c07e6aa
-- name: 🇷🇺 俄罗斯 (Russia) 02
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 193.233.199.84
   port: 443
   udp: true
@@ -24,7 +37,7 @@ proxies:
     short-id: 38559e47f5536913
   servername: fi3game.japancase.site
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 03
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: 179.43.166.190
   port: 443
   udp: true
@@ -37,8 +50,8 @@ proxies:
     short-id: 428ef87fd47a3a32
   servername: perevodchiki.su
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 185.215.184.49
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: 66.90.106.28
   port: 443
   udp: true
   type: vless
@@ -48,21 +61,8 @@ proxies:
   reality-opts:
     public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
     short-id: 428ef87fd47a3a32
-  servername: dvizhok.su
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 05 R40
-  server: se1.japancase.site
-  port: 443
-  udp: true
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
-    short-id: 41ae8e266bc3346f
-  servername: se1.japancase.site
-  client-fingerprint: firefox
+  servername: banket-restoran.su
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 06
   server: 147.45.104.86
   port: 7443
@@ -76,6 +76,32 @@ proxies:
     short-id: a7eb8a4e
   servername: max.ru
   client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 07
+  server: ee.subv.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: dvizhok.su
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 08 R40
+  server: se1.japancase.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: 41ae8e266bc3346f
+  servername: se1.japancase.site
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -85,8 +111,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05 R40
+  - 🇷🇺 俄罗斯 (Russia) 05
   - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08 R40
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -96,7 +124,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05 R40
+  - 🇷🇺 俄罗斯 (Russia) 05
   - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08 R40
 rules:
 - MATCH,PROXIES

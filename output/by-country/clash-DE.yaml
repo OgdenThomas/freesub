@@ -11,22 +11,7 @@ proxies:
   type: vless
   uuid: 287db857-de04-4212-bd69-5d14083e340e
 - name: 🇩🇪 德国 (Germany) 02
-  server: 109.70.74.149
-  port: 54041
-  udp: true
-  type: vmess
-  uuid: 5d30907e-0af6-4518-823e-572d0d49da60
-  alterId: 0
-  cipher: auto
-- name: 🇩🇪 德国 (Germany) 03
-  server: 51.102.203.129
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 04
-  server: 2.26.99.150
+  server: 2.26.54.200
   port: 8018
   udp: true
   type: vmess
@@ -38,7 +23,7 @@ proxies:
     path: /websocket/transfer/gayporn
     headers:
       Host: shit.67133767.xyz
-- name: 🇩🇪 德国 (Germany) 05
+- name: 🇩🇪 德国 (Germany) 03
   server: base.hosamobenl.co.uk
   port: 443
   udp: true
@@ -47,13 +32,33 @@ proxies:
   tls: true
   servername: base.hosamobenl.co.uk
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 06
+- name: 🇩🇪 德国 (Germany) 04
   server: steel7.hadsvpn.com
   port: 443
   udp: true
   type: hysteria2
   password: 23c82941-70f4-4381-90db-bd28e9a902e9
   sni: steel7.hadsvpn.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 05
+  server: s1-api.denmexa.ir
+  port: 2789
+  udp: true
+  type: vless
+  uuid: d14392a5-8fd5-4c19-be8e-3503e3cee9cf
+  tls: true
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    short-id: 4e4aaad65cc07da8
+  servername: tgju.org
+  client-fingerprint: edge
+- name: 🇩🇪 德国 (Germany) 06
+  server: fi1.obxodvpn.us
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: fi1.obxodvpn.us
   skip-cert-verify: false
 - name: 🇩🇪 德国 (Germany) 07
   server: 147.45.153.29
@@ -80,26 +85,26 @@ proxies:
     public-key: B5Rbu23-J_PmzD6d-5ra_pxKaXd1MeRf6IT4jT_6PEM
     short-id: 071c3bd86b0c3c73
   servername: tr3.japancase.site
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 09 R46
-  server: 57.129.113.16
-  port: 8388
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 09
+  server: 51.102.203.129
+  port: 443
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
+  cipher: aes-256-cfb
+  password: amazonskr05
 - name: 🇩🇪 德国 (Germany) 10
-  server: music.3apes.online
+  server: 71b840t.de7.h1clayd.click
   port: 443
   udp: true
   type: vless
-  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
-  flow: xtls-rprx-vision
+  uuid: b7b8ee80-db83-4276-8c68-87dc88b0b0b5
   tls: true
   reality-opts:
-    public-key: q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ
-  servername: music.3apes.online
-  client-fingerprint: qq
+    public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
+    short-id: e572b6579ea525d4
+  servername: 71b840t.de7.h1clayd.click
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -113,7 +118,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09 R46
+  - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
 - name: AUTO
   type: url-test
@@ -128,7 +133,7 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09 R46
+  - 🇩🇪 德国 (Germany) 09
   - 🇩🇪 德国 (Germany) 10
 rules:
 - MATCH,PROXIES

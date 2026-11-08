@@ -5,12 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 瑞士 (Switzerland) 01 R49
-  server: 208.69.78.33
+  server: 208.69.78.208
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.yourultimateprofessionalcareerhub.com
+  sni: resources.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 02 R49
+  server: 208.69.78.29
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
@@ -18,11 +26,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R49
+  - 🇨🇭 瑞士 (Switzerland) 02 R49
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R49
+  - 🇨🇭 瑞士 (Switzerland) 02 R49
 rules:
 - MATCH,PROXIES

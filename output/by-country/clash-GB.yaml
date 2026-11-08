@@ -5,29 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 193.188.21.253
-  port: 14430
+  server: 83.141.92.138
+  port: 1080
   udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: WkKqrNHRxQXA-bkL2ztAylXw8mE_BYYs
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 193.188.21.253
-  port: 10444
+  server: 132.243.167.147
+  port: 443
   udp: true
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
+    public-key: nIXZmF729Mzn5hq8aWSxsv8wBDawVYmFNzwBytwYfm0
+    short-id: aafcd65859993991
+  servername: ch1.japancase.site
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 82.148.255.201
   port: 8444
@@ -43,6 +39,30 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-reality
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 193.188.21.253
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 193.188.21.253
+- name: 🇬🇧 英国 (United Kingdom) 05 ⚠R
+  server: 51.38.71.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  tls: true
+  servername: uk1.connectsuite.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +71,8 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +81,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05 ⚠R
 rules:
 - MATCH,PROXIES
