@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: fi1.obxodvpn.us
+  server: 177.202.75.56
   port: 443
   udp: true
   type: hysteria2
@@ -13,20 +13,18 @@ proxies:
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 146.103.118.189
+  server: 129.101.102.168
   port: 443
   udp: true
   type: vless
-  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
+  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
+  flow: xtls-rprx-vision
   tls: true
-  servername: nl2.574ck.xyz
-  skip-cert-verify: false
+  reality-opts:
+    public-key: QjYksCdraKvxMG024774_EOZjxtIB7xHm3GYGx3oN1Y
+    short-id: c59bb8af70d9db1e
+  servername: fi3-edge.gacvpn.site
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /574ck-finland
-    headers:
-      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
