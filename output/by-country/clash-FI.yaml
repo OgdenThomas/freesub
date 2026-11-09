@@ -13,18 +13,32 @@ proxies:
   sni: fi1.obxodvpn.us
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 129.101.102.168
+  server: 217.144.188.185
   port: 443
   udp: true
   type: vless
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
+  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QjYksCdraKvxMG024774_EOZjxtIB7xHm3GYGx3oN1Y
-    short-id: c59bb8af70d9db1e
-  servername: fi3-edge.gacvpn.site
+    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
+  servername: www.nordea.fi
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 146.103.118.189
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
+  tls: true
+  servername: nl2.574ck.xyz
+  skip-cert-verify: false
   client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /574ck-finland
+    headers:
+      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

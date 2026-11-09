@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇦 加拿大 (Canada) 01
-  server: 216.128.185.90
+  server: 149.248.50.252
   port: 46977
   udp: true
   type: trojan
@@ -13,17 +13,16 @@ proxies:
   sni: ca001.zestapp778.com
   skip-cert-verify: false
 - name: 🇨🇦 加拿大 (Canada) 02
-  server: 149.56.209.48
-  port: 443
+  server: 103.106.229.37
+  port: 21001
   udp: true
   type: vless
-  uuid: 39826f32-f5ca-42a5-ab33-188f7d199478
-  flow: xtls-rprx-vision
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
   tls: true
   reality-opts:
-    public-key: rV2Qmjr31w2nxtnMcbwHJNY2wxJynjmxwbKPlfSgET4
-    short-id: 1c72fb25098b8807
-  servername: www.apple.com
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: ab39fc68ab3dee81
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 03
   server: 103.106.229.37
@@ -38,17 +37,17 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 04
-  server: 511.150333.xyz
-  port: 21001
+  server: 510.150333.xyz
+  port: 21003
   udp: true
   type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
   reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: ab39fc68ab3dee81
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: f3602a3a1cf928b7
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇨🇦 加拿大 (Canada) 05
   server: 511.150333.xyz
   port: 21002
@@ -63,30 +62,6 @@ proxies:
   client-fingerprint: chrome
 - name: 🇨🇦 加拿大 (Canada) 06
   server: 510.150333.xyz
-  port: 21002
-  udp: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-  tls: true
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: d9a6b52e98121db2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 07
-  server: 511.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-  tls: true
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: bab49aa4c2a88d27
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 08
-  server: 510.150333.xyz
   port: 21001
   udp: true
   type: vless
@@ -97,16 +72,28 @@ proxies:
     short-id: a51c3ccb2320024a
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇨🇦 加拿大 (Canada) 09
+- name: 🇨🇦 加拿大 (Canada) 07
   server: 510.150333.xyz
-  port: 21003
+  port: 21002
   udp: true
   type: vless
   uuid: 67952583-8572-42e1-943d-0602794f885b
   tls: true
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: f3602a3a1cf928b7
+    short-id: d9a6b52e98121db2
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇦 加拿大 (Canada) 08
+  server: 511.150333.xyz
+  port: 21003
+  udp: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: bab49aa4c2a88d27
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
@@ -122,7 +109,6 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
-  - 🇨🇦 加拿大 (Canada) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -136,6 +122,5 @@ proxy-groups:
   - 🇨🇦 加拿大 (Canada) 06
   - 🇨🇦 加拿大 (Canada) 07
   - 🇨🇦 加拿大 (Canada) 08
-  - 🇨🇦 加拿大 (Canada) 09
 rules:
 - MATCH,PROXIES

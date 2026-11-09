@@ -5,13 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01
-  server: zfd-boardv2.kunlun01dns.com
-  port: 16280
+  server: msk5.gacvpn.site
+  port: 443
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8fSwTqCwJ2HWGxcTQsZs8Sx0hRk2Ru7HFdu-iLnesGg
+    short-id: 53d0d0611a
+  servername: de2.gacvpn.site
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

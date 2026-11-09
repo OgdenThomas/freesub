@@ -1,0 +1,57 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "🇦🇺 澳大利亚 (Australia) 01",
+      "server": "67.220.95.3",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇦🇺 澳大利亚 (Australia) 02",
+      "server": "au001.zestapp778.com",
+      "server_port": 54374,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "au001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇦🇺 澳大利亚 (Australia) 01",
+        "🇦🇺 澳大利亚 (Australia) 02"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇦🇺 澳大利亚 (Australia) 01",
+        "🇦🇺 澳大利亚 (Australia) 02"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

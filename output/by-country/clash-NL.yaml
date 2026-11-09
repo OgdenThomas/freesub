@@ -9,7 +9,7 @@ proxies:
   port: 443
   udp: true
   type: vless
-  uuid: 7e81eba3-28fe-4cf6-b397-d5c08fea38ab
+  uuid: 02a441e1-47ed-4c5c-bb4e-cf44b6f824a3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -18,39 +18,7 @@ proxies:
   servername: www.sony.co.uk
   client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 02
-  server: 130.12.242.106
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
-  client-fingerprint: random
-- name: 🇳🇱 荷兰 (Netherlands) 03 R52
-  server: 188.166.81.135
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 04 R63
-  server: 66.163.127.225
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 05
-  server: ams2.shtil.io
+  server: 177.177.215.45
   port: 444
   udp: true
   type: vless
@@ -59,14 +27,28 @@ proxies:
   tls: true
   servername: ams2.shtil.io
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 06 R63
-  server: 66.163.127.154
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 03
+  server: 176.65.151.175
+  port: 11674
+  udp: true
+  type: vmess
+  uuid: a98a98cb-ae86-43ae-b695-cf0dbcad3fc2
+  alterId: 0
+  cipher: auto
+- name: 🇳🇱 荷兰 (Netherlands) 04
+  server: 89.105.195.151
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.indyourperfectremotetechjobfromthecomfortofhome.com
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  tls: true
+  servername: assets.mediacorphub.org
   skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: hub.v1.ObjectService
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,10 +56,8 @@ proxy-groups:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03 R52
-  - 🇳🇱 荷兰 (Netherlands) 04 R63
-  - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06 R63
+  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,9 +65,7 @@ proxy-groups:
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03 R52
-  - 🇳🇱 荷兰 (Netherlands) 04 R63
-  - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06 R63
+  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 04
 rules:
 - MATCH,PROXIES

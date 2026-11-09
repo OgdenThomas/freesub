@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
-  server: sw.golangwikito.cfd
-  port: 443
+  server: 138.199.55.243
+  port: 19999
   udp: true
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
-    short-id: a1037b25dcef6aa7
-  servername: sw.golangwikito.cfd
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇪 瑞典 (Sweden) 02
   server: 194.104.94.141
   port: 443
@@ -36,18 +30,11 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
 - name: 🇸🇪 瑞典 (Sweden) 04
-  server: 138.199.55.243
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 05 R50
   server: 95.143.196.97
   port: 443
   udp: true
@@ -64,7 +51,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -74,6 +60,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02
   - 🇸🇪 瑞典 (Sweden) 03
   - 🇸🇪 瑞典 (Sweden) 04
-  - 🇸🇪 瑞典 (Sweden) 05 R50
 rules:
 - MATCH,PROXIES
