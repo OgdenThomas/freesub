@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇳 CN 01",
-      "server": "39.108.113.127",
-      "server_port": 10086,
-      "uuid": "b0253c6c-0b96-4950-bde1-669f13bc1a01",
-      "security": "auto",
-      "transport": {
-        "type": "ws"
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽)",
+      "server": "us001.zestapp778.com",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "us001.zestapp778.com",
+        "insecure": false
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇳 CN 01"
+        "🇺🇸 美国 (United States) 01 (移动家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇳 CN 01"
+        "🇺🇸 美国 (United States) 01 (移动家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 (家宽)
-  server: 195.133.135.238
-  port: 10086
+- name: 🇺🇸 美国 (United States) 01 (移动家宽)
+  server: us001.zestapp778.com
+  port: 57277
   udp: true
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: us001.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 (家宽)
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 (家宽)
+  - 🇺🇸 美国 (United States) 01 (移动家宽)
 rules:
 - MATCH,PROXIES

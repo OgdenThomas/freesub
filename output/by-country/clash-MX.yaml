@@ -4,28 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 CN 01
-  server: 39.108.113.127
-  port: 10086
+- name: 🇲🇽 墨西哥 (Mexico) 01
+  server: mx001.zestapp778.com
+  port: 15083
   udp: true
-  type: vmess
-  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: mx001.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN 01
+  - 🇲🇽 墨西哥 (Mexico) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN 01
+  - 🇲🇽 墨西哥 (Mexico) 01
 rules:
 - MATCH,PROXIES
