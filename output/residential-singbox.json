@@ -6,6 +6,22 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 01 (移动家宽)",
+      "server": "130.94.19.95",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 02 (移动家宽)",
       "server": "us001.zestapp778.com",
       "server_port": 57277,
       "password": "5t6i121em5lkmsmk",
@@ -16,18 +32,40 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇸🇬 新加坡 (Singapore) 03 (家宽)",
+      "server": "195.133.135.238",
+      "server_port": 10086,
+      "uuid": "b831381d-6324-4d53-ad4f-8cda48b30811",
+      "security": "auto"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇸🇬 新加坡 (Singapore) 04 (家宽)",
+      "server": "116.88.224.217",
+      "server_port": 8080,
+      "uuid": "6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b",
+      "security": "auto"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇺🇸 美国 (United States) 01 (移动家宽)",
+        "🇺🇸 美国 (United States) 02 (移动家宽)",
+        "🇸🇬 新加坡 (Singapore) 03 (家宽)",
+        "🇸🇬 新加坡 (Singapore) 04 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇺🇸 美国 (United States) 01 (移动家宽)",
+        "🇺🇸 美国 (United States) 02 (移动家宽)",
+        "🇸🇬 新加坡 (Singapore) 03 (家宽)",
+        "🇸🇬 新加坡 (Singapore) 04 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

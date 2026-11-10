@@ -4,7 +4,20 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 瑞士 (Switzerland) 01 R54
+- name: 🇨🇭 瑞士 (Switzerland) 01 R53
+  server: 45.90.59.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02 R54
   server: 208.69.78.29
   port: 443
   udp: true
@@ -12,17 +25,54 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: learn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 03 R54
+  server: 208.69.78.19
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 04 R54
+  server: 208.69.78.60
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 05 R53
+  server: 157.22.185.68
+  port: 2058
+  udp: true
+  type: vless
+  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
+    short-id: 937255313d6ce673
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 瑞士 (Switzerland) 01 R54
+  - 🇨🇭 瑞士 (Switzerland) 01 R53
+  - 🇨🇭 瑞士 (Switzerland) 02 R54
+  - 🇨🇭 瑞士 (Switzerland) 03 R54
+  - 🇨🇭 瑞士 (Switzerland) 04 R54
+  - 🇨🇭 瑞士 (Switzerland) 05 R53
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 瑞士 (Switzerland) 01 R54
+  - 🇨🇭 瑞士 (Switzerland) 01 R53
+  - 🇨🇭 瑞士 (Switzerland) 02 R54
+  - 🇨🇭 瑞士 (Switzerland) 03 R54
+  - 🇨🇭 瑞士 (Switzerland) 04 R54
+  - 🇨🇭 瑞士 (Switzerland) 05 R53
 rules:
 - MATCH,PROXIES

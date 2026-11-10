@@ -4,25 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01
-  server: mx001.zestapp778.com
-  port: 15083
+- name: 🇯🇵 日本 (Japan) 01
+  server: zfd-jpv2.kunlun01dns.com
+  port: 16121
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: mx001.zestapp778.com
-  skip-cert-verify: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01
+  - 🇯🇵 日本 (Japan) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01
+  - 🇯🇵 日本 (Japan) 01
 rules:
 - MATCH,PROXIES
