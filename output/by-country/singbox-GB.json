@@ -1,0 +1,97 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "server": "193.163.203.170",
+      "server_port": 443,
+      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+          "short_id": "b28db60d77c50b4f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 R63",
+      "server": "136.176.68.34",
+      "server_port": 443,
+      "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo",
+          "short_id": "a6040129ad7f4b74"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 ⚠R",
+      "server": "51.38.71.147",
+      "server_port": 443,
+      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
+      "tls": {
+        "enabled": true,
+        "server_name": "uk1.connectsuite.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn-cgi/ws"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R63",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R63",
+        "🇬🇧 英国 (United Kingdom) 03 ⚠R"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇱🇹 立陶宛 (Lithuania) 01",
+      "server": "germany3.banovano.space",
+      "server_port": 2053,
+      "uuid": "53555197-bf0a-49e6-bea1-211fcfc1d962",
+      "tls": {
+        "enabled": true,
+        "server_name": "germany3.banovano.space",
+        "insecure": false,
+        "alpn": [
+          "h2"
+        ]
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇱🇹 立陶宛 (Lithuania) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇱🇹 立陶宛 (Lithuania) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

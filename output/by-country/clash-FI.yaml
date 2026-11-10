@@ -5,14 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 177.202.75.56
-  port: 443
+  server: 65.108.240.210
+  port: 39018
   udp: true
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: fi1.obxodvpn.us
-  skip-cert-verify: false
+  type: vmess
+  uuid: 96c987c9-c2d9-4993-b9bd-c9bc36255ee1
+  alterId: 0
+  cipher: auto
 - name: 🇫🇮 芬兰 (Finland) 02
+  server: 84.38.184.87
+  port: 2089
+  udp: true
+  type: vless
+  uuid: a628c583-24a8-4ce5-98ad-c6458abf1cc4
+  tls: true
+  reality-opts:
+    public-key: TGbaO5ocPEkI3J1M7y_TPvZheJa-N_rL7GSiluX-XB8
+    short-id: '37103087'
+  servername: s3.storage.selcloud.ru
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cas-fi
+- name: 🇫🇮 芬兰 (Finland) 03
   server: 217.144.188.185
   port: 443
   udp: true
@@ -24,7 +39,15 @@ proxies:
     public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
   servername: www.nordea.fi
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03
+- name: 🇫🇮 芬兰 (Finland) 04
+  server: 177.202.75.56
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: fi1.obxodvpn.us
+  skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 05
   server: 146.103.118.189
   port: 443
   udp: true
@@ -47,6 +70,8 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -55,5 +80,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
+  - 🇫🇮 芬兰 (Finland) 04
+  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES

@@ -5,26 +5,72 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: 51.102.203.129
+  server: 172.66.44.98
   port: 443
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: trojan
+  password: Nd2bFutZK2ma29bYqC@z
+  sni: 4oKhrijUyjyTFlnvoWhL3ZFW5wSGI34O.PAGeS.DeV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/2W6ONoBA1CTMk80znuAVgQ9dvWey2KD8?ed=2560
 - name: 🇩🇪 德国 (Germany) 02
-  server: 45.129.242.56
+  server: 172.66.44.124
+  port: 8443
+  udp: true
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: randomized
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇩🇪 德国 (Germany) 03
+  server: 159.195.207.238
+  port: 49313
+  udp: true
+  type: vless
+  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
+- name: 🇩🇪 德国 (Germany) 04
+  server: 167.233.129.126
+  port: 2474
+  udp: true
+  type: vless
+  uuid: 287db857-de04-4212-bd69-5d14083e340e
+- name: 🇩🇪 德国 (Germany) 05
+  server: 162.159.152.4
   port: 443
   udp: true
   type: vless
-  uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
-  flow: xtls-rprx-vision
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
   tls: true
-  reality-opts:
-    public-key: YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY
-    short-id: abcdef
-  servername: www.cloudflare.com
+  servername: rayan-007.maxima.dpdns.org
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 03
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: 🇩🇪 德国 (Germany) 06
+  server: 2.26.99.150
+  port: 8018
+  udp: true
+  type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /websocket/transfer/gayporn
+    headers:
+      Host: shit.67133767.xyz
+- name: 🇩🇪 德国 (Germany) 07
   server: 31.22.10.239
   port: 443
   udp: true
@@ -37,36 +83,61 @@ proxies:
     short-id: 09af1b0c92e6fed4
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 04
-  server: 2.26.54.200
-  port: 8018
-  udp: true
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /websocket/transfer/gayporn
-    headers:
-      Host: shit.67133767.xyz
-- name: 🇩🇪 德国 (Germany) 05
-  server: steel7.hadsvpn.com
+- name: 🇩🇪 德国 (Germany) 08
+  server: 217.60.27.108
   port: 443
   udp: true
-  type: hysteria2
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
+  type: vless
+  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ
+  servername: music.3apes.online
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 09
+  server: 169.40.37.109
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 1f3c1ce1-c15f-4965-be6b-24bec4191374
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 169.40.37.109
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 06 R66
-  server: 193.108.119.29
+- name: 🇩🇪 德国 (Germany) 10
+  server: 87.248.149.50
+  port: 443
+  udp: true
+  type: vless
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  tls: true
+  servername: base.hosamobenl.co.uk
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 11 R66
+  server: 193.108.119.193
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.iloverussia2026.com
+  sni: resources.iloverussia2026.com
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 07
+- name: 🇩🇪 德国 (Germany) 12
+  server: 146.103.118.189
+  port: 443
+  udp: true
+  type: vless
+  uuid: 82382a00-3784-41e3-85d6-37f626263944
+  tls: true
+  servername: vpn.574ck.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vpn.574ck.xyz
+- name: 🇩🇪 德国 (Germany) 13
   server: 177.202.71.55
   port: 2059
   udp: true
@@ -77,26 +148,36 @@ proxies:
   servername: angelvpn.angelmh.cv
   skip-cert-verify: false
   client-fingerprint: safari
-- name: 🇩🇪 德国 (Germany) 08 R66
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 09
-  server: music.3apes.online
+- name: 🇩🇪 德国 (Germany) 14
+  server: n2.topingr.ir
   port: 443
   udp: true
   type: vless
-  uuid: 12776e55-6230-48b9-b069-1bb8a04b4237
-  flow: xtls-rprx-vision
+  uuid: d5748db0-0031-4b9e-b43c-6c3986a9b5ed
   tls: true
-  reality-opts:
-    public-key: q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ
-  servername: music.3apes.online
-  client-fingerprint: qq
+  servername: riga.zovip2.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v3/pulse
+    headers:
+      Host: riga.zovip2.ir
+- name: 🇩🇪 德国 (Germany) 15
+  server: 172.237.91.206
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4d945644-69ab-47e0-98b3-d43a6313135d
+  tls: true
+  servername: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/SaXqikbSPA3ImtmZKAFin?ed=2560
+    headers:
+      Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
 proxy-groups:
 - name: PROXIES
   type: select
@@ -107,10 +188,16 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R66
+  - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08 R66
+  - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11 R66
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 15
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,9 +208,15 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R66
+  - 🇩🇪 德国 (Germany) 06
   - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08 R66
+  - 🇩🇪 德国 (Germany) 08
   - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 10
+  - 🇩🇪 德国 (Germany) 11 R66
+  - 🇩🇪 德国 (Germany) 12
+  - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
+  - 🇩🇪 德国 (Germany) 15
 rules:
 - MATCH,PROXIES

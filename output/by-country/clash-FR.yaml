@@ -4,50 +4,35 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R46
-  server: 57.129.76.233
+- name: 🇫🇷 法国 (France) 01 ⚠R
+  server: 198.244.201.129
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 02 R41
-  server: 79.137.99.183
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 03 R41
-  server: 46.105.222.155
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 04 ⚠R
+- name: 🇫🇷 法国 (France) 02 ⚠R
   server: 198.244.202.215
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 05 R41
-  server: 162.19.82.57
-  port: 1270
+- name: 🇫🇷 法国 (France) 03 R46
+  server: 57.129.83.85
+  port: 19999
   udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 06 R41
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 04 R46
+  server: 57.129.76.233
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 05 R41
   server: 46.105.222.157
   port: 1270
   udp: true
@@ -58,16 +43,19 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07
-  server: 108.61.177.57
-  port: 16778
+- name: 🇫🇷 法国 (France) 06 R41
+  server: 162.19.82.57
+  port: 1270
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 08
-  server: ai.smrtai.top
+- name: 🇫🇷 法国 (France) 07
+  server: 161.97.66.16
   port: 443
   udp: true
   type: vless
@@ -78,48 +66,77 @@ proxies:
     short-id: 086bf957
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 08 R41
+  server: 46.105.222.155
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 09 R41
-  server: 3.169.9.125
-  port: 443
+  server: 79.137.99.183
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 10
+  server: 108.61.177.57
+  port: 16778
+  udp: true
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: fr001.zestapp778.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 11
+  server: w.geogame.ir
+  port: 2053
   udp: true
   type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
   tls: true
-  servername: dkfsoyk9ju2as.cloudfront.net
+  servername: w.geogame.ir
   skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: dkfsoyk9ju2as.cloudfront.net
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R46
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04 ⚠R
+  - 🇫🇷 法国 (France) 01 ⚠R
+  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 03 R46
+  - 🇫🇷 法国 (France) 04 R46
   - 🇫🇷 法国 (France) 05 R41
   - 🇫🇷 法国 (France) 06 R41
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 R41
   - 🇫🇷 法国 (France) 09 R41
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R46
-  - 🇫🇷 法国 (France) 02 R41
-  - 🇫🇷 法国 (France) 03 R41
-  - 🇫🇷 法国 (France) 04 ⚠R
+  - 🇫🇷 法国 (France) 01 ⚠R
+  - 🇫🇷 法国 (France) 02 ⚠R
+  - 🇫🇷 法国 (France) 03 R46
+  - 🇫🇷 法国 (France) 04 R46
   - 🇫🇷 法国 (France) 05 R41
   - 🇫🇷 法国 (France) 06 R41
   - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08
+  - 🇫🇷 法国 (France) 08 R41
   - 🇫🇷 法国 (France) 09 R41
+  - 🇫🇷 法国 (France) 10
+  - 🇫🇷 法国 (France) 11
 rules:
 - MATCH,PROXIES

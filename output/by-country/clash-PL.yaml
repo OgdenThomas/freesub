@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01
+  server: 8.6.112.0
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 8eb92a78-ec8d-4ff6-8a2d-8b801367be87
+  tls: true
+  servername: KAmraN02-3rpN9m-2.KAMran-02.WORKErS.dEV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: KAmraN02-3rpN9m-2.KAMran-02.WORKErS.dEV
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 波兰 (Poland) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01
+rules:
+- MATCH,PROXIES

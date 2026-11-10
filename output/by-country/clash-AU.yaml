@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01
-  server: 67.220.95.3
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🇦🇺 澳大利亚 (Australia) 02
   server: au001.zestapp778.com
   port: 54374
   udp: true
@@ -26,13 +18,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01
-  - 🇦🇺 澳大利亚 (Australia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01
-  - 🇦🇺 澳大利亚 (Australia) 02
 rules:
 - MATCH,PROXIES

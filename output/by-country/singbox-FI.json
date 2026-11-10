@@ -4,20 +4,40 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "177.202.75.56",
-      "server_port": 443,
-      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
-      "tls": {
-        "enabled": true,
-        "server_name": "fi1.obxodvpn.us",
-        "insecure": false
-      }
+      "server": "65.108.240.210",
+      "server_port": 39018,
+      "uuid": "96c987c9-c2d9-4993-b9bd-c9bc36255ee1",
+      "security": "auto"
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "84.38.184.87",
+      "server_port": 2089,
+      "uuid": "a628c583-24a8-4ce5-98ad-c6458abf1cc4",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3.storage.selcloud.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TGbaO5ocPEkI3J1M7y_TPvZheJa-N_rL7GSiluX-XB8",
+          "short_id": "37103087"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "cas-fi"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
       "server": "217.144.188.185",
       "server_port": 443,
       "uuid": "8d954cbe-7ca9-402d-bfaf-aca6c92c04c3",
@@ -37,8 +57,20 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇫🇮 芬兰 (Finland) 04",
+      "server": "177.202.75.56",
+      "server_port": 443,
+      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi1.obxodvpn.us",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "tag": "🇫🇮 芬兰 (Finland) 05",
       "server": "146.103.118.189",
       "server_port": 443,
       "uuid": "ce698f0c-a8ec-474a-b5d8-3be8032deeb8",
@@ -66,7 +98,9 @@
         "auto",
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04",
+        "🇫🇮 芬兰 (Finland) 05"
       ]
     },
     {
@@ -75,7 +109,9 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01",
         "🇫🇮 芬兰 (Finland) 02",
-        "🇫🇮 芬兰 (Finland) 03"
+        "🇫🇮 芬兰 (Finland) 03",
+        "🇫🇮 芬兰 (Finland) 04",
+        "🇫🇮 芬兰 (Finland) 05"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

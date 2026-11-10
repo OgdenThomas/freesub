@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01
-  server: 198.16.113.218
-  port: 8443
+- name: 🇺🇦 乌克兰 (Ukraine) 01
+  server: nl4.japancase.site
+  port: 443
   udp: true
   type: vless
-  uuid: 98a24806-141a-43d3-b094-bd66c4eb93b8
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  servername: www.apple.com
-  client-fingerprint: chrome
+    public-key: lXCVb-MY5dJqMUw6xvkuPbi0idyfF-OkSY_6GpOovVI
+    short-id: 9f05c35b73b47d53
+  servername: nl4.japancase.site
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01
+  - 🇺🇦 乌克兰 (Ukraine) 01
 rules:
 - MATCH,PROXIES

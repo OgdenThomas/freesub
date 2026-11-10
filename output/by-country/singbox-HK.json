@@ -4,26 +4,74 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21021,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "server": "104.18.14.19",
+      "server_port": 8443,
+      "uuid": "226279dd-28b2-4b61-96be-a2a0b1afd522",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.zhaoqing.city",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560",
+        "headers": {
+          "Host": "hk.zhaoqing.city"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
+      "server": "zfd-hkv2.kunlun01dns.com",
+      "server_port": 16116,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
       "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03",
+      "server": "209.33.160.122",
+      "server_port": 39098,
+      "uuid": "7852e4df-db54-4f75-a35e-3b8fbe89e56d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "dash.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg",
+          "short_id": ""
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01"
+        "🇭🇰 中国香港 (Hong Kong) 01",
+        "🇭🇰 中国香港 (Hong Kong) 02",
+        "🇭🇰 中国香港 (Hong Kong) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01"
+        "🇭🇰 中国香港 (Hong Kong) 01",
+        "🇭🇰 中国香港 (Hong Kong) 02",
+        "🇭🇰 中国香港 (Hong Kong) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
