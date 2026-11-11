@@ -4,46 +4,45 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 ⚠R
-  server: 198.244.201.129
+- name: 🇫🇷 法国 (France) 01
+  server: 51.44.170.122
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 02 R41
+  server: 79.137.99.183
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 02 ⚠R
-  server: 198.244.202.215
-  port: 19999
+- name: 🇫🇷 法国 (France) 03 R41
+  server: 162.19.82.57
+  port: 1270
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 03 R46
-  server: 57.129.76.233
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 04 R46
-  server: 57.129.83.85
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 05
-  server: 89.187.7.4
-  port: 2166
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 04
+  server: 20.19.83.143
+  port: 2083
   udp: true
   type: vless
-  uuid: e1862eef-e3f2-4e27-b0a5-ddf8df384af9
-  network: ws
-  ws-opts:
-    path: /Telegram=@AmyraxVPN
-    headers:
-      Host: 89.187.7.4
-- name: 🇫🇷 法国 (France) 06 R41
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 05 R41
   server: 46.105.222.155
   port: 1270
   udp: true
@@ -54,7 +53,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07
+- name: 🇫🇷 法国 (France) 06
   server: 141.227.160.61
   port: 8443
   udp: true
@@ -67,26 +66,7 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 08 R41
-  server: 162.19.82.57
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 09
-  server: 108.61.177.57
-  port: 16778
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: fr001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 10 R41
+- name: 🇫🇷 法国 (France) 07 R41
   server: 46.105.222.157
   port: 1270
   udp: true
@@ -97,44 +77,52 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 11 R41
-  server: 79.137.99.183
+- name: 🇫🇷 法国 (France) 08 ⚠R
+  server: 198.244.201.129
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 09
+  server: 161.97.66.16
+  port: 443
+  udp: true
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 ⚠R
-  - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R46
-  - 🇫🇷 法国 (France) 04 R46
-  - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R41
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R41
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 R41
+  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R41
+  - 🇫🇷 法国 (France) 08 ⚠R
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R41
-  - 🇫🇷 法国 (France) 11 R41
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 ⚠R
-  - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R46
-  - 🇫🇷 法国 (France) 04 R46
-  - 🇫🇷 法国 (France) 05
-  - 🇫🇷 法国 (France) 06 R41
-  - 🇫🇷 法国 (France) 07
-  - 🇫🇷 法国 (France) 08 R41
+  - 🇫🇷 法国 (France) 01
+  - 🇫🇷 法国 (France) 02 R41
+  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 04
+  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 06
+  - 🇫🇷 法国 (France) 07 R41
+  - 🇫🇷 法国 (France) 08 ⚠R
   - 🇫🇷 法国 (France) 09
-  - 🇫🇷 法国 (France) 10 R41
-  - 🇫🇷 法国 (France) 11 R41
 rules:
 - MATCH,PROXIES
