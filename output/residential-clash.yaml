@@ -12,47 +12,17 @@ proxies:
   password: 5t6i121em5lkmsmk
   sni: us001.zestapp778.com
   skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 02 (移动家宽)
-  server: us001.zestapp778.com
-  port: 57277
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡 (Singapore) 03 (家宽)
-  server: 195.133.135.238
-  port: 10086
-  udp: true
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-- name: 🇸🇬 新加坡 (Singapore) 04 (家宽)
-  server: 116.88.224.217
-  port: 8080
-  udp: true
-  type: vmess
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (移动家宽)
-  - 🇺🇸 美国 (United States) 02 (移动家宽)
-  - 🇸🇬 新加坡 (Singapore) 03 (家宽)
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (移动家宽)
-  - 🇺🇸 美国 (United States) 02 (移动家宽)
-  - 🇸🇬 新加坡 (Singapore) 03 (家宽)
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽)
 rules:
 - MATCH,PROXIES

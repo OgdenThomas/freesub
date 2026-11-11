@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇹🇭 泰国 (Thailand) 01",
-      "server": "119.46.51.45",
-      "server_port": 37515,
-      "uuid": "9b76bc31-17a5-4454-934a-8d5fb602cd70",
-      "security": "auto"
+      "type": "trojan",
+      "tag": "🇲🇽 墨西哥 (Mexico) 01",
+      "server": "mx001.zestapp778.com",
+      "server_port": 15083,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "mx001.zestapp778.com",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇲🇽 墨西哥 (Mexico) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01"
+        "🇲🇽 墨西哥 (Mexico) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

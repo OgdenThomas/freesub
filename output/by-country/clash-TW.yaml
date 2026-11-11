@@ -4,25 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇯🇵 日本 (Japan) 01
-  server: zfd-jpv2.kunlun01dns.com
-  port: 16121
+- name: 🇹🇼 中国台湾 (Taiwan) 01
+  server: amasoid.ddns.net
+  port: 14514
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: b7I6g7l7fJhBaMInJ+zkzw==
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇯🇵 日本 (Japan) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇯🇵 日本 (Japan) 01
+  - 🇹🇼 中国台湾 (Taiwan) 01
 rules:
 - MATCH,PROXIES
