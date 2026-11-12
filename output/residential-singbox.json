@@ -4,18 +4,33 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽)",
-      "server": "130.94.19.95",
-      "server_port": 57277,
-      "password": "5t6i121em5lkmsmk",
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+      "server": "zfd-hkv1.kunlun01dns.com",
+      "server_port": 16115,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02 (家宽)",
+      "server": "122.176.216.52",
+      "server_port": 443,
+      "uuid": "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
       "tls": {
         "enabled": true,
-        "server_name": "us001.zestapp778.com",
+        "server_name": "app-6ada5023.deploy.meerasolution.com",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
+        "headers": {
+          "Host": "app-6ada5023.deploy.meerasolution.com"
         }
       }
     },
@@ -24,14 +39,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+        "🇮🇳 印度 (India) 02 (家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽)"
+        "🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)",
+        "🇮🇳 印度 (India) 02 (家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

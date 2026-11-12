@@ -4,25 +4,42 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (移动家宽)
-  server: 130.94.19.95
-  port: 57277
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  server: zfd-hkv1.kunlun01dns.com
+  port: 16115
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇮🇳 印度 (India) 02 (家宽)
+  server: 122.176.216.52
+  port: 443
+  udp: true
+  type: vless
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  tls: true
+  servername: app-6ada5023.deploy.meerasolution.com
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇮🇳 印度 (India) 02 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (移动家宽)
+  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
+  - 🇮🇳 印度 (India) 02 (家宽)
 rules:
 - MATCH,PROXIES
