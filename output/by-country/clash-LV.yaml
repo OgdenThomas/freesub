@@ -17,17 +17,34 @@ proxies:
     short-id: 5c256336e3b673fa
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 02
+  server: n4.topingr.ir
+  port: 443
+  udp: true
+  type: vless
+  uuid: 961913fb-dc88-446f-8356-3fde5b51d7f7
+  tls: true
+  servername: static.zovip2.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v3/pulse
+    headers:
+      Host: static.zovip2.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇱🇻 拉脱维亚 (Latvia) 01
+  - 🇱🇻 拉脱维亚 (Latvia) 02
 rules:
 - MATCH,PROXIES
