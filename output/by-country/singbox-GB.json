@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "server": "104.222.183.180",
+      "server_port": 47195,
+      "method": "chacha20-ietf-poly1305",
+      "password": "DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
       "server": "34.39.80.57",
       "server_port": 50818,
       "uuid": "408c814e-f70a-4d16-b3b3-8182bb70211d",
@@ -25,7 +33,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02",
+      "tag": "🇬🇧 英国 (United Kingdom) 03",
+      "server": "193.163.203.170",
+      "server_port": 443,
+      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
+          "short_id": "b28db60d77c50b4f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 04",
       "server": "104.222.183.180",
       "server_port": 443,
       "uuid": "a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc",
@@ -45,34 +74,14 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03",
-      "server": "193.163.203.170",
-      "server_port": 443,
-      "uuid": "11aabba0-5fd1-4f15-8068-74c1a466cefc",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o",
-          "short_id": "b28db60d77c50b4f"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇬🇧 英国 (United Kingdom) 01",
         "🇬🇧 英国 (United Kingdom) 02",
-        "🇬🇧 英国 (United Kingdom) 03"
+        "🇬🇧 英国 (United Kingdom) 03",
+        "🇬🇧 英国 (United Kingdom) 04"
       ]
     },
     {
@@ -81,7 +90,8 @@
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01",
         "🇬🇧 英国 (United Kingdom) 02",
-        "🇬🇧 英国 (United Kingdom) 03"
+        "🇬🇧 英国 (United Kingdom) 03",
+        "🇬🇧 英国 (United Kingdom) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

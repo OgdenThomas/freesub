@@ -4,15 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  server: zfd-hkv1.kunlun01dns.com
-  port: 16115
-  udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-- name: 🇮🇳 印度 (India) 02 (家宽)
+- name: 🇮🇳 印度 (India) 01 (家宽)
   server: 122.176.216.52
   port: 443
   udp: true
@@ -32,14 +24,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇮🇳 印度 (India) 02 (家宽)
+  - 🇮🇳 印度 (India) 01 (家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (移动家宽)
-  - 🇮🇳 印度 (India) 02 (家宽)
+  - 🇮🇳 印度 (India) 01 (家宽)
 rules:
 - MATCH,PROXIES

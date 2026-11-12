@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
+  server: 104.222.183.180
+  port: 47195
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 34.39.80.57
   port: 50818
   udp: true
@@ -17,19 +24,6 @@ proxies:
   network: ws
   ws-opts:
     path: /GunService
-- name: 🇬🇧 英国 (United Kingdom) 02
-  server: 104.222.183.180
-  port: 443
-  udp: true
-  type: vless
-  uuid: a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MYmnKEaJyfk1HrBaKg3AvYebp-sP3rZRNh9MnOcKgXY
-    short-id: 705f0a232571
-  servername: www.tradingview.com
-  client-fingerprint: firefox
 - name: 🇬🇧 英国 (United Kingdom) 03
   server: 193.163.203.170
   port: 443
@@ -42,6 +36,19 @@ proxies:
     public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
     short-id: b28db60d77c50b4f
   servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 104.222.183.180
+  port: 443
+  udp: true
+  type: vless
+  uuid: a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MYmnKEaJyfk1HrBaKg3AvYebp-sP3rZRNh9MnOcKgXY
+    short-id: 705f0a232571
+  servername: www.tradingview.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -51,6 +58,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +67,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
 rules:
 - MATCH,PROXIES
