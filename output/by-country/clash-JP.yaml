@@ -5,24 +5,40 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: zfd-jpv2.kunlun01dns.com
-  port: 16120
+  server: 168.138.205.100
+  port: 53758
   udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇯🇵 日本 (Japan) 02
+  server: 13.140.248.125
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4f82d72b-9644-c39a-ac6b-abbf15a862aa
+  tls: true
+  servername: xray-p1vi234h-lunar-forest-6.cloady.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /e3e2aa65089989f0
+    headers:
+      Host: xray-p1vi234h-lunar-forest-6.cloady.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
+  - 🇯🇵 日本 (Japan) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01
+  - 🇯🇵 日本 (Japan) 02
 rules:
 - MATCH,PROXIES

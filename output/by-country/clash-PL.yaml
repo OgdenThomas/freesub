@@ -5,44 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 20.215.66.17
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
-    short-id: 0123456789abcdef
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 02
-  server: 2.26.224.174
-  port: 8445
-  udp: true
-  type: vless
-  uuid: a4e5f910-23f4-470f-82a7-ed9d7be71dec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc
-    short-id: 10983e6c816181c2
-  servername: blog.ncknms.com
-  client-fingerprint: edge
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 201.58.139.66
+  server: 81.90.20.203
   port: 443
   udp: true
   type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  uuid: f37d32d0-ca5a-464f-8c32-92dc33f71408
   tls: true
   reality-opts:
-    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
-    short-id: 6c5c7900406a1ae7
-  servername: 57aac2t.pl7.h1clayd.click
+    public-key: qVU44SZtoG7cKR3ZCg4Ipf5rPefL5cbrto2OpzZNoU8
+  servername: instance-103.nolimited.space
   client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 04
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: 🇵🇱 波兰 (Poland) 02
   server: 54.37.131.126
   port: 80
   udp: true
@@ -62,8 +38,6 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,7 +45,5 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
-  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

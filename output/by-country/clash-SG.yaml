@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇬 新加坡 (Singapore) 01 R41
-  server: 15.235.182.183
+- name: 🇸🇬 新加坡 (Singapore) 01 R47
+  server: 149.88.106.74
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇬 新加坡 (Singapore) 02 R41
-  server: 15.235.164.133
+  server: 15.235.182.183
   port: 19999
   udp: true
   type: ss
@@ -25,102 +25,125 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 04 R52
-  server: 68.183.235.122
-  port: 8080
+- name: 🇸🇬 新加坡 (Singapore) 04 R41
+  server: 15.235.164.133
+  port: 19999
   udp: true
   type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 05 R52
-  server: 68.183.235.240
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 06 R41
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇸🇬 新加坡 (Singapore) 05 R41
   server: 51.79.228.131
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬 新加坡 (Singapore) 07 R55
-  server: 128.1.186.73
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 08 R52
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬 新加坡 (Singapore) 09 R47
+- name: 🇸🇬 新加坡 (Singapore) 06 R47
   server: 149.88.106.73
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬 新加坡 (Singapore) 10
-  server: news.zoom.us
-  port: 8443
+- name: 🇸🇬 新加坡 (Singapore) 07 R52
+  server: 68.183.227.236
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 08 R52
+  server: 68.183.235.240
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 09 R55
+  server: 128.1.186.73
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 10 R52
+  server: 68.183.235.122
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇸🇬 新加坡 (Singapore) 11
+  server: 54.251.9.130
+  port: 24146
+  udp: true
+  type: vless
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: 7205d9079521832c
+  servername: www.intel.com
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 12 R41
+  server: 15.235.144.92
+  port: 1270
   udp: true
   type: vmess
-  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
   cipher: auto
   tls: true
-  servername: matrix.phonicsindia.mobi
+  servername: xmfhlpy.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: matrix.phonicsindia.mobi
-- name: 🇸🇬 新加坡 (Singapore) 11 R47
-  server: 149.88.106.74
-  port: 19999
+- name: 🇸🇬 新加坡 (Singapore) 13
+  server: 140.245.62.225
+  port: 36442
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: 2633cbab-e901-4f5a-9a0f-18ff319d0d70
+  flow: xtls-rprx-vision
+  tls: true
+  servername: xjpp.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇬 新加坡 (Singapore) 01 R41
+  - 🇸🇬 新加坡 (Singapore) 01 R47
   - 🇸🇬 新加坡 (Singapore) 02 R41
   - 🇸🇬 新加坡 (Singapore) 03 R52
-  - 🇸🇬 新加坡 (Singapore) 04 R52
-  - 🇸🇬 新加坡 (Singapore) 05 R52
-  - 🇸🇬 新加坡 (Singapore) 06 R41
-  - 🇸🇬 新加坡 (Singapore) 07 R55
+  - 🇸🇬 新加坡 (Singapore) 04 R41
+  - 🇸🇬 新加坡 (Singapore) 05 R41
+  - 🇸🇬 新加坡 (Singapore) 06 R47
+  - 🇸🇬 新加坡 (Singapore) 07 R52
   - 🇸🇬 新加坡 (Singapore) 08 R52
-  - 🇸🇬 新加坡 (Singapore) 09 R47
-  - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11 R47
+  - 🇸🇬 新加坡 (Singapore) 09 R55
+  - 🇸🇬 新加坡 (Singapore) 10 R52
+  - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 12 R41
+  - 🇸🇬 新加坡 (Singapore) 13
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇬 新加坡 (Singapore) 01 R41
+  - 🇸🇬 新加坡 (Singapore) 01 R47
   - 🇸🇬 新加坡 (Singapore) 02 R41
   - 🇸🇬 新加坡 (Singapore) 03 R52
-  - 🇸🇬 新加坡 (Singapore) 04 R52
-  - 🇸🇬 新加坡 (Singapore) 05 R52
-  - 🇸🇬 新加坡 (Singapore) 06 R41
-  - 🇸🇬 新加坡 (Singapore) 07 R55
+  - 🇸🇬 新加坡 (Singapore) 04 R41
+  - 🇸🇬 新加坡 (Singapore) 05 R41
+  - 🇸🇬 新加坡 (Singapore) 06 R47
+  - 🇸🇬 新加坡 (Singapore) 07 R52
   - 🇸🇬 新加坡 (Singapore) 08 R52
-  - 🇸🇬 新加坡 (Singapore) 09 R47
-  - 🇸🇬 新加坡 (Singapore) 10
-  - 🇸🇬 新加坡 (Singapore) 11 R47
+  - 🇸🇬 新加坡 (Singapore) 09 R55
+  - 🇸🇬 新加坡 (Singapore) 10 R52
+  - 🇸🇬 新加坡 (Singapore) 11
+  - 🇸🇬 新加坡 (Singapore) 12 R41
+  - 🇸🇬 新加坡 (Singapore) 13
 rules:
 - MATCH,PROXIES

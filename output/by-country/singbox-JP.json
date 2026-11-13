@@ -4,26 +4,51 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01",
-      "server": "zfd-jpv2.kunlun01dns.com",
-      "server_port": 16120,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "server": "168.138.205.100",
+      "server_port": 53758,
+      "method": "aes-128-gcm",
+      "password": "Bwlqh7GcFB"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 02",
+      "server": "13.140.248.125",
+      "server_port": 443,
+      "uuid": "4f82d72b-9644-c39a-ac6b-abbf15a862aa",
+      "tls": {
+        "enabled": true,
+        "server_name": "xray-p1vi234h-lunar-forest-6.cloady.io",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/e3e2aa65089989f0",
+        "headers": {
+          "Host": "xray-p1vi234h-lunar-forest-6.cloady.io"
+        }
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

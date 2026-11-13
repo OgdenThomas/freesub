@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01
-  server: 38.244.155.67
+- name: 🇱🇹 立陶宛 (Lithuania) 01
+  server: lt.t1n2.com
   port: 443
   udp: true
   type: vless
-  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
+  uuid: a94d8907-6bbb-4570-80d3-dfdc314c1e7a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: NLXltMEkWIxv9bL2J4XkPGb4oVwGbCkITCTXF-jVxAE
-    short-id: 2976f793571fb671
-  servername: node-eu-1.nztpro.com
-  client-fingerprint: chrome
+    public-key: awc2TGvraH8xMqfsAnNQ7JMQ_uUF8gW5auvU2gQfjR0
+    short-id: b31de5bead2ebf3c
+  servername: lt.t1n2.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇱🇹 立陶宛 (Lithuania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01
+  - 🇱🇹 立陶宛 (Lithuania) 01
 rules:
 - MATCH,PROXIES

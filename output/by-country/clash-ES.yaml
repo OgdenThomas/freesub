@@ -5,31 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01
-  server: 195.206.235.121
-  port: 443
+  server: 9.247.174.4
+  port: 8443
   udp: true
   type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
   tls: true
   reality-opts:
-    public-key: 7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30
-    short-id: e7cffac9f8cfb434
-  servername: b3cd32g.es1.h1clayd.click
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+- name: 🇪🇸 西班牙 (Spain) 02
+  server: 9.247.174.134
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
+  tls: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇪🇸 西班牙 (Spain) 01
+  - 🇪🇸 西班牙 (Spain) 02
 rules:
 - MATCH,PROXIES

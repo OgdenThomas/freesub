@@ -11,7 +11,33 @@
       "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
       "transport": {
         "type": "ws",
-        "path": "/vless"
+        "path": "/vless",
+        "headers": {
+          "Host": "13.140.56.100"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02",
+      "server": "13.140.253.35",
+      "server_port": 443,
+      "uuid": "f1d3c8af-71c4-ef75-625f-cf446aa2c15b",
+      "tls": {
+        "enabled": true,
+        "server_name": "xray-h0urp9tx-rapid-summit-2.cloady.io",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/050334203cc522a3",
+        "headers": {
+          "Host": "xray-h0urp9tx-rapid-summit-2.cloady.io"
+        }
       }
     },
     {
@@ -19,14 +45,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇳 印度 (India) 01"
+        "🇮🇳 印度 (India) 01",
+        "🇮🇳 印度 (India) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇳 印度 (India) 01"
+        "🇮🇳 印度 (India) 01",
+        "🇮🇳 印度 (India) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
