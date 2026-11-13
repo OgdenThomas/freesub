@@ -4,16 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 芬兰 (Finland) 01
-  server: 65.109.208.183
+- name: 🇫🇮 芬兰 (Finland) 01 R47
+  server: 178.214.125.1
   port: 443
   udp: true
   type: vless
-  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
+  uuid: 3f3160a0-747d-4fed-bf3d-4d884bfa964d
+  flow: xtls-rprx-vision
   tls: true
-  servername: free.for.member.iiproxy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY
+    short-id: 6172ba9cffe9c22f
+  servername: conf.emaar.ru
+  client-fingerprint: edge
 - name: 🇫🇮 芬兰 (Finland) 02
   server: 146.103.118.189
   port: 443
@@ -29,19 +32,31 @@ proxies:
     path: /574ck-finland
     headers:
       Host: nl2.574ck.xyz
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: free.for.member.iiproxy.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
+  tls: true
+  servername: free.for.member.iiproxy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 01 R47
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 01 R47
   - 🇫🇮 芬兰 (Finland) 02
+  - 🇫🇮 芬兰 (Finland) 03
 rules:
 - MATCH,PROXIES

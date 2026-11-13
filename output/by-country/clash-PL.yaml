@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 02
   server: 20.215.66.17
   port: 2083
   udp: true
@@ -30,7 +17,7 @@ proxies:
     short-id: 0123456789abcdef
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03
+- name: 🇵🇱 波兰 (Poland) 02
   server: 2.26.224.174
   port: 8445
   udp: true
@@ -43,6 +30,31 @@ proxies:
     short-id: 10983e6c816181c2
   servername: blog.ncknms.com
   client-fingerprint: edge
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 201.58.139.66
+  port: 443
+  udp: true
+  type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  reality-opts:
+    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
+    short-id: 6c5c7900406a1ae7
+  servername: 57aac2t.pl7.h1clayd.click
+  client-fingerprint: firefox
+- name: 🇵🇱 波兰 (Poland) 04
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +63,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -59,5 +72,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
   - 🇵🇱 波兰 (Poland) 03
+  - 🇵🇱 波兰 (Poland) 04
 rules:
 - MATCH,PROXIES

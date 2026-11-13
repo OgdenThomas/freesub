@@ -5,21 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "65.109.208.183",
+      "tag": "🇫🇮 芬兰 (Finland) 01 R47",
+      "server": "178.214.125.1",
       "server_port": 443,
-      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
+      "uuid": "3f3160a0-747d-4fed-bf3d-4d884bfa964d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "free.for.member.iiproxy.com",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "conf.emaar.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY",
+          "short_id": "6172ba9cffe9c22f"
         }
       }
     },
@@ -47,20 +48,38 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 03",
+      "server": "free.for.member.iiproxy.com",
+      "server_port": 443,
+      "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
+      "tls": {
+        "enabled": true,
+        "server_name": "free.for.member.iiproxy.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 01 R47",
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01",
-        "🇫🇮 芬兰 (Finland) 02"
+        "🇫🇮 芬兰 (Finland) 01 R47",
+        "🇫🇮 芬兰 (Finland) 02",
+        "🇫🇮 芬兰 (Finland) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

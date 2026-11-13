@@ -11,7 +11,22 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
-- name: 🇬🇧 英国 (United Kingdom) 02
+- name: 🇬🇧 英国 (United Kingdom) 02 R41
+  server: 94.247.142.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: fd62968a-2e97-41ea-9aa0-aa61aed78955
+  tls: true
+  servername: simIlarcaTerpillarPvet-j5H6x4-1.simIlar-caterPillar-pVet.worKers.deV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: simIlarcaTerpillarPvet-j5H6x4-1.simIlar-caterPillar-pVet.worKers.deV
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 34.39.80.57
   port: 50818
   udp: true
@@ -24,7 +39,22 @@ proxies:
   network: ws
   ws-opts:
     path: /GunService
-- name: 🇬🇧 英国 (United Kingdom) 03
+- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  server: uk1.connectsuite.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  tls: true
+  servername: uk1.connectsuite.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+    headers:
+      Host: uk1.connectsuite.org
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 193.163.203.170
   port: 443
   udp: true
@@ -37,36 +67,25 @@ proxies:
     short-id: b28db60d77c50b4f
   servername: yandex.ru
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 04
-  server: 104.222.183.180
-  port: 443
-  udp: true
-  type: vless
-  uuid: a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MYmnKEaJyfk1HrBaKg3AvYebp-sP3rZRNh9MnOcKgXY
-    short-id: 705f0a232571
-  servername: www.tradingview.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R41
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R41
   - 🇬🇧 英国 (United Kingdom) 03
-  - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  - 🇬🇧 英国 (United Kingdom) 05
 rules:
 - MATCH,PROXIES
