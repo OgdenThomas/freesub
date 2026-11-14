@@ -18,17 +18,50 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ''
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 153.52.85.173
+  port: 443
+  udp: true
+  type: vless
+  uuid: 55458d10-24ab-4ea6-a522-13741b546f2a
+  tls: true
+  reality-opts:
+    public-key: cWC6AGVZ9ke_eCTWXEB-eLdf670CuoP9zP-1k8DrPxo
+    short-id: 8ae9cc8c9447c95a
+  servername: 13e1cfg.plp1.h1cloud.net
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: d5d6142b8b66
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 185.178.208.167
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+  tls: true
+  servername: speakpro.lol
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /useraction/metrics/4c907dfe0305/
+    headers:
+      Host: speakpro.lol
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES

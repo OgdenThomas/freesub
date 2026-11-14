@@ -5,65 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 168.110.45.41
-  port: 23444
+  server: 168.138.205.100
+  port: 53758
   udp: true
-  type: vless
-  uuid: ee2112e4-1e58-4f77-b162-5ef869358df9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c
-    short-id: 119c9e68498f5900
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 02
-  server: JP032005.ssgreen.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 70437360-4442-438f-83ba-4b82013cddb9
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: JP032005.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032005.ssgreen.org
-- name: 🇯🇵 日本 (Japan) 03
-  server: JP032009.ssgreen.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: ac5f3041-2767-4f2d-a173-29555b868b3e
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: JP032009.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032009.ssgreen.org
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇯🇵 日本 (Japan) 01
-  - 🇯🇵 日本 (Japan) 02
-  - 🇯🇵 日本 (Japan) 03
 rules:
 - MATCH,PROXIES
