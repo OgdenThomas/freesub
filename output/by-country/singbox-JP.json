@@ -35,12 +35,34 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03",
+      "server": "zfapi.zalolink.com",
+      "server_port": 43149,
+      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "psstatic.cdn.bcebos.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE",
+          "short_id": "15aa0ad4"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇯🇵 日本 (Japan) 01",
-        "🇯🇵 日本 (Japan) 02"
+        "🇯🇵 日本 (Japan) 02",
+        "🇯🇵 日本 (Japan) 03"
       ]
     },
     {
@@ -48,7 +70,8 @@
       "tag": "auto",
       "outbounds": [
         "🇯🇵 日本 (Japan) 01",
-        "🇯🇵 日本 (Japan) 02"
+        "🇯🇵 日本 (Japan) 02",
+        "🇯🇵 日本 (Japan) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

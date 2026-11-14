@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
+  server: 104.222.183.180
+  port: 47195
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
+- name: 🇬🇧 英国 (United Kingdom) 02
   server: 193.188.21.253
   port: 14430
   udp: true
@@ -15,7 +22,7 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 02
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 34.39.80.57
   port: 50818
   udp: true
@@ -28,7 +35,9 @@ proxies:
   network: ws
   ws-opts:
     path: /GunService
-- name: 🇬🇧 英国 (United Kingdom) 03
+    headers:
+      Host: yingguo.rymaker.cn
+- name: 🇬🇧 英国 (United Kingdom) 04
   server: 104.222.183.180
   port: 443
   udp: true
@@ -49,6 +58,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,5 +67,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
   - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 04
 rules:
 - MATCH,PROXIES
