@@ -5,72 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01
-  server: 91.107.147.12
-  port: 10318
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: b4JBK6MM7jMxE7UTJpZ7ej7MbXXRAqar5P5EQ1ZJUVo=:qE5evrJvwMsNOpSOLD7zi3KENLNo6nZ2Fl6IBUvslFA=
-- name: 🇩🇪 德国 (Germany) 02
   server: 159.195.207.238
   port: 49313
   udp: true
   type: vless
   uuid: 855c7aaa-e7d6-463e-971e-d36032744428
-- name: 🇩🇪 德国 (Germany) 03
-  server: 91.107.147.12
-  port: 31377
+- name: 🇩🇪 德国 (Germany) 02 R66
+  server: 193.108.119.34
+  port: 443
   udp: true
-  type: vmess
-  uuid: 3f2a36f7-2cb3-4181-ae70-7c6d22dc3b01
-  alterId: 0
-  cipher: auto
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.iloverussia2026.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 03
+  server: 49.12.68.40
+  port: 8443
+  udp: true
+  type: vless
+  uuid: c4128967-9ba4-445d-a7aa-d38b4fed547a
+  flow: xtls-rprx-vision
+  tls: true
+  servername: static.40.68.12.49.clients.your-server.de
+  skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 04
   server: 167.233.129.126
   port: 2474
   udp: true
   type: vless
   uuid: 287db857-de04-4212-bd69-5d14083e340e
-- name: 🇩🇪 德国 (Germany) 05 R50
-  server: 91.107.169.224
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 014f8bf6-9221-4f99-838f-4c16ca90334f
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-- name: 🇩🇪 德国 (Germany) 06 R66
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 07
-  server: 195.63.128.21
-  port: 2443
+- name: 🇩🇪 德国 (Germany) 05
+  server: 91.99.108.252
+  port: 8443
   udp: true
   type: vless
-  uuid: fa937345-6d3e-4ff4-8127-1a836987a0db
+  uuid: c4128967-9ba4-445d-a7aa-d38b4fed547a
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: q_MJ5Zo2vcnePWq3KY653QUPX8mNSvapLpqXU4NuPho
-    short-id: 464db718e17e4107
-  servername: germany.cloudhouse1.ru
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 08
-  server: base.hosamobenl.co.uk
-  port: 443
-  udp: true
-  type: vless
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  tls: true
-  servername: base.hosamobenl.co.uk
+  servername: static.252.108.99.91.clients.your-server.de
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 09
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 06
   server: 91.107.255.63
   port: 39653
   udp: true
@@ -80,32 +56,53 @@ proxies:
   servername: online.shop.ir.eeso.cc
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 10
-  server: 2.31.100.78
-  port: 13060
+- name: 🇩🇪 德国 (Germany) 07 R50
+  server: 91.107.169.224
+  port: 80
   udp: true
-  type: vless
-  uuid: 679d0fcc-4c72-4073-8f1d-311b69ef72b5
-- name: 🇩🇪 德国 (Germany) 11
-  server: steel7.hadsvpn.com
+  type: vmess
+  uuid: 014f8bf6-9221-4f99-838f-4c16ca90334f
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+- name: 🇩🇪 德国 (Germany) 08
+  server: 87.248.149.50
   port: 443
   udp: true
-  type: hysteria2
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  sni: steel7.hadsvpn.com
+  type: vless
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  tls: true
+  servername: base.hosamobenl.co.uk
   skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 12 R41
-  server: mhzedir.qzz.io
-  port: 2059
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 09 R68
+  server: 200.165.236.84
+  port: 443
   udp: true
   type: vless
-  uuid: 4fd80dc2-8d73-45fa-839e-c1ad2875c752
-  flow: xtls-rprx-vision
+  uuid: a54c6d0b-56d8-4bb8-a4af-8c5a7f0c0b34
   tls: true
-  servername: angelvpn.angelmh.cv
+  reality-opts:
+    public-key: WerkLBuzReJqDK23pG8dd7JPLBcu2rVhUfBR52D4um0
+    short-id: 05c656ffd118ce13
+  servername: yandex.ru
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api
+- name: 🇩🇪 德国 (Germany) 10
+  server: 91.107.247.173
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
+  tls: true
+  servername: sino.bestsellers1.site
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 13
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 11
   server: 91.107.188.129
   port: 2083
   udp: true
@@ -118,50 +115,58 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇩🇪 德国 (Germany) 14
-  server: 190.93.244.47
-  port: 8443
+- name: 🇩🇪 德国 (Germany) 12
+  server: steel7.hadsvpn.com
+  port: 443
   udp: true
-  type: vless
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  tls: true
-  servername: moz.ar-marz.fun
+  type: hysteria2
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  sni: steel7.hadsvpn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: 🇩🇪 德国 (Germany) 15
-  server: tsaujxjdj.zefmul.ir
-  port: 8021
+- name: 🇩🇪 德国 (Germany) 13
+  server: zibanabz.jonsonvip.ir
+  port: 3939
   udp: true
   type: vless
-  uuid: e61bb397-dfc2-4d58-b40f-63932846976b
+  uuid: 3c152dce-5887-486c-9f0f-693ca271f2e6
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: ILnZwALWgpb1HZ2eE58jgNCbUt8ul73tSNXmr05SNgU
-    short-id: 05d15772f3cb403a
-  servername: play.google.com
-  client-fingerprint: qq
+    public-key: dnnN66V_xqEbGoG5P8E_Zqk3TaZt2lM4SI9N7Ana7FA
+    short-id: d9a2600fdecd7be2
+  servername: ai.android
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 14
+  server: mojigr.fusetea.ir
+  port: 1202
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: HdGepYBfP8aSvT-9-3WwIC3GdEFhTkyx
+- name: 🇩🇪 德国 (Germany) 15
+  server: 51.38.127.93
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 03y5gbnyl4o1hc2n
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇩🇪 德国 (Germany) 01
-  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 02 R66
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R50
-  - 🇩🇪 德国 (Germany) 06 R66
-  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 06
+  - 🇩🇪 德国 (Germany) 07 R50
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R68
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R41
+  - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15
@@ -171,17 +176,17 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇩🇪 德国 (Germany) 01
-  - 🇩🇪 德国 (Germany) 02
+  - 🇩🇪 德国 (Germany) 02 R66
   - 🇩🇪 德国 (Germany) 03
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R50
-  - 🇩🇪 德国 (Germany) 06 R66
-  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 06
+  - 🇩🇪 德国 (Germany) 07 R50
   - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 09 R68
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
-  - 🇩🇪 德国 (Germany) 12 R41
+  - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
   - 🇩🇪 德国 (Germany) 14
   - 🇩🇪 德国 (Germany) 15

@@ -5,16 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇮🇳 印度 (India) 02
-  server: 13.140.253.35
+  server: xray-bprkdwje-clever-comet-4.cloady.io
   port: 443
   udp: true
   type: vless
@@ -34,13 +25,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇳 印度 (India) 01
-  - 🇮🇳 印度 (India) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇳 印度 (India) 01
-  - 🇮🇳 印度 (India) 02
 rules:
 - MATCH,PROXIES

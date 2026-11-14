@@ -4,54 +4,63 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 01",
-      "server": "168.138.205.100",
-      "server_port": 53758,
-      "method": "aes-128-gcm",
-      "password": "Bwlqh7GcFB"
-    },
-    {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 02",
-      "server": "13.140.248.125",
-      "server_port": 443,
-      "uuid": "4f82d72b-9644-c39a-ac6b-abbf15a862aa",
+      "tag": "🇯🇵 日本 (Japan) 01",
+      "server": "168.110.45.41",
+      "server_port": 23444,
+      "uuid": "ee2112e4-1e58-4f77-b162-5ef869358df9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "xray-p1vi234h-lunar-forest-6.cloady.io",
-        "insecure": false,
+        "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/e3e2aa65089989f0",
-        "headers": {
-          "Host": "xray-p1vi234h-lunar-forest-6.cloady.io"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "zfxKuH7gDFZ2EMjdt8zMfnsZFpeckMhM5q5XZ3ATe2c",
+          "short_id": "119c9e68498f5900"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 03",
-      "server": "zfapi.zalolink.com",
-      "server_port": 43149,
-      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "flow": "xtls-rprx-vision",
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 02",
+      "server": "JP032005.ssgreen.org",
+      "server_port": 443,
+      "uuid": "70437360-4442-438f-83ba-4b82013cddb9",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "psstatic.cdn.bcebos.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE",
-          "short_id": "15aa0ad4"
+        "server_name": "JP032005.ssgreen.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wes",
+        "headers": {
+          "Host": "JP032005.ssgreen.org"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 03",
+      "server": "JP032009.ssgreen.org",
+      "server_port": 443,
+      "uuid": "ac5f3041-2767-4f2d-a173-29555b868b3e",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "JP032009.ssgreen.org",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wes",
+        "headers": {
+          "Host": "JP032009.ssgreen.org"
         }
       }
     },

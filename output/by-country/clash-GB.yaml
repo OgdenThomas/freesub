@@ -5,13 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 104.222.183.180
-  port: 47195
+  server: 16.60.30.137
+  port: 443
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: DYVqFDnYoMquRQunXC1xd2FyuDhd7JWs5jtf2eb7VkKLzXgZv8pt8gY1e91TT71V762zRX7MWW4HmjavanYdUF9bij8gG8AP
-- name: 🇬🇧 英国 (United Kingdom) 02
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 02 R63
+  server: 136.176.68.34
+  port: 443
+  udp: true
+  type: vless
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
+    short-id: a6040129ad7f4b74
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03
   server: 193.188.21.253
   port: 14430
   udp: true
@@ -22,22 +35,20 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 34.39.80.57
-  port: 50818
+- name: 🇬🇧 英国 (United Kingdom) 04
+  server: 193.163.203.170
+  port: 443
   udp: true
   type: vless
-  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
   tls: true
-  servername: yingguo.rymaker.cn
-  skip-cert-verify: false
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /GunService
-    headers:
-      Host: yingguo.rymaker.cn
-- name: 🇬🇧 英国 (United Kingdom) 04
+- name: 🇬🇧 英国 (United Kingdom) 05
   server: 104.222.183.180
   port: 443
   udp: true
@@ -56,17 +67,19 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R63
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
-  - 🇬🇧 英国 (United Kingdom) 02
+  - 🇬🇧 英国 (United Kingdom) 02 R63
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04
+  - 🇬🇧 英国 (United Kingdom) 05
 rules:
 - MATCH,PROXIES
