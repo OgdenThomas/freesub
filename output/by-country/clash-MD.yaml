@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇲🇩 摩尔多瓦 (Moldova) 01
+  server: bundledispatch.ratethatrestaurant.org
+  port: 443
+  udp: true
+  type: vless
+  uuid: c1208c5a-2350-4506-affd-fc41b4319286
+  tls: true
+  servername: bundledispatch.ratethatrestaurant.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /media/ws/
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇲🇩 摩尔多瓦 (Moldova) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇲🇩 摩尔多瓦 (Moldova) 01
+rules:
+- MATCH,PROXIES

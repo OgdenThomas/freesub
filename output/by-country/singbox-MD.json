@@ -5,23 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇷 IR 01",
-      "server": "198.16.113.222",
-      "server_port": 8443,
-      "uuid": "98a24806-141a-43d3-b094-bd66c4eb93b8",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇲🇩 摩尔多瓦 (Moldova) 01",
+      "server": "bundledispatch.ratethatrestaurant.org",
+      "server_port": 443,
+      "uuid": "c1208c5a-2350-4506-affd-fc41b4319286",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "bundledispatch.ratethatrestaurant.org",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE",
-          "short_id": "69984b9e02545831"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/media/ws/"
       }
     },
     {
@@ -29,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 IR 01"
+        "🇲🇩 摩尔多瓦 (Moldova) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 IR 01"
+        "🇲🇩 摩尔多瓦 (Moldova) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
