@@ -4,32 +4,29 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 01 R54",
-      "server": "208.69.78.208",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 01",
+      "server": "74.161.152.237",
+      "server_port": 2083,
+      "uuid": "52a5a29f-c162-411a-8a37-a3f11b0dc537",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "resources.yourultimateprofessionalcareerhub.com",
-        "insecure": false
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4",
+          "short_id": "0123456789abcdef"
+        }
       }
     },
     {
       "type": "trojan",
       "tag": "🇨🇭 瑞士 (Switzerland) 02 R54",
-      "server": "208.69.78.19",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yourultimateprofessionalcareerhub.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 03 R54",
       "server": "208.69.78.33",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -41,7 +38,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇨🇭 瑞士 (Switzerland) 04 R54",
+      "tag": "🇨🇭 瑞士 (Switzerland) 03 R54",
       "server": "208.69.78.60",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -52,24 +49,44 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇨🇭 瑞士 (Switzerland) 04",
+      "server": "a813d5t.ch5.h1clayd.click",
+      "server_port": 443,
+      "uuid": "963f72cf-8465-46f5-996c-df45500b57a3",
+      "tls": {
+        "enabled": true,
+        "server_name": "a813d5t.ch5.h1clayd.click",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "syYaWsZJOf114XAoEcIQodriOW8pyCjP5x_KEq38ozs",
+          "short_id": "7ded0da1ef58b7e2"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 瑞士 (Switzerland) 01 R54",
+        "🇨🇭 瑞士 (Switzerland) 01",
         "🇨🇭 瑞士 (Switzerland) 02 R54",
         "🇨🇭 瑞士 (Switzerland) 03 R54",
-        "🇨🇭 瑞士 (Switzerland) 04 R54"
+        "🇨🇭 瑞士 (Switzerland) 04"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 瑞士 (Switzerland) 01 R54",
+        "🇨🇭 瑞士 (Switzerland) 01",
         "🇨🇭 瑞士 (Switzerland) 02 R54",
         "🇨🇭 瑞士 (Switzerland) 03 R54",
-        "🇨🇭 瑞士 (Switzerland) 04 R54"
+        "🇨🇭 瑞士 (Switzerland) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
