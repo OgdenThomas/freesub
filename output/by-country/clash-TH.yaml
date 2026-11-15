@@ -12,30 +12,17 @@ proxies:
   uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
   alterId: 0
   cipher: auto
-- name: 🇹🇭 泰国 (Thailand) 02
-  server: assets.opensignal.com
-  port: 80
-  udp: true
-  type: vless
-  uuid: 0c85001b-ad48-4f43-bdc9-b2b5c626a26e
-  network: ws
-  ws-opts:
-    path: /logout
-    headers:
-      Host: d36lt9hzl2ug3d.cloudfront.net:assets.opensignal.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇭 泰国 (Thailand) 01
-  - 🇹🇭 泰国 (Thailand) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 泰国 (Thailand) 01
-  - 🇹🇭 泰国 (Thailand) 02
 rules:
 - MATCH,PROXIES

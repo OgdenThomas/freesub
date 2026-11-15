@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇻🇳 越南 (Vietnam) 01",
-      "server": "zfd-boardv2.kunlun01dns.com",
-      "server_port": 16256,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "type": "hysteria2",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01",
+      "server": "217.60.182.154",
+      "server_port": 443,
+      "password": "b36a14f8-fc3f-4142-968f-48031cf5f330",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2-eee-1.aloranode.top",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇻🇳 越南 (Vietnam) 01"
+        "🇪🇪 爱沙尼亚 (Estonia) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇻🇳 越南 (Vietnam) 01"
+        "🇪🇪 爱沙尼亚 (Estonia) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,26 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇮🇩 印尼 (Indonesia) 01",
-      "server": "zfd-boardv2.kunlun01dns.com",
-      "server_port": 16298,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
+      "type": "hysteria2",
+      "tag": "🇷🇸 塞尔维亚 (Serbia) 01",
+      "server": "130.49.163.188",
+      "server_port": 443,
+      "password": "307ee0e53ea04dfd86a7f2f9fcd53844",
+      "tls": {
+        "enabled": true,
+        "server_name": "s5.libertyrunet.store",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇩 印尼 (Indonesia) 01"
+        "🇷🇸 塞尔维亚 (Serbia) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇩 印尼 (Indonesia) 01"
+        "🇷🇸 塞尔维亚 (Serbia) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,13 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01
+  server: 62.182.193.228
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 2e555e46dbc421452416834962fd014f
+- name: 🇸🇪 瑞典 (Sweden) 02
   server: 138.199.55.243
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪 瑞典 (Sweden) 02
+- name: 🇸🇪 瑞典 (Sweden) 03
   server: 138.124.86.230
   port: 48115
   udp: true
@@ -24,26 +31,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-- name: 🇸🇪 瑞典 (Sweden) 03
-  server: se1.h1cloud.net
+- name: 🇸🇪 瑞典 (Sweden) 04
+  server: lodizu.hagrid-connected.com
   port: 443
   udp: true
   type: vless
-  uuid: 632cd343-1e8f-4bf6-a9a2-20ada1f6970f
+  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: XQWaIMBPo0mpWs3MooxxkjWNSgxnkIESd_2PnR8_2HA
-    short-id: 1061f1b1cdaad3ad
-  servername: 3fb2b6t.se1.h1clayd.click
+  servername: lodizu.hagrid-connected.com
+  skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 04
-  server: 62.182.193.228
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
 proxy-groups:
 - name: PROXIES
   type: select
