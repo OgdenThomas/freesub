@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇲 亚美尼亚 (Armenia) 01
+  server: 153.56.228.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 88edfb30-a34b-41e1-a08f-985a93e3bc36
+  tls: true
+  reality-opts:
+    public-key: H_sPS4IJjHa4Wd7WLAtp_eamROtKBAj-G0UcMBHLHQw
+    short-id: 2437eeeb791b6d80
+  servername: 49930ag.es8.h1clayd.click
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 61c20be08f4f
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇲 亚美尼亚 (Armenia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇲 亚美尼亚 (Armenia) 01
+rules:
+- MATCH,PROXIES

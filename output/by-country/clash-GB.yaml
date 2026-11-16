@@ -25,16 +25,20 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 03
-  server: 213.176.92.168
-  port: 14430
+  server: 34.39.80.57
+  port: 50818
   udp: true
   type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
+  tls: true
+  servername: yingguo.rymaker.cn
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vless
+    path: /GunService
     headers:
-      Host: 213.176.92.168
+      Host: yingguo.rymaker.cn
 - name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
   server: uk1.connectsuite.org
   port: 443
@@ -51,6 +55,19 @@ proxies:
     headers:
       Host: uk1.connectsuite.org
 - name: 🇬🇧 英国 (United Kingdom) 05
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 06
   server: 104.222.183.180
   port: 443
   udp: true
@@ -73,6 +90,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,5 +101,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 03
   - 🇬🇧 英国 (United Kingdom) 04 ⚠R
   - 🇬🇧 英国 (United Kingdom) 05
+  - 🇬🇧 英国 (United Kingdom) 06
 rules:
 - MATCH,PROXIES
