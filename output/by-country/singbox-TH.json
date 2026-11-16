@@ -4,30 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇷🇸 塞尔维亚 (Serbia) 01",
-      "server": "130.49.163.188",
-      "server_port": 443,
-      "password": "307ee0e53ea04dfd86a7f2f9fcd53844",
-      "tls": {
-        "enabled": true,
-        "server_name": "s5.libertyrunet.store",
-        "insecure": false
-      }
+      "type": "vmess",
+      "tag": "🇹🇭 泰国 (Thailand) 01",
+      "server": "119.46.51.45",
+      "server_port": 37515,
+      "uuid": "9b76bc31-17a5-4454-934a-8d5fb602cd70",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇸 塞尔维亚 (Serbia) 01"
+        "🇹🇭 泰国 (Thailand) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇸 塞尔维亚 (Serbia) 01"
+        "🇹🇭 泰国 (Thailand) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

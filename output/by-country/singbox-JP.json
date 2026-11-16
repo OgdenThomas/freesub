@@ -12,18 +12,32 @@
       "password": "Bwlqh7GcFB"
     },
     {
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 02",
+      "server": "168.110.63.247",
+      "server_port": 8081,
+      "uuid": "c3bde296-8e44-4b8c-a325-577d5b3cc7c8",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vless"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇯🇵 日本 (Japan) 01"
+        "🇯🇵 日本 (Japan) 01",
+        "🇯🇵 日本 (Japan) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
