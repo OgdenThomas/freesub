@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 81.171.14.72
+  server: 185.231.101.94
   port: 443
   udp: true
   type: vless
@@ -13,11 +13,24 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: OH9jKzqAqEg98VDxmxReqrC_jbJWNwr-ipj2cNRgazc
-    short-id: 2237b916
-  servername: zovira.me
-  client-fingerprint: chrome
+    public-key: eiTR0q65sQ8SUwFSxHY1IXHKkNb-_QTQnambcVxnUFU
+    short-id: 51057fb54d2364f4
+  servername: fuzora.net
+  client-fingerprint: edge
 - name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 37.235.247.81
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 2ae0670d-0bdf-409e-9a55-4e970252d378
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 147.45.47.101
   port: 8443
   udp: true
@@ -30,19 +43,6 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 5.253.86.3
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 51ZCyVOxvcD_smARtd9mV-3Rh_WurOzMGRFxk9u2Kgo
-    short-id: fa1754221e4c5f9e
-  servername: nl3.gofizz.in
-  client-fingerprint: firefox
 - name: 🇷🇺 俄罗斯 (Russia) 04
   server: 185.22.153.117
   port: 18443
@@ -51,17 +51,34 @@ proxies:
   cipher: aes-256-gcm
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
 - name: 🇷🇺 俄罗斯 (Russia) 05
-  server: serv1.fishtohome.ru
+  server: 77.83.245.232
   port: 443
   udp: true
   type: vless
-  uuid: 3619ae0e-bd3a-458c-bb0a-c0479019d9ec
-  flow: xtls-rprx-vision
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
   tls: true
-  servername: serv1.fishtohome.ru
+  reality-opts:
+    public-key: NLYZX3_IyPp1Qi7uF1OQMfd29L0ecThy8XKtarm4IDg
+    short-id: 5a5deeba08ebe615
+  servername: quay.elderbrook.top
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: 201.51.12.98
+  port: 443
+  udp: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 06
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: 🇷🇺 俄罗斯 (Russia) 07
   server: 201.24.121.243
   port: 443
   udp: true
@@ -74,19 +91,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vlgrpc
-- name: 🇷🇺 俄罗斯 (Russia) 07
-  server: 201.24.116.192
-  port: 443
+- name: 🇷🇺 俄罗斯 (Russia) 08
+  server: 185.39.204.117
+  port: 10002
   udp: true
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  uuid: facb802c-de2e-11f1-9a22-a3404e852f3b
   tls: true
-  servername: vps3.nemnogogo.com
+  servername: tr2.vpnjantit.com
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
+  network: ws
+  ws-opts:
+    path: /vpnjantit
 proxy-groups:
 - name: PROXIES
   type: select
@@ -99,6 +116,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05
   - 🇷🇺 俄罗斯 (Russia) 06
   - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -111,5 +129,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05
   - 🇷🇺 俄罗斯 (Russia) 06
   - 🇷🇺 俄罗斯 (Russia) 07
+  - 🇷🇺 俄罗斯 (Russia) 08
 rules:
 - MATCH,PROXIES
