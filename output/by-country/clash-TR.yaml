@@ -5,48 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
-  server: 77.83.245.227
-  port: 443
-  udp: true
-  type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  tls: true
-  reality-opts:
-    public-key: NLYZX3_IyPp1Qi7uF1OQMfd29L0ecThy8XKtarm4IDg
-    short-id: 16ea9ecf587e8939
-  servername: cape.elderbrook.top
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇹🇷 土耳其 (Turkey) 02
-  server: 77.83.245.22
-  port: 443
-  udp: true
-  type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  tls: true
-  reality-opts:
-    public-key: NLYZX3_IyPp1Qi7uF1OQMfd29L0ecThy8XKtarm4IDg
-    short-id: 1b01cb32688c4612
-  servername: birch.quietbrook.top
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇹🇷 土耳其 (Turkey) 03
-  server: 45.92.219.47
-  port: 443
-  udp: true
-  type: vless
-  uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4
-  servername: ty.galactichub.online
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 04
   server: 185.246.155.91
   port: 10103
   udp: true
@@ -65,17 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
-  - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
-  - 🇹🇷 土耳其 (Turkey) 02
-  - 🇹🇷 土耳其 (Turkey) 03
-  - 🇹🇷 土耳其 (Turkey) 04
 rules:
 - MATCH,PROXIES

@@ -5,18 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 185.231.101.94
-  port: 443
+  server: 147.45.47.101
+  port: 8443
   udp: true
   type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  uuid: 27f26dee-9cf1-4cca-93f8-9ac23d311408
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: eiTR0q65sQ8SUwFSxHY1IXHKkNb-_QTQnambcVxnUFU
-    short-id: 51057fb54d2364f4
-  servername: fuzora.net
-  client-fingerprint: edge
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: apple.com
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 02
   server: 37.235.247.81
   port: 8443
@@ -31,54 +31,6 @@ proxies:
   servername: apple.com
   client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 147.45.47.101
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 27f26dee-9cf1-4cca-93f8-9ac23d311408
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 185.22.153.117
-  port: 18443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 05
-  server: 77.83.245.232
-  port: 443
-  udp: true
-  type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  tls: true
-  reality-opts:
-    public-key: NLYZX3_IyPp1Qi7uF1OQMfd29L0ecThy8XKtarm4IDg
-    short-id: 5a5deeba08ebe615
-  servername: quay.elderbrook.top
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇷🇺 俄罗斯 (Russia) 06
-  server: 201.51.12.98
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  tls: true
-  servername: vps3.nemnogogo.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 07
   server: 201.24.121.243
   port: 443
   udp: true
@@ -91,19 +43,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vlgrpc
-- name: 🇷🇺 俄罗斯 (Russia) 08
-  server: 185.39.204.117
-  port: 10002
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 200.169.179.233
+  port: 443
   udp: true
   type: vless
-  uuid: facb802c-de2e-11f1-9a22-a3404e852f3b
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
   tls: true
-  servername: tr2.vpnjantit.com
+  servername: vps3.nemnogogo.com
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vpnjantit
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
 proxy-groups:
 - name: PROXIES
   type: select
@@ -113,10 +65,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -126,9 +74,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08
 rules:
 - MATCH,PROXIES

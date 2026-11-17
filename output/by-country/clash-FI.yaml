@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 65.108.240.210
-  port: 39018
-  udp: true
-  type: vmess
-  uuid: 96c987c9-c2d9-4993-b9bd-c9bc36255ee1
-  alterId: 0
-  cipher: auto
-- name: 🇫🇮 芬兰 (Finland) 02
   server: 157.180.98.124
   port: 49659
   udp: true
@@ -25,15 +17,7 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 177.202.75.56
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: fi1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 04
+- name: 🇫🇮 芬兰 (Finland) 02
   server: 94.183.164.119
   port: 24433
   udp: true
@@ -48,8 +32,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,7 +39,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
-  - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
 rules:
 - MATCH,PROXIES
