@@ -30,7 +30,20 @@ proxies:
     short-id: a7c92e4b10d6f835
   servername: api-svc-mgr.galioncc.com
   client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 04
+- name: 🇸🇪 瑞典 (Sweden) 04 R50
+  server: 143.246.195.46
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5311859f-0b5d-4c26-a8bf-2648f113e4ea
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 453QgfqoHVVQ-M7xjfH-bUu0HXz1mdWGuR3vNoBoeCM
+    short-id: 4e1682
+  servername: sweden13.clearorbitllc.com
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 05
   server: 138.124.86.230
   port: 48115
   udp: true
@@ -43,21 +56,25 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-- name: 🇸🇪 瑞典 (Sweden) 05
-  server: 89.125.234.224
+- name: 🇸🇪 瑞典 (Sweden) 06
+  server: 95.143.196.97
+  port: 443
+  udp: true
+  type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  skip-cert-verify: false
+- name: 🇸🇪 瑞典 (Sweden) 07
+  server: lodizu.hagrid-connected.com
   port: 443
   udp: true
   type: vless
-  uuid: 3ede439b-410f-4eae-b449-4e15064c0706
+  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
+  flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: BLhS7fE4Yh6kAADw7yRIn2PzKun-JDagJHJNOePYRSY
-    short-id: bee802ae4ab66496
-  servername: 362c1eg.se1.h1clayd.click
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+  servername: lodizu.hagrid-connected.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,8 +83,10 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02 R40
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 04 R50
   - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
+  - 🇸🇪 瑞典 (Sweden) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -76,7 +95,9 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02 R40
   - 🇸🇪 瑞典 (Sweden) 03
-  - 🇸🇪 瑞典 (Sweden) 04
+  - 🇸🇪 瑞典 (Sweden) 04 R50
   - 🇸🇪 瑞典 (Sweden) 05
+  - 🇸🇪 瑞典 (Sweden) 06
+  - 🇸🇪 瑞典 (Sweden) 07
 rules:
 - MATCH,PROXIES
