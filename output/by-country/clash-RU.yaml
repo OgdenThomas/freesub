@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 94.228.123.26
-  port: 443
-  udp: true
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cYVz2YZI-PELLGGm38rrGcipPvnWcSMswOh4j536bmg
-  servername: ghjgdfgdfghjmb.wey-land.net
-  client-fingerprint: qq
-- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 147.45.47.101
   port: 8443
   udp: true
@@ -29,7 +17,7 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 03
+- name: 🇷🇺 俄罗斯 (Russia) 02
   server: 37.235.247.81
   port: 8443
   udp: true
@@ -42,27 +30,8 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 89.223.124.93
-  port: 443
-  udp: true
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rLkjhzhSAJrey5Qv3624_5B-MpViafV2dDdDCnqn_l4
-  servername: dfgdfgb.wey-land.net
-  client-fingerprint: qq
-- name: 🇷🇺 俄罗斯 (Russia) 05
-  server: 45.147.200.232
-  port: 18443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 06
-  server: 201.24.116.192
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 201.51.12.98
   port: 443
   udp: true
   type: vless
@@ -74,7 +43,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 07
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: 201.24.121.243
   port: 443
   udp: true
@@ -87,18 +56,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vlgrpc
-- name: 🇷🇺 俄罗斯 (Russia) 08
-  server: 185.39.204.117
-  port: 10002
-  udp: true
-  type: vless
-  uuid: facb802c-de2e-11f1-9a22-a3404e852f3b
-  tls: true
-  servername: tr2.vpnjantit.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vpnjantit
 proxy-groups:
 - name: PROXIES
   type: select
@@ -108,10 +65,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,9 +74,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
-  - 🇷🇺 俄罗斯 (Russia) 06
-  - 🇷🇺 俄罗斯 (Russia) 07
-  - 🇷🇺 俄罗斯 (Russia) 08
 rules:
 - MATCH,PROXIES

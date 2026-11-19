@@ -5,38 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 45.144.52.252
-  port: 443
-  udp: true
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -GuGq2rg6lgl4LcxHBFhBZCKKEtES2EGeD2qwXilrXI
-  servername: wergmb.wey-land.net
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 02
-  server: 94.183.164.119
-  port: 24433
-  udp: true
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: lakes.blog-forme.ru
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 03
-  server: 45.144.53.18
-  port: 443
-  udp: true
-  type: vless
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: yC04w5WKddcvv6EPSHnqv8uHLaSNK8JFCuRtIJhL1Xc
-  servername: gsdfmb.wey-land.net
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04
   server: 157.180.98.124
   port: 49659
   udp: true
@@ -49,21 +17,26 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05
-  server: 198.202.24.142
-  port: 2083
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 138.124.80.29
+  port: 443
   udp: true
   type: vless
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  flow: xtls-rprx-vision
   tls: true
-  servername: vipfree.dr-ping.ir
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  servername: fin1-r.bankai.party
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03
+  server: 94.183.164.119
+  port: 24433
+  udp: true
+  type: hysteria2
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  sni: lakes.blog-forme.ru
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,8 +45,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -82,7 +53,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01
   - 🇫🇮 芬兰 (Finland) 02
   - 🇫🇮 芬兰 (Finland) 03
-  - 🇫🇮 芬兰 (Finland) 04
-  - 🇫🇮 芬兰 (Finland) 05
 rules:
 - MATCH,PROXIES
