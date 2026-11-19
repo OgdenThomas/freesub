@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇪 比利时 (Belgium) 01
-  server: 93.88.206.70
-  port: 443
+- name: 🇷🇴 罗马尼亚 (Romania) 01
+  server: cdn4.velmoradigital.store
+  port: 2443
   udp: true
   type: vless
-  uuid: 44ddb84a-f152-47ef-a970-fd63f2df9b30
+  uuid: 32ea050a-1981-4ed2-b63f-77e0f53c4b65
   flow: xtls-rprx-vision
   tls: true
-  servername: pulse.sevka.xyz
+  servername: cdn4.velmoradigital.store
   skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇧🇪 比利时 (Belgium) 01
+  - 🇷🇴 罗马尼亚 (Romania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇪 比利时 (Belgium) 01
+  - 🇷🇴 罗马尼亚 (Romania) 01
 rules:
 - MATCH,PROXIES

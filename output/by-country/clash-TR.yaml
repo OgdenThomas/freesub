@@ -5,6 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01
+  server: 87.76.154.28
+  port: 57231
+  udp: true
+  type: vless
+  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
+- name: 🇹🇷 土耳其 (Turkey) 02
   server: 185.246.155.91
   port: 10103
   udp: true
@@ -23,11 +29,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 rules:
 - MATCH,PROXIES
