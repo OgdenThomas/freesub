@@ -1,0 +1,31 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇺 卢森堡 (Luxembourg) 01
+  server: 193.57.88.100
+  port: 16200
+  udp: true
+  type: trojan
+  password: 4mq9w5ckqw3ewbdg
+  sni: staticxfastline.taymaztest.ir
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /biyasd
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇺 卢森堡 (Luxembourg) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇺 卢森堡 (Luxembourg) 01
+rules:
+- MATCH,PROXIES

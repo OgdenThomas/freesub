@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 立陶宛 (Lithuania) 01
-  server: 84.32.209.118
+- name: 🇷🇴 罗马尼亚 (Romania) 01
+  server: 176.108.245.73
   port: 443
   udp: true
   type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: a7d309e4c16b825f
-  servername: api-dns-gw.galioncc.com
+    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
+    short-id: a9dc98a7dc87a7dc
+  servername: pawuk.belka.tv
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇹 立陶宛 (Lithuania) 01
+  - 🇷🇴 罗马尼亚 (Romania) 01
 rules:
 - MATCH,PROXIES

@@ -5,18 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: 213.176.92.168
-  port: 14430
+  server: 193.163.203.170
+  port: 443
   udp: true
   type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
+  client-fingerprint: chrome
 - name: 🇬🇧 英国 (United Kingdom) 02
-  server: 94.72.100.12
+  server: xray-ckc68nno-swift-harbor-8.cloady.io
   port: 443
   udp: true
   type: vless
@@ -30,19 +32,21 @@ proxies:
     path: /3e0261245277336d
     headers:
       Host: xray-ckc68nno-swift-harbor-8.cloady.io
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 104.222.183.180
+- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R
+  server: 51.38.71.147
   port: 443
   udp: true
   type: vless
-  uuid: a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc
-  flow: xtls-rprx-vision
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
   tls: true
-  reality-opts:
-    public-key: MYmnKEaJyfk1HrBaKg3AvYebp-sP3rZRNh9MnOcKgXY
-    short-id: 705f0a232571
-  servername: www.tradingview.com
-  client-fingerprint: chrome
+  servername: uk1.connectsuite.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+    headers:
+      Host: uk1.connectsuite.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,7 +54,7 @@ proxy-groups:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -58,6 +62,6 @@ proxy-groups:
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
   - 🇬🇧 英国 (United Kingdom) 02
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
 rules:
 - MATCH,PROXIES
