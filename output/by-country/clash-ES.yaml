@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇪🇸 西班牙 (Spain) 01
+  server: 193.8.114.28
+  port: 443
+  udp: true
+  type: vless
+  uuid: ab5e91ee-f600-4825-a2bc-d6471d5cee03
+  tls: true
+  reality-opts:
+    public-key: Au1rmQdDRjlEJk17IfLQv5PBUEEosMWNhAlrWZj6mnY
+    short-id: '12345678'
+  servername: food-from-finlda-here-we-go.keno.su
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇪🇸 西班牙 (Spain) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇪🇸 西班牙 (Spain) 01
+rules:
+- MATCH,PROXIES

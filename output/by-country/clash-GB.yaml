@@ -5,31 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01
-  server: xray-ckc68nno-swift-harbor-8.cloady.io
+  server: 13.143.187.220
   port: 443
   udp: true
   type: vless
-  uuid: b004e898-f6cf-54a5-d281-f063d741ad53
+  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
+  flow: xtls-rprx-vision
   tls: true
-  servername: xray-ckc68nno-swift-harbor-8.cloady.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /3e0261245277336d
-    headers:
-      Host: xray-ckc68nno-swift-harbor-8.cloady.io
+  reality-opts:
+    public-key: eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg
+  servername: fi-s1.kadrhub.tech
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 02 R48
+  server: 144.48.11.146
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 4a923161-156f-4914-8cac-762fb2433bfb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ
+    short-id: ee4ea980
+  servername: 144.48.11.146
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R48
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01
+  - 🇬🇧 英国 (United Kingdom) 02 R48
 rules:
 - MATCH,PROXIES

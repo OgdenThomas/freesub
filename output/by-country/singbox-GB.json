@@ -6,23 +6,42 @@
     {
       "type": "vless",
       "tag": "🇬🇧 英国 (United Kingdom) 01",
-      "server": "xray-ckc68nno-swift-harbor-8.cloady.io",
+      "server": "13.143.187.220",
       "server_port": 443,
-      "uuid": "b004e898-f6cf-54a5-d281-f063d741ad53",
+      "uuid": "66c78912-4e2d-41dc-8742-aaae2590804e",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "xray-ckc68nno-swift-harbor-8.cloady.io",
-        "insecure": false,
+        "server_name": "fi-s1.kadrhub.tech",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg",
+          "short_id": ""
         }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/3e0261245277336d",
-        "headers": {
-          "Host": "xray-ckc68nno-swift-harbor-8.cloady.io"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 R48",
+      "server": "144.48.11.146",
+      "server_port": 43000,
+      "uuid": "4a923161-156f-4914-8cac-762fb2433bfb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "144.48.11.146",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ",
+          "short_id": "ee4ea980"
         }
       }
     },
@@ -31,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R48"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02 R48"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
