@@ -4,29 +4,60 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰 (Poland) 01
-  server: 143.246.41.214
+- name: 🇵🇱 波兰 (Poland) 01 ⚠R
+  server: nl1.kndrsxraybot.com
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 3bc7791e-d6fd-4f61-9864-c66928eac88e
+  tls: true
+  reality-opts:
+    public-key: Daeyem6bDb8-yehpS8bXro1rbfJQ1j9SMneUu5BleSQ
+    short-id: b3386ec1dbce3d92
+  servername: nl1.kndrsxraybot.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 45.194.66.177
   port: 443
   udp: true
   type: vless
-  uuid: be146d46-ae50-4691-838c-b6c87dbaec8f
+  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
+  flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: 8OI8rEgAiWxH-cG03xgzuz7XTFHrbA1MY9HnPHcgSUA
-    short-id: 1d5ac21e988c571f
-  servername: 702e56t.pl5.h1clayd.click
-  client-fingerprint: edge
+  servername: 31tawwo0.virtual-network.lol
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇵🇱 波兰 (Poland) 03
+  server: 144.31.4.18
+  port: 443
+  udp: true
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  servername: marginbirch.cleanfoodshop.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /media/ws/
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 01 ⚠R
+  - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 波兰 (Poland) 01
+  - 🇵🇱 波兰 (Poland) 01 ⚠R
+  - 🇵🇱 波兰 (Poland) 02
+  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES

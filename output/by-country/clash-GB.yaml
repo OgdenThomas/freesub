@@ -17,7 +17,20 @@ proxies:
     short-id: a6040129ad7f4b74
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 02 ⚠R
+- name: 🇬🇧 英国 (United Kingdom) 02 R48
+  server: 144.48.11.146
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 4a923161-156f-4914-8cac-762fb2433bfb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ
+    short-id: ee4ea980
+  servername: 144.48.11.146
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 03 ⚠R
   server: 51.38.71.147
   port: 443
   udp: true
@@ -32,34 +45,21 @@ proxies:
     path: /cdn-cgi/ws
     headers:
       Host: uk1.connectsuite.org
-- name: 🇬🇧 英国 (United Kingdom) 03
-  server: 45.43.153.33
-  port: 443
-  udp: true
-  type: vless
-  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
-    short-id: 88a13cf2655c
-  servername: www.foxsports.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇬🇧 英国 (United Kingdom) 01 R63
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 02 R48
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇬🇧 英国 (United Kingdom) 01 R63
-  - 🇬🇧 英国 (United Kingdom) 02 ⚠R
-  - 🇬🇧 英国 (United Kingdom) 03
+  - 🇬🇧 英国 (United Kingdom) 02 R48
+  - 🇬🇧 英国 (United Kingdom) 03 ⚠R
 rules:
 - MATCH,PROXIES

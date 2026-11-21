@@ -25,19 +25,15 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 04 R40
-  server: 162.19.82.57
-  port: 1270
+- name: 🇫🇷 法国 (France) 04
+  server: 107.161.160.28
+  port: 8388
   udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
+  type: ss
+  cipher: aes-256-gcm
+  password: itzvpn@321
 - name: 🇫🇷 法国 (France) 05 R40
-  server: 91.134.35.72
+  server: 79.137.99.183
   port: 1270
   udp: true
   type: vmess
@@ -48,7 +44,7 @@ proxies:
   servername: xmfhlpy.com
   skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 06 R40
-  server: 46.105.222.157
+  server: 91.134.35.72
   port: 1270
   udp: true
   type: vmess
@@ -82,42 +78,6 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 09 R40
-  server: 79.137.99.183
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 10
-  server: ai.smrtai.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
-  tls: true
-  reality-opts:
-    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
-    short-id: 086bf957
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 11
-  server: 161.97.160.224
-  port: 443
-  udp: true
-  type: vless
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
-    short-id: e6
-  servername: passport.yandex.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -126,14 +86,11 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03 R46
-  - 🇫🇷 法国 (France) 04 R40
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05 R40
   - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07 R40
   - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09 R40
-  - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -142,13 +99,10 @@ proxy-groups:
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
   - 🇫🇷 法国 (France) 03 R46
-  - 🇫🇷 法国 (France) 04 R40
+  - 🇫🇷 法国 (France) 04
   - 🇫🇷 法国 (France) 05 R40
   - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07 R40
   - 🇫🇷 法国 (France) 08
-  - 🇫🇷 法国 (France) 09 R40
-  - 🇫🇷 法国 (France) 10
-  - 🇫🇷 法国 (France) 11
 rules:
 - MATCH,PROXIES
