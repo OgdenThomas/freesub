@@ -12,13 +12,21 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: yoow9zuAW2IUx29EL25NzX29/xx20FpSEKOsnu/TnBE=
 - name: 🇳🇱 荷兰 (Netherlands) 02
-  server: 144.21.35.158
+  server: 84.235.170.154
   port: 45819
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: rx1e8SsjGM7ZKlR0tLnzSWoxhyRRJJrcTccM3uMu+Rc=
-- name: 🇳🇱 荷兰 (Netherlands) 03
+  password: hZ3VbN592JZsuzZ9ou+pGOBFMSRGBiSVczJFghcRaEY=
+- name: 🇳🇱 荷兰 (Netherlands) 03 R63
+  server: 66.163.127.44
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.indyourperfectremotetechjobfromthecomfortofhome.com
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 04
   server: 51.170.191.10
   port: 63286
   udp: true
@@ -30,8 +38,37 @@ proxies:
     public-key: U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU
     short-id: 1f2519bb96e5589c
   servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 05
+  server: 144.21.35.158
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: rx1e8SsjGM7ZKlR0tLnzSWoxhyRRJJrcTccM3uMu+Rc=
+- name: 🇳🇱 荷兰 (Netherlands) 06 R53
+  server: 188.166.81.135
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 07
+  server: 177.177.215.45
+  port: 444
+  udp: true
+  type: vless
+  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ams2.shtil.io
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 04
+- name: 🇳🇱 荷兰 (Netherlands) 08
   server: 130.12.242.106
   port: 443
   udp: true
@@ -43,33 +80,23 @@ proxies:
     public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
     short-id: 15affa0af66dfc79
   servername: deepl.com
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 05
-  server: 195.206.235.74
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 09
+  server: 201.8.71.230
   port: 443
   udp: true
   type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   tls: true
   reality-opts:
-    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
-    short-id: 8956c57cb4c4f8d2
-  servername: f0d7aft.nl13.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 06
-  server: 188.116.27.6
-  port: 443
-  udp: true
-  type: vless
-  uuid: 441caaf2-aae6-4883-8af9-1e5770395ae8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
-    short-id: '1174'
-  servername: www.sony.co.uk
+    public-key: xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA
+    short-id: 6d289ff0f47c0aac
+  servername: 961ec0g.nl13.h1clayd.click
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 07 R63
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 7d5abcd7d8a1
+- name: 🇳🇱 荷兰 (Netherlands) 10 R63
   server: 66.163.127.225
   port: 443
   udp: true
@@ -77,38 +104,15 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 08 R53
-  server: 188.166.81.135
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 09
-  server: 76574ct.nl8.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: 9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc
-    short-id: 2ca59bdc5121f921
-  servername: 76574ct.nl8.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 10 R63
-  server: 66.163.127.9
+- name: 🇳🇱 荷兰 (Netherlands) 11 R63
+  server: 66.163.127.154
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.indyourperfectremotetechjobfromthecomfortofhome.com
+  sni: www.indyourperfectremotetechjobfromthecomfortofhome.com
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 11
+- name: 🇳🇱 荷兰 (Netherlands) 12
   server: 94.183.164.176
   port: 443
   udp: true
@@ -122,38 +126,22 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ebl
-- name: 🇳🇱 荷兰 (Netherlands) 12
-  server: 48.102.170.205
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
-    short-id: 8f3c6e2a1b5d4f09
-  servername: tradingview.com
-  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 13
-  server: 177.177.215.45
-  port: 444
-  udp: true
-  type: vless
-  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ams2.shtil.io
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 14 R63
-  server: 66.163.127.155
+  server: 195.206.235.110
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 15 R63
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
+    short-id: d3bd772514c87d28
+  servername: 717252g.nl8.h1clayd.click
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 204adda7e3da
+- name: 🇳🇱 荷兰 (Netherlands) 14 R63
   server: 104.21.94.203
   port: 443
   udp: true
@@ -168,34 +156,14 @@ proxies:
     path: /700gvl
     headers:
       Host: fr-free.fastestrelay.com
+- name: 🇳🇱 荷兰 (Netherlands) 15
+  server: 158.178.157.15
+  port: 45819
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Lqb/eLDa4LnfF6j965FkZEXTWkH65B083ivjy0xFpiI=
 - name: 🇳🇱 荷兰 (Netherlands) 16
-  server: 146.103.118.189
-  port: 443
-  udp: true
-  type: vless
-  uuid: e5d062f0-7bad-4c80-9417-ae083eef61c1
-  tls: true
-  servername: nl2.574ck.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: nl2.574ck.xyz
-- name: 🇳🇱 荷兰 (Netherlands) 17
-  server: 153.52.85.198
-  port: 443
-  udp: true
-  type: vless
-  uuid: 26843758-24de-4f76-b5d0-624038e353c4
-  tls: true
-  reality-opts:
-    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
-    short-id: c71118d9399fb8c2
-  servername: 15d7fft.nl11.h1clayd.click
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 18
   server: 146.19.254.171
   port: 8443
   udp: true
@@ -206,21 +174,6 @@ proxies:
   servername: 146.19.254.171
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 19
-  server: 84.235.170.154
-  port: 45819
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: hZ3VbN592JZsuzZ9ou+pGOBFMSRGBiSVczJFghcRaEY=
-- name: 🇳🇱 荷兰 (Netherlands) 20 R63
-  server: 66.163.127.154
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -228,24 +181,20 @@ proxy-groups:
   - AUTO
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 03 R63
   - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07 R63
-  - 🇳🇱 荷兰 (Netherlands) 08 R53
+  - 🇳🇱 荷兰 (Netherlands) 06 R53
+  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10 R63
-  - 🇳🇱 荷兰 (Netherlands) 11
+  - 🇳🇱 荷兰 (Netherlands) 11 R63
   - 🇳🇱 荷兰 (Netherlands) 12
   - 🇳🇱 荷兰 (Netherlands) 13
   - 🇳🇱 荷兰 (Netherlands) 14 R63
-  - 🇳🇱 荷兰 (Netherlands) 15 R63
+  - 🇳🇱 荷兰 (Netherlands) 15
   - 🇳🇱 荷兰 (Netherlands) 16
-  - 🇳🇱 荷兰 (Netherlands) 17
-  - 🇳🇱 荷兰 (Netherlands) 18
-  - 🇳🇱 荷兰 (Netherlands) 19
-  - 🇳🇱 荷兰 (Netherlands) 20 R63
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -253,23 +202,19 @@ proxy-groups:
   proxies:
   - 🇳🇱 荷兰 (Netherlands) 01
   - 🇳🇱 荷兰 (Netherlands) 02
-  - 🇳🇱 荷兰 (Netherlands) 03
+  - 🇳🇱 荷兰 (Netherlands) 03 R63
   - 🇳🇱 荷兰 (Netherlands) 04
   - 🇳🇱 荷兰 (Netherlands) 05
-  - 🇳🇱 荷兰 (Netherlands) 06
-  - 🇳🇱 荷兰 (Netherlands) 07 R63
-  - 🇳🇱 荷兰 (Netherlands) 08 R53
+  - 🇳🇱 荷兰 (Netherlands) 06 R53
+  - 🇳🇱 荷兰 (Netherlands) 07
+  - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
   - 🇳🇱 荷兰 (Netherlands) 10 R63
-  - 🇳🇱 荷兰 (Netherlands) 11
+  - 🇳🇱 荷兰 (Netherlands) 11 R63
   - 🇳🇱 荷兰 (Netherlands) 12
   - 🇳🇱 荷兰 (Netherlands) 13
   - 🇳🇱 荷兰 (Netherlands) 14 R63
-  - 🇳🇱 荷兰 (Netherlands) 15 R63
+  - 🇳🇱 荷兰 (Netherlands) 15
   - 🇳🇱 荷兰 (Netherlands) 16
-  - 🇳🇱 荷兰 (Netherlands) 17
-  - 🇳🇱 荷兰 (Netherlands) 18
-  - 🇳🇱 荷兰 (Netherlands) 19
-  - 🇳🇱 荷兰 (Netherlands) 20 R63
 rules:
 - MATCH,PROXIES

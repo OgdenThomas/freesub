@@ -14,26 +14,6 @@
     {
       "type": "vless",
       "tag": "🇸🇪 瑞典 (Sweden) 02",
-      "server": "88.216.214.159",
-      "server_port": 443,
-      "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-svc-mgr.galioncc.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "short_id": "a7c92e4b10d6f835"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 瑞典 (Sweden) 03",
       "server": "138.124.86.230",
       "server_port": 48115,
       "uuid": "b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
@@ -52,13 +32,54 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03",
+      "server": "88.216.214.159",
+      "server_port": 443,
+      "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-svc-mgr.galioncc.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "short_id": "a7c92e4b10d6f835"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇪 瑞典 (Sweden) 04",
+      "server": "95.143.196.97",
+      "server_port": 443,
+      "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF",
+      "tls": {
+        "enabled": true,
+        "server_name": "connect-se.mimowhat.online",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇸🇪 瑞典 (Sweden) 01 R40",
         "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 03",
+        "🇸🇪 瑞典 (Sweden) 04"
       ]
     },
     {
@@ -67,7 +88,8 @@
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01 R40",
         "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 03",
+        "🇸🇪 瑞典 (Sweden) 04"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

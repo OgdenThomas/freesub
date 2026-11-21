@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇺 澳大利亚 (Australia) 01
+  server: 104.18.10.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: debafe5b-6760-4b00-b0b2-ee30cbf769f0
+  tls: true
+  servername: portland-wins-robbie-skirt.trycloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /e0843c8ad581
+    headers:
+      Host: portland-wins-robbie-skirt.trycloudflare.com
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇺 澳大利亚 (Australia) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇺 澳大利亚 (Australia) 01
+rules:
+- MATCH,PROXIES
