@@ -4,22 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 波兰 (Poland) 01 ⚠R
-  server: nl1.kndrsxraybot.com
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 3bc7791e-d6fd-4f61-9864-c66928eac88e
-  tls: true
-  reality-opts:
-    public-key: Daeyem6bDb8-yehpS8bXro1rbfJQ1j9SMneUu5BleSQ
-    short-id: b3386ec1dbce3d92
-  servername: nl1.kndrsxraybot.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇵🇱 波兰 (Poland) 02
+- name: 🇵🇱 波兰 (Poland) 01
   server: 45.194.66.177
   port: 443
   udp: true
@@ -30,34 +15,32 @@ proxies:
   servername: 31tawwo0.virtual-network.lol
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇵🇱 波兰 (Poland) 03
-  server: 144.31.4.18
-  port: 443
+- name: 🇵🇱 波兰 (Poland) 02
+  server: 54.37.131.126
+  port: 80
   udp: true
-  type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  tls: true
-  servername: marginbirch.cleanfoodshop.org
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  type: vmess
+  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /media/ws/
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 波兰 (Poland) 01 ⚠R
+  - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 波兰 (Poland) 01 ⚠R
+  - 🇵🇱 波兰 (Poland) 01
   - 🇵🇱 波兰 (Poland) 02
-  - 🇵🇱 波兰 (Poland) 03
 rules:
 - MATCH,PROXIES

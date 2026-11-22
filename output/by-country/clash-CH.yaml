@@ -16,49 +16,28 @@ proxies:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
     short-id: 19253fae84102271
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇨🇭 瑞士 (Switzerland) 02 R50
-  server: 193.233.89.130
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe
-  tls: true
-  reality-opts:
-    public-key: xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c
-  servername: g.play2go.gay
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-- name: 🇨🇭 瑞士 (Switzerland) 03
-  server: 135.136.183.53
+  client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 02 R56
+  server: 208.69.78.19
   port: 443
   udp: true
-  type: vless
-  uuid: 0259e5aa-c188-4334-b204-32cd5ea859f6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 56r4YuaW-BUEapWGlOvv-QX75OgLNP8KuE_Z1bBxO1g
-    short-id: 47912f9d36a0a52b
-  servername: dubai-cdn-keno.keno.su
-  client-fingerprint: firefox
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇭 瑞士 (Switzerland) 01 R50
-  - 🇨🇭 瑞士 (Switzerland) 02 R50
-  - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 02 R56
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇭 瑞士 (Switzerland) 01 R50
-  - 🇨🇭 瑞士 (Switzerland) 02 R50
-  - 🇨🇭 瑞士 (Switzerland) 03
+  - 🇨🇭 瑞士 (Switzerland) 02 R56
 rules:
 - MATCH,PROXIES
