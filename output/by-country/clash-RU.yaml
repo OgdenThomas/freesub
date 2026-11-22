@@ -5,32 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 147.45.47.101
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 27f26dee-9cf1-4cca-93f8-9ac23d311408
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 37.235.247.81
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2ae0670d-0bdf-409e-9a55-4e970252d378
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 48.103.133.47
   port: 8443
   udp: true
@@ -43,8 +17,15 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 201.51.12.98
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 48.103.218.77
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: vps3.nemnogogo.com
   port: 443
   udp: true
   type: vless
@@ -56,16 +37,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 05
-  server: 168.113.253.178
-  port: 443
-  udp: true
-  type: vless
-  uuid: 58708e38-dd5a-0001-902d-93621ee2bd83
-  tls: true
-  servername: uzndiuvzvqqljdyhzs.fcloudservices.site
-  skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,8 +45,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -84,7 +53,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
-  - 🇷🇺 俄罗斯 (Russia) 04
-  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES

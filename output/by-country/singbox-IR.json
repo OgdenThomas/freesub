@@ -4,30 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇳 CN 01",
-      "server": "39.108.113.127",
-      "server_port": 10086,
-      "uuid": "a625d148-e988-4008-b957-e9051a6371d2",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
+      "type": "vless",
+      "tag": "🇮🇷 IR 01",
+      "server": "87.82.59.60",
+      "server_port": 837,
+      "uuid": "d8b42cd5-b149-4356-9e61-444444444444"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇳 CN 01"
+        "🇮🇷 IR 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇳 CN 01"
+        "🇮🇷 IR 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

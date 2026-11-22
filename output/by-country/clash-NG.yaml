@@ -4,28 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 CN 01
-  server: 39.108.113.127
-  port: 10086
+- name: 🇳🇬 尼日利亚 (Nigeria) 01
+  server: 157.254.38.210
+  port: 20103
   udp: true
-  type: vmess
-  uuid: a625d148-e988-4008-b957-e9051a6371d2
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  type: trojan
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  sni: hk.catxstar.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN 01
+  - 🇳🇬 尼日利亚 (Nigeria) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN 01
+  - 🇳🇬 尼日利亚 (Nigeria) 01
 rules:
 - MATCH,PROXIES

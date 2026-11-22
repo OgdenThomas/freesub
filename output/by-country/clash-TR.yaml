@@ -18,18 +18,26 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02
-  server: 147.45.66.208
-  port: 43000
+  server: 188.225.78.178
+  port: 443
   udp: true
   type: vless
-  uuid: 01e61db7-9e0b-4431-a995-a5288a01b951
-  flow: xtls-rprx-vision
+  uuid: a4740bee-81ad-4a58-99c9-eca576ecb6e6
   tls: true
-  reality-opts:
-    public-key: DbL9RJFvJrnxBu6fFhWkHF8nsD6cK_DKMuMV00RmlWg
-    short-id: 4d3d8e15
-  servername: 147.45.66.208
-  client-fingerprint: chrome
+  servername: cadrin.wtf
+  skip-cert-verify: false
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cache.sync.v1
+- name: 🇹🇷 土耳其 (Turkey) 03
+  server: 37.233.80.144
+  port: 2087
+  udp: true
+  type: trojan
+  password: UyJoqPqycR
+  sni: 37.233.80.144
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +45,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +53,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
   - 🇹🇷 土耳其 (Turkey) 02
+  - 🇹🇷 土耳其 (Turkey) 03
 rules:
 - MATCH,PROXIES
