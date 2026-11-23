@@ -4,7 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇧 英国 (United Kingdom) 01 R63
+- name: 🇬🇧 英国 (United Kingdom) 01 R53
+  server: 64.227.41.219
+  port: 443
+  udp: true
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇬🇧 英国 (United Kingdom) 02 R53
+  server: 167.99.203.0
+  port: 443
+  udp: true
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  network: h2
+  h2-opts:
+    host: []
+    path: /
+- name: 🇬🇧 英国 (United Kingdom) 03 R63
   server: 136.176.68.34
   port: 443
   udp: true
@@ -17,17 +37,37 @@ proxies:
     short-id: a6040129ad7f4b74
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 04 ⚠R
+  server: 51.38.71.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  tls: true
+  servername: uk1.connectsuite.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+    headers:
+      Host: uk1.connectsuite.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇧 英国 (United Kingdom) 01 R63
+  - 🇬🇧 英国 (United Kingdom) 01 R53
+  - 🇬🇧 英国 (United Kingdom) 02 R53
+  - 🇬🇧 英国 (United Kingdom) 03 R63
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇧 英国 (United Kingdom) 01 R63
+  - 🇬🇧 英国 (United Kingdom) 01 R53
+  - 🇬🇧 英国 (United Kingdom) 02 R53
+  - 🇬🇧 英国 (United Kingdom) 03 R63
+  - 🇬🇧 英国 (United Kingdom) 04 ⚠R
 rules:
 - MATCH,PROXIES

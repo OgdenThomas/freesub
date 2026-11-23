@@ -4,7 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇷 法国 (France) 01 R40
+- name: 🇫🇷 法国 (France) 01 ⚠R
+  server: 198.244.201.129
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 02 ⚠R
+  server: 198.244.202.215
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 03 R46
+  server: 57.129.83.85
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 04 R40
   server: 54.36.102.152
   port: 2083
   udp: true
@@ -13,61 +34,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless-kulo
-- name: 🇫🇷 法国 (France) 02 ⚠R
-  server: 198.244.202.215
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 03 ⚠R
-  server: 198.244.201.129
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 04 R46
-  server: 57.129.83.85
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇫🇷 法国 (France) 05 R40
-  server: 79.137.99.183
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 06 R40
-  server: 91.134.35.72
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07 R40
-  server: 46.105.222.155
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 08 R40
   server: 46.105.222.157
   port: 1270
   udp: true
@@ -78,8 +45,48 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 09 R40
+- name: 🇫🇷 法国 (France) 06 R40
   server: 162.19.82.57
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 07 R40
+  server: 79.137.99.183
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 08 R40
+  server: 46.105.222.155
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 09
+  server: 107.161.160.28
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: itzvpn@321
+- name: 🇫🇷 法国 (France) 10 R40
+  server: 91.134.35.72
   port: 1270
   udp: true
   type: vmess
@@ -94,28 +101,30 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 法国 (France) 01 R40
+  - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 ⚠R
-  - 🇫🇷 法国 (France) 04 R46
+  - 🇫🇷 法国 (France) 03 R46
+  - 🇫🇷 法国 (France) 04 R40
   - 🇫🇷 法国 (France) 05 R40
   - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07 R40
   - 🇫🇷 法国 (France) 08 R40
-  - 🇫🇷 法国 (France) 09 R40
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10 R40
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇷 法国 (France) 01 R40
+  - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 ⚠R
-  - 🇫🇷 法国 (France) 04 R46
+  - 🇫🇷 法国 (France) 03 R46
+  - 🇫🇷 法国 (France) 04 R40
   - 🇫🇷 法国 (France) 05 R40
   - 🇫🇷 法国 (France) 06 R40
   - 🇫🇷 法国 (France) 07 R40
   - 🇫🇷 法国 (France) 08 R40
-  - 🇫🇷 法国 (France) 09 R40
+  - 🇫🇷 法国 (France) 09
+  - 🇫🇷 法国 (France) 10 R40
 rules:
 - MATCH,PROXIES

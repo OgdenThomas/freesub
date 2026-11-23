@@ -24,6 +24,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: sw100.marshonet.store
+  port: 8228
+  udp: true
+  type: trojan
+  password: pHLdtRnEC5stYZvt9GqMyMYx215AskPW
+  sni: sw100.marshonet.store
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trgrpc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +42,7 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01 R40
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +50,6 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 R40
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
 rules:
 - MATCH,PROXIES

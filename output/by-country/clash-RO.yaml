@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 以色列 (Israel) 01 R59
-  server: swe.srv.hiddenmedia.pw
+- name: 🇷🇴 罗马尼亚 (Romania) 01
+  server: 46.28.67.55
   port: 443
   udp: true
   type: vless
-  uuid: e54fc748-c657-4820-b593-87d333e8d137
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: T-qDypPpfavzWteKpx1KjpW1USCjkBvNc6mzpRglw00
-    short-id: e496f788cd4b7402
-  servername: swe.srv.hiddenmedia.pw
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+  servername: www.cloudflare.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 以色列 (Israel) 01 R59
+  - 🇷🇴 罗马尼亚 (Romania) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 以色列 (Israel) 01 R59
+  - 🇷🇴 罗马尼亚 (Romania) 01
 rules:
 - MATCH,PROXIES

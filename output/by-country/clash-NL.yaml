@@ -5,37 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01
-  server: 158.178.157.15
-  port: 45819
+  server: 77.221.132.206
+  port: 24759
   udp: true
   type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Lqb/eLDa4LnfF6j965FkZEXTWkH65B083ivjy0xFpiI=
+  cipher: chacha20-ietf-poly1305
+  password: hCgbUnMaoAfSgvE8IKdnGu
 - name: 🇳🇱 荷兰 (Netherlands) 02
   server: 188.116.27.6
   port: 443
   udp: true
   type: vless
-  uuid: 3b9189fd-9d29-465e-8c1f-5651af043fe4
+  uuid: 5f387ecb-781c-4256-8111-142ca3f31ab7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: mprwTEsQ9nJ78qG7BJskAWXaVfDxeMHBkQHbReVfMnc
     short-id: '1174'
   servername: www.sony.co.uk
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 03
-  server: 130.12.242.106
+  server: 153.52.85.198
   port: 443
   udp: true
   type: vless
-  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
-  flow: xtls-rprx-vision
+  uuid: 26843758-24de-4f76-b5d0-624038e353c4
   tls: true
   reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  servername: deepl.com
+    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
+    short-id: c71118d9399fb8c2
+  servername: 15d7fft.nl11.h1clayd.click
   client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 04
   server: 130.78.30.147
@@ -47,18 +46,8 @@ proxies:
   tls: true
   servername: 105ky37.virtual-network.lol
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇳🇱 荷兰 (Netherlands) 05
-  server: ams2.shtil.io
-  port: 444
-  udp: true
-  type: vless
-  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ams2.shtil.io
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 06
   server: 94.183.164.176
   port: 443
   udp: true
@@ -72,33 +61,33 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: ebl
-- name: 🇳🇱 荷兰 (Netherlands) 07
-  server: 146.19.254.171
-  port: 8443
+- name: 🇳🇱 荷兰 (Netherlands) 06
+  server: ams2.shtil.io
+  port: 444
   udp: true
   type: vless
-  uuid: 24fb9b5b-43b7-4058-a7e5-a0499ada1fda
+  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
   flow: xtls-rprx-vision
   tls: true
-  servername: 146.19.254.171
+  servername: ams2.shtil.io
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 08
-  server: 195.206.235.74
-  port: 443
+- name: 🇳🇱 荷兰 (Netherlands) 07
+  server: 48.102.173.24
+  port: 444
   udp: true
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
   tls: true
-  reality-opts:
-    public-key: xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA
-    short-id: 6d289ff0f47c0aac
-  servername: 961ec0g.nl13.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 7d5abcd7d8a1
-- name: 🇳🇱 荷兰 (Netherlands) 09
+  servername: neplay603.gangtype.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /stream/updates/a66d7902
+    headers:
+      Host: neplay603.gangtype.com
+- name: 🇳🇱 荷兰 (Netherlands) 08
   server: 48.102.205.89
   port: 22444
   udp: true
@@ -110,19 +99,44 @@ proxies:
     public-key: T1BWBw3lq9G1LiQ7eQSPfdNQic7bUMEbdFNJBewAwB8
     short-id: 6ad3c0f1e9b2478a
   servername: fontanka.ru
+  client-fingerprint: edge
+- name: 🇳🇱 荷兰 (Netherlands) 09
+  server: 146.19.254.171
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 24fb9b5b-43b7-4058-a7e5-a0499ada1fda
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 146.19.254.171
+  skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 10
-  server: 196.245.153.111
+- name: 🇳🇱 荷兰 (Netherlands) 10 R53
+  server: 188.166.81.135
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 11
+  server: 195.206.235.48
   port: 443
   udp: true
   type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   tls: true
   reality-opts:
-    public-key: 9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc
-    short-id: 2ca59bdc5121f921
-  servername: 76574ct.nl8.h1clayd.click
-  client-fingerprint: firefox
+    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
+    short-id: d3bd772514c87d28
+  servername: 717252g.nl8.h1clayd.click
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 204adda7e3da
 proxy-groups:
 - name: PROXIES
   type: select
@@ -137,7 +151,8 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
+  - 🇳🇱 荷兰 (Netherlands) 10 R53
+  - 🇳🇱 荷兰 (Netherlands) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -152,6 +167,7 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 07
   - 🇳🇱 荷兰 (Netherlands) 08
   - 🇳🇱 荷兰 (Netherlands) 09
-  - 🇳🇱 荷兰 (Netherlands) 10
+  - 🇳🇱 荷兰 (Netherlands) 10 R53
+  - 🇳🇱 荷兰 (Netherlands) 11
 rules:
 - MATCH,PROXIES
