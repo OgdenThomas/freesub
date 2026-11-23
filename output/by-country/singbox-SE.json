@@ -5,7 +5,7 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇸🇪 瑞典 (Sweden) 01 R40",
+      "tag": "🇸🇪 瑞典 (Sweden) 01",
       "server": "138.199.55.243",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -20,11 +20,7 @@
       "tls": {
         "enabled": true,
         "server_name": "138-124-86-230.sslip.io",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "grpc",
@@ -32,45 +28,20 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇸🇪 瑞典 (Sweden) 03",
-      "server": "sw100.marshonet.store",
-      "server_port": 8228,
-      "password": "pHLdtRnEC5stYZvt9GqMyMYx215AskPW",
-      "tls": {
-        "enabled": true,
-        "server_name": "sw100.marshonet.store",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "trgrpc"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 瑞典 (Sweden) 01 R40",
-        "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 瑞典 (Sweden) 01 R40",
-        "🇸🇪 瑞典 (Sweden) 02",
-        "🇸🇪 瑞典 (Sweden) 03"
+        "🇸🇪 瑞典 (Sweden) 01",
+        "🇸🇪 瑞典 (Sweden) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

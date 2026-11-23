@@ -5,61 +5,35 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 01 R53",
-      "server": "64.227.41.219",
-      "server_port": 443,
-      "uuid": "40992c2a-513e-4837-9594-23411fd42afd",
+      "tag": "🇬🇧 英国 (United Kingdom) 01",
+      "server": "213.176.92.168",
+      "server_port": 14430,
+      "uuid": "ba52cc43-700d-4040-9444-29214c98e6e0",
       "transport": {
-        "type": "http"
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "213.176.92.168"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 R53",
-      "server": "167.99.203.0",
+      "tag": "🇬🇧 英国 (United Kingdom) 02",
+      "server": "13.141.36.15",
       "server_port": 443,
-      "uuid": "40992c2a-513e-4837-9594-23411fd42afd",
-      "transport": {
-        "type": "http"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 R63",
-      "server": "136.176.68.34",
-      "server_port": 443,
-      "uuid": "dbf3f074-3b18-43f3-b82a-debd8c879c69",
-      "flow": "xtls-rprx-vision",
+      "uuid": "2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "a80b5386.fi2.h1clayd.click",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo",
-          "short_id": "a6040129ad7f4b74"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 ⚠R",
-      "server": "51.38.71.147",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
-      "tls": {
-        "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws",
-        "headers": {
-          "Host": "uk1.connectsuite.org"
+          "public_key": "PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc",
+          "short_id": "cc678f10161992a9"
         }
       }
     },
@@ -68,20 +42,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 英国 (United Kingdom) 01 R53",
-        "🇬🇧 英国 (United Kingdom) 02 R53",
-        "🇬🇧 英国 (United Kingdom) 03 R63",
-        "🇬🇧 英国 (United Kingdom) 04 ⚠R"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 英国 (United Kingdom) 01 R53",
-        "🇬🇧 英国 (United Kingdom) 02 R53",
-        "🇬🇧 英国 (United Kingdom) 03 R63",
-        "🇬🇧 英国 (United Kingdom) 04 ⚠R"
+        "🇬🇧 英国 (United Kingdom) 01",
+        "🇬🇧 英国 (United Kingdom) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

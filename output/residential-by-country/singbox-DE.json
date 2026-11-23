@@ -4,25 +4,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇮🇷 IR 01",
-      "server": "87.82.59.60",
-      "server_port": 837,
-      "uuid": "d8b42cd5-b149-4356-9e61-444444444444"
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 01 (移动家宽)",
+      "server": "47.254.167.157",
+      "server_port": 443,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y="
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 IR 01"
+        "🇩🇪 德国 (Germany) 01 (移动家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 IR 01"
+        "🇩🇪 德国 (Germany) 01 (移动家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

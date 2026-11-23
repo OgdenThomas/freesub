@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16112
+  server: dog-hk.kunlun01dns.com
+  port: 21020
   udp: true
   type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
 - name: 🇭🇰 中国香港 (Hong Kong) 02
@@ -26,32 +26,21 @@ proxies:
   servername: mensura.cdn-apple.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03
-  server: 62.60.232.226
-  port: 2096
-  udp: true
-  type: vless
-  uuid: 3d409814-b663-411e-8f54-a112ecba7ddd
-  flow: xtls-rprx-vision
-  tls: true
-  servername: nova-house.justext.space
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 04
-  server: bYWXdhIRqKJj8XAZ.v.3dns.vip
+  server: 47.86.90.31
   port: 443
   udp: true
   type: vmess
-  uuid: 234a80412b4d44a3a8d8523cbfd58dc4
+  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
   alterId: 0
   cipher: auto
   tls: true
-  servername: bYWXdhIRqKJj8XAZ.v.3dns.vip
+  servername: bywxdhirqkjj8xaz.v.3dns.vip
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: bYWXdhIRqKJj8XAZ.v.3dns.vip
+      Host: bywxdhirqkjj8xaz.v.3dns.vip
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,7 +49,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -69,6 +57,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 01
   - 🇭🇰 中国香港 (Hong Kong) 02
   - 🇭🇰 中国香港 (Hong Kong) 03
-  - 🇭🇰 中国香港 (Hong Kong) 04
 rules:
 - MATCH,PROXIES

@@ -4,19 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01",
-      "server": "34.80.15.95",
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 01",
+      "server": "188.225.36.219",
       "server_port": 443,
-      "password": "123456",
+      "uuid": "0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
       "tls": {
         "enabled": true,
-        "server_name": "tw.ctt25.uk",
+        "server_name": "olvento.space",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "olvento.sync.v1"
       }
     },
     {
@@ -24,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01"
+        "🇹🇷 土耳其 (Turkey) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01"
+        "🇹🇷 土耳其 (Turkey) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
-  server: 91.219.23.76
+- name: 🇹🇷 土耳其 (Turkey) 01
+  server: 188.225.36.219
   port: 443
   udp: true
   type: vless
-  uuid: 8b1b59c8-8802-0002-a636-ffe786275594
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   tls: true
-  servername: cataloguebroker.comparecarprices.org
+  servername: olvento.space
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /media/ws/
+  network: grpc
+  grpc-opts:
+    grpc-service-name: olvento.sync.v1
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
+  - 🇹🇷 土耳其 (Turkey) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01
+  - 🇹🇷 土耳其 (Turkey) 01
 rules:
 - MATCH,PROXIES

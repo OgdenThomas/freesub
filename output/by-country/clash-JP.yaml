@@ -25,6 +25,17 @@ proxies:
   servername: www.microsoft.com
   client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 03
+  server: 168.110.63.247
+  port: 8081
+  udp: true
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇯🇵 日本 (Japan) 04
   server: 161.33.20.255
   port: 8880
   udp: true
@@ -34,8 +45,8 @@ proxies:
   cipher: auto
   network: ws
   ws-opts:
-    path: e0856508-d693-450a-a099-455091dc4f25-vm
-- name: 🇯🇵 日本 (Japan) 04 R46
+    path: /e0856508-d693-450a-a099-455091dc4f25-vm
+- name: 🇯🇵 日本 (Japan) 05 R43
   server: 94.177.131.113
   port: 443
   udp: true
@@ -44,7 +55,8 @@ proxies:
   tls: true
   servername: kuruish.org
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 05
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 06
   server: 45.76.222.108
   port: 443
   udp: true
@@ -54,23 +66,6 @@ proxies:
   reality-opts:
     public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
     short-id: b5c85d2d
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 06 R51
-  server: 172.104.86.181
-  port: 443
-  udp: true
-  type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  tls: true
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -113,19 +108,11 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🇯🇵 日本 (Japan) 09
-  server: xinbulongdong.com
-  port: 443
-  udp: true
-  type: trojan
-  password: +vuY9gGdZ/h7Yk4Q
-  sni: xinbulongdong.com
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 10
   server: djj.zjlo.top
   port: 23169
   udp: true
   type: vless
-  uuid: 9da605d3-f5f7-4135-f806-450f036f9351
+  uuid: f67b1159-a61f-4ae4-9844-0701b716a290
   flow: xtls-rprx-vision
   tls: true
   servername: djj.zjlo.top
@@ -139,13 +126,12 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04 R46
-  - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06 R51
+  - 🇯🇵 日本 (Japan) 04
+  - 🇯🇵 日本 (Japan) 05 R43
+  - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
   - 🇯🇵 日本 (Japan) 09
-  - 🇯🇵 日本 (Japan) 10
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -154,12 +140,11 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04 R46
-  - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06 R51
+  - 🇯🇵 日本 (Japan) 04
+  - 🇯🇵 日本 (Japan) 05 R43
+  - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
   - 🇯🇵 日本 (Japan) 09
-  - 🇯🇵 日本 (Japan) 10
 rules:
 - MATCH,PROXIES
