@@ -4,16 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vmess",
       "tag": "🇯🇵 日本 (Japan) 01",
-      "server": "168.138.205.100",
-      "server_port": 53758,
-      "method": "aes-128-gcm",
-      "password": "Bwlqh7GcFB"
+      "server": "168.110.63.247",
+      "server_port": 8081,
+      "uuid": "c3bde296-8e44-4b8c-a325-577d5b3cc7c8",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vless"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇯🇵 日本 (Japan) 02",
+      "server": "161.33.20.255",
+      "server_port": 8880,
+      "uuid": "e0856508-d693-450a-a099-455091dc4f25",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/e0856508-d693-450a-a099-455091dc4f25-vm"
+      }
     },
     {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 02",
+      "tag": "🇯🇵 日本 (Japan) 03",
       "server": "158.101.151.157",
       "server_port": 443,
       "uuid": "66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
@@ -33,38 +49,27 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 03",
-      "server": "168.110.63.247",
-      "server_port": 8081,
-      "uuid": "c3bde296-8e44-4b8c-a325-577d5b3cc7c8",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 04",
-      "server": "161.33.20.255",
-      "server_port": 8880,
-      "uuid": "e0856508-d693-450a-a099-455091dc4f25",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/e0856508-d693-450a-a099-455091dc4f25-vm"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 05 R43",
+      "tag": "🇯🇵 日本 (Japan) 04 R43",
       "server": "94.177.131.113",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
         "server_name": "kuruish.org",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05",
+      "server": "djj.zjlo.top",
+      "server_port": 23169,
+      "uuid": "3eb053cb-d6f8-4b31-8180-222e1cc6f8ff",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "djj.zjlo.top",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -127,8 +132,16 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 08",
+      "server": "168.138.205.100",
+      "server_port": 53758,
+      "method": "aes-128-gcm",
+      "password": "Bwlqh7GcFB"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 09",
       "server": "149.28.29.156",
       "server_port": 443,
       "uuid": "aa1a9052-720f-4bb0-92be-21b6baf9f386",
@@ -154,23 +167,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 09",
-      "server": "djj.zjlo.top",
-      "server_port": 23169,
-      "uuid": "f67b1159-a61f-4ae4-9844-0701b716a290",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "djj.zjlo.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -178,8 +174,8 @@
         "🇯🇵 日本 (Japan) 01",
         "🇯🇵 日本 (Japan) 02",
         "🇯🇵 日本 (Japan) 03",
-        "🇯🇵 日本 (Japan) 04",
-        "🇯🇵 日本 (Japan) 05 R43",
+        "🇯🇵 日本 (Japan) 04 R43",
+        "🇯🇵 日本 (Japan) 05",
         "🇯🇵 日本 (Japan) 06",
         "🇯🇵 日本 (Japan) 07",
         "🇯🇵 日本 (Japan) 08",
@@ -193,8 +189,8 @@
         "🇯🇵 日本 (Japan) 01",
         "🇯🇵 日本 (Japan) 02",
         "🇯🇵 日本 (Japan) 03",
-        "🇯🇵 日本 (Japan) 04",
-        "🇯🇵 日本 (Japan) 05 R43",
+        "🇯🇵 日本 (Japan) 04 R43",
+        "🇯🇵 日本 (Japan) 05",
         "🇯🇵 日本 (Japan) 06",
         "🇯🇵 日本 (Japan) 07",
         "🇯🇵 日本 (Japan) 08",

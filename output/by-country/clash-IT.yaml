@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01
-  server: 202.50.253.18
+  server: 202.50.253.27
   port: 19999
   udp: true
   type: ss
@@ -19,27 +19,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇮🇹 意大利 (Italy) 03
-  server: 202.50.253.36
+  server: 202.50.253.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 04
-  server: 202.50.253.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 05 R40
+- name: 🇮🇹 意大利 (Italy) 04 R40
   server: 202.50.253.45
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 06
+- name: 🇮🇹 意大利 (Italy) 05
   server: 82.118.16.187
   port: 443
   udp: true
@@ -52,19 +45,13 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 07
-  server: 82.118.16.189
-  port: 443
+- name: 🇮🇹 意大利 (Italy) 06
+  server: 202.50.253.36
+  port: 19999
   udp: true
-  type: vless
-  uuid: 29f178f7-f96f-46ba-8fc0-bbcd690ba788
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4
-    short-id: 1e9a49dd374c1191
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,10 +60,9 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04
-  - 🇮🇹 意大利 (Italy) 05 R40
+  - 🇮🇹 意大利 (Italy) 04 R40
+  - 🇮🇹 意大利 (Italy) 05
   - 🇮🇹 意大利 (Italy) 06
-  - 🇮🇹 意大利 (Italy) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,9 +71,8 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 01
   - 🇮🇹 意大利 (Italy) 02
   - 🇮🇹 意大利 (Italy) 03
-  - 🇮🇹 意大利 (Italy) 04
-  - 🇮🇹 意大利 (Italy) 05 R40
+  - 🇮🇹 意大利 (Italy) 04 R40
+  - 🇮🇹 意大利 (Italy) 05
   - 🇮🇹 意大利 (Italy) 06
-  - 🇮🇹 意大利 (Italy) 07
 rules:
 - MATCH,PROXIES

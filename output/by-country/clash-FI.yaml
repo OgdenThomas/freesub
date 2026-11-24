@@ -17,17 +17,27 @@ proxies:
     short-id: 81959fce
   servername: apple.com
   client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 65.108.240.210
+  port: 39018
+  udp: true
+  type: vmess
+  uuid: 8ca123a8-720b-47c5-bd0c-637431418b09
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
 rules:
 - MATCH,PROXIES

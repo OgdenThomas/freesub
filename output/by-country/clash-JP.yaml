@@ -5,13 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 168.138.205.100
-  port: 53758
+  server: 168.110.63.247
+  port: 8081
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vless
 - name: 🇯🇵 日本 (Japan) 02
+  server: 161.33.20.255
+  port: 8880
+  udp: true
+  type: vmess
+  uuid: e0856508-d693-450a-a099-455091dc4f25
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /e0856508-d693-450a-a099-455091dc4f25-vm
+- name: 🇯🇵 日本 (Japan) 03
   server: 158.101.151.157
   port: 443
   udp: true
@@ -24,29 +39,7 @@ proxies:
     short-id: 684c7531e599dec0
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 03
-  server: 168.110.63.247
-  port: 8081
-  udp: true
-  type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇯🇵 日本 (Japan) 04
-  server: 161.33.20.255
-  port: 8880
-  udp: true
-  type: vmess
-  uuid: e0856508-d693-450a-a099-455091dc4f25
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /e0856508-d693-450a-a099-455091dc4f25-vm
-- name: 🇯🇵 日本 (Japan) 05 R43
+- name: 🇯🇵 日本 (Japan) 04 R43
   server: 94.177.131.113
   port: 443
   udp: true
@@ -54,6 +47,16 @@ proxies:
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   tls: true
   servername: kuruish.org
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 05
+  server: djj.zjlo.top
+  port: 23169
+  udp: true
+  type: vless
+  uuid: 3eb053cb-d6f8-4b31-8180-222e1cc6f8ff
+  flow: xtls-rprx-vision
+  tls: true
+  servername: djj.zjlo.top
   skip-cert-verify: false
   client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 06
@@ -91,6 +94,13 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🇯🇵 日本 (Japan) 08
+  server: 168.138.205.100
+  port: 53758
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇯🇵 日本 (Japan) 09
   server: 149.28.29.156
   port: 443
   udp: true
@@ -107,17 +117,6 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 09
-  server: djj.zjlo.top
-  port: 23169
-  udp: true
-  type: vless
-  uuid: f67b1159-a61f-4ae4-9844-0701b716a290
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -126,8 +125,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05 R43
+  - 🇯🇵 日本 (Japan) 04 R43
+  - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08
@@ -140,8 +139,8 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 01
   - 🇯🇵 日本 (Japan) 02
   - 🇯🇵 日本 (Japan) 03
-  - 🇯🇵 日本 (Japan) 04
-  - 🇯🇵 日本 (Japan) 05 R43
+  - 🇯🇵 日本 (Japan) 04 R43
+  - 🇯🇵 日本 (Japan) 05
   - 🇯🇵 日本 (Japan) 06
   - 🇯🇵 日本 (Japan) 07
   - 🇯🇵 日本 (Japan) 08

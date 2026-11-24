@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01",
-      "server": "dog-hk.kunlun01dns.com",
-      "server_port": 21020,
-      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01",
       "server": "2.26.204.46",
       "server_port": 31001,
       "uuid": "12a4f736-2238-49ee-831f-5516f15cc951",
@@ -33,22 +25,19 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03",
-      "server": "47.86.90.31",
-      "server_port": 443,
-      "uuid": "234a8041-2b4d-44a3-a8d8-523cbfd58dc4",
-      "security": "auto",
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02",
+      "server": "62.60.232.226",
+      "server_port": 2096,
+      "uuid": "3d409814-b663-411e-8f54-a112ecba7ddd",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "bywxdhirqkjj8xaz.v.3dns.vip",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "Host": "bywxdhirqkjj8xaz.v.3dns.vip"
+        "server_name": "nova-house.justext.space",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     },
@@ -58,8 +47,7 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02",
-        "🇭🇰 中国香港 (Hong Kong) 03"
+        "🇭🇰 中国香港 (Hong Kong) 02"
       ]
     },
     {
@@ -67,8 +55,7 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01",
-        "🇭🇰 中国香港 (Hong Kong) 02",
-        "🇭🇰 中国香港 (Hong Kong) 03"
+        "🇭🇰 中国香港 (Hong Kong) 02"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
