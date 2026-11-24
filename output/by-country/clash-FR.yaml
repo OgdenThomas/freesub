@@ -5,14 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 ⚠R
-  server: 198.244.201.129
+  server: 198.244.202.215
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇫🇷 法国 (France) 02 ⚠R
-  server: 198.244.202.215
+  server: 198.244.201.129
   port: 19999
   udp: true
   type: ss
@@ -26,28 +26,6 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇫🇷 法国 (France) 04 R40
-  server: 91.134.35.72
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 05 R40
-  server: 46.105.222.155
-  port: 1270
-  udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 06 R40
   server: 79.137.99.183
   port: 1270
   udp: true
@@ -58,7 +36,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 07 R40
+- name: 🇫🇷 法国 (France) 05 R40
   server: 46.105.222.153
   port: 1270
   udp: true
@@ -69,8 +47,30 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 08 R40
+- name: 🇫🇷 法国 (France) 06 R40
   server: 46.105.222.156
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 07 R40
+  server: 91.134.35.72
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 08 R40
+  server: 162.19.82.57
   port: 1270
   udp: true
   type: vmess
@@ -92,7 +92,7 @@ proxies:
   servername: xmfhlpy.com
   skip-cert-verify: false
 - name: 🇫🇷 法国 (France) 10 R40
-  server: 162.19.82.57
+  server: 46.105.222.155
   port: 1270
   udp: true
   type: vmess
@@ -102,15 +102,18 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 11 R40
-  server: leviko-fr1177.shopingggg.ir
-  port: 2083
+- name: 🇫🇷 法国 (France) 11
+  server: netherlands.vpnserverhub.com
+  port: 443
   udp: true
   type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  network: ws
-  ws-opts:
-    path: /vless-kulo
+  uuid: 93ad7771-2a98-4933-8001-3b0c20fa88dd
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: y8-hfUvs9-MScp_tjMFi5LKuULGmnodHbI5Q_sTk_A0
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -126,7 +129,7 @@ proxy-groups:
   - 🇫🇷 法国 (France) 08 R40
   - 🇫🇷 法国 (France) 09 R40
   - 🇫🇷 法国 (France) 10 R40
-  - 🇫🇷 法国 (France) 11 R40
+  - 🇫🇷 法国 (France) 11
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -142,6 +145,6 @@ proxy-groups:
   - 🇫🇷 法国 (France) 08 R40
   - 🇫🇷 法国 (France) 09 R40
   - 🇫🇷 法国 (France) 10 R40
-  - 🇫🇷 法国 (France) 11 R40
+  - 🇫🇷 法国 (France) 11
 rules:
 - MATCH,PROXIES

@@ -5,14 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 48.103.218.77
-  port: 18443
+  server: 147.45.221.225
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  servername: nl.lucheeebezlimitnoekino.stream
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /media/ws/
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 200.169.179.233
+  server: leviko-ru4448.shopingggg.ir
   port: 443
   udp: true
   type: vless
@@ -20,18 +25,18 @@ proxies:
   tls: true
   servername: vps3.nemnogogo.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
 - name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 136.148.83.69
+  server: 136.148.83.70
   port: 443
   udp: true
   type: vless
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  uuid: 00000000-0000-0001-0000-000000000000
   tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+  servername: aszbk-ru-78dc.my-fade.cloud
   skip-cert-verify: false
   client-fingerprint: qq
 proxy-groups:
