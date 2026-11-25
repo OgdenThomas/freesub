@@ -4,15 +4,19 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🇻🇳 越南 (Vietnam) 01",
-      "server": "43.255.157.222",
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 01",
+      "server": "94.183.167.172",
       "server_port": 443,
-      "password": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "uuid": "d7121b33-e335-4921-bb00-4c0b157e7fc1",
       "tls": {
         "enabled": true,
-        "server_name": "xvxn1hkzf.mateflora.com",
-        "insecure": false
+        "server_name": "s8k4.scan-cdn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -20,14 +24,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇻🇳 越南 (Vietnam) 01"
+        "🇦🇪 阿联酋 (UAE) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇻🇳 越南 (Vietnam) 01"
+        "🇦🇪 阿联酋 (UAE) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

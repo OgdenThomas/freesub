@@ -4,25 +4,27 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇻🇳 越南 (Vietnam) 01
-  server: 43.255.157.222
-  port: 443
+- name: 🇵🇱 波兰 (Poland) 01
+  server: 92.63.189.39
+  port: 8443
   udp: true
-  type: trojan
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  sni: xvxn1hkzf.mateflora.com
+  type: vless
+  uuid: 7aa77858-f235-44d6-9434-7ab060848b17
+  flow: xtls-rprx-vision
+  tls: true
+  servername: avelon.onl
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇵🇱 波兰 (Poland) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01
+  - 🇵🇱 波兰 (Poland) 01
 rules:
 - MATCH,PROXIES
