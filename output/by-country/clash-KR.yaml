@@ -5,24 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: ikr200.zxom.eu.org
-  port: 20045
+  server: ifdmbpb.kdns.fr
+  port: 443
   udp: true
-  type: trojan
-  password: 463f7453753f4d47
-  sni: ikr200.zxom.eu.org
+  type: vless
+  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
+  tls: true
+  servername: ifdmbpb.kdns.fr
   skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 02
+  server: 104.25.128.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: db906786-8c49-4b17-9182-cea680ef954d
+  tls: true
+  servername: krc.80782636.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /kw7x2mq9
+    headers:
+      Host: krc.80782636.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
+  - 🇰🇷 韩国 (South Korea) 02
 rules:
 - MATCH,PROXIES

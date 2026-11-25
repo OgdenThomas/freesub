@@ -4,40 +4,35 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 R45
-  server: 189.30.65.203
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 490dc3b4-8d1d-49fd-840e-bd5277b41557
-  network: grpc
-  grpc-opts:
-    grpc-service-name: service-41f6a2a01377
-- name: 🇩🇪 德国 (Germany) 02
-  server: 217.60.94.115
+- name: 🇩🇪 德国 (Germany) 01
+  server: 8.209.73.203
   port: 443
   udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+- name: 🇩🇪 德国 (Germany) 02 R46
+  server: 51.195.91.135
+  port: 8443
+  udp: true
   type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
+  uuid: a688bbe2-e455-11f1-a2d1-0f56c102b673
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: de13-r.bankai.party
+    public-key: GbzSIW3yd11r22Twahtyz4CMDxUj_QQe5RKvZukxDUw
+    short-id: 992f9f92ddfa5056
+  servername: cloudflare.com
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 03
-  server: 189.24.82.30
-  port: 443
+- name: 🇩🇪 德国 (Germany) 03 ⚠R
+  server: 91.107.169.224
+  port: 80
   udp: true
-  type: vless
-  uuid: b354463f-ac84-422e-9a26-556c81ba001c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 77HTpkO_F3cUfA5Trka3eSh8V18atRMLyclGqZ__8C8
-    short-id: b73c53b18b65dd90
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: 014f8bf6-9221-4f99-838f-4c16ca90334f
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
 - name: 🇩🇪 德国 (Germany) 04
   server: render.com
   port: 2095
@@ -51,148 +46,161 @@ proxies:
       Host: xn--alspeedtest.net.onlinewebsite24.ir
 - name: 🇩🇪 德国 (Germany) 05
   server: 191.217.215.228
-  port: 2053
+  port: 2096
   udp: true
   type: vless
   uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  flow: xtls-rprx-vision
   tls: true
-  servername: 191.217.215.228
+  servername: st3b6e5.rumedia-cdn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 06 R50
-  server: leviko-de7171.shopingggg.ir
-  port: 9543
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st3b6e5.rumedia-cdn.com
+- name: 🇩🇪 德国 (Germany) 06
+  server: 152.53.120.90
+  port: 50955
   udp: true
   type: vless
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcdf
-  servername: storage.yandexcloud.net
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 07
-  server: 172.64.150.205
+  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
+- name: 🇩🇪 德国 (Germany) 07 R45
+  server: 189.30.65.203
   port: 2083
   udp: true
   type: vless
-  uuid: bd6c11e0-0233-4fb1-ba97-8d5f16d7155f
+  uuid: 490dc3b4-8d1d-49fd-840e-bd5277b41557
+  network: grpc
+  grpc-opts:
+    grpc-service-name: service-41f6a2a01377
+- name: 🇩🇪 德国 (Germany) 08 R46
+  server: 104.17.70.206
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 3692de53-42e6-4aed-a522-40ec355dcd2f
   tls: true
-  servername: site.check-looks.space
+  servername: free.sahanwickramasinghe.com
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: site.check-looks.space
-- name: 🇩🇪 德国 (Germany) 08
-  server: ev.zoom.us
-  port: 8443
+      Host: free.sahanwickramasinghe.com
+- name: 🇩🇪 德国 (Germany) 09 R46
+  server: 57.129.113.16
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+- name: 🇩🇪 德国 (Germany) 10
+  server: ifi1.modemjibi.com
+  port: 993
   udp: true
   type: vless
-  uuid: c9b4fb55-1634-436f-beb7-3b1db5b0131d
+  uuid: 17ead557-8407-42ae-b9a1-f11a869f99c6
   tls: true
-  servername: free-server.techsonic.dev
+  servername: ifi1.modemjibi.com.
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: 🇩🇪 德国 (Germany) 09
-  server: vellum.filnex.baby
+    path: /
+- name: 🇩🇪 德国 (Germany) 11
+  server: 81.200.158.26
   port: 443
   udp: true
   type: vless
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   tls: true
-  servername: rookery.moltex.click
+  servername: fernglade.gerqix.online
   skip-cert-verify: false
   client-fingerprint: firefox
   network: grpc
   grpc-opts:
-    grpc-service-name: glush.de3.v1
-- name: 🇩🇪 德国 (Germany) 10
-  server: 72.56.1.44
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  tls: true
-  servername: paperbirch.merlano.monster
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /api/de1/stream
-    headers:
-      Host: paperbirch.merlano.monster
-- name: 🇩🇪 德国 (Germany) 11
-  server: 47.254.167.157
-  port: 443
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+    grpc-service-name: glush.de1.v1
 - name: 🇩🇪 德国 (Germany) 12
-  server: 77.73.71.200
+  server: woodgrain.filnex.baby
   port: 443
   udp: true
   type: vless
   uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
   tls: true
-  servername: lagoon.gerqix.online
+  servername: larchbank.elvano.website
   skip-cert-verify: false
   client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /api/de5/stream
+    path: /api/de2/stream
     headers:
-      Host: lagoon.gerqix.online
+      Host: woodgrain.filnex.baby
 - name: 🇩🇪 德国 (Germany) 13
-  server: 152.53.120.90
-  port: 50955
+  server: 185.247.224.206
+  port: 443
   udp: true
   type: vless
-  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  tls: true
+  servername: inlay.merlano.monster
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/de3/stream
+    headers:
+      Host: inlay.merlano.monster
+- name: 🇩🇪 德国 (Germany) 14
+  server: 195.206.235.202
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
+  servername: 4935e4t.de25.h1clayd.click
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 R45
-  - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 02 R46
+  - 🇩🇪 德国 (Germany) 03 ⚠R
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R50
-  - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 06
+  - 🇩🇪 德国 (Germany) 07 R45
+  - 🇩🇪 德国 (Germany) 08 R46
+  - 🇩🇪 德国 (Germany) 09 R46
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 R45
-  - 🇩🇪 德国 (Germany) 02
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 01
+  - 🇩🇪 德国 (Germany) 02 R46
+  - 🇩🇪 德国 (Germany) 03 ⚠R
   - 🇩🇪 德国 (Germany) 04
   - 🇩🇪 德国 (Germany) 05
-  - 🇩🇪 德国 (Germany) 06 R50
-  - 🇩🇪 德国 (Germany) 07
-  - 🇩🇪 德国 (Germany) 08
-  - 🇩🇪 德国 (Germany) 09
+  - 🇩🇪 德国 (Germany) 06
+  - 🇩🇪 德国 (Germany) 07 R45
+  - 🇩🇪 德国 (Germany) 08 R46
+  - 🇩🇪 德国 (Germany) 09 R46
   - 🇩🇪 德国 (Germany) 10
   - 🇩🇪 德国 (Germany) 11
   - 🇩🇪 德国 (Germany) 12
   - 🇩🇪 德国 (Germany) 13
+  - 🇩🇪 德国 (Germany) 14
 rules:
 - MATCH,PROXIES
