@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: 168.138.205.100
+  server: jpa.123069.xyz
   port: 53758
   udp: true
   type: ss
@@ -23,14 +23,30 @@ proxies:
   ws-opts:
     path: /vless
 - name: 🇯🇵 日本 (Japan) 03
-  server: dog-jp.kunlun01dns.com
-  port: 21017
+  server: 161.33.20.255
+  port: 8880
   udp: true
   type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  uuid: e0856508-d693-450a-a099-455091dc4f25
   alterId: 0
   cipher: auto
+  network: ws
+  ws-opts:
+    path: /e0856508-d693-450a-a099-455091dc4f25-vm
 - name: 🇯🇵 日本 (Japan) 04
+  server: 158.101.151.157
+  port: 443
+  udp: true
+  type: vless
+  uuid: 66171cbe-0b4b-4b24-99f6-d5a822f4dc9a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
+    short-id: 684c7531e599dec0
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05
   server: 149.28.29.156
   port: 443
   udp: true
@@ -47,29 +63,18 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 05
-  server: 155.248.175.201
-  port: 23169
-  udp: true
-  type: vless
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-  flow: xtls-rprx-vision
-  tls: true
-  servername: djj.zjlo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
 - name: 🇯🇵 日本 (Japan) 06
-  server: jp.075661.xyz
-  port: 46935
+  server: vl-x2.qz10086.top
+  port: 38105
   udp: true
   type: vless
-  uuid: 7a87d516-058e-495a-bc09-e527178639b4
+  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: MmzrzoNr4muOhgi1ZAmzHbuciiKTWeu3hoi66Rp8Ai4
-    short-id: e582410c5e3ccd68
-  servername: yahoo.com
+    public-key: y0p1yI8OoWqcOE4XEv7ueudaSOOc5UIb5yFyA3SstD8
+    short-id: 7e7e8c23
+  servername: www.apple.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES

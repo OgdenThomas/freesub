@@ -5,30 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01
-  server: ifdmbpb.kdns.fr
-  port: 443
+  server: 49.254.204.133
+  port: 1774
   udp: true
-  type: vless
-  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
-  tls: true
-  servername: ifdmbpb.kdns.fr
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
 - name: 🇰🇷 韩国 (South Korea) 02
-  server: 104.25.128.15
+  server: 129.154.61.196
+  port: 800
+  udp: true
+  type: vmess
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+  alterId: 0
+  cipher: auto
+- name: 🇰🇷 韩国 (South Korea) 03
+  server: krd.80782636.xyz
   port: 443
   udp: true
   type: vless
   uuid: db906786-8c49-4b17-9182-cea680ef954d
   tls: true
-  servername: krc.80782636.xyz
+  servername: krd.80782636.xyz
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /kw7x2mq9
     headers:
-      Host: krc.80782636.xyz
+      Host: krd.80782636.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -36,6 +41,7 @@ proxy-groups:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -43,5 +49,6 @@ proxy-groups:
   proxies:
   - 🇰🇷 韩国 (South Korea) 01
   - 🇰🇷 韩国 (South Korea) 02
+  - 🇰🇷 韩国 (South Korea) 03
 rules:
 - MATCH,PROXIES

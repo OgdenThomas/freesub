@@ -4,19 +4,23 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇦🇺 澳大利亚 (Australia) 01",
-      "server": "159.13.55.48",
-      "server_port": 20000,
-      "password": "b42d90fa667942aebc734d60",
+      "type": "vmess",
+      "tag": "🇮🇩 印尼 (Indonesia) 01",
+      "server": "172.66.142.170",
+      "server_port": 443,
+      "uuid": "4caf156a-3309-4105-8388-d388eb9e1105",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "hy2-au2.whuiy.xyz",
+        "server_name": "zoomgov.nathaya.web.id",
         "insecure": false
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "b42d90fa667942aebc734d60"
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/vmess",
+        "headers": {
+          "Host": "id2.nathaya.web.id"
+        }
       }
     },
     {
@@ -24,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇮🇩 印尼 (Indonesia) 01"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01"
+        "🇮🇩 印尼 (Indonesia) 01"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

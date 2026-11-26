@@ -5,18 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 147.45.221.225
-  port: 443
+  server: 194.87.69.12
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 45.150.238.201
+  port: 20443
   udp: true
   type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: 67a31bdf-5846-409d-8b49-3d795e1a2a4f
+  flow: xtls-rprx-vision
   tls: true
-  servername: nl.lucheeebezlimitnoekino.stream
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /media/ws/
-- name: 🇷🇺 俄罗斯 (Russia) 02
+  reality-opts:
+    public-key: xE2CNenfDgtu28WQ23Bq2KfdkEj3XN42P_ZVou1YRC4
+    short-id: f847646adc2b82fe
+  servername: dc.insidenet.ru
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 03
   server: 136.148.83.69
   port: 443
   udp: true
@@ -26,7 +34,7 @@ proxies:
   servername: szqbx-ru-77dc.my-fade.cloud
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
+- name: 🇷🇺 俄罗斯 (Russia) 04
   server: 201.24.116.192
   port: 443
   udp: true
@@ -39,19 +47,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: dc.insidenet.ru
-  port: 20443
-  udp: true
-  type: vless
-  uuid: 67a31bdf-5846-409d-8b49-3d795e1a2a4f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xE2CNenfDgtu28WQ23Bq2KfdkEj3XN42P_ZVou1YRC4
-    short-id: f847646adc2b82fe
-  servername: dc.insidenet.ru
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
