@@ -1,0 +1,39 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 R63",
+      "server": "66.163.117.141",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "n87cM0Lv7Y3T"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 英国 (United Kingdom) 01 R63"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 英国 (United Kingdom) 01 R63"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

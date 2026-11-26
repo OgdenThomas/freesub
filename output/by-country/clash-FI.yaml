@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇫🇮 芬兰 (Finland) 01
+  server: 31.76.77.231
+  port: 443
+  udp: true
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4
+    short-id: cc85fc7134024405
+  servername: www.google.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 02
+  server: 2.27.203.38
+  port: 443
+  udp: true
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI
+    short-id: fd0cc2b3ac52deb8
+  servername: www.google.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇫🇮 芬兰 (Finland) 01
+  - 🇫🇮 芬兰 (Finland) 02
+rules:
+- MATCH,PROXIES

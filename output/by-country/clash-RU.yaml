@@ -5,37 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 194.87.69.12
+  server: 185.22.152.168
   port: 18443
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
 - name: 🇷🇺 俄罗斯 (Russia) 02
-  server: 45.150.238.201
-  port: 20443
-  udp: true
-  type: vless
-  uuid: 67a31bdf-5846-409d-8b49-3d795e1a2a4f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xE2CNenfDgtu28WQ23Bq2KfdkEj3XN42P_ZVou1YRC4
-    short-id: f847646adc2b82fe
-  servername: dc.insidenet.ru
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: 136.148.83.69
+  server: leviko-al2006.shopingggg.ir
   port: 443
   udp: true
   type: vless
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+  servername: nl.lucheeebezlimitnoekino.stream
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 201.24.116.192
+  network: ws
+  ws-opts:
+    path: /media/ws/
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: vps3.nemnogogo.com
   port: 443
   udp: true
   type: vless
@@ -43,10 +32,32 @@ proxies:
   tls: true
   servername: vps3.nemnogogo.com
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 136.148.83.70
+  port: 443
+  udp: true
+  type: vless
+  uuid: 00000000-0000-0001-0000-000000000000
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: qq
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: 45.158.197.237
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 18baf01c-99b2-4675-997c-1ec73e3eadff
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+  servername: apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,6 +67,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,5 +77,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
+  - 🇷🇺 俄罗斯 (Russia) 05
 rules:
 - MATCH,PROXIES

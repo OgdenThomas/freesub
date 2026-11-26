@@ -14,17 +14,30 @@ proxies:
   servername: turkey-ip1.mmdaqaorg.xyz
   skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 02
+  server: v2new.nimbaha9.ir
+  port: 8080
+  udp: true
+  type: vless
+  uuid: f279c19a-b324-40cf-af57-049f9b1b68f2
+  network: ws
+  ws-opts:
+    path: /XDS45
+    headers:
+      Host: v2new.nimbaha9.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01
+  - 🇹🇷 土耳其 (Turkey) 02
 rules:
 - MATCH,PROXIES

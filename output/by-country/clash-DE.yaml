@@ -4,20 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 R46
-  server: 51.195.91.135
-  port: 8443
+- name: 🇩🇪 德国 (Germany) 01 R66
+  server: 193.108.119.15
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.iloverussia2026.com
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 02 R45
+  server: 189.30.65.203
+  port: 2083
   udp: true
   type: vless
-  uuid: a688bbe2-e455-11f1-a2d1-0f56c102b673
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GbzSIW3yd11r22Twahtyz4CMDxUj_QQe5RKvZukxDUw
-    short-id: 992f9f92ddfa5056
-  servername: cloudflare.com
-  client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 02 ⚠R
+  uuid: 490dc3b4-8d1d-49fd-840e-bd5277b41557
+  network: grpc
+  grpc-opts:
+    grpc-service-name: service-41f6a2a01377
+- name: 🇩🇪 德国 (Germany) 03 ⚠R
   server: 91.107.169.224
   port: 80
   udp: true
@@ -26,7 +30,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: httpupgrade
-- name: 🇩🇪 德国 (Germany) 03
+- name: 🇩🇪 德国 (Germany) 04
   server: 94.159.98.82
   port: 2053
   udp: true
@@ -37,8 +41,54 @@ proxies:
   servername: 94.159.98.82
   skip-cert-verify: false
   client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 04
-  server: 48.103.231.2
+- name: 🇩🇪 德国 (Germany) 05
+  server: 45.129.242.56
+  port: 443
+  udp: true
+  type: vless
+  uuid: ebdfaf99-41d8-4e48-8196-d54510ffb556
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY
+    short-id: abcdef
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 06 R46
+  server: 57.129.113.16
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+- name: 🇩🇪 德国 (Germany) 07
+  server: ifi1.modemjibi.com
+  port: 993
+  udp: true
+  type: vless
+  uuid: 17ead557-8407-42ae-b9a1-f11a869f99c6
+  tls: true
+  servername: ifi1.modemjibi.com.
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇩🇪 德国 (Germany) 08
+  server: 191.217.215.228
+  port: 2096
+  udp: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  tls: true
+  servername: st3b6e5.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+- name: 🇩🇪 德国 (Germany) 09
+  server: leviko-de9982.shopingggg.ir
   port: 443
   udp: true
   type: vless
@@ -50,59 +100,33 @@ proxies:
     short-id: 457fab2ac885dbe0
   servername: ee1-r.bankai.party
   client-fingerprint: chrome
-- name: 🇩🇪 德国 (Germany) 05 R45
-  server: 189.30.65.203
-  port: 2083
-  udp: true
-  type: vless
-  uuid: 490dc3b4-8d1d-49fd-840e-bd5277b41557
-  network: grpc
-  grpc-opts:
-    grpc-service-name: service-41f6a2a01377
-- name: 🇩🇪 德国 (Germany) 06
-  server: leviko-de1011.shopingggg.ir
-  port: 50955
-  udp: true
-  type: vless
-  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
-- name: 🇩🇪 德国 (Germany) 07 R46
-  server: 104.27.97.42
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 3692de53-42e6-4aed-a522-40ec355dcd2f
-  tls: true
-  servername: free.sahanwickramasinghe.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.sahanwickramasinghe.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 R46
-  - 🇩🇪 德国 (Germany) 02 ⚠R
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 01 R66
+  - 🇩🇪 德国 (Germany) 02 R45
+  - 🇩🇪 德国 (Germany) 03 ⚠R
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R45
-  - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07 R46
+  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 06 R46
+  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 09
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 R46
-  - 🇩🇪 德国 (Germany) 02 ⚠R
-  - 🇩🇪 德国 (Germany) 03
+  - 🇩🇪 德国 (Germany) 01 R66
+  - 🇩🇪 德国 (Germany) 02 R45
+  - 🇩🇪 德国 (Germany) 03 ⚠R
   - 🇩🇪 德国 (Germany) 04
-  - 🇩🇪 德国 (Germany) 05 R45
-  - 🇩🇪 德国 (Germany) 06
-  - 🇩🇪 德国 (Germany) 07 R46
+  - 🇩🇪 德国 (Germany) 05
+  - 🇩🇪 德国 (Germany) 06 R46
+  - 🇩🇪 德国 (Germany) 07
+  - 🇩🇪 德国 (Germany) 08
+  - 🇩🇪 德国 (Germany) 09
 rules:
 - MATCH,PROXIES

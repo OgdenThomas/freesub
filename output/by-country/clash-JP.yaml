@@ -5,24 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01
-  server: jpa.123069.xyz
-  port: 53758
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-- name: 🇯🇵 日本 (Japan) 02
-  server: 168.110.63.247
-  port: 8081
+  server: zfd-jpv2.kunlun01dns.com
+  port: 16120
   udp: true
   type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🇯🇵 日本 (Japan) 03
+- name: 🇯🇵 日本 (Japan) 02
   server: 161.33.20.255
   port: 8880
   udp: true
@@ -33,7 +23,7 @@ proxies:
   network: ws
   ws-opts:
     path: /e0856508-d693-450a-a099-455091dc4f25-vm
-- name: 🇯🇵 日本 (Japan) 04
+- name: 🇯🇵 日本 (Japan) 03
   server: 158.101.151.157
   port: 443
   udp: true
@@ -46,36 +36,24 @@ proxies:
     short-id: 684c7531e599dec0
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 05
-  server: 149.28.29.156
-  port: 443
+- name: 🇯🇵 日本 (Japan) 04
+  server: 168.110.63.247
+  port: 8081
   udp: true
-  type: vless
-  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
-  tls: true
-  reality-opts:
-    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
-    short-id: e535df57
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 06
-  server: vl-x2.qz10086.top
-  port: 38105
+    path: /vless
+- name: 🇯🇵 日本 (Japan) 05
+  server: 168.138.205.100
+  port: 53758
   udp: true
-  type: vless
-  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: y0p1yI8OoWqcOE4XEv7ueudaSOOc5UIb5yFyA3SstD8
-    short-id: 7e7e8c23
-  servername: www.apple.com
-  client-fingerprint: firefox
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
 proxy-groups:
 - name: PROXIES
   type: select
@@ -86,7 +64,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -97,6 +74,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03
   - 🇯🇵 日本 (Japan) 04
   - 🇯🇵 日本 (Japan) 05
-  - 🇯🇵 日本 (Japan) 06
 rules:
 - MATCH,PROXIES

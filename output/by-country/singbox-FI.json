@@ -1,0 +1,75 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 01",
+      "server": "31.76.77.231",
+      "server_port": 443,
+      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4",
+          "short_id": "cc85fc7134024405"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02",
+      "server": "2.27.203.38",
+      "server_port": 443,
+      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI",
+          "short_id": "fd0cc2b3ac52deb8"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇫🇮 芬兰 (Finland) 01",
+        "🇫🇮 芬兰 (Finland) 02"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

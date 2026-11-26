@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 波兰 (Poland) 01
+  server: 48.102.207.169
+  port: 443
+  udp: true
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: h7PkRRDOuhS9DQtU9TX0lQWiUW_u_803F7nVimuhln8
+    short-id: 0d059b684c11c739
+  servername: www.google.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 波兰 (Poland) 01
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 波兰 (Poland) 01
+rules:
+- MATCH,PROXIES

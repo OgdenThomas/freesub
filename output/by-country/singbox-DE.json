@@ -4,29 +4,31 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 01 R46",
-      "server": "51.195.91.135",
-      "server_port": 8443,
-      "uuid": "a688bbe2-e455-11f1-a2d1-0f56c102b673",
-      "flow": "xtls-rprx-vision",
+      "type": "trojan",
+      "tag": "🇩🇪 德国 (Germany) 01 R66",
+      "server": "193.108.119.15",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GbzSIW3yd11r22Twahtyz4CMDxUj_QQe5RKvZukxDUw",
-          "short_id": "992f9f92ddfa5056"
-        }
+        "server_name": "courses.iloverussia2026.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 02 R45",
+      "server": "189.30.65.203",
+      "server_port": 2083,
+      "uuid": "490dc3b4-8d1d-49fd-840e-bd5277b41557",
+      "transport": {
+        "type": "grpc",
+        "service_name": "service-41f6a2a01377"
       }
     },
     {
       "type": "vmess",
-      "tag": "🇩🇪 德国 (Germany) 02 ⚠R",
+      "tag": "🇩🇪 德国 (Germany) 03 ⚠R",
       "server": "91.107.169.224",
       "server_port": 80,
       "uuid": "014f8bf6-9221-4f99-838f-4c16ca90334f",
@@ -39,7 +41,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 03",
+      "tag": "🇩🇪 德国 (Germany) 04",
       "server": "94.159.98.82",
       "server_port": 2053,
       "uuid": "fbe22815-0718-4eae-816f-e91c67d15b54",
@@ -56,8 +58,80 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 04",
-      "server": "48.103.231.2",
+      "tag": "🇩🇪 德国 (Germany) 05",
+      "server": "45.129.242.56",
+      "server_port": 443,
+      "uuid": "ebdfaf99-41d8-4e48-8196-d54510ffb556",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "YURKlEQ3rap4KOXXGsVFZyYev2oDU2gCEbNTXPdKWRY",
+          "short_id": "abcdef"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 06 R46",
+      "server": "57.129.113.16",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "NcAXc0UZI6yQJE1p8QmOv8"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 07",
+      "server": "ifi1.modemjibi.com",
+      "server_port": 993,
+      "uuid": "17ead557-8407-42ae-b9a1-f11a869f99c6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ifi1.modemjibi.com.",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 08",
+      "server": "191.217.215.228",
+      "server_port": 2096,
+      "uuid": "fbe22815-0718-4eae-816f-e91c67d15b54",
+      "tls": {
+        "enabled": true,
+        "server_name": "st3b6e5.rumedia-cdn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cdn/v3/live"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 09",
+      "server": "leviko-de9982.shopingggg.ir",
       "server_port": 443,
       "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
       "flow": "xtls-rprx-vision",
@@ -76,73 +150,34 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 05 R45",
-      "server": "189.30.65.203",
-      "server_port": 2083,
-      "uuid": "490dc3b4-8d1d-49fd-840e-bd5277b41557",
-      "transport": {
-        "type": "grpc",
-        "service_name": "service-41f6a2a01377"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 06",
-      "server": "leviko-de1011.shopingggg.ir",
-      "server_port": 50955,
-      "uuid": "5ab065b0-2c7a-45a0-829d-9af9af7d8e05"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 07 R46",
-      "server": "104.27.97.42",
-      "server_port": 8443,
-      "uuid": "3692de53-42e6-4aed-a522-40ec355dcd2f",
-      "tls": {
-        "enabled": true,
-        "server_name": "free.sahanwickramasinghe.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "free.sahanwickramasinghe.com"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 R46",
-        "🇩🇪 德国 (Germany) 02 ⚠R",
-        "🇩🇪 德国 (Germany) 03",
+        "🇩🇪 德国 (Germany) 01 R66",
+        "🇩🇪 德国 (Germany) 02 R45",
+        "🇩🇪 德国 (Germany) 03 ⚠R",
         "🇩🇪 德国 (Germany) 04",
-        "🇩🇪 德国 (Germany) 05 R45",
-        "🇩🇪 德国 (Germany) 06",
-        "🇩🇪 德国 (Germany) 07 R46"
+        "🇩🇪 德国 (Germany) 05",
+        "🇩🇪 德国 (Germany) 06 R46",
+        "🇩🇪 德国 (Germany) 07",
+        "🇩🇪 德国 (Germany) 08",
+        "🇩🇪 德国 (Germany) 09"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 R46",
-        "🇩🇪 德国 (Germany) 02 ⚠R",
-        "🇩🇪 德国 (Germany) 03",
+        "🇩🇪 德国 (Germany) 01 R66",
+        "🇩🇪 德国 (Germany) 02 R45",
+        "🇩🇪 德国 (Germany) 03 ⚠R",
         "🇩🇪 德国 (Germany) 04",
-        "🇩🇪 德国 (Germany) 05 R45",
-        "🇩🇪 德国 (Germany) 06",
-        "🇩🇪 德国 (Germany) 07 R46"
+        "🇩🇪 德国 (Germany) 05",
+        "🇩🇪 德国 (Germany) 06 R46",
+        "🇩🇪 德国 (Germany) 07",
+        "🇩🇪 德国 (Germany) 08",
+        "🇩🇪 德国 (Germany) 09"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
