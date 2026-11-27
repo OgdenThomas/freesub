@@ -4,30 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01
-  server: 153.52.69.249
+- name: 🇮🇱 以色列 (Israel) 01
+  server: 195.206.235.72
   port: 443
   udp: true
   type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
+  uuid: 26843758-24de-4f76-b5d0-624038e353c4
   tls: true
   reality-opts:
-    public-key: WVfpQqoeOrTtCq052_IOxvMv7RCWfLlAOxEfsH1aa2U
-    short-id: d5492c7a39515c65
-  servername: cache-78.topp-con.xyz
+    public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
+    short-id: e572b6579ea525d4
+  servername: 71b840t.de7.h1clayd.click
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇱 以色列 (Israel) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇿 捷克 (Czech) 01
+  - 🇮🇱 以色列 (Israel) 01
 rules:
 - MATCH,PROXIES

@@ -4,28 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  server: v1.nimbaha13.ir
-  port: 8880
+- name: 🇬🇧 英国 (United Kingdom) 01
+  server: 193.188.21.253
+  port: 14430
   udp: true
   type: vless
-  uuid: 1c942ed7-fef9-45c6-9873-91f93075185d
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   network: ws
   ws-opts:
-    path: /dcfrtt
+    path: /vless
     headers:
-      Host: v1.nimbaha13.ir
+      Host: 193.188.21.253
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇬🇧 英国 (United Kingdom) 01
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇬🇧 英国 (United Kingdom) 01
 rules:
 - MATCH,PROXIES

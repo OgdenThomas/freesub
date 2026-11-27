@@ -4,31 +4,31 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 01 R45",
-      "server": "189.30.65.203",
-      "server_port": 2083,
-      "uuid": "490dc3b4-8d1d-49fd-840e-bd5277b41557",
-      "transport": {
-        "type": "grpc",
-        "service_name": "service-41f6a2a01377"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇩🇪 德国 (Germany) 02 R66",
-      "server": "193.108.119.193",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.iloverussia2026.com",
-        "insecure": false
-      }
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 01",
+      "server": "91.107.153.158",
+      "server_port": 19234,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "wUnQXn7BrZcpGZtsv1uQ3mjgiMX5enE1ZYberTUCiT0=:kOKJ/EilQdNyvMgFhmLv2SqnF/vlwyx6LeQ6ql1saYM="
     },
     {
       "type": "vmess",
-      "tag": "🇩🇪 德国 (Germany) 03 ⚠R",
+      "tag": "🇩🇪 德国 (Germany) 02",
+      "server": "91.107.153.158",
+      "server_port": 43160,
+      "uuid": "90274ec6-5781-49db-8ae2-d011d5763b83",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 03",
+      "server": "91.107.153.158",
+      "server_port": 41452,
+      "uuid": "90274ec6-5781-49db-8ae2-d011d5763b83"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇩🇪 德国 (Germany) 04 ⚠R",
       "server": "91.107.169.224",
       "server_port": 80,
       "uuid": "014f8bf6-9221-4f99-838f-4c16ca90334f",
@@ -40,34 +40,22 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇩🇪 德国 (Germany) 04",
-      "server": "94.130.237.57",
-      "server_port": 27154,
-      "uuid": "d9d02f3e-c877-4a1f-990e-f2418777f745",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/Telegram=@AmyraxVPN",
-        "headers": {
-          "Host": "94.130.237.57"
-        }
-      }
-    },
-    {
       "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 05",
-      "server": "191.217.215.228",
-      "server_port": 2053,
-      "uuid": "fbe22815-0718-4eae-816f-e91c67d15b54",
-      "flow": "xtls-rprx-vision",
+      "server": "91.107.185.86",
+      "server_port": 16893,
+      "uuid": "80256d6f-7cd3-4a3a-8df6-2981e52551dc",
       "tls": {
         "enabled": true,
-        "server_name": "191.217.215.228",
-        "insecure": false,
+        "server_name": "play.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dpmXAfLC6-Sf6cPjkQKGx_NliRQRFZ_oUiiPA5ALW0I",
+          "short_id": "849711f2b99d1176"
         }
       }
     },
@@ -94,33 +82,27 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 07 R46",
-      "server": "104.27.97.42",
-      "server_port": 8443,
-      "uuid": "3692de53-42e6-4aed-a522-40ec355dcd2f",
+      "tag": "🇩🇪 德国 (Germany) 07",
+      "server": "191.217.215.228",
+      "server_port": 2096,
+      "uuid": "fbe22815-0718-4eae-816f-e91c67d15b54",
       "tls": {
         "enabled": true,
-        "server_name": "free.sahanwickramasinghe.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "st3b6e5.rumedia-cdn.com",
+        "insecure": false
       },
       "transport": {
         "type": "ws",
+        "path": "/cdn/v3/live",
         "headers": {
-          "Host": "free.sahanwickramasinghe.com"
+          "Host": "st3b6e5.rumedia-cdn.com"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 08",
-      "server": "ifi1.modemjibi.com",
+      "server": "89.167.2.185",
       "server_port": 993,
       "uuid": "17ead557-8407-42ae-b9a1-f11a869f99c6",
       "tls": {
@@ -141,32 +123,88 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 09",
+      "server": "72.56.238.135",
+      "server_port": 443,
+      "uuid": "749b1c56-e658-4bf5-94bd-5c3286a4aed1",
+      "tls": {
+        "enabled": true,
+        "server_name": "ferncrest.gerqix.online",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/de1/stream",
+        "headers": {
+          "Host": "bookend.filnex.baby"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 10 R46",
+      "server": "104.17.70.206",
+      "server_port": 8443,
+      "uuid": "3692de53-42e6-4aed-a522-40ec355dcd2f",
+      "tls": {
+        "enabled": true,
+        "server_name": "free.sahanwickramasinghe.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "free.sahanwickramasinghe.com"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 德国 (Germany) 01 R45",
-        "🇩🇪 德国 (Germany) 02 R66",
-        "🇩🇪 德国 (Germany) 03 ⚠R",
-        "🇩🇪 德国 (Germany) 04",
+        "🇩🇪 德国 (Germany) 01",
+        "🇩🇪 德国 (Germany) 02",
+        "🇩🇪 德国 (Germany) 03",
+        "🇩🇪 德国 (Germany) 04 ⚠R",
         "🇩🇪 德国 (Germany) 05",
         "🇩🇪 德国 (Germany) 06",
-        "🇩🇪 德国 (Germany) 07 R46",
-        "🇩🇪 德国 (Germany) 08"
+        "🇩🇪 德国 (Germany) 07",
+        "🇩🇪 德国 (Germany) 08",
+        "🇩🇪 德国 (Germany) 09",
+        "🇩🇪 德国 (Germany) 10 R46"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 德国 (Germany) 01 R45",
-        "🇩🇪 德国 (Germany) 02 R66",
-        "🇩🇪 德国 (Germany) 03 ⚠R",
-        "🇩🇪 德国 (Germany) 04",
+        "🇩🇪 德国 (Germany) 01",
+        "🇩🇪 德国 (Germany) 02",
+        "🇩🇪 德国 (Germany) 03",
+        "🇩🇪 德国 (Germany) 04 ⚠R",
         "🇩🇪 德国 (Germany) 05",
         "🇩🇪 德国 (Germany) 06",
-        "🇩🇪 德国 (Germany) 07 R46",
-        "🇩🇪 德国 (Germany) 08"
+        "🇩🇪 德国 (Germany) 07",
+        "🇩🇪 德国 (Germany) 08",
+        "🇩🇪 德国 (Germany) 09",
+        "🇩🇪 德国 (Germany) 10 R46"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

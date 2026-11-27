@@ -4,28 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
-  server: v1.nimbaha13.ir
-  port: 8880
+- name: 🇰🇷 韩国 (South Korea) 01 (移动家宽)
+  server: 130.94.30.242
+  port: 443
   udp: true
   type: vless
-  uuid: 1c942ed7-fef9-45c6-9873-91f93075185d
-  network: ws
-  ws-opts:
-    path: /dcfrtt
-    headers:
-      Host: v1.nimbaha13.ir
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+  tls: true
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (移动家宽)
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽)
+  - 🇰🇷 韩国 (South Korea) 01 (移动家宽)
 rules:
 - MATCH,PROXIES

@@ -23,7 +23,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -32,12 +32,33 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇸🇪 瑞典 (Sweden) 03",
+      "server": "ws.dhafhdtjdti.site",
+      "server_port": 2053,
+      "uuid": "9f749472-c636-4c5a-af51-7f8feefaac81",
+      "tls": {
+        "enabled": true,
+        "server_name": "ws.dhafhdtjdti.site",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇸🇪 瑞典 (Sweden) 01",
-        "🇸🇪 瑞典 (Sweden) 02"
+        "🇸🇪 瑞典 (Sweden) 02",
+        "🇸🇪 瑞典 (Sweden) 03"
       ]
     },
     {
@@ -45,7 +66,8 @@
       "tag": "auto",
       "outbounds": [
         "🇸🇪 瑞典 (Sweden) 01",
-        "🇸🇪 瑞典 (Sweden) 02"
+        "🇸🇪 瑞典 (Sweden) 02",
+        "🇸🇪 瑞典 (Sweden) 03"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

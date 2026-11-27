@@ -20,10 +20,23 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇸🇪 瑞典 (Sweden) 03
+  server: ws.dhafhdtjdti.site
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
+  tls: true
+  servername: ws.dhafhdtjdti.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
+  - 🇸🇪 瑞典 (Sweden) 03
 rules:
 - MATCH,PROXIES
