@@ -5,47 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01
-  server: 185.22.152.168
-  port: 18443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-- name: 🇷🇺 俄罗斯 (Russia) 02
-  server: leviko-al2006.shopingggg.ir
-  port: 443
-  udp: true
-  type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  tls: true
-  servername: nl.lucheeebezlimitnoekino.stream
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /media/ws/
-- name: 🇷🇺 俄罗斯 (Russia) 03
-  server: vps3.nemnogogo.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  tls: true
-  servername: vps3.nemnogogo.com
-  skip-cert-verify: false
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🇷🇺 俄罗斯 (Russia) 04
-  server: 136.148.83.70
-  port: 443
-  udp: true
-  type: vless
-  uuid: 00000000-0000-0001-0000-000000000000
-  tls: true
-  servername: aszbk-ru-78dc.my-fade.cloud
-  skip-cert-verify: false
-  client-fingerprint: qq
-- name: 🇷🇺 俄罗斯 (Russia) 05
   server: 45.158.197.237
   port: 8443
   udp: true
@@ -58,6 +17,65 @@ proxies:
     short-id: 6ba85179e30d4fc2
   servername: apple.com
   client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 02
+  server: 194.87.69.12
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+- name: 🇷🇺 俄罗斯 (Russia) 03
+  server: 185.22.152.168
+  port: 18443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+- name: 🇷🇺 俄罗斯 (Russia) 04
+  server: 194.26.229.207
+  port: 2200
+  udp: true
+  type: vless
+  uuid: f2d2907c-1d74-43eb-8fd2-fc55dfd92427
+  network: ws
+  ws-opts:
+    path: /v1
+- name: 🇷🇺 俄罗斯 (Russia) 05
+  server: 201.51.12.98
+  port: 443
+  udp: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: 🇷🇺 俄罗斯 (Russia) 06
+  server: 185.22.234.129
+  port: 443
+  udp: true
+  type: vless
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  tls: true
+  servername: smartcdn.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /useraction/collect/8a64b355ef0c/
+    headers:
+      Host: smartcdn.top
+- name: 🇷🇺 俄罗斯 (Russia) 07
+  server: 136.148.83.69
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 87bb2ac4-b7a1-0001-b11d-2107709ea6cb
+  sni: szqbx-ru-77dc.my-fade.cloud
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,6 +86,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,5 +98,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 03
   - 🇷🇺 俄罗斯 (Russia) 04
   - 🇷🇺 俄罗斯 (Russia) 05
+  - 🇷🇺 俄罗斯 (Russia) 06
+  - 🇷🇺 俄罗斯 (Russia) 07
 rules:
 - MATCH,PROXIES

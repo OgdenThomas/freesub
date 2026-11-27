@@ -12,7 +12,7 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇪 瑞典 (Sweden) 02
-  server: leviko-se4581.shopingggg.ir
+  server: 138.124.86.230
   port: 48115
   udp: true
   type: vless
@@ -20,20 +20,10 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-- name: 🇸🇪 瑞典 (Sweden) 03 R50
-  server: sw6.yndx-game.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: eb83b44c-ad8c-4658-9923-313e59bb4d5e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sw6.yndx-game.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,7 +31,6 @@ proxy-groups:
   - AUTO
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03 R50
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +38,5 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01
   - 🇸🇪 瑞典 (Sweden) 02
-  - 🇸🇪 瑞典 (Sweden) 03 R50
 rules:
 - MATCH,PROXIES

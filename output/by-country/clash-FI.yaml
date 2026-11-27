@@ -5,30 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01
-  server: 31.76.77.231
+  server: 92.38.145.145
   port: 443
   udp: true
   type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  flow: xtls-rprx-vision
+  uuid: 3f734801-dacb-418f-b1e7-340427940c77
   tls: true
-  reality-opts:
-    public-key: PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4
-    short-id: cc85fc7134024405
-  servername: www.google.com
+  servername: gcore.com
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dl
+    headers:
+      Host: app1.gptban.com
 - name: 🇫🇮 芬兰 (Finland) 02
-  server: 2.27.203.38
+  server: mail1.besttotaldns.com
   port: 443
   udp: true
   type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  uuid: da14e323-6af7-406f-a5c2-1eb7975ada8b
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI
-    short-id: fd0cc2b3ac52deb8
-  servername: www.google.com
+  servername: mail1.besttotaldns.com
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES

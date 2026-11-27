@@ -6,42 +6,44 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01",
-      "server": "31.76.77.231",
+      "server": "92.38.145.145",
       "server_port": 443,
-      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3f734801-dacb-418f-b1e7-340427940c77",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "gcore.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4",
-          "short_id": "cc85fc7134024405"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dl",
+        "headers": {
+          "Host": "app1.gptban.com"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 02",
-      "server": "2.27.203.38",
+      "server": "mail1.besttotaldns.com",
       "server_port": 443,
-      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "uuid": "da14e323-6af7-406f-a5c2-1eb7975ada8b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "mail1.besttotaldns.com",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI",
-          "short_id": "fd0cc2b3ac52deb8"
         }
       }
     },
