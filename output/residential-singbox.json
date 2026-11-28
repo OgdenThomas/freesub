@@ -4,38 +4,36 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇰🇷 韩国 (South Korea) 01 (移动家宽)",
-      "server": "130.94.30.242",
-      "server_port": 443,
-      "uuid": "ed94398f-893f-40c6-b14c-bf02b5f6be16",
-      "tls": {
-        "enabled": true,
-        "server_name": "navi.bankrate.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc",
-          "short_id": "2da72ce6"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽)",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇨🇳 CN 02 (移动家宽)",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21021,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇷 韩国 (South Korea) 01 (移动家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇨🇳 CN 02 (移动家宽)"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇷 韩国 (South Korea) 01 (移动家宽)"
+        "🇰🇷 韩国 (South Korea) 01 (家宽)",
+        "🇨🇳 CN 02 (移动家宽)"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

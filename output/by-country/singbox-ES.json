@@ -1,0 +1,55 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 01",
+      "server": "194.58.60.228",
+      "server_port": 443,
+      "uuid": "bbbee51e-021e-4e65-ba03-bf7de175116f",
+      "tls": {
+        "enabled": true,
+        "server_name": "node43.lmdscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PVlnR_I9tZ8hKhOHW6ySpSofhsaShcBQ_JV2-0TePVA",
+          "short_id": "c5548af15927b698"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "livestreamcontent"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇪🇸 西班牙 (Spain) 01"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇪🇸 西班牙 (Spain) 01"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

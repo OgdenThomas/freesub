@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01
-  server: 147.93.171.8
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
-  tls: true
-  servername: 147-93-171-8.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vpn-live
-    headers:
-      Host: 147-93-171-8.sslip.io
-- name: 🇮🇳 印度 (India) 02
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -30,6 +15,21 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- name: 🇮🇳 印度 (India) 02
+  server: 147.93.171.8
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
+  tls: true
+  servername: 147-93-171-8.sslip.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vpn-live
+    headers:
+      Host: 147-93-171-8.sslip.io
 proxy-groups:
 - name: PROXIES
   type: select

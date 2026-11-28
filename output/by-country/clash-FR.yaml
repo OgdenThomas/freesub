@@ -18,7 +18,47 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷 法国 (France) 03 R41
+- name: 🇫🇷 法国 (France) 03 R46
+  server: 57.129.76.233
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷 法国 (France) 04 R41
+  server: 46.105.222.156
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 05 R41
+  server: 46.105.222.153
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 06 R41
+  server: 162.19.82.57
+  port: 1270
+  udp: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+- name: 🇫🇷 法国 (France) 07 R41
   server: 91.134.35.72
   port: 1270
   udp: true
@@ -29,7 +69,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 04 R41
+- name: 🇫🇷 法国 (France) 08 R41
   server: 46.105.222.157
   port: 1270
   udp: true
@@ -40,17 +80,17 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 05
-  server: 188.114.99.137
-  port: 80
+- name: 🇫🇷 法国 (France) 09 R41
+  server: 46.105.222.155
+  port: 1270
   udp: true
-  type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: suh.cryptofront.uk
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,9 +98,13 @@ proxy-groups:
   - AUTO
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 03 R46
   - 🇫🇷 法国 (France) 04 R41
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 06 R41
+  - 🇫🇷 法国 (France) 07 R41
+  - 🇫🇷 法国 (France) 08 R41
+  - 🇫🇷 法国 (France) 09 R41
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,8 +112,12 @@ proxy-groups:
   proxies:
   - 🇫🇷 法国 (France) 01 ⚠R
   - 🇫🇷 法国 (France) 02 ⚠R
-  - 🇫🇷 法国 (France) 03 R41
+  - 🇫🇷 法国 (France) 03 R46
   - 🇫🇷 法国 (France) 04 R41
-  - 🇫🇷 法国 (France) 05
+  - 🇫🇷 法国 (France) 05 R41
+  - 🇫🇷 法国 (France) 06 R41
+  - 🇫🇷 法国 (France) 07 R41
+  - 🇫🇷 法国 (France) 08 R41
+  - 🇫🇷 法国 (France) 09 R41
 rules:
 - MATCH,PROXIES

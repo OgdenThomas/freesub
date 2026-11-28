@@ -5,16 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01
-  server: 195.206.235.72
+  server: 153.56.229.218
   port: 443
   udp: true
   type: vless
-  uuid: 26843758-24de-4f76-b5d0-624038e353c4
+  uuid: ba0dbd83-3569-46dc-bc3d-ef6e58ffc97b
   tls: true
   reality-opts:
     public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
     short-id: e572b6579ea525d4
   servername: 71b840t.de7.h1clayd.click
+  client-fingerprint: chrome
+- name: 🇮🇱 以色列 (Israel) 02
+  server: 164.37.224.238
+  port: 443
+  udp: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
+    short-id: 8956c57cb4c4f8d2
+  servername: f0d7aft.nl13.h1clayd.click
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -22,11 +34,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇱 以色列 (Israel) 01
+  - 🇮🇱 以色列 (Israel) 02
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇱 以色列 (Israel) 01
+  - 🇮🇱 以色列 (Israel) 02
 rules:
 - MATCH,PROXIES
